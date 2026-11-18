@@ -151,8 +151,11 @@ try {
         if (!(await waitText(pg, '.index .title', title))) { problems.push(`${route}: title "${await text(pg, '.index .title')}", want "${title}"`); continue; }
         const items = await pg.evaluate(() => document.querySelectorAll('.index .item').length);
         if (items !== n) problems.push(`${route}: ${items} rows, want ${n}`);
-        const cover = await pg.evaluate(() => { const i = document.querySelector('.index .cover img'); return !i || (i.complete && i.naturalWidth > 0); });
-        if (!cover) problems.push(`${route}: cover image did not load`);
+        // the cover decodes after the title lands, so wait for it rather than sampling once
+        const cover = await pg
+          .waitForFunction(() => { const i = document.querySelector('.index .cover img'); return !i || (i.complete && i.naturalWidth > 0); }, null, { timeout: 6000 })
+          .then(() => true, () => false);
+        if (!cover) problems.push(`${route}: cover image did not load (${await pg.evaluate(() => document.querySelector('.index .cover img')?.getAttribute('src'))})`);
         const sel = await text(pg, '[role=tree] [aria-selected=true]');
         if (!sel?.startsWith(title)) problems.push(`${route}: explorer selects "${sel}"`);
       }
