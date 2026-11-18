@@ -27,6 +27,9 @@
       const m = e.media;
       for (const x of [m.portrait, m.hero, ...m.captures, ...m.gallery]) if (x) c.set(x.credit, (c.get(x.credit) ?? 0) + 1);
     }
+    for (const b of tree.branches) for (const cover of [...b.leaves, ...b.categories].map((l) => l.cover)) {
+      if (cover.src && cover.credit) c.set(cover.credit, (c.get(cover.credit) ?? 0) + 1);
+    }
     return [...c.entries()].sort((a, b) => b[1] - a[1]);
   });
 </script>

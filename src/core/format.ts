@@ -18,6 +18,9 @@ export const CREDITS: Record<string, { name: string; url: string }> = {
   gamerant: { name: 'GameRant', url: 'https://gamerant.com/db/video-game/crimson-desert/' },
   gamesradar: { name: 'GamesRadar+', url: 'https://www.gamesradar.com/' },
   powerupgaming: { name: 'PowerUp Gaming', url: 'https://powerupgaming.co.uk/' },
+  gamingpromax: { name: 'Gaming ProMax', url: 'https://gamingpromax.com/' },
+  beebom: { name: 'Beebom', url: 'https://beebom.com/crimson-desert-mounts/' },
+  mythras: { name: 'Pearl Abyss key art via Mythras', url: 'https://gamertagmythras.com/blog/crimson-desert/crimson-desert-dlc-unlock-requirements' },
 };
 
 export const PUBLISHERS: Record<string, string> = {
@@ -25,4 +28,5 @@ export const PUBLISHERS: Record<string, string> = {
   powerupgaming: 'PowerUp Gaming', thegamer: 'TheGamer', vulkk: 'Vulkk', thegameswiki: 'The Games Wiki',
   destructoid: 'Destructoid', gfinity: 'Gfinity', rpgsite: 'RPG Site', keengamer: 'KeenGamer',
   gamingdeputy: 'GamingDeputy', mobalytics: 'Mobalytics', nerdschalk: 'Nerds Chalk', everythingedinburgh: 'Everything Edinburgh',
+  allthingshow: 'All Things How', gamingpromax: 'Gaming ProMax', beebom: 'Beebom', mythras: 'Mythras',
 };

@@ -6,7 +6,7 @@
   let { entry }: { entry: Entry } = $props();
 </script>
 
-<section class="how" use:reveal={{ delay: 120 }}>
+<section class="how" data-outline="How to get" use:reveal={{ delay: 120 }}>
   <header class="sec-head">
     <span class="eyebrow">Acquisition <i>·</i> {entry.since}</span>
     <h3 class="display">How</h3>

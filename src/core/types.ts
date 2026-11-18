@@ -1,4 +1,4 @@
-// The compendium's data model. TREE → BRANCH → LEAF → ENTRY.
+// The compendium's data model. TREE → BRANCH → (CATEGORY BRANCH →) LEAF → ENTRY.
 // A branch is pure data (branch.json + entries.json) plus optional plate sections;
 // nothing in core knows what a "mount" is.
 import type { Component } from 'svelte';
@@ -65,6 +65,8 @@ export interface Entry {
   media: EntryMedia;
   sources: SourceRef[];
   since: string;
+  /** what the entry winks at, shown on its plate when it sits in an Easter Eggs leaf */
+  egg?: string;
   /** branch-specific payload, read only by that branch's own sections */
   [extra: string]: unknown;
 }
@@ -74,6 +76,7 @@ export interface ClassDef { id: string; label: string }
 
 export interface LeafCover {
   entry?: string;
+  focus?: string;
   role?: 'hero' | 'portrait';
   capture?: number;
   from?: string;
@@ -88,15 +91,65 @@ export interface Leaf {
   label: string;
   accent: string;
   blurb: string;
+  /** one line defining the leaf, reused when a category derives its leaves from these */
+  short: string;
   cover: LeafCover;
+}
+
+/** Which entries a list holds. Every given field must match; list fields match on any shared value. */
+export interface Selector {
+  cls?: string[];
+  domains?: string[];
+  tags?: string[];
+  atMost?: { metric: string; tier: number };
 }
 
 export interface Lens {
   id: string;
   label: string;
   blurb: string;
-  where: { cls?: string[]; tags?: string[]; atMost?: { metric: string; tier: number } };
+  where: Selector;
+  /** a metric id, or 'overall' for the mean of every rated metric */
   sortBy: string;
+}
+
+/** A leaf of a category branch, as written in branch.json. */
+export interface CategoryLeafDef {
+  id: string;
+  label: string;
+  accent: string;
+  short: string;
+  where: Selector;
+}
+
+/** A category branch inside a branch (Land, Underwater, DLC…). Lists overlap on purpose. */
+export interface CategoryDef {
+  id: string;
+  label: string;
+  subtitle?: string;
+  glyph: string;
+  accent: string;
+  blurb: string;
+  where: Selector;
+  /** 'rarity' derives one leaf per branch leaf that has members; otherwise its own leaves */
+  leaves: 'rarity' | CategoryLeafDef[];
+  cover: LeafCover;
+  /** which entry field the list's third line shows instead of the trait */
+  line?: 'egg';
+}
+
+/** A category leaf after registry resolution: concrete members, in rank order. */
+export interface CategoryLeaf {
+  id: string;
+  label: string;
+  accent: string;
+  short: string;
+  entries: Entry[];
+}
+
+export interface Category extends Omit<CategoryDef, 'leaves'> {
+  leaves: CategoryLeaf[];
+  entries: Entry[];
 }
 
 export interface BranchDef {
@@ -109,22 +162,30 @@ export interface BranchDef {
   classes: ClassDef[];
   leaves: Leaf[];
   lenses: Lens[];
+  categories: CategoryDef[];
+  /** retired route names → their replacement, so old links keep working */
+  redirects?: Record<string, string>;
 }
 
 /** A plate section a branch adds below the generic ones (e.g. mount stats). */
 export type PlateSection = Component<{ entry: Entry; branch: Branch }>;
 
-export interface Branch extends BranchDef {
+export interface Branch extends Omit<BranchDef, 'categories'> {
+  categories: Category[];
   entries: Entry[];
   byId: Map<string, Entry>;
   sections: PlateSection[];
 }
 
-/** What the index column is listing. */
-export type ListContext = { kind: 'leaf'; id: string } | { kind: 'lens'; id: string };
+/** What the index column is listing. A category context may narrow to one of its leaves. */
+export type ListContext =
+  | { kind: 'leaf'; id: string }
+  | { kind: 'lens'; id: string }
+  | { kind: 'cat'; id: string; leaf?: string };
 
 export type View =
   | { kind: 'leaf'; branch: Branch; leaf: Leaf }
   | { kind: 'lens'; branch: Branch; lens: Lens }
+  | { kind: 'cat'; branch: Branch; cat: Category; leaf?: CategoryLeaf }
   | { kind: 'ladder'; branch: Branch }
   | { kind: 'entry'; branch: Branch; entry: Entry };

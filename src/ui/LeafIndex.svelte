@@ -1,6 +1,6 @@
 <script lang="ts">
   import { app } from '../core/state.svelte';
-  import { href, entriesFor, contextLabel, coverOf, classLabel, mediaUrl, ROMAN } from '../core/tree';
+  import { href, entriesFor, contextLabel, coverOf, coverFrom, catOf, classLabel, mediaUrl, tierOf, ROMAN } from '../core/tree';
   import type { Branch, Entry, ListContext, MediaItem } from '../core/types';
   import Glyph from './Glyph.svelte';
   import { onLayout } from '../core/motion';
@@ -10,22 +10,36 @@
   const all = $derived(entriesFor(branch, ctx));
   const label = $derived(contextLabel(branch, ctx));
   const lens = $derived(ctx.kind === 'lens' ? branch.lenses.find((l) => l.id === ctx.id) : undefined);
+  const cat = $derived(ctx.kind === 'cat' ? catOf(branch, ctx.id) : undefined);
+  const catLeaf = $derived(ctx.kind === 'cat' && cat ? cat.leaves.find((l) => l.id === ctx.leaf) : undefined);
   const presentClasses = $derived(branch.classes.filter((c) => all.some((e) => e.cls === c.id)));
+  // terrain-defined categories (Land, Underwater, Flying) already are a terrain filter
+  const showFilter = $derived(presentClasses.length > 1 && !cat?.where.domains);
   const list = $derived(app.cls ? all.filter((e) => e.cls === app.cls) : all);
-  const grouped = $derived(
-    ctx.kind === 'leaf' && !app.cls && presentClasses.length > 1
-      ? presentClasses.map((c) => ({ id: c.id, label: c.label, items: list.filter((e) => e.cls === c.id) }))
-      : [{ id: '', label: '', items: list }],
-  );
+  type Group = { id: string; label: string; accent?: string; cls?: string; to?: string; items: Entry[] };
+  const grouped: Group[] = $derived.by(() => {
+    if (cat && !catLeaf) {
+      return cat.leaves
+        .map((l) => ({ id: l.id, label: l.label, accent: l.accent, to: href.cat(branch, cat.id, l.id), items: l.entries.filter((e) => list.includes(e)) }))
+        .filter((g) => g.items.length);
+    }
+    if ((ctx.kind === 'leaf' || catLeaf) && !app.cls && showFilter) {
+      return presentClasses.map((c) => ({ id: c.id, label: c.label, cls: c.id, items: list.filter((e) => e.cls === c.id) }));
+    }
+    return [{ id: '', label: '', items: list }];
+  });
   const cover: MediaItem | undefined = $derived.by(() => {
     if (ctx.kind === 'leaf') {
       const leaf = branch.leaves.find((l) => l.id === ctx.id);
       return leaf ? coverOf(branch, leaf) : undefined;
     }
-    const first = all[0];
-    return first ? (first.media.hero ?? first.media.portrait) : undefined;
+    if (cat && !catLeaf) return coverFrom(branch, cat.cover);
+    const lead = all.find((e) => e.media.hero) ?? all[0];
+    if (cat && !lead?.media.hero) return coverFrom(branch, cat.cover);
+    return lead ? (lead.media.hero ?? lead.media.portrait) : undefined;
   });
-  const ctxKey = $derived(`${ctx.kind}:${ctx.id}:${app.cls}`);
+  const ctxKey = $derived(`${ctx.kind}:${ctx.id}:${ctx.kind === 'cat' ? (ctx.leaf ?? '') : ''}:${app.cls}`);
+  const line = (e: Entry) => (cat?.line === 'egg' && e.egg) || e.trait;
 
   // the selection slab glides between rows instead of jumping
   let listEl: HTMLElement | undefined = $state();
@@ -42,8 +56,14 @@
     });
   });
 
-  const asideTier = (e: Entry) => (lens ? e.tiers[lens.sortBy]?.tier : null);
-  const metricLabel = $derived(lens ? branch.metrics.find((m) => m.id === lens.sortBy)?.label : '');
+  const asideTier = (e: Entry) => {
+    if (!lens) return null;
+    const t = Math.round(tierOf(e, lens.sortBy));
+    return t >= 1 && t <= 5 ? t : null;
+  };
+  const metricLabel = $derived(
+    !lens ? '' : lens.sortBy === 'overall' ? 'all four ratings' : (branch.metrics.find((m) => m.id === lens.sortBy)?.label ?? ''),
+  );
 </script>
 
 <section class="index" data-accent={label.accent} aria-label="{label.title} list">
@@ -56,15 +76,18 @@
     <div class="head-text">
       <p class="eyebrow crumbs">
         <a href={href.branch(branch)}>{branch.title}</a>
-        <span>/</span>
-        <span>{ctx.kind === 'lens' ? 'Ride for' : 'Leaf'}</span>
+        {#each label.trail as t}
+          <span>/</span>
+          {#if t.to}<a href={t.to}>{t.label}</a>{:else}<span>{t.label}</span>{/if}
+        {/each}
       </p>
       <h1 class="display title">{label.title}</h1>
+      {#if label.subtitle}<p class="subtitle">{label.subtitle}</p>{/if}
       <p class="blurb">{label.blurb}</p>
     </div>
   </header>
 
-  {#if presentClasses.length > 1}
+  {#if showFilter}
     <div class="filter" role="radiogroup" aria-label="Filter by terrain">
       <button role="radio" aria-checked={app.cls === ''} class:on={app.cls === ''} onclick={() => (app.cls = '')}>
         All <span class="mono">{all.length}</span>
@@ -86,8 +109,10 @@
     <span class="slab" class:on={slab.on} style:transform="translateY({slab.y}px)" style:height="{slab.h}px" aria-hidden="true"></span>
     {#key ctxKey}
       {#each grouped as g, gi (g.id)}
-        {#if g.label}
-          <p class="group eyebrow" data-cls={g.id}><i></i>{g.label} <span class="mono">{g.items.length}</span></p>
+        {#if g.label && g.to}
+          <a class="group eyebrow rank" href={g.to} data-accent={g.accent}><i></i>{g.label} <span class="mono">{g.items.length}</span></a>
+        {:else if g.label}
+          <p class="group eyebrow" data-cls={g.cls}><i></i>{g.label} <span class="mono">{g.items.length}</span></p>
         {/if}
         <ol>
           {#each g.items as e, i (e.id)}
@@ -104,7 +129,7 @@
                 <span class="text">
                   <span class="name">{e.name}</span>
                   <span class="meta">{e.kind} · {e.region}</span>
-                  <span class="trait">{e.trait}</span>
+                  <span class="trait">{line(e)}</span>
                 </span>
                 <span class="aside">
                   {#if lens}
@@ -154,6 +179,7 @@
   .crumbs a:hover { color: var(--bone); }
   .title { font-size: 52px; margin-top: 6px; animation: title-in 700ms var(--ease-out) both; }
   @keyframes title-in { from { opacity: 0; transform: translateY(14px); letter-spacing: 0.04em; } }
+  .subtitle { font-family: var(--f-display); font-style: italic; font-size: 21px; color: var(--bone-2); margin-top: 2px; animation: title-in 700ms var(--ease-out) both 80ms; }
   .blurb { margin-top: 10px; color: var(--bone-2); font-size: 13.5px; line-height: 1.5; max-width: 42ch; }
 
   /* ── terrain filter ──────────────── */
@@ -187,6 +213,9 @@
 
   .group { display: flex; align-items: center; gap: 8px; margin: 16px 10px 6px; font-size: 10px; }
   .group i { width: 14px; height: 1px; background: var(--cls); }
+  .group.rank { color: var(--bone-2); transition: color var(--t-micro); }
+  .group.rank i { width: 7px; height: 7px; margin: 0 3px; transform: rotate(45deg); background: var(--accent); box-shadow: 0 0 8px var(--accent-dim); }
+  .group.rank:hover { color: var(--bone); }
   .group .mono { color: var(--ash-2); font-size: 10.5px; }
 
   li { animation: row-in 520ms var(--ease-out) both; animation-delay: calc(var(--i) * 24ms); }

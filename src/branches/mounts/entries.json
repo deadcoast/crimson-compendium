@@ -31,7 +31,7 @@
    }
   },
   "tags": [
-   "long-haul",
+   "all-around-best",
    "early"
   ],
   "requires": [
@@ -210,7 +210,7 @@
    }
   },
   "tags": [
-   "long-haul",
+   "all-around-best",
    "vertical"
   ],
   "requires": [
@@ -379,7 +379,7 @@
    }
   },
   "tags": [
-   "long-haul"
+   "all-around-best"
   ],
   "requires": [
    "Stamina Lv. 6 minimum (Lv. 8 recommended)"
@@ -547,7 +547,7 @@
    }
   },
   "tags": [
-   "flight",
+   "flying",
    "battle"
   ],
   "requires": [
@@ -908,7 +908,7 @@
    }
   },
   "tags": [
-   "long-haul"
+   "all-around-best"
   ],
   "requires": [
    "Leebur's Soul (optional — reveals its location)"
@@ -1278,7 +1278,8 @@
    }
   },
   "tags": [
-   "deep-water"
+   "underwater",
+   "dlc"
   ],
   "requires": [
    "DLC: Charting the Unknown",
@@ -1400,8 +1401,9 @@
    }
   },
   "tags": [
-   "deep-water",
-   "battle"
+   "underwater",
+   "battle",
+   "dlc"
   ],
   "requires": [
    "DLC: Charting the Unknown",
@@ -1522,7 +1524,8 @@
    }
   },
   "tags": [
-   "deep-water"
+   "underwater",
+   "dlc"
   ],
   "requires": [
    "DLC: Charting the Unknown",
@@ -1635,8 +1638,9 @@
    }
   },
   "tags": [
-   "deep-water",
-   "battle"
+   "underwater",
+   "battle",
+   "dlc"
   ],
   "requires": [
    "DLC: Charting the Unknown",
@@ -1751,7 +1755,8 @@
    }
   },
   "tags": [
-   "vertical"
+   "vertical",
+   "egg-nod"
   ],
   "requires": [
    "Force Palm",
@@ -1860,7 +1865,8 @@
   ],
   "since": "Patch 1.06 · reworked 1.10",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "egg": "GameRant and TheGamer both read the Kuku Bird as Crimson Desert's Chocobo — Final Fantasy's riding bird, here with red feathers."
  },
  {
   "id": "giant-red-iguana",
@@ -2161,7 +2167,8 @@
    }
   },
   "tags": [
-   "battle"
+   "battle",
+   "egg-oddity"
   ],
   "requires": [
    "Mask (circus route)",
@@ -2244,7 +2251,8 @@
   ],
   "since": "Patch 1.06",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "egg": "The lion you can ride is a circus act: steal it from The Laughing Marionette — Game8 notes the ride prompt only appears with your Mask off."
  },
  {
   "id": "tiger",
@@ -3008,7 +3016,7 @@
    }
   },
   "tags": [
-   "flight"
+   "flying"
   ],
   "requires": [
    "Pororin questline (Wyvern's Cradle egg)",
@@ -3106,8 +3114,9 @@
    }
   },
   "tags": [
-   "deep-water",
-   "battle"
+   "underwater",
+   "battle",
+   "dlc"
   ],
   "requires": [
    "DLC: Charting the Unknown",
@@ -3205,7 +3214,8 @@
    }
   },
   "tags": [
-   "deep-water"
+   "underwater",
+   "dlc"
   ],
   "requires": [
    "DLC: Charting the Unknown",
@@ -3281,8 +3291,9 @@
    }
   },
   "tags": [
-   "deep-water",
-   "battle"
+   "underwater",
+   "battle",
+   "dlc"
   ],
   "requires": [
    "DLC: Charting the Unknown",
@@ -3360,7 +3371,8 @@
    }
   },
   "tags": [
-   "deep-water"
+   "underwater",
+   "dlc"
   ],
   "requires": [
    "DLC: Charting the Unknown",
@@ -3436,7 +3448,8 @@
    }
   },
   "tags": [
-   "deep-water"
+   "underwater",
+   "dlc"
   ],
   "requires": [
    "DLC: Charting the Unknown",
@@ -3512,7 +3525,8 @@
    }
   },
   "tags": [
-   "deep-water"
+   "underwater",
+   "dlc"
   ],
   "requires": [
    "DLC: Charting the Unknown",
@@ -3590,7 +3604,8 @@
    }
   },
   "tags": [
-   "deep-water"
+   "underwater",
+   "dlc"
   ],
   "requires": [
    "DLC: Charting the Unknown",
@@ -3665,7 +3680,8 @@
    }
   },
   "tags": [
-   "deep-water"
+   "underwater",
+   "dlc"
   ],
   "requires": [
    "DLC: Charting the Unknown",
@@ -3736,7 +3752,8 @@
    }
   },
   "tags": [
-   "deep-water"
+   "underwater",
+   "dlc"
   ],
   "requires": [
    "DLC: Charting the Unknown",
@@ -3807,7 +3824,8 @@
    }
   },
   "tags": [
-   "deep-water"
+   "underwater",
+   "dlc"
   ],
   "requires": [
    "DLC: Charting the Unknown",
@@ -4633,7 +4651,8 @@
    }
   },
   "tags": [
-   "flight"
+   "flying",
+   "mechanical"
   ],
   "requires": [
    "Dispatch Missions (Chapter 3: Bustling Hill)",
@@ -4790,7 +4809,9 @@
    }
   },
   "tags": [
-   "battle"
+   "battle",
+   "dlc",
+   "mechanical"
   ],
   "requires": [
    "Chapter 11",
@@ -4816,7 +4837,8 @@
   ],
   "location": "Blueprint: Marek, Zargan Tankworks (west Gorthak).",
   "notes": [
-   "Game8 calls the refitted A.T.A.G. the ideal choice for underwater combat."
+   "Game8 calls the refitted A.T.A.G. the ideal choice for underwater combat.",
+   "High-Mobility A.T.A.G.: a lighter build stripped of armour for mobility, crafted from the same Small Kuku A.T.A.G. plus Cogwheels, two Crown of Shadows power cores and a Core of Temperance (Vulkk)."
   ],
   "media": {
    "portrait": {
@@ -4835,6 +4857,15 @@
      "src": "media/mounts/atag/gallery-1.webp",
      "w": 300,
      "h": 300
+    },
+    {
+     "kind": "action",
+     "from": "https://static.beebom.com/wp-content/uploads/2026/03/Crimson-desert-mech-mounts.jpg?w=1024&quality=75",
+     "credit": "beebom",
+     "caption": "In action — the A.T.A.G. crossing the Holy Land of Varnia",
+     "src": "media/mounts/atag/gallery-2.webp",
+     "w": 1024,
+     "h": 579
     }
    ],
    "captures": []
@@ -4854,10 +4885,18 @@
     "by": "gamerant",
     "url": "https://gamerant.com/crimson-desert-abyssal-fusion-dragon-armor-how-to-get/",
     "title": "Small Kuku A.T.A.G. Blueprint — GameRant"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/mounts/high-mobility-a-t-a-g/",
+    "title": "High-Mobility A.T.A.G — Vulkk"
    }
   ],
   "since": "Base game · marine parts DLC",
-  "variants": [],
+  "variants": [
+   "A.T.A.G.",
+   "High-Mobility A.T.A.G."
+  ],
   "skills": []
  },
  {
@@ -5071,7 +5110,9 @@
     "basis": "No documented attack."
    }
   },
-  "tags": [],
+  "tags": [
+   "egg-oddity"
+  ],
   "requires": [],
   "routes": [
    {
@@ -5123,6 +5164,133 @@
    }
   ],
   "since": "Base game",
+  "variants": [],
+  "skills": [],
+  "egg": "A zoo exhibit turned mount: the Demeniss Wildlife Park lets you climb onto its elephants."
+ },
+ {
+  "id": "marnis-mechahorse",
+  "name": "Marni's Mechahorse",
+  "leaf": "fleeting",
+  "cls": "land",
+  "domains": [
+   "land",
+   "sea"
+  ],
+  "kind": "Machine",
+  "region": "Delesyia",
+  "area": "Eastern Hills",
+  "trait": "Never tires — no stamina drain while riding",
+  "summary": "A clockwork horse parked outside Delesyia's south gate. Steal it masked and it runs without ever spending stamina, swims and carries two riders — but it is gone the moment you fast travel.",
+  "tiers": {
+   "speed": {
+    "tier": null,
+    "basis": "No measured speed. Since patch 1.04 it sprints on the same input as a horse."
+   },
+   "stamina": {
+    "tier": 1,
+    "basis": "Never drains stamina during normal riding — the only mount that does not tire (All Things How)."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "Endless stamina and it swims, but it spawns only at Delesyia and is lost on fast travel."
+   },
+   "combat": {
+    "tier": 5,
+    "basis": "Cannot fight and takes no armour (The Games Wiki)."
+   }
+  },
+  "tags": [
+   "mechanical",
+   "egg-nod"
+  ],
+  "requires": [
+   "Mask"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Ride to the stables outside the south gate of the City of Delesyia, Eastern Hills.",
+     "Equip a Mask — mounting the Mechahorse counts as theft.",
+     "Mount it and ride off. It cannot be registered at a stable."
+    ]
+   }
+  ],
+  "location": "Stables outside the south gate of the City of Delesyia (Eastern Hills, Delesyia).",
+  "notes": [
+   "Temporary only: lost when you fast travel, and it cannot be summoned later.",
+   "Patch 1.04.00 fixed sprinting and swimming while riding it.",
+   "Seats two riders (The Games Wiki).",
+   "If it is missing after a fast travel, reload the area or wait out a day."
+  ],
+  "egg": "Marni is the eccentric inventor from Pearl Abyss's earlier game, Black Desert Online — the name and the machines carry over to Delesyia.",
+  "media": {
+   "portrait": {
+    "from": "https://gamingpromax.com/wp-content/uploads/2026/04/marni-s-mechahorse-in-crimson-desert-2-1024x666.webp",
+    "credit": "gamingpromax",
+    "crop": [
+     0.64,
+     0.57,
+     0.42
+    ],
+    "w": 279,
+    "h": 279,
+    "src": "media/mounts/marnis-mechahorse/portrait.webp"
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://gamingpromax.com/wp-content/uploads/2026/04/marni-s-mechahorse-in-crimson-desert-1024x563.webp",
+     "credit": "gamingpromax",
+     "caption": "World map — the south gate of the City of Delesyia",
+     "src": "media/mounts/marnis-mechahorse/map-1.webp",
+     "w": 1024,
+     "h": 563
+    },
+    {
+     "kind": "action",
+     "from": "https://gamingpromax.com/wp-content/uploads/2026/04/keep-marni-s-mechahorse-in-crimson-desert-1024x621.webp",
+     "credit": "gamingpromax",
+     "caption": "On site — the Steal prompt at the stables",
+     "src": "media/mounts/marnis-mechahorse/action-2.webp",
+     "w": 1024,
+     "h": 621
+    },
+    {
+     "kind": "overworld",
+     "from": "https://gamingpromax.com/wp-content/uploads/2026/04/marni-s-mechahorse-in-crimson-desert-2-1024x666.webp",
+     "credit": "gamingpromax",
+     "caption": "On site — the Mechahorse outside the south gate",
+     "src": "media/mounts/marnis-mechahorse/overworld-3.webp",
+     "w": 1024,
+     "h": 666
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/587091",
+    "title": "List of All Mounts — Game8"
+   },
+   {
+    "by": "allthingshow",
+    "url": "https://allthings.how/crimson-deserts-secret-mechahorse-where-to-find-it-and-why-it-cant-stay/",
+    "title": "Crimson Desert's Secret Mechahorse — All Things How"
+   },
+   {
+    "by": "gamingpromax",
+    "url": "https://gamingpromax.com/crimson-desert-how-to-get-marnis-mechahorse/",
+    "title": "How to Get Marni's Mechahorse — Gaming ProMax"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/marnis-mechahorse",
+    "title": "Marni's Mechahorse — The Games Wiki"
+   }
+  ],
+  "since": "Base game · fixed 1.04",
   "variants": [],
   "skills": []
  }

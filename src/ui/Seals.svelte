@@ -12,7 +12,7 @@
   const activeTier = $derived(active ? entry.tiers[active.id] : undefined);
 </script>
 
-<section class="seals" aria-label="Tier ratings">
+<section class="seals" data-outline="Ratings" aria-label="Tier ratings">
   <div class="row">
     {#key entry.id}
       {#each branch.metrics as m, si (m.id)}

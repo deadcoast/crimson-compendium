@@ -24,7 +24,7 @@
   const pad = (n: number) => String(n).padStart(2, '0');
 </script>
 
-<header class="hero" data-cls={entry.cls} data-accent={leaf.accent} use:parallax>
+<header class="hero" data-outline="Overview" data-cls={entry.cls} data-accent={leaf.accent} use:parallax>
   {#key entry.id}
     <div class="stage">
       <div class="backdrop" class:bleed>

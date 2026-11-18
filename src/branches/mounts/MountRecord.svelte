@@ -52,7 +52,7 @@
 </script>
 
 {#if hasAnything}
-  <section class="record" use:reveal>
+  <section class="record" data-outline="Record" use:reveal>
     <header class="sec-head">
       <span class="eyebrow">Recorded stats</span>
       <h3 class="display">Record</h3>

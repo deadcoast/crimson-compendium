@@ -1,6 +1,6 @@
 # Crimson Compendium
 
-A field reference for *Crimson Desert*, built as a TREE of BRANCHES. Branch one is **Mounts**: 47 mounts across five leaves, each with real in-game captures of where to find it, how to make it yours, and tier ratings for Speed, Stamina, Travel and Combat.
+A field reference for *Crimson Desert*, built as a TREE of BRANCHES. Branch one is **Mounts**: 48 mounts across five rarity leaves and six category branches (Land, Underwater, Flying, Mechanical, Easter Eggs, DLC), each with real in-game captures of where to find it, how to make it yours, and tier ratings for Speed, Stamina, Travel and Combat.
 
 ```
 npm install
@@ -16,16 +16,18 @@ Requires Node 18+ and, for `npm run media`, Python 3 with Pillow.
 ```
 src/
   core/            engine — knows nothing about mounts
-    types.ts       TREE → BRANCH → LEAF → ENTRY data model
-    tree.ts        routing (#mounts-royler), lists, lenses, leaf covers
-    state.svelte.ts  hash route + overlay state
+    types.ts       TREE → BRANCH → (CATEGORY) → LEAF → ENTRY data model
+    tree.ts        routing (#mounts-royler, #mounts-underwater-rare), lists, lenses, covers
+    select.ts      selectors and tier ranking shared with the registry
+    explorer.ts    the explorer's tree model: rows, filter, sticky rows, auto-reveal
+    state.svelte.ts  hash route, overlays, recent history
     search.ts  motion.ts  format.ts
   ui/              shared components every branch renders through
   branches/
     registry.ts    the one file that lists branches (and validates them)
     mounts/
-      branch.json  leaves, metrics, terrain classes, "ride for" lenses
-      entries.json the 47 mounts
+      branch.json  leaves, category branches, metrics, terrain classes, "ride for" lenses, redirects
+      entries.json the 48 mounts
       MountRecord.svelte   mount-only plate section (stats, skills, coats)
   styles/          tokens.css (every colour, font, easing) + base.css
 public/media/<branch>/<entry>/   generated WebP files
@@ -41,7 +43,19 @@ tools/media.py     image pipeline
 
 ## Add a leaf
 
-Add an object to `leaves` in `branch.json` (`id`, `label`, `accent`, `blurb`, `cover`). The spine, index, ladder filter and routes pick it up.
+Add an object to `leaves` in `branch.json` (`id`, `label`, `accent`, `blurb`, `short`, `cover`). The explorer, index, ladder filter, routes and every `"rarity"` category pick it up.
+
+## Add a category branch
+
+Add an object to `categories` in `branch.json`:
+
+```json
+{ "id": "underwater", "label": "Underwater", "glyph": "sea", "accent": "sea",
+  "blurb": "…", "where": { "domains": ["sea"] }, "leaves": "rarity",
+  "cover": { "entry": "ocean-drifter", "role": "hero" } }
+```
+
+`where` takes `domains`, `tags`, `cls` (any shared value matches). `"leaves": "rarity"` makes one leaf per rarity leaf that has members; or list your own leaves, each with its own `where`. Overlap with other categories is expected. Optional: `subtitle` (shown in italics), `line: "egg"` (list line shows the entry's `egg` note). The registry rejects empty categories and route collisions.
 
 ## Add a branch
 

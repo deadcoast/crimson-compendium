@@ -49,7 +49,8 @@
    "cover": {
     "entry": "snowwhite-deer",
     "role": "hero"
-   }
+   },
+   "short": "One of a kind — each exists once in Pywel."
   },
   {
    "id": "rare",
@@ -59,7 +60,8 @@
    "cover": {
     "entry": "tiger",
     "role": "hero"
-   }
+   },
+   "short": "Never sold at a stable — stolen, subdued, hatched or raised."
   },
   {
    "id": "stable",
@@ -72,7 +74,8 @@
     "src": "media/mounts/_leaves/stable.webp",
     "w": 728,
     "h": 410
-   }
+   },
+   "short": "The horse breeds you can tame, steal or buy."
   },
   {
    "id": "engineered",
@@ -82,24 +85,26 @@
    "cover": {
     "entry": "cloudcart",
     "capture": 1
-   }
+   },
+   "short": "Built, not bred — blueprints, workshops and parts."
   },
   {
    "id": "fleeting",
    "label": "Fleeting",
    "accent": "ash",
-   "blurb": "Rides you can borrow but never keep.",
+   "blurb": "Rides you can borrow but never keep — including one machine.",
    "cover": {
     "entry": "elephant",
     "capture": 1
-   }
+   },
+   "short": "Yours only while you ride; they stay behind when you leave."
   }
  ],
  "lenses": [
   {
-   "id": "long-haul",
-   "label": "Long haul",
-   "blurb": "Land mounts for crossing Pywel fastest.",
+   "id": "all-around-best",
+   "label": "All Around Best",
+   "blurb": "The land mounts that do everything well, ranked on all four ratings together.",
    "where": {
     "cls": [
      "land"
@@ -109,7 +114,7 @@
      "tier": 2
     }
    },
-   "sortBy": "travel"
+   "sortBy": "overall"
   },
   {
    "id": "battle",
@@ -122,28 +127,6 @@
     }
    },
    "sortBy": "combat"
-  },
-  {
-   "id": "deep-water",
-   "label": "Deep water",
-   "blurb": "Everything that swims, fastest crossing first.",
-   "where": {
-    "cls": [
-     "sea"
-    ]
-   },
-   "sortBy": "travel"
-  },
-  {
-   "id": "flight",
-   "label": "Flight",
-   "blurb": "Every way into the sky.",
-   "where": {
-    "cls": [
-     "sky"
-    ]
-   },
-   "sortBy": "travel"
   },
   {
    "id": "vertical",
@@ -166,6 +149,161 @@
     ]
    },
    "sortBy": "stamina"
+  }
+ ],
+ "redirects": {
+  "for-long-haul": "for-all-around-best",
+  "for-deep-water": "underwater",
+  "for-flight": "flying"
+ },
+ "categories": [
+  {
+   "id": "land",
+   "label": "Land",
+   "glyph": "land",
+   "accent": "land",
+   "blurb": "Hooves, paws, claws and wheels — everything that covers ground.",
+   "where": {
+    "domains": [
+     "land"
+    ]
+   },
+   "leaves": "rarity",
+   "cover": {
+    "entry": "silver-fang",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "underwater",
+   "label": "Underwater",
+   "glyph": "sea",
+   "accent": "sea",
+   "blurb": "Below the surface: the sea mounts of Charting the Unknown, plus the two machines that dive.",
+   "where": {
+    "domains": [
+     "sea"
+    ]
+   },
+   "leaves": "rarity",
+   "cover": {
+    "entry": "ocean-drifter",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "flying",
+   "label": "Flying",
+   "glyph": "sky",
+   "accent": "sky",
+   "blurb": "Every way into the sky: the dragon, the wyvern and the balloon.",
+   "where": {
+    "domains": [
+     "sky"
+    ]
+   },
+   "leaves": "rarity",
+   "cover": {
+    "entry": "blackstar",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "mechanical",
+   "label": "Mechanical",
+   "glyph": "gear",
+   "accent": "brass",
+   "blurb": "Machines you pilot rather than ride: the A.T.A.G. mech, the Cloudcart and Marni's Mechahorse.",
+   "where": {
+    "tags": [
+     "mechanical"
+    ]
+   },
+   "leaves": "rarity",
+   "cover": {
+    "from": "https://static.beebom.com/wp-content/uploads/2026/03/Crimson-desert-mech-mounts.jpg?w=1024&quality=75",
+    "credit": "beebom",
+    "clip": [
+     0.2,
+     0,
+     0.82,
+     0.8
+    ],
+    "focus": "50% 100%",
+    "w": 635,
+    "h": 463,
+    "src": "media/mounts/_categories/mechanical.webp"
+   }
+  },
+  {
+   "id": "easter-eggs",
+   "label": "Easter Eggs",
+   "glyph": "egg",
+   "accent": "ember",
+   "blurb": "Mounts that wink at other games, and rides the game never tells you about.",
+   "where": {
+    "tags": [
+     "egg-nod",
+     "egg-oddity"
+    ]
+   },
+   "leaves": [
+    {
+     "id": "nods",
+     "label": "Nods",
+     "accent": "brass",
+     "short": "Mounts that reference other games.",
+     "where": {
+      "tags": [
+       "egg-nod"
+      ]
+     }
+    },
+    {
+     "id": "oddities",
+     "label": "Oddities",
+     "accent": "ash",
+     "short": "Strange rides hidden in plain sight.",
+     "where": {
+      "tags": [
+       "egg-oddity"
+      ]
+     }
+    }
+   ],
+   "cover": {
+    "entry": "marnis-mechahorse",
+    "capture": 2
+   },
+   "line": "egg"
+  },
+  {
+   "id": "dlc",
+   "label": "DLC",
+   "subtitle": "Charting the Unknown",
+   "glyph": "compass",
+   "accent": "crimson",
+   "blurb": "What the November 2026 expansion added: fourteen sea mounts and the A.T.A.G. marine refit.",
+   "where": {
+    "tags": [
+     "dlc"
+    ]
+   },
+   "leaves": "rarity",
+   "cover": {
+    "from": "https://gamertagmythras.com/images/blog/crimson-desert/crimson-desert-dlc-unlock-requirements/features-overview-diver-sea-turtle-hero.webp",
+    "credit": "mythras",
+    "focus": "50% 45%",
+    "src": "media/mounts/_categories/dlc.webp",
+    "w": 443,
+    "h": 522,
+    "clip": [
+     0.52,
+     0,
+     1,
+     1
+    ]
+   }
   }
  ]
 }

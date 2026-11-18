@@ -48,6 +48,12 @@
   <div class="body">
     {#key entry.id}
       <p class="lead">{entry.summary}</p>
+      {#if entry.egg}
+        <aside class="egg" data-outline="Easter egg">
+          <p class="eyebrow"><Glyph name="egg" size={13} /> Easter egg</p>
+          <p class="egg-note">{entry.egg}</p>
+        </aside>
+      {/if}
     {/key}
 
     <Seals {branch} {entry} />
@@ -62,7 +68,7 @@
     {/each}
 
     {#if entry.media.gallery.length}
-      <section class="gallery" use:reveal>
+      <section class="gallery" data-outline="Stills" use:reveal>
         <p class="eyebrow">More stills</p>
         <ul>
           {#each entry.media.gallery as g, i}
@@ -77,7 +83,7 @@
       </section>
     {/if}
 
-    <section class="sources" use:reveal>
+    <section class="sources" data-outline="Sources" use:reveal>
       <p class="eyebrow">Sources</p>
       <ul>
         {#each entry.sources as s}
@@ -125,6 +131,16 @@
     font-weight: 600;
   }
   @keyframes fade-up { from { opacity: 0; transform: translateY(14px); } }
+
+  .egg {
+    margin: -30px var(--gutter) 0;
+    max-width: 64ch;
+    padding: 4px 0 4px 18px;
+    border-left: 1px solid var(--brass);
+    animation: fade-up 800ms var(--ease-out) both 560ms;
+  }
+  .egg .eyebrow { display: flex; align-items: center; gap: 7px; font-size: 10px; color: var(--brass); }
+  .egg-note { margin-top: 6px; font-family: var(--f-display); font-style: italic; font-size: 17px; line-height: 1.5; color: var(--bone-2); }
   .body > :global(.seals) { margin-top: -24px; }
 
   .pair { display: grid; grid-template-columns: minmax(0, 1fr); gap: 60px; }

@@ -31,7 +31,7 @@
   }
 </script>
 
-<section class="where" use:reveal>
+<section class="where" data-outline="Where" use:reveal>
   <header class="sec-head">
     <span class="eyebrow">Location reference</span>
     <h3 class="display">Where</h3>

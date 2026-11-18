@@ -13,11 +13,17 @@
   const jumps = $derived(
     tree.branches.flatMap((b) => [
       ...b.leaves.map((l) => ({ label: l.label, hint: `${b.title} · leaf`, to: href.leaf(b, l.id) })),
+      ...b.categories.map((c) => ({ label: c.subtitle ? `${c.label}: ${c.subtitle}` : c.label, hint: `${b.title} · branch`, to: href.cat(b, c.id) })),
       ...b.lenses.map((l) => ({ label: `Ride for: ${l.label}`, hint: `${b.title} · lens`, to: href.lens(b, l.id) })),
       { label: 'Tier ladder', hint: `${b.title} · ranking`, to: href.ladder(b) },
     ]),
   );
-  const count = $derived(q ? hits.length : jumps.length);
+  // folders whose name matches the query lead the results (e.g. "dlc", "under")
+  const jumpHits = $derived.by(() => {
+    const t = q.trim().toLowerCase();
+    return t ? jumps.filter((j) => j.label.toLowerCase().split(/[\s:]+/).some((w) => w.startsWith(t)) || j.label.toLowerCase().startsWith(t)) : [];
+  });
+  const count = $derived(q ? jumpHits.length + hits.length : jumps.length);
 
   $effect(() => {
     if (app.palette) { q = ''; sel = 0; queueMicrotask(() => input?.focus()); }
@@ -29,7 +35,8 @@
     if (ev.key === 'ArrowDown') { sel = (sel + 1) % Math.max(count, 1); ev.preventDefault(); }
     else if (ev.key === 'ArrowUp') { sel = (sel - 1 + count) % Math.max(count, 1); ev.preventDefault(); }
     else if (ev.key === 'Enter') {
-      const to = q ? (hits[sel] ? href.entry(hits[sel].branch, hits[sel].entry.id) : '') : jumps[sel]?.to;
+      const h = hits[sel - jumpHits.length];
+      const to = q ? (sel < jumpHits.length ? jumpHits[sel].to : h ? href.entry(h.branch, h.entry.id) : '') : jumps[sel]?.to;
       if (to) go(to);
     } else if (ev.key === 'Escape') app.palette = false;
   }
@@ -47,7 +54,15 @@
 
     <ol class="results">
       {#if q}
-        {#each hits as h, i (h.entry.id)}
+        {#each jumpHits as j, i (j.to)}
+          <li>
+            <a href={j.to} class:on={i === sel} class="jump" onmouseenter={() => (sel = i)} onclick={() => (app.palette = false)}>
+              <span class="nm">{j.label}</span><span class="mt">{j.hint}</span>
+            </a>
+          </li>
+        {/each}
+        {#each hits as h, n (h.entry.id)}
+          {@const i = n + jumpHits.length}
           <li>
             <a href={href.entry(h.branch, h.entry.id)} class:on={i === sel} onmouseenter={() => (sel = i)} onclick={() => (app.palette = false)}>
               <span class="pt"><img src={mediaUrl(h.entry.media.portrait.src)} alt="" /></span>
@@ -58,9 +73,8 @@
               <span class="tr">{h.entry.trait}</span>
             </a>
           </li>
-        {:else}
-          <li class="none">Nothing matches “{q}”.</li>
         {/each}
+        {#if !count}<li class="none">Nothing matches “{q}”.</li>{/if}
       {:else}
         <li class="label eyebrow">Jump to</li>
         {#each jumps as j, i (j.to)}
