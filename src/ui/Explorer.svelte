@@ -154,7 +154,7 @@
   .links { display: flex; gap: 14px; }
   .links button { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--bone-2); }
   .links button:hover { color: var(--bone); }
-  .asof { font-size: 11px; color: var(--ash); line-height: 1.4; }
+  .asof { font-size: 11px; color: var(--ash); line-height: 1.4; text-wrap: balance; }
 
   @media (max-width: 860px) {
     .spine {

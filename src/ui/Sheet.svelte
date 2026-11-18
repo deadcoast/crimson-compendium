@@ -75,7 +75,7 @@
       <h3 class="eyebrow">Imagery</h3>
       <ul class="credits">
         {#each imageCredits as [k, n]}
-          <li><a href={CREDITS[k]?.url} target="_blank" rel="noopener noreferrer">{CREDITS[k]?.name ?? k}</a><span class="mono">{n} images</span></li>
+          <li><a href={CREDITS[k]?.url} target="_blank" rel="noopener noreferrer">{CREDITS[k]?.name ?? k}</a><span class="mono">{n} {n === 1 ? 'image' : 'images'}</span></li>
         {/each}
       </ul>
       <p class="legal">All in-game captures and art © Pearl Abyss. Captures are credited to the guide that took them.</p>

@@ -85,6 +85,7 @@
     pointer-events: none;
   }
   .pane.open:hover .actions, .pane.open:focus-within .actions { opacity: 1; transform: none; pointer-events: auto; }
+  @media (hover: none) { .pane.open .actions { opacity: 1; transform: none; pointer-events: auto; } }
 
   .pane-body {
     display: grid;

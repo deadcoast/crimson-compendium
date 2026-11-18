@@ -152,11 +152,12 @@
   .gallery, .sources { padding: 0 var(--gutter); }
   .gallery .eyebrow, .sources .eyebrow { font-size: 10px; margin-bottom: 12px; }
   .gallery ul { display: flex; gap: 12px; flex-wrap: wrap; }
-  .gallery button { position: relative; display: block; width: 240px; border: 1px solid var(--line-2); overflow: hidden; text-align: left; }
+  .gallery li { display: flex; }
+  .gallery button { position: relative; display: flex; flex-direction: column; width: 240px; border: 1px solid var(--line-2); overflow: hidden; text-align: left; }
   .gallery img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; transition: transform 700ms var(--ease-out); }
   .gallery img.whole { object-fit: contain; padding: 10px; background: radial-gradient(closest-side, var(--ink-3), var(--ink-1)); }
   .gallery button:hover img { transform: scale(1.06); }
-  .gallery span { display: block; padding: 8px 10px; font-size: 12.5px; color: var(--bone-2); background: var(--ink-1); }
+  .gallery span { flex: 1; display: block; padding: 8px 10px; font-size: 12.5px; color: var(--bone-2); background: var(--ink-1); }
 
   .sources { padding-top: 26px; border-top: 1px solid var(--line); margin: 0 var(--gutter); padding-left: 0; padding-right: 0; }
   .sources ul { display: grid; gap: 2px; }

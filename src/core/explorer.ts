@@ -75,7 +75,7 @@ export function buildTree(branches: Branch[]): TNode[] {
         entries(b, ln, cl.entries);
       }
     }
-    const ride = make(root, 'ride', { kind: 'folder', label: 'Ride for', glyph: 'lens', accent: 'crimson', count: b.lenses.length });
+    const ride = make(root, 'ride', { kind: 'folder', label: 'Ride for', glyph: 'lens', accent: 'crimson' });
     for (const lens of b.lenses) {
       const list = lensEntries(b, lens);
       const n = make(ride, lens.id, { kind: 'lens', label: lens.label, href: href.lens(b, lens.id), accent: 'crimson', count: list.length });

@@ -239,7 +239,8 @@
   let cardTimer = 0;
   const canHover = matchMedia('(hover: hover) and (pointer: fine)').matches;
   function onrowenter(ev: MouseEvent, r: Row) {
-    if (!canHover || !r.node.entry) return;
+    if (!canHover) return;
+    if (!r.node.entry) { hideCard(); return; }
     clearTimeout(cardTimer);
     const el = ev.currentTarget as HTMLElement;
     cardTimer = window.setTimeout(() => {
@@ -326,7 +327,7 @@
             style:--delay="{insertAt >= 0 ? Math.min(Math.max(0, i - insertAt - 1), 16) * 16 : Math.min(i, 28) * 14}ms"
             onclick={(ev: MouseEvent) => onrowclick(ev, r)}
             onmouseenter={(ev: MouseEvent) => onrowenter(ev, r)}
-            onmouseleave={() => clearTimeout(cardTimer)}
+            onmouseleave={() => { clearTimeout(cardTimer); if (card) cardTimer = window.setTimeout(hideCard, 140); }}
           >
             <span class="guides" aria-hidden="true">
               {#each ancestors(r.node) as a (a.key)}
