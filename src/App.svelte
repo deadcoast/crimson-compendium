@@ -32,6 +32,8 @@
     if (ctxKey(c) !== ctxKey(app.ctx)) { app.ctx = c; app.cls = ''; }
   });
   $effect(() => { if (view.kind === 'entry') app.visit(branch.id, view.entry.id); });
+  // an entry opened from anywhere (explorer, palette, Recent) is never hidden by the terrain filter
+  $effect(() => { if (view.kind === 'entry' && app.cls && view.entry.cls !== app.cls) app.cls = ''; });
 
   const list = $derived.by(() => {
     const l = entriesFor(branch, ctx);

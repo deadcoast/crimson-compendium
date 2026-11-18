@@ -188,7 +188,7 @@
     else if (ev.key === ' ' && r) toggle(r.node, ev.altKey);
     else if (ev.key === 'Escape') {
       if (filtering) closeFilter();
-      else scroller?.blur();
+      else { scroller?.blur(); handled = false; } // let it reach the app too, which closes the phone drawer
     } else if (ev.key.length === 1 && ev.key !== '/' && !ev.altKey && /\S/.test(ev.key)) typeNav(ev.key);
     else handled = false;
 
