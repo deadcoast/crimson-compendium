@@ -191,7 +191,7 @@
     border: 1px solid var(--line-2); border-radius: 999px;
     transition: color var(--t-micro), border-color var(--t-micro), background var(--t-micro);
   }
-  .filter button .mono { font-size: 10.5px; color: var(--ash-2); }
+  .filter button .mono { font-size: 10.5px; color: var(--ash); }
   .filter button:hover { color: var(--bone); border-color: var(--line-3); }
   .filter button.on { color: var(--bone); border-color: var(--accent); background: var(--accent-dim); }
   .filter button[data-cls].on { border-color: var(--cls); background: color-mix(in srgb, var(--cls) 14%, transparent); }
@@ -216,7 +216,7 @@
   .group.rank { color: var(--bone-2); transition: color var(--t-micro); }
   .group.rank i { width: 7px; height: 7px; margin: 0 3px; transform: rotate(45deg); background: var(--accent); box-shadow: 0 0 8px var(--accent-dim); }
   .group.rank:hover { color: var(--bone); }
-  .group .mono { color: var(--ash-2); font-size: 10.5px; }
+  .group .mono { color: var(--ash); font-size: 10.5px; }
 
   li { animation: row-in 520ms var(--ease-out) both; animation-delay: calc(var(--i) * 24ms); }
   @keyframes row-in { from { opacity: 0; transform: translateY(10px); } }

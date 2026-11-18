@@ -24,6 +24,14 @@ from io import BytesIO
 from PIL import Image, ImageDraw, ImageFilter
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def write_json(path, data):
+    """Write JSON atomically (temp file, then rename), so a build or lint reading it never sees a half-written file."""
+    tmp = f"{path}.tmp"
+    with open(tmp, "w") as f:
+        json.dump(data, f, ensure_ascii=False, indent=1)
+    os.replace(tmp, path)
 CACHE = os.path.join(ROOT, "tools", ".cache")
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130 Safari/537.36"
 INK = (21, 17, 15)
@@ -112,7 +120,7 @@ def process_branch(branch_dir, force):
         if m.get("hero", {}).get("from"): made += render(m["hero"], "hero", f"{base}/hero.webp", force)
         for i, c in enumerate(m.get("captures", [])): made += render(c, "capture", f"{base}/{c['kind']}-{i + 1}.webp", force)
         for i, g in enumerate(m.get("gallery", [])): made += render(g, "gallery", f"{base}/gallery-{i + 1}.webp", force)
-    json.dump(entries, open(entries_path, "w"), ensure_ascii=False, indent=1)
+    write_json(entries_path, entries)
     if os.path.exists(branch_path):
         branch = json.load(open(branch_path))
         for leaf in branch["leaves"]:
@@ -121,7 +129,7 @@ def process_branch(branch_dir, force):
         for cat in branch.get("categories", []):
             cov = cat.get("cover", {})
             if cov.get("from"): made += render(cov, "cover", f"media/{bid}/_categories/{cat['id']}.webp", force)
-        json.dump(branch, open(branch_path, "w"), ensure_ascii=False, indent=1)
+        write_json(branch_path, branch)
     return made
 
 

@@ -108,6 +108,6 @@
     transition: transform 320ms var(--ease-out);
     pointer-events: none;
   }
-  .empty { padding: 8px 14px 12px 28px; font-size: 12px; color: var(--ash-2); }
+  .empty { padding: 8px 14px 12px 28px; font-size: 12px; color: var(--ash); }
   @media (prefers-reduced-motion: reduce) { .row { animation: none; } .slab { transition: none; } }
 </style>

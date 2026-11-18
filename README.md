@@ -58,6 +58,9 @@ npm install
 npm run dev      # http://localhost:5173
 npm run build    # static site in dist/ — opens from disk or any host/sub-path
 npm run check    # svelte-check type pass
+npm run lint     # data lint: evidence, credits, captions, sources, image files
+npm run verify   # build, then check every route, the explorer, phone, accessibility and offline fonts headless
+                 # first time: npx playwright install chromium (or set CHROME_PATH to a Chrome binary)
 npm run media    # fetch + convert images for entries with a new "from" URL (Python 3 + Pillow)
 ```
 

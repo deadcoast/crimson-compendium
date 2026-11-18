@@ -1,9 +1,10 @@
 name: Release
 
 # One action ships a release: Actions → Release → Run workflow (leave the tag blank to release
-# the package.json version), or push a tag. The job type-checks and builds the tagged source, zips the site (it opens
-# straight from disk), and creates the GitHub release with notes from docs/releases/<tag>.md,
-# falling back to that version's CHANGELOG section. Re-running replaces the zip.
+# the package.json version), or push a tag. The job type-checks, builds and verifies the tagged
+# source (npm run verify), zips the site (it opens straight from disk), and creates the GitHub
+# release with notes from docs/releases/<tag>.md, falling back to that version's CHANGELOG
+# section. Re-running replaces the zip.
 on:
   workflow_dispatch:
     inputs:
@@ -48,7 +49,13 @@ jobs:
 
       - run: npm ci
       - run: npm run check
-      - run: npm run build
+      # verify drives the runner's own Google Chrome when the image has one (Playwright's
+      # bundled browser lags new runner OS releases), else installs Playwright's Chromium
+      - name: Browser for verify
+        run: |
+          if [ -x /usr/bin/google-chrome ]; then echo "CHROME_PATH=/usr/bin/google-chrome" >> "$GITHUB_ENV"; google-chrome --version
+          else npx playwright install --with-deps chromium; fi
+      - run: npm run verify
 
       - name: Package the site
         run: |

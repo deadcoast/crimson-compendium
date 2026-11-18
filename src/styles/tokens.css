@@ -11,8 +11,8 @@
   /* bone: text and hairlines */
   --bone: #ede6d9;
   --bone-2: #bab1a3;
-  --ash: #7c7469;
-  --ash-2: #554e47;
+  --ash: #8c8378; /* readable secondary text: ≥ 4.5:1 on every ink surface (5.4 on ink-0, 4.6 on an accent-tinted row) */
+  --ash-2: #554e47; /* ornaments only: separators, diamonds, not-rated numerals; never text a reader needs */
   --line: rgba(237, 230, 217, 0.08);
   --line-2: rgba(237, 230, 217, 0.15);
   --line-3: rgba(237, 230, 217, 0.3);

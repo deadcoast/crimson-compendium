@@ -85,8 +85,9 @@
           {#each MOVE as label, i}
             <div>
               <dt>{label}</dt>
-              <dd aria-label="{move[i]} of 5">
-                {#each [1, 2, 3, 4, 5] as p}<i class:lit={p <= (move[i] ?? 0)} style:--p={p}></i>{/each}
+              <dd>
+                <span class="sr-only">{move[i]} of 5</span>
+                {#each [1, 2, 3, 4, 5] as p}<i aria-hidden="true" class:lit={p <= (move[i] ?? 0)} style:--p={p}></i>{/each}
               </dd>
             </div>
           {/each}
@@ -148,7 +149,7 @@
   .move i { width: 9px; height: 9px; transform: rotate(45deg); border: 1px solid var(--ash-2); transition: background 300ms, border-color 300ms; transition-delay: calc(var(--p) * 40ms); }
   .move i.lit { background: var(--bone); border-color: var(--bone); }
 
-  .src { margin-top: 14px; font-size: 10.5px; color: var(--ash-2); }
+  .src { margin-top: 14px; font-size: 10.5px; color: var(--ash); }
 
   .block { margin-top: 22px; }
   .block .eyebrow { font-size: 10px; margin-bottom: 10px; }

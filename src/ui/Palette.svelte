@@ -105,7 +105,7 @@
   }
   .field { display: flex; align-items: center; gap: 12px; padding: 16px 18px; border-bottom: 1px solid var(--line); color: var(--ash); }
   input { flex: 1; background: none; border: 0; outline: 0; color: var(--bone); font: inherit; font-size: 17px; }
-  input::placeholder { color: var(--ash-2); }
+  input::placeholder { color: var(--ash); }
 
   .results { max-height: 52vh; overflow-y: auto; padding: 8px; }
   .label { padding: 8px 10px 4px; font-size: 10px; }
@@ -123,7 +123,7 @@
   .mt { font-size: 12px; color: var(--ash); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .tr { font-size: 12.5px; color: var(--bone-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .none { padding: 18px 12px; color: var(--ash); }
-  .foot { display: flex; gap: 6px; align-items: center; padding: 10px 16px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--ash-2); }
+  .foot { display: flex; gap: 6px; align-items: center; padding: 10px 16px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--ash); }
 
   @media (max-width: 720px) {
     .palette { top: 0; width: 100vw; border-radius: 0; }
