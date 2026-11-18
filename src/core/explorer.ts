@@ -20,6 +20,8 @@ export interface TNode {
   accent?: string;
   glyph?: string;
   entry?: Entry;
+  /** entry rows: the list they hang in, so opening one keeps that list in the index */
+  ctx?: ListContext;
   /** right-hand decoration on entry rows inside a ranked lens */
   rank?: { text: string; top: boolean };
   count?: number;
@@ -47,7 +49,7 @@ function make(parent: TNode | undefined, part: string, n: Omit<TNode, 'key' | 'd
   return node;
 }
 
-function entries(b: Branch, parent: TNode, list: Entry[], rankBy?: string) {
+function entries(b: Branch, parent: TNode, list: Entry[], ctx: ListContext, rankBy?: string) {
   for (const e of list) {
     const t = rankBy ? Math.round(tierOf(e, rankBy)) : 0;
     make(parent, e.id, {
@@ -55,6 +57,7 @@ function entries(b: Branch, parent: TNode, list: Entry[], rankBy?: string) {
       label: e.name,
       href: href.entry(b, e.id),
       entry: e,
+      ctx,
       rank: rankBy ? { text: t >= 1 && t <= 5 ? ROMAN[t] : '—', top: t === 1 } : undefined,
     });
   }
@@ -66,20 +69,20 @@ export function buildTree(branches: Branch[]): TNode[] {
     for (const l of b.leaves) {
       const members = b.entries.filter((e) => e.leaf === l.id);
       const n = make(root, `leaf:${l.id}`, { kind: 'leaf', label: l.label, href: href.leaf(b, l.id), accent: l.accent, count: members.length });
-      entries(b, n, members);
+      entries(b, n, members, { kind: 'leaf', id: l.id });
     }
     for (const c of b.categories) {
       const n = make(root, `cat:${c.id}`, { kind: 'cat', label: c.label, desc: c.subtitle, href: href.cat(b, c.id), accent: c.accent, glyph: c.glyph, count: c.entries.length });
       for (const cl of c.leaves) {
         const ln = make(n, cl.id, { kind: 'catleaf', label: cl.label, href: href.cat(b, c.id, cl.id), accent: cl.accent, count: cl.entries.length });
-        entries(b, ln, cl.entries);
+        entries(b, ln, cl.entries, { kind: 'cat', id: c.id, leaf: cl.id });
       }
     }
     const ride = make(root, 'ride', { kind: 'folder', label: 'Ride for', glyph: 'lens', accent: 'crimson' });
     for (const lens of b.lenses) {
       const list = lensEntries(b, lens);
       const n = make(ride, lens.id, { kind: 'lens', label: lens.label, href: href.lens(b, lens.id), accent: 'crimson', count: list.length });
-      entries(b, n, list, lens.sortBy);
+      entries(b, n, list, { kind: 'lens', id: lens.id }, lens.sortBy);
     }
     make(root, 'ladder', { kind: 'ladder', label: 'Tier ladder', href: href.ladder(b), glyph: 'ladder', accent: 'crimson' });
     return root;

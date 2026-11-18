@@ -29,6 +29,8 @@ class AppState {
 
   go(h: string) {
     const clean = h.replace(/^#/, '');
+    // update state in the same tick as any ctx change, so the view never sees one without the other
+    this.hash = clean;
     if (location.hash.slice(1) !== clean) location.hash = clean;
   }
 

@@ -123,11 +123,14 @@
   }
 
   /* ── opening ─────────────────────────────────────────── */
+  const ctxId = (c: ListContext) => `${c.kind}:${c.id}:${c.kind === 'cat' ? (c.leaf ?? '') : ''}`;
   function open(n: TNode, fromClick = false) {
     if (!n.href || n.kind === 'branch') { toggle(n); return; }
     const already = n.key === selectedKey;
     if (fromClick && already && hasKids(n)) { toggle(n); return; }
     if (hasKids(n)) setOpen(n, true);
+    // an entry opens inside the list it was picked from, even when the hash does not change
+    if (n.ctx && ctxId(n.ctx) !== ctxId(app.ctx)) { app.ctx = n.ctx; app.cls = ''; }
     app.go(n.href);
     if (n.kind !== 'folder') onnavigate?.();
   }

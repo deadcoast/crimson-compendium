@@ -10,6 +10,7 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
   - `←` / `→` collapse or step out, and expand or step in; `Alt` folds a whole subtree.
   - Typing letters jumps to a row; `Ctrl/⌘ F` filters the tree.
   - Parent folders stay pinned at the top as you scroll, and the tree reveals whatever page you open.
+  - Opening a mount from a folder keeps that folder's list in the index, including prev/next.
   - Every mount appears as a row with a portrait icon and a hover card showing all four tiers.
   - `Alt \` or `Ctrl ⇧ E` focuses the explorer from anywhere.
 - **Category branches** under Mounts: Land, Underwater, Flying, Mechanical, Easter Eggs and DLC (*Charting the Unknown*). Each splits into leaves, and a mount can appear in several.
