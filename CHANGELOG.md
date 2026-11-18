@@ -18,7 +18,7 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
 - **Easter egg notes** on plates: the Kuku Bird as Crimson Desert's Chocobo, Black Desert Online's Marni, the circus lion and the wildlife-park elephant.
 - High-Mobility A.T.A.G. listed as an A.T.A.G. variant, with a new A.T.A.G. action still.
 - The palette (`/`) now finds branches as well as mounts, so typing `dlc` or `under` jumps to them.
-- GitHub packaging: this changelog, a README with screenshots, CI (type check + build), and a one-click Release workflow that builds the site and publishes the release with its zip.
+- GitHub packaging: this changelog, a README with screenshots, CI (type check + build), and a one-click Release workflow that builds the site and publishes the release with its zip. Its tag input can be left blank (it releases the `package.json` version) and tolerates a stray trailing dot or missing `v`. Workflows run on the Node 24 actions (`checkout`, `setup-node`, `upload-artifact` v6).
 
 ### Changed
 - **Tier colours.** Red is now reserved for the root. Legendary is orange, Rare is royal blue and Easter Eggs is cyan, following the traditional loot-tier scheme; category leaves inherit. Spec: `docs/spec/tier-colors.txt`.

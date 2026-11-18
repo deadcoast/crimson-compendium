@@ -1,15 +1,16 @@
 name: Release
 
-# One action ships a release: Actions → Release → Run workflow (enter the tag, e.g. v0.2.0),
-# or push a tag. The job type-checks and builds the tagged source, zips the site (it opens
+# One action ships a release: Actions → Release → Run workflow (leave the tag blank to release
+# the package.json version), or push a tag. The job type-checks and builds the tagged source, zips the site (it opens
 # straight from disk), and creates the GitHub release with notes from docs/releases/<tag>.md,
 # falling back to that version's CHANGELOG section. Re-running replaces the zip.
 on:
   workflow_dispatch:
     inputs:
       tag:
-        description: Version tag to release, e.g. v0.2.0
-        required: true
+        description: Tag to release (leave blank for the package.json version)
+        required: false
+        default: ''
   push:
     tags: ['v*']
 
@@ -17,25 +18,33 @@ permissions:
   contents: write
 
 concurrency:
-  group: release-${{ github.event.inputs.tag || github.ref_name }}
+  group: release
 
 jobs:
   release:
     runs-on: ubuntu-latest
     env:
-      TAG: ${{ github.event.inputs.tag || github.ref_name }}
       GH_TOKEN: ${{ github.token }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
 
-      - name: Check the version matches package.json
+      # The typed tag is cleaned before it is checked: spaces and trailing dots are dropped
+      # (a tag copied out of a sentence arrives as "v0.2.0.") and a missing "v" is added.
+      - name: Resolve the tag
+        env:
+          RAW: ${{ github.event_name == 'push' && github.ref_name || github.event.inputs.tag }}
         run: |
           want="v$(node -p "require('./package.json').version")"
-          [ "$TAG" = "$want" ] || { echo "::error::tag $TAG does not match package.json ($want)"; exit 1; }
+          tag="$(printf '%s' "$RAW" | tr -d '[:space:]' | sed 's/\.*$//')"
+          [ -n "$tag" ] || tag="$want"
+          case "$tag" in v*) ;; *) tag="v$tag" ;; esac
+          [ "$tag" = "$want" ] || { echo "::error::tag $tag does not match package.json ($want)"; exit 1; }
+          echo "TAG=$tag" >> "$GITHUB_ENV"
+          echo "Releasing $tag"
 
       - run: npm ci
       - run: npm run check
