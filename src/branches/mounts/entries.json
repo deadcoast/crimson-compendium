@@ -1,0 +1,5129 @@
+[
+ {
+  "id": "royler",
+  "name": "Royler",
+  "leaf": "legendary",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Legendary horse",
+  "region": "Pailune",
+  "area": "Silverwolf Mountains",
+  "trait": "Fastest horse in Pywel",
+  "summary": "The white legendary horse with golden legs. It reaches the top Speed and Acceleration ratings, holds the deepest stamina pool of any mount on record, and is the one horse that learns Consecutive Instant Acceleration: a second boost out of every drift.",
+  "tiers": {
+   "speed": {
+    "tier": 1,
+    "basis": "Speed 5 and Acceleration 5 at Lv 5, plus Consecutive Instant Acceleration — no other horse gets the second boost."
+   },
+   "stamina": {
+    "tier": 1,
+    "basis": "390 Stamina at Lv 5, the highest figure recorded for any mount."
+   },
+   "travel": {
+    "tier": 1,
+    "basis": "Top speed on the longest stamina bar, with Water Sprint and Double Jump to cut corners."
+   },
+   "combat": {
+    "tier": 4,
+    "basis": "23 Attack at Lv 5. A horse only fights through its champron charge and back kick."
+   }
+  },
+  "tags": [
+   "long-haul",
+   "early"
+  ],
+  "requires": [
+   "Stamina Lv. 6 minimum (Lv. 8 recommended)"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Ride north from the City of Hernand into Pailune's Silverwolf Mountains.",
+     "Find the lake beside Snowgrass Hearth campsite, just under the “P” of “Pailune” on the world map. The route passes a Black Bear camp you can ride straight past.",
+     "Mount Royler and win the taming minigame: steer against the way it bucks until the bar fills. The cold here drains stamina faster.",
+     "Register it with any stable manager (Hernand Stable, north-west of Hernand Castle, is the closest)."
+    ]
+   }
+  ],
+  "location": "Lakeshore beside Snowgrass Hearth campsite, Silverwolf Mountains, Pailune.",
+  "notes": [
+   "Fail the minigame and it bolts. Leave the area and come back to respawn it.",
+   "Royler is reachable early: the lake sits just north of the starting city."
+  ],
+  "stats": {
+   "kind": "horse",
+   "levels": {
+    "1": [
+     350,
+     315,
+     10,
+     50,
+     4,
+     3,
+     2,
+     2
+    ],
+    "5": [
+     590,
+     390,
+     23,
+     70,
+     5,
+     5,
+     4,
+     3
+    ]
+   },
+   "source": "fextralife"
+  },
+  "skills": [
+   [
+    2,
+    "Dash"
+   ],
+   [
+    2,
+    "Flurry Slash (with champron)"
+   ],
+   [
+    2,
+    "Double Jump"
+   ],
+   [
+    3,
+    "Drift"
+   ],
+   [
+    3,
+    "Quick Start"
+   ],
+   [
+    3,
+    "Back Kick"
+   ],
+   [
+    3,
+    "Instant Acceleration"
+   ],
+   [
+    4,
+    "Sprint"
+   ],
+   [
+    5,
+    "Lateral Movement"
+   ],
+   [
+    5,
+    "Water Sprint"
+   ],
+   [
+    5,
+    "Consecutive Instant Acceleration"
+   ],
+   [
+    5,
+    "Swimming III"
+   ]
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4451714/83c7f327f81dadaf252e6b2063c9cb7e.png/show",
+    "credit": "game8",
+    "src": "media/mounts/royler/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/4450399/90a071778425a172aff63a825d9d6249.png/show",
+     "credit": "game8",
+     "caption": "World map — under the “P” of Pailune",
+     "src": "media/mounts/royler/map-1.webp",
+     "w": 728,
+     "h": 410
+    },
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/4450400/bb8c020e49c9cce036efa896c742adeb.png/show",
+     "credit": "game8",
+     "caption": "On site — the Snowgrass Hearth lakeshore",
+     "src": "media/mounts/royler/overworld-2.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/588198",
+    "title": "Legendary Horse Royler — Game8"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Royler",
+    "title": "Royler — Fextralife Wiki"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Mounts",
+    "title": "Mounts — Fextralife Wiki"
+   }
+  ],
+  "since": "Base game",
+  "variants": []
+ },
+ {
+  "id": "rokade",
+  "name": "Rokade",
+  "leaf": "legendary",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Legendary horse",
+  "region": "Hernand",
+  "area": "Steel Mountains · Grace Estate",
+  "trait": "Toughest horse — highest Health",
+  "summary": "The charcoal-black legendary horse of the Steel Mountains. It carries the most Health of any horse and tops the herd in Handling and Jump at max level, which makes it the safest horse to ride through a fight.",
+  "tiers": {
+   "speed": {
+    "tier": 2,
+    "basis": "Speed 4 and Acceleration 4 at Lv 5 — one step under Royler and Camora."
+   },
+   "stamina": {
+    "tier": 2,
+    "basis": "315 Stamina at Lv 5."
+   },
+   "travel": {
+    "tier": 2,
+    "basis": "Handling 5 and Jump 5 at Lv 5 (best of all horses) with Water Sprint."
+   },
+   "combat": {
+    "tier": 3,
+    "basis": "840 Health at Lv 5 — the hardest horse to knock out — but only 26 Attack."
+   }
+  },
+  "tags": [
+   "long-haul",
+   "vertical"
+  ],
+  "requires": [
+   "Stamina Lv. 6 minimum (Lv. 8 recommended)"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Head south-east of the City of Hernand into the Steel Mountains (Grace Estate).",
+     "Find the lake near the Spire of Insight; Rokade grazes on the grass around it.",
+     "Mount it and win the taming minigame. The climate here is mild, so stamina drains at the normal rate.",
+     "Register it with any stable manager."
+    ]
+   }
+  ],
+  "location": "Grassland around the lake near the Spire of Insight, Grace Estate, Steel Mountains.",
+  "notes": [
+   "Farther from Hernand than Royler's lake, but easier to tame thanks to the mild weather."
+  ],
+  "stats": {
+   "kind": "horse",
+   "levels": {
+    "1": [
+     600,
+     240,
+     15,
+     65,
+     3,
+     2,
+     3,
+     3
+    ],
+    "5": [
+     840,
+     315,
+     26,
+     85,
+     4,
+     4,
+     5,
+     5
+    ]
+   },
+   "source": "fextralife"
+  },
+  "skills": [
+   [
+    2,
+    "Dash"
+   ],
+   [
+    2,
+    "Flurry Slash (with champron)"
+   ],
+   [
+    2,
+    "Double Jump"
+   ],
+   [
+    3,
+    "Drift"
+   ],
+   [
+    3,
+    "Quick Start"
+   ],
+   [
+    3,
+    "Back Kick"
+   ],
+   [
+    4,
+    "Sprint"
+   ],
+   [
+    5,
+    "Lateral Movement"
+   ],
+   [
+    5,
+    "Water Sprint"
+   ],
+   [
+    5,
+    "Instant Acceleration"
+   ],
+   [
+    5,
+    "Swimming III"
+   ]
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4451710/585fff6e3b2e3f6fdb35317d4cdd2c5f.png/show",
+    "credit": "game8",
+    "src": "media/mounts/rokade/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/4450255/8fb7308b6029a294f6786807d778ff45.png/show",
+     "credit": "game8",
+     "caption": "World map — lake west of the Steel Mountains label",
+     "src": "media/mounts/rokade/map-1.webp",
+     "w": 728,
+     "h": 410
+    },
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/4450254/234c08ca5f8f9837de461ca8307dda80.png/show",
+     "credit": "game8",
+     "caption": "On site — Rokade by the lake",
+     "src": "media/mounts/rokade/overworld-2.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/588199",
+    "title": "Legendary Horse Rokade — Game8"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Rokade",
+    "title": "Rokade — Fextralife Wiki"
+   }
+  ],
+  "since": "Base game",
+  "variants": []
+ },
+ {
+  "id": "camora",
+  "name": "Camora",
+  "leaf": "legendary",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Legendary horse",
+  "region": "Crimson Desert",
+  "area": "Redtree Forest · Red River",
+  "trait": "Hardest-hitting horse — top Attack & Defense",
+  "summary": "The blood-red legendary horse of the Redtree Forest. It has the highest Attack and Defense of any horse and reaches the same Speed rating as Royler at max level, without Royler's extra boost.",
+  "tiers": {
+   "speed": {
+    "tier": 2,
+    "basis": "Speed 5 and Acceleration 5 at Lv 5, but no Consecutive Instant Acceleration."
+   },
+   "stamina": {
+    "tier": 2,
+    "basis": "315 Stamina at Lv 5."
+   },
+   "travel": {
+    "tier": 2,
+    "basis": "Fast with Water Sprint and Double Jump; the long ride south is the only drawback."
+   },
+   "combat": {
+    "tier": 3,
+    "basis": "33 Attack and 120 Defense at Lv 5 — best of all horses, still below the beast mounts."
+   }
+  },
+  "tags": [
+   "long-haul"
+  ],
+  "requires": [
+   "Stamina Lv. 6 minimum (Lv. 8 recommended)"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Travel to the far south-east of Pywel: the Redtree Forest by the Red River, southern Crimson Desert (Tashkalp).",
+     "Camora roams the grass around the giant red tree with a herd of ordinary horses.",
+     "Mount it and win the taming minigame; the climate does not drain extra stamina.",
+     "Register it with any stable manager."
+    ]
+   }
+  ],
+  "location": "Grassland around the giant red tree, Redtree Forest, by the Red River.",
+  "notes": [
+   "Look for the red bay coat among the herd — the other horses here are ordinary breeds."
+  ],
+  "stats": {
+   "kind": "horse",
+   "levels": {
+    "1": [
+     450,
+     240,
+     27,
+     100,
+     3,
+     2,
+     3,
+     3
+    ],
+    "5": [
+     690,
+     315,
+     33,
+     120,
+     5,
+     5,
+     4,
+     4
+    ]
+   },
+   "source": "fextralife"
+  },
+  "skills": [
+   [
+    2,
+    "Dash"
+   ],
+   [
+    2,
+    "Flurry Slash (with champron)"
+   ],
+   [
+    2,
+    "Double Jump"
+   ],
+   [
+    3,
+    "Drift"
+   ],
+   [
+    3,
+    "Quick Start"
+   ],
+   [
+    3,
+    "Back Kick"
+   ],
+   [
+    4,
+    "Sprint"
+   ],
+   [
+    5,
+    "Lateral Movement"
+   ],
+   [
+    5,
+    "Water Sprint"
+   ],
+   [
+    5,
+    "Instant Acceleration"
+   ],
+   [
+    5,
+    "Swimming III"
+   ]
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4451711/57e575889f468d33d5f76e8dbcd3676b.png/show",
+    "credit": "game8",
+    "src": "media/mounts/camora/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/4449808/def4d645261fe120fb026fd67af3138d.png/show",
+     "credit": "game8",
+     "caption": "World map — west of the Red River",
+     "src": "media/mounts/camora/map-1.webp",
+     "w": 728,
+     "h": 410
+    },
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/4450417/aeebd6030e4ce68bd704ec16e8ff8ce5.png/show",
+     "credit": "game8",
+     "caption": "On site — the herd in the red blossoms",
+     "src": "media/mounts/camora/overworld-2.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/588200",
+    "title": "Legendary Horse Camora — Game8"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Camora",
+    "title": "Camora — Fextralife Wiki"
+   }
+  ],
+  "since": "Base game",
+  "variants": []
+ },
+ {
+  "id": "blackstar",
+  "name": "Blackstar",
+  "leaf": "legendary",
+  "cls": "sky",
+  "domains": [
+   "sky"
+  ],
+  "kind": "Dragon",
+  "region": "Story",
+  "area": "Chapter 11",
+  "trait": "Fire-breathing flight over all of Pywel",
+  "summary": "Kliff's dragon, earned at the close of Chapter 11. It flies anywhere on the continent and rains Fireball and Fire Breath on camps from above — rationed by a real-time timer.",
+  "tiers": {
+   "speed": {
+    "tier": 1,
+    "basis": "True flight with dive-bomb acceleration; nothing in the sky outpaces it."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "About 15 real-time minutes per summon, then roughly 50 minutes of cooldown."
+   },
+   "travel": {
+    "tier": 1,
+    "basis": "Crosses any terrain on the map in a straight line."
+   },
+   "combat": {
+    "tier": 1,
+    "basis": "2,500 Health, Fireball and Fire Breath from the air — built for clearing whole camps."
+   }
+  },
+  "tags": [
+   "flight",
+   "battle"
+  ],
+  "requires": [
+   "Main story through Chapter 11"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Meet and cleanse the wounded Blackstar at the Palace of Urdavah during Chapter 9 (The Sage of the Desert).",
+     "Push on to the Chapter 11 finale and bring down the Golden Star; White Crow then hands you control of the dragon.",
+     "Summon it from the mount wheel in open outdoor space. It cannot be called inside the Abyss."
+    ]
+   }
+  ],
+  "location": "Story unlock — no world location.",
+  "notes": [
+   "Active for about 15 real-time minutes per summon, followed by roughly 50 minutes of real-time cooldown. Resting does not shorten it.",
+   "The Enhanced update (2.0) added camera-based and manual flight control options."
+  ],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    2500,
+    300,
+    50,
+    1000
+   ],
+   "source": "fextralife"
+  },
+  "media": {
+   "portrait": {
+    "from": "https://static0.fextralifeimages.com/file/crimsondesertgame/3/3b/Blackstar-mounts-crimson-desert-wiki-guide.png",
+    "credit": "fextralife",
+    "matte": true,
+    "src": "media/mounts/blackstar/portrait.webp",
+    "w": 170,
+    "h": 170
+   },
+   "hero": {
+    "from": "https://img.game8.co/4444893/18014e7ef2ecaa86c692eddc49ccc34f.png/show",
+    "credit": "game8",
+    "src": "media/mounts/blackstar/hero.webp",
+    "w": 728,
+    "h": 410
+   },
+   "gallery": [
+    {
+     "kind": "action",
+     "from": "https://img.game8.co/4444892/d332d8f8b374f6f28575d4b16ad245ab.png/show",
+     "credit": "game8",
+     "caption": "Fire Breath on a camp",
+     "src": "media/mounts/blackstar/gallery-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "captures": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/587115",
+    "title": "How to Unlock the Dragon — Game8"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Blackstar",
+    "title": "Blackstar — Fextralife Wiki"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/dragon-mount",
+    "title": "Dragon Mount — The Games Wiki"
+   },
+   {
+    "by": "gamerant",
+    "url": "https://gamerant.com/best-open-world-games-crimson-desert-enhanced-update/",
+    "title": "Crimson Desert Enhanced update — GameRant"
+   }
+  ],
+  "since": "Base game",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "silver-fang",
+  "name": "Silver Fang",
+  "leaf": "legendary",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Legendary wolf",
+  "region": "Hernand",
+  "area": "Howling Hollow",
+  "trait": "Keeps fighting after you dismount",
+  "summary": "The pale legendary wolf at the end of House Celeste's Legendary Wolf questline. Slow and short-winded under a rider, it keeps fighting on its own after you step down.",
+  "tiers": {
+   "speed": {
+    "tier": 4,
+    "basis": "Clearly slower than any horse (Game8)."
+   },
+   "stamina": {
+    "tier": 5,
+    "basis": "100 Stamina — the lowest recorded for a permanent mount."
+   },
+   "travel": {
+    "tier": 4,
+    "basis": "Slow with a tiny stamina bar; a fighting mount, not a traveller."
+   },
+   "combat": {
+    "tier": 2,
+    "basis": "100 Attack and an aggressive AI that fights alongside you on foot."
+   }
+  },
+  "tags": [
+   "battle"
+  ],
+  "requires": [
+   "House Celeste, Vellua Fishermen's Guild and Parish of Solumen questlines",
+   "Legendary Wolf questline (House Celeste)"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Finish the prerequisite faction questlines to open House Celeste's Legendary Wolf chain (starts with Silence from Afar).",
+     "Defeat Black Fang in that chain. It drops Leebur's Soul, which marks every legendary animal on your map.",
+     "Hunt Silver Fang at Howling Hollow near Sage's Peak, northern Hernand, then skin it for the Fang of Silver Fang.",
+     "At any Witch: Craft Abyss Gear → Special Items → Sigil of Solidarity. Use the sigil to register the mount."
+    ]
+   }
+  ],
+  "location": "Howling Hollow, near Sage's Peak, northern Hernand.",
+  "notes": [
+   "Lightning briefly stuns it.",
+   "The purple flowers in the hollow hurt you while you stand on them.",
+   "Summon it from the mount wheel, where your horse normally sits."
+  ],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    450,
+    100,
+    100,
+    45
+   ],
+   "source": "game8"
+  },
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4457533/e31bc784ca20a1131db827d94d9ec1b0.png/show",
+    "credit": "game8",
+    "src": "media/mounts/silver-fang/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://static0.fextralifeimages.com/file/crimsondesertgame/1/18/Silver_Fang_Showcase_Crimson_Desert_Wiki.jpg",
+    "credit": "fextralife",
+    "focus": "50% 35%",
+    "src": "media/mounts/silver-fang/hero.webp",
+    "w": 1642,
+    "h": 928
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/4480131/bed88b085825009ced565bddd9004892.png/show",
+     "credit": "game8",
+     "caption": "World map — Howling Hollow (inset)",
+     "src": "media/mounts/silver-fang/map-1.webp",
+     "w": 728,
+     "h": 410
+    },
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/4457542/b9000d32c667962bd93b5cdf792b6149.png/show",
+     "credit": "game8",
+     "caption": "On site — the hollow from above",
+     "src": "media/mounts/silver-fang/overworld-2.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/590425",
+    "title": "Silver Fang — Game8"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Silver_Fang",
+    "title": "Silver Fang — Fextralife Wiki"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Mounts",
+    "title": "Mounts — Fextralife Wiki"
+   }
+  ],
+  "since": "Patch 1.01",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "white-bear",
+  "name": "White Bear",
+  "leaf": "legendary",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Legendary bear",
+  "region": "Pailune",
+  "area": "Five-Finger Mountain",
+  "trait": "Highest base damage of any mount",
+  "summary": "A legendary bear of the Pailune peaks. 1,500 Health and 180 Attack make it the heaviest hitter you can ride: its swipes shred crowds, and it keeps fighting when you dismount.",
+  "tiers": {
+   "speed": {
+    "tier": 5,
+    "basis": "Very slow next to any horse (Game8)."
+   },
+   "stamina": {
+    "tier": 4,
+    "basis": "200 Stamina."
+   },
+   "travel": {
+    "tier": 5,
+    "basis": "Slow and short-ranged; summon it for fights, not journeys."
+   },
+   "combat": {
+    "tier": 1,
+    "basis": "1,500 Health and 180 Attack — the top damage figure on record — plus crowd-clearing swipes."
+   }
+  },
+  "tags": [
+   "battle"
+  ],
+  "requires": [
+   "Leebur's Soul (optional — reveals its location)"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Go to Five-Finger Mountain, east of Silver Wolf Mountain in Pailune.",
+     "Defeat the White Bear. Fire sends it rolling on the ground, opening a free damage window.",
+     "Skin it for the White Bear Claws.",
+     "Craft the Sigil of Solidarity at any Witch (Craft Abyss Gear → Special Items) and use it to register the bear."
+    ]
+   }
+  ],
+  "location": "Five-Finger Mountain, east of Silver Wolf Mountain, Pailune.",
+  "notes": [
+   "Skinning can also yield the White Bear Helm.",
+   "Clawed Bears list the same 1,500 / 180 statline on Fextralife."
+  ],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    1500,
+    200,
+    180,
+    35
+   ],
+   "source": "game8"
+  },
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4458371/d6038e3195a3bb3684b6ce5c50307ba6.png/show",
+    "credit": "game8",
+    "src": "media/mounts/white-bear/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://static0.fextralifeimages.com/file/crimsondesertgame/3/35/White_bear_Showcase_Crimson_Desert_Wiki.jpg",
+    "credit": "fextralife",
+    "focus": "50% 45%",
+    "src": "media/mounts/white-bear/hero.webp",
+    "w": 1642,
+    "h": 928
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/4458932/80adc126422e9a0435687e685372fecb.png/show",
+     "credit": "game8",
+     "caption": "World map — Five-Finger Mountain (inset)",
+     "src": "media/mounts/white-bear/map-1.webp",
+     "w": 728,
+     "h": 410
+    },
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/4458753/aa15b6ae78905ba1cd5a763b639d4dc5.png/show",
+     "credit": "game8",
+     "caption": "On site — the snowfield",
+     "src": "media/mounts/white-bear/overworld-2.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/590690",
+    "title": "White Bear — Game8"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/White_Bear",
+    "title": "White Bear — Fextralife Wiki"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Mounts",
+    "title": "Mounts — Fextralife Wiki"
+   }
+  ],
+  "since": "Patch 1.01",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "snowwhite-deer",
+  "name": "Snowwhite Deer",
+  "leaf": "legendary",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Legendary deer",
+  "region": "Pailune",
+  "area": "Silverwolf Mountain",
+  "trait": "Top stamina of the beast legendaries",
+  "summary": "A mist-born legendary deer of Silverwolf Mountain. It arrives at full strength — 300 Stamina and near-legendary-horse pace — with no levelling, but it learns no mount skills.",
+  "tiers": {
+   "speed": {
+    "tier": 2,
+    "basis": "“Quite fast” — nearly a match for the legendary horses over distance (Game8, Fextralife)."
+   },
+   "stamina": {
+    "tier": 2,
+    "basis": "300 Stamina, highest of the beast legendaries. Royler (315 at Lv 1, 390 at Lv 5) still leads overall."
+   },
+   "travel": {
+    "tier": 2,
+    "basis": "The best non-horse land traveller; no skills, but no levelling needed either."
+   },
+   "combat": {
+    "tier": 4,
+    "basis": "25 Attack — not built to fight."
+   }
+  },
+  "tags": [
+   "long-haul"
+  ],
+  "requires": [
+   "Leebur's Soul (optional — reveals its location)"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Go to Silverwolf Mountain in Pailune, by the letter “A” of “Pailune” on the world map.",
+     "Defeat the Snowwhite Deer. It is weak to fire and easily stun-locked by heavy hits; a charged fire arrow from range stops it bolting.",
+     "Skin it for the Snowwhite Deer Antlers.",
+     "Craft the Sigil of Solidarity at any Witch and use it to register the deer."
+    ]
+   }
+  ],
+  "location": "Silverwolf Mountain, Pailune — beside the “A” of the region label.",
+  "notes": [
+   "Skinning may also yield the Throne of the White Knight for your house."
+  ],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    400,
+    300,
+    25,
+    50
+   ],
+   "source": "game8"
+  },
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4458759/848291d9e4943618830838a90a35c88e.png/show",
+    "credit": "game8",
+    "src": "media/mounts/snowwhite-deer/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://static0.fextralifeimages.com/file/crimsondesertgame/7/7d/Snowwhite_Deer_Showcase_Crimson_Desert_Wiki.jpg",
+    "credit": "fextralife",
+    "focus": "55% 40%",
+    "src": "media/mounts/snowwhite-deer/hero.webp",
+    "w": 1650,
+    "h": 928
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/4458763/03b66fa945bf0e7eadff5268ee29723b.png/show",
+     "credit": "game8",
+     "caption": "World map — by the “A” of Pailune",
+     "src": "media/mounts/snowwhite-deer/map-1.webp",
+     "w": 728,
+     "h": 410
+    },
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/4458760/13fe9087b21313950fad3b35ee7fc59d.png/show",
+     "credit": "game8",
+     "caption": "On site — the mountain slope",
+     "src": "media/mounts/snowwhite-deer/overworld-2.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/590695",
+    "title": "Snowwhite Deer — Game8"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Snowwhite_Deer",
+    "title": "Snowwhite Deer — Fextralife Wiki"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Mounts",
+    "title": "Mounts — Fextralife Wiki"
+   }
+  ],
+  "since": "Patch 1.01",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "icicle-edge-alpine-ibex",
+  "name": "Icicle Edge Alpine Ibex",
+  "leaf": "legendary",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Legendary ibex",
+  "region": "Pailune",
+  "area": "Wayward Woods",
+  "trait": "Best jumper of the beast legendaries",
+  "summary": "Moren the Mistwood Huntmaster's white alpine ibex. Strong stamina, decent speed and the highest Jump rating recorded for a beast — made for Pailune's cliffs.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "Speed 3, Acceleration 3 — “decent speed” (Game8)."
+   },
+   "stamina": {
+    "tier": 2,
+    "basis": "300 Stamina."
+   },
+   "travel": {
+    "tier": 2,
+    "basis": "Jump 5 and sure footing on rough mountain ground."
+   },
+   "combat": {
+    "tier": 4,
+    "basis": "25 Attack; it can kick backwards but is no fighter."
+   }
+  },
+  "tags": [
+   "vertical"
+  ],
+  "requires": [
+   "Longleaf Tribe faction quests up to The Sport Hunter",
+   "Chapter 8+"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Progress the Longleaf Tribe faction questline to The Sport Hunter.",
+     "Track Moren with your lantern near the Wayward Woods, west Pailune (north of the Ridge Hunter Tannery). He rides the ibex with an escort.",
+     "Beat him twice — he vanishes into the fog after his first health bar — to earn the Icicle Edge Alpine Ibex Horns.",
+     "Craft the Sigil of Solidarity at any Witch and use it to register the ibex."
+    ]
+   }
+  ],
+  "location": "Wayward Woods, west Pailune — north of the Ridge Hunter Tannery.",
+  "notes": [
+   "Clear Moren's escort first; the two-phase fight gets messy in the fog."
+  ],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    400,
+    300,
+    25,
+    null
+   ],
+   "move": [
+    3,
+    3,
+    3,
+    5
+   ],
+   "source": "fextralife"
+  },
+  "media": {
+   "portrait": {
+    "from": "https://static0.fextralifeimages.com/file/crimsondesertgame/a/a6/Icicle_Edge_Alpine_Ibex_Showcase_Crimson_Desert_Wiki.jpg",
+    "credit": "fextralife",
+    "crop": [
+     0.47,
+     0.56,
+     0.94
+    ],
+    "src": "media/mounts/icicle-edge-alpine-ibex/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://static0.fextralifeimages.com/file/crimsondesertgame/a/a6/Icicle_Edge_Alpine_Ibex_Showcase_Crimson_Desert_Wiki.jpg",
+    "credit": "fextralife",
+    "focus": "40% 55%",
+    "src": "media/mounts/icicle-edge-alpine-ibex/hero.webp",
+    "w": 1650,
+    "h": 928
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://static0.fextralifeimages.com/file/crimsondesertgame/3/3e/Icicle_Edge_Alpine_Ibex_Map_Location_Crimson_Desert_Wiki.jpg",
+     "credit": "fextralife",
+     "caption": "World map — Moren's hunting ground",
+     "src": "media/mounts/icicle-edge-alpine-ibex/map-1.webp",
+     "w": 1600,
+     "h": 900
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/591786",
+    "title": "Icicle Edge Alpine Ibex — Game8"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Icicle_Edge_Alpine_Ibex",
+    "title": "Icicle Edge Alpine Ibex — Fextralife Wiki"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Mounts",
+    "title": "Mounts — Fextralife Wiki"
+   }
+  ],
+  "since": "Patch 1.01",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "rock-tusk-warthog",
+  "name": "Rock Tusk Warthog",
+  "leaf": "legendary",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Legendary boar",
+  "region": "Crimson Desert",
+  "area": "Red River · southern Tashkalp",
+  "trait": "Charges through shield lines",
+  "summary": "Ravok of the Savage Fangs' armoured war-boar. Slower than any horse, but its charge tramples groups and breaks shield walls.",
+  "tiers": {
+   "speed": {
+    "tier": 4,
+    "basis": "“Decent speed but slower than horses” (Game8)."
+   },
+   "stamina": {
+    "tier": 4,
+    "basis": "200 Stamina."
+   },
+   "travel": {
+    "tier": 4,
+    "basis": "Slow; fine across swamp and brush, poor over distance."
+   },
+   "combat": {
+    "tier": 2,
+    "basis": "100 Attack and a trampling charge that breaks shield formations."
+   }
+  },
+  "tags": [
+   "battle"
+  ],
+  "requires": [
+   "Quest: Master of the Wetlands"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Head to the Red River in southern Tashkalp, Crimson Desert, and use your lantern to track Ravok of the Savage Fangs.",
+     "Defeat him twice — he escapes after his first health bar — to trigger a cutscene and earn the Rock Tusk Warthog Molar.",
+     "Craft the Sigil of Solidarity at any Witch and use it to register the warthog."
+    ]
+   }
+  ],
+  "location": "Near the Red River, southern Tashkalp, Crimson Desert.",
+  "notes": [
+   "Ravok rides with a large escort; thin it out before engaging."
+  ],
+  "variants": [
+   "Brown",
+   "Grey",
+   "Dark Brown",
+   "Brown with Black Mane",
+   "Light Brown",
+   "Dark Grey",
+   "Black"
+  ],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    450,
+    200,
+    100,
+    25
+   ],
+   "source": "game8"
+  },
+  "media": {
+   "portrait": {
+    "from": "https://static0.fextralifeimages.com/file/crimsondesertgame/4/44/Rock_Tusk_Warthog_Showcase_Crimson_Desert_Wiki.jpg",
+    "credit": "fextralife",
+    "crop": [
+     0.4,
+     0.58,
+     0.92
+    ],
+    "src": "media/mounts/rock-tusk-warthog/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://static0.fextralifeimages.com/file/crimsondesertgame/4/44/Rock_Tusk_Warthog_Showcase_Crimson_Desert_Wiki.jpg",
+    "credit": "fextralife",
+    "focus": "40% 55%",
+    "src": "media/mounts/rock-tusk-warthog/hero.webp",
+    "w": 1650,
+    "h": 928
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/4460992/7a6aedb6b394817211a69e3d64852244.png/show",
+     "credit": "game8",
+     "caption": "World map — Ravok's patrol area",
+     "src": "media/mounts/rock-tusk-warthog/map-1.webp",
+     "w": 728,
+     "h": 410
+    },
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/4460993/a62031009e03b9b93db1f7b0a7000d2f.png/show",
+     "credit": "game8",
+     "caption": "On site — Ravok and his riders",
+     "src": "media/mounts/rock-tusk-warthog/overworld-2.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/591730",
+    "title": "Rock Tusk Warthog — Game8"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Rock_Tusk_Warthog",
+    "title": "Rock Tusk Warthog — Fextralife Wiki"
+   }
+  ],
+  "since": "Patch 1.01",
+  "skills": []
+ },
+ {
+  "id": "ocean-drifter",
+  "name": "Ocean Drifter",
+  "leaf": "legendary",
+  "cls": "sea",
+  "domains": [
+   "sea"
+  ],
+  "kind": "Ancient diving machine",
+  "region": "South-west sea",
+  "area": "Forgotten Ocean Ruins · Razanui Island",
+  "trait": "Fastest underwater mount",
+  "summary": "An ancient diving machine sealed in the Forgotten Ocean Ruins. It outruns every sea creature — and your ship — below the surface, but it only works submerged and punishes surfacing with an hour-long lockout.",
+  "tiers": {
+   "speed": {
+    "tier": 1,
+    "basis": "The fastest underwater mount, faster than your ship (Game8, GameRant)."
+   },
+   "stamina": {
+    "tier": 1,
+    "basis": "“Exceptional stamina” (GameRant); Ascend trades stamina for a burst."
+   },
+   "travel": {
+    "tier": 1,
+    "basis": "Unmatched for crossing deep water — mind the 60-minute cooldown."
+   },
+   "combat": {
+    "tier": 5,
+    "basis": "No attack documented."
+   }
+  },
+  "tags": [
+   "deep-water"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "Diving Suit"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Sail to Razanui Island in the south-west sea and mark the water north-west of it.",
+     "Dive about 55 m to the Forgotten Ocean Ruins and enter through the north-facing door.",
+     "Swim up through the ceiling gaps to the top floor and open the chest for the Ancients' Chest.",
+     "Use the Ancients' Chest from your inventory (Key Items). The Ocean Drifter registers instantly."
+    ]
+   }
+  ],
+  "location": "Forgotten Ocean Ruins, ~55 m down, north-west of Razanui Island.",
+  "notes": [
+   "Works only underwater, from roughly 30 m down.",
+   "Surfacing or summoning another mount despawns it and starts a 60-minute real-time cooldown — fast travel away from it and you wait an hour.",
+   "Ascend: rise or swim faster, paid for in stamina."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/17usf9h5zfk3rnkuqbl9ncoibdzj",
+    "credit": "game8",
+    "src": "media/mounts/ocean-drifter/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2026/11/how-to-use-the-ocean-drifter-in-crimson-desert.jpg",
+    "credit": "gamerant",
+    "focus": "50% 50%",
+    "src": "media/mounts/ocean-drifter/hero.webp",
+    "w": 1920,
+    "h": 1080
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2026/11/how-to-find-the-ocean-drifter-in-crimson-desert-2.jpg",
+     "credit": "gamerant",
+     "caption": "World map — dive point north-west of Razanui",
+     "src": "media/mounts/ocean-drifter/map-1.webp",
+     "w": 1600,
+     "h": 900
+    },
+    {
+     "kind": "map",
+     "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2026/11/how-to-find-the-ocean-drifter-in-crimson-desert.jpg",
+     "credit": "gamerant",
+     "caption": "World map — the wider south-west sea",
+     "src": "media/mounts/ocean-drifter/map-2.webp",
+     "w": 1600,
+     "h": 900
+    },
+    {
+     "kind": "overworld",
+     "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2026/11/how-to-find-the-ocean-drifter-in-crimson-desert-3.jpg",
+     "credit": "gamerant",
+     "caption": "On site — inside the ruins",
+     "src": "media/mounts/ocean-drifter/overworld-3.webp",
+     "w": 1600,
+     "h": 900
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "gamerant",
+    "url": "https://gamerant.com/crimson-desert-ocean-drifter-location-cooldown/",
+    "title": "Ocean Drifter Location — GameRant"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/635858",
+    "title": "All New Mounts (DLC) — Game8"
+   },
+   {
+    "by": "gamingdeputy",
+    "url": "https://www.gamingdeputy.com/france/crimson-desert-ocean-drifter-monture/",
+    "title": "Ocean Drifter — GamingDeputy (FR)"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "golden-shark",
+  "name": "Golden Shark",
+  "leaf": "legendary",
+  "cls": "sea",
+  "domains": [
+   "sea"
+  ],
+  "kind": "Legendary shark",
+  "region": "Delesyia waters",
+  "area": "South of Dewhaven",
+  "trait": "Apex of the deep — speed and a vicious bite",
+  "summary": "The gold-skinned legendary shark patrolling the deep water south of Dewhaven. Fast, enduring and armed with a violent bite.",
+  "tiers": {
+   "speed": {
+    "tier": 2,
+    "basis": "“Great speed” (GameRant) — below the Ocean Drifter."
+   },
+   "stamina": {
+    "tier": 2,
+    "basis": "“Great stamina” (GameRant)."
+   },
+   "travel": {
+    "tier": 2,
+    "basis": "A strong all-round sea mount with no cooldown penalty."
+   },
+   "combat": {
+    "tier": 1,
+    "basis": "The legendary shark bite; the strongest fighter among sea creatures."
+   }
+  },
+  "tags": [
+   "deep-water",
+   "battle"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "Diving Suit",
+   "Force Palm"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Sail south of Dewhaven (Delesyia), directly east of the Sea Serpent Kelp Forest.",
+     "Dive to roughly 220 m. The Golden Shark circles nearby and may attack first.",
+     "Stun it with Force Palm to the head, mount it, and win the taming minigame: push up and away from the tail.",
+     "It registers as a permanent mount."
+    ]
+   }
+  ],
+  "location": "~220 m down, east of the Sea Serpent Kelp Forest, south of Dewhaven.",
+  "notes": [
+   "Game8 also reports it south of Stoneward Harbor."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/vhdxnw5c4efd2yqfowylitbnwqs0",
+    "credit": "game8",
+    "src": "media/mounts/golden-shark/portrait.webp",
+    "w": 300,
+    "h": 300
+   },
+   "hero": {
+    "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2026/10/crimson-desert-golden-shark-legendary-mount-location.jpg",
+    "credit": "gamerant",
+    "focus": "55% 50%",
+    "src": "media/mounts/golden-shark/hero.webp",
+    "w": 1920,
+    "h": 1080
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2026/10/how-to-tame-the-golden-shark-mount-in-crimson-desert.jpg",
+     "credit": "gamerant",
+     "caption": "World map — east of the Sea Serpent Kelp Forest",
+     "src": "media/mounts/golden-shark/map-1.webp",
+     "w": 1600,
+     "h": 900
+    },
+    {
+     "kind": "map",
+     "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2026/10/how-to-tame-the-golden-shark-mount-in-crimson-desert-2.jpg",
+     "credit": "gamerant",
+     "caption": "World map — close-up of the dive point",
+     "src": "media/mounts/golden-shark/map-2.webp",
+     "w": 1600,
+     "h": 900
+    },
+    {
+     "kind": "overworld",
+     "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2026/10/how-to-tame-the-golden-shark-mount-in-crimson-desert-3.jpg",
+     "credit": "gamerant",
+     "caption": "On site — the shark at depth",
+     "src": "media/mounts/golden-shark/overworld-3.webp",
+     "w": 1600,
+     "h": 900
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "gamerant",
+    "url": "https://gamerant.com/crimson-desert-golden-shark-legendary-mount-location/",
+    "title": "Golden Shark Location — GameRant"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/635858",
+    "title": "All New Mounts (DLC) — Game8"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-how-to-get-legendary-golden-shark-mount/",
+    "title": "Golden Shark — KeenGamer"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "pink-dolphin",
+  "name": "Pink Dolphin",
+  "leaf": "legendary",
+  "cls": "sea",
+  "domains": [
+   "sea"
+  ],
+  "kind": "Legendary dolphin",
+  "region": "South-west sea",
+  "area": "Great Coral Reef",
+  "trait": "Sonar that pings hidden loot",
+  "summary": "A rare pink dolphin leading a pod over the Great Coral Reef. It cannot attack, but its Underwater Detection scans the seabed for loot.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "No comparative speed data — rated average."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "No comparative stamina data — rated average."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "A utility mount: detection over speed."
+   },
+   "combat": {
+    "tier": 5,
+    "basis": "No attack; you have to defend it."
+   }
+  },
+  "tags": [
+   "deep-water"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "Diving Suit",
+   "3× Fish Fillet",
+   "Harpoon Gun (recommended)"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Sail to the Great Coral Reef in the far south-west, just above the “E” of “Great” on the map.",
+     "Dive to about 60 m to find the dolphin pod. It is dark down there — mount dolphins one by one until you land on the pink one.",
+     "Feed it three Fish Fillets from your inventory to hit 100 Trust, then register it."
+    ]
+   }
+  ],
+  "location": "~60 m down over the Great Coral Reef, above the “E” of “Great”.",
+  "notes": [
+   "Underwater Detection: LB + RB / L2 + R2.",
+   "Sharks spawn constantly here and can kill a dolphin in one hit — keep the Harpoon Gun ready."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2026/11/crimson-desert-how-to-get-the-pink-dolphin-legendary-mount-2.jpg",
+    "credit": "gamerant",
+    "crop": [
+     0.5,
+     0.42,
+     0.42
+    ],
+    "src": "media/mounts/pink-dolphin/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2026/11/crimson-desert-how-to-get-the-pink-dolphin-legendary-mount-2.jpg",
+    "credit": "gamerant",
+    "focus": "50% 40%",
+    "src": "media/mounts/pink-dolphin/hero.webp",
+    "w": 1920,
+    "h": 1080
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2026/11/how-to-find-tame-the-pink-dolphin-in-crimson-desert-2.jpg",
+     "credit": "gamerant",
+     "caption": "World map — above the “E” of Great Coral Reef",
+     "src": "media/mounts/pink-dolphin/map-1.webp",
+     "w": 1600,
+     "h": 900
+    },
+    {
+     "kind": "map",
+     "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2026/11/how-to-find-tame-the-pink-dolphin-in-crimson-desert.jpg",
+     "credit": "gamerant",
+     "caption": "World map — the wider south-west sea",
+     "src": "media/mounts/pink-dolphin/map-2.webp",
+     "w": 1600,
+     "h": 900
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "gamerant",
+    "url": "https://gamerant.com/crimson-desert-legendary-pink-dolphin-location/",
+    "title": "Pink Dolphin Location — GameRant"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/635858",
+    "title": "All New Mounts (DLC) — Game8"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "pink-manta-ray",
+  "name": "Pink Manta Ray",
+  "leaf": "legendary",
+  "cls": "sea",
+  "domains": [
+   "sea"
+  ],
+  "kind": "Legendary ray",
+  "region": "East sea",
+  "area": "North of the Dead Coral Sea",
+  "trait": "Shockwave that stuns everything around you",
+  "summary": "A legendary pink manta gliding with its school north of the Dead Coral Sea. Its area shockwave stuns sharks and other hostiles around you.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "No comparative speed data — rated average."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "No comparative stamina data — rated average."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "Average traveller with a strong defensive tool."
+   },
+   "combat": {
+    "tier": 2,
+    "basis": "Area-of-effect Shockwave that stuns nearby creatures."
+   }
+  },
+  "tags": [
+   "deep-water",
+   "battle"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "Diving Suit",
+   "3× Fish Fillet"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Sail far east of Delesyia to the water north of the Dead Coral Sea — line the marker up between the second “D” of “Dead Coral Sea” and the tip of the “A” in “Delesyia”.",
+     "Dive straight down to about 130 m to find it with its school.",
+     "Swim up, mount it, and feed Fish Fillets until Trust hits 100, then register it."
+    ]
+   }
+  ],
+  "location": "~130 m down, north of the Dead Coral Sea, far east of Delesyia.",
+  "notes": [
+   "Shockwave: RT / R2."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/kvflfa52oks1pajvt44hjtxsbe60",
+    "credit": "game8",
+    "src": "media/mounts/pink-manta-ray/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2026/11/how-to-find-tame-the-pink-manta-ray-in-crimson-desert-3.jpg",
+    "credit": "gamerant",
+    "focus": "45% 55%",
+    "src": "media/mounts/pink-manta-ray/hero.webp",
+    "w": 1920,
+    "h": 1080
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2026/11/how-to-find-tame-the-pink-manta-ray-in-crimson-desert.jpg",
+     "credit": "gamerant",
+     "caption": "World map — close-up of the dive point",
+     "src": "media/mounts/pink-manta-ray/map-1.webp",
+     "w": 1600,
+     "h": 900
+    },
+    {
+     "kind": "map",
+     "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2026/11/how-to-find-tame-the-pink-manta-ray-in-crimson-desert-2.jpg",
+     "credit": "gamerant",
+     "caption": "World map — Delesyia and the East Sea",
+     "src": "media/mounts/pink-manta-ray/map-2.webp",
+     "w": 1600,
+     "h": 900
+    },
+    {
+     "kind": "overworld",
+     "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2026/11/how-to-find-tame-the-pink-manta-ray-in-crimson-desert-4.jpg",
+     "credit": "gamerant",
+     "caption": "On site — the school at 130 m",
+     "src": "media/mounts/pink-manta-ray/overworld-3.webp",
+     "w": 1600,
+     "h": 900
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "gamerant",
+    "url": "https://gamerant.com/crimson-desert-legendary-pink-manta-ray-location/",
+    "title": "Pink Manta Ray Location — GameRant"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/635858",
+    "title": "All New Mounts (DLC) — Game8"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "leaping-kuku-bird",
+  "name": "Leaping Kuku Bird",
+  "leaf": "rare",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Bird",
+  "region": "Demeniss",
+  "area": "Bloodsteel Camp → Kingshield Mountains",
+  "trait": "No fall damage — glides down from any height",
+  "summary": "A flightless crimson bird that leaps higher than a man and glides down safely from any drop. Since patch 1.10 the egg hatches into a Kuku Bird Chick pet that you raise into the mount.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "No comparative speed data — rated average."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "No verified stamina figure — rated average."
+   },
+   "travel": {
+    "tier": 2,
+    "basis": "Trait override: high leaps and no fall damage turn cliffs into shortcuts."
+   },
+   "combat": {
+    "tier": 5,
+    "basis": "No combat moves; a pure traversal mount."
+   }
+  },
+  "tags": [
+   "vertical"
+  ],
+  "requires": [
+   "Force Palm",
+   "Mask (taking the egg is theft)",
+   "A free pet slot"
+  ],
+  "routes": [
+   {
+    "label": "Get the egg",
+    "steps": [
+     "Bloodsteel Camp, southern Demeniss: clear or slip past the Blinding Arrow garrison and find the tall wooden tower beside the makeshift throne.",
+     "Climb to the panel wall just under the roof, cling with Resist (Q / LT / L2) and hit it with Force Palm to rotate it open.",
+     "Mask on, take the Kuku Bird's Egg — and the Leaping Kuku Bird Research Journal on the table — then wait inside until the theft cools off."
+    ]
+   },
+   {
+    "label": "Hatch and raise it",
+    "steps": [
+     "Carry the egg to the nest beside a tree in the forest between Kingshield Dig Site and Grey Rock Quarry, north of the “D” in “Demeniss”. Use the egg from your inventory to place it; it pulses orange when seated.",
+     "Wait about five minutes until it glows bright orange, then interact to hatch a Kuku Bird Chick (it registers as a pet).",
+     "Keep the chick out and drop fruit and vegetables for it. Rest a day and feed again until it reaches growth level 3.",
+     "Interact with the chick and choose Grow — it becomes the Leaping Kuku Bird mount."
+    ]
+   }
+  ],
+  "location": "Egg: tower room, Bloodsteel Camp (southern Demeniss). Nest: forest between Kingshield Dig Site and Grey Rock Quarry.",
+  "notes": [
+   "Before patch 1.10 the egg hatched straight into an adult mount; guides written before June 2026 skip the chick stage.",
+   "Want both the pet and the mount? Hatch two eggs.",
+   "Kuku Bird Saddle (+20 Defense): Driana at Calphade Saddlery or Fiona at Demeniss Saddlery, 28 Silver."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4498759/044b60a9c58c7ff8ad172603a791bc5a.png/show",
+    "credit": "game8",
+    "src": "media/mounts/leaping-kuku-bird/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2026/05/how-to-get-the-kuku-bird-egg-in-crimson-desert-2.jpg",
+     "credit": "gamerant",
+     "caption": "Egg — Bloodsteel Camp on the world map",
+     "src": "media/mounts/leaping-kuku-bird/map-1.webp",
+     "w": 1600,
+     "h": 900
+    },
+    {
+     "kind": "overworld",
+     "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2026/05/how-to-get-the-kuku-bird-egg-in-crimson-desert.jpg",
+     "credit": "gamerant",
+     "caption": "Egg — the trick-wall tower",
+     "src": "media/mounts/leaping-kuku-bird/overworld-2.webp",
+     "w": 1600,
+     "h": 900
+    },
+    {
+     "kind": "map",
+     "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2026/05/how-to-hatch-the-kuku-bird-egg-in-crimson-desert-2.jpg",
+     "credit": "gamerant",
+     "caption": "Nest — close-up on the world map",
+     "src": "media/mounts/leaping-kuku-bird/map-3.webp",
+     "w": 1600,
+     "h": 900
+    },
+    {
+     "kind": "map",
+     "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2026/05/how-to-hatch-the-kuku-bird-egg-in-crimson-desert.jpg",
+     "credit": "gamerant",
+     "caption": "Nest — north of the “D” in Demeniss",
+     "src": "media/mounts/leaping-kuku-bird/map-4.webp",
+     "w": 1600,
+     "h": 900
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/588550",
+    "title": "Kuku Bird — Game8"
+   },
+   {
+    "by": "gamerant",
+    "url": "https://gamerant.com/crimson-desert-kuku-bird-location-mount-pet/",
+    "title": "Kuku Bird Egg & Mount — GameRant"
+   },
+   {
+    "by": "thegamer",
+    "url": "https://www.thegamer.com/crimson-desert-kuku-bird-mount-location-how-to-hatch-egg-saddle-guide/",
+    "title": "Kuku Bird Mount Location — TheGamer"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/2026/05/14/how-to-get-the-kuku-bird-mount-in-crimson-desert/",
+    "title": "Kuku Bird Chick & Leaping Kuku Bird — Vulkk"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Leaping_Kuku_Bird",
+    "title": "Leaping Kuku Bird — Fextralife Wiki"
+   }
+  ],
+  "since": "Patch 1.06 · reworked 1.10",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "giant-red-iguana",
+  "name": "Giant Red Iguana",
+  "leaf": "rare",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Reptile",
+  "region": "Crimson Desert",
+  "area": "Road south of Tommaso",
+  "trait": "Long-range spit that staggers enemies",
+  "summary": "The Goldenscale Bandits' red desert lizard. Built for hot sand, armed with a long-range spit that staggers enemies — but fragile once the arrows fly.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "Moves swiftly over dunes and rock; no comparative figure — rated average."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "No verified stamina figure — rated average. Every spit costs stamina."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "Stable on hot sand; ordinary elsewhere."
+   },
+   "combat": {
+    "tier": 3,
+    "basis": "Ranged stagger-spit, but low durability gets you knocked off."
+   }
+  },
+  "tags": [
+   "battle"
+  ],
+  "requires": [
+   "Force Palm"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Find the Goldenscale Bandits waiting on the road south of Tommaso, near the Sovereign Wastes Abyss Nexus (Crimson Desert).",
+     "Knock a rider off their iguana. The freed iguana turns hostile — stun it with Force Palm until Ride appears.",
+     "Ride it and feed raw vegetables (a Golden Apple gives +100 Trust).",
+     "When Trust reaches 100, press Take In (Y / Triangle) to register it as a permanent special mount."
+    ]
+   }
+  ],
+  "location": "Road south of Tommaso, near the Sovereign Wastes Abyss Nexus.",
+  "notes": [
+   "Do not dismount before Take In — it turns hostile again.",
+   "Giant Iguana Saddle: Alina, Tommaso Saddlery. Fits both colours."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://static0.fextralifeimages.com/file/crimsondesertgame/9/95/Giant-Red-Iguana-mounts-crimson-desert-wiki-guide.png",
+    "credit": "fextralife",
+    "matte": true,
+    "src": "media/mounts/giant-red-iguana/portrait.webp",
+    "w": 170,
+    "h": 170
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/4502091/cc9b4a5ec5c79bec1aa0111a46e73004.png/show",
+     "credit": "game8",
+     "caption": "World map — Goldenscale Bandits' road",
+     "src": "media/mounts/giant-red-iguana/map-1.webp",
+     "w": 727,
+     "h": 409
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/594283",
+    "title": "Giant Iguana — Game8"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Giant_Red_Iguana",
+    "title": "Giant Red Iguana — Fextralife Wiki"
+   }
+  ],
+  "since": "Patch 1.06",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "giant-green-iguana",
+  "name": "Giant Green Iguana",
+  "leaf": "rare",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Reptile",
+  "region": "Crimson Desert",
+  "area": "City of Tommaso",
+  "trait": "Steal-and-ride desert lizard",
+  "summary": "The tame green iguana kept in the City of Tommaso. Same sand-running build and spit attack as the red variant — this one has to be stolen.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "Moves swiftly over dunes and rock; rated average."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "No verified stamina figure — rated average."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "Stable on hot sand; ordinary elsewhere."
+   },
+   "combat": {
+    "tier": 3,
+    "basis": "Ranged stagger-spit with low durability."
+   }
+  },
+  "tags": [],
+  "requires": [
+   "Mask"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Go to the easternmost part of the City of Tommaso, Tashkalp (Crimson Desert).",
+     "Mask on, steal the iguana, and ride out of the red circle to dodge the bounty.",
+     "Feed raw vegetables (Golden Apple +100).",
+     "When Trust reaches 100, press Take In (Y / Triangle) to register it as a permanent special mount."
+    ]
+   }
+  ],
+  "location": "Eastern edge of the City of Tommaso, Tashkalp.",
+  "notes": [
+   "Giant Iguana Saddle: Alina, Tommaso Saddlery."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4468111/a58a7b825faa50d5b73137013758e293.png/show",
+    "credit": "game8",
+    "src": "media/mounts/giant-green-iguana/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/4467993/9141b6f46bdbe207ce0962d3a2f49003.png/show",
+     "credit": "game8",
+     "caption": "World map — Tommaso, Tashkalp",
+     "src": "media/mounts/giant-green-iguana/map-1.webp",
+     "w": 728,
+     "h": 410
+    },
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/4467989/33fd94a09005fac019ad20e9ae1d4a1e.png/show",
+     "credit": "game8",
+     "caption": "On site — the iguana in Tommaso",
+     "src": "media/mounts/giant-green-iguana/overworld-2.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/594283",
+    "title": "Giant Iguana — Game8"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Giant_Green_Iguana",
+    "title": "Giant Green Iguana — Fextralife Wiki"
+   }
+  ],
+  "since": "Patch 1.06",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "red-feathered-raptor",
+  "name": "Red-Feathered Raptor",
+  "leaf": "rare",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Bird",
+  "region": "Crimson Desert",
+  "area": "Crimson Mountains Fortress",
+  "trait": "Twilight Messenger war-runner",
+  "summary": "An iguana-faced runner crowned with a fan of feathers, ridden by Twilight Messenger soldiers in the Crimson Desert.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "No comparative speed data — rated average."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "No verified stamina figure — rated average."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "Average all-rounder."
+   },
+   "combat": {
+    "tier": 4,
+    "basis": "No documented special attack."
+   }
+  },
+  "tags": [],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Ride to the Crimson Mountains Fortress, east of the City of Tommaso. A mounted Twilight Messenger patrols the Crimson Mountains Watchtower east of the fort.",
+     "Knock him off. The raptor bolts — chase it down and mount it.",
+     "Feed any raw meat (+40 Trust each; about three pieces).",
+     "When Trust reaches 100, press Take In (Y / Triangle) to register it as a permanent special mount."
+    ]
+   }
+  ],
+  "location": "Crimson Mountains Watchtower, east of the Crimson Mountains Fortress.",
+  "notes": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4468112/ea2e56a73ad9d4c7ca5ce79d323108aa.png/show",
+    "credit": "game8",
+    "src": "media/mounts/red-feathered-raptor/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/4467988/5772d4cd483c7bb9fdb92fb376a93e43.png/show",
+     "credit": "game8",
+     "caption": "World map — the watchtower patrol",
+     "src": "media/mounts/red-feathered-raptor/map-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/594285",
+    "title": "Red-Feathered Raptor — Game8"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Red-Feathered_Raptor",
+    "title": "Red-Feathered Raptor — Fextralife Wiki"
+   }
+  ],
+  "since": "Patch 1.06",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "lion",
+  "name": "Lion",
+  "leaf": "rare",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Big cat",
+  "region": "Demeniss · Crimson Desert",
+  "area": "Laughing Marionette · Varnia Gate",
+  "trait": "Heavy single-target lunge",
+  "summary": "Pywel's endangered big cat. Its lunge hits hard but lands on one target at a time.",
+  "tiers": {
+   "speed": {
+    "tier": 4,
+    "basis": "Trails the horses over distance."
+   },
+   "stamina": {
+    "tier": 4,
+    "basis": "200 Stamina; the lunge spends it."
+   },
+   "travel": {
+    "tier": 4,
+    "basis": "A fighting mount."
+   },
+   "combat": {
+    "tier": 2,
+    "basis": "450 Health, 100 Attack and a heavy lunge."
+   }
+  },
+  "tags": [
+   "battle"
+  ],
+  "requires": [
+   "Mask (circus route)",
+   "Force Palm (wild route)"
+  ],
+  "routes": [
+   {
+    "label": "Circus Lion",
+    "steps": [
+     "Go to the Laughing Marionette circus just east of the City of Demeniss. The lion waits outside the tent near a rhino and a hippo.",
+     "Mask on, steal it, and ride out of the red circle.",
+     "Feed raw meat. When Trust reaches 100, press Take In (Y / Triangle) to register it as a permanent special mount."
+    ]
+   },
+   {
+    "label": "Wild Lion",
+    "steps": [
+     "Hunt and skin the Legendary White Lion, north-east of the Varnia Gate (Crimson Desert).",
+     "Reset the area (fast travel, or wait 12 in-game hours). A male Lion returns with lionesses.",
+     "Defeat the lionesses, Force Palm the Lion until Ride appears, then feed raw meat. When Trust reaches 100, press Take In (Y / Triangle) to register it as a permanent special mount."
+    ]
+   }
+  ],
+  "location": "Laughing Marionette circus (Demeniss) · north-east of the Varnia Gate (Crimson Desert).",
+  "notes": [
+   "Only male lions can be ridden.",
+   "The circus lion sometimes fails to appear even after a reset."
+  ],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    450,
+    200,
+    100,
+    45
+   ],
+   "source": "fextralife"
+  },
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4468108/4aa426c8550ebea46079ae8e8487c42a.png/show",
+    "credit": "game8",
+    "src": "media/mounts/lion/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/4467991/5de727f243ecaccac16273d4ba39928f.png/show",
+     "credit": "game8",
+     "caption": "Circus Lion — the Laughing Marionette, Demeniss",
+     "src": "media/mounts/lion/map-1.webp",
+     "w": 728,
+     "h": 410
+    },
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/4503441/401b5da0801130eec06f8a6a761db34a.png/show",
+     "credit": "game8",
+     "caption": "Wild Lion — north-east of the Varnia Gate",
+     "src": "media/mounts/lion/map-2.webp",
+     "w": 727,
+     "h": 409
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/594284",
+    "title": "Lion — Game8"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Lion",
+    "title": "Lion — Fextralife Wiki"
+   }
+  ],
+  "since": "Patch 1.06",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "tiger",
+  "name": "Tiger",
+  "leaf": "rare",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Big cat",
+  "region": "Crimson Desert",
+  "area": "Giant's Yard Watchtower lake",
+  "trait": "One spawn — gone if the White Tiger dies",
+  "summary": "Tigers appear only as guardians of the Legendary White Tiger at a single lake in the southern Crimson Desert. Tame one before the White Tiger falls.",
+  "tiers": {
+   "speed": {
+    "tier": 4,
+    "basis": "Trails the horses over distance."
+   },
+   "stamina": {
+    "tier": 4,
+    "basis": "200 Stamina."
+   },
+   "travel": {
+    "tier": 4,
+    "basis": "A fighting mount."
+   },
+   "combat": {
+    "tier": 2,
+    "basis": "450 Health, 100 Attack, explosive pounces; keeps fighting on foot."
+   }
+  },
+  "tags": [
+   "battle"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Go to the unnamed lake beside Giant's Yard Watchtower on the Crimson Desert's southern peninsula — north of Beardtree Gorge, south-west of the Red River.",
+     "Damage a Tiger until it collapses and Ride appears.",
+     "Feed it (Fextralife lists Chewy Rice Cake dishes as its favourites).",
+     "When Trust reaches 100, press Take In (Y / Triangle) to register it as a permanent special mount."
+    ]
+   }
+  ],
+  "location": "Lake beside Giant's Yard Watchtower, southern peninsula of the Crimson Desert.",
+  "notes": [
+   "If the White Tiger is already dead, neither it nor its Tigers respawn — only an earlier save helps.",
+   "A downed Tiger mount comes back after about five real minutes."
+  ],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    450,
+    200,
+    100,
+    45
+   ],
+   "source": "fextralife"
+  },
+  "media": {
+   "portrait": {
+    "from": "https://cdn.mos.cms.futurecdn.net/hEEFQFaqz9CKVpq8Z3HQHa.jpg",
+    "credit": "gamesradar",
+    "crop": [
+     0.52,
+     0.55,
+     0.9
+    ],
+    "src": "media/mounts/tiger/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://cdn.mos.cms.futurecdn.net/hEEFQFaqz9CKVpq8Z3HQHa.jpg",
+    "credit": "gamesradar",
+    "focus": "55% 55%",
+    "src": "media/mounts/tiger/hero.webp",
+    "w": 1920,
+    "h": 1080
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://cdn.mos.cms.futurecdn.net/uPp9ApERaxG9UskHzpFUDa.jpg",
+     "credit": "gamesradar",
+     "caption": "World map — the lake by Giant's Yard Watchtower",
+     "src": "media/mounts/tiger/map-1.webp",
+     "w": 1600,
+     "h": 900
+    }
+   ],
+   "gallery": [
+    {
+     "kind": "action",
+     "from": "https://cdn.mos.cms.futurecdn.net/Gg5S8DojzEjhshFwyxPFKa.jpg",
+     "credit": "gamesradar",
+     "caption": "Tiger pounce",
+     "src": "media/mounts/tiger/gallery-1.webp",
+     "w": 1280,
+     "h": 720
+    }
+   ]
+  },
+  "sources": [
+   {
+    "by": "gamesradar",
+    "url": "https://www.gamesradar.com/games/rpg/crimson-desert-tiger/",
+    "title": "Tiger — GamesRadar+"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Tiger",
+    "title": "Tiger — Fextralife Wiki"
+   }
+  ],
+  "since": "Patch 1.06",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "brown-bear",
+  "name": "Brown Bear",
+  "leaf": "rare",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Bear",
+  "region": "All regions except the Crimson Desert",
+  "area": "Fields north-west of the Sanctum of Penitence",
+  "trait": "Crowd-clearing swipes, found almost anywhere",
+  "summary": "Pywel's apex predator, roaming every region except the Crimson Desert. Its swiping attacks clear groups of weaker enemies.",
+  "tiers": {
+   "speed": {
+    "tier": 5,
+    "basis": "Slow."
+   },
+   "stamina": {
+    "tier": 4,
+    "basis": "200 Stamina."
+   },
+   "travel": {
+    "tier": 5,
+    "basis": "Slow and heavy."
+   },
+   "combat": {
+    "tier": 3,
+    "basis": "1,000 Health and 120 Attack with wide swipes."
+   }
+  },
+  "tags": [
+   "battle"
+  ],
+  "requires": [
+   "Force Palm (to subdue without killing)"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Find a wild bear. The open fields north-west of the Sanctum of Penitence are a reliable spot.",
+     "Damage it or use Force Palm until it stops moving and Ride appears.",
+     "Feed it (Fextralife lists Garlic among its favourites).",
+     "When Trust reaches 100, press Take In (Y / Triangle) to register it as a permanent special mount."
+    ]
+   }
+  ],
+  "location": "Wild across Pywel except the Crimson Desert; fields north-west of the Sanctum of Penitence.",
+  "notes": [
+   "Grizzly and Captured Bear variants share the bear moveset."
+  ],
+  "variants": [
+   "Brown",
+   "Black with Harness"
+  ],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    1000,
+    200,
+    120,
+    30
+   ],
+   "source": "fextralife"
+  },
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4468214/ad05f3adb8a6b636f3600ee81ddf34a2.png/show",
+    "credit": "game8",
+    "src": "media/mounts/brown-bear/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Bear",
+    "title": "Bear — Fextralife Wiki"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/587091",
+    "title": "List of All Mounts — Game8"
+   }
+  ],
+  "since": "Patch 1.06",
+  "skills": []
+ },
+ {
+  "id": "clawed-bear",
+  "name": "Clawed Bear",
+  "leaf": "rare",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Bear",
+  "region": "Pailune",
+  "area": "Black Bear forts and camps",
+  "trait": "Black Bear war-mount — gone after Chapter 7",
+  "summary": "The armoured black war-bear of the Black Bear soldiers in Pailune. Its listed statline matches the legendary White Bear — but it is only available while the Black Bears hold the region.",
+  "tiers": {
+   "speed": {
+    "tier": 5,
+    "basis": "Slow."
+   },
+   "stamina": {
+    "tier": 4,
+    "basis": "200 Stamina."
+   },
+   "travel": {
+    "tier": 5,
+    "basis": "Slow and heavy."
+   },
+   "combat": {
+    "tier": 2,
+    "basis": "Listed at 1,500 Health / 180 Attack, the White Bear's statline (Fextralife; unconfirmed in-game)."
+   }
+  },
+  "tags": [
+   "battle"
+  ],
+  "requires": [
+   "Before the end of Chapter 7",
+   "Force Palm"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Find Black Bear soldiers riding Clawed Bears in Pailune's forts and camps.",
+     "Knock the rider off and subdue the bear until Ride appears.",
+     "Feed it (Garlic is a favourite).",
+     "When Trust reaches 100, press Take In (Y / Triangle) to register it as a permanent special mount."
+    ]
+   }
+  ],
+  "location": "Black Bear forts and camps, Pailune.",
+  "notes": [
+   "After Chapter 7 the Black Bears leave Pailune and these bears go with them. Tame one first."
+  ],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    1500,
+    200,
+    180,
+    35
+   ],
+   "source": "fextralife"
+  },
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4468211/9fa2217a7a42e72216c0dc4a83439a8e.png/show",
+    "credit": "game8",
+    "src": "media/mounts/clawed-bear/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Clawed_Bear",
+    "title": "Clawed Bear — Fextralife Wiki"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/587091",
+    "title": "List of All Mounts — Game8"
+   }
+  ],
+  "since": "Patch 1.06",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "wolf",
+  "name": "Large Wolf",
+  "leaf": "rare",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Wolf",
+  "region": "Most regions",
+  "area": "Western mountains",
+  "trait": "Pack hunter in 16 coats",
+  "summary": "Pywel's pack hunters. Large Wolf, Swift Wolf and Large White Wolf share one kit: no mount skills, dependable in a fight.",
+  "tiers": {
+   "speed": {
+    "tier": 4,
+    "basis": "Trails the horses over distance."
+   },
+   "stamina": {
+    "tier": 4,
+    "basis": "200 Stamina."
+   },
+   "travel": {
+    "tier": 4,
+    "basis": "A fighting mount."
+   },
+   "combat": {
+    "tier": 3,
+    "basis": "250 Health, 70 Attack."
+   }
+  },
+  "tags": [],
+  "requires": [
+   "Force Palm (to subdue without killing)"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Find wolves in the wild — they range widely and favour the western mountains.",
+     "Damage one until it collapses and Ride appears.",
+     "Feed grilled meat (Satisfying Grilled Meat is a top pick).",
+     "When Trust reaches 100, press Take In (Y / Triangle) to register it as a permanent special mount."
+    ]
+   }
+  ],
+  "location": "Wilds across most of Pywel; most common in the western mountains.",
+  "notes": [
+   "Wolf saddles: Annabella (Hernand Saddlery) and Bruna (Equinsher Saddlery)."
+  ],
+  "variants": [
+   "Large Wolf — 16 coats",
+   "Swift Wolf",
+   "Large White Wolf"
+  ],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    250,
+    200,
+    70,
+    20
+   ],
+   "source": "fextralife"
+  },
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4501080/317e476729d3050ea97074b071def3b5.png/show",
+    "credit": "game8",
+    "src": "media/mounts/wolf/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Large_Wolf",
+    "title": "Large Wolf — Fextralife Wiki"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Swift_Wolf",
+    "title": "Swift Wolf — Fextralife Wiki"
+   },
+   {
+    "by": "gamerant",
+    "url": "https://gamerant.com/crimson-desert-special-mount-saddles-saddlery-locations/",
+    "title": "Special Mount Saddles — GameRant"
+   }
+  ],
+  "since": "Patch 1.06",
+  "skills": []
+ },
+ {
+  "id": "rosehorn-deer",
+  "name": "Rosehorn Deer",
+  "leaf": "rare",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Deer",
+  "region": "Pailune",
+  "area": "Mistwood Hunters",
+  "trait": "Clears high walls, sure-footed on ledges",
+  "summary": "A forest deer with great branching antlers, known for leaping high walls and running steadily along narrow mountain paths.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "No comparative speed data — rated average."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "Described with “exceptional endurance”; no verified figure."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "Leaps and narrow-path footing help in the mountains."
+   },
+   "combat": {
+    "tier": 4,
+    "basis": "No documented special attack."
+   }
+  },
+  "tags": [
+   "vertical"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Find Mistwood Hunters riding Rosehorn Deer in Pailune.",
+     "Knock a rider off and mount the deer.",
+     "Feed raw vegetables (Golden Apple +100).",
+     "When Trust reaches 100, press Take In (Y / Triangle) to register it as a permanent special mount."
+    ]
+   }
+  ],
+  "location": "Ridden by Mistwood Hunters, Pailune.",
+  "notes": [
+   "Deer saddles: Bruna (Equinsher Saddlery) and Fiona (Demeniss Saddlery)."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4503748/49ff871fb3f91e635038f5d8d1371086.png/show",
+    "credit": "game8",
+    "src": "media/mounts/rosehorn-deer/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Rosehorn_Deer",
+    "title": "Rosehorn Deer — Fextralife Wiki"
+   },
+   {
+    "by": "gamerant",
+    "url": "https://gamerant.com/crimson-desert-special-mount-saddles-saddlery-locations/",
+    "title": "Special Mount Saddles — GameRant"
+   }
+  ],
+  "since": "Patch 1.06",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "ibex",
+  "name": "Ibex",
+  "leaf": "rare",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Mountain goat",
+  "region": "Pailune",
+  "area": "Mountain areas",
+  "trait": "Cliff-climber of the high pastures",
+  "summary": "Pailune's noble mountain goat. Muscular legs and hooves carry it up steep cliffs and frozen rock.",
+  "tiers": {
+   "speed": {
+    "tier": 4,
+    "basis": "Speed 2, Acceleration 1."
+   },
+   "stamina": {
+    "tier": 4,
+    "basis": "200 Stamina."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "Slow, but climbs where horses cannot."
+   },
+   "combat": {
+    "tier": 5,
+    "basis": "12 Attack."
+   }
+  },
+  "tags": [
+   "vertical"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Find ibex wandering Pailune's mountain areas.",
+     "Mount one and feed raw vegetables (Golden Apple +100).",
+     "When Trust reaches 100, press Take In (Y / Triangle) to register it as a permanent special mount."
+    ]
+   }
+  ],
+  "location": "Mountain areas of Pailune.",
+  "notes": [],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    180,
+    200,
+    12,
+    null
+   ],
+   "move": [
+    2,
+    1,
+    1,
+    2
+   ],
+   "source": "fextralife"
+  },
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4501084/9e46ce9f45a31db5034f4de66f5d4650.png/show",
+    "credit": "game8",
+    "src": "media/mounts/ibex/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Ibex",
+    "title": "Ibex — Fextralife Wiki"
+   }
+  ],
+  "since": "Patch 1.06",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "sandwalk-camel",
+  "name": "Sandwalk Camel",
+  "leaf": "rare",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Camel",
+  "region": "Crimson Desert",
+  "area": "Saltroad Hearth → The Pilgrim's Oasis",
+  "trait": "Quest reward that never sinks in the dunes",
+  "summary": "A single-humped desert camel with broad hooves that keep it from sinking into soft dunes. It comes free with the Redwind Merchant Guild questline.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "No comparative speed data — rated average."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "No verified stamina figure — rated average."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "Steady on soft sand."
+   },
+   "combat": {
+    "tier": 5,
+    "basis": "No documented attack."
+   }
+  },
+  "tags": [],
+  "requires": [
+   "Redwind Merchant Guild questline"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Start at Saltroad Hearth, north-east of the Great Gate of Urdavah: a dying man calls for help beside a plundered wagon.",
+     "Follow the questline and defeat Gristle, the Sandfang Marauder.",
+     "Report to the head merchant at The Pilgrim's Oasis. He hands over the Sandwalk Camel."
+    ]
+   }
+  ],
+  "location": "Quest start: Saltroad Hearth, north-east of the Great Gate of Urdavah.",
+  "notes": [
+   "Also rewards the Seal of Greed: +20% trade-goods profit for 2 hours.",
+   "Finished the questline before patch 1.06? The camel was added to your stable automatically.",
+   "Camel Saddles: Varnia saddlery."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4468107/ddcdfc86c12d138c085ac2ac7887a2a1.png/show",
+    "credit": "game8",
+    "src": "media/mounts/sandwalk-camel/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/4503636/e42b93d85fd0877549c00b9778e9e02b.png/show",
+     "credit": "game8",
+     "caption": "World map — Saltroad Hearth quest start",
+     "src": "media/mounts/sandwalk-camel/map-1.webp",
+     "w": 727,
+     "h": 409
+    },
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/4503635/93448281eac2fe0b5f6dbe3156841dfc.png/show",
+     "credit": "game8",
+     "caption": "On site — the plundered wagon",
+     "src": "media/mounts/sandwalk-camel/overworld-2.webp",
+     "w": 727,
+     "h": 409
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/594297",
+    "title": "Sandwalk Camel — Game8"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Sandwalk_Camel",
+    "title": "Sandwalk Camel — Fextralife Wiki"
+   },
+   {
+    "by": "gamesradar",
+    "url": "https://www.gamesradar.com/games/rpg/crimson-desert-special-mounts-ferocious/",
+    "title": "Special Mounts — GamesRadar+"
+   }
+  ],
+  "since": "Patch 1.06",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "boar",
+  "name": "Savage Fang Boar",
+  "leaf": "rare",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Boar",
+  "region": "Tashkalp · Crimson Desert",
+  "area": "Savage Fangs riders",
+  "trait": "The raiders' everyday war-boar",
+  "summary": "The common war-boar of the Savage Fangs raiders — the everyday version of Ravok's legendary mount.",
+  "tiers": {
+   "speed": {
+    "tier": 4,
+    "basis": "Slower than horses."
+   },
+   "stamina": {
+    "tier": 4,
+    "basis": "No verified figure — rated with the legendary warthog's 200."
+   },
+   "travel": {
+    "tier": 4,
+    "basis": "A fighting mount."
+   },
+   "combat": {
+    "tier": 3,
+    "basis": "Charging tusks; below Ravok's legendary warthog."
+   }
+  },
+  "tags": [],
+  "requires": [
+   "Force Palm"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Find Savage Fangs riders in Tashkalp and the Crimson Desert.",
+     "Knock a rider off their warthog and subdue it until Ride appears.",
+     "Feed raw meat.",
+     "When Trust reaches 100, press Take In (Y / Triangle) to register it as a permanent special mount."
+    ]
+   }
+  ],
+  "location": "Ridden by Savage Fangs raiders, Tashkalp and the Crimson Desert.",
+  "notes": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4501079/24e92433a5605065b9eee02442592f9f.png/show",
+    "credit": "game8",
+    "src": "media/mounts/boar/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/587091",
+    "title": "List of All Mounts — Game8"
+   },
+   {
+    "by": "everythingedinburgh",
+    "url": "https://everythingedinburgh.com/games/gaming/crimson-desert-all-mounts-pets/",
+    "title": "All Mounts & Pets — Everything Edinburgh"
+   }
+  ],
+  "since": "Patch 1.06",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "wyvern",
+  "name": "Wyvern",
+  "leaf": "rare",
+  "cls": "sky",
+  "domains": [
+   "sky"
+  ],
+  "kind": "Wyvern",
+  "region": "Delesyia",
+  "area": "Wyvern's Cradle",
+  "trait": "A flier you raise yourself",
+  "summary": "Since patch 1.10 a Baby Wyvern pet grows into a saddle-ready adult — a flying mount you raise from the egg. Wild adults at Fort Windridge can only be ridden temporarily.",
+  "tiers": {
+   "speed": {
+    "tier": 2,
+    "basis": "True flight; Blackstar remains the faster flier."
+   },
+   "stamina": {
+    "tier": 2,
+    "basis": "300 Stamina listed for adults."
+   },
+   "travel": {
+    "tier": 2,
+    "basis": "Flies over any terrain."
+   },
+   "combat": {
+    "tier": 2,
+    "basis": "1,200 Health; a large aerial predator."
+   }
+  },
+  "tags": [
+   "flight"
+  ],
+  "requires": [
+   "Pororin questline (Wyvern's Cradle egg)",
+   "A free pet slot"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Hatch a Baby Wyvern from the egg at Wyvern's Cradle in Delesyia (Pororin questline).",
+     "Keep it out as your pet and drop meat for it daily until it reaches growth level 3.",
+     "Use Grow, then register it as a special mount. The Wyvern Saddle arrived with the same patch."
+    ]
+   }
+  ],
+  "location": "Egg: Wyvern's Cradle, Delesyia. Wild adults: Fort Windridge, Delesyia (temporary rides).",
+  "notes": [
+   "Wild Wyverns at Fort Windridge can be subdued and ridden but not kept."
+  ],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    1200,
+    300,
+    40,
+    null
+   ],
+   "source": "fextralife"
+  },
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4514312/45a9754124ce38dcf7aa72df51f70a6f.png/show",
+    "credit": "game8",
+    "src": "media/mounts/wyvern/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Wyvern",
+    "title": "Wyvern — Fextralife Wiki"
+   },
+   {
+    "by": "gfinity",
+    "url": "https://www.gfinityesports.com/article/crimson-desert-how-to-get-kuku-bird-chick-and-baby-wyvern-mounts",
+    "title": "Kuku Bird Chick & Baby Wyvern — Gfinity"
+   },
+   {
+    "by": "rpgsite",
+    "url": "https://www.rpgsite.net/news/20537-crimson-desert-version-1-10-00-update-pinball-orb-roll-special-mounts-patch-notes",
+    "title": "Patch 1.10.00 notes — RPG Site"
+   },
+   {
+    "by": "everythingedinburgh",
+    "url": "https://everythingedinburgh.com/games/gaming/crimson-desert-all-mounts-pets/",
+    "title": "All Mounts & Pets — Everything Edinburgh"
+   }
+  ],
+  "since": "Patch 1.10",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "shark",
+  "name": "Shark",
+  "leaf": "rare",
+  "cls": "sea",
+  "domains": [
+   "sea"
+  ],
+  "kind": "Shark",
+  "region": "Island coasts",
+  "area": "Red Hangs Island",
+  "trait": "Fast, aggressive, common",
+  "summary": "The everyday predator of the new ocean. Fast and aggressive — you subdue it rather than feed it.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "“Very fast” for a common mount; below the Hammerhead and the legendaries."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "No comparative figure — rated average."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "A solid early sea mount."
+   },
+   "combat": {
+    "tier": 2,
+    "basis": "Aggressive biter that hits hard."
+   }
+  },
+  "tags": [
+   "deep-water",
+   "battle"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "Diving Suit",
+   "Force Palm",
+   "Harpoon Gun"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Search coastal water around the new islands. Red Hangs Island, by the lone Abyss Cresset on Delesyia's outskirts, is reliable.",
+     "Aggro a shark and wear it down with the Harpoon Gun without killing it.",
+     "Force Palm its snout as it charges, mount it, and win the taming minigame."
+    ]
+   }
+  ],
+  "location": "Coastal water around the new islands; Red Hangs Island is reliable.",
+  "notes": [
+   "The taming minigame drains stamina fast — bring stamina and heals, and tame by daylight."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/227pyz7ocfqs72j9zc4saz4owul2",
+    "credit": "game8",
+    "src": "media/mounts/shark/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://powerupgaming.co.uk/wp-content/uploads/how-to-tame-shark-mount-in-crimson-desert-charting-the-unknown-3.jpg",
+    "credit": "powerupgaming",
+    "focus": "50% 45%",
+    "src": "media/mounts/shark/hero.webp",
+    "w": 1280,
+    "h": 720
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://powerupgaming.co.uk/wp-content/uploads/how-to-tame-shark-mount-in-crimson-desert-charting-the-unknown-2.jpg",
+     "credit": "powerupgaming",
+     "caption": "World map — Red Hangs Island Abyss Cresset",
+     "src": "media/mounts/shark/map-1.webp",
+     "w": 1280,
+     "h": 720
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "powerupgaming",
+    "url": "https://powerupgaming.co.uk/2026/10/31/how-to-tame-shark-mount-in-crimson-desert-charting-the-unknown/",
+    "title": "How to Tame the Shark — PowerUp Gaming"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/635858",
+    "title": "All New Mounts (DLC) — Game8"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "hammerhead-shark",
+  "name": "Hammerhead Shark",
+  "leaf": "rare",
+  "cls": "sea",
+  "domains": [
+   "sea"
+  ],
+  "kind": "Shark",
+  "region": "South Sea",
+  "area": "Trench north of the Great Coral Reef",
+  "trait": "Much faster than a normal shark",
+  "summary": "The far-water cousin of the common shark, found in the South Sea trench. Same taming routine, notably more speed.",
+  "tiers": {
+   "speed": {
+    "tier": 2,
+    "basis": "“Notably much faster than a normal Shark” (Game8)."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "No comparative figure — rated average."
+   },
+   "travel": {
+    "tier": 2,
+    "basis": "The fastest non-legendary sea mount on record."
+   },
+   "combat": {
+    "tier": 2,
+    "basis": "Shark bite."
+   }
+  },
+  "tags": [
+   "deep-water"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "Diving Suit",
+   "Force Palm"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Go to the South Sea — the trench north of the Great Coral Reef.",
+     "Knock it out with Force Palm, mount it and win the taming minigame."
+    ]
+   }
+  ],
+  "location": "Trench north of the Great Coral Reef, South Sea.",
+  "notes": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/j0flfrmf0ewaa2hzi5vp3dwh4ixb",
+    "credit": "game8",
+    "src": "media/mounts/hammerhead-shark/portrait.webp",
+    "w": 300,
+    "h": 300
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/635858",
+    "title": "All New Mounts (DLC) — Game8"
+   },
+   {
+    "by": "mobalytics",
+    "url": "https://mobalytics.gg/gamebase/guides/crimson-desert-ocean-mounts-hidden-encounters",
+    "title": "Ocean Mounts & Hidden Encounters — Mobalytics"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "orca",
+  "name": "Orca",
+  "leaf": "rare",
+  "cls": "sea",
+  "domains": [
+   "sea"
+  ],
+  "kind": "Whale",
+  "region": "Open ocean",
+  "area": "Great Rocky Reef",
+  "trait": "Shark-class brawler, rarer spawn",
+  "summary": "Rarer than sharks and found in the same waters — best hunted around the Great Rocky Reef and far from the mainland.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "No comparative data — rated average."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "No comparative data — rated average."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "An alternative to the shark."
+   },
+   "combat": {
+    "tier": 2,
+    "basis": "A large predator tamed by force, like the shark."
+   }
+  },
+  "tags": [
+   "deep-water",
+   "battle"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "Diving Suit",
+   "Force Palm"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Search the Great Rocky Reef and other waters far from the mainland.",
+     "Force Palm it, mount it and win the taming minigame."
+    ]
+   }
+  ],
+  "location": "Great Rocky Reef and waters far from the mainland.",
+  "notes": [
+   "The Great Rocky Reef is also home to a Megalodon boss — keep your distance while hunting."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/eu9z63qqh3yekumj1udm2im3sxgt",
+    "credit": "game8",
+    "src": "media/mounts/orca/portrait.webp",
+    "w": 300,
+    "h": 300
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/635858",
+    "title": "All New Mounts (DLC) — Game8"
+   },
+   {
+    "by": "mobalytics",
+    "url": "https://mobalytics.gg/gamebase/guides/crimson-desert-ocean-mounts-hidden-encounters",
+    "title": "Ocean Mounts & Hidden Encounters — Mobalytics"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "sea-turtle",
+  "name": "Sea Turtle",
+  "leaf": "rare",
+  "cls": "sea",
+  "domains": [
+   "sea"
+  ],
+  "kind": "Turtle",
+  "region": "Open ocean",
+  "area": "Common everywhere",
+  "trait": "Common but skittish — approach fast or unseen",
+  "summary": "Plentiful across the ocean but hard to catch: it bolts unless you close in fast or stay unseen.",
+  "tiers": {
+   "speed": {
+    "tier": 4,
+    "basis": "Slow swimmer."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "No comparative data — rated average."
+   },
+   "travel": {
+    "tier": 4,
+    "basis": "A defensive mount, not a racer."
+   },
+   "combat": {
+    "tier": 4,
+    "basis": "Its ride ability is defensive rather than offensive (Mobalytics)."
+   }
+  },
+  "tags": [
+   "deep-water"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "Diving Suit"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Find one anywhere in the ocean.",
+     "Approach with high swim speed or stealth so it does not startle, then mount it.",
+     "Feed Seaweed Clusters or Jellyfish Fillets until Trust reaches 100, then register it."
+    ]
+   }
+  ],
+  "location": "Common across the ocean.",
+  "notes": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/33r3w0jqxdvmm5qiq8gessy430l8",
+    "credit": "game8",
+    "src": "media/mounts/sea-turtle/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/635858",
+    "title": "All New Mounts (DLC) — Game8"
+   },
+   {
+    "by": "mobalytics",
+    "url": "https://mobalytics.gg/gamebase/guides/crimson-desert-ocean-mounts-hidden-encounters",
+    "title": "Ocean Mounts & Hidden Encounters — Mobalytics"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "sunfish",
+  "name": "Sunfish",
+  "leaf": "rare",
+  "cls": "sea",
+  "domains": [
+   "sea"
+  ],
+  "kind": "Fish",
+  "region": "Open ocean",
+  "area": "—",
+  "trait": "Extends your dive",
+  "summary": "A huge, gentle sunfish whose ride ability lets you stay down longer.",
+  "tiers": {
+   "speed": {
+    "tier": 4,
+    "basis": "Slow swimmer."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "No comparative data — rated average."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "Dive extension makes long dives practical."
+   },
+   "combat": {
+    "tier": 5,
+    "basis": "No attack documented."
+   }
+  },
+  "tags": [
+   "deep-water"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "Diving Suit",
+   "Fish Fillet"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Find a sunfish in open water.",
+     "Ride it and feed Fish Fillet until Trust reaches 100, then register it."
+    ]
+   }
+  ],
+  "location": "Open ocean (no fixed spawn documented).",
+  "notes": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/chhewtzowip0n4vqydl7y5v8e0hy",
+    "credit": "game8",
+    "src": "media/mounts/sunfish/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/635858",
+    "title": "All New Mounts (DLC) — Game8"
+   },
+   {
+    "by": "mobalytics",
+    "url": "https://mobalytics.gg/gamebase/guides/crimson-desert-ocean-mounts-hidden-encounters",
+    "title": "Ocean Mounts & Hidden Encounters — Mobalytics"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "dolphin",
+  "name": "Dolphin",
+  "leaf": "rare",
+  "cls": "sea",
+  "domains": [
+   "sea"
+  ],
+  "kind": "Dolphin",
+  "region": "Open ocean",
+  "area": "Great Coral Reef pods",
+  "trait": "Friendly — no Force Palm needed",
+  "summary": "A neutral mount: swim up, climb on and feed it. Pods gather over the Great Coral Reef.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "No comparative data — rated average."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "No comparative data — rated average."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "The easiest sea mount to get."
+   },
+   "combat": {
+    "tier": 5,
+    "basis": "No attack documented."
+   }
+  },
+  "tags": [
+   "deep-water"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "Diving Suit",
+   "Any seafood"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Approach a dolphin in the water and ride it.",
+     "Feed any seafood until Trust reaches 100, then register it."
+    ]
+   }
+  ],
+  "location": "Pods over the Great Coral Reef.",
+  "notes": [
+   "Sharks hunt these pods and can kill a dolphin in one hit."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/43hbzw341flj2qx8b5aj2ctz8971",
+    "credit": "game8",
+    "src": "media/mounts/dolphin/portrait.webp",
+    "w": 300,
+    "h": 300
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/635858",
+    "title": "All New Mounts (DLC) — Game8"
+   },
+   {
+    "by": "gamerant",
+    "url": "https://gamerant.com/crimson-desert-legendary-pink-dolphin-location/",
+    "title": "Pink Dolphin Location — GameRant"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "manta-ray",
+  "name": "Manta Ray",
+  "leaf": "rare",
+  "cls": "sea",
+  "domains": [
+   "sea"
+  ],
+  "kind": "Ray",
+  "region": "South-west sea",
+  "area": "Great Coral Reef surface",
+  "trait": "Glides near the reef surface",
+  "summary": "Plentiful near the surface of the Great Coral Reef. A neutral mount: no fight, just food.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "No comparative data — rated average."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "No comparative data — rated average."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "Average sea traveller."
+   },
+   "combat": {
+    "tier": 4,
+    "basis": "Defensive ride ability (Mobalytics)."
+   }
+  },
+  "tags": [
+   "deep-water"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "Fish Fillet or Golden Coral"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Find manta rays gliding near the surface of the Great Coral Reef.",
+     "Swim up, ride one and feed Fish Fillet or Golden Coral until Trust reaches 100, then register it."
+    ]
+   }
+  ],
+  "location": "Near the surface of the Great Coral Reef.",
+  "notes": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/wgibuf7htal1mjaxfcrrdn3k7dr4",
+    "credit": "game8",
+    "src": "media/mounts/manta-ray/portrait.webp",
+    "w": 300,
+    "h": 300
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/635858",
+    "title": "All New Mounts (DLC) — Game8"
+   },
+   {
+    "by": "mobalytics",
+    "url": "https://mobalytics.gg/gamebase/guides/crimson-desert-ocean-mounts-hidden-encounters",
+    "title": "Ocean Mounts & Hidden Encounters — Mobalytics"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "eagle-ray",
+  "name": "Eagle Ray",
+  "leaf": "rare",
+  "cls": "sea",
+  "domains": [
+   "sea"
+  ],
+  "kind": "Ray",
+  "region": "Open ocean",
+  "area": "—",
+  "trait": "Spotted ray, tamed with fillets",
+  "summary": "A spotted ray tamed the gentle way — ride it and feed it.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "No comparative data — rated average."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "No comparative data — rated average."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "Average sea traveller."
+   },
+   "combat": {
+    "tier": 4,
+    "basis": "No attack documented."
+   }
+  },
+  "tags": [
+   "deep-water"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "Diving Suit",
+   "Fish Fillet"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Find an eagle ray in open water.",
+     "Ride it and feed Fish Fillet until Trust reaches 100, then register it."
+    ]
+   }
+  ],
+  "location": "Open ocean (no fixed spawn documented).",
+  "notes": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/0f5e6j9z40mcvovmtfwdpvrtvpma",
+    "credit": "game8",
+    "src": "media/mounts/eagle-ray/portrait.webp",
+    "w": 300,
+    "h": 300
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/635858",
+    "title": "All New Mounts (DLC) — Game8"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "electric-ray",
+  "name": "Electric Ray",
+  "leaf": "rare",
+  "cls": "sea",
+  "domains": [
+   "sea"
+  ],
+  "kind": "Ray",
+  "region": "Open ocean",
+  "area": "Deep, dark water",
+  "trait": "Glowing ray of the dark depths",
+  "summary": "A dark-water ray with a glowing body, tamed with fillets like the other rays.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "No comparative data — rated average."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "No comparative data — rated average."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "Average sea traveller."
+   },
+   "combat": {
+    "tier": 4,
+    "basis": "No attack documented."
+   }
+  },
+  "tags": [
+   "deep-water"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "Diving Suit",
+   "Fish Fillet"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Find an electric ray in deeper, darker water.",
+     "Ride it and feed Fish Fillet until Trust reaches 100, then register it."
+    ]
+   }
+  ],
+  "location": "Open ocean (no fixed spawn documented).",
+  "notes": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/ss83rk6skcbrw8wvitoioy859qj1",
+    "credit": "game8",
+    "src": "media/mounts/electric-ray/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/635858",
+    "title": "All New Mounts (DLC) — Game8"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "spotted-seal",
+  "name": "Spotted Seal",
+  "leaf": "rare",
+  "cls": "sea",
+  "domains": [
+   "sea"
+  ],
+  "kind": "Seal",
+  "region": "West sea",
+  "area": "Shores west of Iliya Island",
+  "trait": "Chase it into the water to ride",
+  "summary": "Basks on the seashore west of Iliya Island. Herd it into the water and it becomes rideable.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "No comparative data — rated average."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "No comparative data — rated average."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "Average sea traveller."
+   },
+   "combat": {
+    "tier": 5,
+    "basis": "No attack documented."
+   }
+  },
+  "tags": [
+   "deep-water"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "Any seafood"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Find spotted seals along the shore west of Iliya Island.",
+     "Chase one into the water — you can only mount it there.",
+     "Feed any seafood until Trust reaches 100, then register it."
+    ]
+   }
+  ],
+  "location": "Seashores west of Iliya Island.",
+  "notes": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/v46wouvcdljcqnfbli37glb52urp",
+    "credit": "game8",
+    "src": "media/mounts/spotted-seal/portrait.webp",
+    "w": 300,
+    "h": 300
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/635858",
+    "title": "All New Mounts (DLC) — Game8"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "herspia",
+  "name": "Herspia",
+  "leaf": "stable",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Horse",
+  "region": "Everywhere",
+  "area": "Wild herds · stables · riders",
+  "trait": "Kliff's first horse — no weak spot, no standout",
+  "summary": "Kliff's starting breed. Sensitive and easily startled, but loyal and quick to settle. Even 3s across the board at max level.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "Speed 3, Acceleration 3 at Lv 5."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "255 Stamina at Lv 5."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "Average across the board."
+   },
+   "combat": {
+    "tier": 4,
+    "basis": "21 Attack at Lv 5."
+   }
+  },
+  "tags": [
+   "early"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "label": "Story",
+    "steps": [
+     "Given during the main quest Unknown Space, right after the prologue."
+    ]
+   },
+   {
+    "label": "Other ways",
+    "steps": [
+     "Tame one in the wild, buy one where a stable has it in stock, or steal one from an NPC (Mask on, then ride out of the red circle)."
+    ]
+   }
+  ],
+  "location": "Wild herds across Pywel; some stables stock them; ridden by NPCs.",
+  "notes": [
+   "Your story Herspia has usually out-levelled any fresh horse by mid-game."
+  ],
+  "variants": [
+   "Bay Dun",
+   "Flaxen Chestnut",
+   "Red Dun",
+   "Light Red Dun-Grey",
+   "Buckskin",
+   "Bay",
+   "Leopard Appaloosa",
+   "Bay Pinto",
+   "Black Pinto",
+   "Chestnut with Blaze"
+  ],
+  "stats": {
+   "kind": "horse",
+   "levels": {
+    "1": [
+     350,
+     180,
+     7,
+     35,
+     1,
+     1,
+     1,
+     1
+    ],
+    "5": [
+     470,
+     255,
+     21,
+     47,
+     3,
+     3,
+     3,
+     3
+    ]
+   },
+   "source": "fextralife"
+  },
+  "skills": [
+   [
+    2,
+    "Dash"
+   ],
+   [
+    3,
+    "Drift"
+   ],
+   [
+    3,
+    "Back Kick"
+   ],
+   [
+    4,
+    "Sprint"
+   ],
+   [
+    5,
+    "Swimming III"
+   ],
+   [
+    5,
+    "Quick Start"
+   ],
+   [
+    5,
+    "Double Jump"
+   ]
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4451709/24b9e6eb72cbba55797c6b30b47a2f5e.png/show",
+    "credit": "game8",
+    "src": "media/mounts/herspia/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/4435100/e13fef83c83426b751abbbdf4388a458.png/show",
+     "credit": "game8",
+     "caption": "Story — the ride in Unknown Space",
+     "src": "media/mounts/herspia/overworld-1.webp",
+     "w": 728,
+     "h": 409
+    },
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/4451066/4b0d6bd7113d9e03978c569879444197.png/show",
+     "credit": "game8",
+     "caption": "Stable — the Buy Horse screen",
+     "src": "media/mounts/herspia/overworld-2.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/587177",
+    "title": "Herspia — Game8"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Herspia",
+    "title": "Herspia — Fextralife Wiki"
+   }
+  ],
+  "since": "Base game"
+ },
+ {
+  "id": "priden",
+  "name": "Priden",
+  "leaf": "stable",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Horse",
+  "region": "Everywhere",
+  "area": "Wild herds · stables · riders",
+  "trait": "Best vertical horse — learns High Jump",
+  "summary": "A calm, distinctively marked breed that nobles give their children. It levels into the best jumping kit among ordinary horses.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "Speed 3, Acceleration 3 at Lv 5."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "270 Stamina at Lv 5."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "High Jump plus Double Jump open shortcuts."
+   },
+   "combat": {
+    "tier": 4,
+    "basis": "23 Attack at Lv 5."
+   }
+  },
+  "tags": [
+   "vertical"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Tame one in the wild, buy one where a stable has it in stock, or steal one from an NPC (Mask on, then ride out of the red circle)."
+    ]
+   }
+  ],
+  "location": "Wild herds across Pywel; some stables stock them; ridden by NPCs.",
+  "notes": [],
+  "variants": [
+   "Grey Pinto",
+   "Grey",
+   "Chestnut",
+   "Buckskin Pinto",
+   "Dark Chestnut Pinto",
+   "Dun Pinto",
+   "Light Chestnut Pinto",
+   "Light Grey"
+  ],
+  "stats": {
+   "kind": "horse",
+   "levels": {
+    "1": [
+     400,
+     195,
+     10,
+     60,
+     1,
+     1,
+     2,
+     2
+    ],
+    "5": [
+     520,
+     270,
+     23,
+     72,
+     3,
+     3,
+     3,
+     4
+    ]
+   },
+   "source": "fextralife"
+  },
+  "skills": [
+   [
+    2,
+    "Dash"
+   ],
+   [
+    3,
+    "Drift"
+   ],
+   [
+    3,
+    "Back Kick"
+   ],
+   [
+    4,
+    "Sprint"
+   ],
+   [
+    5,
+    "Swimming III"
+   ],
+   [
+    5,
+    "Quick Start"
+   ],
+   [
+    5,
+    "Double Jump"
+   ],
+   [
+    5,
+    "High Jump"
+   ]
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4451713/c068b0b9fe22a37d621a3cad9b9f8962.png/show",
+    "credit": "game8",
+    "src": "media/mounts/priden/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/4451066/4b0d6bd7113d9e03978c569879444197.png/show",
+     "credit": "game8",
+     "caption": "Stable — the Buy Horse screen",
+     "src": "media/mounts/priden/overworld-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/588421",
+    "title": "Priden — Game8"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Priden",
+    "title": "Priden — Fextralife Wiki"
+   }
+  ],
+  "since": "Base game"
+ },
+ {
+  "id": "brianto",
+  "name": "Brianto",
+  "leaf": "stable",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Horse",
+  "region": "Everywhere",
+  "area": "Wild herds · stables · riders",
+  "trait": "Fast but fragile — two boosts per drift",
+  "summary": "Damiane's default breed. Lowest Health and Stamina of the horses, but it levels into Speed 4 and learns both boost skills.",
+  "tiers": {
+   "speed": {
+    "tier": 2,
+    "basis": "Speed 4 at Lv 5 with Instant Acceleration and Consecutive Instant Acceleration."
+   },
+   "stamina": {
+    "tier": 4,
+    "basis": "225 Stamina at Lv 5 — joint lowest."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "Quick, but the stamina bar cuts runs short."
+   },
+   "combat": {
+    "tier": 5,
+    "basis": "Lowest Health of any horse (420 at Lv 5)."
+   }
+  },
+  "tags": [],
+  "requires": [],
+  "routes": [
+   {
+    "label": "Story",
+    "steps": [
+     "Damiane's default mount when she joins in Chapter 3."
+    ]
+   },
+   {
+    "label": "Other ways",
+    "steps": [
+     "Tame one in the wild, buy one where a stable has it in stock, or steal one from an NPC (Mask on, then ride out of the red circle)."
+    ]
+   }
+  ],
+  "location": "Wild herds across Pywel; some stables stock them; ridden by NPCs.",
+  "notes": [
+   "Royler beats it on every stat; Brianto is the budget speed pick."
+  ],
+  "variants": [],
+  "stats": {
+   "kind": "horse",
+   "levels": {
+    "1": [
+     300,
+     150,
+     7,
+     30,
+     2,
+     1,
+     1,
+     1
+    ],
+    "5": [
+     420,
+     225,
+     21,
+     42,
+     4,
+     3,
+     2,
+     2
+    ]
+   },
+   "source": "fextralife"
+  },
+  "skills": [
+   [
+    2,
+    "Dash"
+   ],
+   [
+    3,
+    "Drift"
+   ],
+   [
+    3,
+    "Back Kick"
+   ],
+   [
+    4,
+    "Sprint"
+   ],
+   [
+    5,
+    "Swimming III"
+   ],
+   [
+    5,
+    "Quick Start"
+   ],
+   [
+    5,
+    "Instant Acceleration"
+   ],
+   [
+    5,
+    "Consecutive Instant Acceleration"
+   ],
+   [
+    5,
+    "Double Jump"
+   ]
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4451708/f66076c407acf5d9370c8b8c6db2183d.png/show",
+    "credit": "game8",
+    "src": "media/mounts/brianto/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/4451066/4b0d6bd7113d9e03978c569879444197.png/show",
+     "credit": "game8",
+     "caption": "Stable — the Buy Horse screen",
+     "src": "media/mounts/brianto/overworld-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/587178",
+    "title": "Brianto — Game8"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Brianto",
+    "title": "Brianto — Fextralife Wiki"
+   }
+  ],
+  "since": "Base game"
+ },
+ {
+  "id": "elantrima",
+  "name": "Elantrima",
+  "leaf": "stable",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Horse",
+  "region": "Everywhere",
+  "area": "Wild herds · stables · riders",
+  "trait": "Hauler — extra inventory slot, top Health",
+  "summary": "A parade breed with feathered legs and striking coats. Highest Health of the ordinary horses, strong stamina and handling, and an extra inventory slot.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "Speed 3, Acceleration 3 at Lv 5."
+   },
+   "stamina": {
+    "tier": 2,
+    "basis": "330 Stamina at Lv 5 — second only to Royler."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "Steady, with Lateral Movement for control."
+   },
+   "combat": {
+    "tier": 4,
+    "basis": "720 Health but 23 Attack at Lv 5."
+   }
+  },
+  "tags": [
+   "cargo"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Tame one in the wild, buy one where a stable has it in stock, or steal one from an NPC (Mask on, then ride out of the red circle)."
+    ]
+   }
+  ],
+  "location": "Wild herds across Pywel; some stables stock them; ridden by NPCs.",
+  "notes": [
+   "Nobles chase the rare coats."
+  ],
+  "variants": [
+   "Black with White Mane and Blaze",
+   "Dark Grey with Flaxen Mane",
+   "Black with Blaze",
+   "Chestnut",
+   "Chestnut with Blaze",
+   "Grey"
+  ],
+  "stats": {
+   "kind": "horse",
+   "levels": {
+    "1": [
+     600,
+     255,
+     10,
+     50,
+     1,
+     1,
+     2,
+     2
+    ],
+    "5": [
+     720,
+     330,
+     23,
+     62,
+     3,
+     3,
+     4,
+     2
+    ]
+   },
+   "source": "fextralife"
+  },
+  "skills": [
+   [
+    2,
+    "Dash"
+   ],
+   [
+    3,
+    "Drift"
+   ],
+   [
+    3,
+    "Back Kick"
+   ],
+   [
+    4,
+    "Sprint"
+   ],
+   [
+    5,
+    "Swimming III"
+   ],
+   [
+    5,
+    "Quick Start"
+   ],
+   [
+    3,
+    "Lateral Movement"
+   ]
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4451712/f29f1f2b6e326d59a10fbb22567f55f0.png/show",
+    "credit": "game8",
+    "src": "media/mounts/elantrima/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/4451066/4b0d6bd7113d9e03978c569879444197.png/show",
+     "credit": "game8",
+     "caption": "Stable — the Buy Horse screen",
+     "src": "media/mounts/elantrima/overworld-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/588432",
+    "title": "Elantrima — Game8"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Elantrima",
+    "title": "Elantrima — Fextralife Wiki"
+   }
+  ],
+  "since": "Base game"
+ },
+ {
+  "id": "numont",
+  "name": "Numont",
+  "leaf": "stable",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Horse",
+  "region": "Everywhere",
+  "area": "Wild herds · stables · riders",
+  "trait": "Officer's warhorse — quickest off the mark",
+  "summary": "A heavy-framed officer's breed with big lungs. It reaches Acceleration 4 and learns a champron charge early.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "Speed 3 at Lv 5, but Acceleration 4."
+   },
+   "stamina": {
+    "tier": 4,
+    "basis": "225 Stamina at Lv 5 — joint lowest."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "Average."
+   },
+   "combat": {
+    "tier": 3,
+    "basis": "26 Attack and a Lv 3 Charge — best of the stable breeds."
+   }
+  },
+  "tags": [],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Tame one in the wild, buy one where a stable has it in stock, or steal one from an NPC (Mask on, then ride out of the red circle)."
+    ]
+   }
+  ],
+  "location": "Wild herds across Pywel; some stables stock them; ridden by NPCs.",
+  "notes": [],
+  "variants": [
+   "Bay",
+   "Palomino",
+   "Chestnut",
+   "Chestnut with Blaze",
+   "Cremello",
+   "Dark Bay"
+  ],
+  "stats": {
+   "kind": "horse",
+   "levels": {
+    "1": [
+     400,
+     150,
+     15,
+     45,
+     1,
+     2,
+     1,
+     2
+    ],
+    "5": [
+     520,
+     225,
+     26,
+     57,
+     3,
+     4,
+     3,
+     3
+    ]
+   },
+   "source": "fextralife"
+  },
+  "skills": [
+   [
+    2,
+    "Dash"
+   ],
+   [
+    3,
+    "Drift"
+   ],
+   [
+    3,
+    "Back Kick"
+   ],
+   [
+    4,
+    "Sprint"
+   ],
+   [
+    5,
+    "Swimming III"
+   ],
+   [
+    5,
+    "Quick Start"
+   ],
+   [
+    3,
+    "Charge (with champron)"
+   ],
+   [
+    5,
+    "Double Jump"
+   ]
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4468109/39ff3d5b9c419d9a50b491f5b183daca.png/show",
+    "credit": "game8",
+    "src": "media/mounts/numont/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/4451066/4b0d6bd7113d9e03978c569879444197.png/show",
+     "credit": "game8",
+     "caption": "Stable — the Buy Horse screen",
+     "src": "media/mounts/numont/overworld-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/587091",
+    "title": "List of All Mounts — Game8"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Numont",
+    "title": "Numont — Fextralife Wiki"
+   }
+  ],
+  "since": "Base game"
+ },
+ {
+  "id": "cloudcart",
+  "name": "Cloudcart",
+  "leaf": "engineered",
+  "cls": "sky",
+  "domains": [
+   "sky"
+  ],
+  "kind": "Balloon",
+  "region": "Hernand",
+  "area": "Glenbright Manor · Emberwind Workshop",
+  "trait": "Craftable balloon for cross-continent hops",
+  "summary": "The village's first flying prototype — a hot-air balloon built through your Greymane camp for long hops across the continent. Two upgraded hulls follow it.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "A balloon: steady rather than fast."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "No stamina bar."
+   },
+   "travel": {
+    "tier": 2,
+    "basis": "Long-distance flight with no ground obstacles."
+   },
+   "combat": {
+    "tier": 5,
+    "basis": "No attack."
+   }
+  },
+  "tags": [
+   "flight"
+  ],
+  "requires": [
+   "Dispatch Missions (Chapter 3: Bustling Hill)",
+   "An Engineer comrade"
+  ],
+  "routes": [
+   {
+    "label": "Blueprint",
+    "steps": [
+     "Unlock Dispatch Missions with the Chapter 3 quest Bustling Hill.",
+     "Glenbright Manor (Hernand Highlands, south of Howling Hill): open the 2nd-floor wardrobe and turn the wheel to light the statue.",
+     "Take the Sapphire-Set and Ruby-Set Golden Daggers, then push the wall with the jousting-knights painting downstairs for the Basement Key.",
+     "Slot both daggers above the office fireplace; the bookcase opens. Climb down and take the Cloudcart Blueprint."
+    ]
+   },
+   {
+    "label": "Build",
+    "steps": [
+     "Discover Emberwind Workshop, north of Glenbright Manor, to unlock its dispatch mission.",
+     "Send the Cloudcart mission with an Engineer comrade. The Cloudcart joins your mounts."
+    ]
+   }
+  ],
+  "location": "Blueprint: Glenbright Manor basement. Workshop: Emberwind Workshop, north of the manor.",
+  "notes": [
+   "Cloudcruiser (stronger fabric, higher altitude) and Skystreaker (high-altitude flagship) are built through further dispatch missions — reported at five Greymanes including an Engineer, plus a fresh batch of materials.",
+   "No Engineer yet? The quest A Rumor in St. Halssius recruits Arnold."
+  ],
+  "variants": [
+   "Cloudcart",
+   "Cloudcruiser",
+   "Skystreaker"
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4468575/6af021c265da4dfa689920c631e08a5a.png/show",
+    "credit": "game8",
+    "src": "media/mounts/cloudcart/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/4468483/df322228289b9dbd8166c26afb9ee56a.png/show",
+     "credit": "game8",
+     "caption": "World map — Emberwind Workshop",
+     "src": "media/mounts/cloudcart/map-1.webp",
+     "w": 728,
+     "h": 410
+    },
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/4468485/e88044b2f4ac232a93501496007f4d02.png/show",
+     "credit": "game8",
+     "caption": "On site — Emberwind Workshop",
+     "src": "media/mounts/cloudcart/overworld-2.webp",
+     "w": 728,
+     "h": 410
+    },
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/4468484/c65d7fec6f9f11f6334e37c8ce97813c.png/show",
+     "credit": "game8",
+     "caption": "World map — Glenbright Manor",
+     "src": "media/mounts/cloudcart/map-3.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": [
+    {
+     "kind": "variant",
+     "from": "https://static0.fextralifeimages.com/file/crimsondesertgame/5/5a/Cloudcruiser-mounts-crimson-desert-wiki-guide.png",
+     "credit": "fextralife",
+     "caption": "Cloudcruiser",
+     "matte": true,
+     "src": "media/mounts/cloudcart/gallery-1.webp",
+     "w": 170,
+     "h": 170
+    },
+    {
+     "kind": "variant",
+     "from": "https://static0.fextralifeimages.com/file/crimsondesertgame/4/4d/Skystreaker-mounts-crimson-desert-wiki-guide.png",
+     "credit": "fextralife",
+     "caption": "Skystreaker",
+     "matte": true,
+     "src": "media/mounts/cloudcart/gallery-2.webp",
+     "w": 170,
+     "h": 170
+    }
+   ]
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/594331",
+    "title": "Cloudcart — Game8"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Cloudcart",
+    "title": "Cloudcart — Fextralife Wiki"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Cloudcruiser",
+    "title": "Cloudcruiser — Fextralife Wiki"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Skystreaker",
+    "title": "Skystreaker — Fextralife Wiki"
+   },
+   {
+    "by": "nerdschalk",
+    "url": "https://nerdschalk.com/?p=486172",
+    "title": "All 3 Cloudcarts — Nerds Chalk"
+   }
+  ],
+  "since": "Base game",
+  "skills": []
+ },
+ {
+  "id": "atag",
+  "name": "A.T.A.G.",
+  "leaf": "engineered",
+  "cls": "land",
+  "domains": [
+   "land",
+   "sea"
+  ],
+  "kind": "Mech suit",
+  "region": "Gorthak · Delesyia",
+  "area": "Zargan Tankworks",
+  "trait": "The tank of all mounts — dives with DLC parts",
+  "summary": "All-Terrain Armored Gear: a walking mech with heavy armour and real punch. The Charting the Unknown DLC adds marine parts that turn it into a submarine.",
+  "tiers": {
+   "speed": {
+    "tier": 4,
+    "basis": "A heavy walker."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "No stamina bar."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "All-terrain, and underwater once refitted."
+   },
+   "combat": {
+    "tier": 2,
+    "basis": "“The tank of all mounts” — strong attacks and defence (Destructoid)."
+   }
+  },
+  "tags": [
+   "battle"
+  ],
+  "requires": [
+   "Chapter 11",
+   "Faction quest: New Designs"
+  ],
+  "routes": [
+   {
+    "label": "Unlock",
+    "steps": [
+     "Chapter 10 lends you an A.T.A.G. during the mecha siege.",
+     "In Chapter 11, accept the faction quest New Designs and speak with the artisan Marek at Zargan Tankworks, west Gorthak.",
+     "He gives the Small Kuku A.T.A.G. Design — the full blueprint. Craft it to keep the A.T.A.G. permanently."
+    ]
+   },
+   {
+    "label": "Underwater (DLC)",
+    "steps": [
+     "Find the three Ancient Marine Exploration blueprints (Plate, Pack, Footwear) inside underwater temples.",
+     "Dispatch two members, one a Skilled Engineer, for each part at Delesyia's research bases (Plating: Marni's Masterium; Pack: Aeronautical Research Base). Each part costs a Natural Pearl plus hides or Manganese, 16k Camp Weapons, 9k Provisions and 100k Funds.",
+     "Equip the three parts to take the A.T.A.G. underwater."
+    ]
+   }
+  ],
+  "location": "Blueprint: Marek, Zargan Tankworks (west Gorthak).",
+  "notes": [
+   "Game8 calls the refitted A.T.A.G. the ideal choice for underwater combat."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4468110/7c7f5b8242a13110da1e2360a56c11ef.png/show",
+    "credit": "game8",
+    "src": "media/mounts/atag/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "gallery": [
+    {
+     "kind": "variant",
+     "from": "https://img.game8.co/y02h7o7cpu9em5e45sxbz1cy6brv",
+     "credit": "game8",
+     "caption": "Marine refit",
+     "src": "media/mounts/atag/gallery-1.webp",
+     "w": 300,
+     "h": 300
+    }
+   ],
+   "captures": []
+  },
+  "sources": [
+   {
+    "by": "destructoid",
+    "url": "https://www.destructoid.com/all-mechanical-mounts-in-crimson-desert-and-how-to-get-them/",
+    "title": "All Mechanical Mounts — Destructoid"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/636801",
+    "title": "How to Use the A.T.A.G. Underwater — Game8"
+   },
+   {
+    "by": "gamerant",
+    "url": "https://gamerant.com/crimson-desert-abyssal-fusion-dragon-armor-how-to-get/",
+    "title": "Small Kuku A.T.A.G. Blueprint — GameRant"
+   }
+  ],
+  "since": "Base game · marine parts DLC",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "pywel-wagon",
+  "name": "Pywel Wagon",
+  "leaf": "engineered",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Wagon",
+  "region": "Hernand",
+  "area": "Howling Hill · Timberturner Wainwright",
+  "trait": "A trading wagon for your camp",
+  "summary": "A horse-drawn trading wagon built through the Greymane camp — slow, but it carries goods.",
+  "tiers": {
+   "speed": {
+    "tier": 5,
+    "basis": "A loaded cart."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "No stamina bar."
+   },
+   "travel": {
+    "tier": 4,
+    "basis": "Roads only, slowly."
+   },
+   "combat": {
+    "tier": 5,
+    "basis": "No attack."
+   }
+  },
+  "tags": [
+   "cargo"
+  ],
+  "requires": [
+   "Dispatch Missions (Chapter 3: Bustling Hill)",
+   "Brice the Wagonmaster",
+   "An Engineering comrade"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Unlock Dispatch Missions with the Chapter 3 quest Bustling Hill.",
+     "Recruit Brice the Wagonmaster through A Rumor at Glenbright Farm (Embers of Return).",
+     "After the first four Greymane Commissions, take Brice's Request and talk to the Stranger by the wagon wheels at Timberturner Wainwright, east of Howling Hill.",
+     "Dispatch Old Wagon Production with an Engineering comrade: 120 Timber, 60 Food, 900 Silver."
+    ]
+   }
+  ],
+  "location": "Timberturner Wainwright, east of Howling Hill, Hernand.",
+  "notes": [
+   "Bigger wagons can be crafted for more resources, workers and time.",
+   "Wagons can also be stolen from NPCs as temporary rides."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4468576/2c4efd6e1ce966f1feb8a07b120436c8.png/show",
+    "credit": "game8",
+    "src": "media/mounts/pywel-wagon/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/4451531/8b93f8ac9eed19d6543a13b509e73309.png/show",
+     "credit": "game8",
+     "caption": "World map — Howling Hill to Timberturner Wainwright",
+     "src": "media/mounts/pywel-wagon/map-1.webp",
+     "w": 727,
+     "h": 409
+    },
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/4468486/356c69f60885869539d0ceb8bf8b5012.png/show",
+     "credit": "game8",
+     "caption": "Dispatch — Old Wagon Production",
+     "src": "media/mounts/pywel-wagon/map-2.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/594330",
+    "title": "Pywel Wagon — Game8"
+   }
+  ],
+  "since": "Base game",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "kuku-bird-hatchling",
+  "name": "Kuku Bird Hatchling",
+  "leaf": "fleeting",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Bird",
+  "region": "Hernand",
+  "area": "Steel Mountains",
+  "trait": "Temporary glider — steal one for a cliff",
+  "summary": "Young kuku birds ridden by Blinding Arrow soldiers. They glide down any drop without fall damage, but you cannot keep one.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "Flees fast; average under a rider."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "300 Stamina listed."
+   },
+   "travel": {
+    "tier": 2,
+    "basis": "Trait override: no fall damage from any height."
+   },
+   "combat": {
+    "tier": 5,
+    "basis": "No combat moves."
+   }
+  },
+  "tags": [
+   "vertical"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Steel Mountains, east of the Spire of Insight: Blinding Arrow soldiers ride hatchlings.",
+     "Defeat a rider, then sprint after the bird before it escapes and mount it."
+    ]
+   }
+  ],
+  "location": "Blinding Arrow occupation, Steel Mountains, east of the Spire of Insight.",
+  "notes": [
+   "Cannot be registered. For a permanent bird, see the Leaping Kuku Bird.",
+   "Step off and it wanders nearby; re-mount without another chase."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4451866/65f0ea46dfe18b6d02b7fec95f9404fa.png/show",
+    "credit": "game8",
+    "src": "media/mounts/kuku-bird-hatchling/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/4451827/fa180202700ee06d7d57e5cc0e550e83.png/show",
+     "credit": "game8",
+     "caption": "World map — Blinding Soldier occupation",
+     "src": "media/mounts/kuku-bird-hatchling/map-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/588550",
+    "title": "Kuku Bird — Game8"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/kuku-bird-hatchling",
+    "title": "Kuku Bird Hatchling — The Games Wiki"
+   }
+  ],
+  "since": "Base game",
+  "variants": [],
+  "skills": []
+ },
+ {
+  "id": "elephant",
+  "name": "Elephant",
+  "leaf": "fleeting",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Elephant",
+  "region": "Demeniss",
+  "area": "Demeniss Wildlife Park",
+  "trait": "Ride the giants of the wildlife park",
+  "summary": "The wildlife park's elephants carry riders on request. Walk up and climb on — they stay behind when you leave.",
+  "tiers": {
+   "speed": {
+    "tier": 5,
+    "basis": "Lumbering."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "No data — rated average."
+   },
+   "travel": {
+    "tier": 5,
+    "basis": "Park grounds only."
+   },
+   "combat": {
+    "tier": 4,
+    "basis": "No documented attack."
+   }
+  },
+  "tags": [],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Go to Demeniss Wildlife Park, south of the City of Demeniss.",
+     "Approach an elephant and ride it."
+    ]
+   }
+  ],
+  "location": "Demeniss Wildlife Park, south of the City of Demeniss.",
+  "notes": [
+   "Temporary only."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4465000/00498c6ba58f115e1c38a7adb5a85f37.png/show",
+    "credit": "game8",
+    "src": "media/mounts/elephant/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/4467992/a2a8d815d091ecdaa53e98c02cbb38df.png/show",
+     "credit": "game8",
+     "caption": "World map — Demeniss Wildlife Park",
+     "src": "media/mounts/elephant/map-1.webp",
+     "w": 728,
+     "h": 410
+    },
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/4467990/912e46757bc9ba49428e14eac58e5294.png/show",
+     "credit": "game8",
+     "caption": "On site — the park",
+     "src": "media/mounts/elephant/overworld-2.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/594286",
+    "title": "Elephant — Game8"
+   }
+  ],
+  "since": "Base game",
+  "variants": [],
+  "skills": []
+ }
+]

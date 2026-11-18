@@ -1,0 +1,171 @@
+{
+ "id": "mounts",
+ "title": "Mounts",
+ "singular": "Mount",
+ "tagline": "Every rideable creature and machine in Pywel — where it lives, how to make it yours, and what it is worth riding for.",
+ "asOf": "Current to Charting the Unknown · November 2026",
+ "metrics": [
+  {
+   "id": "speed",
+   "label": "Speed",
+   "blurb": "Top-end movement: the in-game Speed and Acceleration ratings for horses at max level, source descriptions for everything else."
+  },
+  {
+   "id": "stamina",
+   "label": "Stamina",
+   "blurb": "How long it can sprint, swim or fly before it slows: the in-game Stamina stat, or the use timer for timed mounts."
+  },
+  {
+   "id": "travel",
+   "label": "Travel",
+   "blurb": "Total capacity to cover ground. Weighted mostly on speed, then stamina, then terrain traits — no fall damage, jumping, water sprint, flight — minus cooldown limits."
+  },
+  {
+   "id": "combat",
+   "label": "Combat",
+   "blurb": "Mounted fighting value: Attack and Health, special attacks, and whether it keeps fighting after you dismount."
+  }
+ ],
+ "classes": [
+  {
+   "id": "land",
+   "label": "Land"
+  },
+  {
+   "id": "sea",
+   "label": "Sea"
+  },
+  {
+   "id": "sky",
+   "label": "Sky"
+  }
+ ],
+ "leaves": [
+  {
+   "id": "legendary",
+   "label": "Legendary",
+   "accent": "crimson",
+   "blurb": "One of a kind: the three legendary horses, the sigil beasts, Blackstar, and the legends of the deep.",
+   "cover": {
+    "entry": "snowwhite-deer",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "rare",
+   "label": "Rare",
+   "accent": "ember",
+   "blurb": "Never sold at a stable — stolen, subdued, hatched or raised, then taken in for good.",
+   "cover": {
+    "entry": "tiger",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "stable",
+   "label": "Stable",
+   "accent": "bone",
+   "blurb": "The five horse breeds you can tame, steal or buy. They level up and learn skills as you ride.",
+   "cover": {
+    "from": "https://img.game8.co/4451067/00c1a659febd031be8470787d1e07f5f.png/show",
+    "credit": "game8",
+    "src": "media/mounts/_leaves/stable.webp",
+    "w": 728,
+    "h": 410
+   }
+  },
+  {
+   "id": "engineered",
+   "label": "Engineered",
+   "accent": "brass",
+   "blurb": "Built, not tamed: balloons, a mech suit and a trading wagon, crafted through your Greymane camp.",
+   "cover": {
+    "entry": "cloudcart",
+    "capture": 1
+   }
+  },
+  {
+   "id": "fleeting",
+   "label": "Fleeting",
+   "accent": "ash",
+   "blurb": "Rides you can borrow but never keep.",
+   "cover": {
+    "entry": "elephant",
+    "capture": 1
+   }
+  }
+ ],
+ "lenses": [
+  {
+   "id": "long-haul",
+   "label": "Long haul",
+   "blurb": "Land mounts for crossing Pywel fastest.",
+   "where": {
+    "cls": [
+     "land"
+    ],
+    "atMost": {
+     "metric": "travel",
+     "tier": 2
+    }
+   },
+   "sortBy": "travel"
+  },
+  {
+   "id": "battle",
+   "label": "Battle",
+   "blurb": "The strongest mounts to fight from, on land, at sea and in the air.",
+   "where": {
+    "atMost": {
+     "metric": "combat",
+     "tier": 2
+    }
+   },
+   "sortBy": "combat"
+  },
+  {
+   "id": "deep-water",
+   "label": "Deep water",
+   "blurb": "Everything that swims, fastest crossing first.",
+   "where": {
+    "cls": [
+     "sea"
+    ]
+   },
+   "sortBy": "travel"
+  },
+  {
+   "id": "flight",
+   "label": "Flight",
+   "blurb": "Every way into the sky.",
+   "where": {
+    "cls": [
+     "sky"
+    ]
+   },
+   "sortBy": "travel"
+  },
+  {
+   "id": "vertical",
+   "label": "Cliffs & drops",
+   "blurb": "Jumpers, climbers and gliders that turn cliffs into shortcuts.",
+   "where": {
+    "tags": [
+     "vertical"
+    ]
+   },
+   "sortBy": "travel"
+  },
+  {
+   "id": "cargo",
+   "label": "Cargo",
+   "blurb": "Extra carrying capacity for trading runs.",
+   "where": {
+    "tags": [
+     "cargo"
+    ]
+   },
+   "sortBy": "stamina"
+  }
+ ]
+}
