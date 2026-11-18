@@ -1,0 +1,39 @@
+# !$lock:["TREE":"Mounts" := "color"] 
+##: "!$" = "IMPORTANT CONTEXT OR CONFIGURATION, USUALLY UTILIZED FIRST IN A WORKFLOW OR SEQUENCE",
+##: "lock" = "'options':'(variables)'",
+##: "#" = "GeneralDocStringCharacter(GDSC) character, can go anywhere",
+##: "##:" = "Structured Paramaters('##! param:') that are part of the 'GDSC'",
+##: "!=<" = "ENUM STAMP for NESTED data, configurations, functions, workflows",
+##: "->" = "Utilized to Both end, and bridge the corresponding data, workflow, configuration",
+##: "|-" = "'PointList' for 'ENUM STAMP', The new line indicator for a ENUM STAMP HIERARCHAL FORMATTING",
+##: ";" = "Indicates a NESTED DataString list continuing.",
+##: "," = "Indicates a PARENT DataString list continuing.",
+##: ":" = "direct indication character",
+##: "::" = "Bridging-Direct Indication Character",
+##: "[]" = "Function brackets, usualy utilized for workflow status and configurations tied to development of the source code.",
+##: "()" = "Usually utilized as a variable to an option or function",
+##: "{}" = "Utilized For Global workflows, functions, configurations",
+
+{
+    TREE.BRANCH:[lock]::<"update" = false ->
+        !=< "color":=(red)
+          |- "Mounts",
+          |- "" # placeholder
+         ->
+    TREE.TODO:[color]::<[
+        "Legendary":=(orange),
+        "Rare":=(royal_blue),
+        "EasterEggs":=(cyan)
+    ]>,
+    TREE.LEAF:[update]::<"color": true ->
+        !=< "Legendary":=(orange)
+          |- "" # placeholder
+         ->
+        !=< "Rare":=(royal_blue)
+          |- "Leaping KuKu Bird",
+          |- "Lion"
+         ->
+        !=< "EasterEggs":=(cyan)
+          |- "" # placeholder
+         ->     
+}

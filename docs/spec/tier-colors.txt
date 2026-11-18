@@ -1,0 +1,93 @@
+# !$lock:["TREE":"Mounts" := "color"]
+##: "!$" = "IMPORTANT CONTEXT OR CONFIGURATION, USUALLY UTILIZED FIRST IN A WORKFLOW OR SEQUENCE",
+##: "lock" = "'options':'(variables)'",
+##: "#" = "GeneralDocStringCharacter(GDSC) character, can go anywhere",
+##: "##:" = "Structured Parameters('##! param:') that are part of the 'GDSC'",
+##: "!=<" = "ENUM STAMP for NESTED data, configurations, functions, workflows",
+##: "->" = "Utilized to Both end, and bridge the corresponding data, workflow, configuration",
+##: "|-" = "'PointList' for 'ENUM STAMP', The new line indicator for a ENUM STAMP HIERARCHICAL FORMATTING",
+##: ";" = "Indicates a NESTED DataString list continuing.",
+##: "," = "Indicates a PARENT DataString list continuing.",
+##: ":" = "direct indication character",
+##: "::" = "Bridging-Direct Indication Character",
+##: "[]" = "Function brackets, usually utilized for workflow status and configurations tied to development of the source code.",
+##: "()" = "Usually utilized as a variable to an option or function",
+##: "{}" = "Utilized For Global workflows, functions, configurations",
+
+# colour values: Claude's implementation choices (the request names the colours, not their values)
+##: "red" = "--crimson #c81e2b / --crimson-hi #ff3e48 · reserved for the root · unchanged",
+##: "orange" = "--ember #e0672f · the exact orange Rare used, moved to Legendary",
+##: "royal_blue" = "--royal #4169e1 · new · CSS royal blue; navy (#000080) disappears on the ink background, so royal_navy resolves to royal blue",
+##: "royal_blue.text" = "--royal-hi #5a80f2 · the accent actually drawn on text and marks; #4169e1 reads 4.0:1 on ink, below the 4.5:1 small-text minimum (crimson does the same with --crimson-hi)",
+##: "cyan" = "--cyan #29d0e3 · new · brighter and greener than Underwater's sea teal #4aa6bb so the two never read as one",
+
+{
+    TREE.BRANCH:[lock]::<"update" = false ->
+        !=< "color":=(red)
+          |- "Mounts"
+         ->
+    TREE.TODO:[color]::<[
+        "Legendary":=(orange),
+        "Rare":=(royal_blue),
+        "EasterEggs":=(cyan)
+    ]>,
+    TREE.LEAF:[update]::<"color": true ->
+        !=< "Legendary":=(orange)
+          |- "Royler",
+          |- "Rokade",
+          |- "Camora",
+          |- "Blackstar",
+          |- "Silver Fang",
+          |- "White Bear",
+          |- "Snowwhite Deer",
+          |- "Icicle Edge Alpine Ibex",
+          |- "Rock Tusk Warthog",
+          |- "Ocean Drifter",
+          |- "Golden Shark",
+          |- "Pink Dolphin",
+          |- "Pink Manta Ray"
+         ->
+        !=< "Rare":=(royal_blue)
+          |- "Leaping Kuku Bird",
+          |- "Giant Red Iguana",
+          |- "Giant Green Iguana",
+          |- "Red-Feathered Raptor",
+          |- "Lion",
+          |- "Tiger",
+          |- "Brown Bear",
+          |- "Clawed Bear",
+          |- "Large Wolf",
+          |- "Rosehorn Deer",
+          |- "Ibex",
+          |- "Sandwalk Camel",
+          |- "Savage Fang Boar",
+          |- "Wyvern",
+          |- "Shark",
+          |- "Hammerhead Shark",
+          |- "Orca",
+          |- "Sea Turtle",
+          |- "Sunfish",
+          |- "Dolphin",
+          |- "Manta Ray",
+          |- "Eagle Ray",
+          |- "Electric Ray",
+          |- "Spotted Seal"
+         ->
+        !=< "EasterEggs":=(cyan)
+          |- !=< "Nods":=(cyan)
+               |- "Leaping Kuku Bird";
+               |- "Marni's Mechahorse"
+              ->,
+          |- !=< "Oddities":=(cyan)
+               |- "Lion";
+               |- "Elephant"
+              ->
+         ->
+}
+
+# inheritance: Land, Underwater, Flying, Mechanical and DLC build their Legendary and Rare leaves from the
+#   rarity leaves, so they take orange and royal_blue with no entries of their own here.
+# EasterEggs: the branch, both of its leaves and the "Easter egg" note on a mount's page take cyan.
+# untouched: Stable (bone), Engineered (brass), Fleeting (ash), Land/Underwater/Flying (terrain colours),
+#   Mechanical (brass), DLC (red), Ride for and the Tier ladder (red).
+# applied to source: branch.json (leaf and category accents), tokens.css (--royal, --cyan), Plate.svelte (egg note).
