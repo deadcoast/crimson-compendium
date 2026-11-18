@@ -31,7 +31,7 @@
     const c = ctx;
     if (ctxKey(c) !== ctxKey(app.ctx)) { app.ctx = c; app.cls = ''; }
   });
-  $effect(() => { if (view.kind === 'entry') app.visit(view.entry.id); });
+  $effect(() => { if (view.kind === 'entry') app.visit(branch.id, view.entry.id); });
 
   const list = $derived.by(() => {
     const l = entriesFor(branch, ctx);
@@ -91,7 +91,15 @@
     <button class="icon" onclick={() => (app.palette = true)} aria-label="Search"><Glyph name="search" size={19} /></button>
   </header>
 
-  <Explorer branches={tree.branches} {view} {ctx} {entry} open={menu} onnavigate={() => (menu = false)} />
+  <Explorer
+    branches={tree.branches}
+    {view}
+    {ctx}
+    {entry}
+    open={menu}
+    onnavigate={() => (menu = false)}
+    onsummon={() => { if (matchMedia('(max-width: 860px)').matches) menu = true; }}
+  />
   {#if menu}<button class="spine-scrim" aria-label="Close tree" onclick={() => (menu = false)}></button>{/if}
 
   {#if view.kind === 'ladder'}

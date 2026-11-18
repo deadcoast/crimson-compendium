@@ -12,6 +12,15 @@
   let active = $state(0);
   let plate: HTMLElement | null = null;
 
+  // phones hide the plate on list routes; crossing the breakpoint changes what there is to outline
+  const phone = matchMedia('(max-width: 860px)');
+  let narrow = $state(phone.matches);
+  $effect(() => {
+    const on = (e: MediaQueryListEvent) => (narrow = e.matches);
+    phone.addEventListener('change', on);
+    return () => phone.removeEventListener('change', on);
+  });
+
   function measure() {
     if (!plate) return;
     const top = plate.getBoundingClientRect().top + 120;
@@ -24,8 +33,11 @@
   $effect(() => {
     void entry?.id;
     void app.hash; // on phones the plate only shows once an entry route opens it
+    void narrow;
+    let live = true;
     let off = () => {};
     tick().then(() => requestAnimationFrame(() => {
+      if (!live) return; // superseded before the frame came: attach nothing
       plate = document.querySelector<HTMLElement>('.plate');
       if (plate && plate.offsetParent === null) plate = null;
       items = plate ? [...plate.querySelectorAll<HTMLElement>('[data-outline]')].map((el) => ({ label: el.dataset.outline!, el })) : [];
@@ -37,7 +49,7 @@
       off = () => p.removeEventListener('scroll', on);
       measure();
     }));
-    return () => off();
+    return () => { live = false; off(); };
   });
 
   function go(i: number) {

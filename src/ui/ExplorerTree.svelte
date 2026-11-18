@@ -15,8 +15,8 @@
   import type { Branch, Entry, ListContext, View } from '../core/types';
   import Glyph from './Glyph.svelte';
 
-  let { branches, view, ctx, onnavigate, filtering = $bindable(false) }: {
-    branches: Branch[]; view: View; ctx: ListContext; onnavigate?: () => void; filtering?: boolean;
+  let { branches, view, ctx, onnavigate, onsummon, filtering = $bindable(false) }: {
+    branches: Branch[]; view: View; ctx: ListContext; onnavigate?: () => void; onsummon?: () => void; filtering?: boolean;
   } = $props();
 
   // 22 px rows as in VS Code; touch and phone layouts get finger-sized rows
@@ -209,8 +209,11 @@
     if (!combo || app.overlayOpen) return;
     ev.preventDefault();
     if (!focusKey) focusKey = selectedKey;
-    scroller?.focus({ preventScroll: true });
-    reveal(focusKey);
+    onsummon?.(); // opens the pane (and the drawer on phones); focus once they render
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      scroller?.focus({ preventScroll: true });
+      reveal(focusKey);
+    }));
   }
 
   /* ── filter (VS Code find widget, filter mode) ───────── */

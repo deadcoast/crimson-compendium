@@ -79,14 +79,14 @@ def render(item, role, out_rel, force):
         return False
     im = fetch(item["from"])
     im.load()
+    if item.get("clip"):  # [x0, y0, x1, y1] fractions of the source — cut away title cards or HUD first
+        x0, y0, x1, y1 = item["clip"]
+        im = im.crop((round(x0 * im.width), round(y0 * im.height), round(x1 * im.width), round(y1 * im.height)))
     if item.get("matte"):
         im = matte(im)
     elif im.mode in ("RGBA", "LA", "P"):
         im = im.convert("RGBA"); bg = Image.new("RGBA", im.size, INK + (255,)); bg.alpha_composite(im); im = bg
     im = im.convert("RGB")
-    if item.get("clip"):  # [x0, y0, x1, y1] fractions — cut away title cards or HUD before the role crop
-        x0, y0, x1, y1 = item["clip"]
-        im = im.crop((round(x0 * im.width), round(y0 * im.height), round(x1 * im.width), round(y1 * im.height)))
     if role == "portrait":
         im = square(im, item.get("crop"))
     spec = SPEC[role]

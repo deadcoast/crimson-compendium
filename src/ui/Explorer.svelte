@@ -9,11 +9,14 @@
   import ExplorerTree from './ExplorerTree.svelte';
   import Outline from './Outline.svelte';
 
-  let { branches, view, ctx, entry, open = false, onnavigate }: {
-    branches: Branch[]; view: View; ctx: ListContext; entry: Entry | undefined; open?: boolean; onnavigate?: () => void;
+  let { branches, view, ctx, entry, open = false, onnavigate, onsummon }: {
+    branches: Branch[]; view: View; ctx: ListContext; entry: Entry | undefined; open?: boolean;
+    onnavigate?: () => void; onsummon?: () => void;
   } = $props();
 
   const panes = $state(load('cc.panes', { recent: true, tree: true, outline: true }));
+  // the focus shortcut must land on a visible tree: open the drawer (phones) and the Compendium pane
+  function summon() { panes.tree = true; onsummon?.(); }
   $effect(() => save('cc.panes', { ...panes }));
 
   let treeView: ReturnType<typeof ExplorerTree> | undefined = $state();
@@ -21,7 +24,12 @@
 
   const recent = $derived(
     app.recent
-      .map((id) => branches.map((b) => ({ b, e: b.byId.get(id) })).find((x) => x.e))
+      .map((key) => {
+        const [bid, eid] = key.includes('/') ? key.split('/') : [branches[0].id, key];
+        const b = branches.find((x) => x.id === bid);
+        const e = b?.byId.get(eid);
+        return b && e ? { b, e } : undefined;
+      })
       .filter((x): x is { b: Branch; e: Entry } => !!x)
       .slice(0, 5),
   );
@@ -71,7 +79,7 @@
         <button class="act" title="Reveal the open page" aria-label="Reveal active" onclick={() => treeView?.revealActive()}><Glyph name="target" size={13} /></button>
         <button class="act" title="Collapse folders" aria-label="Collapse folders" onclick={() => treeView?.collapseAll()}><Glyph name="collapse" size={13} /></button>
       {/snippet}
-      <ExplorerTree bind:this={treeView} bind:filtering {branches} {view} {ctx} {onnavigate} />
+      <ExplorerTree bind:this={treeView} bind:filtering {branches} {view} {ctx} {onnavigate} onsummon={summon} />
     </Pane>
 
     <Pane title="Outline" bind:open={panes.outline} max="22vh">

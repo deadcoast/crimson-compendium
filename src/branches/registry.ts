@@ -48,20 +48,25 @@ function define(def: BranchDef, entries: Entry[], sections: PlateSection[] = [])
     byId.set(e.id, e);
   }
 
+  // every route name the branch answers to, so any two that collide fail here rather than resolve to the wrong page
+  const routes = new Set([...reserved, ...byId.keys()]);
+  const claim = (route: string, what: string) => {
+    if (routes.has(route)) fail(route, `${what} route collides with another route`);
+    routes.add(route);
+  };
+  for (const l of def.lenses) claim(`for-${l.id}`, 'lens');
+
   const resolved = categories(def, entries);
   for (const c of resolved) {
     if (!c.entries.length) fail(c.id, 'category matches no entries');
-    const seen = new Set<string>();
     for (const l of c.leaves) {
       const route = `${c.id}-${l.id}`;
-      if (!ID.test(l.id) || seen.has(l.id)) fail(route, 'bad or duplicate category leaf id');
-      if (byId.has(route) || reserved.has(route)) fail(route, 'category leaf route collides with an entry or leaf');
+      if (!ID.test(l.id)) fail(route, 'category leaf ids are lowercase ASCII and hyphens');
       if (!l.entries.length) fail(route, 'category leaf matches no entries');
-      seen.add(l.id);
+      claim(route, 'category leaf');
     }
   }
 
-  const routes = new Set([...reserved, ...byId.keys(), ...def.lenses.map((l) => `for-${l.id}`)]);
   for (const [from, to] of Object.entries(def.redirects ?? {})) {
     if (routes.has(from)) fail(from, 'redirect shadows a live route');
     if (!routes.has(to)) fail(from, `redirect target "${to}" does not exist`);
