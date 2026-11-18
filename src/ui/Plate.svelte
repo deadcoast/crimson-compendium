@@ -136,10 +136,10 @@
     margin: -30px var(--gutter) 0;
     max-width: 64ch;
     padding: 4px 0 4px 18px;
-    border-left: 1px solid var(--brass);
+    border-left: 1px solid var(--cyan);
     animation: fade-up 800ms var(--ease-out) both 560ms;
   }
-  .egg .eyebrow { display: flex; align-items: center; gap: 7px; font-size: 10px; color: var(--brass); }
+  .egg .eyebrow { display: flex; align-items: center; gap: 7px; font-size: 10px; color: var(--cyan); }
   .egg-note { margin-top: 6px; font-family: var(--f-display); font-style: italic; font-size: 17px; line-height: 1.5; color: var(--bone-2); }
   .body > :global(.seals) { margin-top: -24px; }
 

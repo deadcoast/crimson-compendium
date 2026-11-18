@@ -44,7 +44,7 @@
   {
    "id": "legendary",
    "label": "Legendary",
-   "accent": "crimson",
+   "accent": "ember",
    "blurb": "One of a kind: the three legendary horses, the sigil beasts, Blackstar, and the legends of the deep.",
    "cover": {
     "entry": "snowwhite-deer",
@@ -55,7 +55,7 @@
   {
    "id": "rare",
    "label": "Rare",
-   "accent": "ember",
+   "accent": "royal",
    "blurb": "Never sold at a stable — stolen, subdued, hatched or raised, then taken in for good.",
    "cover": {
     "entry": "tiger",
@@ -239,7 +239,7 @@
    "id": "easter-eggs",
    "label": "Easter Eggs",
    "glyph": "egg",
-   "accent": "ember",
+   "accent": "cyan",
    "blurb": "Mounts that wink at other games, and rides the game never tells you about.",
    "where": {
     "tags": [
@@ -251,7 +251,7 @@
     {
      "id": "nods",
      "label": "Nods",
-     "accent": "brass",
+     "accent": "cyan",
      "short": "Mounts that reference other games.",
      "where": {
       "tags": [
@@ -262,7 +262,7 @@
     {
      "id": "oddities",
      "label": "Oddities",
-     "accent": "ash",
+     "accent": "cyan",
      "short": "Strange rides hidden in plain sight.",
      "where": {
       "tags": [

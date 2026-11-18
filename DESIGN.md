@@ -20,7 +20,7 @@ Three columns on desktop: **Explorer** (the tree) · **Index** (the leaf, catego
 
 ## Visual language
 
-- **Palette**: warm ink blacks, bone text, one signal colour (crimson). Leaves carry an accent (Legendary crimson, Rare ember, Stable bone, Engineered brass, Fleeting ash); terrain classes take their colours from the in-game map (ochre land, map-water teal, pale sky). All tokens live in `src/styles/tokens.css`.
+- **Palette**: warm ink blacks, bone text, one signal colour (crimson). Red is reserved for the root (brand, the Mounts branch, Tier I, Ride for, the ladder). Leaves carry a traditional tier accent: Legendary orange (`--ember`), Rare royal blue (`--royal`), Stable bone, Engineered brass, Fleeting ash; Easter Eggs and its leaves are cyan (`--cyan`), as specified in `docs/treefold/tier-colors.txt`. Terrain classes take their colours from the in-game map (ochre land, map-water teal, pale sky). All tokens live in `src/styles/tokens.css`.
 - **Type**: Bodoni Moda for names, numerals and section titles; Archivo (variable width) for UI, condensed and tracked for eyebrow labels; JetBrains Mono for counts and credits. Large Bodoni numerals use a low optical size (`opsz 8`) so the hairline in the 4 stays visible.
 - **Imagery**: only real in-game captures and in-game knowledge-entry art, each credited to the guide that took it. Portraits are square and shown round everywhere (index, ladder, search) so mixed sources read as one set.
 - **Edges**: a column's background ends at its border line; nothing spills past a frame.
