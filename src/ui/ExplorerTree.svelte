@@ -51,6 +51,8 @@
   const guideRows = $derived(guideNode ? [at.get(guideNode.key) ?? -1, rows[at.get(guideNode.key) ?? -1]?.last ?? -1] : [-1, -1]);
 
   let scroller: HTMLElement | undefined = $state();
+  let rowsEl: HTMLElement | undefined = $state();
+  const FIND_H = 32; // keep in step with .filtering .scroller padding-top
   let scrollTop = $state(0);
   let viewH = $state(400);
   const pinned = $derived(filtering ? [] : stickyRows(rows, at, scrollTop, ROW));
@@ -75,8 +77,9 @@
   function reveal(key: string, mode: 'nearest' | 'center' = 'nearest') {
     const i = at.get(key);
     if (i === undefined || !scroller) return;
-    const stack = Math.min(3, nodes.get(key)?.depth ?? 0) * ROW;
-    const top = i * ROW, view = scroller.clientHeight;
+    // what covers the top of the viewport: the find widget while filtering, else the pinned ancestors
+    const stack = filtering ? FIND_H : Math.min(3, nodes.get(key)?.depth ?? 0) * ROW;
+    const top = (rowsEl?.offsetTop ?? 0) + i * ROW, view = scroller.clientHeight;
     const cur = scroller.scrollTop;
     let next = cur;
     if (mode === 'center') next = top - view / 2 + ROW / 2;
@@ -305,7 +308,7 @@
       {/each}
     </div>
 
-    <div class="rows" style:height="{rows.length * ROW}px">
+    <div class="rows" bind:this={rowsEl} style:height="{rows.length * ROW}px">
       <span class="slab" class:on={selIndex >= 0} data-accent={selAccent} style:transform="translateY({selIndex * ROW}px)" aria-hidden="true"></span>
       <span class="focusbox" class:on={focused && focusIndex >= 0} style:transform="translateY({focusIndex * ROW}px)" aria-hidden="true"></span>
 
