@@ -109,4 +109,4 @@ Left out for lack of reliable data or real imagery:
 ## Build and release
 
 - **One classic script.** The build is a single deferred IIFE bundle with its CSS inlined, not an ES module. Module scripts are blocked on `file://`, so this lets `dist/index.html` open straight from disk as well as from any static host or sub-path (`base: './'`).
-- **Releases.** Publishing a GitHub release runs `.github/workflows/release.yml`, which type-checks, builds and attaches `crimson-compendium-<tag>.zip`. CI (`ci.yml`) runs the same check and build on every push to `main` and on pull requests. Versions follow SemVer and are logged in `CHANGELOG.md`.
+- **Releases.** One action ships a release: run the **Release** workflow (Actions → Release → Run workflow, tag `vX.Y.Z`) or push a `v*` tag. It checks that the tag matches `package.json`, type-checks, builds, zips the site as `crimson-compendium-<tag>.zip`, and creates the GitHub release with notes from `docs/releases/<tag>.md` (falling back to that version's `CHANGELOG.md` section). CI (`ci.yml`) runs the same check and build on every push to `main` and on pull requests. Versions follow SemVer.
