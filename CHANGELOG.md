@@ -12,7 +12,10 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
   - the phone drawer;
   - accessibility (axe-core);
   - whether the site is self-contained.
-- `npm run lint`: content rules for every branch. Each rating needs a basis, each image a credit and caption, each source a URL; every image file must exist, and there may be no orphaned media.
+- `npm run lint`: content rules for every branch.
+  - Each rating needs a basis, each image a credit, each capture a caption, and each source a valid https URL.
+  - Every cover must resolve to an image, and every image file must exist.
+  - Nothing under `public/media` may be orphaned.
 
 ### Changed
 - **Fonts are self-hosted.** Bodoni Moda, Archivo and JetBrains Mono (Latin, variable) ship with the site, so the release zip renders as designed offline and from disk. The app no longer contacts a font CDN.

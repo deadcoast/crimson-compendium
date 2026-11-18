@@ -104,8 +104,8 @@
   />
   {#if menu}<button class="spine-scrim" aria-label="Close tree" onclick={() => (menu = false)}></button>{/if}
 
-  <!-- the reading area is the page's main landmark; display: contents keeps the index and plate
-       placed directly in the app grid -->
+  <!-- the reading area is the page's main landmark: a real grid item (not display: contents, which
+       some browser and screen-reader pairs drop from the accessibility tree) holding index and plate -->
   <main class="main">
     {#if view.kind === 'ladder'}
       <Ladder {branch} />
@@ -129,8 +129,17 @@
     grid-template-rows: minmax(0, 1fr);
     grid-template-areas: 'spine index plate';
   }
-  .main { display: contents; }
-  .main > :global(.ladder) { grid-column: 2 / -1; grid-row: 1; }
+  .main {
+    grid-column: 2 / -1;
+    grid-row: 1;
+    min-width: 0;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: var(--index-w) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+    grid-template-areas: 'index plate';
+  }
+  .main > :global(.ladder) { grid-column: 1 / -1; grid-row: 1; }
   .topbar, .spine-scrim { display: none; }
 
   @media (max-width: 1240px) {
@@ -143,7 +152,8 @@
       grid-template-rows: 56px minmax(0, 1fr);
       grid-template-areas: 'top' 'main';
     }
-    .main > :global(.index), .main > :global(.plate), .main > :global(.ladder) { grid-area: main; grid-column: auto; grid-row: auto; }
+    .main { grid-area: main; grid-template-columns: minmax(0, 1fr); grid-template-areas: 'main'; }
+    .app .main > :global(.index), .app .main > :global(.plate), .app .main > :global(.ladder) { grid-area: main; }
     .app[data-pane='list'] .main > :global(.plate) { display: none; }
     .app[data-pane='plate'] .main > :global(.index) { display: none; }
 

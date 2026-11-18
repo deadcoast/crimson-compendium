@@ -93,7 +93,14 @@ const branches = readdirSync(join(ROOT, 'src/branches'))
 const server = await preview({ root: ROOT, appType: 'mpa', logLevel: 'silent', preview: { port: 4317, strictPort: false, open: false } });
 const base = server.resolvedUrls.local[0].replace(/\/$/, '');
 const origin = new URL(base).origin;
-const browser = await chromium.launch(process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : {});
+let browser;
+try {
+  browser = await chromium.launch(process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : {});
+} catch (e) {
+  console.log(`\n ${red('no browser to verify with.')} Run ${bold('npx playwright install chromium')} once, or set CHROME_PATH to a Chrome binary.\n ${dim(String(e.message ?? e).split('\n')[0])}\n`);
+  await new Promise((r) => server.httpServer.close(r));
+  process.exit(1);
+}
 const external = [];
 const errors = [];
 
@@ -102,7 +109,9 @@ async function open(viewport) {
   // the site must not reach off its own origin: anything else is recorded and refused
   await ctx.route('**/*', (r) => {
     const u = r.request().url();
-    if (u.startsWith(origin) || u.startsWith('data:')) return r.continue();
+    let own = u.startsWith('data:');
+    try { own ||= new URL(u).origin === origin; } catch {}
+    if (own) return r.continue();
     external.push(u);
     return r.abort();
   });
@@ -136,6 +145,7 @@ try {
           Promise.all([...document.querySelectorAll('.plate img')].map((i) => fetch(i.getAttribute('src'))
             .then((r) => [i.getAttribute('src'), r.ok && (r.headers.get('content-type') ?? '').startsWith('image/') ? 'ok' : `${r.status} ${r.headers.get('content-type')}`]))));
         images += codes.length;
+        if (!codes.length) problems.push(`${e.id}: plate shows no images`);
         for (const [src, got] of codes) if (got !== 'ok') problems.push(`${e.id}: ${src} → ${got}`);
         const sel = await text(pg, '[role=tree] [aria-selected=true]');
         if (!sel?.includes(e.name)) problems.push(`${e.id}: explorer selects "${sel}"`);
@@ -153,9 +163,9 @@ try {
         if (items !== n) problems.push(`${route}: ${items} rows, want ${n}`);
         // the cover decodes after the title lands, so wait for it rather than sampling once
         const cover = await pg
-          .waitForFunction(() => { const i = document.querySelector('.index .cover img'); return !i || (i.complete && i.naturalWidth > 0); }, null, { timeout: 6000 })
+          .waitForFunction(() => { const i = document.querySelector('.index .cover img'); return !!i && i.complete && i.naturalWidth > 0; }, null, { timeout: 6000 })
           .then(() => true, () => false);
-        if (!cover) problems.push(`${route}: cover image did not load (${await pg.evaluate(() => document.querySelector('.index .cover img')?.getAttribute('src'))})`);
+        if (!cover) problems.push(`${route}: cover image missing or did not load (${await pg.evaluate(() => document.querySelector('.index .cover img')?.getAttribute('src') ?? 'no <img>')})`);
         const sel = await text(pg, '[role=tree] [aria-selected=true]');
         if (!sel?.startsWith(title)) problems.push(`${route}: explorer selects "${sel}"`);
       }
@@ -183,12 +193,21 @@ try {
     const b = branches[0];
     const problems = [];
     const expect = (cond, msg) => { if (!cond) problems.push(msg); };
+    // J and K step through the open list and keep its context (the title stays the list's)
     const firstCat = b.def.categories[0];
     await go(pg, `${b.id}-${firstCat.id}`);
     await waitText(pg, '.index .title', firstCat.label);
+    const plateName = () => pg.evaluate(() => document.querySelector('.hero h2')?.getAttribute('aria-label'));
+    const n0 = await plateName();
     await pg.keyboard.press('j');
-    await pg.waitForTimeout(300);
+    await pg.waitForFunction((n) => document.querySelector('.hero h2')?.getAttribute('aria-label') !== n, n0, { timeout: 3000 }).catch(() => {});
+    const n1 = await plateName();
+    expect(n1 && n1 !== n0, `J does not step to the next mount (still "${n0}")`);
     expect((await text(pg, '.index .title')) === firstCat.label, `J left the ${firstCat.label} list`);
+    await pg.keyboard.press('k');
+    await pg.waitForFunction((n) => document.querySelector('.hero h2')?.getAttribute('aria-label') === n, n0, { timeout: 3000 }).catch(() => {});
+    expect((await plateName()) === n0, `K does not step back to "${n0}"`);
+    expect((await text(pg, '.index .title')) === firstCat.label, `K left the ${firstCat.label} list`);
 
     const leaf = b.def.leaves[0];
     await go(pg, `${b.id}-${leaf.id}`);
@@ -281,7 +300,18 @@ try {
     for (const [hash, vp] of views) {
       const a = await open(vp);
       await a.goto(`${base}/#${hash}`, { waitUntil: 'networkidle' });
-      await a.waitForTimeout(2200); // let reveal animations settle so contrast reads final colours
+      await a.waitForTimeout(1500);
+      // sections reveal as they scroll into view (opacity 0 until then, which axe skips), so scroll
+      // every pane through to the end and let the reveals finish before auditing
+      await a.evaluate(async () => {
+        const panes = [...document.querySelectorAll('.plate, .ladder, .index .scroll')].filter((p) => p.scrollHeight > p.clientHeight);
+        for (const p of panes) {
+          for (let y = 0; y <= p.scrollHeight; y += p.clientHeight * 0.7) { p.scrollTop = y; await new Promise((r) => setTimeout(r, 140)); }
+        }
+      });
+      await a.waitForTimeout(1200);
+      const hidden = await a.evaluate(() => [...document.querySelectorAll('.reveal')].filter((n) => getComputedStyle(n).opacity === '0' && n.getClientRects().length).length);
+      if (hidden) problems.push(`${hash} @${vp.width}: ${hidden} section(s) never revealed, so axe could not read them`);
       await a.addScriptTag({ content: AXE });
       const v = await a.evaluate(async () => (await window.axe.run(document, { resultTypes: ['violations'] })).violations
         .map((x) => ({ id: x.id, impact: x.impact, n: x.nodes.length, at: x.nodes[0]?.target.join(' ') })));

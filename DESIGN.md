@@ -109,16 +109,16 @@ Left out for lack of reliable data or real imagery:
 ## Build and release
 
 - **Self-contained.** Fonts ship with the site: Latin variable subsets of Bodoni Moda (opsz, wght, roman and italic), Archivo (wdth, wght) and JetBrains Mono, all OFL, through Fontsource. They load relative to the bundle, so the release renders the same offline and from `file://`, and the app makes no request off its own origin. Only the axes and styles the UI uses are shipped (230 kB).
-- **Landmarks.** The explorer is a `nav`. The index and plate (or the ladder) sit in `main`, which uses `display: contents` so they stay placed in the app grid.
+- **Landmarks.** The explorer is a `nav`. The index and plate (or the ladder) sit in `main`, which is a real grid item with its own `index plate` columns. It doesn't use `display: contents`, which some browser and screen-reader pairs drop from the accessibility tree.
 - **One classic script.** The build is a single deferred IIFE bundle with its CSS inlined, not an ES module. Module scripts are blocked on `file://`, so this lets `dist/index.html` open straight from disk as well as from any static host or sub-path (`base: './'`).
 - **Releases.** One action ships a release: run the **Release** workflow (Actions → Release → Run workflow; leave the tag blank to release the `package.json` version) or push a `v*` tag. A typed tag is cleaned first (spaces and trailing dots dropped, a missing `v` added). The job checks the tag against `package.json`, type-checks, builds, zips the site as `crimson-compendium-<tag>.zip`, and creates the GitHub release with notes from `docs/releases/<tag>.md` (falling back to that version's `CHANGELOG.md` section). CI (`ci.yml`) runs the same type check and `npm run verify` on every push to `main` and on pull requests. Versions follow SemVer.
 - **Verification.** `npm run verify` builds the site, serves it with missing files returning 404, and checks it in headless Chromium. It exits non-zero on any failure, and its expectations come from the data, not from fixed numbers. The checks:
   - data lint (`tools/lint.mjs`);
-  - every entry plate (title, every image served as an image, the explorer row it selects);
-  - every leaf, category, category leaf and lens (title, member count, cover, explorer row), redirects and the ladder;
-  - explorer keys, type navigation, filter, recent and outline, plus J/K keeping the list context;
+  - every entry plate (title, at least one image, every image served as an image, the explorer row it selects);
+  - every leaf, category, category leaf and lens (title, member count, a cover that loads, explorer row), redirects and the ladder;
+  - explorer keys, type navigation, filter, recent and outline, plus J/K stepping while keeping the list context;
   - the phone drawer;
-  - axe-core on four views, where serious and critical findings fail;
+  - axe-core on four views, where serious and critical findings fail. Every pane is scrolled through first so all sections have revealed, since sections at opacity 0 are invisible to axe;
   - that no request leaves the site's origin, and that `file://` with the network cut loads all four font faces.
   In CI it drives the runner's own Google Chrome (`CHROME_PATH`), because Playwright's bundled browser didn't yet support the Ubuntu 26.04 runner image when M1 shipped. It installs Playwright's Chromium only when the image has no Chrome.
   Hash routes trip axe's `skip-link` rule because they look like same-page anchors. That one is accepted (IDENTIFIED QOL-03).
