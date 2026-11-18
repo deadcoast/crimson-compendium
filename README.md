@@ -113,7 +113,15 @@ src/
   styles/            tokens.css (every colour, font, easing) + base.css
 public/media/        generated WebP files
 tools/media.py       image pipeline
+docs/
+  spec/              treefold specs (tier-colors.txt)
+  archived/          original treefold prompts
+  releases/          release notes, one per tag
+  screenshots/       README images
+history/             archived source and release zips
 ```
+
+The built site is not committed: `npm run build` writes it to `dist/`, and each GitHub release attaches it as a zip.
 
 ## Extend it
 

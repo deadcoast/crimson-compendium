@@ -21,7 +21,7 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
 - GitHub packaging: this changelog, a README with screenshots, CI (type check + build), and a one-click Release workflow that builds the site and publishes the release with its zip.
 
 ### Changed
-- **Tier colours.** Red is now reserved for the root. Legendary is orange, Rare is royal blue and Easter Eggs is cyan, following the traditional loot-tier scheme; category leaves inherit. Spec: `docs/treefold/tier-colors.txt`.
+- **Tier colours.** Red is now reserved for the root. Legendary is orange, Rare is royal blue and Easter Eggs is cyan, following the traditional loot-tier scheme; category leaves inherit. Spec: `docs/spec/tier-colors.txt`.
 - **Long haul → All Around Best.** Same members, now ranked on all four ratings together.
 - **Deep water → Underwater** and **Flight → Flying** moved from Ride-for lenses to category branches. Old links redirect.
 - The build ships as a single classic script, so `index.html` opens straight from disk with no server.
