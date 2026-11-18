@@ -105,3 +105,8 @@ Left out for lack of reliable data or real imagery:
 - **Scout Automation** and **Golden Star Mech**: reported by one outlet (Destructoid, March 2026), absent from Game8's and Fextralife's mount lists, and Destructoid's own Golden Star unlock never appeared. No game imagery found. Add when a second source confirms them.
 - **Delesyia Train** and **cows/bulls**: confirmed by Game8, but no hostable in-game capture found. Both belong in Mechanical/Easter Eggs and Fleeting once imagery exists.
 - Soldier and race horses (temporary). Several common sea mounts have no documented fixed spawn; their plates say so.
+
+## Build and release
+
+- **One classic script.** The build is a single deferred IIFE bundle with its CSS inlined, not an ES module. Module scripts are blocked on `file://`, so this lets `dist/index.html` open straight from disk as well as from any static host or sub-path (`base: './'`).
+- **Releases.** Publishing a GitHub release runs `.github/workflows/release.yml`, which type-checks, builds and attaches `crimson-compendium-<tag>.zip`. CI (`ci.yml`) runs the same check and build on every push to `main` and on pull requests. Versions follow SemVer and are logged in `CHANGELOG.md`.
