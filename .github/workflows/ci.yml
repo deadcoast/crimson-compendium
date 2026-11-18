@@ -16,7 +16,12 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run check
-      - run: npx playwright install --with-deps chromium
+      # verify drives the runner's own Google Chrome when the image has one (Playwright's
+      # bundled browser lags new runner OS releases), else installs Playwright's Chromium
+      - name: Browser for verify
+        run: |
+          if [ -x /usr/bin/google-chrome ]; then echo "CHROME_PATH=/usr/bin/google-chrome" >> "$GITHUB_ENV"; google-chrome --version
+          else npx playwright install --with-deps chromium; fi
       # builds, then checks the built site headless: data lint, every route, explorer, phone,
       # accessibility, self-contained (tools/verify.mjs)
       - run: npm run verify

@@ -120,4 +120,5 @@ Left out for lack of reliable data or real imagery:
   - the phone drawer;
   - axe-core on four views, where serious and critical findings fail;
   - that no request leaves the site's origin, and that `file://` with the network cut loads all four font faces.
+  In CI it drives the runner's own Google Chrome (`CHROME_PATH`), because Playwright's bundled browser didn't yet support the Ubuntu 26.04 runner image when M1 shipped. It installs Playwright's Chromium only when the image has no Chrome.
   Hash routes trip axe's `skip-link` rule because they look like same-page anchors. That one is accepted (IDENTIFIED QOL-03).
