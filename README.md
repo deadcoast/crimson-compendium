@@ -115,7 +115,7 @@ public/media/        generated WebP files
 tools/media.py       image pipeline
 docs/
   spec/              treefold specs (tier-colors.txt)
-  archived/          original treefold prompts
+  .archived/         original treefold prompts
   releases/          release notes, one per tag
   screenshots/       README images
 history/             archived source and release zips
