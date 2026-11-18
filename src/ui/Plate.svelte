@@ -48,6 +48,12 @@
   <div class="body">
     {#key entry.id}
       <p class="lead">{entry.summary}</p>
+      {#if entry.egg}
+        <aside class="egg" data-outline="Easter egg">
+          <p class="eyebrow"><Glyph name="egg" size={13} /> Easter egg</p>
+          <p class="egg-note">{entry.egg}</p>
+        </aside>
+      {/if}
     {/key}
 
     <Seals {branch} {entry} />
@@ -62,7 +68,7 @@
     {/each}
 
     {#if entry.media.gallery.length}
-      <section class="gallery" use:reveal>
+      <section class="gallery" data-outline="Stills" use:reveal>
         <p class="eyebrow">More stills</p>
         <ul>
           {#each entry.media.gallery as g, i}
@@ -77,7 +83,7 @@
       </section>
     {/if}
 
-    <section class="sources" use:reveal>
+    <section class="sources" data-outline="Sources" use:reveal>
       <p class="eyebrow">Sources</p>
       <ul>
         {#each entry.sources as s}
@@ -125,6 +131,16 @@
     font-weight: 600;
   }
   @keyframes fade-up { from { opacity: 0; transform: translateY(14px); } }
+
+  .egg {
+    margin: -30px var(--gutter) 0;
+    max-width: 64ch;
+    padding: 4px 0 4px 18px;
+    border-left: 1px solid var(--cyan);
+    animation: fade-up 800ms var(--ease-out) both 560ms;
+  }
+  .egg .eyebrow { display: flex; align-items: center; gap: 7px; font-size: 10px; color: var(--cyan); }
+  .egg-note { margin-top: 6px; font-family: var(--f-display); font-style: italic; font-size: 17px; line-height: 1.5; color: var(--bone-2); }
   .body > :global(.seals) { margin-top: -24px; }
 
   .pair { display: grid; grid-template-columns: minmax(0, 1fr); gap: 60px; }
@@ -136,11 +152,12 @@
   .gallery, .sources { padding: 0 var(--gutter); }
   .gallery .eyebrow, .sources .eyebrow { font-size: 10px; margin-bottom: 12px; }
   .gallery ul { display: flex; gap: 12px; flex-wrap: wrap; }
-  .gallery button { position: relative; display: block; width: 240px; border: 1px solid var(--line-2); overflow: hidden; text-align: left; }
+  .gallery li { display: flex; }
+  .gallery button { position: relative; display: flex; flex-direction: column; width: 240px; border: 1px solid var(--line-2); overflow: hidden; text-align: left; }
   .gallery img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; transition: transform 700ms var(--ease-out); }
   .gallery img.whole { object-fit: contain; padding: 10px; background: radial-gradient(closest-side, var(--ink-3), var(--ink-1)); }
   .gallery button:hover img { transform: scale(1.06); }
-  .gallery span { display: block; padding: 8px 10px; font-size: 12.5px; color: var(--bone-2); background: var(--ink-1); }
+  .gallery span { flex: 1; display: block; padding: 8px 10px; font-size: 12.5px; color: var(--bone-2); background: var(--ink-1); }
 
   .sources { padding-top: 26px; border-top: 1px solid var(--line); margin: 0 var(--gutter); padding-left: 0; padding-right: 0; }
   .sources ul { display: grid; gap: 2px; }

@@ -2,7 +2,7 @@
   import { app } from './core/state.svelte';
   import { resolve, tree, entriesFor, href } from './core/tree';
   import type { ListContext } from './core/types';
-  import Spine from './ui/Spine.svelte';
+  import Explorer from './ui/Explorer.svelte';
   import LeafIndex from './ui/LeafIndex.svelte';
   import Plate from './ui/Plate.svelte';
   import Ladder from './ui/Ladder.svelte';
@@ -14,10 +14,11 @@
   const view = $derived(resolve(app.hash));
   const branch = $derived(view.branch);
 
-  // The index keeps listing whatever context led to an entry (a leaf or a "ride for" lens).
+  // The index keeps listing whatever context led to an entry (a leaf, a category branch or a "ride for" lens).
   const ctx: ListContext = $derived.by(() => {
     if (view.kind === 'leaf') return { kind: 'leaf', id: view.leaf.id };
     if (view.kind === 'lens') return { kind: 'lens', id: view.lens.id };
+    if (view.kind === 'cat') return { kind: 'cat', id: view.cat.id, leaf: view.leaf?.id };
     const keep = app.ctx;
     if (view.kind === 'entry') {
       if (keep.id && entriesFor(branch, keep).some((e) => e.id === view.entry.id)) return keep;
@@ -25,10 +26,14 @@
     }
     return keep.id ? keep : { kind: 'leaf', id: branch.leaves[0].id };
   });
+  const ctxKey = (c: ListContext) => `${c.kind}:${c.id}:${c.kind === 'cat' ? (c.leaf ?? '') : ''}`;
   $effect(() => {
     const c = ctx;
-    if (c.kind !== app.ctx.kind || c.id !== app.ctx.id) { app.ctx = c; app.cls = ''; }
+    if (ctxKey(c) !== ctxKey(app.ctx)) { app.ctx = c; app.cls = ''; }
   });
+  $effect(() => { if (view.kind === 'entry') app.visit(branch.id, view.entry.id); });
+  // an entry opened from anywhere (explorer, palette, Recent) is never hidden by the terrain filter
+  $effect(() => { if (view.kind === 'entry' && app.cls && view.entry.cls !== app.cls) app.cls = ''; });
 
   const list = $derived.by(() => {
     const l = entriesFor(branch, ctx);
@@ -88,7 +93,15 @@
     <button class="icon" onclick={() => (app.palette = true)} aria-label="Search"><Glyph name="search" size={19} /></button>
   </header>
 
-  <Spine branches={tree.branches} {view} open={menu} onnavigate={() => (menu = false)} />
+  <Explorer
+    branches={tree.branches}
+    {view}
+    {ctx}
+    {entry}
+    open={menu}
+    onnavigate={() => (menu = false)}
+    onsummon={() => { if (matchMedia('(max-width: 860px)').matches) menu = true; }}
+  />
   {#if menu}<button class="spine-scrim" aria-label="Close tree" onclick={() => (menu = false)}></button>{/if}
 
   {#if view.kind === 'ladder'}

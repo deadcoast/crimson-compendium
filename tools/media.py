@@ -13,10 +13,11 @@ Roles
     portrait   square, 480 px. Optional "crop": [cx, cy, size] as fractions of the
                source (centre x, centre y, side relative to the short edge).
                Optional "matte": true composites a transparent in-game icon onto ink.
+    any role   optional "clip": [x0, y0, x1, y1] as fractions, applied first.
     hero       wide, max 1920 px.
     capture    location reference (map / on-site), max 1600 px; maps keep detail.
     gallery    extra stills, max 1280 px; "matte" supported.
-    cover      leaf cover band, max 1600 px.
+    cover      leaf or category cover band, max 1600 px.
 """
 import hashlib, json, os, subprocess, sys
 from io import BytesIO
@@ -78,6 +79,9 @@ def render(item, role, out_rel, force):
         return False
     im = fetch(item["from"])
     im.load()
+    if item.get("clip"):  # [x0, y0, x1, y1] fractions of the source — cut away title cards or HUD first
+        x0, y0, x1, y1 = item["clip"]
+        im = im.crop((round(x0 * im.width), round(y0 * im.height), round(x1 * im.width), round(y1 * im.height)))
     if item.get("matte"):
         im = matte(im)
     elif im.mode in ("RGBA", "LA", "P"):
@@ -114,6 +118,9 @@ def process_branch(branch_dir, force):
         for leaf in branch["leaves"]:
             cov = leaf.get("cover", {})
             if cov.get("from"): made += render(cov, "cover", f"media/{bid}/_leaves/{leaf['id']}.webp", force)
+        for cat in branch.get("categories", []):
+            cov = cat.get("cover", {})
+            if cov.get("from"): made += render(cov, "cover", f"media/{bid}/_categories/{cat['id']}.webp", force)
         json.dump(branch, open(branch_path, "w"), ensure_ascii=False, indent=1)
     return made
 

@@ -12,7 +12,7 @@
   const activeTier = $derived(active ? entry.tiers[active.id] : undefined);
 </script>
 
-<section class="seals" aria-label="Tier ratings">
+<section class="seals" data-outline="Ratings" aria-label="Tier ratings">
   <div class="row">
     {#key entry.id}
       {#each branch.metrics as m, si (m.id)}
@@ -134,7 +134,7 @@
   .hint button:hover { color: var(--bone); }
   @keyframes up { from { opacity: 0; transform: translateY(6px); } }
 
-  @media (max-width: 720px) {
+  @container (max-width: 640px) {
     .row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .seal:nth-child(3) { padding-left: 0; border-left: 0; }
     .seal:nth-child(n + 3) { border-top: 1px solid var(--line); }
