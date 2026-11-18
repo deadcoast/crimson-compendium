@@ -1,20 +1,16 @@
-# TODO: M1 Ground truth
+# TODO: M2 Where, for every mount
 
 ```
 [IDENTIFIED + PLAN] -> [SHELVED] -> [TODO]
 ```
 
-Items are from `SHELVED.md` › M1 `[todo]`; the details are in `IDENTIFIED.md`.
+Items are from `SHELVED.md` › M2 `[todo]`; the details are in `IDENTIFIED.md`. M1 Ground truth is delivered, so `npm run verify` gates this work.
 
-- [ ] TECH-01: `npm run verify`, with the sweep ported into the repo; axe reports but doesn't fail yet
-- [ ] SC-02: pip rating labels moved out of `<dd aria-label>`
-- [ ] SC-03: `<main>` and `<nav>` landmarks
-- [ ] SC-04: contrast tokens, after which the axe gate turns on
-- [ ] CORE-02: data lint inside `npm run verify`
-- [ ] TECH-02: self-hosted fonts that load from `file://`
+- [ ] NF-01: map captures for the 23 entries without one
+- [ ] NF-02: heroes for the 36 entries without one
 
-**Done when:** `npm run verify` and CI are green, the M1 decisions are written into `DESIGN.md`, and M1 is marked delivered in `PLAN.md`.
+**Done when:** `npm run verify` and CI are green, the M2 decisions are written into `DESIGN.md`, and M2 is marked delivered in `PLAN.md`.
 
 ## Next
 
-`SHELVED.md`: when this list is complete, M2 moves in.
+`SHELVED.md`: when this list is complete, M3 moves in.

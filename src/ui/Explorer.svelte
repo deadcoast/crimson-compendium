@@ -155,7 +155,7 @@
   .pt img { width: 100%; height: 100%; object-fit: cover; }
   .nm { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .lf { font-family: var(--f-display); font-style: italic; font-size: 11.5px; color: var(--ash); }
-  .hint { padding: 6px 14px 10px 28px; font-size: 12px; color: var(--ash-2); }
+  .hint { padding: 6px 14px 10px 28px; font-size: 12px; color: var(--ash); }
 
   /* ── footer ──────────────────────── */
   footer { flex: none; display: flex; flex-direction: column; gap: 6px; padding: 10px 14px 12px; border-top: 1px solid var(--line); }

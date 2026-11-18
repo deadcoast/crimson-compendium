@@ -20,8 +20,8 @@ A milestone is delivered when its TODO is complete, `npm run verify` and CI are 
 | # | Milestone | Theme | Status |
 |---|---|---|---|
 | M0 | Mounts branch (v0.1) and Explorer & category branches (v0.2.0) | the first branch | delivered |
-| M1 | Ground truth | a regression gate in the repo; the offline release renders as designed; accessible to keyboard and screen readers | in progress → `SHELVED.md` › M1 |
-| M2 | Where, for every mount | map and on-site captures and full-bleed heroes for the whole roster | shelved → `SHELVED.md` › M2 |
+| M1 | Ground truth | a regression gate in the repo; the offline release renders as designed; accessible to keyboard and screen readers | delivered: `npm run verify` in CI and Release; see `DESIGN.md` › Build and release |
+| M2 | Where, for every mount | map and on-site captures and full-bleed heroes for the whole roster | in progress → `SHELVED.md` › M2 |
 | M3 | Ratings on evidence | no rating defaults to III for lack of data | shelved → `SHELVED.md` › M3 |
 | M4 | Full roster | the known gaps added once sources and imagery exist | shelved → `SHELVED.md` › M4 |
 | M5 | Compare and navigate *(proposal)* | compare mounts side by side, section links, keyboard sheet, explorer split | shelved → `SHELVED.md` › M5 |

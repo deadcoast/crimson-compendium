@@ -104,12 +104,16 @@
   />
   {#if menu}<button class="spine-scrim" aria-label="Close tree" onclick={() => (menu = false)}></button>{/if}
 
-  {#if view.kind === 'ladder'}
-    <Ladder {branch} />
-  {:else if entry}
-    <LeafIndex {branch} {ctx} selectedId={entry.id} />
-    <Plate {branch} {entry} {ctx} />
-  {/if}
+  <!-- the reading area is the page's main landmark; display: contents keeps the index and plate
+       placed directly in the app grid -->
+  <main class="main">
+    {#if view.kind === 'ladder'}
+      <Ladder {branch} />
+    {:else if entry}
+      <LeafIndex {branch} {ctx} selectedId={entry.id} />
+      <Plate {branch} {entry} {ctx} />
+    {/if}
+  </main>
 
   <Palette />
   <Sheet />
@@ -125,7 +129,8 @@
     grid-template-rows: minmax(0, 1fr);
     grid-template-areas: 'spine index plate';
   }
-  .app > :global(.ladder) { grid-column: 2 / -1; grid-row: 1; }
+  .main { display: contents; }
+  .main > :global(.ladder) { grid-column: 2 / -1; grid-row: 1; }
   .topbar, .spine-scrim { display: none; }
 
   @media (max-width: 1240px) {
@@ -138,9 +143,9 @@
       grid-template-rows: 56px minmax(0, 1fr);
       grid-template-areas: 'top' 'main';
     }
-    .app > :global(.index), .app > :global(.plate), .app > :global(.ladder) { grid-area: main; grid-column: auto; grid-row: auto; }
-    .app[data-pane='list'] > :global(.plate) { display: none; }
-    .app[data-pane='plate'] > :global(.index) { display: none; }
+    .main > :global(.index), .main > :global(.plate), .main > :global(.ladder) { grid-area: main; grid-column: auto; grid-row: auto; }
+    .app[data-pane='list'] .main > :global(.plate) { display: none; }
+    .app[data-pane='plate'] .main > :global(.index) { display: none; }
 
     .topbar {
       grid-area: top;

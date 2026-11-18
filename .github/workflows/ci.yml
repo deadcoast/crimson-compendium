@@ -16,7 +16,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run check
-      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      # builds, then checks the built site headless: data lint, every route, explorer, phone,
+      # accessibility, self-contained (tools/verify.mjs)
+      - run: npm run verify
       - uses: actions/upload-artifact@v6
         with:
           name: crimson-compendium-site

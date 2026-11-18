@@ -162,7 +162,7 @@
   }
   .kind { display: inline-flex; gap: 6px; align-items: center; font-size: 10px; color: var(--accent); flex: none; }
   .cap { flex: 1; min-width: 0; }
-  .credit { flex: none; font-size: 10.5px; color: var(--ash-2); }
+  .credit { flex: none; font-size: 10.5px; color: var(--ash); }
 
   .roam {
     display: flex; align-items: center; gap: 20px;

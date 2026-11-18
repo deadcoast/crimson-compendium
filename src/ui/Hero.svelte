@@ -180,7 +180,7 @@
   .step a:hover { background: var(--ink-4); color: var(--bone); }
   .step span { padding: 0 6px; color: var(--bone); }
   .step i { font-style: normal; color: var(--ash); margin: 0 3px; }
-  .credit { position: absolute; right: var(--gutter); bottom: 12px; z-index: 1; font-size: 10px; color: var(--ash-2); }
+  .credit { position: absolute; right: var(--gutter); bottom: 12px; z-index: 1; font-size: 10px; color: var(--ash); }
 
   .back { display: none; }
 

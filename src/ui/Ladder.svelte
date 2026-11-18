@@ -141,7 +141,7 @@
     border: 1px solid var(--line-2); border-radius: 999px;
     transition: color var(--t-micro), border-color var(--t-micro), background var(--t-micro);
   }
-  .seg .mono { font-size: 10.5px; color: var(--ash-2); }
+  .seg .mono { font-size: 10.5px; color: var(--ash); }
   .seg button:hover { color: var(--bone); }
   .seg button.on { color: var(--bone); }
   .seg button[data-cls].on { border-color: var(--cls); background: color-mix(in srgb, var(--cls) 14%, transparent); }
@@ -177,7 +177,7 @@
   .tn { font-size: 12px; line-height: 1.25; color: var(--bone-2); }
   .token:hover .pt { transform: translateY(-4px) scale(1.06); box-shadow: 0 0 0 1px var(--accent), 0 0 0 4px var(--ink-0), 0 10px 24px rgba(0, 0, 0, 0.5); }
   .token:hover .tn { color: var(--bone); }
-  .none { font-size: 12.5px; color: var(--ash-2); }
+  .none { font-size: 12.5px; color: var(--ash); }
   .foot { margin-top: 22px; max-width: 80ch; font-size: 12.5px; color: var(--ash); }
 
   @media (max-width: 720px) {

@@ -2,6 +2,24 @@
 
 All notable changes to the Crimson Compendium. Versions follow [Semantic Versioning](https://semver.org/); the format follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [Unreleased]
+
+### Added
+- `npm run verify`: builds the site and checks it in a headless browser, failing on any problem. CI and the Release workflow run it. It covers:
+  - the data lint;
+  - every plate, list, redirect and the ladder;
+  - explorer keys, filter, recent and outline;
+  - the phone drawer;
+  - accessibility (axe-core);
+  - whether the site is self-contained.
+- `npm run lint`: content rules for every branch. Each rating needs a basis, each image a credit and caption, each source a URL; every image file must exist, and there may be no orphaned media.
+
+### Changed
+- **Fonts are self-hosted.** Bodoni Moda, Archivo and JetBrains Mono (Latin, variable) ship with the site, so the release zip renders as designed offline and from disk. The app no longer contacts a font CDN.
+- **Readable secondary text meets WCAG AA.** It is now at least 4.5:1 on every ink surface. Counts, hints, credits and placeholders moved from the ornament tone to the readable one.
+- **Screen-reader structure.** The index and plate sit in a `main` landmark, and pip ratings read as "n of 5".
+- The planning docs live in `docs/`: `IDENTIFIED.md`, `PLAN.md`, `SHELVED.md` and `TODO.md`.
+
 ## [0.2.0] — 2026-11-18
 
 ### Added

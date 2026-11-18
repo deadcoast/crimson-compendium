@@ -6,7 +6,7 @@
 
 These are the item IDs from `IDENTIFIED.md`, placed under the milestones in `PLAN.md`. Each milestone lists them in build order, so an item comes after the items it relies on.
 
-## M1 Ground truth `[todo]`
+## M1 Ground truth `[done]`
 
 - TECH-01: `npm run verify`, with the sweep ported into the repo; axe reports but doesn't fail yet
 - SC-02: pip rating labels moved out of `<dd aria-label>`
@@ -15,7 +15,7 @@ These are the item IDs from `IDENTIFIED.md`, placed under the milestones in `PLA
 - CORE-02: data lint inside `npm run verify`
 - TECH-02: self-hosted fonts that load from `file://`
 
-## M2 Where, for every mount `[shelved]`
+## M2 Where, for every mount `[todo]`
 
 - NF-01: map captures for the 23 entries without one
 - NF-02: heroes for the 36 entries without one
@@ -46,4 +46,4 @@ These are the item IDs from `IDENTIFIED.md`, placed under the milestones in `PLA
 
 ## Next
 
-When `TODO.md` is complete, M1 is marked delivered in `PLAN.md` and tagged `[done]` here. Then `TODO.md` is rewritten from the next `[shelved]` section, which is retagged `[todo]`.
+When `TODO.md` is complete, its milestone is marked delivered in `PLAN.md` and tagged `[done]` here. Then `TODO.md` is rewritten from the next `[shelved]` section, which is retagged `[todo]`.

@@ -1,0 +1,33 @@
+/* Self-hosted variable fonts, Latin subset (SIL Open Font License, via Fontsource).
+   They ship beside the bundle, so the release renders as designed offline and from file://,
+   and the app makes no request to a font CDN. Only the axes and styles the UI uses are loaded:
+   Bodoni Moda opsz + wght (roman and italic), Archivo wdth + wght (roman), JetBrains Mono wght. */
+@font-face {
+  font-family: 'Bodoni Moda';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400 900;
+  src: url('../../node_modules/@fontsource-variable/bodoni-moda/files/bodoni-moda-latin-opsz-normal.woff2') format('woff2-variations');
+}
+@font-face {
+  font-family: 'Bodoni Moda';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400 900;
+  src: url('../../node_modules/@fontsource-variable/bodoni-moda/files/bodoni-moda-latin-opsz-italic.woff2') format('woff2-variations');
+}
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  src: url('../../node_modules/@fontsource-variable/archivo/files/archivo-latin-wdth-normal.woff2') format('woff2-variations');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 800;
+  src: url('../../node_modules/@fontsource-variable/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2') format('woff2-variations');
+}

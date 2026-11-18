@@ -132,7 +132,7 @@
   .legal { margin-top: 10px; font-size: 12.5px; color: var(--ash); }
   .pub { margin-bottom: 16px; }
   .pub-name { font-weight: 600; margin-bottom: 4px; }
-  .pub-name .mono { color: var(--ash-2); margin-left: 6px; }
+  .pub-name .mono { color: var(--ash); margin-left: 6px; }
   .pub a { display: inline-flex; align-items: center; gap: 6px; padding: 3px 0; font-size: 13px; color: var(--bone-2); }
   .pub a:hover { color: var(--bone); }
 

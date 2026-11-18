@@ -107,6 +107,7 @@ This review was done at commit `db93c9d` (v0.2.0 released, Release workflow fixe
 ### CORE-FUNCTION-IMPROVEMENTS
 
 - **CORE-01: Replace the 32 ratings that default to III** with sourced comparisons, for example Game8 stat screens or speed tests. The 19 entries are pink-dolphin, pink-manta-ray, leaping-kuku-bird, both iguanas, red-feathered-raptor, rosehorn-deer, sandwalk-camel, the sea commons and elephant.
+  - Also: the Speed basis for brown-bear and clawed-bear is just "Slow.", with no source named, and the Game8 page they cite says nothing about bear speed. The M1 data lint caught it.
   - Why: "Is it worth it?" currently answers "unknown" for 17 % of ratings.
   - Verify: the defaulted count, and every new basis names its source.
 - **CORE-02: Data lint as code.**

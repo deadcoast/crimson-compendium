@@ -422,7 +422,7 @@
   .filtering .find { transform: none; }
   .find:focus-within { border-color: color-mix(in srgb, var(--crimson-hi) 55%, transparent); color: var(--bone-2); }
   .find input { flex: 1; min-width: 0; background: none; border: 0; outline: 0; color: var(--bone); font: inherit; font-size: 12.5px; }
-  .find input::placeholder { color: var(--ash-2); }
+  .find input::placeholder { color: var(--ash); }
   .find .n { font-size: 10px; color: var(--ash); white-space: nowrap; }
   .find .x { display: grid; place-items: center; width: 20px; height: 20px; border-radius: 4px; color: var(--ash); }
   .find .x:hover { color: var(--bone); background: var(--ink-3); }

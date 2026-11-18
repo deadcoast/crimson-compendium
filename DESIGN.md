@@ -20,7 +20,7 @@ Three columns on desktop: **Explorer** (the tree) · **Index** (the leaf, catego
 
 ## Visual language
 
-- **Palette**: warm ink blacks, bone text, one signal colour (crimson). Red is reserved for the root (brand, the Mounts branch, Tier I, Ride for, the ladder). Leaves carry a traditional tier accent: Legendary orange (`--ember`), Rare royal blue (`--royal`), Stable bone, Engineered brass, Fleeting ash; Easter Eggs and its leaves are cyan (`--cyan`), as specified in `docs/spec/tier-colors.txt`. Terrain classes take their colours from the in-game map (ochre land, map-water teal, pale sky). All tokens live in `src/styles/tokens.css`.
+- **Palette**: warm ink blacks, bone text, one signal colour (crimson). Red is reserved for the root (brand, the Mounts branch, Tier I, Ride for, the ladder). Text a reader needs (meta lines, counts, hints, credits, placeholders) uses `--ash` or brighter, which measures at least 4.5:1 on every ink surface (WCAG AA). `--ash-2` is for ornaments only: separators, diamonds and not-rated numerals. Leaves carry a traditional tier accent: Legendary orange (`--ember`), Rare royal blue (`--royal`), Stable bone, Engineered brass, Fleeting ash; Easter Eggs and its leaves are cyan (`--cyan`), as specified in `docs/spec/tier-colors.txt`. Terrain classes take their colours from the in-game map (ochre land, map-water teal, pale sky). All tokens live in `src/styles/tokens.css`.
 - **Type**: Bodoni Moda for names, numerals and section titles; Archivo (variable width) for UI, condensed and tracked for eyebrow labels; JetBrains Mono for counts and credits. Large Bodoni numerals use a low optical size (`opsz 8`) so the hairline in the 4 stays visible.
 - **Imagery**: only real in-game captures and in-game knowledge-entry art, each credited to the guide that took it. Portraits are square and shown round everywhere (index, ladder, search) so mixed sources read as one set.
 - **Edges**: a column's background ends at its border line; nothing spills past a frame.
@@ -108,5 +108,16 @@ Left out for lack of reliable data or real imagery:
 
 ## Build and release
 
+- **Self-contained.** Fonts ship with the site: Latin variable subsets of Bodoni Moda (opsz, wght, roman and italic), Archivo (wdth, wght) and JetBrains Mono, all OFL, through Fontsource. They load relative to the bundle, so the release renders the same offline and from `file://`, and the app makes no request off its own origin. Only the axes and styles the UI uses are shipped (230 kB).
+- **Landmarks.** The explorer is a `nav`. The index and plate (or the ladder) sit in `main`, which uses `display: contents` so they stay placed in the app grid.
 - **One classic script.** The build is a single deferred IIFE bundle with its CSS inlined, not an ES module. Module scripts are blocked on `file://`, so this lets `dist/index.html` open straight from disk as well as from any static host or sub-path (`base: './'`).
-- **Releases.** One action ships a release: run the **Release** workflow (Actions → Release → Run workflow; leave the tag blank to release the `package.json` version) or push a `v*` tag. A typed tag is cleaned first (spaces and trailing dots dropped, a missing `v` added). The job checks the tag against `package.json`, type-checks, builds, zips the site as `crimson-compendium-<tag>.zip`, and creates the GitHub release with notes from `docs/releases/<tag>.md` (falling back to that version's `CHANGELOG.md` section). CI (`ci.yml`) runs the same check and build on every push to `main` and on pull requests. Versions follow SemVer.
+- **Releases.** One action ships a release: run the **Release** workflow (Actions → Release → Run workflow; leave the tag blank to release the `package.json` version) or push a `v*` tag. A typed tag is cleaned first (spaces and trailing dots dropped, a missing `v` added). The job checks the tag against `package.json`, type-checks, builds, zips the site as `crimson-compendium-<tag>.zip`, and creates the GitHub release with notes from `docs/releases/<tag>.md` (falling back to that version's `CHANGELOG.md` section). CI (`ci.yml`) runs the same type check and `npm run verify` on every push to `main` and on pull requests. Versions follow SemVer.
+- **Verification.** `npm run verify` builds the site, serves it with missing files returning 404, and checks it in headless Chromium. It exits non-zero on any failure, and its expectations come from the data, not from fixed numbers. The checks:
+  - data lint (`tools/lint.mjs`);
+  - every entry plate (title, every image served as an image, the explorer row it selects);
+  - every leaf, category, category leaf and lens (title, member count, cover, explorer row), redirects and the ladder;
+  - explorer keys, type navigation, filter, recent and outline, plus J/K keeping the list context;
+  - the phone drawer;
+  - axe-core on four views, where serious and critical findings fail;
+  - that no request leaves the site's origin, and that `file://` with the network cut loads all four font faces.
+  Hash routes trip axe's `skip-link` rule because they look like same-page anchors. That one is accepted (IDENTIFIED QOL-03).
