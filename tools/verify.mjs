@@ -195,13 +195,19 @@ try {
       await go(pg, `${b.id}-route`);
       await go(pg, b.id);
       if (!(await waitText(pg, '.route h1', r.title))) problems.push(`#${b.id} does not open the route (h1 "${await text(pg, '.route h1')}")`);
-      const got = await pg.evaluate(() => ({
-        phases: document.querySelectorAll('.route .phase').length,
-        links: [...document.querySelectorAll('.route .phase a[href]')].map((a) => a.getAttribute('href')),
-      }));
-      if (got.phases !== r.phases.length) problems.push(`${got.phases} phases, want ${r.phases.length}`);
-      const want = r.phases.flatMap((ph) => [...ph.steps, ...(ph.meanwhile ?? [])]).filter((st) => st.entry).map((st) => `#${b.id}-${st.entry}`);
-      for (const h of want) if (!got.links.includes(h)) problems.push(`no link to ${h}`);
+      // phases in order, and each phase's links in its own step order (steps, then meanwhile)
+      const got = await pg.evaluate(() => [...document.querySelectorAll('.route .phase')].map((p) => ({
+        label: p.querySelector('h2')?.textContent.trim(),
+        links: [...p.querySelectorAll('.steps a[href], .meanwhile a[href]')].map((a) => a.getAttribute('href')),
+      })));
+      if (got.length !== r.phases.length) problems.push(`${got.length} phases, want ${r.phases.length}`);
+      let want = 0;
+      r.phases.forEach((ph, i) => {
+        if (got[i]?.label !== ph.label) problems.push(`phase ${i + 1} reads "${got[i]?.label}", want "${ph.label}"`);
+        const links = [...ph.steps, ...(ph.meanwhile ?? [])].filter((st) => st.entry).map((st) => `#${b.id}-${st.entry}`);
+        want += links.length;
+        if (JSON.stringify(got[i]?.links) !== JSON.stringify(links)) problems.push(`phase ${i + 1} links ${JSON.stringify(got[i]?.links)}, want ${JSON.stringify(links)}`);
+      });
       // covers load lazily: scroll the route through, then require every cover to have decoded
       await pg.evaluate(async () => {
         const p = document.querySelector('.route');
@@ -214,13 +220,42 @@ try {
       if (!covers) problems.push(`covers did not all load (${await pg.evaluate(() => [...document.querySelectorAll('.route .cover img')].filter((i) => !(i.complete && i.naturalWidth > 0)).map((i) => i.getAttribute('src')).join(', '))})`);
       const sel = await text(pg, '[role=tree] [aria-selected=true]');
       if (!sel?.startsWith(r.title)) problems.push(`explorer selects "${sel}"`);
-      // the rail follows the reader: jumping to the last phase marks it current
-      await pg.evaluate(() => document.querySelector('.route').scrollTo({ top: 0 }));
-      await pg.click('.rail li:last-child button');
-      await pg.waitForFunction(() => document.querySelector('.rail li:last-child button')?.getAttribute('aria-current') === 'step', null, { timeout: 4000 })
-        .catch(() => problems.push('rail does not mark the phase it jumps to'));
-      row('route', `${b.id} · ${got.phases} phases · ${want.length} step links`, problems);
+      // the rail follows the reader: back at the top the first phase is current; a rail click jumps
+      // to the last phase, and the rail marks it once the scroll lands
+      await pg.evaluate(() => { const p = document.querySelector('.route'); p.style.scrollBehavior = 'auto'; p.scrollTop = 0; p.style.scrollBehavior = ''; });
+      const current = (n) => pg.waitForFunction((k) => document.querySelector(`.rail li:nth-child(${k}) button`)?.getAttribute('aria-current') === 'step', n, { timeout: 5000 }).then(() => true, () => false);
+      if (!(await current(1))) problems.push('rail does not mark phase 1 at the top');
+      else {
+        await pg.click('.rail li:last-child button');
+        if (!(await current(r.phases.length))) problems.push('rail does not mark the phase it jumps to');
+        const top = await pg.evaluate(() => document.querySelector('.route').scrollTop);
+        if (top < 200) problems.push('rail click did not scroll the route');
+      }
+      row('route', `${b.id} · ${got.length} phases in order · ${want} step links`, problems);
     }
+  }
+
+  // switching branches straight from one ladder or route to another's keeps each on its own data
+  if (branches.length > 1) {
+    const problems = [];
+    for (const [from, to] of [[branches[0], branches[1]], [branches[1], branches[0]]]) {
+      await go(pg, `${from.id}-ladder`);
+      await waitText(pg, '.ladder h1', 'Tier Ladder');
+      await go(pg, `${to.id}-ladder`);
+      const tab = to.def.metrics[0].label;
+      if (!(await waitText(pg, '.ladder .metrics [aria-selected=true]', tab))) problems.push(`${from.id} → ${to.id} ladder selects "${await text(pg, '.ladder .metrics [aria-selected=true]')}", want "${tab}"`);
+    }
+    // a list remembered in one branch is not reused in the other: L from a ladder returns to a list of this branch
+    const r = branches.find((x) => x.def.route);
+    if (r) {
+      await go(pg, `${branches[0].id}-${branches[0].def.leaves.at(-1).id}`);
+      await waitText(pg, '.index .title', branches[0].def.leaves.at(-1).label);
+      await go(pg, `${r.id}-ladder`);
+      await waitText(pg, '.ladder h1', 'Tier Ladder');
+      await pg.keyboard.press('l');
+      if (!(await waitText(pg, '.index .title', r.def.leaves[0].label))) problems.push(`L from the ${r.id} ladder lands on "${await text(pg, '.index .title')}", want "${r.def.leaves[0].label}"`);
+    }
+    row('branch switch', `ladders keep their own metrics · L returns within the branch`, problems);
   }
 
   // explorer and stepping (first branch; the explorer is shared)

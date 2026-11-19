@@ -28,18 +28,29 @@
   let scroller: HTMLElement | undefined = $state();
   let active = $state(0);
   let progress = $state(0);
+  // the current phase is the last one whose top has crossed a reading line 40% down the scroller,
+  // measured on scroll (one rAF per frame) so it holds at any aspect ratio
   $effect(() => {
     const root = scroller;
     if (!root) return;
-    const io = new IntersectionObserver(
-      (list) => { for (const e of list) if (e.isIntersecting) active = Number((e.target as HTMLElement).dataset.i); },
-      { root, rootMargin: '-40% 0px -55% 0px' },
-    );
-    root.querySelectorAll<HTMLElement>('.phase').forEach((s) => io.observe(s));
-    const onScroll = () => { progress = root.scrollTop / Math.max(1, root.scrollHeight - root.clientHeight); };
+    const phases = [...root.querySelectorAll<HTMLElement>('.phase')];
+    let raf = 0;
+    const measure = () => {
+      raf = 0;
+      const line = root.getBoundingClientRect().top + root.clientHeight * 0.4;
+      let i = 0;
+      phases.forEach((p, n) => { if (p.getBoundingClientRect().top <= line) i = n; });
+      // at the very bottom the last phase is current even when it is too short to reach the line
+      if (root.scrollTop + root.clientHeight >= root.scrollHeight - 2) i = phases.length - 1;
+      active = i;
+      progress = root.scrollTop / Math.max(1, root.scrollHeight - root.clientHeight);
+    };
+    const onScroll = () => { if (!raf) raf = requestAnimationFrame(measure); };
     root.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-    return () => { io.disconnect(); root.removeEventListener('scroll', onScroll); };
+    const ro = new ResizeObserver(onScroll);
+    ro.observe(root);
+    measure();
+    return () => { cancelAnimationFrame(raf); ro.disconnect(); root.removeEventListener('scroll', onScroll); };
   });
 
   function jump(i: number) {

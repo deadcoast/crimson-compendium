@@ -149,12 +149,13 @@ You asked for Riches on 2026-11-19: an endgame economy guide for a player who ha
   The ship call in phase 7 comes from the data: the quest-built Small Greymane Ship holds 14 slots, the same as the 40,000 Small Hernandian, so the Route skips that purchase and saves for the Medium (22 slots, 1.2M).
 - **Route view design.** It is image-led:
   - Each phase opens on its cover. The cover desaturates into full colour as it enters view, and an outlined phase numeral rises into the corner.
-  - A sticky rail lists the phases, marks the current one, and has a spine that fills with scroll.
+  - A sticky rail lists the phases, marks the current one, and has a spine that fills with scroll. The current phase is measured on scroll against a line 40% down the view, so tracking holds at any window shape.
   - A stage line marks where the DLC starts.
 
   Phases use 01–08 so they never read as tiers (which use I–V). *(My call.)*
-- **Ledger** (`RichesLedger.svelte`, the branch's own plate section): what it pays in, its cycle, each figure with its basis and publisher, costs, *Raised by* (the multipliers that stack on it, linked) or *Raises* on a multiplier, and *Watch out* (nerfs, bugs, losses, unconfirmed figures).
+- **Ledger** (`RichesLedger.svelte`, the branch's own plate section): what it pays in, its cycle, each figure and each cost with its basis and publisher, *Raised by* (the multipliers that stack on it) and *Raises* (the methods that name it in their `stacks`), both linked, and *Watch out* (nerfs, bugs, losses, unconfirmed figures).
 - **Ambient motion.** Riches plates float gold dust (slow motes that flash as they turn) instead of land embers. It is a new `gold` mode in `Particles.svelte`, chosen per class through `ClassDef.ambient`.
+- **Branch switches.** App keys the ladder and the route by branch, so their selections never carry one branch's metric into another. The remembered list (`app.ctx`) is reused only if it names a list in the current branch (`ctxIn`). Leaf ids may not be `ladder`, `route` or start with `for-`.
 - **Core stayed generic.** Everything Riches needed from the shared UI is branch data now: `plural`, `labels` (lens folder, How/Where eyebrows, outline label, roam text, class axis), `rules` (the tier sheet's rules), `ladderNote`, `accent`, class `glyph` and `ambient`, and `route`. The tier sheet, hover cards and the footer's as-of line follow the branch you are in. A capture can be `menu` ("In-game screen") for UI screenshots, so a dispatch screen is never labelled "On site".
 - **Gaps (R2).** All 18 facilities by name, location and staff skill. Island upgrade tiers and island income, which no source documents yet. A trade-route table from the in-game Trade tab.
 

@@ -56,29 +56,37 @@
         <p class="eyebrow">Costs</p>
         <dl class="costs">
           {#each ledger.costs as c (c.label)}
-            <div><dt>{c.label}</dt><dd>{c.value}</dd></div>
+            <div data-basis={c.basis}>
+              <dt>{c.label}</dt>
+              <dd>
+                <span class="v">{c.value}</span>
+                <span class="basis" title={BASIS[c.basis].note}><i aria-hidden="true"></i>{BASIS[c.basis].label}<span class="by">· {PUBLISHERS[c.by] ?? c.by}</span></span>
+              </dd>
+            </div>
           {/each}
         </dl>
       </div>
     {/if}
 
-    {#if stacks.length || raises.length}
-      <div class="block">
-        <p class="eyebrow">{stacks.length ? 'Raised by' : 'Raises'}</p>
-        <ul class="links">
-          {#each stacks.length ? stacks : raises as s, i (s.id)}
-            <li style:--i={i}>
-              <a href={href.entry(branch, s.id)} data-accent={leafAccent(s)}>
-                <span class="pt"><img src={mediaUrl(s.media.portrait.src)} alt="" loading="lazy" /></span>
-                <span class="nm">{s.name}</span>
-                {#if s.tiers.return?.tier}<span class="t mono">{ROMAN[s.tiers.return.tier]}</span>{/if}
-                <Glyph name="right" size={12} />
-              </a>
-            </li>
-          {/each}
-        </ul>
-      </div>
-    {/if}
+    {#each [{ label: 'Raised by', list: stacks }, { label: 'Raises', list: raises }] as group (group.label)}
+      {#if group.list.length}
+        <div class="block">
+          <p class="eyebrow">{group.label}</p>
+          <ul class="links">
+            {#each group.list as s, i (s.id)}
+              <li style:--i={i}>
+                <a href={href.entry(branch, s.id)} data-accent={leafAccent(s)}>
+                  <span class="pt"><img src={mediaUrl(s.media.portrait.src)} alt="" loading="lazy" /></span>
+                  <span class="nm">{s.name}</span>
+                  {#if s.tiers.return?.tier}<span class="t mono">{ROMAN[s.tiers.return.tier]}</span>{/if}
+                  <Glyph name="right" size={12} />
+                </a>
+              </li>
+            {/each}
+          </ul>
+        </div>
+      {/if}
+    {/each}
 
     {#if ledger.watch.length}
       <aside class="watch">
@@ -123,7 +131,8 @@
     font-variant-numeric: lining-nums tabular-nums;
     color: var(--bone);
   }
-  .basis { grid-area: basis; display: inline-flex; align-items: center; gap: 7px; font-size: 10.5px; letter-spacing: 0.04em; color: var(--bone-2); white-space: nowrap; }
+  .figures .basis { grid-area: basis; }
+  .basis { display: inline-flex; align-items: center; gap: 7px; font-size: 10.5px; letter-spacing: 0.04em; color: var(--bone-2); white-space: nowrap; }
   .basis .by { color: var(--ash); }
   .basis i { width: 7px; height: 7px; transform: rotate(45deg); background: var(--accent); }
   [data-basis='guide'] .basis i { background: none; border: 1px solid var(--accent); }
@@ -138,9 +147,9 @@
   .block .eyebrow { font-size: 10px; margin-bottom: 10px; }
 
   .costs { display: grid; gap: 1px; margin: 0; background: var(--line); border: 1px solid var(--line); }
-  .costs div { display: grid; grid-template-columns: minmax(120px, 0.6fr) minmax(0, 1.4fr); gap: 14px; padding: 10px 12px; background: var(--ink-0); }
+  .costs div { display: grid; grid-template-columns: minmax(120px, 0.6fr) minmax(0, 1.4fr); align-items: baseline; gap: 14px; padding: 10px 12px; background: var(--ink-0); }
   .costs dt { font-size: 12px; color: var(--ash); }
-  .costs dd { margin: 0; font-size: 13px; color: var(--bone); font-variant-numeric: tabular-nums; }
+  .costs dd { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 14px; margin: 0; font-size: 13px; color: var(--bone); font-variant-numeric: tabular-nums; }
 
   .links { display: flex; flex-wrap: wrap; gap: 8px; }
   .links li { animation: up 520ms var(--ease-out) both; animation-delay: calc(var(--i) * 70ms); }
@@ -170,6 +179,6 @@
 
   @media (max-width: 720px) {
     .figures li { grid-template-columns: minmax(0, 1fr); grid-template-areas: 'label' 'value' 'basis'; }
-    .costs div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+    .costs div { grid-template-columns: minmax(0, 1fr); gap: 3px; }
   }
 </style>

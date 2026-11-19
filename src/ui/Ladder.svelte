@@ -11,7 +11,7 @@
 
   let { branch }: { branch: Branch } = $props();
 
-  // initial selections only; the ladder remounts per branch
+  // initial selections only; App keys the ladder by branch, so a branch switch remounts it
   let metric = $state(untrack(() => branch.metrics[0].id));
   let cls = $state(untrack(() => branch.classes[0].id));
   let leaves = $state<Record<string, boolean>>(untrack(() => Object.fromEntries(branch.leaves.map((l) => [l.id, true]))));

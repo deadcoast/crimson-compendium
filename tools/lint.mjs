@@ -15,6 +15,8 @@ const read = (p) => JSON.parse(readFileSync(join(ROOT, p), 'utf8'));
 const KINDS = new Set(['map', 'overworld', 'action', 'variant', 'menu']);
 // what a quoted figure stands on: patch notes, guide text, a guide's in-game screenshot, one player's report, or a sum shown
 const BASES = new Set(['patch', 'guide', 'screenshot', 'player', 'sum']);
+// Particles.svelte's modes (types.ts Ambient); a class without `ambient` falls back to its own id
+const AMBIENTS = new Set(['land', 'sea', 'sky', 'gold']);
 
 const shares = (want, have) => !want || want.some((v) => have.includes(v));
 function tierOf(e, metric) {
@@ -64,6 +66,10 @@ export function lint() {
       }
     };
 
+    for (const c of def.classes) {
+      const mode = c.ambient ?? c.id;
+      if (!AMBIENTS.has(mode)) bad(`class ${c.id}`, `ambient "${mode}" is not one of ${[...AMBIENTS].join(', ')}${c.ambient ? '' : ' (set ambient)'}`);
+    }
     for (const e of entries) {
       for (const f of ['name', 'kind', 'region', 'trait', 'summary', 'since']) text(e.id, e[f], f);
       for (const m of def.metrics) {

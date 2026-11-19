@@ -35,8 +35,13 @@ function define(def: BranchDef, entries: Entry[], sections: PlateSection[] = [])
   const metrics = def.metrics.map((m) => m.id);
   const byId = new Map<string, Entry>();
 
+  const VIEWS = new Set(['ladder', 'route']);
+  for (const l of def.leaves) {
+    if (!ID.test(l.id) || VIEWS.has(l.id) || l.id.startsWith('for-')) fail(l.id, 'leaf id collides with a route name');
+  }
+  if (leaves.size !== def.leaves.length) fail('leaves', 'duplicate leaf id');
   for (const c of def.categories) {
-    if (!ID.test(c.id) || leaves.has(c.id) || c.id === 'ladder' || c.id === 'route' || c.id.startsWith('for-')) fail(c.id, 'category id collides with a route name');
+    if (!ID.test(c.id) || leaves.has(c.id) || VIEWS.has(c.id) || c.id.startsWith('for-')) fail(c.id, 'category id collides with a route name');
   }
   if (cats.size !== def.categories.length) fail('categories', 'duplicate category id');
 

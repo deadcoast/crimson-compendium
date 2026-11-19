@@ -58,6 +58,14 @@ export const href = {
 export const leafOf = (b: Branch, e: Entry): Leaf => b.leaves.find((l) => l.id === e.leaf) ?? b.leaves[0];
 export const catOf = (b: Branch, id: string): Category | undefined => b.categories.find((c) => c.id === id);
 
+/** Whether a list context names a list in this branch. Contexts outlive branch switches in app state. */
+export function ctxIn(b: Branch, c: ListContext): boolean {
+  if (c.kind === 'leaf') return b.leaves.some((l) => l.id === c.id);
+  if (c.kind === 'lens') return b.lenses.some((l) => l.id === c.id);
+  const cat = catOf(b, c.id);
+  return !!cat && (!c.leaf || cat.leaves.some((l) => l.id === c.leaf));
+}
+
 export function entriesFor(b: Branch, ctx: ListContext): Entry[] {
   if (ctx.kind === 'leaf') return b.entries.filter((e) => e.leaf === ctx.id);
   if (ctx.kind === 'cat') {

@@ -17,7 +17,7 @@ export interface MediaItem {
 }
 
 export interface Capture extends MediaItem {
-  kind: 'map' | 'overworld' | 'action' | 'variant';
+  kind: 'map' | 'overworld' | 'action' | 'variant' | 'menu';
   caption: string;
 }
 
@@ -72,13 +72,16 @@ export interface Entry {
 }
 
 export interface Metric { id: string; label: string; blurb: string }
+/** Ambient particle modes Particles.svelte draws. tools/lint.mjs checks class data against this list. */
+export type Ambient = 'land' | 'sea' | 'sky' | 'gold';
+
 export interface ClassDef {
   id: string;
   label: string;
   /** icon; the class id when absent */
   glyph?: string;
-  /** ambient particles behind a plate of this class (land | sea | sky | gold); the class id when absent */
-  ambient?: string;
+  /** ambient particles behind a plate of this class; the class id when absent */
+  ambient?: Ambient;
 }
 
 export interface LeafCover {
