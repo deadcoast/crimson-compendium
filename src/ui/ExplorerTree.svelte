@@ -262,7 +262,8 @@
   function hideCard() { clearTimeout(cardTimer); card = null; }
   $effect(() => { void app.hash; hideCard(); });
 
-  const metrics = $derived(branches[0].metrics);
+  // a hover card rates its entry on its own branch's metrics
+  const metricsOf = (e: Entry) => (branches.find((b) => b.byId.get(e.id) === e) ?? branches[0]).metrics;
   const isTop = (r: Row) => r.node.depth === 0;
 </script>
 
@@ -276,12 +277,12 @@
       bind:value={q}
       onkeydown={onfilterkey}
       tabindex={filtering ? 0 : -1}
-      placeholder="Filter mounts and folders"
+      placeholder="Filter entries and folders"
       aria-label="Filter the explorer"
       spellcheck="false"
       autocomplete="off"
     />
-    <span class="n mono">{q.trim() ? `${matchCount} ${matchCount === 1 ? 'mount' : 'mounts'}` : ''}</span>
+    <span class="n mono">{q.trim() ? `${matchCount} ${matchCount === 1 ? 'entry' : 'entries'}` : ''}</span>
     <button class="x" tabindex={filtering ? 0 : -1} onclick={closeFilter} aria-label="Close filter"><Glyph name="close" size={12} /></button>
   </div>
 
@@ -369,7 +370,7 @@
         <p class="c-mt">{e.kind} · {e.region}</p>
         <p class="c-tr">{e.trait}</p>
         <ol class="c-seals">
-          {#each metrics as m}
+          {#each metricsOf(e) as m}
             {@const t = e.tiers[m.id]?.tier}
             <li class:top={t === 1}><span>{m.label}</span><b>{t ? ROMAN[t] : '—'}</b></li>
           {/each}

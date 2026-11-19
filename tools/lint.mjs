@@ -2,7 +2,8 @@
 // The registry (src/branches/registry.ts) refuses broken structure at load (ids, leaves, routes);
 // this checks what the registry cannot see: evidence on every rating, a credit on every image and a
 // caption on every capture, a valid https URL on every source, covers that resolve to an image,
-// image files present, and no orphaned media anywhere under public/media.
+// image files present, route phases whose covers resolve, figures with a known basis and publisher,
+// and no orphaned media anywhere under public/media.
 //
 //   node tools/lint.mjs        run alone (npm run verify runs it first)
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
@@ -11,7 +12,11 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const read = (p) => JSON.parse(readFileSync(join(ROOT, p), 'utf8'));
-const KINDS = new Set(['map', 'overworld', 'action', 'variant']);
+const KINDS = new Set(['map', 'overworld', 'action', 'variant', 'menu']);
+// what a quoted figure stands on: patch notes, guide text, a guide's in-game screenshot, one player's report, or a sum shown
+const BASES = new Set(['patch', 'guide', 'screenshot', 'player', 'sum']);
+// Particles.svelte's modes (types.ts Ambient); a class without `ambient` falls back to its own id
+const AMBIENTS = new Set(['land', 'sea', 'sky', 'gold']);
 
 const shares = (want, have) => !want || want.some((v) => have.includes(v));
 function tierOf(e, metric) {
@@ -61,6 +66,10 @@ export function lint() {
       }
     };
 
+    for (const c of def.classes) {
+      const mode = c.ambient ?? c.id;
+      if (!AMBIENTS.has(mode)) bad(`class ${c.id}`, `ambient "${mode}" is not one of ${[...AMBIENTS].join(', ')}${c.ambient ? '' : ' (set ambient)'}`);
+    }
     for (const e of entries) {
       for (const f of ['name', 'kind', 'region', 'trait', 'summary', 'since']) text(e.id, e[f], f);
       for (const m of def.metrics) {
@@ -84,6 +93,22 @@ export function lint() {
       image(e.id, e.media.hero, 'hero');
       e.media.captures.forEach((c, i) => image(e.id, c, `capture ${i + 1}`, true));
       e.media.gallery.forEach((c, i) => image(e.id, c, `gallery ${i + 1}`, true));
+      // branch payloads: any object holding a quoted figure (label + value + basis) names a known basis
+      // and publisher; any `stacks` list names entries of the same branch
+      const payload = (v, where) => {
+        if (Array.isArray(v)) return v.forEach((x, i) => payload(x, `${where}[${i}]`));
+        if (!v || typeof v !== 'object') return;
+        if ('label' in v && 'value' in v && 'basis' in v) {
+          if (!BASES.has(v.basis)) bad(e.id, `${where} basis "${v.basis}" is not one of ${[...BASES].join(', ')}`);
+          if (!credits.publishers[v.by]) bad(e.id, `${where} publisher "${v.by}" is not in src/core/credits.json`);
+          text(e.id, v.value, `${where} value`);
+        }
+        for (const [k, x] of Object.entries(v)) {
+          if (k === 'stacks' && Array.isArray(x)) for (const id of x) { if (!entries.some((o) => o.id === id)) bad(e.id, `${where}.stacks names unknown entry "${id}"`); }
+          else payload(x, `${where}.${k}`);
+        }
+      };
+      for (const [k, v] of Object.entries(e)) if (!['media', 'tiers', 'sources', 'routes'].includes(k)) payload(v, k);
     }
 
     // a cover resolves the way core/tree.ts coverFrom does: its own file, or an entry's capture,
@@ -98,6 +123,15 @@ export function lint() {
       if (!m?.src) bad(where, c.capture !== undefined ? `cover capture ${c.capture} does not exist on ${e.id} (${e.media.captures.length} captures)` : `cover resolves to no image on ${e.id}`);
     };
     for (const l of def.leaves) cover(`leaf ${l.id}`, l.cover);
+    for (const ph of def.route?.phases ?? []) {
+      text(`route/${ph.id}`, ph.why, 'phase reason');
+      if (ph.cover) cover(`route/${ph.id}`, ph.cover);
+      if (!ph.steps?.length) bad(`route/${ph.id}`, 'phase has no steps');
+      for (const st of [...(ph.steps ?? []), ...(ph.meanwhile ?? [])]) {
+        text(`route/${ph.id}`, st.text, 'step text');
+        if (st.entry && !byId.has(st.entry)) bad(`route/${ph.id}`, `step names unknown entry "${st.entry}"`);
+      }
+    }
     for (const c of def.categories) {
       cover(`category ${c.id}`, c.cover);
       if (c.line === 'egg') for (const e of entries.filter((e) => matches(e, c.where))) text(e.id, e.egg, `egg note (listed in ${c.label})`);

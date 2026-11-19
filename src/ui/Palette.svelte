@@ -14,7 +14,8 @@
     tree.branches.flatMap((b) => [
       ...b.leaves.map((l) => ({ label: l.label, hint: `${b.title} · leaf`, to: href.leaf(b, l.id) })),
       ...b.categories.map((c) => ({ label: c.subtitle ? `${c.label}: ${c.subtitle}` : c.label, hint: `${b.title} · branch`, to: href.cat(b, c.id) })),
-      ...b.lenses.map((l) => ({ label: `Ride for: ${l.label}`, hint: `${b.title} · lens`, to: href.lens(b, l.id) })),
+      ...b.lenses.map((l) => ({ label: `${b.labels?.lenses ?? 'Ride for'}: ${l.label}`, hint: `${b.title} · lens`, to: href.lens(b, l.id) })),
+      ...(b.route ? [{ label: b.route.title, hint: `${b.title} · plan`, to: href.route(b) }] : []),
       { label: 'Tier ladder', hint: `${b.title} · ranking`, to: href.ladder(b) },
     ]),
   );
@@ -48,7 +49,7 @@
     <label class="field">
       <span class="sr-only">Search</span>
       <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10.5 17a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13Z M15.5 15.5 21 21" /></svg>
-      <input bind:this={input} bind:value={q} onkeydown={key} placeholder="A mount, a trait, a place — “glide”, “Pailune”, “shark”…" autocomplete="off" spellcheck="false" />
+      <input bind:this={input} bind:value={q} onkeydown={key} placeholder="A mount, a money method, a place — “glide”, “sawmill”, “Pailune”…" autocomplete="off" spellcheck="false" />
       <kbd>Esc</kbd>
     </label>
 

@@ -1,0 +1,522 @@
+{
+ "id": "riches",
+ "title": "Riches",
+ "singular": "Method",
+ "plural": "Methods",
+ "accent": "gold",
+ "tagline": "An endgame money guide: arrive at Charting the Unknown rich, then make the DLC's ships, leases and islands pay.",
+ "asOf": "Current to Charting the Unknown · patch 2.04.02 · November 2026",
+ "labels": {
+  "lenses": "Best for",
+  "how": "Setup",
+  "howOutline": "How to run it",
+  "where": "Where it runs",
+  "roam": "Runs anywhere — no fixed place",
+  "classAxis": "Control"
+ },
+ "metrics": [
+  {
+   "id": "return",
+   "label": "Return",
+   "blurb": "What it pays next to the other methods, on the best documented figure. Converted to Camp Funds where the guide shows the sum; not rated where nothing is documented."
+  },
+  {
+   "id": "effort",
+   "label": "Effort",
+   "blurb": "Hands-on time per payout. Tier I runs while you are away; Tier V needs you at the controller for every coin."
+  },
+  {
+   "id": "setup",
+   "label": "Setup",
+   "blurb": "What it takes to start: funds, quests, staff. Tier I is available now and cheap; Tier V is a long chain or a fortune."
+  },
+  {
+   "id": "scale",
+   "label": "Scale",
+   "blurb": "How far it grows when you reinvest or stack multipliers. Tier I compounds; Tier V stays the size it starts."
+  }
+ ],
+ "rules": [
+  {
+   "lead": "Class means control.",
+   "text": "Management methods run through camp, staff and assets; Player Control methods are things Kliff does by hand. Each is ranked against its own class."
+  },
+  {
+   "lead": "Effort and Setup read like the rest.",
+   "text": "Tier I is always the good end: Tier I Effort runs while you are away, Tier I Setup can start today."
+  },
+  {
+   "lead": "“Not rated”",
+   "text": "marks a metric nothing documents, such as Return on a castle or an island. It is never a default Tier III."
+  },
+  {
+   "lead": "Every figure carries its basis.",
+   "text": "Patch notes, guide text, a guide's in-game screenshot, or a player report. A player report is one player's result and is labelled so."
+  },
+  {
+   "lead": "Patches move these numbers.",
+   "text": "Ratings stand as of 2.04.02. Nerfs, fixes and unconfirmed figures are listed under Watch out on each plate."
+  }
+ ],
+ "ladderNote": "Tiers rank each method against others in its class, on documented figures.",
+ "classes": [
+  {
+   "id": "management",
+   "label": "Management",
+   "glyph": "management",
+   "ambient": "gold"
+  },
+  {
+   "id": "player",
+   "label": "Player Control",
+   "glyph": "player",
+   "ambient": "gold"
+  }
+ ],
+ "leaves": [
+  {
+   "id": "greymanes",
+   "label": "Greymanes",
+   "accent": "bone",
+   "short": "Dispatch and the multipliers that double it.",
+   "blurb": "The dispatch engine: comrades sent out on timers, multiplied by Golden Beer and church Blessings.",
+   "cover": {
+    "entry": "estate-security",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "trade",
+   "label": "Trade",
+   "accent": "royal",
+   "short": "Wagons and the Royal posts that pay ×4.",
+   "blurb": "Hauling packaged goods between 133 Trading Posts; the Royal posts pay four times what they did before 1.16.",
+   "cover": {
+    "entry": "trade-wagons",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "bank",
+   "label": "Bank",
+   "accent": "gold",
+   "short": "Exchange rates, interest and Bonds.",
+   "blurb": "Where money changes form: Silver and Gold Bars into Camp Funds, bars into interest and Bonds.",
+   "cover": {
+    "entry": "bank-investment",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "pailune",
+   "label": "Pailune",
+   "accent": "sky",
+   "short": "The rebuild and the final camp.",
+   "blurb": "Rebuilding Kliff's hometown and moving the Greymanes there: double the farmland, 1,000 storage slots.",
+   "cover": {
+    "entry": "pailune-reconstruction",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "real-estate",
+   "label": "Real Estate",
+   "accent": "brass",
+   "short": "Facility leases and castles.",
+   "blurb": "The DLC's businesses — sawmills, restaurants, smithies, tailor's shops — and the two castles you can claim.",
+   "cover": {
+    "entry": "facility-leases",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "ships",
+   "label": "Ships",
+   "accent": "sea",
+   "short": "Build one, buy the next, crew both.",
+   "blurb": "From the quest-built Small Greymane Ship to the 6M Large Hernandian, and the crew that makes them work.",
+   "cover": {
+    "entry": "fleetmaster-ships",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "islands",
+   "label": "Islands",
+   "accent": "cyan",
+   "short": "Pioneering new anchorages.",
+   "blurb": "Dispatching comrades to claim islands across the Great Ocean, starting with Auronui.",
+   "cover": {
+    "entry": "island-pioneering",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "hustles",
+   "label": "Hustles",
+   "accent": "ember",
+   "short": "Money Kliff makes by hand.",
+   "blurb": "Crafting Gold Bars, lifting them from nobles, collecting crude gold, the card tables, and working the clock.",
+   "cover": {
+    "entry": "gold-bar-crafting",
+    "role": "hero"
+   }
+  }
+ ],
+ "lenses": [
+  {
+   "id": "passive",
+   "label": "Away From the Controller",
+   "blurb": "Methods that pay while you do something else, best Return first.",
+   "where": {
+    "atMost": {
+     "metric": "effort",
+     "tier": 1
+    }
+   },
+   "sortBy": "return"
+  },
+  {
+   "id": "quick-start",
+   "label": "Money This Session",
+   "blurb": "Methods you can start today for little, best Return first.",
+   "where": {
+    "atMost": {
+     "metric": "setup",
+     "tier": 2
+    }
+   },
+   "sortBy": "return"
+  },
+  {
+   "id": "scaling",
+   "label": "Scaling Up",
+   "blurb": "Methods that grow with reinvestment and multipliers.",
+   "where": {
+    "atMost": {
+     "metric": "scale",
+     "tier": 2
+    }
+   },
+   "sortBy": "scale"
+  }
+ ],
+ "categories": [
+  {
+   "id": "management",
+   "label": "Management",
+   "glyph": "management",
+   "accent": "brass",
+   "subtitle": "Camp, staff and assets",
+   "blurb": "Income that runs through the Greymanes, the facilities, the bank and the fleet.",
+   "where": {
+    "cls": [
+     "management"
+    ]
+   },
+   "leaves": "rarity",
+   "cover": {
+    "entry": "estate-security",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "player-control",
+   "label": "Player Control",
+   "glyph": "player",
+   "accent": "ember",
+   "subtitle": "What Kliff does by hand",
+   "blurb": "Money made at the controller: hauling, crafting, stealing, gambling, and moving the clock.",
+   "where": {
+    "cls": [
+     "player"
+    ]
+   },
+   "leaves": "rarity",
+   "cover": {
+    "entry": "trade-wagons",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "when",
+   "label": "When",
+   "glyph": "clock",
+   "accent": "sky",
+   "subtitle": "Before or inside the DLC",
+   "blurb": "What to set up before you start Charting the Unknown, and what the DLC adds.",
+   "where": {
+    "tags": [
+     "before-dlc",
+     "dlc"
+    ]
+   },
+   "leaves": [
+    {
+     "id": "before-dlc",
+     "label": "Before the DLC",
+     "accent": "bone",
+     "short": "Set up while the main story is fresh.",
+     "where": {
+      "tags": [
+       "before-dlc"
+      ]
+     }
+    },
+    {
+     "id": "in-dlc",
+     "label": "In the DLC",
+     "accent": "sea",
+     "short": "Opened by Charting the Unknown.",
+     "where": {
+      "tags": [
+       "dlc"
+      ]
+     }
+    }
+   ],
+   "cover": {
+    "entry": "small-greymane-ship",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "multipliers",
+   "label": "Multipliers",
+   "glyph": "stack",
+   "accent": "gold",
+   "subtitle": "Raise everything else",
+   "blurb": "Methods that pay nothing alone and raise every other payout: Golden Beer, Blessings, workers, the clock.",
+   "where": {
+    "tags": [
+     "multiplier"
+    ]
+   },
+   "leaves": "rarity",
+   "cover": {
+    "entry": "golden-beer",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "can-lose",
+   "label": "Can Lose Money",
+   "glyph": "warn",
+   "accent": "ash",
+   "subtitle": "Read Watch out first",
+   "blurb": "Methods where what you put in can come back smaller: lost cargo, daily upkeep, High-risk interest, bounties, buy-ins.",
+   "where": {
+    "tags": [
+     "risk"
+    ]
+   },
+   "leaves": "rarity",
+   "cover": {
+    "entry": "bank-investment",
+    "role": "hero"
+   }
+  }
+ ],
+ "route": {
+  "title": "The Route",
+  "blurb": "Eight phases, in order. Each one raises what the next earns: multipliers before income, income before conversion, conversion before the DLC's big purchases.",
+  "premise": "You have finished the main story through Journey's End and own Charting the Unknown without starting it. Your camp is at Howling Hill with a working roster.",
+  "phases": [
+   {
+    "id": "multipliers",
+    "label": "Arm the multipliers",
+    "stage": "Before the DLC",
+    "why": "Golden Beer doubles every dispatch payout and Blessings add up to +200% in a region. Both apply to every cycle you run after them, so they come before any income.",
+    "cover": {
+     "entry": "golden-beer",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "entry": "golden-beer",
+      "text": "Clear the Demeniss houses to House Byron and take the beer from Mazzul at Burnhand Quarry. Holding it is enough."
+     },
+     {
+      "entry": "church-blessings",
+      "text": "Donate to the church of the region your best dispatches run in; about 110,000 buys +100% in Hernand."
+     },
+     {
+      "entry": "time-skip",
+      "text": "From here on, rest between jobs: every timer on this route counts in-game hours."
+     }
+    ],
+    "meanwhile": [
+     {
+      "entry": "noble-pickpocketing",
+      "text": "Gold Bars from the Wildlife Park pay for the Blessings."
+     }
+    ]
+   },
+   {
+    "id": "engine",
+    "label": "Build the dispatch engine",
+    "stage": "Before the DLC",
+    "why": "Estate Security turns food into Camp Funds on Repeat. Supply dispatches keep the food coming, excavations pay the largest lumps, and Grey-0 workers fill the routine slots.",
+    "cover": {
+     "entry": "estate-security",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "entry": "supply-dispatches",
+      "text": "Set one food mission for every food-hungry money mission, then add stone and timber."
+     },
+     {
+      "entry": "estate-security",
+      "text": "Put every manor's security mission on Repeat."
+     },
+     {
+      "entry": "excavation-dispatches",
+      "text": "Send specialists to excavations: 37,000 a Tinkerton run."
+     },
+     {
+      "entry": "grey-0-workers",
+      "text": "Unlock Grey-0 workers at Marni's Steel Armory once food and funds balance after a full cycle."
+     }
+    ],
+    "meanwhile": [
+     {
+      "entry": "gold-bar-crafting",
+      "text": "Farm Golden Apples and ore while the timers run."
+     }
+    ]
+   },
+   {
+    "id": "trade",
+    "label": "Open the trade routes",
+    "stage": "Before the DLC",
+    "why": "Patch 1.16 quadrupled Royal post prices and added 133 posts. One wagon of Salt sold for 84,450 Silver, and every Silver donated becomes 10 Camp Funds.",
+    "cover": {
+     "entry": "trade-wagons",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "entry": "trade-wagons",
+      "text": "Find the buyer on the Trade tab, then load; never drive back empty."
+     },
+     {
+      "entry": "royal-trading-posts",
+      "text": "Feed each Royal court the good on its list."
+     }
+    ],
+    "meanwhile": [
+     {
+      "entry": "card-tables",
+      "text": "Spare Silver between runs can sit at Beighen's Five-Card table."
+     }
+    ]
+   },
+   {
+    "id": "convert",
+    "label": "Convert at the best rate",
+    "stage": "Before the DLC",
+    "why": "Ships, leases and Blessings cost Camp Funds. Silver converts at 10 to 1 since 2.01; a whole Gold Bar was measured at 50,000, ten times its Silver value. Test one bar, then convert the cheaper way.",
+    "cover": {
+     "entry": "camp-donations",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "entry": "camp-donations",
+      "text": "Donate one bar and read the counter. At 50,000, donate bars whole and keep Silver for Kliff."
+     },
+     {
+      "entry": "bank-investment",
+      "text": "Bars you will not donate sit at Low risk; Medium swings −15% to +20% a cycle. Bonds only past 100 spare bars."
+     }
+    ]
+   },
+   {
+    "id": "pailune",
+    "label": "Finish Pailune",
+    "stage": "Before the DLC",
+    "why": "The final camp doubles farm and ranch space, which is more food for the dispatch engine, and 1,000 storage slots hold cargo between runs.",
+    "cover": {
+     "entry": "pailune-camp",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "entry": "pailune-reconstruction",
+      "text": "Finish the rebuild if it is still open."
+     },
+     {
+      "entry": "pailune-camp",
+      "text": "Clear the quest checklist, save manually, and move with Serkis's The Return Home."
+     }
+    ]
+   },
+   {
+    "id": "lease",
+    "label": "Lease before you sail",
+    "stage": "In the DLC",
+    "why": "Facilities are the DLC's first income: the Timberham lease costs 15,000 and pays daily while you are at sea. Upkeep is daily too, so lease only what your roster can staff.",
+    "cover": {
+     "entry": "timberham-sawmill",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "entry": "timberham-sawmill",
+      "text": "Lease Timberham and reach Popularity Level 3 with low prices."
+     },
+     {
+      "entry": "facility-leases",
+      "text": "Lease the businesses your staff can run: Cooking, Smithing, Tailoring, Woodworking."
+     }
+    ]
+   },
+   {
+    "id": "fleet",
+    "label": "Build the first ship, buy the second",
+    "stage": "In the DLC",
+    "why": "The quest-built Small Greymane Ship holds 14, the same as the 40,000 Small Hernandian. Skip that purchase; the Medium at 1.2M is the first ship that adds cargo space.",
+    "cover": {
+     "entry": "fleetmaster-ships",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "entry": "small-greymane-ship",
+      "text": "Build it from a port's Missions menu: five comrades, 12 hours."
+     },
+     {
+      "entry": "ship-crew",
+      "text": "Crew First Mate, Rigger and Lookout; keep Deckhands for the islands."
+     },
+     {
+      "entry": "fleetmaster-ships",
+      "text": "Buy the Medium at 1.2M; the Large at 6M only when routes fill 22 slots."
+     }
+    ]
+   },
+   {
+    "id": "islands",
+    "label": "Pioneer the islands",
+    "stage": "In the DLC",
+    "why": "Each anchorage adds missions, shops and a ship teleport point. Castles come last: they cost funds and stock and pay nothing back.",
+    "cover": {
+     "entry": "island-pioneering",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "entry": "island-pioneering",
+      "text": "Pioneer Auronui from its Anchorage, then Samora and Winding Island."
+     },
+     {
+      "entry": "castles",
+      "text": "Rebuild a castle only from surplus: 20 comrades away for 15 days."
+     }
+    ]
+   }
+  ]
+ },
+ "redirects": {}
+}

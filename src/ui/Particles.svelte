@@ -1,5 +1,6 @@
 <script lang="ts">
-  // Ambient terrain motion behind a plate: embers (land), bubbles + light shafts (sea), wind (sky).
+  // Ambient motion behind a plate: embers (land), bubbles + light shafts (sea), wind (sky),
+  // gold dust (gold: slow-falling motes that catch the light as they turn).
   import { app } from '../core/state.svelte';
 
   let { mode = 'land' }: { mode?: string } = $props();
@@ -13,11 +14,12 @@
     const ctx = cv.getContext('2d')!;
     const dpr = Math.min(devicePixelRatio || 1, 1.5);
     let w = 0, h = 0, raf = 0, visible = true, t = 0;
-    const count = mode === 'sea' ? 38 : mode === 'sky' ? 30 : 46;
+    const count = mode === 'sea' ? 38 : mode === 'sky' ? 30 : mode === 'gold' ? 40 : 46;
     const rnd = (a: number, b: number) => a + Math.random() * (b - a);
 
     const spawn = (initial: boolean): P => {
       if (mode === 'sea') return { x: rnd(0, w), y: initial ? rnd(0, h) : h + 10, vx: 0, vy: -rnd(0.25, 0.9), r: rnd(1, 3.6), a: rnd(0.15, 0.5), ph: rnd(0, 6.28), len: 0 };
+      if (mode === 'gold') return { x: rnd(0, w), y: initial ? rnd(0, h) : -rnd(4, 40), vx: rnd(-0.12, 0.12), vy: rnd(0.12, 0.42), r: rnd(0.6, 2.1), a: rnd(0.3, 0.85), ph: rnd(0, 6.28), len: rnd(0.6, 1.6) };
       if (mode === 'sky') return { x: initial ? rnd(-w * 0.2, w) : -rnd(40, 200), y: rnd(0, h), vx: rnd(1.6, 4.2), vy: rnd(-0.15, 0.15), r: rnd(0.6, 1.2), a: rnd(0.08, 0.3), ph: rnd(0, 6.28), len: rnd(40, 160) };
       return { x: rnd(0, w), y: initial ? rnd(h * 0.2, h) : h + 6, vx: rnd(0.05, 0.45), vy: -rnd(0.2, 0.75), r: rnd(0.5, 2), a: rnd(0.35, 0.95), ph: rnd(0, 6.28), len: 0 };
     };
@@ -62,6 +64,14 @@
           ctx.lineWidth = 0.8;
           ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.stroke();
           if (p.y < -10) ps[i] = spawn(false);
+        } else if (mode === 'gold') {
+          // a flake turning in still air: drifts on a slow sine, flashes when its face catches the light
+          p.x += p.vx + Math.sin(p.ph * 0.4) * 0.3; p.y += p.vy;
+          const turn = Math.abs(Math.sin(p.ph * p.len));
+          const glint = turn > 0.96 ? 1 : 0.35 + turn * 0.4;
+          ctx.fillStyle = `rgba(255,${196 + Math.round(turn * 40)},${96 + Math.round(turn * 70)},${p.a * glint})`;
+          ctx.beginPath(); ctx.ellipse(p.x, p.y, p.r, Math.max(0.3, p.r * turn), p.ph * 0.2, 0, 6.283); ctx.fill();
+          if (p.y > h + 8) ps[i] = spawn(false);
         } else if (mode === 'sky') {
           p.x += p.vx; p.y += p.vy + Math.sin(p.ph * 0.5) * 0.2;
           const g = ctx.createLinearGradient(p.x - p.len, p.y, p.x, p.y);

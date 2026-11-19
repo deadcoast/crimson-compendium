@@ -3,17 +3,17 @@
   import { mediaUrl } from '../core/tree';
   import { CREDITS } from '../core/format';
   import { reveal } from '../core/motion';
-  import type { Entry } from '../core/types';
+  import type { BranchLabels, Entry } from '../core/types';
   import Glyph from './Glyph.svelte';
 
-  let { entry }: { entry: Entry } = $props();
+  let { entry, labels }: { entry: Entry; labels?: BranchLabels } = $props();
 
   const caps = $derived(entry.media.captures);
   let active = $state(0);
   $effect(() => { void entry.id; active = 0; });
   const cap = $derived(caps[active]);
 
-  const KIND: Record<string, string> = { map: 'World map', overworld: 'On site', action: 'In action', variant: 'Variant' };
+  const KIND: Record<string, string> = { map: 'World map', overworld: 'On site', action: 'In action', variant: 'Variant', menu: 'In-game screen' };
 
   // loupe: magnify map labels under the pointer
   let frame: HTMLElement | undefined = $state();
@@ -33,7 +33,7 @@
 
 <section class="where" data-outline="Where" use:reveal>
   <header class="sec-head">
-    <span class="eyebrow">Location reference</span>
+    <span class="eyebrow">{labels?.where ?? 'Location reference'}</span>
     <h3 class="display">Where</h3>
   </header>
 
@@ -83,7 +83,7 @@
   {:else}
     <div class="roam">
       <span class="dial" aria-hidden="true"><Glyph name="compass" size={44} /></span>
-      <p><span class="eyebrow">Roams — no fixed spawn</span>{entry.location}</p>
+      <p><span class="eyebrow">{labels?.roam ?? 'Roams — no fixed spawn'}</span>{entry.location}</p>
     </div>
   {/if}
 </section>

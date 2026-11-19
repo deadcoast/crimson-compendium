@@ -5,6 +5,14 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
 ## [Unreleased]
 
 ### Added
+- **Riches**, a second branch: an endgame economy guide for a player who has finished the main story but not started *Charting the Unknown*.
+  - 24 money methods across eight leaves (Greymanes, Trade, Bank, Pailune, Real Estate, Ships, Islands, Hustles), rated I–V on Return, Effort, Setup and Scale within Management or Player Control.
+  - **The Route** (`#riches`, `#riches-route`): eight phases in order, image-led, with a rail that tracks your place and every step linked to its plate.
+  - **Ledger** on every Riches plate: what it pays in, each figure with its basis and publisher, costs, the multipliers that raise it, and what to watch out for.
+  - Category branches Management, Player Control, When, Multipliers and Can Lose Money; Best for lenses; gold-dust ambient motion.
+  - Research notes with every source: `docs/RICHES-RESEARCH.md`.
+- Branch-level wording in the shared UI: plural, lens folder, How/Where labels, tier rules, ladder note, class glyphs and ambient motion now come from `branch.json`. The tier sheet, hover cards and as-of line follow the branch you are in.
+- An `In-game screen` capture kind for UI screenshots; the lint checks route phases, quoted figures and `stacks` lists; verify checks every branch's route and audits it with axe.
 - `npm run verify`: builds the site and checks it in a headless browser, failing on any problem. CI and the Release workflow run it. It covers:
   - the data lint;
   - every plate, list, redirect and the ladder;

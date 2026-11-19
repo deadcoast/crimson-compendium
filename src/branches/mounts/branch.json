@@ -2,8 +2,17 @@
  "id": "mounts",
  "title": "Mounts",
  "singular": "Mount",
+ "plural": "Mounts",
  "tagline": "Every rideable creature and machine in Pywel — where it lives, how to make it yours, and what it is worth riding for.",
  "asOf": "Current to Charting the Unknown · November 2026",
+ "labels": {
+  "lenses": "Ride for",
+  "how": "Acquisition",
+  "howOutline": "How to get",
+  "where": "Location reference",
+  "roam": "Roams — no fixed spawn",
+  "classAxis": "Terrain"
+ },
  "metrics": [
   {
    "id": "speed",
@@ -26,6 +35,29 @@
    "blurb": "Mounted fighting value: Attack and Health, special attacks, and whether it keeps fighting after you dismount."
   }
  ],
+ "rules": [
+  {
+   "lead": "Class means terrain.",
+   "text": "A mount is ranked against others of its own class — Land, Sea or Sky — so a Tier I sea mount is the best thing that swims, not the best mount overall."
+  },
+  {
+   "lead": "Traits can lift a metric.",
+   "text": "A mount with a decisive trait scores higher on the metric that trait serves: no fall damage lifts Travel, a unique attack lifts Combat."
+  },
+  {
+   "lead": "Horses are rated at Lv 5.",
+   "text": "They grow with riding and trust; beasts and machines arrive at full strength."
+  },
+  {
+   "lead": "“Not rated”",
+   "text": "marks a metric that does not apply, such as Stamina on a balloon or mech."
+  },
+  {
+   "lead": "Every rating carries its basis.",
+   "text": "Ratings are editorial calls built on recorded stats and the cited guides. Where no source compares a mount, it sits at Tier III and says so."
+  }
+ ],
+ "ladderNote": "Tiers rank each mount against others of the same terrain. Ratings are editorial calls built on recorded stats and the cited guides.",
  "classes": [
   {
    "id": "land",

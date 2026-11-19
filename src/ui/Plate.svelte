@@ -59,8 +59,8 @@
     <Seals {branch} {entry} />
 
     <div class="pair">
-      <Where {entry} />
-      <How {entry} />
+      <Where {entry} labels={branch.labels} />
+      <How {entry} labels={branch.labels} />
     </div>
 
     {#each branch.sections as Section}

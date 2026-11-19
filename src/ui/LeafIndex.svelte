@@ -88,13 +88,13 @@
   </header>
 
   {#if showFilter}
-    <div class="filter" role="radiogroup" aria-label="Filter by terrain">
+    <div class="filter" role="radiogroup" aria-label="Filter by {(branch.labels?.classAxis ?? "class").toLowerCase()}">
       <button role="radio" aria-checked={app.cls === ''} class:on={app.cls === ''} onclick={() => (app.cls = '')}>
         All <span class="mono">{all.length}</span>
       </button>
       {#each presentClasses as c (c.id)}
         <button role="radio" aria-checked={app.cls === c.id} class:on={app.cls === c.id} data-cls={c.id} onclick={() => (app.cls = c.id)}>
-          <Glyph name={c.id} size={14} />
+          <Glyph name={c.glyph ?? c.id} size={14} />
           {c.label} <span class="mono">{all.filter((e) => e.cls === c.id).length}</span>
         </button>
       {/each}
@@ -145,7 +145,7 @@
         </ol>
       {/each}
     {/key}
-    {#if list.length === 0}<p class="empty">Nothing here for that terrain.</p>{/if}
+    {#if list.length === 0}<p class="empty">Nothing here for that filter.</p>{/if}
   </div>
 </section>
 

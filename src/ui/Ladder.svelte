@@ -4,14 +4,14 @@
   import { flip } from 'svelte/animate';
   import { quintOut } from 'svelte/easing';
   import { app } from '../core/state.svelte';
-  import { href, mediaUrl, ROMAN, TIER_NAMES } from '../core/tree';
+  import { classLabel, href, mediaUrl, ROMAN, TIER_NAMES } from '../core/tree';
   import type { Branch } from '../core/types';
   import Glyph from './Glyph.svelte';
   import { onLayout } from '../core/motion';
 
   let { branch }: { branch: Branch } = $props();
 
-  // initial selections only; the ladder remounts per branch
+  // initial selections only; App keys the ladder by branch, so a branch switch remounts it
   let metric = $state(untrack(() => branch.metrics[0].id));
   let cls = $state(untrack(() => branch.classes[0].id));
   let leaves = $state<Record<string, boolean>>(untrack(() => Object.fromEntries(branch.leaves.map((l) => [l.id, true]))));
@@ -64,10 +64,10 @@
     {#key metric}<p class="blurb">{m.blurb}</p>{/key}
 
     <div class="filters">
-      <div class="seg" role="radiogroup" aria-label="Terrain">
+      <div class="seg" role="radiogroup" aria-label={branch.labels?.classAxis ?? 'Class'}>
         {#each branch.classes as c (c.id)}
           <button role="radio" aria-checked={cls === c.id} class:on={cls === c.id} data-cls={c.id} onclick={() => (cls = c.id)}>
-            <Glyph name={c.id} size={14} />{c.label}
+            <Glyph name={c.glyph ?? c.id} size={14} />{c.label}
             <span class="mono">{branch.entries.filter((e) => e.cls === c.id).length}</span>
           </button>
         {/each}
@@ -104,12 +104,12 @@
               <span class="tn">{e.name}</span>
             </a>
           {/each}
-          {#if !r.items.length}<span class="none">No {cls} mounts at this tier</span>{/if}
+          {#if !r.items.length}<span class="none">No {classLabel(branch, cls).toLowerCase()} {branch.plural.toLowerCase()} at this tier</span>{/if}
         </div>
       </li>
     {/each}
   </ol>
-  <p class="foot">Tiers rank each mount against others of the same terrain. Ratings are editorial calls built on recorded stats and the cited guides; hover a token for its reasoning, open it for the full basis.</p>
+  <p class="foot">{branch.ladderNote} Hover a token for its reasoning, open it for the full basis.</p>
 </section>
 
 <style>
