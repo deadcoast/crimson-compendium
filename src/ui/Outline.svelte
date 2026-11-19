@@ -75,7 +75,7 @@
     {/each}
   </nav>
 {:else}
-  <p class="empty">Open a mount to see its outline.</p>
+  <p class="empty">Open a plate to see its outline.</p>
 {/if}
 
 <style>

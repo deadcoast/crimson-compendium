@@ -2,12 +2,13 @@
 // browser and exits non-zero on any failure. CI and the Release workflow run it.
 //
 //   data lint     content rules on every branch (tools/lint.mjs)
-//   routes        every entry plate, leaf, category, category leaf, lens, redirect and the ladder,
-//                 each checked for the right title, member count, images that load and the
-//                 explorer row it selects
+//   routes        every entry plate, leaf, category, category leaf, lens, redirect, the ladder and a
+//                 branch's route, each checked for the right title, member count, images that load
+//                 and the explorer row it selects
 //   explorer      focus, arrows, Enter, type navigation, expand, filter, Esc; recent and outline;
 //                 the phone drawer
-//   accessibility axe-core on four views; serious and critical findings fail
+//   accessibility axe-core on the first branch's four views plus every route and one plate per
+//                 further branch; serious and critical findings fail
 //   self-contained the site makes no request off its own origin and renders with its own fonts
 //                 from file:// with the network cut
 //
@@ -183,8 +184,42 @@ try {
       await go(pg, `${b.id}-ladder`);
       if (!(await waitText(pg, '.ladder h1', 'Tier Ladder'))) problems.push('ladder did not open');
       const tokens = await pg.evaluate(() => document.querySelectorAll('.ladder img').length);
-      if (!tokens) problems.push('ladder shows no mounts');
+      if (!tokens) problems.push('ladder shows no tokens');
       row('redirects', `${b.id} · ${Object.keys(b.def.redirects ?? {}).length} redirects · ladder ${tokens} tokens`, problems);
+    }
+
+    // the route: the branch root opens on it, every phase renders with its cover, every step links its plate
+    if (b.def.route) {
+      const problems = [];
+      const r = b.def.route;
+      await go(pg, `${b.id}-route`);
+      await go(pg, b.id);
+      if (!(await waitText(pg, '.route h1', r.title))) problems.push(`#${b.id} does not open the route (h1 "${await text(pg, '.route h1')}")`);
+      const got = await pg.evaluate(() => ({
+        phases: document.querySelectorAll('.route .phase').length,
+        links: [...document.querySelectorAll('.route .phase a[href]')].map((a) => a.getAttribute('href')),
+      }));
+      if (got.phases !== r.phases.length) problems.push(`${got.phases} phases, want ${r.phases.length}`);
+      const want = r.phases.flatMap((ph) => [...ph.steps, ...(ph.meanwhile ?? [])]).filter((st) => st.entry).map((st) => `#${b.id}-${st.entry}`);
+      for (const h of want) if (!got.links.includes(h)) problems.push(`no link to ${h}`);
+      // covers load lazily: scroll the route through, then require every cover to have decoded
+      await pg.evaluate(async () => {
+        const p = document.querySelector('.route');
+        for (let y = 0; y <= p.scrollHeight; y += p.clientHeight * 0.6) { p.scrollTop = y; await new Promise((res) => setTimeout(res, 120)); }
+      });
+      const covers = await pg
+        .waitForFunction((n) => [...document.querySelectorAll('.route .cover img')].filter((i) => i.complete && i.naturalWidth > 0).length === n,
+          r.phases.filter((ph) => ph.cover).length, { timeout: 8000 })
+        .then(() => true, () => false);
+      if (!covers) problems.push(`covers did not all load (${await pg.evaluate(() => [...document.querySelectorAll('.route .cover img')].filter((i) => !(i.complete && i.naturalWidth > 0)).map((i) => i.getAttribute('src')).join(', '))})`);
+      const sel = await text(pg, '[role=tree] [aria-selected=true]');
+      if (!sel?.startsWith(r.title)) problems.push(`explorer selects "${sel}"`);
+      // the rail follows the reader: jumping to the last phase marks it current
+      await pg.evaluate(() => document.querySelector('.route').scrollTo({ top: 0 }));
+      await pg.click('.rail li:last-child button');
+      await pg.waitForFunction(() => document.querySelector('.rail li:last-child button')?.getAttribute('aria-current') === 'step', null, { timeout: 4000 })
+        .catch(() => problems.push('rail does not mark the phase it jumps to'));
+      row('route', `${b.id} · ${got.phases} phases · ${want.length} step links`, problems);
     }
   }
 
@@ -295,6 +330,11 @@ try {
       [`${b.id}-ladder`, { width: 1440, height: 900 }],
       [`${b.id}-${b.def.categories[0].id}`, { width: 390, height: 844 }],
       [`${b.id}-${b.def.categories.at(-1).id}`, { width: 1440, height: 900 }],
+      // every further branch: its route on desktop and phone, and a plate with its own sections
+      ...branches.slice(1).flatMap((o) => [
+        ...(o.def.route ? [[`${o.id}-route`, { width: 1440, height: 900 }], [`${o.id}-route`, { width: 390, height: 844 }]] : []),
+        [`${o.id}-${o.entries[0].id}`, { width: 1440, height: 900 }],
+      ]),
     ];
     let checked = 0;
     for (const [hash, vp] of views) {
@@ -304,7 +344,7 @@ try {
       // sections reveal as they scroll into view (opacity 0 until then, which axe skips), so scroll
       // every pane through to the end and let the reveals finish before auditing
       await a.evaluate(async () => {
-        const panes = [...document.querySelectorAll('.plate, .ladder, .index .scroll')].filter((p) => p.scrollHeight > p.clientHeight);
+        const panes = [...document.querySelectorAll('.plate, .ladder, .route, .index .scroll')].filter((p) => p.scrollHeight > p.clientHeight);
         for (const p of panes) {
           for (let y = 0; y <= p.scrollHeight; y += p.clientHeight * 0.7) { p.scrollTop = y; await new Promise((r) => setTimeout(r, 140)); }
         }

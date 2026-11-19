@@ -8,7 +8,7 @@ import { href, lensEntries, tierOf, ROMAN } from './tree';
 /** VS Code's list row height; touch layouts pass a taller row. */
 export const ROW = 22;
 
-export type NodeKind = 'branch' | 'leaf' | 'cat' | 'catleaf' | 'folder' | 'lens' | 'ladder' | 'entry';
+export type NodeKind = 'branch' | 'leaf' | 'cat' | 'catleaf' | 'folder' | 'lens' | 'ladder' | 'route' | 'entry';
 
 export interface TNode {
   key: string;
@@ -65,7 +65,10 @@ function entries(b: Branch, parent: TNode, list: Entry[], ctx: ListContext, rank
 
 export function buildTree(branches: Branch[]): TNode[] {
   return branches.map((b) => {
-    const root = make(undefined, b.id, { kind: 'branch', label: b.title, href: href.branch(b), count: b.entries.length, glyph: 'diamond', accent: 'crimson' });
+    const accent = b.accent ?? 'crimson';
+    const root = make(undefined, b.id, { kind: 'branch', label: b.title, href: href.branch(b), count: b.entries.length, glyph: 'diamond', accent });
+    // the plan leads the branch: it is where a reader starts, the leaves are what it points into
+    if (b.route) make(root, 'route', { kind: 'route', label: b.route.title, href: href.route(b), glyph: 'route', accent, count: b.route.phases.length });
     for (const l of b.leaves) {
       const members = b.entries.filter((e) => e.leaf === l.id);
       const n = make(root, `leaf:${l.id}`, { kind: 'leaf', label: l.label, href: href.leaf(b, l.id), accent: l.accent, count: members.length });
@@ -78,13 +81,13 @@ export function buildTree(branches: Branch[]): TNode[] {
         entries(b, ln, cl.entries, { kind: 'cat', id: c.id, leaf: cl.id });
       }
     }
-    const ride = make(root, 'ride', { kind: 'folder', label: 'Ride for', glyph: 'lens', accent: 'crimson' });
+    const ride = make(root, 'ride', { kind: 'folder', label: b.labels?.lenses ?? 'Ride for', glyph: 'lens', accent });
     for (const lens of b.lenses) {
       const list = lensEntries(b, lens);
-      const n = make(ride, lens.id, { kind: 'lens', label: lens.label, href: href.lens(b, lens.id), accent: 'crimson', count: list.length });
+      const n = make(ride, lens.id, { kind: 'lens', label: lens.label, href: href.lens(b, lens.id), accent, count: list.length });
       entries(b, n, list, { kind: 'lens', id: lens.id }, lens.sortBy);
     }
-    make(root, 'ladder', { kind: 'ladder', label: 'Tier ladder', href: href.ladder(b), glyph: 'ladder', accent: 'crimson' });
+    make(root, 'ladder', { kind: 'ladder', label: 'Tier ladder', href: href.ladder(b), glyph: 'ladder', accent });
     return root;
   });
 }
@@ -107,6 +110,7 @@ export function ctxKey(b: Branch, ctx: ListContext): string {
 export function activeKey(view: View, ctx: ListContext, nodes: Map<string, TNode>): string {
   const b = view.branch;
   if (view.kind === 'ladder') return `${b.id}/ladder`;
+  if (view.kind === 'route') return `${b.id}/route`;
   if (view.kind !== 'entry') return ctxKey(b, ctx);
   const direct = `${ctxKey(b, ctx)}/${view.entry.id}`;
   if (nodes.has(direct)) return direct;

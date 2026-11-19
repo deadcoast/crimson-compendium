@@ -1,19 +1,19 @@
-# TODO: R1 Riches tree
+# TODO: M2 Full roster
 
 ```
 [IDENTIFIED + PLAN] -> [SHELVED] -> [TODO]
 ```
 
-Items are from `SHELVED.md` › R1 `[todo]`. The design is in `DESIGN.md` › Riches tree, and the research is in `docs/RICHES-RESEARCH.md`. M2 Full roster resumes after R1.
+Items are from `SHELVED.md` › M2 `[todo]`; the audit behind them is `IDENTIFIED.md` §5. R1 Riches tree is delivered (`DESIGN.md` › Riches tree).
 
-- [ ] RI-01: generic core: branch `labels` and the Route view
-- [ ] RI-02: Riches branch data (8 leaves, 30 methods, figures with basis)
-- [ ] RI-03: `RichesLedger.svelte`
-- [ ] RI-04: imagery, credited
-- [ ] RI-05: verify and lint cover both roots
+- [ ] NF-06: split mounts the game registers separately out of `variants`
+- [ ] NF-07: keepable mounts missing from the data
+- [ ] NF-08: Ships category in Mounts
+- [ ] NF-09: fleeting rides
+- [ ] NF-03: re-check the remaining known gaps
 
-**Done when:** `npm run verify` and CI are green, R1 is marked delivered in `PLAN.md`, and its decisions are in `DESIGN.md`.
+**Done when:** `npm run verify` and CI are green, M2 is marked delivered in `PLAN.md`, and its decisions are in `DESIGN.md`.
 
 ## Next
 
-`SHELVED.md`: when this list is complete, M2 moves in.
+`SHELVED.md`: when this list is complete, M3 moves in.

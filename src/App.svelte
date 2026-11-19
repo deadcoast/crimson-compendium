@@ -6,6 +6,7 @@
   import LeafIndex from './ui/LeafIndex.svelte';
   import Plate from './ui/Plate.svelte';
   import Ladder from './ui/Ladder.svelte';
+  import Route from './ui/Route.svelte';
   import Palette from './ui/Palette.svelte';
   import Sheet from './ui/Sheet.svelte';
   import Lightbox from './ui/Lightbox.svelte';
@@ -46,7 +47,8 @@
   let menu = $state(false);
   $effect(() => { void app.hash; menu = false; });
   $effect(() => {
-    const title = view.kind === 'entry' ? `${view.entry.name} · ` : view.kind === 'ladder' ? 'Tier Ladder · ' : '';
+    const title =
+      view.kind === 'entry' ? `${view.entry.name} · ` : view.kind === 'ladder' ? 'Tier Ladder · ' : view.kind === 'route' ? `${branch.route?.title} · ` : '';
     document.title = `${title}${branch.title} — Crimson Compendium`;
   });
 
@@ -78,7 +80,7 @@
     }
     if (app.overlayOpen) return;
     if (ev.key === 'l' || ev.key === 'L') { app.go(view.kind === 'ladder' ? href.ctx(branch, app.ctx) : href.ladder(branch)); return; }
-    if (view.kind === 'ladder') return;
+    if (view.kind === 'ladder' || view.kind === 'route') return;
     if (ev.key === 'j' || ev.key === 'ArrowRight') { ev.preventDefault(); step(1); }
     else if (ev.key === 'k' || ev.key === 'ArrowLeft') { ev.preventDefault(); step(-1); }
   }
@@ -109,6 +111,8 @@
   <main class="main">
     {#if view.kind === 'ladder'}
       <Ladder {branch} />
+    {:else if view.kind === 'route'}
+      <Route {branch} />
     {:else if entry}
       <LeafIndex {branch} {ctx} selectedId={entry.id} />
       <Plate {branch} {entry} {ctx} />
@@ -139,7 +143,7 @@
     grid-template-rows: minmax(0, 1fr);
     grid-template-areas: 'index plate';
   }
-  .main > :global(.ladder) { grid-column: 1 / -1; grid-row: 1; }
+  .main > :global(.ladder), .main > :global(.route) { grid-column: 1 / -1; grid-row: 1; }
   .topbar, .spine-scrim { display: none; }
 
   @media (max-width: 1240px) {
@@ -153,7 +157,7 @@
       grid-template-areas: 'top' 'main';
     }
     .main { grid-area: main; grid-template-columns: minmax(0, 1fr); grid-template-areas: 'main'; }
-    .app .main > :global(.index), .app .main > :global(.plate), .app .main > :global(.ladder) { grid-area: main; }
+    .app .main > :global(.index), .app .main > :global(.plate), .app .main > :global(.ladder), .app .main > :global(.route) { grid-area: main; }
     .app[data-pane='list'] .main > :global(.plate) { display: none; }
     .app[data-pane='plate'] .main > :global(.index) { display: none; }
 

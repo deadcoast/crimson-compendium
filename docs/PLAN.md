@@ -21,8 +21,8 @@ A milestone is delivered when its TODO is complete, `npm run verify` and CI are 
 |---|---|---|---|
 | M0 | Mounts branch (v0.1) and Explorer & category branches (v0.2.0) | the first branch | delivered |
 | M1 | Ground truth | a regression gate in the repo; the offline release renders as designed; accessible to keyboard and screen readers | delivered: `npm run verify` in CI and Release; see `DESIGN.md` › Build and release |
-| R1 | Riches tree | an endgame economy guide beside Mounts: methods rated I–V, the Route, a ledger on every plate (`DESIGN.md` › Riches) | in progress → `SHELVED.md` › R1 |
-| M2 | Full roster | every mount the game lets you ride, one entry per registered mount, ships included (IDENTIFIED §5) | shelved → `SHELVED.md` › M2 |
+| R1 | Riches tree | an endgame economy guide beside Mounts: methods rated I–V, the Route, a ledger on every plate (`DESIGN.md` › Riches) | delivered: 24 methods, the Route, the ledger; see `DESIGN.md` › Riches tree |
+| M2 | Full roster | every mount the game lets you ride, one entry per registered mount, ships included (IDENTIFIED §5) | in progress → `SHELVED.md` › M2 |
 | M3 | Where, for every mount | map and on-site captures and full-bleed heroes for the whole roster | shelved → `SHELVED.md` › M3 |
 | M4 | Ratings on evidence | no rating defaults to III for lack of data | shelved → `SHELVED.md` › M4 |
 | M5 | Compare and navigate *(proposal)* | compare mounts side by side, section links, keyboard sheet, explorer split | shelved → `SHELVED.md` › M5 |

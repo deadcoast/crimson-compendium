@@ -26,6 +26,7 @@
   --royal: #4169e1;
   --royal-hi: #5a80f2; /* royal blue lifted for text and marks: 5.4:1 on ink, where #4169e1 is 4.0:1 */
   --cyan: #29d0e3;
+  --gold: #e0b345; /* Riches root: coin gold, kept clear of brass so the two read apart side by side */
   --parchment: #dbd5c8;
 
   /* classes (terrain) — drawn from the in-game map: ochre land, map-water teal, pale sky */
@@ -59,6 +60,7 @@
 [data-accent='ash'] { --accent: #a59c90; --accent-dim: rgba(165, 156, 144, 0.14); }
 [data-accent='royal'] { --accent: var(--royal-hi); --accent-dim: rgba(65, 105, 225, 0.2); }
 [data-accent='cyan'] { --accent: var(--cyan); --accent-dim: rgba(41, 208, 227, 0.16); }
+[data-accent='gold'] { --accent: var(--gold); --accent-dim: rgba(224, 179, 69, 0.16); }
 /* category branches defined by terrain take the terrain colour */
 [data-accent='land'] { --accent: var(--land); --accent-dim: rgba(201, 162, 107, 0.16); }
 [data-accent='sea'] { --accent: var(--sea); --accent-dim: rgba(74, 166, 187, 0.16); }
@@ -67,3 +69,5 @@
 [data-cls='land'] { --cls: var(--land); }
 [data-cls='sea'] { --cls: var(--sea); }
 [data-cls='sky'] { --cls: var(--sky); }
+[data-cls='management'] { --cls: var(--brass); }
+[data-cls='player'] { --cls: var(--ember); }

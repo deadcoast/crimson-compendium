@@ -5,6 +5,9 @@ import { matches } from '../core/select';
 import mountsDef from './mounts/branch.json';
 import mountsEntries from './mounts/entries.json';
 import MountRecord from './mounts/MountRecord.svelte';
+import richesDef from './riches/branch.json';
+import richesEntries from './riches/entries.json';
+import RichesLedger from './riches/RichesLedger.svelte';
 
 const ID = /^[a-z0-9-]+$/;
 
@@ -27,13 +30,13 @@ function define(def: BranchDef, entries: Entry[], sections: PlateSection[] = [])
   const fail = (where: string, msg: string) => { throw new Error(`${def.id}/${where}: ${msg}`); };
   const leaves = new Set(def.leaves.map((l) => l.id));
   const cats = new Set(def.categories.map((c) => c.id));
-  const reserved = new Set(['ladder', ...leaves, ...cats]);
+  const reserved = new Set(['ladder', 'route', ...leaves, ...cats]);
   const classes = new Set(def.classes.map((c) => c.id));
   const metrics = def.metrics.map((m) => m.id);
   const byId = new Map<string, Entry>();
 
   for (const c of def.categories) {
-    if (!ID.test(c.id) || leaves.has(c.id) || c.id === 'ladder' || c.id.startsWith('for-')) fail(c.id, 'category id collides with a route name');
+    if (!ID.test(c.id) || leaves.has(c.id) || c.id === 'ladder' || c.id === 'route' || c.id.startsWith('for-')) fail(c.id, 'category id collides with a route name');
   }
   if (cats.size !== def.categories.length) fail('categories', 'duplicate category id');
 
@@ -67,6 +70,12 @@ function define(def: BranchDef, entries: Entry[], sections: PlateSection[] = [])
     }
   }
 
+  // a route step that names a plate must name a real one; a phase cover must resolve like a leaf cover
+  for (const ph of def.route?.phases ?? []) {
+    for (const s of [...ph.steps, ...(ph.meanwhile ?? [])]) if (s.entry && !byId.has(s.entry)) fail(`route/${ph.id}`, `unknown entry "${s.entry}"`);
+    if (ph.cover?.entry && !byId.has(ph.cover.entry)) fail(`route/${ph.id}`, `cover entry "${ph.cover.entry}" does not exist`);
+  }
+
   for (const [from, to] of Object.entries(def.redirects ?? {})) {
     if (routes.has(from)) fail(from, 'redirect shadows a live route');
     if (!routes.has(to)) fail(from, `redirect target "${to}" does not exist`);
@@ -77,4 +86,5 @@ function define(def: BranchDef, entries: Entry[], sections: PlateSection[] = [])
 
 export const branches: Branch[] = [
   define(mountsDef as unknown as BranchDef, mountsEntries as unknown as Entry[], [MountRecord]),
+  define(richesDef as unknown as BranchDef, richesEntries as unknown as Entry[], [RichesLedger]),
 ];

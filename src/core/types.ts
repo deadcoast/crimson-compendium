@@ -72,7 +72,14 @@ export interface Entry {
 }
 
 export interface Metric { id: string; label: string; blurb: string }
-export interface ClassDef { id: string; label: string }
+export interface ClassDef {
+  id: string;
+  label: string;
+  /** icon; the class id when absent */
+  glyph?: string;
+  /** ambient particles behind a plate of this class (land | sea | sky | gold); the class id when absent */
+  ambient?: string;
+}
 
 export interface LeafCover {
   entry?: string;
@@ -152,10 +159,67 @@ export interface Category extends Omit<CategoryDef, 'leaves'> {
   entries: Entry[];
 }
 
+/** Words the shared UI uses that a branch can rename (a mount is ridden, a money method is run). */
+export interface BranchLabels {
+  /** explorer folder for the lenses ("Ride for") */
+  lenses?: string;
+  /** How section eyebrow ("Acquisition") */
+  how?: string;
+  /** Where section eyebrow ("Location reference") */
+  where?: string;
+  /** Where text when there is no fixed place ("Roams — no fixed spawn") */
+  roam?: string;
+  /** outline label for the How section ("How to get") */
+  howOutline?: string;
+  /** what the class axis is called in filters ("Terrain") */
+  classAxis?: string;
+}
+
+/** One rule of the tier sheet: a bold lead and its explanation. */
+export interface TierRule { lead: string; text: string }
+
+/** One step of a route: plain advice, optionally pointing at the plate that explains it. */
+export interface RouteStep {
+  entry?: string;
+  text: string;
+}
+
+/** A phase of a route, in the order the player should do them. */
+export interface RoutePhase {
+  id: string;
+  label: string;
+  /** which part of the game this happens in ("Before the DLC") */
+  stage: string;
+  why: string;
+  cover?: LeafCover;
+  steps: RouteStep[];
+  /** hands-on loops to run while this phase's timers tick */
+  meanwhile?: RouteStep[];
+}
+
+/** An ordered plan through a branch (#<branch>-route): the strategy, not the catalogue. */
+export interface RouteDef {
+  title: string;
+  blurb: string;
+  /** the starting state the plan assumes */
+  premise: string;
+  phases: RoutePhase[];
+}
+
 export interface BranchDef {
   id: string;
   title: string;
+  /** root accent in the explorer; the app brand's crimson when absent */
+  accent?: string;
+  labels?: BranchLabels;
+  route?: RouteDef;
   singular: string;
+  /** plural noun for counts and empty states ("Mounts") */
+  plural: string;
+  /** the "Rules of the ladder" list on the tier sheet */
+  rules: TierRule[];
+  /** one line under the tier ladder: what a tier compares */
+  ladderNote: string;
   tagline: string;
   asOf: string;
   metrics: Metric[];
@@ -188,4 +252,5 @@ export type View =
   | { kind: 'lens'; branch: Branch; lens: Lens }
   | { kind: 'cat'; branch: Branch; cat: Category; leaf?: CategoryLeaf }
   | { kind: 'ladder'; branch: Branch }
+  | { kind: 'route'; branch: Branch }
   | { kind: 'entry'; branch: Branch; entry: Entry };

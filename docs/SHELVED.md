@@ -15,15 +15,15 @@ These are the item IDs from `IDENTIFIED.md`, placed under the milestones in `PLA
 - CORE-02: data lint inside `npm run verify`
 - TECH-02: self-hosted fonts that load from `file://`
 
-## R1 Riches tree `[todo]`
+## R1 Riches tree `[done]`
 
 - RI-01: generic core: branch `labels` (lens folder, How/Where eyebrows) and the Route view (`#<branch>-route`)
-- RI-02: Riches branch data: 8 leaves, 30 methods, every figure with its basis, every method rated or marked not rated
+- RI-02: Riches branch data: 8 leaves, 24 methods, every figure with its basis, every method rated or marked not rated
 - RI-03: `RichesLedger.svelte` plate section: pays in, figures, costs, requires, stacks with, watch out
 - RI-04: imagery: a real in-game capture for every method, credited
 - RI-05: verify covers both roots; lint passes for both branches
 
-## M2 Full roster `[shelved]`
+## M2 Full roster `[todo]`
 
 - NF-06: split mounts that the game registers separately out of `variants` (Cloudcruiser, Skystreaker, Swift Wolf, Large White Wolf, High-Mobility A.T.A.G.)
 - NF-07: keepable mounts missing from the data (sea turtle species, Giant Manta Ray, Grizzly Bear, Heavy Assault A.T.A.G., Freight and Trading wagons)
@@ -56,7 +56,7 @@ These are the item IDs from `IDENTIFIED.md`, placed under the milestones in `PLA
 ## Not yet placed
 
 - QOL-03: hash routes trip axe `skip-link`. Accepted; no work.
-- TECH-03: per-branch data loading, once a second branch exists.
+- TECH-03: per-branch data loading, once a second branch exists. Riches is that second branch (R1); the bundle is 450 kB (123 kB gzip), so this waits until load time shows it matters.
 - NF-05: superseded by NF-08.
 
 ## Next

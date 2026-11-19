@@ -32,6 +32,34 @@
     "mythras": {
       "name": "Pearl Abyss key art via Mythras",
       "url": "https://gamertagmythras.com/blog/crimson-desert/crimson-desert-dlc-unlock-requirements"
+    },
+    "consolepulse": {
+      "name": "Console Pulse",
+      "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/best-passive-income-setup-crimson-desert"
+    },
+    "whisperofthehouse": {
+      "name": "Whisper of the House",
+      "url": "https://www.whisperofthehouse.com/crimson-desert/ships"
+    },
+    "outputlag": {
+      "name": "Output Lag",
+      "url": "https://outputlag.com/"
+    },
+    "noobfeed": {
+      "name": "NoobFeed",
+      "url": "https://www.noobfeed.com/articles/crimson-desert-enhanced-charting-the-unknown-run-facilities"
+    },
+    "neonlights": {
+      "name": "NeonLightsMedia",
+      "url": "https://www.neonlightsmedia.com/blog/crimson-desert-facilities-guide"
+    },
+    "xboxplay": {
+      "name": "Xbox Play",
+      "url": "https://xboxplay.games/crimson-desert/how-to-run-a-business-in-crimson-desert-77196"
+    },
+    "fdaytalk": {
+      "name": "FDayTalk",
+      "url": "https://www.fdaytalk.com/crimson-desert-golden-beer/"
     }
   },
   "publishers": {
@@ -54,6 +82,19 @@
     "allthingshow": "All Things How",
     "gamingpromax": "Gaming ProMax",
     "beebom": "Beebom",
-    "mythras": "Mythras"
+    "mythras": "Mythras",
+    "consolepulse": "Console Pulse",
+    "whisperofthehouse": "Whisper of the House",
+    "noobfeed": "NoobFeed",
+    "neonlights": "NeonLightsMedia",
+    "xboxplay": "Xbox Play",
+    "fdaytalk": "FDayTalk",
+    "gamingbolt": "GamingBolt",
+    "gamesgg": "GAMES.GG",
+    "playnews": "Playnews",
+    "trueachievements": "TrueAchievements",
+    "playersua": "Players.com.ua",
+    "method": "Method",
+    "pcgamer": "PC Gamer"
   }
 }
