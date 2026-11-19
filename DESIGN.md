@@ -104,6 +104,55 @@ Rules added while building the Mounts branch (Claude's calls, not in the brief):
   - *Ships are mounts.* This reverses the Revision 2 exclusion. The game files ships as a mount type (thegameswiki, G2A), so Humble Bark and the Small, Medium and Large Hernandian Ship join Mounts as a Ships category. They are rated on Speed, Travel (cargo) and Combat (cannons); Stamina is not rated.
   - *Not mounts:* the Mountain God Boar is a boss encounter (thegameswiki, Gaming ProMax), and the Delesyia Train is fixed-route transport (Game8, thegameswiki).
 
+## Riches tree — decisions
+
+You asked for Riches on 2026-11-19: an endgame economy guide for a player who has **finished the main story but not started Charting the Unknown**. Its job is to have the player arrive at the DLC rich, then turn the DLC's systems (real estate, ships, islands) into more money. It covers management mechanics and direct player control. The research, with sources, is in `docs/RICHES-RESEARCH.md`.
+
+- **Where it sits.** Riches is its own root in the explorer, next to Mounts (`#riches…`), and is built from the same source as Mounts with no forked UI. You called it a TREE; in the code it is the second `branch` module, and its sub-branches are leaves. *(My call.)*
+- **Two axes, as you framed them.** Every method is either *Management* (`cls: management`: it runs through camp, staff or assets) or *Player control* (`cls: player`: Kliff does it by hand). Both are category lists, alongside *Before the DLC* / *In the DLC* (from tags) and *Multipliers*. A fifth list, *Traps*, holds methods that sources report as net losses.
+- **Leaves** (your sub-branches, plus the ones research added):
+  - Real Estate (brass): facility leases and castles.
+  - Ships (sea): rowboat to Large Hernandian Ship, and maritime trade.
+  - Islands (cyan): pioneering.
+  - Greymanes (bone): dispatch and its multipliers.
+  - Pailune (sky): rebuild, final camp, shipyard.
+  - Trade (royal): wagons and trading posts. *(Research addition.)*
+  - Bank (gold): conversion, investments, bonds. *(Research addition.)*
+  - Player Control (ember).
+  The root accent is a new `--gold`; red stays reserved for the app brand and the Mounts root.
+- **Tiers rate methods, not mounts.** Same I–V scale and evidence rule as Mounts. The metrics:
+  - **Return:** what it pays next to the other methods.
+  - **Effort:** hands-on time per payout; I means it runs while you're away.
+  - **Setup:** funds, quests and staff needed to start; I means available now and cheap.
+  - **Scale:** how far it grows when you reinvest or stack multipliers.
+
+  A method with no reported income, such as castles, is not rated on Return. It does not get a default III.
+- **Currencies.**
+  - Copper → Silver (100:1) → Gold Bar (500 Silver).
+  - Camp Funds buy ships, leases, dispatches and church donations.
+  - Since patch 2.01, donating Silver to camp converts at ×10. That makes Silver → Camp Funds the guide's main exchange rate.
+  - One Hernand Bond is 10 Gold Bars.
+  - Where the guide converts (for example, one Gold Bar ≈ 5,000 Camp Funds via donation), it says so and shows the sum.
+- **Every figure carries its basis**: *Patch notes*, *Guide* or *Player report*. When sources disagree, the plate shows both values. One example is the facility lease: 15,000, listed as Copper by Vulkk and as Camp Funds by Xbox Play. Player-reported millions are labelled as player reports, never presented as measured.
+- **The Route** (`#riches-route`) is a new generic branch view: an ordered plan of phases, each with steps that link to plates. It is the "targeted strategy" you asked for.
+  1. Multipliers before income.
+  2. The dispatch engine.
+  3. The trade engine.
+  4. Pailune.
+  5. Bank the surplus.
+  6. Enter the DLC with funds: lease facilities, skip from the quest ship to the Medium ship.
+  7. Ships and maritime trade.
+  8. Islands.
+
+  Player-control loops sit beside the phases, as what to do while dispatches run. Any branch can define a route; Mounts doesn't yet.
+- **Plate for a method** (`RichesLedger.svelte`, the branch's own section):
+  - What it pays in, and the figures with their basis.
+  - Costs and requirements.
+  - *Stacks with*, linking the multipliers that raise it.
+  - *Watch out*: nerfs, bugs, losses.
+
+  How becomes "Setup" and Where keeps the location captures. The labels come from a new optional `labels` block in `branch.json`; the "Ride for" folder becomes "Best for" there.
+
 ## Known gaps
 
 Left out for lack of reliable data or real imagery:

@@ -15,7 +15,15 @@ These are the item IDs from `IDENTIFIED.md`, placed under the milestones in `PLA
 - CORE-02: data lint inside `npm run verify`
 - TECH-02: self-hosted fonts that load from `file://`
 
-## M2 Full roster `[todo]`
+## R1 Riches tree `[todo]`
+
+- RI-01: generic core: branch `labels` (lens folder, How/Where eyebrows) and the Route view (`#<branch>-route`)
+- RI-02: Riches branch data: 8 leaves, 30 methods, every figure with its basis, every method rated or marked not rated
+- RI-03: `RichesLedger.svelte` plate section: pays in, figures, costs, requires, stacks with, watch out
+- RI-04: imagery: a real in-game capture for every method, credited
+- RI-05: verify covers both roots; lint passes for both branches
+
+## M2 Full roster `[shelved]`
 
 - NF-06: split mounts that the game registers separately out of `variants` (Cloudcruiser, Skystreaker, Swift Wolf, Large White Wolf, High-Mobility A.T.A.G.)
 - NF-07: keepable mounts missing from the data (sea turtle species, Giant Manta Ray, Grizzly Bear, Heavy Assault A.T.A.G., Freight and Trading wagons)
@@ -38,6 +46,12 @@ These are the item IDs from `IDENTIFIED.md`, placed under the milestones in `PLA
 - QOL-01: keyboard sheet on `?`
 - QOL-02: section deep links and copy link
 - NF-04: compare view
+
+## R2 Riches depth `[shelved]`
+
+- RI-06: all 18 facilities listed with location, type and staff skill
+- RI-07: island upgrades and income, once a source documents them
+- RI-08: trade-route table from the in-game Trade tab
 
 ## Not yet placed
 
