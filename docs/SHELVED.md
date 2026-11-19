@@ -15,18 +15,22 @@ These are the item IDs from `IDENTIFIED.md`, placed under the milestones in `PLA
 - CORE-02: data lint inside `npm run verify`
 - TECH-02: self-hosted fonts that load from `file://`
 
-## M2 Where, for every mount `[todo]`
+## M2 Full roster `[todo]`
 
-- NF-01: map captures for the 23 entries without one
-- NF-02: heroes for the 36 entries without one
+- NF-06: split mounts that the game registers separately out of `variants` (Cloudcruiser, Skystreaker, Swift Wolf, Large White Wolf, High-Mobility A.T.A.G.)
+- NF-07: keepable mounts missing from the data (sea turtle species, Giant Manta Ray, Grizzly Bear, Heavy Assault A.T.A.G., Freight and Trading wagons)
+- NF-08: Ships category in Mounts (Humble Bark; Small, Medium and Large Hernandian Ship)
+- NF-09: fleeting rides (soldier, scout and race horses, Captured Bear, Circus Lion, Gristle Wolf, Helms Hyena, Misthorn Branhok, Giant Bison, cattle, camels, Worn Wagon)
+- NF-03: re-check the remaining known gaps (Scout Automation, Golden Star Mech)
 
-## M3 Ratings on evidence `[shelved]`
+## M3 Where, for every mount `[shelved]`
 
-- CORE-01: replace the 32 ratings that default to III with sourced comparisons
+- NF-01: map captures for every entry without one (23 before M2; recounted after it)
+- NF-02: heroes for every entry without one (36 before M2; recounted after it)
 
-## M4 Full roster `[shelved]`
+## M4 Ratings on evidence `[shelved]`
 
-- NF-03: Delesyia Train, cows/bulls, soldier and race horses, Scout Automation, Golden Star Mech
+- CORE-01: replace the ratings that default to III with sourced comparisons
 
 ## M5 Compare and navigate `[shelved]`
 
@@ -35,14 +39,11 @@ These are the item IDs from `IDENTIFIED.md`, placed under the milestones in `PLA
 - QOL-02: section deep links and copy link
 - NF-04: compare view
 
-## M6 Branch two: Ships `[shelved]`
-
-- NF-05: Ships branch
-- TECH-03: per-branch data loading
-
 ## Not yet placed
 
 - QOL-03: hash routes trip axe `skip-link`. Accepted; no work.
+- TECH-03: per-branch data loading, once a second branch exists.
+- NF-05: superseded by NF-08.
 
 ## Next
 

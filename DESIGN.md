@@ -99,11 +99,16 @@ Rules added while building the Mounts branch (Claude's calls, not in the brief):
   - *Marni's Mechahorse* added (Fleeting, Machine): Stamina I — the only mount that never spends stamina — Speed not rated, Travel III (spawns only at Delesyia, lost on fast travel), Combat V.
   - *High-Mobility A.T.A.G.* recorded as an A.T.A.G. variant (Vulkk).
 
+- **Revision 3: full roster** (decided 2026-11-19 after the roster audit in `docs/IDENTIFIED.md` §5; built in M2):
+  - *One entry per registered mount.* A mount the game registers under its own name, with its own stats, gets its own plate: Cloudcruiser, Skystreaker, Swift Wolf, Large White Wolf, High-Mobility A.T.A.G. and each sea turtle species. Cosmetic coats with the same stats stay as `variants`, such as the 16 Large Wolf coats. Folding registered mounts into variants hid two of the five flying mounts you can keep.
+  - *Ships are mounts.* This reverses the Revision 2 exclusion. The game files ships as a mount type (thegameswiki, G2A), so Humble Bark and the Small, Medium and Large Hernandian Ship join Mounts as a Ships category. They are rated on Speed, Travel (cargo) and Combat (cannons); Stamina is not rated.
+  - *Not mounts:* the Mountain God Boar is a boss encounter (thegameswiki, Gaming ProMax), and the Delesyia Train is fixed-route transport (Game8, thegameswiki).
+
 ## Known gaps
 
 Left out for lack of reliable data or real imagery:
 - **Scout Automation** and **Golden Star Mech**: reported by one outlet (Destructoid, March 2026), absent from Game8's and Fextralife's mount lists, and Destructoid's own Golden Star unlock never appeared. No game imagery found. Add when a second source confirms them.
-- **Delesyia Train** and **cows/bulls**: confirmed by Game8, but no hostable in-game capture found. Both belong in Mechanical/Easter Eggs and Fleeting once imagery exists.
+- **Cows/bulls**: confirmed by Game8, but no hostable in-game capture was found. They are now part of M2 (NF-09) and go in Fleeting once imagery exists. The Delesyia Train is out: it is not a personal mount (Revision 3).
 - Soldier and race horses (temporary). Several common sea mounts have no documented fixed spawn; their plates say so.
 
 ## Build and release

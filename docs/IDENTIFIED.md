@@ -67,15 +67,24 @@ This review was done at commit `db93c9d` (v0.2.0 released, Release workflow fixe
   - Where: `entries.json` `media.hero`.
   - Why: `Hero.svelte:17-19` falls back to a framed portrait, so the plate's reveal motion never runs for three quarters of the roster.
   - Verify: hero count; screenshots of a land, a sea and a sky plate.
-- **NF-03: Roster gaps from `DESIGN.md` › Known gaps.** Delesyia Train and cows/bulls, once there is imagery; soldier and race horses; Scout Automation and Golden Star Mech once a second source confirms them.
+- **NF-03: Re-check `DESIGN.md` › Known gaps against current sources** (see §5): Scout Automation, Golden Star Mech, Delesyia Train and cows/bulls.
   - Why: the compendium claims to cover every mount.
+  - Verify: each one is added, or kept out with the source that says why.
+- **NF-06: One entry per separately registered mount** (§5).
+  - Cloudcruiser, Skystreaker, Swift Wolf, Large White Wolf and High-Mobility A.T.A.G. are currently hidden as `variants` inside another plate, but the game registers each as its own mount with its own stats.
+  - Cosmetic coats, such as the 16 Large Wolf coats, stay as variants.
+  - Why: the Flying branch shows 3 mounts when you can keep 5, and the user had no way to see the other 2.
+  - Verify: the Flying count, a route for each, and the lint.
+- **NF-07: Keepable mounts missing from the data** (§5): the sea turtle species, Giant Manta Ray, Grizzly Bear, Heavy Assault A.T.A.G., and the Freight and Trading wagons.
   - Verify: the registry loads, and the verify suite covers the new routes and category membership.
+- **NF-08: Ships** (§5). The game files ships as a mount type, so they join the Mounts branch as a Ships category: Humble Bark, and the Small, Medium and Large Hernandian Ship. This supersedes NF-05. Speed, Travel (cargo) and Combat (cannons) apply; Stamina is not rated.
+  - Verify: as NF-07, plus the Ships category route.
+- **NF-09: Fleeting rides missing from the data** (§5): soldier, scout and race horses, Captured Bear, Circus Lion, Gristle Wolf, Helms Hyena, Misthorn Branhok, Giant Bison, cattle, camels and the Worn Wagon. Each needs real imagery before it ships.
+  - Verify: as NF-07.
 - **NF-04: Compare view** *(proposal)*. Pin two or three mounts and see their seals, stats, traits and Where side by side at a route such as `#mounts-compare-royler+camora`.
   - Why: `DESIGN.md` says existing guides "never compare mounts against each other". The ladder compares one metric at a time, never two mounts across all four.
   - Verify: route sweep, keyboard path, screenshots.
-- **NF-05: Branch two: Ships** *(proposal)*. `DESIGN.md` already records ships as their own branch, with their own stat model (hull, cargo, movement, acceleration, handling).
-  - Why: this is the first branch built from the source, which proves the modular rule.
-  - Verify: the registry loads two branches; the explorer, palette and verify suite cover both.
+- **NF-05: Branch two: Ships** *(proposal)*. Superseded by NF-08: the game files ships as mounts, so they belong in the Mounts branch.
 
 ### SOURCE-CODE-CHANGES
 
@@ -127,6 +136,32 @@ This review was done at commit `db93c9d` (v0.2.0 released, Release workflow fixe
   - Verify: open `dist/index.html` from `file://` with the network blocked; `document.fonts` reports all three families loaded; compare screenshots.
 - **TECH-03: Per-branch data loading.** Revisit when a second branch lands, because the 316.7 kB bundle inlines all data.
   - Verify: bundle size per branch.
+
+## 5. Roster audit (2026-11-19)
+
+You challenged the roster, and you were right. The app lists 48 mounts. Current guides list 58 (crimsondesert.gg) to 66 (GamingBolt) by name, and GamingBolt puts the full count near a hundred once every rideable is included. Below is what is missing, by how you keep it. "Hidden" means the mount is in the data, but only as a variant line on another plate.
+
+| Mount | Kept how | State in the app | Sources |
+|---|---|---|---|
+| Cloudcruiser, Skystreaker | permanent flying (Cloudcart upgrades via research) | hidden in Cloudcart | thegameswiki Cloudcart and Cloudcruiser; crimsondesert.gg; GamingBolt |
+| Swift Wolf, Large White Wolf | permanent special mount since 1.07 | hidden in Large Wolf | thegameswiki Large White Wolf; crimsondesert.gg; GamingBolt |
+| High-Mobility A.T.A.G. | permanent mech | hidden in A.T.A.G. | Vulkk; GamingBolt |
+| Heavy Assault A.T.A.G. | permanent mech | missing | GamingBolt; consolepulse (A.T.A.G Heavy) |
+| Green, Hawksbill, Hydrothermal, Loggerhead and Olive Ridley sea turtles | DLC, tamed | 1 "Sea Turtle" entry | crimsondesert.gg; Sportskeeda (turtle types) |
+| Giant Manta Ray | DLC, tamed | missing | crimsondesert.gg (needs a second source) |
+| Grizzly Bear | special mount (1.07 bear types) | missing | GamingBolt; Vulkk; thegameswiki Special Mounts |
+| Freight Wagon, Trading Wagon | permanent wagon tiers | missing | GamingBolt |
+| Humble Bark; Small, Medium and Large Hernandian Ship | DLC ships (a mount type) | missing (excluded by my earlier call) | thegameswiki Ships; Playnews; G2A |
+| Hernandian Soldier's Horse, Calphadean Scout's Horse, Race Horse | fleeting | missing | crimsondesert.gg; GamingBolt |
+| Captured Bear, Circus Lion, Gristle Wolf, Helms Hyena, Misthorn Branhok, Giant Bison | fleeting | missing | GamingBolt; crimsondesert.gg |
+| Cattle (bull, calf, buffalo, White-Striped Longhorn) and camels (camel, calf, two-humped) | fleeting | missing | GamingBolt; Game8; consolepulse |
+| Worn Wagon | basic wagon | missing | GamingBolt |
+
+Checked and kept out:
+- **Mountain God Boar** is a boss fight added in 1.05, not a mount, per thegameswiki and Gaming ProMax. One outlet, consolepulse, lists it as a mount.
+- **Delesyia Train** is fixed-route transport, not a personal mount, per Game8 and thegameswiki.
+
+Flying, as you can keep it: Blackstar (a summon on a cooldown), Wyvern, Cloudcart, Cloudcruiser and Skystreaker. The Leaping Kuku Bird glides.
 
 ## Next
 
