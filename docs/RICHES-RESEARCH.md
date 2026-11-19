@@ -22,7 +22,11 @@ The starting state is: main story finished (Journey's End), Charting the Unknown
 - **Estate Security** pays Camp Funds for food. In Console Pulse's screenshots, Azerian Manor paid 13K in 7 hours and Hillside Manor 1.8K in 17 hours. The Games Wiki records about 30,000 on a buffed first run and about 15,000 on auto-repeat because of a bug.
 - **Excavation**: 37,000 Camp Funds per Tinkerton completion and 20,000 at Acroser Village. Patch 1.06 made stronghold excavations repeatable, and Explorer slots cap at five. Basis: guide · The Games Wiki.
 - **Supply dispatches** (quarries, fishing docks, logging, farming) pay food and materials. Examples: large-scale logging about 16,000 wood per 18–24 hours; cacao about 17,000 provisions with eight workers. Basis: guide · The Games Wiki, Console Pulse.
-- **Grey-0 workers**: the Marne Steel Armory mission needs an Engineer. It returns 1–3 workers every 3 hours and costs 5,000 weapons, 1,000 wood, 2,000 provisions and 10,000 Silver per run. Basis: guide · The Games Wiki. Console Pulse warns that workers make a losing queue lose faster.
+- **Grey-0 workers** lift the roster past its cap of about 37 comrades.
+  - Prerequisites: Chapter 10; the Chaya Research at the Dewhaven Research Institute (after the Electricity – Movement Conversion Mechanism Research); then liberate Marni's Steel Armory (the Mechanicus).
+  - Each worker costs 5,000 weapons, 1,000 timber, 2,000 food and **10,000 Camp Funds**, with two comrades assigned (one an Engineer). Basis: guide · All Things How, Xbox Play.
+  - Output is disputed: one worker per about 4 in-game hours (All Things How, Console Pulse) against 1–3 every 3 hours (The Games Wiki).
+  - Console Pulse warns that workers make a losing queue lose faster.
 - **Time**: every timer runs on the in-game clock. Sleeping or waiting at a campfire advances it, and fatigue gates sleep. Basis: guide · The Games Wiki; screenshot · Console Pulse.
 
 ## Real estate (Charting the Unknown, 2.04)
@@ -91,10 +95,11 @@ Basis: guide · KeenGamer (inventory), PowerUp Gaming (health); screenshot · Wh
 
 ## Bank
 
-- A 100-Silver Strongbox permit opens Gold Bar investment, which settles about every 3 in-game days. Basis: guide · The Games Wiki.
-  - Low risk: 0–2%.
-  - Medium: 15–20%.
-  - High: 50–55%, and it can lose bars.
+- A 100-Silver Strongbox permit opens Gold Bar investment, which rolls about every 3 in-game days. The strategy can change only every 15. Basis: guide · The Games Wiki *Bank Investment*.
+  - Low risk: 0% to +2%.
+  - Medium: −15% to +20%.
+  - High: −50% to +55%.
+  - Early guides listed Medium and High as gains only (15–20%, 50–55%); the current wiki corrected that. All Things How saves before each roll and reloads a loss.
 - Patch 1.16 capped gains and losses at 40 bars per cycle. Basis: patch · Console Pulse.
 - Crude Gold Bars cannot be invested.
 - Patch 2.01 added a **Gold Bar Investment dispatch mission**. No retrievable source documents its cost or payout, so the app does not route through it.
@@ -119,12 +124,14 @@ They can come back if their sources are found.
 ## Sources
 
 - All Things How: [Banking System: Profits With Save-Scumming](https://allthings.how/crimson-desert-banking-system-guaranteed-profits-with-save-scumming/)
+- All Things How: [Grey-0 Mecha Workers: Unlock, Craft, and Deploy](https://allthings.how/crimson-desert-grey-0-mecha-workers-unlock-craft-and-deploy-robot-comrades/)
 - All Things How: [How to Spot and Accuse Cheating Gamblers](https://allthings.how/crimson-desert-how-to-spot-and-accuse-cheating-gamblers-in-duo/)
 - Console Pulse: [Best Passive Income Setup](https://consolepulse.com/multiplatform/crimson-desert/guides/best-passive-income-setup-crimson-desert)
 - Console Pulse: [Best Trade Routes After Patch 1.16](https://consolepulse.com/multiplatform/crimson-desert/guides/best-trade-routes-crimson-desert-patch-1-16)
 - Console Pulse: [Best Ways to Make Silver and Gold Bars](https://consolepulse.com/multiplatform/crimson-desert/guides/best-ways-make-silver-gold-bars-crimson-desert)
 - Console Pulse: [Farming Guide: Gold and Abyss Gear](https://consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-farming-guide-gold-abyss-gear)
 - Console Pulse: [Gold Bar Farming Guide](https://www.consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-gold-bar-farming-guide)
+- Console Pulse: [How to Create Grey-0 Mecha Workers](https://consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-how-to-create-grey-0-mecha-workers)
 - Console Pulse: [Patch 1.16: Trading and Bank Update](https://consolepulse.com/multiplatform/crimson-desert/news/crimson-desert-patch-1-16-trading-bank-update)
 - Console Pulse: [Trading Guide](https://consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-trading-guide)
 - Console Pulse: [Where to Find Crude Gold Bars](https://consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-crude-gold-bars)
@@ -153,6 +160,7 @@ They can come back if their sources are found.
 - Playnews: [Wiederaufbau von Pailune (German)](https://www.playnews.gg/de/guides/wiederaufbau-von-pailune-in-crimson-desert-die-schritte)
 - PowerUp Gaming: [How to Unlock and Upgrade Ships](https://powerupgaming.co.uk/2026/10/30/how-to-unlock-upgrade-ships-in-crimson-desert-charting-the-unknown/)
 - The Games Wiki: [All Gold Bar Locations](https://thegameswiki.com/crimson-desert/wiki/all-gold-bar-locations)
+- The Games Wiki: [Bank Investment](https://thegameswiki.com/crimson-desert/wiki/bank-investment)
 - The Games Wiki: [Camp Funds](https://thegameswiki.com/crimson-desert/wiki/camp-funds/diff)
 - The Games Wiki: [Dispatch Missions](https://thegameswiki.com/crimson-desert/wiki/dispatch-missions)
 - The Games Wiki: [Duo and Five-Card Strategy Guide](https://thegameswiki.com/crimson-desert/wiki/duo-and-five-card-strategy-guide)
@@ -169,5 +177,6 @@ They can come back if their sources are found.
 - Whisper of the House: [How Do You Get, Build, and Upgrade Ships](https://www.whisperofthehouse.com/crimson-desert/ships)
 - Whisper of the House: [How Do You Pioneer Auronui Island](https://www.whisperofthehouse.com/crimson-desert/auronui-island)
 - Whisper of the House: [How I Plan Profitable Trading Routes](https://www.whisperofthehouse.com/crimson-desert/trading-guide)
+- Xbox Play: [How to Craft Robot Comrades](https://xboxplay.games/crimson-desert/how-to-craft-robot-comrades-in-crimson-desert-72259)
 - Xbox Play: [How to Run a Business](https://xboxplay.games/crimson-desert/how-to-run-a-business-in-crimson-desert-77196)
 - Xbox Play: [The Saw Turns Again](https://xboxplay.games/crimson-desert/how-to-complete-the-saw-turns-again-quest-in-crimson-desert-77231)

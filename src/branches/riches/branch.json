@@ -376,7 +376,7 @@
      },
      {
       "entry": "grey-0-workers",
-      "text": "Build Grey-0 workers once food and funds balance after a full cycle."
+      "text": "Unlock Grey-0 workers at Marni's Steel Armory once food and funds balance after a full cycle."
      }
     ],
     "meanwhile": [
@@ -428,7 +428,7 @@
      },
      {
       "entry": "bank-investment",
-      "text": "Bars you will not donate go in at Medium risk; Bonds only past 100 spare bars."
+      "text": "Bars you will not donate sit at Low risk; Medium swings −15% to +20% a cycle. Bonds only past 100 spare bars."
      }
     ]
    },

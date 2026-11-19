@@ -744,10 +744,10 @@
    "access"
   ],
   "kind": "Dispatch capacity",
-  "region": "Pywel",
-  "area": "Marne Steel Armory",
+  "region": "Delesyia",
+  "area": "Marni's Steel Armory, near Mount Benos",
   "trait": "Mecha workers that fill the routine slots",
-  "summary": "Grey-0 mecha workers take the ordinary positions on dispatches so your named Greymanes can lead the skill-gated ones. More workers mean more missions running at once. They also make a losing queue drain food and funds faster.",
+  "summary": "Grey-0 mecha workers take the ordinary positions on dispatches so your named Greymanes can lead the skill-gated ones, and they lift the roster past its cap of about 37 comrades. More workers mean more missions running at once. They also make a losing queue drain food and funds faster.",
   "tiers": {
    "return": {
     "tier": null,
@@ -758,8 +758,8 @@
     "basis": "Built by a dispatch of their own."
    },
    "setup": {
-    "tier": 3,
-    "basis": "Each build run costs 5,000 weapons, 1,000 wood, 2,000 provisions and 10,000 Silver."
+    "tier": 4,
+    "basis": "Chapter 10, the Chaya Research at Dewhaven, Marni's Steel Armory liberated, then 10,000 Camp Funds and camp stock per worker."
    },
    "scale": {
     "tier": 1,
@@ -771,16 +771,23 @@
    "multiplier",
    "risk"
   ],
+  "requires": [
+   "Main story Chapter 10 (Delesyia)",
+   "Chaya Research complete at the Dewhaven Research Institute",
+   "Marni's Steel Armory liberated (the Mechanicus)"
+  ],
   "routes": [
    {
     "steps": [
-     "Assign at least two workers to the Marne Steel Armory mission, one with the Engineering specialty.",
-     "Each run returns 1 to 3 mecha workers every 3 hours.",
-     "Put them on routine positions; keep specialists for excavation, facilities and crew roles."
+     "At Dewhaven Keep in south-western Delesyia, finish the Electricity – Movement Conversion Mechanism Research, then the Chaya Research. Enter without a mask: the guards attack masked visitors.",
+     "Return the Chaya to the Research Assistant at Windrose Farm; the research completes about 8 in-game hours later.",
+     "Liberate Marni's Steel Armory by defeating the Mechanicus.",
+     "Open the Armory's Missions tab and choose Craft Mecha Worker with two comrades assigned, one an Engineer.",
+     "Put the workers on routine positions; keep specialists for excavation, facilities and crew roles."
     ]
    }
   ],
-  "location": "Marne Steel Armory.",
+  "location": "Marni's Steel Armory, central Delesyia near Mount Benos; research at Dewhaven Keep.",
   "notes": [
    "Add workers only to a portfolio whose food and funds already balance."
   ],
@@ -820,6 +827,21 @@
   },
   "sources": [
    {
+    "by": "allthingshow",
+    "url": "https://allthings.how/crimson-desert-grey-0-mecha-workers-unlock-craft-and-deploy-robot-comrades/",
+    "title": "Grey-0 Mecha Workers: Unlock, Craft, and Deploy"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-how-to-create-grey-0-mecha-workers",
+    "title": "How to Create Grey-0 Mecha Workers"
+   },
+   {
+    "by": "xboxplay",
+    "url": "https://xboxplay.games/crimson-desert/how-to-craft-robot-comrades-in-crimson-desert-72259",
+    "title": "How to Craft Robot Comrades"
+   },
+   {
     "by": "thegameswiki",
     "url": "https://thegameswiki.com/crimson-desert/wiki/dispatch-missions",
     "title": "Dispatch Missions"
@@ -828,40 +850,41 @@
     "by": "consolepulse",
     "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/best-passive-income-setup-crimson-desert",
     "title": "Best Passive Income Setup"
-   },
-   {
-    "by": "consolepulse",
-    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/best-ways-make-silver-gold-bars-crimson-desert",
-    "title": "Best Ways to Make Silver and Gold Bars"
    }
   ],
   "since": "Base game",
   "ledger": {
    "pays": "Dispatch slots",
-   "cycle": "1–3 workers every 3 hours",
+   "cycle": "About 4 in-game hours per worker",
    "figures": [
     {
-     "label": "Output",
-     "value": "1 to 3 workers per run",
+     "label": "Build time",
+     "value": "≈4 in-game hours per worker",
+     "basis": "guide",
+     "by": "allthingshow"
+    },
+    {
+     "label": "Output, per The Games Wiki",
+     "value": "1 to 3 workers every 3 hours",
      "basis": "guide",
      "by": "thegameswiki"
     }
    ],
    "costs": [
     {
-     "label": "Each build run",
-     "value": "5,000 weapons · 1,000 wood · 2,000 provisions · 10,000 Silver",
+     "label": "Each worker",
+     "value": "5,000 weapons · 1,000 timber · 2,000 food · 10,000 Camp Funds",
      "basis": "guide",
-     "by": "thegameswiki"
+     "by": "allthingshow"
     }
    ],
    "stacks": [],
    "watch": [
-    "Workers do not make a losing mission profitable; they make it lose faster."
+    "Workers do not make a losing mission profitable; they make it lose faster.",
+    "Guides disagree on output: one worker per about 4 hours (All Things How, Console Pulse) against 1–3 every 3 hours (The Games Wiki)."
    ]
   },
-  "variants": [],
-  "requires": []
+  "variants": []
  },
  {
   "id": "timberham-sawmill",
@@ -2738,12 +2761,12 @@
   "kind": "Gold Bar interest",
   "region": "Every bank",
   "area": "Banks; the Bank Strongbox",
-  "trait": "Medium risk: 15–20% every three in-game days",
-  "summary": "A 100-Silver Strongbox permit lets you invest Gold Bars at Low (0–2%), Medium (15–20%) or High (50–55%) risk. Each cycle settles about every three in-game days. High risk can lose bars. Patch 1.16 capped gains and losses at 40 bars a cycle and added Hernand Bonds, which need 100 bars to start.",
+  "trait": "Gold Bars that swing every three in-game days",
+  "summary": "A 100-Silver Strongbox permit lets you invest Gold Bars at Low (0% to +2%), Medium (−15% to +20%) or High (−50% to +55%) risk. Each cycle rolls about every three in-game days, and the strategy can change only every 15. Only Low cannot lose. Patch 1.16 capped gains and losses at 40 bars a cycle and added Hernand Bonds, which need 100 bars to start.",
   "tiers": {
    "return": {
-    "tier": 2,
-    "basis": "15–20% a cycle at Medium risk; 50–55% at High, which can lose."
+    "tier": 3,
+    "basis": "Medium swings −15% to +20% a cycle and High −50% to +55%; Low is safe at 0% to +2%. All Things How saves before each roll and reloads a loss."
    },
    "effort": {
     "tier": 1,
@@ -2768,7 +2791,7 @@
     "steps": [
      "Buy the Personal Strongbox Permit for 100 Silver at a bank.",
      "Deposit only bars you will not need for gear, recipes or donations.",
-     "Choose Medium risk for unattended cycles; High only with a manual save behind it.",
+     "Choose Low for bars you cannot afford to lose; Medium or High only with a manual save before the roll.",
      "Collect each cycle, about three in-game days."
     ]
    },
@@ -2821,6 +2844,11 @@
   },
   "sources": [
    {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/bank-investment",
+    "title": "Bank Investment"
+   },
+   {
     "by": "consolepulse",
     "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/best-ways-make-silver-gold-bars-crimson-desert",
     "title": "Best Ways to Make Silver and Gold Bars"
@@ -2829,11 +2857,6 @@
     "by": "consolepulse",
     "url": "https://consolepulse.com/multiplatform/crimson-desert/news/crimson-desert-patch-1-16-trading-bank-update",
     "title": "Patch 1.16: Trading and Bank Update"
-   },
-   {
-    "by": "thegameswiki",
-    "url": "https://thegameswiki.com/crimson-desert/wiki/silver-and-gold-farming",
-    "title": "Silver and Gold Farming"
    },
    {
     "by": "allthingshow",
@@ -2848,19 +2871,19 @@
    "figures": [
     {
      "label": "Low risk",
-     "value": "0–2%",
+     "value": "0% to +2% a cycle",
      "basis": "guide",
      "by": "thegameswiki"
     },
     {
      "label": "Medium risk",
-     "value": "15–20%",
+     "value": "−15% to +20% a cycle",
      "basis": "guide",
      "by": "thegameswiki"
     },
     {
      "label": "High risk",
-     "value": "50–55%, can lose bars",
+     "value": "−50% to +55% a cycle",
      "basis": "guide",
      "by": "thegameswiki"
     },
@@ -2889,6 +2912,7 @@
     "time-skip"
    ],
    "watch": [
+    "Strategy can change only every 15 in-game days.",
     "Patch 2.01 added a separate Gold Bar Investment dispatch mission; no source we found documents its cost or payout, so this route does not use it.",
     "A bar tied up in the bank cannot be donated."
    ]
