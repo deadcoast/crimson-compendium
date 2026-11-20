@@ -2,17 +2,17 @@
 
 ## TODO
 
-[x] details on how to unlock and run the new Accountant dispatch missions for guaranteed Gold Bars, or tips on leveling merchant trust fastest for Supply Contracts?
-[x] to know where to grab free early Gold Bars to kickstart your bank investments, or which comrades to recruit to maximize your dispatch bonuses?
-[x] exact map directions to the Golden Apple hedgehog farm, or the best two-slot horse to use for fast luxury runs?
-[x] step-by-step details on unlocking the Golden Beer item to double your dispatch payouts, or instructions on getting robot workers for your camp?
-[x] tips on the best high-tier dispatches to assign your new robot army to, or how to farm armaments and timber fastest to mass-produce them?
-[x] the exact locations to unlock the Gorthak Research Institute for Large-Scale Dispatches, or tips on leveling Church Blessings across all regions cheapest?
-[x] a list of the highest-priority merchants to get Supply Contracts from first (like the rare hide and armament vendors), or where to find the Bunny Mask?
-[x] the exact locations of the 8 tavern vendors to unlock the Solidarity III (+5 Trust) Abyss Core for your Bunny Mask, or tips on leveling Church Blessings fastest?
-[x] the exact steps to solve the Pailune City Sealed Abyss Artifact for the instant Solidarity III core, or tips on which regional dispatches to run first once your 200% blessings are active?
-[x] the exact locations of the Witches to socket your Solidarity III core, or tips on farming Aptitude III XP blueprints from the Bordig Ruins dispatches?
-[x] the other 5 ruins dispatches that drop exclusive Abyss Gear blueprints, or the best gear pieces to socket Aptitude III into for fast leveling?
+- [x] details on how to unlock and run the new Accountant dispatch missions for guaranteed Gold Bars, or tips on leveling merchant trust fastest for Supply Contracts?
+- [x] to know where to grab free early Gold Bars to kickstart your bank investments, or which comrades to recruit to maximize your dispatch bonuses?
+- [x] exact map directions to the Golden Apple hedgehog farm, or the best two-slot horse to use for fast luxury runs?
+- [x] step-by-step details on unlocking the Golden Beer item to double your dispatch payouts, or instructions on getting robot workers for your camp?
+- [x] tips on the best high-tier dispatches to assign your new robot army to, or how to farm armaments and timber fastest to mass-produce them?
+- [x] the exact locations to unlock the Gorthak Research Institute for Large-Scale Dispatches, or tips on leveling Church Blessings across all regions cheapest?
+- [x] a list of the highest-priority merchants to get Supply Contracts from first (like the rare hide and armament vendors), or where to find the Bunny Mask?
+- [x] the exact locations of the 8 tavern vendors to unlock the Solidarity III (+5 Trust) Abyss Core for your Bunny Mask, or tips on leveling Church Blessings fastest?
+- [x] the exact steps to solve the Pailune City Sealed Abyss Artifact for the instant Solidarity III core, or tips on which regional dispatches to run first once your 200% blessings are active?
+- [x] the exact locations of the Witches to socket your Solidarity III core, or tips on farming Aptitude III XP blueprints from the Bordig Ruins dispatches?
+- [x] the other 5 ruins dispatches that drop exclusive Abyss Gear blueprints, or the best gear pieces to socket Aptitude III into for fast leveling?
 
 ## METHODS
 
