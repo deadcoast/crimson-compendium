@@ -62,7 +62,9 @@ If you want your camp dispatches to turn into personal Silver instead of Camp Fu
 
 ---
 
-With the old Spire of Insight (<https://www.google.com/search?kgmid=%2Fhkb%2FCg4KCGxhbmd1YWdlEgJlbgoSCgR0eXBlEgpWSURFT19HQU1FCh8KC2VudGl0eV9uYW1lEhBzcGlyZSBvZiBpbnNpZ2h0&q=Spire+of+Insight+Crimson+Desert+Location>) chest loop and Golden Apple hedgehog farm effectively dead as of Patch 2.05.01 (November 2026), the player base has shifted to new exploits from the Uncharting the Unknown DLC and late-game farming routes. [1] (<https://www.youtube.com/watch?v=ZRUK_hwuhuY>), [2] (<https://www.reddit.com/r/CrimsonDesert/comments/1xjfcr8/uncharting_the_unknown_facilities_coin_glitch/>)
+### Uncharting the Unknown DLC and late-game farming routes
+
+[1] (<https://www.youtube.com/watch?v=ZRUK_hwuhuY>), [2] (<https://www.reddit.com/r/CrimsonDesert/comments/1xjfcr8/uncharting_the_unknown_facilities_coin_glitch/>)
 
 1. Player Currency (Silver & Gold Bars)
 
@@ -86,7 +88,9 @@ With the old Spire of Insight (<https://www.google.com/search?kgmid=%2Fhkb%2FCg4
 
 ---
 
-To maximize your Greymane Camp output, you unlock the Golden Beer through the House Byron faction questline in Demeniss, and unlock Robot Workers (Mecha Workers / Grey-0) by completing research at Dewhaven Keep and liberating Marni's Steel Armory in Delesyia. [1] (<https://www.youtube.com/watch?v=KlowRpOZ2KU>), [2] (<https://www.facebook.com/fb-answers/how-to-get-robot-workers-in-crimson-desert/>), [3] (<https://www.reddit.com/r/CrimsonDesert/comments/1s7cbd9/you_can_get_mecha_workers_for_comrade/>)
+### Greymane Camp output, Golden Beer, the House Byron faction to unlock Robot Workers
+
+- (Mecha Workers / Grey-0) by completing research at Dewhaven Keep and liberating Marni's Steel Armory in Delesyia. [1] (<https://www.youtube.com/watch?v=KlowRpOZ2KU>), [2] (<https://www.facebook.com/fb-answers/how-to-get-robot-workers-in-crimson-desert/>), [3] (<https://www.reddit.com/r/CrimsonDesert/comments/1s7cbd9/you_can_get_mecha_workers_for_comrade/>)
 
 1. How to Unlock the Golden Beer (Permanent 2x Dispatch Rewards)
 
@@ -109,7 +113,9 @@ Once unlocked, Mecha Workers (Grey-0) have no hard cap—you can craft hundreds 
 
 ---
 
-To put your Mecha Worker army to work and fund their production without touching a wagon, unlock Large-Scale Dispatches via the Gorthak Research Institute and feed them with Church-boosted regional dispatches and Keglord timber drops. [1] (<https://www.youtube.com/watch?v=RYOoslEAqEo&t=116>), [2] (<https://www.youtube.com/watch?v=bnnRQX63Ds8>)
+### Mecha Worker army work and funding their production
+
+- Unlock Large-Scale Dispatches via the Gorthak Research Institute and feed them with Church-boosted regional dispatches and Keglord timber drops. [1] (<https://www.youtube.com/watch?v=RYOoslEAqEo&t=116>), [2] (<https://www.youtube.com/watch?v=bnnRQX63Ds8>)
 
 1. Best High-Tier Dispatches for Your Robot Army
 
@@ -136,7 +142,9 @@ Fastest Timber (1,000 per Robot)
 
 ---
 
-To maximize your gold bar generation and camp supply lines without driving wagons, here is how to unlock and run the Accountant Gold Bar Investment dispatches alongside the fastest ways to hit 100% Merchant Trust for Supply Contracts.
+### gold bar generation and camp supply
+
+- How to unlock and run the Accountant Gold Bar Investment dispatches alongside the fastest ways to hit 100% Merchant Trust for Supply Contracts.
 
 1. Unlocking & Running Accountant Gold Bar Dispatches
 
@@ -177,7 +185,9 @@ There is no daily limit on giving gifts to merchants, so you can spam them to 10
 
 ---
 
-To get the Rabbit Leather Mask (Bunny Mask) for instant trust-building and prioritize the best Supply Contracts, head to Karin Quarry in Hernand first, then target equipment, tailor, and regional provisioner vendors to pipe their rarest gear and crafting materials straight into your camp.
+### Rabbit Leather Mask (Bunny Mask) for instant trust-building
+
+- Head to Karin Quarry in Hernand first, then target equipment, tailor, and regional provisioner vendors to pipe their rarest gear and crafting materials straight into your camp.
 
 1. Where to Find the Rabbit Leather Mask (Bunny Mask)
 
@@ -211,7 +221,9 @@ Once you buy a merchant's Supply Contract / Trade Agreement at 100 Trust (~15–
 
 ---
 
-To socket Solidarity III (+3 Trust Gain, stacking to +5 total inside your Rabbit Leather Mask) and hit the 200% Church Blessing cap across all available regions, visit all 8 Tavern Owners to unlock the core's challenge/craft, then use the 10x Silver-to-Camp-Funds conversion to max out the three regional donation boxes. [1] (<https://www.youtube.com/shorts/jVA3bImYsHc>), [2] (<https://crimsondesertgame.wiki.fextralife.com/Solidarity_III>), [3] (<https://www.powerpyx.com/crimson-desert-all-tavern-inn-owner-locations/>), [4] (<https://www.instagram.com/reel/DYHLtGYMb20/?hl=en>)
+### Solidarity III
+
+- How to (+3 Trust Gain, stacking to +5 total inside your Rabbit Leather Mask) and hit the 200% Church Blessing cap across all available regions, visit all 8 Tavern Owners to unlock the core's challenge/craft, then use the 10x Silver-to-Camp-Funds conversion to max out the three regional donation boxes. [1] (<https://www.youtube.com/shorts/jVA3bImYsHc>), [2] (<https://crimsondesertgame.wiki.fextralife.com/Solidarity_III>), [3] (<https://www.powerpyx.com/crimson-desert-all-tavern-inn-owner-locations/>), [4] (<https://www.instagram.com/reel/DYHLtGYMb20/?hl=en>)
 
 1. All 8 Tavern Owner Locations (For Solidarity III & Oak Barrels)
 
@@ -229,7 +241,9 @@ Speaking to all 8 Tavern Owners (Innkeepers) across Pywel completes the Traveler
 
 9. Fastest Way to Max Out Church Blessings (200% Dispatch Multiplier)
 
-Donating Camp Funds to regional church boxes increases that specific region's Conversion Bonus by +2% per level up to Level 100 (+200% total payout), which multiplies alongside your Golden Beer. [1] (<https://www.youtube.com/shorts/jVA3bImYsHc>), [2] (<https://steamcommunity.com/app/3321460/discussions/0/805722431784270681/>), [3] (<https://www.gamersheroes.com/game-guides/how-to-get-conversion-bonus-on-dispatch-missions-in-crimson-desert/>)
+### Donating Camp Funds to regional church boxes
+
+- increases that specific region's Conversion Bonus by +2% per level up to Level 100 (+200% total payout), which multiplies alongside your Golden Beer. [1] (<https://www.youtube.com/shorts/jVA3bImYsHc>), [2] (<https://steamcommunity.com/app/3321460/discussions/0/805722431784270681/>), [3] (<https://www.gamersheroes.com/game-guides/how-to-get-conversion-bonus-on-dispatch-missions-in-crimson-desert/>)
 
 Exact Costs & Church Locations
 
@@ -249,7 +263,9 @@ Fastest Loop to Pay for All Three (129 Gold Bars Total)
 
 ---
 
-To unlock the Solidarity III Abyss Core from Pailune City, pick up the "Traveler with Oak Barrels" Sealed Abyss Artifact on the central monument in Pailune City first so your tavern visits register. Once your Church Blessings and Golden Beer are active, prioritize Delesyia's Large-Scale Equipment and Gold Bar dispatches. [1] (<https://www.method.gg/crimson-desert/crimson-desert-all-sealed-abyss-artifact-locations>), [2] (<https://steamcommunity.com/sharedfiles/filedetails/?l=german&id=3696266863>), [3] (<https://www.youtube.com/watch?v=88WKFulOs5M>), [4] (<https://www.youtube.com/watch?v=ySEWMn8XR6A>)
+### Solidarity III Abyss Core from Pailune City
+
+- pick up the "Traveler with Oak Barrels" Sealed Abyss Artifact on the central monument in Pailune City first so your tavern visits register. Once your Church Blessings and Golden Beer are active, prioritize Delesyia's Large-Scale Equipment and Gold Bar dispatches. [1] (<https://www.method.gg/crimson-desert/crimson-desert-all-sealed-abyss-artifact-locations>), [2] (<https://steamcommunity.com/sharedfiles/filedetails/?l=german&id=3696266863>), [3] (<https://www.youtube.com/watch?v=88WKFulOs5M>), [4] (<https://www.youtube.com/watch?v=ySEWMn8XR6A>)
 
 1. Exact Steps for the Pailune City Sealed Abyss Artifact (Solidarity III)
 
@@ -274,7 +290,9 @@ Because Pailune and the Crimson Desert have no church donation boxes, focus your
 
 ---
 
-You can socket your Solidarity III core for free at any of the five Witches (starting with Sylvia right outside Hernand). To farm Aptitude III XP blueprints, unlock the Bordig Ruins Excavation dispatch in the Crimson Desert and use a targeted save-scum loop on its 70% blueprint drop. [1] (<https://www.youtube.com/watch?v=02zBSVKs6HE&t=28>), [2] (<https://www.polygon.com/crimson-desert-witch-where-to-find-location-abyss-gear-equip-hermit/>), [3] (<https://questlog.gg/crimson-desert/en/db/dispatch-mission/2024322824>), [4] (<https://www.facebook.com/fb-answers/how-to-unlock-bordig-ruins-crimson-desert/>)
+### Socet Solidarity III core for free at any of the five Witches
+
+- (starting with Sylvia right outside Hernand) To farm Aptitude III XP blueprints, unlock the Bordig Ruins Excavation dispatch in the Crimson Desert and use a targeted save-scum loop on its 70% blueprint drop. [1] (<https://www.youtube.com/watch?v=02zBSVKs6HE&t=28>), [2] (<https://www.polygon.com/crimson-desert-witch-where-to-find-location-abyss-gear-equip-hermit/>), [3] (<https://questlog.gg/crimson-desert/en/db/dispatch-mission/2024322824>), [4] (<https://www.facebook.com/fb-answers/how-to-unlock-bordig-ruins-crimson-desert/>)
 
 1. All 5 Witch Locations (To Socket Your Solidarity III Core)
 
@@ -317,7 +335,9 @@ Step 3 — Target & Save-Scum the Blueprint Drop
 
 ---
 
-Alongside Bordig Ruins, there are five other ruins dispatches that drop exclusive Abyss Gear blueprints (identified by a diamond icon with a circle inside). For fast leveling, socket Aptitude III into high-slot armor pieces—specifically Scorch Flame Plate Boots—because Aptitude effects stack up to a 100% cap. [1] (<https://www.facebook.com/61554419496488/videos/how-to-get-aptitude-abyss-gear-fast-best-method-crimson-desertfor-complete-guide/1440080193983639/>), [2] (<https://www.youtube.com/watch?v=y28M6xlNAww>), [3] (<https://www.reddit.com/r/CrimsonDesert/comments/1u0wo9m/which_setup_is_better_for_aptitude_abyss_gear/>)
+### Five other ruins dispatches for exclusive Abyss Gear blueprints
+
+- (identified by a diamond icon with a circle inside). For fast leveling, socket Aptitude III into high-slot armor pieces—specifically Scorch Flame Plate Boots—because Aptitude effects stack up to a 100% cap. [1] (<https://www.facebook.com/61554419496488/videos/how-to-get-aptitude-abyss-gear-fast-best-method-crimson-desertfor-complete-guide/1440080193983639/>), [2] (<https://www.youtube.com/watch?v=y28M6xlNAww>), [3] (<https://www.reddit.com/r/CrimsonDesert/comments/1u0wo9m/which_setup_is_better_for_aptitude_abyss_gear/>)
 
 1. The Other 5 Ruins Dispatches (Exclusive Blueprints)
 
