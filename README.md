@@ -43,7 +43,7 @@ A mount can sit in several lists. The A.T.A.G. is Land, Underwater, Mechanical a
 | | |
 |---|---|
 | **Leaves** | Greymanes · Trade · Bank · Pailune · Real Estate · Ships · Islands · Hustles |
-| **Category branches** | Management · Player Control · When · Multipliers · Can Lose Money |
+| **Category branches** | Potential (Fortune · Income · Groundwork) · Management · Player Control · When · Multipliers · Can Lose Money |
 | **Best for** | Away From the Controller · Money This Session · Scaling Up |
 
 ## Screenshots

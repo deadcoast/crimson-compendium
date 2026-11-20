@@ -32,7 +32,8 @@
   },
   "tags": [
    "before-dlc",
-   "multiplier"
+   "multiplier",
+   "groundwork"
   ],
   "requires": [
    "Main story Chapter 8 finished",
@@ -187,7 +188,8 @@
   },
   "tags": [
    "before-dlc",
-   "multiplier"
+   "multiplier",
+   "groundwork"
   ],
   "routes": [
    {
@@ -338,7 +340,8 @@
    }
   },
   "tags": [
-   "before-dlc"
+   "before-dlc",
+   "income"
   ],
   "requires": [
    "Dispatch Coordinator (Ross) at camp",
@@ -498,7 +501,8 @@
    }
   },
   "tags": [
-   "before-dlc"
+   "before-dlc",
+   "groundwork"
   ],
   "routes": [
    {
@@ -645,7 +649,8 @@
    }
   },
   "tags": [
-   "before-dlc"
+   "before-dlc",
+   "income"
   ],
   "routes": [
    {
@@ -780,7 +785,8 @@
   "tags": [
    "before-dlc",
    "multiplier",
-   "risk"
+   "risk",
+   "groundwork"
   ],
   "requires": [
    "Main story Chapter 10 (Delesyia)",
@@ -930,7 +936,8 @@
   },
   "tags": [
    "dlc",
-   "risk"
+   "risk",
+   "income"
   ],
   "requires": [
    "Charting the Unknown installed (2.04)",
@@ -1111,7 +1118,8 @@
   },
   "tags": [
    "dlc",
-   "risk"
+   "risk",
+   "income"
   ],
   "requires": [
    "The Saw Turns Again completed",
@@ -1238,7 +1246,8 @@
    "stacks": [],
    "watch": [
     "Patch 2.04.02 fixed a bug that inflated facility earnings. The million-a-day reports came out around launch; treat them as a ceiling.",
-    "A facility worker is out of the dispatch and ship-crew pool."
+    "A facility worker is out of the dispatch and ship-crew pool.",
+    "Its Potential tier is Income, not Fortune: the tier list counts no figure a later patch cut, and the post-fix figures (the Timberham Sawmill's) come to well under a Gold Bar's worth a day."
    ]
   },
   "variants": []
@@ -1275,7 +1284,8 @@
    }
   },
   "tags": [
-   "dlc"
+   "dlc",
+   "groundwork"
   ],
   "requires": [
    "Journey's End completed",
@@ -1434,7 +1444,8 @@
    }
   },
   "tags": [
-   "dlc"
+   "dlc",
+   "groundwork"
   ],
   "requires": [
    "Howling Hill expanded until A Wider World unlocks",
@@ -1585,7 +1596,8 @@
    }
   },
   "tags": [
-   "dlc"
+   "dlc",
+   "groundwork"
   ],
   "requires": [
    "A Wider World questline started"
@@ -1754,7 +1766,8 @@
    }
   },
   "tags": [
-   "dlc"
+   "dlc",
+   "groundwork"
   ],
   "routes": [
    {
@@ -1888,7 +1901,8 @@
    }
   },
   "tags": [
-   "dlc"
+   "dlc",
+   "groundwork"
   ],
   "requires": [
    "A ship with Deckhands assigned",
@@ -2041,7 +2055,8 @@
    }
   },
   "tags": [
-   "before-dlc"
+   "before-dlc",
+   "groundwork"
   ],
   "requires": [
    "Chapter 7 reached",
@@ -2163,7 +2178,8 @@
    }
   },
   "tags": [
-   "before-dlc"
+   "before-dlc",
+   "groundwork"
   ],
   "requires": [
    "Main story and Epilogue finished",
@@ -2302,7 +2318,8 @@
   },
   "tags": [
    "before-dlc",
-   "risk"
+   "risk",
+   "income"
   ],
   "requires": [
    "Greymane Camp at Howling Hill",
@@ -2491,7 +2508,8 @@
   },
   "tags": [
    "before-dlc",
-   "risk"
+   "risk",
+   "income"
   ],
   "routes": [
    {
@@ -2651,7 +2669,8 @@
    }
   },
   "tags": [
-   "before-dlc"
+   "before-dlc",
+   "groundwork"
   ],
   "routes": [
    {
@@ -2829,7 +2848,8 @@
   },
   "tags": [
    "before-dlc",
-   "risk"
+   "risk",
+   "fortune"
   ],
   "routes": [
    {
@@ -2998,7 +3018,8 @@
    }
   },
   "tags": [
-   "before-dlc"
+   "before-dlc",
+   "fortune"
   ],
   "requires": [
    "Gold Bar recipe from the Witch's Hideout, south of Pailune"
@@ -3179,7 +3200,8 @@
   },
   "tags": [
    "before-dlc",
-   "risk"
+   "risk",
+   "fortune"
   ],
   "routes": [
    {
@@ -3317,7 +3339,8 @@
    }
   },
   "tags": [
-   "before-dlc"
+   "before-dlc",
+   "fortune"
   ],
   "routes": [
    {
@@ -3469,7 +3492,8 @@
   },
   "tags": [
    "before-dlc",
-   "risk"
+   "risk",
+   "income"
   ],
   "routes": [
    {
@@ -3619,7 +3643,8 @@
   },
   "tags": [
    "before-dlc",
-   "multiplier"
+   "multiplier",
+   "groundwork"
   ],
   "routes": [
    {

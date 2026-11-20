@@ -150,7 +150,7 @@
     <p class="eyebrow">Everything on this route, ranked</p>
     <div class="next">
       <a href={href.ladder(branch)}><Glyph name="ladder" size={15} />Tier ladder</a>
-      {#each branch.categories.slice(0, 2) as c}
+      {#each branch.categories.slice(0, 3) as c}
         <a href={href.cat(branch, c.id)}><Glyph name={c.glyph} size={15} />{c.label}</a>
       {/each}
     </div>
