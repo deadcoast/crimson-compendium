@@ -52,6 +52,7 @@ These are the item IDs from `IDENTIFIED.md`, placed under the milestones in `PLA
 - RI-06: all 18 facilities listed with location, type and staff skill
 - RI-07: island upgrades and income, once a source documents them
 - RI-08: trade-route table from the in-game Trade tab
+- RI-09: every method in your notes (`docs/money-methods.md`) that Riches doesn't cover yet, among them Supply Contracts through merchant trust, the Silk Crafting dispatch, Accountant dispatches, two-slot horse trading, Tinkerton Dig Site Protection, Great Coral Reef farming, and the Timberham save-and-quit duplication (listed under Watch out if it ships, as an exploit). The notes are leads: each method needs a retrievable source and an in-game capture before it ships. Their Camp Funds sums predate the 1,000-per-Silver correction, so they are re-worked, not copied
 
 ## Not yet placed
 

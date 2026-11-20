@@ -18,7 +18,7 @@
   {
    "id": "return",
    "label": "Return",
-   "blurb": "What it pays next to the other methods, on the best documented figure. Converted to Camp Funds where the guide shows the sum; not rated where nothing is documented."
+   "blurb": "What it pays next to the other methods, on the best documented figure, compared in Silver: Camp Funds count at 1,000 to the Silver, the donation rate since 2.01. Not rated where nothing is documented."
   },
   {
    "id": "effort",
@@ -44,6 +44,10 @@
   {
    "lead": "Effort and Setup read like the rest.",
    "text": "Tier I is always the good end: Tier I Effort runs while you are away, Tier I Setup can start today."
+  },
+  {
+   "lead": "Silver is the yardstick.",
+   "text": "Camp Funds are counted in copper and, since 2.01, one donated Silver buys 1,000 of them. A dispatch paying 13,000 Camp Funds is worth 13 Silver next to a wagon run."
   },
   {
    "lead": "“Not rated”",
@@ -319,14 +323,82 @@
  ],
  "route": {
   "title": "The Route",
-  "blurb": "Eight phases, in order. Each one raises what the next earns: multipliers before income, income before conversion, conversion before the DLC's big purchases.",
+  "blurb": "Eight phases, in order. Silver is the money that matters: since 2.01 each Silver donates as 1,000 Camp Funds, so the DLC's prices fall to a few Gold Bars and the Silver earners lead.",
   "premise": "You have finished the main story through Journey's End and own Charting the Unknown without starting it. Your camp is at Howling Hill with a working roster.",
   "phases": [
+   {
+    "id": "silver",
+    "label": "Make Silver",
+    "stage": "Before the DLC",
+    "why": "Gold Bars are the fastest Silver on record: a player lifted six from Wildlife Park nobles in 25 minutes, 3,000 Silver at a bank. Everything later is bought with Silver, directly or through donation.",
+    "cover": {
+     "entry": "noble-pickpocketing",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "entry": "noble-pickpocketing",
+      "text": "Work the Demeniss Wildlife Park nobles with the lantern and a mask; clear bounty at a confessional."
+     },
+     {
+      "entry": "gold-bar-crafting",
+      "text": "Take the Gold Bar recipe from the Witch's Hideout and craft bars from Golden Apples and Gold Ore."
+     }
+    ],
+    "meanwhile": [
+     {
+      "entry": "crude-gold-circuit",
+      "text": "Sweep the crude gold caches when you pass them: about 2,000 Silver a circuit."
+     }
+    ]
+   },
+   {
+    "id": "bank",
+    "label": "Put the bars to work",
+    "stage": "Before the DLC",
+    "why": "The bank turns spare bars into more bars, up to 40 a cycle. With a save before each roll, Medium never loses and gains up to +20% every three in-game days, and resting moves the clock.",
+    "cover": {
+     "entry": "bank-investment",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "entry": "bank-investment",
+      "text": "Buy the 100-Silver Strongbox permit, deposit spare bars at Medium, and save before each roll. Bonds only past 100 spare bars."
+     },
+     {
+      "entry": "time-skip",
+      "text": "Rest between jobs: bank cycles, dispatches and builds all count in-game hours."
+     }
+    ],
+    "meanwhile": [
+     {
+      "entry": "card-tables",
+      "text": "Spare Silver can sit at Beighen's Five-Card table: 400–600 a winning session."
+     }
+    ]
+   },
+   {
+    "id": "convert",
+    "label": "Convert only what you spend",
+    "stage": "Before the DLC",
+    "why": "Ships, leases and Blessings cost Camp Funds, and Camp Funds are counted in copper. Since 2.01 one donated Silver gives 1,000, so a Gold Bar exchanged and donated gives 500,000. The donation is one way: convert for the next purchase, not ahead of it.",
+    "cover": {
+     "entry": "camp-donations",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "entry": "camp-donations",
+      "text": "Exchange bars at a bank for 500 Silver each, then donate the Silver to Carl. Never hand him a bar whole."
+     }
+    ]
+   },
    {
     "id": "multipliers",
     "label": "Arm the multipliers",
     "stage": "Before the DLC",
-    "why": "Golden Beer doubles every dispatch payout and Blessings add up to +200% in a region. Both apply to every cycle you run after them, so they come before any income.",
+    "why": "Golden Beer doubles every dispatch and Blessings add up to +200% in a region. Their Camp Funds matter little; the food, stone, timber and weapons they double are what castles, shipbuilding and Grey-0 workers consume. Maxing Hernand's Blessing costs about 300 Silver.",
     "cover": {
      "entry": "golden-beer",
      "role": "hero"
@@ -338,41 +410,31 @@
      },
      {
       "entry": "church-blessings",
-      "text": "Donate to the church of the region your best dispatches run in; about 110,000 buys +100% in Hernand."
-     },
-     {
-      "entry": "time-skip",
-      "text": "From here on, rest between jobs: every timer on this route counts in-game hours."
-     }
-    ],
-    "meanwhile": [
-     {
-      "entry": "noble-pickpocketing",
-      "text": "Gold Bars from the Wildlife Park pay for the Blessings."
+      "text": "Donate to the church of the region your supply dispatches run in; about 110,000 Camp Funds (110 Silver) buys +100% in Hernand."
      }
     ]
    },
    {
     "id": "engine",
-    "label": "Build the dispatch engine",
+    "label": "Build the materials engine",
     "stage": "Before the DLC",
-    "why": "Estate Security turns food into Camp Funds on Repeat. Supply dispatches keep the food coming, excavations pay the largest lumps, and Grey-0 workers fill the routine slots.",
+    "why": "The DLC's big projects are paid in materials as well as Camp Funds: a Flame Knights' rebuild takes 40,000 stone and 40,000 wood, and each Grey-0 worker 5,000 weapons. Dispatch on Repeat makes them while you do the rest.",
     "cover": {
-     "entry": "estate-security",
+     "entry": "supply-dispatches",
      "role": "hero"
     },
     "steps": [
      {
       "entry": "supply-dispatches",
-      "text": "Set one food mission for every food-hungry money mission, then add stone and timber."
+      "text": "Run a food mission for every food-hungry mission, then quarries and logging for stone and timber."
      },
      {
       "entry": "estate-security",
-      "text": "Put every manor's security mission on Repeat."
+      "text": "Put manor security on Repeat: it turns surplus food into Camp Funds."
      },
      {
       "entry": "excavation-dispatches",
-      "text": "Send specialists to excavations: 37,000 a Tinkerton run."
+      "text": "Send specialists to excavations for the rare items."
      },
      {
       "entry": "grey-0-workers",
@@ -381,54 +443,8 @@
     ],
     "meanwhile": [
      {
-      "entry": "gold-bar-crafting",
-      "text": "Farm Golden Apples and ore while the timers run."
-     }
-    ]
-   },
-   {
-    "id": "trade",
-    "label": "Open the trade routes",
-    "stage": "Before the DLC",
-    "why": "Patch 1.16 quadrupled Royal post prices and added 133 posts. One wagon of Salt sold for 84,450 Silver, and every Silver donated becomes 10 Camp Funds.",
-    "cover": {
-     "entry": "trade-wagons",
-     "role": "hero"
-    },
-    "steps": [
-     {
-      "entry": "trade-wagons",
-      "text": "Find the buyer on the Trade tab, then load; never drive back empty."
-     },
-     {
       "entry": "royal-trading-posts",
-      "text": "Feed each Royal court the good on its list."
-     }
-    ],
-    "meanwhile": [
-     {
-      "entry": "card-tables",
-      "text": "Spare Silver between runs can sit at Beighen's Five-Card table."
-     }
-    ]
-   },
-   {
-    "id": "convert",
-    "label": "Convert at the best rate",
-    "stage": "Before the DLC",
-    "why": "Ships, leases and Blessings cost Camp Funds. Silver converts at 10 to 1 since 2.01; a whole Gold Bar was measured at 50,000, ten times its Silver value. Test one bar, then convert the cheaper way.",
-    "cover": {
-     "entry": "camp-donations",
-     "role": "hero"
-    },
-    "steps": [
-     {
-      "entry": "camp-donations",
-      "text": "Donate one bar and read the counter. At 50,000, donate bars whole and keep Silver for Kliff."
-     },
-     {
-      "entry": "bank-investment",
-      "text": "Bars you will not donate sit at Low risk; Medium swings −15% to +20% a cycle. Bonds only past 100 spare bars."
+      "text": "Packaged goods pay Camp Funds; a Royal delivery is worth it on a trip you are making anyway."
      }
     ]
    },
@@ -436,7 +452,7 @@
     "id": "pailune",
     "label": "Finish Pailune",
     "stage": "Before the DLC",
-    "why": "The final camp doubles farm and ranch space, which is more food for the dispatch engine, and 1,000 storage slots hold cargo between runs.",
+    "why": "The final camp doubles farm and ranch space, which is more food for the materials engine, and 1,000 storage slots hold stock between runs.",
     "cover": {
      "entry": "pailune-camp",
      "role": "hero"
@@ -453,30 +469,10 @@
     ]
    },
    {
-    "id": "lease",
-    "label": "Lease before you sail",
-    "stage": "In the DLC",
-    "why": "Facilities are the DLC's first income: the Timberham lease costs 15,000 and pays daily while you are at sea. Upkeep is daily too, so lease only what your roster can staff.",
-    "cover": {
-     "entry": "timberham-sawmill",
-     "role": "hero"
-    },
-    "steps": [
-     {
-      "entry": "timberham-sawmill",
-      "text": "Lease Timberham and reach Popularity Level 3 with low prices."
-     },
-     {
-      "entry": "facility-leases",
-      "text": "Lease the businesses your staff can run: Cooking, Smithing, Tailoring, Woodworking."
-     }
-    ]
-   },
-   {
     "id": "fleet",
-    "label": "Build the first ship, buy the second",
+    "label": "Build the first ship, buy the big one",
     "stage": "In the DLC",
-    "why": "The quest-built Small Greymane Ship holds 14, the same as the 40,000 Small Hernandian. Skip that purchase; the Medium at 1.2M is the first ship that adds cargo space.",
+    "why": "The quest-built Small Greymane Ship holds 14, the same as the 40,000 Small Hernandian, so skip that purchase. The Large's 6,000,000 is 6,000 donated Silver: twelve Gold Bars buy the 36-slot ship outright.",
     "cover": {
      "entry": "fleetmaster-ships",
      "role": "hero"
@@ -492,27 +488,41 @@
      },
      {
       "entry": "fleetmaster-ships",
-      "text": "Buy the Medium at 1.2M; the Large at 6M only when routes fill 22 slots."
+      "text": "Buy the Large with twelve bars' worth of donated Silver; the Medium (1,200 Silver) if you are short."
      }
     ]
    },
    {
-    "id": "islands",
-    "label": "Pioneer the islands",
+    "id": "expand",
+    "label": "Lease, pioneer, build",
     "stage": "In the DLC",
-    "why": "Each anchorage adds missions, shops and a ship teleport point. Castles come last: they cost funds and stock and pay nothing back.",
+    "why": "Leases cost 15 Silver each and a levelled shop was reported near 1,000 Silver a day before the 2.04.02 fix, with equipment and blueprints at each popularity level. Islands add missions, shops and a ship teleport. Castles come last: they cost materials and pay nothing back.",
     "cover": {
      "entry": "island-pioneering",
      "role": "hero"
     },
     "steps": [
      {
+      "entry": "timberham-sawmill",
+      "text": "Lease Timberham and reach Popularity Level 3 with low prices; wages and upkeep are daily."
+     },
+     {
+      "entry": "facility-leases",
+      "text": "Lease only the businesses your staff can run: Cooking, Smithing, Tailoring, Woodworking."
+     },
+     {
       "entry": "island-pioneering",
       "text": "Pioneer Auronui from its Anchorage, then Samora and Winding Island."
      },
      {
       "entry": "castles",
-      "text": "Rebuild a castle only from surplus: 20 comrades away for 15 days."
+      "text": "Rebuild a castle from surplus materials: 20 comrades away for 15 days."
+     }
+    ],
+    "meanwhile": [
+     {
+      "entry": "trade-wagons",
+      "text": "Wagon trading pays Camp Funds — about 62 Silver on a good Salt load — so run it for the goods, not the money."
      }
     ]
    }

@@ -9,9 +9,14 @@ The starting state is: main story finished (Journey's End), Charting the Unknown
 | Fact | Basis · source |
 |---|---|
 | 100 Copper = 1 Silver; a bank pays 500 Silver per Gold Bar, a merchant about 190 | guide · The Games Wiki, Console Pulse |
-| Since 2.01, donated Silver gives ×10 Camp Funds; before 2.01 it was 1:1 | patch · Vulkk *Update 2.01*; The Games Wiki *Patch 2.01.00* |
-| A donated Gold Bar gave **50,000** Camp Funds — measured before 2.01, marked unconfirmed for the current build | guide · The Games Wiki *Camp Funds* |
-| So one bar as Silver donates for 500 × 10 = 5,000; donated whole it may give ten times that | sum |
+| Camp Funds are counted in copper: before 2.01 one donated Silver gave 100 | guide · All Things How *Church Donations*; Steam discussion ("1 gold bar is 50k copper for the camp") |
+| Patch 2.01 multiplied Camp Funds from donated Silver by ten | patch · Vulkk *Update 2.01*; The Games Wiki *Patch 2.01.00* |
+| **Since 2.01, one Silver gives 1,000 Camp Funds** (1 copper → 10) | guide · Camp-Funds-Withdraw mod (GitHub, Nexus), which inverts the game's own donation rate |
+| A Gold Bar, exchanged for 500 Silver and donated, gives 500 × 1,000 = 500,000 | sum |
+| The Games Wiki's 50,000 per donated Gold Bar is the pre-2.01 copper value of 500 Silver; exchange bars before donating | sum |
+| The 6,000,000 Large Hernandian Ship is 6,000 donated Silver: twelve Gold Bars | sum |
+
+The first R1 build read the 2.01 rate as 1 Silver → 10 Camp Funds. It was corrected the same day, and every Return rating was re-rated with Silver as the common unit.
 | One Hernand Bond = 10 Gold Bars; Bond investing needs 10 Bonds (100 bars) | patch · Console Pulse *Patch 1.16* |
 | Ships, leases, Blessings and dispatch fees are paid in Camp Funds | guide · Playnews, The Games Wiki |
 
@@ -89,9 +94,9 @@ Basis: guide · KeenGamer (inventory), PowerUp Gaming (health); screenshot · Wh
 
   It also raised the cargo lost when a wagon is destroyed or retrieved. Basis: patch · Console Pulse.
 - Wagons need Brice (*A Rumor in Glenbright Farm*), an Engineer and the Timberturner Wainwright. Basis: guide · Console Pulse.
-- **A published run** (screenshots · Whisper of the House):
-  - 150 Packaged Cheese bought at 118 (17,700 Silver), for Varnia's Royal post, which listed Cheese at 1,000.
-  - 150 Packaged Salt bought 22% below reference and sold at 563 each: 84,450 Silver.
+- **A published run** (screenshots · Whisper of the House). The write-up calls these sums Silver. The screenshots show the Camp Funds icon, the one a facility's earnings use, and The Games Wiki says packaged goods pay Camp Funds:
+  - 150 Packaged Cheese bought at 118 (17,700 Camp Funds), for Varnia's Royal post, which listed Cheese at 1,000.
+  - 150 Packaged Salt bought 22% below reference and sold at 563 each: 84,450 Camp Funds, a 61,800 margin, or about 62 Silver at the donation rate.
 
 ## Bank
 
@@ -124,6 +129,7 @@ They can come back if their sources are found.
 ## Sources
 
 - All Things How: [Banking System: Profits With Save-Scumming](https://allthings.how/crimson-desert-banking-system-guaranteed-profits-with-save-scumming/)
+- All Things How: [Church Donations: How Conversion Bonuses Work](https://allthings.how/crimson-desert-church-donations-how-conversion-bonuses-work/)
 - All Things How: [Grey-0 Mecha Workers: Unlock, Craft, and Deploy](https://allthings.how/crimson-desert-grey-0-mecha-workers-unlock-craft-and-deploy-robot-comrades/)
 - All Things How: [How to Spot and Accuse Cheating Gamblers](https://allthings.how/crimson-desert-how-to-spot-and-accuse-cheating-gamblers-in-duo/)
 - Console Pulse: [Best Passive Income Setup](https://consolepulse.com/multiplatform/crimson-desert/guides/best-passive-income-setup-crimson-desert)
@@ -143,6 +149,7 @@ They can come back if their sources are found.
 - Gaming ProMax: [How to Move to Pailune](https://gamingpromax.com/how-to-move-to-pailune-in-crimson-desert/)
 - GamingBolt: [How to Unlock Greymane Castles](https://gamingbolt.com/?p=656503)
 - GamingBolt: [Update Buffs Camp Funds From Silver](https://gamingbolt.com/crimson-desert-update-buffs-camp-funds-from-silver-adds-new-dispatch-mission-and-more)
+- GitHub: [Camp-Funds-Withdraw: the game's donation rate, inverted](https://github.com/Marukooh/Camp-Funds-Withdraw)
 - KeenGamer: [DLC Shipbuilding Guide: All Ships and Upgrades](https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/)
 - KeenGamer: [Trading Guide: Wagons, Routes, and Camp Resources](https://keengamer.com/articles/guides/crimson-desert-trading-guide-wagons-routes-and-camp-resources)
 - Method: [Golden Apple Guide](https://www.method.gg/crimson-desert/crimson-desert-golden-apple-guide-how-to-find-and-use-golden-apples)
@@ -151,6 +158,7 @@ They can come back if their sources are found.
 - NeonLightsMedia: [Facilities Guide](https://www.neonlightsmedia.com/blog/crimson-desert-facilities-guide)
 - NeonLightsMedia: [Gambling Guide: Duo and Five-Card](https://www.neonlightsmedia.com/blog/crimson-desert-gambling-duo-five-card)
 - Nerds Chalk: [How to Move to Pailune and Unlock the Final Camp](https://nerdschalk.com/crimson-desert-how-to-move-to-pailune-and-unlock-the-final-camp-location-upgrade-requirements-unlock-steps-and-rewards/)
+- Nexus Mods: [Withdraw Camp Funds (mod notes on the donation rate)](https://www.nexusmods.com/crimsondesert/mods/3946?tab=posts)
 - NoobFeed: [How to Run Facilities](https://www.noobfeed.com/articles/crimson-desert-enhanced-charting-the-unknown-run-facilities)
 - NoobFeed: [How to Unlock Castle](https://www.noobfeed.com/articles/crimson-desert-enhanced-charting-the-unknown-unlock-castle)
 - NoobFeed: [How to Unlock Ships](https://www.noobfeed.com/articles/crimson-desert-enhanced-charting-the-unknown-unlock-ships)
@@ -159,6 +167,7 @@ They can come back if their sources are found.
 - Playnews: [Ships: How to Unlock and Buy Them](https://www.playnews.gg/en/guides/crimson-desert-ships-how-to-unlock-and-buy-them-in-charting-the-unknown)
 - Playnews: [Wiederaufbau von Pailune (German)](https://www.playnews.gg/de/guides/wiederaufbau-von-pailune-in-crimson-desert-die-schritte)
 - PowerUp Gaming: [How to Unlock and Upgrade Ships](https://powerupgaming.co.uk/2026/10/30/how-to-unlock-upgrade-ships-in-crimson-desert-charting-the-unknown/)
+- Steam Community: [How much money is enough? (Steam discussion)](https://steamcommunity.com/app/3321460/discussions/0/796715497279334911/?ctp=2)
 - The Games Wiki: [All Gold Bar Locations](https://thegameswiki.com/crimson-desert/wiki/all-gold-bar-locations)
 - The Games Wiki: [Bank Investment](https://thegameswiki.com/crimson-desert/wiki/bank-investment)
 - The Games Wiki: [Camp Funds](https://thegameswiki.com/crimson-desert/wiki/camp-funds/diff)
