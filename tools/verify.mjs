@@ -68,6 +68,11 @@ const tierOf = (e, m) => {
   }
   return e.tiers[m]?.tier ?? 9;
 };
+// a ratings-derived tier list (QOL's Priority), worked out here independently of the registry
+const ruleTier = (r, e) => {
+  const t = r.metrics.map((m) => e.tiers[m]?.tier ?? 5);
+  return t.every((x) => x <= r.best) ? 0 : t.some((x) => x >= r.worst) ? 2 : 1;
+};
 const matches = (e, w) => shares(w.cls, [e.cls]) && shares(w.domains, e.domains) && shares(w.tags, e.tags) && (!w.atMost || tierOf(e, w.atMost.metric) <= w.atMost.tier);
 
 const branches = readdirSync(join(ROOT, 'src/branches'))
@@ -82,7 +87,7 @@ const branches = readdirSync(join(ROOT, 'src/branches'))
       lists.push([c.id, c.label, mem.length]);
       const leaves = c.leaves === 'rarity'
         ? def.leaves.map((l) => [l.id, l.label, mem.filter((e) => e.leaf === l.id).length])
-        : c.leaves.map((l) => [l.id, l.label, mem.filter((e) => matches(e, l.where)).length]);
+        : c.leaves.map((l, i) => [l.id, l.label, mem.filter((e) => (c.rule ? ruleTier(c.rule, e) === i : matches(e, l.where))).length]);
       for (const [lid, label, n] of leaves) if (n) lists.push([`${c.id}-${lid}`, label, n]);
     }
     for (const l of def.lenses) lists.push([`for-${l.id}`, l.label, entries.filter((e) => matches(e, l.where)).length]);

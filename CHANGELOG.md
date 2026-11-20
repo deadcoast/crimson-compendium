@@ -6,6 +6,18 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
 
 ### Added
 
+- **Quality of Life**, a third branch: 39 upgrades that take the friction out of Pywel.
+  - Nine leaves: Travel, Underwater, Inventory, Gear, Camp, Money, Facilities, Ships & Pioneering, Settings.
+  - Ratings: Impact, Reach and Unlock, I–V. The classes are *Built-in* (settings, patch features, systems) and *Unlock* (things you earn, find, buy or build).
+  - **Priority**, a tier list worked out from the ratings: Essential, Worthwhile, Situational.
+  - **The Order** (`#qol`): ten phases from the first hour to the deep sea.
+  - **Remedy** on every plate: before and after, figures with their basis, the patch history on a rail, pairs, and what to watch out for.
+  - Lists: Built-in, Unlocks, When and Patched In. Shortlists: Right Now, Everywhere and Early Game.
+  - A violet root accent and abyss-light ambient motion.
+  - Research notes with every source: `docs/QOL-RESEARCH.md`.
+- **One home per how-to**: a plate can name a plate in another branch as its `base` and take its steps, places, images and sources from it, so Royler's how-to is written once for Mounts and QOL. The registry and the lint refuse a base or link that names no plate.
+- **Elsewhere in the compendium** on every plate: the plates in other branches tied to it, both ways, each led by its image, with its branch, leaf and tier-list chip. Mounts' Royler, Blackstar and Ocean Drifter now show their QOL listing.
+- `media.py` can pick a frame of an animated source (`"frame": n`).
 - **Potential**, a three-tier list of earning power for Riches. Every method sits in exactly one tier across both classes: **Fortune** (pays Gold Bars, or 500 Silver or more per payout), **Income** (pays money, but less) or **Groundwork** (no money of its own; it multiplies, converts, houses or unlocks). Each plate shows its tier first, as a chip that links to the tier's list. A branch can now declare a category a tier list; the registry refuses a method placed in no tier or in two.
 - **Where, for every mount (M3)**: 29 plates gained world maps and 10 gained full-bleed banners. Maps still missing went from 57 to 28 and banners from 68 to 58; every plate still without one is listed in `DESIGN.md` › Known gaps with its reason.
   - Legendary ships: every blueprint spot on a map, each followed by its on-site view.

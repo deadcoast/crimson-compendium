@@ -188,6 +188,61 @@ You asked for Riches on 2026-11-19: an endgame economy guide for a player who ha
 - **Core stayed generic.** Everything Riches needed from the shared UI is branch data now: `plural`, `labels` (lens folder, How/Where eyebrows, outline label, roam text, class axis), `rules` (the tier sheet's rules), `ladderNote`, `accent`, class `glyph` and `ambient`, and `route`. The tier sheet, hover cards and the footer's as-of line follow the branch you are in. A capture can be `menu` ("In-game screen") for UI screenshots, so a dispatch screen is never labelled "On site".
 - **Gaps (R2).** All 18 facilities by name, location and staff skill. Island upgrade tiers and island income, which no source documents yet. A trade-route table from the in-game Trade tab.
 
+## Quality of Life tree — decisions
+
+You asked for QOL on 2026-11-20: a tree of guides to the mechanics that improve quality of life. Your examples were Royler as the travel priority, the top underwater mount, financial priorities, weapon and armour sets, ship upgrades, pioneering, and facility management and purchasing. You asked me to add the rest. Q1 shipped it with 39 upgrades. The research, with sources, is in `docs/QOL-RESEARCH.md`.
+
+- **Where it sits.** A third root in the explorer (`#qol…`), built from the same source as Mounts and Riches: `src/branches/qol/`. The title is *Quality of Life*, the noun *Upgrade* *(my call)*. Its root accent is a new `--violet` (#ac8ef4, 7.5:1 on ink-0), the one hue no class, leaf or other root uses. Red keeps its jobs.
+- **Leaves** (your domains, plus the ones research added):
+  - Travel (land): Abyss Nexus Network, Royler, Blackstar, Flight, Thinker's Meadow Nexus, Axiom Force.
+  - Underwater (sea): Ocean Drifter, Diving Suits, Propulsion Breathing Device, Forsaken Oath Plate.
+  - Inventory (brass) *(research addition)*: Sturdy Gatherables Chest, Bags, Private Storage, Pets, Extra Large Bag, Kuku Cooler, Wardrobes and Collectibles.
+  - Gear (ember): Refinement Tokens, Cold Immunity, Heat Immunity, Movement Speed Gear.
+  - Camp (bone) *(research addition)*: Resting, Auto-Repeat Dispatch, Camp Expansion, Pailune Camp.
+  - Money (gold): Camp Donations, Gold Bar Crafting, Golden Beer, Bank Investment.
+  - Facilities (royal): Facility Leases, Castles.
+  - Ships & Pioneering (deck): Crew and Outfitting, Ship Teleportation Device, Island Pioneering, Large Hernandian Ship. You named ship upgrades and pioneering separately. They share one leaf because pioneering is how the ship teleporter is earned, and either alone held one or two plates *(my call)*.
+  - Settings (sky) *(research addition)*: Map Markers and Filters, Difficulty, Display Toggles, Re-blockades.
+  - Weapons: no weapon has a documented convenience effect, only combat stats, so none is listed. Armour sets are listed where they remove a penalty: Frostcursed and Kuku Ice for the cold, Scorchflame and Kuku Flame for the heat, Forsaken Oath for air, Blackwing and the tailors' boots for speed.
+- **Two classes** *(my call)*: *Built-in* means settings, patch features and systems everyone has once they know about them. *Unlock* means things you earn, find, buy or build. A reader can filter for "what can I turn on now". Each class has its own glyph (sliders and a key).
+- **Metrics**, with Tier I always the good end:
+  - **Impact**: how much friction it removes where it applies.
+  - **Reach**: how much of the game it touches. Tier I is every session, Tier IV is one region or activity, Tier V is one place or fight.
+  - **Unlock**: what it takes to have it.
+
+  Three metrics, not four: a fourth (cost apart from unlock) split one judgement in two *(my call)*. Ratings compare every upgrade against every other, not within a class. Tier names keep the brief's wording.
+- **Priority: a three-tier list** (`CategoryDef.tierList`, the same mechanism as Riches' Potential). Nobody tags it. A new `CategoryDef.rule` names the metrics and two thresholds, the registry works out each plate's tier from its ratings, and verify works it out again on its own to check the counts. Re-rate a plate and it moves tier by itself *(my call)*:
+  - **Essential** (violet): Impact II or better and Reach II or better.
+  - **Worthwhile** (bone): everything between.
+  - **Situational** (ash): Impact IV or worse, or Reach IV or worse.
+
+  Unlock does not count. Priority says what an upgrade is worth, and Unlock says what it costs, so Blackstar (Chapter 11) and Golden Beer (Chapter 8) are still Essential. Q1 counts 18 Essential, 13 Worthwhile and 8 Situational. The Ocean Drifter is the top pick in Underwater but Situational overall: everything underwater rates Reach IV (one activity). A reader who dives should get it first; one who doesn't loses nothing.
+- **Order inside a leaf**: Priority, then Impact, Reach and Unlock. Royler is the second Travel plate, behind only the Nexus network.
+- **One home for every how-to** (core, `Entry.base`). A QOL plate about a Mounts or Riches plate names it, as in `"base": "mounts/royler"`. The registry fills every field it leaves out from that plate: kind, region, area, requirements, routes, location, notes, variants, media and since. It merges sources, its own first. Its own summary, trait, ratings, tags and remedy say why it is in QOL. So Royler's steps and images are written once, and a fix to the Mounts plate reaches QOL. 14 of the 39 plates use it. The registry refuses a base that does not exist, that points into its own branch, or that has a base of its own. The lint resolves bases the same way; `media.py` skips plates that take their media from a base.
+- **Elsewhere in the compendium** (core, `Also.svelte`). Each plate lists the plates in other branches tied to it, both ways:
+  - *Full plate*: the plate it is about.
+  - *See also*: plates it names in `also`.
+  - *Listed in*: plates elsewhere that take it as their base.
+  - *Cited in*: plates elsewhere that name it in `also`.
+
+  Each card leads with the other plate's image, names its branch in that branch's accent, and shows its tier-list chip (Potential, Priority). The Mounts plates for Royler, Blackstar and the Ocean Drifter now show their QOL listing.
+- **Remedy** (`QolRemedy.svelte`, the branch's plate section). It shows:
+  - *Before → After*: the friction, muted, against the fix in the leaf's accent.
+  - The figures, with the Riches basis vocabulary (patch notes, guide, screenshot, player report, sum).
+  - *Patch history*: the versions that shaped the mechanic, on a rail, each with its reporter. The lint checks the publisher on each step.
+  - *Pairs with*: upgrades that stack with this one, linked both ways, with each one's Priority.
+  - *Watch out*.
+- **The Order** (`#qol`, the front door): ten phases from the first hour to the deep sea, by when the story makes each upgrade available, in six stages: Any time, Early story, Through the story, Late story, After the story, In the DLC *(my call)*. It reuses the Riches route view.
+- **Lists**: Priority; Built-in and Unlocks (by leaf); When (Base Game, In the DLC); and Patched In, the 17 upgrades a returning player has not seen yet. Shortlists: Right Now (Unlock I), Everywhere (Reach I), Early Game (Unlock II or better).
+- **Ambient motion**: a new `abyss` mode. Violet motes rise and pulse, and now and then a ring opens on the ground like a Nexus waking. Both QOL classes use it.
+- **Media rule additions**: `media.py` takes `"frame": n` to pick a frame of an animated source. Skill portraits are Game8's in-game skill icons cropped inside their frame, so the Game8 salmon ring stays out.
+- **Calls a reader should know about**:
+  - *Thinker's Meadow Nexus* is Worthwhile, not Essential. Epic's write-up says the Greymane Camp has its own Nexus, so how much the repair saves depends on which points you hold.
+  - *Difficulty*: "a boss beaten on Easy paid the same reward" rests on one documented case (The Games Wiki, Mazzul's Golden Beer), and the plate says so.
+  - *Re-blockades*: PC Gamer does not name the menu, and the plate says so.
+  - *Propulsion Breathing Device*: the English name follows Vulkk's database. PlayNews, which is machine-translated, gives two upgrade recipes; the plate uses Vulkk's.
+  - *Camp Expansion* lists the first tier at "250 silver" as KeenGamer writes it. The unit may be camp funds.
+
 ## Known gaps
 
 Left out for lack of reliable data or real imagery:
@@ -205,6 +260,8 @@ Left out for lack of reliable data or real imagery:
   - *Horses (8):* Camora, the five breeds and the two road horses; no guide names the breed of the horse in its shots.
   - *Other land and sky mounts (16):* only sub-1,200 px or unnamed shots exist (consolepulse's 960 px Leaping Kuku Bird, Game8's 728 px views).
 - **Large Greymane Ship hold size**: Game8 does not list it, so its record shows Health only.
+- **QOL plates without a banner**: Kuku Cooler and Axiom Force (every wide shot is a menu or a split cutscene) and Movement Speed Gear (only item icons). They keep the framed portrait.
+- **QOL facts no source pins**: where the re-blockade option sits in the menus; the unit of the first camp expansion's 250 cost; the full list of islands past Auronui and what each anchorage sells.
 
 ## Build and release
 

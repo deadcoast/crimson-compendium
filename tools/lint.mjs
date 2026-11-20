@@ -16,7 +16,7 @@ const KINDS = new Set(['map', 'overworld', 'action', 'variant', 'menu']);
 // what a quoted figure stands on: patch notes, guide text, a guide's in-game screenshot, one player's report, or a sum shown
 const BASES = new Set(['patch', 'guide', 'screenshot', 'player', 'sum']);
 // Particles.svelte's modes (types.ts Ambient); a class without `ambient` falls back to its own id
-const AMBIENTS = new Set(['land', 'sea', 'sky', 'gold']);
+const AMBIENTS = new Set(['land', 'sea', 'sky', 'gold', 'abyss']);
 
 const shares = (want, have) => !want || want.some((v) => have.includes(v));
 function tierOf(e, metric) {
@@ -44,10 +44,22 @@ export function lint() {
   const summary = [];
   const used = new Set(); // every media path any branch references
   const dirs = readdirSync(join(ROOT, 'src/branches')).filter((d) => existsSync(join(ROOT, 'src/branches', d, 'branch.json')));
+  // a plate with a `base` takes the fields it leaves out from that plate, as src/branches/registry.ts does
+  const raw = Object.fromEntries(dirs.map((d) => [d, read(`src/branches/${d}/entries.json`)]));
+  const find = (ref) => { const [b, id] = String(ref).split('/'); return raw[b]?.find((e) => e.id === id); };
+  const INHERIT = ['kind', 'region', 'area', 'requires', 'routes', 'location', 'notes', 'variants', 'media', 'since'];
 
   for (const id of dirs) {
     const def = read(`src/branches/${id}/branch.json`);
-    const entries = read(`src/branches/${id}/entries.json`);
+    const entries = raw[id].map((e) => {
+      const src = e.base ? find(e.base) : null;
+      if (!src) return e;
+      const out = { ...e };
+      for (const k of INHERIT) if (out[k] === undefined) out[k] = src[k];
+      const urls = new Set((e.sources ?? []).map((s) => s.url));
+      out.sources = [...(e.sources ?? []), ...src.sources.filter((s) => !urls.has(s.url))];
+      return out;
+    });
     let images = 0, ratings = 0;
     const bad = (where, msg) => problems.push(`${id}/${where}: ${msg}`);
     const text = (where, v, field) => { if (typeof v !== 'string' || !v.trim()) bad(where, `${field} is empty`); };
@@ -71,6 +83,11 @@ export function lint() {
       if (!AMBIENTS.has(mode)) bad(`class ${c.id}`, `ambient "${mode}" is not one of ${[...AMBIENTS].join(', ')}${c.ambient ? '' : ' (set ambient)'}`);
     }
     for (const e of entries) {
+      for (const ref of [...(e.base ? [e.base] : []), ...(e.also ?? [])]) {
+        if (String(ref).split('/')[0] === id) bad(e.id, `"${ref}" points into its own branch; cross-branch links name another branch`);
+        else if (!find(ref)) bad(e.id, `"${ref}" names no plate`);
+      }
+      if (!e.media) { bad(e.id, 'no media (and no base to take it from)'); continue; }
       for (const f of ['name', 'kind', 'region', 'trait', 'summary', 'since']) text(e.id, e[f], f);
       for (const m of def.metrics) {
         const t = e.tiers[m.id];
@@ -98,17 +115,24 @@ export function lint() {
       const payload = (v, where) => {
         if (Array.isArray(v)) return v.forEach((x, i) => payload(x, `${where}[${i}]`));
         if (!v || typeof v !== 'object') return;
+        if ('v' in v && 'note' in v) {
+          // a patch-history step names its version, what changed, and who reported it
+          if (!credits.publishers[v.by]) bad(e.id, `${where} publisher "${v.by}" is not in src/core/credits.json`);
+          text(e.id, v.note, `${where} note`);
+        }
         if ('label' in v && 'value' in v && 'basis' in v) {
           if (!BASES.has(v.basis)) bad(e.id, `${where} basis "${v.basis}" is not one of ${[...BASES].join(', ')}`);
           if (!credits.publishers[v.by]) bad(e.id, `${where} publisher "${v.by}" is not in src/core/credits.json`);
           text(e.id, v.value, `${where} value`);
         }
         for (const [k, x] of Object.entries(v)) {
-          if (k === 'stacks' && Array.isArray(x)) for (const id of x) { if (!entries.some((o) => o.id === id)) bad(e.id, `${where}.stacks names unknown entry "${id}"`); }
+          if ((k === 'stacks' || k === 'pairs') && Array.isArray(x)) for (const id of x) { if (!entries.some((o) => o.id === id)) bad(e.id, `${where}.${k} names unknown entry "${id}"`); }
           else payload(x, `${where}.${k}`);
         }
       };
-      for (const [k, v] of Object.entries(e)) if (!['media', 'tiers', 'sources', 'routes'].includes(k)) payload(v, k);
+      // a plate's inherited fields were checked on their own branch; only its own payload is checked here
+      const own = raw[id].find((x) => x.id === e.id);
+      for (const [k, v] of Object.entries(own)) if (!['media', 'tiers', 'sources', 'routes', 'base', 'also'].includes(k)) payload(v, k);
     }
 
     // a cover resolves the way core/tree.ts coverFrom does: its own file, or an entry's capture,

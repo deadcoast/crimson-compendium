@@ -1,0 +1,646 @@
+{
+ "id": "qol",
+ "title": "Quality of Life",
+ "singular": "Upgrade",
+ "plural": "Upgrades",
+ "accent": "violet",
+ "tagline": "Everything that takes the friction out of Pywel: faster travel, longer dives, bigger bags, gear that ends penalties, a camp that works while you don't, and the switches patches added.",
+ "asOf": "Current to Charting the Unknown · patches through 2.04 · November 2026",
+ "labels": {
+  "lenses": "Shortlists",
+  "how": "Unlock",
+  "howOutline": "How to get it",
+  "where": "Where to find it",
+  "roam": "Built in — nothing to find",
+  "classAxis": "Type"
+ },
+ "metrics": [
+  {
+   "id": "impact",
+   "label": "Impact",
+   "blurb": "How much friction it removes where it applies. Tier I changes how you play; Tier V saves a few seconds now and then."
+  },
+  {
+   "id": "reach",
+   "label": "Reach",
+   "blurb": "How much of the game it touches. Tier I is every session, everywhere; Tier IV is one region or one activity; Tier V is one place or one fight."
+  },
+  {
+   "id": "unlock",
+   "label": "Unlock",
+   "blurb": "What it takes to have it. Tier I is there now or one stop away; Tier V is the end of the story, deep in the DLC, or a fortune."
+  }
+ ],
+ "rules": [
+  {
+   "lead": "Type means where it comes from.",
+   "text": "Built-in upgrades are settings, patch features and systems everyone has once they know about them. Unlocks are things you earn, find, buy or build."
+  },
+  {
+   "lead": "Tier I is always the good end.",
+   "text": "Tier I Unlock is available now; Tier I Reach touches every session."
+  },
+  {
+   "lead": "Priority is worked out, not voted.",
+   "text": "Essential: Impact and Reach both II or better. Situational: Impact or Reach IV or worse. Worthwhile: everything between. Unlock does not count: Priority says what an upgrade is worth, Unlock says what it costs."
+  },
+  {
+   "lead": "Mounts and money keep one home.",
+   "text": "A plate here for Royler or the bank takes its how-to from the Mounts or Riches plate and links to it, so the steps are written once."
+  },
+  {
+   "lead": "Every figure carries its basis.",
+   "text": "Patch notes, guide text, a guide's in-game screenshot, or a player report, with the publisher named."
+  },
+  {
+   "lead": "Patches move these.",
+   "text": "Ratings stand as of the 2.04 patches. Each plate lists the patches that shaped it."
+  }
+ ],
+ "ladderNote": "Tiers rank each upgrade against every other one, on what it removes and how far it reaches.",
+ "classes": [
+  {
+   "id": "builtin",
+   "label": "Built-in",
+   "glyph": "builtin",
+   "ambient": "abyss"
+  },
+  {
+   "id": "unlock",
+   "label": "Unlock",
+   "glyph": "unlock",
+   "ambient": "abyss"
+  }
+ ],
+ "leaves": [
+  {
+   "id": "travel",
+   "label": "Travel",
+   "accent": "land",
+   "short": "Fast travel, the fastest mounts, flight.",
+   "blurb": "Getting across Pywel: the Abyss Nexus network, Royler and Blackstar, Flight and Axiom Force.",
+   "cover": {
+    "entry": "royler",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "underwater",
+   "label": "Underwater",
+   "accent": "sea",
+   "short": "Breath, swim speed, the fastest dive mount.",
+   "blurb": "Diving in Charting the Unknown: the Ocean Drifter, diving suits, the propulsion unit and plate that breathes.",
+   "cover": {
+    "entry": "diving-suits",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "inventory",
+   "label": "Inventory",
+   "accent": "brass",
+   "short": "Bag slots, storage you craft from, pets that loot.",
+   "blurb": "Carrying and keeping: bags, the respawning +10, private storage, the house chests that crafting and cooking read from, and pets.",
+   "cover": {
+    "entry": "extra-large-bag",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "gear",
+   "label": "Gear",
+   "accent": "ember",
+   "short": "Armour that ends penalties, free refinement.",
+   "blurb": "Equipment as convenience: cold and heat immunity, Movement Speed, and Refinement Tokens.",
+   "cover": {
+    "entry": "cold-proofing",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "camp",
+   "label": "Camp",
+   "accent": "bone",
+   "short": "A base that works while you don't.",
+   "blurb": "The Greymanes' home: expansion, missions that repeat themselves, resting through timers, and the final camp at Pailune.",
+   "cover": {
+    "entry": "camp-expansion",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "money",
+   "label": "Money",
+   "accent": "gold",
+   "short": "The financial upgrades that end grinding.",
+   "blurb": "Money as a solved problem: Gold Bars, the 2.01 donation rate, Golden Beer and the bank. Full ledgers live in Riches.",
+   "cover": {
+    "entry": "gold-bar-crafting",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "facilities",
+   "label": "Facilities",
+   "accent": "royal",
+   "short": "Leased businesses and castles.",
+   "blurb": "Property in Charting the Unknown: businesses that earn and make gear while you explore, and castles that gather merchants.",
+   "cover": {
+    "entry": "facility-leases",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "ships",
+   "label": "Ships & Pioneering",
+   "accent": "deck",
+   "short": "Ship upgrades, crew and island claims.",
+   "blurb": "Sailing without the chores: the ship teleporter, a crew that steers and scouts, islands pioneered for anchorages, and the biggest hold.",
+   "cover": {
+    "entry": "ship-teleport",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "settings",
+   "label": "Settings",
+   "accent": "sky",
+   "short": "Switches and map features patches added.",
+   "blurb": "Nothing to find: map markers and filters, difficulty, display toggles and re-blockades.",
+   "cover": {
+    "entry": "difficulty",
+    "role": "hero"
+   }
+  }
+ ],
+ "lenses": [
+  {
+   "id": "right-now",
+   "label": "Right Now",
+   "blurb": "Upgrades you can have this session, biggest Impact first.",
+   "where": {
+    "atMost": {
+     "metric": "unlock",
+     "tier": 1
+    }
+   },
+   "sortBy": "impact"
+  },
+  {
+   "id": "everywhere",
+   "label": "Everywhere",
+   "blurb": "Upgrades that touch every session, biggest Impact first.",
+   "where": {
+    "atMost": {
+     "metric": "reach",
+     "tier": 1
+    }
+   },
+   "sortBy": "impact"
+  },
+  {
+   "id": "early",
+   "label": "Early Game",
+   "blurb": "Upgrades within easy reach, Unlock II or better, biggest Impact first.",
+   "where": {
+    "atMost": {
+     "metric": "unlock",
+     "tier": 2
+    }
+   },
+   "sortBy": "impact"
+  }
+ ],
+ "categories": [
+  {
+   "id": "priority",
+   "label": "Priority",
+   "glyph": "star",
+   "accent": "violet",
+   "subtitle": "Essential, Worthwhile, Situational",
+   "blurb": "Every upgrade in one of three tiers by what it is worth, worked out from Impact and Reach. Unlock does not count, so a late upgrade can still be Essential.",
+   "where": {},
+   "tierList": true,
+   "leaves": [
+    {
+     "id": "essential",
+     "label": "Essential",
+     "accent": "violet",
+     "short": "Impact and Reach both II or better: get it as soon as you can."
+    },
+    {
+     "id": "worthwhile",
+     "label": "Worthwhile",
+     "accent": "bone",
+     "short": "A real saving in a large part of the game."
+    },
+    {
+     "id": "situational",
+     "label": "Situational",
+     "accent": "ash",
+     "short": "Impact or Reach IV or worse: get it when you go there."
+    }
+   ],
+   "cover": {
+    "entry": "abyss-nexus",
+    "role": "hero"
+   },
+   "rule": {
+    "metrics": [
+     "impact",
+     "reach"
+    ],
+    "best": 2,
+    "worst": 4
+   }
+  },
+  {
+   "id": "built-in",
+   "label": "Built-in",
+   "glyph": "builtin",
+   "accent": "sky",
+   "subtitle": "Nothing to find",
+   "blurb": "Settings, patch features and systems everyone has: they only need knowing about.",
+   "where": {
+    "cls": [
+     "builtin"
+    ]
+   },
+   "leaves": "rarity",
+   "cover": {
+    "entry": "private-storage",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "unlocks",
+   "label": "Unlocks",
+   "glyph": "unlock",
+   "accent": "brass",
+   "subtitle": "Earn, find, buy or build",
+   "blurb": "Upgrades that take a quest, a dive, a purchase or a craft.",
+   "where": {
+    "cls": [
+     "unlock"
+    ]
+   },
+   "leaves": "rarity",
+   "cover": {
+    "entry": "pets",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "when",
+   "label": "When",
+   "glyph": "clock",
+   "accent": "sea",
+   "subtitle": "Base game or the DLC",
+   "blurb": "What the base game offers, and what Charting the Unknown adds.",
+   "where": {
+    "tags": [
+     "base",
+     "dlc"
+    ]
+   },
+   "leaves": [
+    {
+     "id": "base-game",
+     "label": "Base Game",
+     "accent": "bone",
+     "short": "Everyone has these.",
+     "where": {
+      "tags": [
+       "base"
+      ]
+     }
+    },
+    {
+     "id": "in-dlc",
+     "label": "In the DLC",
+     "accent": "sea",
+     "short": "Opened by Charting the Unknown.",
+     "where": {
+      "tags": [
+       "dlc"
+      ]
+     }
+    }
+   ],
+   "cover": {
+    "entry": "forsaken-oath-plate",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "patched-in",
+   "label": "Patched In",
+   "glyph": "stack",
+   "accent": "cyan",
+   "subtitle": "Added after launch",
+   "blurb": "Upgrades that patches added or reshaped: what a returning player has not seen yet.",
+   "where": {
+    "tags": [
+     "patch"
+    ]
+   },
+   "leaves": "rarity",
+   "cover": {
+    "entry": "abyss-nexus",
+    "capture": 0
+   }
+  }
+ ],
+ "route": {
+  "title": "The Order",
+  "blurb": "Ten phases from the first hour to the deep sea. Each takes the upgrades the story has made available by then, Essential first, so the friction drops as early as the game allows.",
+  "premise": "You are starting or early in the story. Phases you have passed are a checklist of what to go back for.",
+  "phases": [
+   {
+    "id": "switches",
+    "label": "Flip the switches",
+    "stage": "Any time",
+    "why": "Patches added settings that cost nothing and change every session. The map marks ore, opened chests and looted caves on its own, and difficulty can drop for one fight and come back.",
+    "cover": {
+     "entry": "difficulty",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "entry": "map-markers",
+      "text": "Use the map's All tab and its filters; ore, opened chests and looted caves mark themselves."
+     },
+     {
+      "entry": "difficulty",
+      "text": "Know the dial is there: Easy for a wall of a fight, back to Normal after."
+     },
+     {
+      "entry": "display-options",
+      "text": "Hide the helmet or the weapons, or set sprint back to tap."
+     },
+     {
+      "entry": "re-blockades",
+      "text": "Turn re-blockades off if you would rather cleared camps stay cleared."
+     }
+    ]
+   },
+   {
+    "id": "map",
+    "label": "Open the map",
+    "stage": "Early story",
+    "why": "Fast travel is the biggest time-saver in the game, and since 1.03 it works from the saddle. Every Nexus you step on is a ride you never make again; Royler covers the gaps between them.",
+    "cover": {
+     "entry": "abyss-nexus",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "entry": "abyss-nexus",
+      "text": "Step on every Abyss Nexus you pass and solve the Cressets near Mysterious Energy marks."
+     },
+     {
+      "entry": "royler",
+      "text": "Ride north from Hernand to the Snowgrass Hearth lake and tame Royler."
+     },
+     {
+      "entry": "thinkers-meadow-nexus",
+      "text": "In Chapter 4, mend the Thinker's Meadow Nexus by Howling Hill."
+     }
+    ]
+   },
+   {
+    "id": "carry",
+    "label": "Carry more",
+    "stage": "Early story",
+    "why": "Fifty slots fill before the first town. Bags are permanent, the Extra Large Bag comes back every in-game week, and a pet picks up the loot.",
+    "cover": {
+     "entry": "extra-large-bag",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "entry": "bag-upgrades",
+      "text": "Take every quest that pays a Medium or Large Bag; buy Small Bags for 50 copper."
+     },
+     {
+      "entry": "extra-large-bag",
+      "text": "Take the +10 bag south-east of the Hills of No Return, then come back weekly."
+     },
+     {
+      "entry": "pets",
+      "text": "Raise a stray to 100 Trust and summon it in every fight."
+     },
+     {
+      "entry": "private-storage",
+      "text": "Use the chest in Kliff's tent for everything the bag cannot hold."
+     }
+    ],
+    "meanwhile": [
+     {
+      "entry": "time-skip",
+      "text": "Rest to bring the Extra Large Bag back sooner: up to 12 hours a sleep."
+     }
+    ]
+   },
+   {
+    "id": "fly",
+    "label": "Fly and swing",
+    "stage": "Through the story",
+    "why": "Flight turns every height into a shortcut and Axiom Force adds ways up and across. Movement Speed gear makes both faster.",
+    "cover": {
+     "entry": "flight",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "entry": "flight",
+      "text": "Finish Woman in White for the crow wings; buy Swift Flight with an Abyss Artifact."
+     },
+     {
+      "entry": "axiom-force",
+      "text": "Raise Axiom Force to rank 3 for Aerial Maneuver and Aerial Swing."
+     },
+     {
+      "entry": "movement-speed",
+      "text": "Build a Movement Speed set and swap into it before long glides."
+     }
+    ]
+   },
+   {
+    "id": "weather",
+    "label": "Dress for the weather",
+    "stage": "Through the story",
+    "why": "Cold and heat each halve Stamina regeneration, which is every climb and every glide. One Level 5 cloak ends it. Refinement Tokens make early gear strong for free.",
+    "cover": {
+     "entry": "cold-proofing",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "entry": "refinement-tokens",
+      "text": "Spend tokens on the gear you keep: Stage 4 without materials."
+     },
+     {
+      "entry": "cold-proofing",
+      "text": "Take the Frostcursed Plate Cloak from the Sanctum of Expiation before Pailune."
+     },
+     {
+      "entry": "heat-proofing",
+      "text": "Take the Scorchflame Plate Cloak from Silent Falls Hideout before the desert."
+     }
+    ]
+   },
+   {
+    "id": "camp",
+    "label": "Put the camp to work",
+    "stage": "Through the story",
+    "why": "Each expansion adds storage, vendors and mission slots; since 1.04 missions repeat themselves and the house chests let crafting and cooking read straight from storage.",
+    "cover": {
+     "entry": "camp-expansion",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "entry": "camp-expansion",
+      "text": "Dispatch each expansion as soon as the recruits and food allow."
+     },
+     {
+      "entry": "dispatch-repeat",
+      "text": "Put food, funds and material missions on repeat."
+     },
+     {
+      "entry": "sturdy-gatherables-chest",
+      "text": "Buy the 50-Silver chest and move every material into it."
+     },
+     {
+      "entry": "kuku-cooler",
+      "text": "Run A Special Blueprint after Chapter IV and cook from the cooler."
+     },
+     {
+      "entry": "house-storage",
+      "text": "Add Wardrobes and the Collectibles Chest to empty the bag of outfits and keys."
+     }
+    ],
+    "meanwhile": [
+     {
+      "entry": "time-skip",
+      "text": "Rest before collecting: one sleep finishes several timers at once."
+     }
+    ]
+   },
+   {
+    "id": "late",
+    "label": "Late-story gifts",
+    "stage": "Late story",
+    "why": "Two upgrades wait behind the later chapters: Golden Beer in Chapter 8 doubles every dispatch, and Blackstar in Chapter 11 flies anywhere in a straight line.",
+    "cover": {
+     "entry": "blackstar",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "entry": "golden-beer",
+      "text": "Clear the Demeniss noble houses to House Byron and take the beer from Mazzul."
+     },
+     {
+      "entry": "blackstar",
+      "text": "Finish Chapter 11; summon Blackstar for the long crossings."
+     }
+    ]
+   },
+   {
+    "id": "settle",
+    "label": "Settle money and the move",
+    "stage": "After the story",
+    "why": "Gold Bars make money a solved problem, and since 2.01 donated Silver buys Camp Funds at 1:1,000. The final camp at Pailune puts storage and vendors at full size.",
+    "cover": {
+     "entry": "gold-bar-crafting",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "entry": "gold-bar-crafting",
+      "text": "Craft Gold Bars and exchange them at a bank for 500 Silver each."
+     },
+     {
+      "entry": "camp-donations",
+      "text": "Donate Silver, never bars, for the Camp Funds the DLC asks for."
+     },
+     {
+      "entry": "bank-investment",
+      "text": "Park spare bars at Low risk for interest every three in-game days."
+     },
+     {
+      "entry": "pailune-camp",
+      "text": "Save manually, then move the Greymanes home to Pailune."
+     }
+    ]
+   },
+   {
+    "id": "under",
+    "label": "Go under",
+    "stage": "In the DLC",
+    "why": "Charting the Unknown's seas run on the breath meter. Relic-bought suits, a propulsion unit and plate that breathes stretch every dive; the Ocean Drifter is the fastest way across the seabed.",
+    "cover": {
+     "entry": "forsaken-oath-plate",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "entry": "diving-suits",
+      "text": "Trade 22 Ancient Relics at Sulivan's Relic Exchange for the Marine Charter's set."
+     },
+     {
+      "entry": "breathing-apparatus",
+      "text": "Dive 168 m in the Dead Coral Sea for the Propulsion Breathing Device."
+     },
+     {
+      "entry": "forsaken-oath-plate",
+      "text": "Collect the four Forsaken Oath chests, shallowest first."
+     },
+     {
+      "entry": "ocean-drifter",
+      "text": "Open the Ancients' Chest in the Forgotten Ocean Ruins for the Ocean Drifter."
+     }
+    ]
+   },
+   {
+    "id": "fleet",
+    "label": "Fleet and holdings",
+    "stage": "In the DLC",
+    "why": "A crew sails, scouts and repairs for you, and pioneering Auronui pays the blueprint that makes your ship a fast-travel point. Leases and castles bring income and merchants to you.",
+    "cover": {
+     "entry": "ship-teleport",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "entry": "ship-crew",
+      "text": "Crew a First Mate, Rigger and Lookout; add a Carpenter and Deckhands."
+     },
+     {
+      "entry": "island-pioneering",
+      "text": "Pioneer Auronui from its Anchorage."
+     },
+     {
+      "entry": "ship-teleport",
+      "text": "Dig up the blueprint, craft the device at camp and have it installed."
+     },
+     {
+      "entry": "large-ship",
+      "text": "Buy the Large Hernandian Ship with donated Silver for 36 cargo slots."
+     },
+     {
+      "entry": "facility-leases",
+      "text": "Lease the businesses your staff can run."
+     },
+     {
+      "entry": "castles",
+      "text": "Rebuild a castle from surplus materials and gather its merchants."
+     }
+    ]
+   }
+  ]
+ },
+ "redirects": {}
+}

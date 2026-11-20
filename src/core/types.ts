@@ -67,13 +67,19 @@ export interface Entry {
   since: string;
   /** what the entry winks at, shown on its plate when it sits in an Easter Eggs leaf */
   egg?: string;
+  /** "branch/entry": the plate in another branch this one is about. The registry fills every field this
+   *  entry leaves out (media, location, routes, requirements, sources…) from that plate, so the how-to has
+   *  one home, and both plates link to each other. */
+  base?: string;
+  /** "branch/entry" plates in other branches worth reading next; linked both ways */
+  also?: string[];
   /** branch-specific payload, read only by that branch's own sections */
   [extra: string]: unknown;
 }
 
 export interface Metric { id: string; label: string; blurb: string }
 /** Ambient particle modes Particles.svelte draws. tools/lint.mjs checks class data against this list. */
-export type Ambient = 'land' | 'sea' | 'sky' | 'gold';
+export type Ambient = 'land' | 'sea' | 'sky' | 'gold' | 'abyss';
 
 export interface ClassDef {
   id: string;
@@ -129,7 +135,17 @@ export interface CategoryLeafDef {
   label: string;
   accent: string;
   short: string;
-  where: Selector;
+  /** which entries it holds; a leaf of a category with a `rule` takes its members from the rule instead */
+  where?: Selector;
+}
+
+/** A three-leaf tier list worked out from ratings rather than tagged by hand: the first leaf holds
+ *  entries rated `best` or better on every listed metric, the last holds entries rated `worst` or worse
+ *  on any of them, and the middle leaf holds the rest. An unrated metric counts as the worst tier. */
+export interface RatingRule {
+  metrics: string[];
+  best: number;
+  worst: number;
 }
 
 /** A category branch inside a branch (Land, Underwater, DLC…). Lists overlap on purpose. */
@@ -149,6 +165,8 @@ export interface CategoryDef {
   /** a tier list over the whole branch: every entry sits in exactly one of its leaves (the registry
    *  refuses anything else) and the plate's hero shows that leaf first, linked to its list */
   tierList?: boolean;
+  /** derive a tier list's three leaves from ratings (QOL's Priority) */
+  rule?: RatingRule;
 }
 
 /** A category leaf after registry resolution: concrete members, in rank order. */
@@ -239,6 +257,14 @@ export interface BranchDef {
 
 /** A plate section a branch adds below the generic ones (e.g. mount stats). */
 export type PlateSection = Component<{ entry: Entry; branch: Branch }>;
+
+/** A plate in another branch that names this one, or that this one names. */
+export interface CrossLink {
+  branch: Branch;
+  entry: Entry;
+  /** base: this plate is about that one · source: that plate is about this one · also / cited: a pointer either way */
+  rel: 'base' | 'source' | 'also' | 'cited';
+}
 
 export interface Branch extends Omit<BranchDef, 'categories'> {
   categories: Category[];

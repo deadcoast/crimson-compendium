@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/current%20to-Charting%20the%20Unknown-4aa6bb" alt="Current to Charting the Unknown">
 </p>
 
-<p align="center">A field reference for <em>Crimson Desert</em>. Pywel's mounts: where each one lives, how to make it yours, and what it is worth riding for. And an endgame money guide that gets you into <em>Charting the Unknown</em> rich.</p>
+<p align="center">A field reference for <em>Crimson Desert</em>. Pywel's mounts: where each one lives, how to make it yours, and what it is worth riding for. An endgame money guide that gets you into <em>Charting the Unknown</em> rich. And every quality-of-life upgrade, in the order to get them.</p>
 
 ---
 
@@ -46,6 +46,19 @@ A mount can sit in several lists. The A.T.A.G. is Land, Underwater, Mechanical a
 | **Category branches** | Potential (Fortune · Income · Groundwork) · Management · Player Control · When · Multipliers · Can Lose Money |
 | **Best for** | Away From the Controller · Money This Session · Scaling Up |
 
+**Quality of Life**, the third branch: 39 upgrades that take the friction out of Pywel, from fast travel to the ship teleporter, each on its own plate.
+
+- **The Order**: ten phases from the first hour to the deep sea, so each upgrade comes as soon as the story allows it.
+- **Remedy**: the friction an upgrade removes against what replaces it, figures with their basis, the patches that shaped it, and the upgrades it pairs with.
+- **Tiers**: Impact, Reach and Unlock rated **I–V**. Priority (Essential · Worthwhile · Situational) is worked out from Impact and Reach.
+- **One home per how-to**: plates about a mount or a money method (Royler, the Ocean Drifter, Gold Bars) take their steps and images from the Mounts or Riches plate, and every plate links the plates tied to it in other branches.
+
+| | |
+|---|---|
+| **Leaves** | Travel · Underwater · Inventory · Gear · Camp · Money · Facilities · Ships & Pioneering · Settings |
+| **Category branches** | Priority (Essential · Worthwhile · Situational) · Built-in · Unlocks · When · Patched In |
+| **Shortlists** | Right Now · Everywhere · Early Game |
+
 ## Screenshots
 
 <table>
@@ -60,6 +73,10 @@ A mount can sit in several lists. The A.T.A.G. is Land, Underwater, Mechanical a
   <tr>
     <td width="50%"><img src="docs/screenshots/riches-route.webp" alt="Riches: The Route, phase one"><br><sub>Riches: The Route</sub></td>
     <td width="50%"><img src="docs/screenshots/riches-ledger.webp" alt="Riches: the ledger on the Trade Wagons plate"><br><sub>Riches: a ledger, every figure with its basis</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/qol-order.webp" alt="Quality of Life: The Order, phase one"><br><sub>Quality of Life: The Order</sub></td>
+    <td width="50%"><img src="docs/screenshots/qol-remedy.webp" alt="Quality of Life: the Remedy on the Extra Large Bag plate"><br><sub>Quality of Life: a Remedy, before and after</sub></td>
   </tr>
 </table>
 

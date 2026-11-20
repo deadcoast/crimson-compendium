@@ -27,6 +27,7 @@
   --royal-hi: #5a80f2; /* royal blue lifted for text and marks: 5.4:1 on ink, where #4169e1 is 4.0:1 */
   --cyan: #29d0e3;
   --gold: #e0b345; /* Riches root: coin gold, kept clear of brass so the two read apart side by side */
+  --violet: #ac8ef4; /* Quality of Life root: the one hue no class, leaf or other root uses; 7.5:1 on ink-0, 5.7:1 on ink-4 */
   --parchment: #dbd5c8;
 
   /* classes (terrain) — drawn from the in-game map: ochre land, map-water teal, pale sky */
@@ -62,6 +63,7 @@
 [data-accent='royal'] { --accent: var(--royal-hi); --accent-dim: rgba(65, 105, 225, 0.2); }
 [data-accent='cyan'] { --accent: var(--cyan); --accent-dim: rgba(41, 208, 227, 0.16); }
 [data-accent='gold'] { --accent: var(--gold); --accent-dim: rgba(224, 179, 69, 0.16); }
+[data-accent='violet'] { --accent: var(--violet); --accent-dim: rgba(172, 142, 244, 0.16); }
 /* category branches defined by terrain take the terrain colour */
 [data-accent='land'] { --accent: var(--land); --accent-dim: rgba(201, 162, 107, 0.16); }
 [data-accent='sea'] { --accent: var(--sea); --accent-dim: rgba(74, 166, 187, 0.16); }
