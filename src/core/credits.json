@@ -72,6 +72,26 @@
     "gameshedge": {
       "name": "GamesHedge",
       "url": "https://www.gameshedge.com/"
+    },
+    "pcgamer": {
+      "name": "PC Gamer",
+      "url": "https://www.pcgamer.com/games/action/crimson-desert-legendary-horse-locations"
+    },
+    "gfinity": {
+      "name": "Gfinity",
+      "url": "https://www.gfinityesports.com/"
+    },
+    "powerpyx": {
+      "name": "PowerPyx",
+      "url": "https://www.powerpyx.com/crimson-desert-how-to-unlock-robot-mount/"
+    },
+    "gameshorizon": {
+      "name": "GamesHorizon",
+      "url": "https://gameshorizon.com/?p=80684"
+    },
+    "sportskeeda": {
+      "name": "Sportskeeda (from creator footage)",
+      "url": "https://www.sportskeeda.com/esports/all-new-mounts-crimson-desert-dlc-far-get"
     }
   },
   "publishers": {

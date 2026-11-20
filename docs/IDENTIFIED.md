@@ -65,10 +65,12 @@ This review was done at commit `db93c9d` (v0.2.0 released, Release workflow fixe
   - Where: `entries.json` `media.captures` (`kind: "map"`), then `tools/media.py`.
   - Why: "Where is it?" is the first question in `DESIGN.md`. Today 48 % of plates answer it in text only. Stable breeds get the stable locations. Open-ocean spawns get the region with the plate's "no fixed spawn" note.
   - Verify: "no map capture" count reaches 0, or the entry is listed with a reason in `DESIGN.md` › Known gaps; the verify suite asserts every Where image returns 200.
+  - Status (M3, 2026-11-19): 29 plates gained maps; the 28 left are listed by reason in `DESIGN.md` › Known gaps.
 - **NF-02: Hero captures for the entries without one** (36 before M2; 68 of 80 after it).
   - Where: `entries.json` `media.hero`.
   - Why: `Hero.svelte:17-19` falls back to a framed portrait, so the plate's reveal motion never runs for three quarters of the roster.
   - Verify: hero count; screenshots of a land, a sea and a sky plate.
+  - Status (M3, 2026-11-19): 10 plates gained banners under the Revision 5 rule; the 58 left keep the framed portrait and are listed by reason in `DESIGN.md` › Known gaps.
 - **NF-03: Re-check `DESIGN.md` › Known gaps against current sources** (see §5): Scout Automation, Golden Star Mech, Delesyia Train and cows/bulls.
   - Why: the compendium claims to cover every mount.
   - Verify: each one is added, or kept out with the source that says why.
