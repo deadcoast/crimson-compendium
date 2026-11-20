@@ -3,7 +3,7 @@
  "title": "Mounts",
  "singular": "Mount",
  "plural": "Mounts",
- "tagline": "Every rideable creature and machine in Pywel — where it lives, how to make it yours, and what it is worth riding for.",
+ "tagline": "Every mount in Pywel you can keep — where it lives, how to make it yours, and what it is worth riding for.",
  "asOf": "Current to Charting the Unknown · November 2026",
  "labels": {
   "lenses": "Ride for",
@@ -38,7 +38,7 @@
  "rules": [
   {
    "lead": "Class means terrain.",
-   "text": "A mount is ranked against others of its own class — Land, Sea or Sky — so a Tier I sea mount is the best thing that swims, not the best mount overall."
+   "text": "A mount is ranked against others of its own class — Land, Sea (below the surface), Sky or Surface (ships) — so a Tier I sea mount is the best thing that swims, not the best mount overall."
   },
   {
    "lead": "Traits can lift a metric.",
@@ -50,7 +50,7 @@
   },
   {
    "lead": "“Not rated”",
-   "text": "marks a metric that does not apply, such as Stamina on a balloon or mech."
+   "text": "marks a metric that does not apply, such as Stamina on a balloon, mech, wagon or ship."
   },
   {
    "lead": "Every rating carries its basis.",
@@ -70,6 +70,12 @@
   {
    "id": "sky",
    "label": "Sky"
+  },
+  {
+   "id": "surface",
+   "label": "Surface",
+   "glyph": "surface",
+   "ambient": "sea"
   }
  ],
  "leaves": [
@@ -77,7 +83,7 @@
    "id": "legendary",
    "label": "Legendary",
    "accent": "ember",
-   "blurb": "One of a kind: the three legendary horses, the sigil beasts, Blackstar, and the legends of the deep.",
+   "blurb": "One of a kind: the three legendary horses, the sigil beasts, Blackstar, the legends of the deep and the four legendary ships.",
    "cover": {
     "entry": "snowwhite-deer",
     "role": "hero"
@@ -99,7 +105,7 @@
    "id": "stable",
    "label": "Stable",
    "accent": "bone",
-   "blurb": "The five horse breeds you can tame, steal or buy. They level up and learn skills as you ride.",
+   "blurb": "The horse breeds you can tame, steal or buy, plus the soldiers' and scouts' horses you take off the road. They level up and learn skills as you ride.",
    "cover": {
     "from": "https://img.game8.co/4451067/00c1a659febd031be8470787d1e07f5f.png/show",
     "credit": "game8",
@@ -107,29 +113,18 @@
     "w": 728,
     "h": 410
    },
-   "short": "The horse breeds you can tame, steal or buy."
+   "short": "Horses you tame, steal or buy, then register at a stable."
   },
   {
    "id": "engineered",
    "label": "Engineered",
    "accent": "brass",
-   "blurb": "Built, not tamed: balloons, a mech suit and a trading wagon, crafted through your Greymane camp.",
+   "blurb": "Built or bought, not tamed: three balloons, two mechs, three wagons and the ships, made through your Greymane camp or bought from ship managers.",
    "cover": {
     "entry": "cloudcart",
     "capture": 1
    },
-   "short": "Built, not bred — blueprints, workshops and parts."
-  },
-  {
-   "id": "fleeting",
-   "label": "Fleeting",
-   "accent": "ash",
-   "blurb": "Rides you can borrow but never keep — including one machine.",
-   "cover": {
-    "entry": "elephant",
-    "capture": 1
-   },
-   "short": "Yours only while you ride; they stay behind when you leave."
+   "short": "Built or bought — workshops, shipyards and ship managers."
   }
  ],
  "lenses": [
@@ -186,7 +181,12 @@
  "redirects": {
   "for-long-haul": "for-all-around-best",
   "for-deep-water": "underwater",
-  "for-flight": "flying"
+  "for-flight": "flying",
+  "sea-turtle": "green-sea-turtle",
+  "kuku-bird-hatchling": "leaping-kuku-bird",
+  "marnis-mechahorse": "mechanical",
+  "elephant": "land",
+  "fleeting": "rare"
  },
  "categories": [
   {
@@ -211,7 +211,7 @@
    "label": "Underwater",
    "glyph": "sea",
    "accent": "sea",
-   "blurb": "Below the surface: the sea mounts of Charting the Unknown, plus the two machines that dive.",
+   "blurb": "Below the surface: the 19 sea mounts of Charting the Unknown, plus the refitted A.T.A.G.",
    "where": {
     "domains": [
      "sea"
@@ -228,7 +228,7 @@
    "label": "Flying",
    "glyph": "sky",
    "accent": "sky",
-   "blurb": "Every way into the sky: the dragon, the wyvern and the balloon.",
+   "blurb": "Every way into the sky: the dragon, the wyvern and three balloons.",
    "where": {
     "domains": [
      "sky"
@@ -241,11 +241,32 @@
    }
   },
   {
+   "id": "ships",
+   "label": "Ships",
+   "glyph": "surface",
+   "accent": "deck",
+   "blurb": "Every hull you can own: the quest-built Greymane ships, the regional ships and rowboats at the Ship Managers, and the four legendary ships you build from blueprints.",
+   "where": {
+    "cls": [
+     "surface"
+    ]
+   },
+   "leaves": "rarity",
+   "cover": {
+    "from": "https://outputlag.com/wp-content/uploads/2026/10/crimson-desert-charting-the-unknown-ship-striped-sails.jpg",
+    "credit": "outputlag",
+    "focus": "60% 45%",
+    "src": "media/mounts/_categories/ships.webp",
+    "w": 1600,
+    "h": 900
+   }
+  },
+  {
    "id": "mechanical",
    "label": "Mechanical",
    "glyph": "gear",
    "accent": "brass",
-   "blurb": "Machines you pilot rather than ride: the A.T.A.G. mech, the Cloudcart and Marni's Mechahorse.",
+   "blurb": "Machines you pilot rather than ride: the A.T.A.G. and High-Mobility A.T.A.G. mechs and the three balloons.",
    "where": {
     "tags": [
      "mechanical"
@@ -304,8 +325,8 @@
     }
    ],
    "cover": {
-    "entry": "marnis-mechahorse",
-    "capture": 2
+    "entry": "leaping-kuku-bird",
+    "capture": 1
    },
    "line": "egg"
   },
@@ -315,7 +336,7 @@
    "subtitle": "Charting the Unknown",
    "glyph": "compass",
    "accent": "crimson",
-   "blurb": "What the November 2026 expansion added: fourteen sea mounts and the A.T.A.G. marine refit.",
+   "blurb": "What the November 2026 expansion added: 19 sea mounts, 20 ships and the A.T.A.G. marine refit.",
    "where": {
     "tags": [
      "dlc"

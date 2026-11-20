@@ -60,6 +60,18 @@
     "fdaytalk": {
       "name": "FDayTalk",
       "url": "https://www.fdaytalk.com/crimson-desert-golden-beer/"
+    },
+    "crimsondesertgg": {
+      "name": "crimsondesert.gg",
+      "url": "https://crimsondesert.gg/mounts"
+    },
+    "thegameswiki": {
+      "name": "The Games Wiki",
+      "url": "https://thegameswiki.com/crimson-desert/wiki/mounts"
+    },
+    "gameshedge": {
+      "name": "GamesHedge",
+      "url": "https://www.gameshedge.com/"
     }
   },
   "publishers": {
@@ -98,6 +110,11 @@
     "pcgamer": "PC Gamer",
     "nexusmods": "Nexus Mods",
     "github": "GitHub",
-    "steam": "Steam Community"
+    "steam": "Steam Community",
+    "crimsondesertgg": "crimsondesert.gg",
+    "gameshedge": "GamesHedge",
+    "thgl": "TH.GL",
+    "sportskeeda": "Sportskeeda",
+    "finalboss": "FinalBoss"
   }
 }

@@ -20,7 +20,7 @@ Three columns on desktop: **Explorer** (the tree) · **Index** (the leaf, catego
 
 ## Visual language
 
-- **Palette**: warm ink blacks, bone text, one signal colour (crimson). Red is reserved for the root (brand, the Mounts branch, Tier I, Ride for, the ladder); the Riches root is gold (`--gold`). Text a reader needs (meta lines, counts, hints, credits, placeholders) uses `--ash` or brighter, which measures at least 4.5:1 on every ink surface (WCAG AA). `--ash-2` is for ornaments only: separators, diamonds and not-rated numerals. Leaves carry a traditional tier accent: Legendary orange (`--ember`), Rare royal blue (`--royal`), Stable bone, Engineered brass, Fleeting ash; Easter Eggs and its leaves are cyan (`--cyan`), as specified in `docs/spec/tier-colors.txt`. Terrain classes take their colours from the in-game map (ochre land, map-water teal, pale sky). All tokens live in `src/styles/tokens.css`.
+- **Palette**: warm ink blacks, bone text, one signal colour (crimson). Red is reserved for the root (brand, the Mounts branch, Tier I, Ride for, the ladder); the Riches root is gold (`--gold`). Text a reader needs (meta lines, counts, hints, credits, placeholders) uses `--ash` or brighter, which measures at least 4.5:1 on every ink surface (WCAG AA). `--ash-2` is for ornaments only: separators, diamonds and not-rated numerals. Leaves carry a traditional tier accent: Legendary orange (`--ember`), Rare royal blue (`--royal`), Stable bone, Engineered brass; Easter Eggs and its leaves are cyan (`--cyan`), as specified in `docs/spec/tier-colors.txt`. Terrain classes take their colours from the in-game map (ochre land, map-water teal, pale sky); Surface, the ships' class, is verdigris (`--deck`). All tokens live in `src/styles/tokens.css`.
 - **Type**: Bodoni Moda for names, numerals and section titles; Archivo (variable width) for UI, condensed and tracked for eyebrow labels; JetBrains Mono for counts and credits. Large Bodoni numerals use a low optical size (`opsz 8`) so the hairline in the 4 stays visible.
 - **Imagery**: only real in-game captures and in-game knowledge-entry art, each credited to the guide that took it. Portraits are square and shown round everywhere (index, ladder, search) so mixed sources read as one set.
 - **Edges**: a column's background ends at its border line; nothing spills past a frame.
@@ -76,15 +76,15 @@ Defined by the brief: **I** best in class (only the best of the best) · **II** 
 
 Rules added while building the Mounts branch (Claude's calls, not in the brief):
 
-1. **Class = terrain.** Each mount is ranked against its own class (Land, Sea, Sky). A Tier I sea mount is the best swimmer, not the best mount overall.
+1. **Class = terrain.** Each mount is ranked against its own class (Land, Sea, Sky, Surface). A Tier I sea mount is the best swimmer, not the best mount overall; a Tier I ship is the best ship.
 2. **Horses are rated at Lv 5**, their max level; beasts and machines arrive at full strength.
 3. **Trait overrides** follow the brief's caveat: no fall damage lifts Travel (Leaping Kuku Bird), a unique attack lifts Combat (Pink Manta Ray's shockwave).
 4. **Every rating stores its basis**, shown when you tap a seal. Where no source compares a mount, it sits at III and says so.
-5. **"Not rated"** for metrics that do not apply (Stamina on a balloon, mech or wagon).
+5. **"Not rated"** for metrics that do not apply (Stamina on a balloon, mech, wagon or ship).
 
 ## Mounts branch — decisions
 
-- **Leaves.** The brief named Legendary and Rare. Three more were needed to place every mount without bending those definitions: **Stable** (the five buyable horse breeds), **Engineered** (crafted machines), **Fleeting** (temporary rides). Rare keeps the brief's definition: not sold at stables, can be made permanent.
+- **Leaves.** The brief named Legendary and Rare. Two more were needed to place every mount without bending those definitions: **Stable** (horses that register at a stable: the five buyable breeds plus the soldiers' and scouts' horses) and **Engineered** (built or bought: balloons, mechs, wagons, ships). Rare keeps the brief's definition: not sold at stables, can be made permanent. A third extra leaf, Fleeting, held temporary rides until Revision 4 removed them.
 - **Snowwhite Deer stamina.** The brief's example gives it "Best Stamina". The recorded figures disagree: 300 Stamina, while Royler has 315 at Lv 1 and 390 at Lv 5, and Elantrima reaches 330. It is rated Stamina II with the trait "Top stamina of the beast legendaries"; Speed II matches the brief.
 - **Giant Red Iguana** trait (the brief's TODO): long-range spit that staggers enemies.
 - **Conflicting sources** follow the source with in-game evidence (Game8 stat screens over Fextralife's copied stat templates). Stat blocks Fextralife lists with an identical template (400/300/25/50) are not shown unless a second source confirms them.
@@ -103,6 +103,17 @@ Rules added while building the Mounts branch (Claude's calls, not in the brief):
   - *One entry per registered mount.* A mount the game registers under its own name, with its own stats, gets its own plate: Cloudcruiser, Skystreaker, Swift Wolf, Large White Wolf, High-Mobility A.T.A.G. and each sea turtle species. Cosmetic coats with the same stats stay as `variants`, such as the 16 Large Wolf coats. Folding registered mounts into variants hid two of the five flying mounts you can keep.
   - *Ships are mounts.* This reverses the Revision 2 exclusion. The game files ships as a mount type (thegameswiki, G2A), so Humble Bark and the Small, Medium and Large Hernandian Ship join Mounts as a Ships category. They are rated on Speed, Travel (cargo) and Combat (cannons); Stamina is not rated.
   - *Not mounts:* the Mountain God Boar is a boss encounter (thegameswiki, Gaming ProMax), and the Delesyia Train is fixed-route transport (Game8, thegameswiki).
+
+- **Revision 4: permanent mounts only; M2 built** (2026-11-19):
+  - *Only mounts you can keep.* Your rule: a mount the player cannot keep or tame permanently is out of the guide. The Fleeting leaf is gone with its three plates: the Kuku Bird Hatchling (it grows into the Leaping Kuku Bird, which stays), the wildlife-park elephant and Marni's Mechahorse. Old links redirect: `#mounts-kuku-bird-hatchling` to the Leaping Kuku Bird, `-elephant` to Land, `-marnis-mechahorse` to Mechanical, `-fleeting` to Rare. NF-09 (race horses, Captured Bear, Circus Lion, cattle, camels, the Worn Wagon and other temporary rides) is dropped, not built.
+  - *Stable* also holds the Hernandian Soldier's Horse and the Calphadean Scout's Horse. You take them off the road and register them at a stable, and they share the Priden's level table (The Games Wiki). *(My call: they register like stable horses, so Stable rather than Rare.)*
+  - *Surface* is a fourth class for ships: glyph a sail over a hull, ambient sea, colour verdigris (`--deck`, a hue no class or leaf used). Ships are ranked against ships only. *(My call.)*
+  - *Ship ratings* *(my call)*: Speed from the in-game Movement Speed pips (5 → I … 1 → V); Travel from Movement, Acceleration and hold together; Combat from Health (14,000 I; 10,000–12,000 II; 7,500–9,200 III; 5,000 IV; rowboats V), because cannons are fitted parts any ship can swap; Stamina not rated. The record shows Health and Inventory, then Movement Speed, Acceleration and Handling as pips. Hairlines compare a ship only with ships (`stats.kind: "ship"`).
+  - *Ship figures follow the in-game screens.* Each ship's portrait and record come from Game8's Buy Ship or Manage Ships screenshot. Where Game8's text disagrees with its own screenshot, the screenshot wins: the Phantom Ship has 9,200 Health (the text says 14,000). The Large Delesyian and Demenissian Ships cost 6,000,000 Camp Funds, as the in-game shop lists show; Game8's text says 60,000,000. Revision 3's "Humble Bark" is the Humble Rowboat in game.
+  - *Ships category*, after Flying, split by rarity: 4 Legendary (built from blueprints) and 16 Engineered (3 Greymane ships your comrades build, 9 regional ships and 4 rowboats sold by Ship Managers). The Sturdy Tawny and Sand-Colored Rowboats each come in a second colour, recorded as variants.
+  - *Sea turtles by species* (Revision 3's rule): Green, Hawksbill, Loggerhead, Olive Ridley and Hydrothermal, plus the Giant Manta Ray. `#mounts-sea-turtle` opens the Green Sea Turtle, which keeps Game8's action shot captioned as an unnamed species.
+  - *Kept out after checking:* the Heavy Assault A.T.A.G. is borrowed from Gorthak hangars and no blueprint builds one (Gaming ProMax lists three craftable variants). The Race Horse and Black Bear have no source showing they can be kept; Game8's "Black Bear" is the Clawed Bear.
+  - *Counts after M2:* 80 mounts (36 added, 3 removed). DLC: 19 sea mounts, 20 ships and the A.T.A.G. refit. Flying: Blackstar, the Wyvern and three balloons. Mechanical: two mechs and three balloons. The Easter Eggs cover moved to the Leaping Kuku Bird.
 
 ## Riches tree — decisions
 
@@ -166,8 +177,10 @@ You asked for Riches on 2026-11-19: an endgame economy guide for a player who ha
 Left out for lack of reliable data or real imagery:
 
 - **Scout Automation** and **Golden Star Mech**: reported by one outlet (Destructoid, March 2026), absent from Game8's and Fextralife's mount lists, and Destructoid's own Golden Star unlock never appeared. No game imagery found. Add when a second source confirms them.
-- **Cows/bulls**: confirmed by Game8, but no hostable in-game capture was found. They are now part of M2 (NF-09) and go in Fleeting once imagery exists. The Delesyia Train is out: it is not a personal mount (Revision 3).
-- Soldier and race horses (temporary). Several common sea mounts have no documented fixed spawn; their plates say so.
+- **Cows/bulls, race horses and other temporary rides**: out by Revision 4, since the player cannot keep them. The Delesyia Train is out: it is not a personal mount (Revision 3).
+- **Spawns no guide pins**: the Giant Manta Ray (TH.GL maps one spawn, unnamed), the Grizzly Bear (forests and mountains) and several common sea mounts. Their plates say so.
+- **Rowboat portraits** are cropped from Game8's 728 × 410 shop screenshots, where the boat is small, so they are soft. No larger in-game image of a rowboat was found.
+- **Large Greymane Ship hold size**: Game8 does not list it, so its record shows Health only.
 
 ## Build and release
 

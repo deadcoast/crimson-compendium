@@ -177,9 +177,16 @@ try {
     {
       const problems = [];
       const titles = new Map(b.lists.map(([r, t]) => [r, t]));
+      const names = new Map(b.entries.map((e) => [e.id, e.name]));
       for (const [from, to] of Object.entries(b.def.redirects ?? {})) {
         await go(pg, `${b.id}-${from}`);
-        if (!(await waitText(pg, '.index .title', titles.get(to)))) problems.push(`${from}: lands on "${await text(pg, '.index .title')}", want "${titles.get(to)}"`);
+        if (names.has(to)) {
+          // a retired plate redirects to the plate that replaced it
+          const ok = await pg
+            .waitForFunction((n) => document.querySelector('.hero h2')?.getAttribute('aria-label') === n, names.get(to), { timeout: 6000 })
+            .then(() => true, () => false);
+          if (!ok) problems.push(`${from}: lands on plate "${await pg.evaluate(() => document.querySelector('.hero h2')?.getAttribute('aria-label'))}", want "${names.get(to)}"`);
+        } else if (!(await waitText(pg, '.index .title', titles.get(to)))) problems.push(`${from}: lands on "${await text(pg, '.index .title')}", want "${titles.get(to)}"`);
       }
       await go(pg, `${b.id}-ladder`);
       if (!(await waitText(pg, '.ladder h1', 'Tier Ladder'))) problems.push('ladder did not open');
