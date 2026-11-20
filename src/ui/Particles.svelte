@@ -1,6 +1,7 @@
 <script lang="ts">
   // Ambient motion behind a plate: embers (land), bubbles + light shafts (sea), wind (sky),
-  // gold dust (gold: slow-falling motes that catch the light as they turn).
+  // gold dust (gold: slow-falling motes that catch the light as they turn), and abyss light (abyss:
+  // violet motes that rise and pulse, while now and then a ring opens on the ground like a Nexus waking).
   import { app } from '../core/state.svelte';
 
   let { mode = 'land' }: { mode?: string } = $props();
@@ -14,23 +15,46 @@
     const ctx = cv.getContext('2d')!;
     const dpr = Math.min(devicePixelRatio || 1, 1.5);
     let w = 0, h = 0, raf = 0, visible = true, t = 0;
-    const count = mode === 'sea' ? 38 : mode === 'sky' ? 30 : mode === 'gold' ? 40 : 46;
+    const count = mode === 'sea' ? 38 : mode === 'sky' ? 30 : mode === 'gold' ? 40 : mode === 'abyss' ? 34 : 46;
     const rnd = (a: number, b: number) => a + Math.random() * (b - a);
 
     const spawn = (initial: boolean): P => {
       if (mode === 'sea') return { x: rnd(0, w), y: initial ? rnd(0, h) : h + 10, vx: 0, vy: -rnd(0.25, 0.9), r: rnd(1, 3.6), a: rnd(0.15, 0.5), ph: rnd(0, 6.28), len: 0 };
       if (mode === 'gold') return { x: rnd(0, w), y: initial ? rnd(0, h) : -rnd(4, 40), vx: rnd(-0.12, 0.12), vy: rnd(0.12, 0.42), r: rnd(0.6, 2.1), a: rnd(0.3, 0.85), ph: rnd(0, 6.28), len: rnd(0.6, 1.6) };
+      if (mode === 'abyss') return { x: rnd(0, w), y: initial ? rnd(0, h) : h + 6, vx: rnd(-0.08, 0.08), vy: -rnd(0.12, 0.4), r: rnd(0.6, 1.9), a: rnd(0.25, 0.75), ph: rnd(0, 6.28), len: rnd(0.5, 1.5) };
       if (mode === 'sky') return { x: initial ? rnd(-w * 0.2, w) : -rnd(40, 200), y: rnd(0, h), vx: rnd(1.6, 4.2), vy: rnd(-0.15, 0.15), r: rnd(0.6, 1.2), a: rnd(0.08, 0.3), ph: rnd(0, 6.28), len: rnd(40, 160) };
       return { x: rnd(0, w), y: initial ? rnd(h * 0.2, h) : h + 6, vx: rnd(0.05, 0.45), vy: -rnd(0.2, 0.75), r: rnd(0.5, 2), a: rnd(0.35, 0.95), ph: rnd(0, 6.28), len: 0 };
     };
 
     let ps: P[] = [];
+    // abyss rings: each opens from nothing to full width and fades, then reappears somewhere else
+    type Ring = { x: number; y: number; t0: number; dur: number; max: number };
+    const ring = (now: number, stagger = 0): Ring => ({ x: rnd(w * 0.15, w * 0.85), y: rnd(h * 0.58, h * 0.9), t0: now + stagger, dur: rnd(5200, 8000), max: rnd(90, 170) });
+    let rings: Ring[] = [];
     const resize = () => {
       const r = cv.getBoundingClientRect();
       w = r.width; h = r.height;
       cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       ps = Array.from({ length: count }, () => spawn(true));
+      if (mode === 'abyss') rings = [ring(performance.now(), -2600), ring(performance.now(), 1800)];
+    };
+
+    const openRings = (now: number) => {
+      for (let i = 0; i < rings.length; i++) {
+        const g = rings[i];
+        const k = (now - g.t0) / g.dur;
+        if (k < 0) continue;
+        if (k >= 1) { rings[i] = ring(now, rnd(800, 3200)); continue; }
+        const ease = 1 - Math.pow(1 - k, 3);
+        const rx = g.max * ease;
+        const fade = Math.sin(Math.PI * k);
+        ctx.lineWidth = 1;
+        for (const [scale, alpha] of [[1, 0.32], [0.62, 0.18]] as const) {
+          ctx.strokeStyle = `rgba(172,142,244,${alpha * fade})`;
+          ctx.beginPath(); ctx.ellipse(g.x, g.y, rx * scale, rx * scale * 0.26, 0, 0, 6.283); ctx.stroke();
+        }
+      }
     };
 
     const shafts = () => {
@@ -55,6 +79,7 @@
       ctx.clearRect(0, 0, w, h);
       if (mode === 'sea') shafts();
       ctx.globalCompositeOperation = 'lighter';
+      if (mode === 'abyss') openRings(now);
       for (let i = 0; i < ps.length; i++) {
         const p = ps[i];
         p.ph += 0.03;
@@ -72,6 +97,15 @@
           ctx.fillStyle = `rgba(255,${196 + Math.round(turn * 40)},${96 + Math.round(turn * 70)},${p.a * glint})`;
           ctx.beginPath(); ctx.ellipse(p.x, p.y, p.r, Math.max(0.3, p.r * turn), p.ph * 0.2, 0, 6.283); ctx.fill();
           if (p.y > h + 8) ps[i] = spawn(false);
+        } else if (mode === 'abyss') {
+          // a mote of abyss light: rises slowly, breathes brighter and dimmer, with a soft halo
+          p.x += p.vx + Math.sin(p.ph * 0.5) * 0.15; p.y += p.vy;
+          const pulse = 0.35 + 0.65 * Math.abs(Math.sin(p.ph * p.len * 0.6));
+          ctx.fillStyle = `rgba(150,120,240,${p.a * pulse * 0.14})`;
+          ctx.beginPath(); ctx.arc(p.x, p.y, p.r * 3.4, 0, 6.283); ctx.fill();
+          ctx.fillStyle = `rgba(214,200,255,${p.a * pulse})`;
+          ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.fill();
+          if (p.y < -8) ps[i] = spawn(false);
         } else if (mode === 'sky') {
           p.x += p.vx; p.y += p.vy + Math.sin(p.ph * 0.5) * 0.2;
           const g = ctx.createLinearGradient(p.x - p.len, p.y, p.x, p.y);

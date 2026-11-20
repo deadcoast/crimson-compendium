@@ -92,6 +92,30 @@
     "sportskeeda": {
       "name": "Sportskeeda (from creator footage)",
       "url": "https://www.sportskeeda.com/esports/all-new-mounts-crimson-desert-dlc-far-get"
+    },
+    "keengamer": {
+      "name": "KeenGamer",
+      "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/"
+    },
+    "wccftech": {
+      "name": "Wccftech",
+      "url": "https://wccftech.com/how-to/crimson-desert-how-to-max-inventory-slots-fast-secret-respawning-10-bag-location/"
+    },
+    "gamerguides": {
+      "name": "Gamer Guides",
+      "url": "https://www.gamerguides.com/crimson-desert/guide/getting-started/tips-and-tricks/extra-large-bag-location"
+    },
+    "playnews": {
+      "name": "PlayNews",
+      "url": "https://www.playnews.gg/en/guides/breathing-apparatus-with-propulsion-in-crimson-desert-where-to-find-it-and-how-to-upgrade-it"
+    },
+    "method": {
+      "name": "Method.gg",
+      "url": "https://www.method.gg/crimson-desert/crimson-desert-greymane-camp-guide-how-to-upgrade-and-manage-your-camp"
+    },
+    "pcgamesn": {
+      "name": "PCGamesN",
+      "url": "https://www.pcgamesn.com/crimson-desert/update-patch-notes-difficulty-options"
     }
   },
   "publishers": {
@@ -135,6 +159,19 @@
     "gameshedge": "GamesHedge",
     "thgl": "TH.GL",
     "sportskeeda": "Sportskeeda",
-    "finalboss": "FinalBoss"
+    "finalboss": "FinalBoss",
+    "wccftech": "Wccftech",
+    "gamerguides": "Gamer Guides",
+    "pcgamesn": "PCGamesN",
+    "epicgames": "Epic Games Store",
+    "vgc": "VGC",
+    "insidergaming": "Insider Gaming",
+    "thesixthaxis": "TheSixthAxis",
+    "comicbook": "ComicBook",
+    "gameshub": "GamesHub",
+    "gosugamers": "GosuGamers",
+    "pushsquare": "Push Square",
+    "presstart": "Press Start",
+    "powerpyx": "PowerPyx"
   }
 }

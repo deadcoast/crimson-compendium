@@ -1,0 +1,4348 @@
+[
+ {
+  "id": "abyss-nexus",
+  "name": "Abyss Nexus Network",
+  "leaf": "travel",
+  "cls": "builtin",
+  "kind": "Fast travel network",
+  "region": "All of Pywel",
+  "area": "Abyss Nexuses and Abyss Cressets",
+  "trait": "Warp from anywhere — mid-ride, mid-fall, mid-swim",
+  "summary": "Two kinds of fast-travel point cover Pywel. Step on an Abyss Nexus to add it to the map; at an Abyss Cresset, solve the puzzle it sets. Patches made the network the game's biggest time-saver: more Nexuses in 1.00.03, faster loading in 1.01, warping while moving in 1.02, and since 1.03 from horseback, mid-fall, swimming or climbing.",
+  "tiers": {
+   "impact": {
+    "tier": 1,
+    "basis": "One map click replaces any ride; since 1.03 it works mounted, falling, swimming and climbing (patch notes)."
+   },
+   "reach": {
+    "tier": 1,
+    "basis": "Every region, every session: points sit in cities, settlements, the Greymane Camp and the countryside."
+   },
+   "unlock": {
+    "tier": 1,
+    "basis": "Step on a Nexus to add it. Cressets add a puzzle. Nothing to buy."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Step onto any Abyss Nexus to add it to the map.",
+     "At an Abyss Cresset, take the Abyss Artifact it offers and solve the puzzle that starts.",
+     "Check the map's large question marks: these Mysterious Energy areas usually hold a Nexus and a Cresset.",
+     "Open the map on the All or Environment tab and select a point. Points do not show on the Quest or Faction tabs."
+    ]
+   }
+  ],
+  "location": "Cities, major settlements, the Greymane Camp and the open country; Mysterious Energy areas on the map.",
+  "notes": [
+   "Carrying an apprehended outlaw blocks fast travel, and warping away fails the bounty. Drop the outlaw first."
+  ],
+  "variants": [
+   "Abyss Nexus",
+   "Abyss Cresset"
+  ],
+  "since": "Base game · reworked 1.00.03–1.03",
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4448337/6a30926fc39c93fdb2de7a132b246a72.png/show",
+    "credit": "game8",
+    "crop": [
+     0.48,
+     0.4,
+     0.72
+    ],
+    "src": "media/qol/abyss-nexus/portrait.webp",
+    "w": 273,
+    "h": 273
+   },
+   "captures": [
+    {
+     "from": "https://img.game8.co/4436238/6bf75101ab8cfa66d394c82c38e60f6c.png/show",
+     "credit": "game8",
+     "kind": "menu",
+     "caption": "Map cards — an Abyss Nexus and an Abyss Cresset",
+     "src": "media/qol/abyss-nexus/menu-1.webp",
+     "w": 728,
+     "h": 380
+    },
+    {
+     "from": "https://img.game8.co/4436240/2a91434ce1cbe79116779d548d22efc9.png/show",
+     "credit": "game8",
+     "kind": "map",
+     "caption": "World map — a Mysterious Energy question mark",
+     "src": "media/qol/abyss-nexus/map-2.webp",
+     "w": 728,
+     "h": 380
+    },
+    {
+     "from": "https://img.game8.co/4444887/f8501511519936aec8e662c830e8c996.png/show",
+     "credit": "game8",
+     "kind": "overworld",
+     "caption": "On site — an Abyss Cresset",
+     "src": "media/qol/abyss-nexus/overworld-3.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": [
+    {
+     "from": "https://static0.fextralifeimages.com/file/crimsondesertgame/d/d1/Fast-travel-abyss-nexus-crimson-desert-wiki-guide.png",
+     "credit": "fextralife",
+     "kind": "variant",
+     "caption": "An Abyss Nexus at night",
+     "src": "media/qol/abyss-nexus/gallery-1.webp",
+     "w": 400,
+     "h": 225
+    }
+   ],
+   "hero": {
+    "from": "https://img.game8.co/4448337/6a30926fc39c93fdb2de7a132b246a72.png/show",
+    "credit": "game8",
+    "focus": "48% 45%",
+    "src": "media/qol/abyss-nexus/hero.webp",
+    "w": 674,
+    "h": 380
+   }
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/585839",
+    "title": "How to Fast Travel: All Fast Travel Points"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Abyss+Nexus",
+    "title": "Abyss Nexus"
+   },
+   {
+    "by": "pcgamer",
+    "url": "https://www.pcgamer.com/games/action/crimson-desert-update-has-a-few-surprise-improvements-like-finally-letting-you-teleport-on-your-horse-and-a-new-ability",
+    "title": "Update 1.03 lets you teleport on your horse"
+   },
+   {
+    "by": "insidergaming",
+    "url": "https://insider-gaming.com/crimson-desert-patch-1-02-notes-storage-movement/",
+    "title": "Patch 1.02 expands storage and improves movement"
+   },
+   {
+    "by": "thesixthaxis",
+    "url": "https://www.thesixthaxis.com/2026/03/29/crimson-desert-patch-notes-1-01-00-adds-five-more-mounts-makes-fast-travel-faster-and-more/",
+    "title": "Patch 1.01.00 makes fast travel faster"
+   },
+   {
+    "by": "gamingbolt",
+    "url": "https://gamingbolt.com/crimson-desert-patch-adds-storage-chests-nerfs-several-bosses-and-enemies-and-much-more",
+    "title": "Patch adds storage chests and more Abyss Nexuses"
+   },
+   {
+    "by": "epicgames",
+    "url": "https://store.epicgames.com/news/crimson-desert-biggest-updates-improvements-since-release",
+    "title": "Biggest updates and improvements since release"
+   }
+  ],
+  "remedy": {
+   "fixes": "Riding back across Pywel for every errand, and dismounting to use a Nexus.",
+   "gain": "One map click from anywhere: in the saddle, in the air, in the water.",
+   "figures": [
+    {
+     "label": "Warp while mounted, falling, swimming or climbing",
+     "value": "Since 1.03",
+     "basis": "patch",
+     "by": "pcgamer"
+    },
+    {
+     "label": "Where points sit",
+     "value": "Cities · settlements · camp",
+     "basis": "guide",
+     "by": "epicgames"
+    }
+   ],
+   "patches": [
+    {
+     "v": "1.00.03",
+     "note": "More Abyss Nexuses",
+     "by": "gamingbolt"
+    },
+    {
+     "v": "1.01.00",
+     "note": "Fast-travel loading cut",
+     "by": "thesixthaxis"
+    },
+    {
+     "v": "1.02.00",
+     "note": "Usable while moving slightly",
+     "by": "insidergaming"
+    },
+    {
+     "v": "1.03.00",
+     "note": "Mounted, falling, swimming, climbing",
+     "by": "pcgamer"
+    }
+   ],
+   "pairs": [
+    "thinkers-meadow-nexus",
+    "map-markers",
+    "royler"
+   ],
+   "watch": [
+    "An outlaw on your shoulder or horse blocks the warp; travelling anyway fails the bounty."
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "royler",
+  "name": "Royler",
+  "leaf": "travel",
+  "cls": "unlock",
+  "domains": [],
+  "base": "mounts/royler",
+  "trait": "The fastest horse in Pywel, waiting just north of Hernand",
+  "summary": "The travel upgrade you can have in the first hours. Royler stands by a lake in the Silverwolf Mountains, a short ride north of the City of Hernand, and tops every horse on Speed and Acceleration with the deepest stamina of any mount on record. The ride from the last Nexus to the target shrinks.",
+  "tiers": {
+   "impact": {
+    "tier": 1,
+    "basis": "Top Speed and Acceleration with 390 Stamina at Lv 5 and a second boost out of every drift (Mounts plate)."
+   },
+   "reach": {
+    "tier": 1,
+    "basis": "Every land journey between Nexuses, all game long."
+   },
+   "unlock": {
+    "tier": 2,
+    "basis": "A taming minigame at a lake near the starting city; Stamina Lv 6 needed."
+   }
+  },
+  "tags": [
+   "base"
+  ],
+  "remedy": {
+   "fixes": "Long rides on a starter horse between fast-travel points.",
+   "gain": "Top speed on the longest stamina bar, from the first hours of the game.",
+   "figures": [
+    {
+     "label": "Stamina at Lv 5",
+     "value": "390",
+     "basis": "guide",
+     "by": "game8"
+    },
+    {
+     "label": "Speed / Acceleration at Lv 5",
+     "value": "5 / 5",
+     "basis": "guide",
+     "by": "game8"
+    }
+   ],
+   "pairs": [
+    "abyss-nexus",
+    "blackstar"
+   ]
+  }
+ },
+ {
+  "id": "blackstar",
+  "name": "Blackstar",
+  "leaf": "travel",
+  "cls": "unlock",
+  "domains": [],
+  "base": "mounts/blackstar",
+  "trait": "Fly anywhere in a straight line",
+  "summary": "Kliff's dragon, earned at the close of Chapter 11. It flies over mountains and water to anywhere on the continent, which no road or Nexus does. Each summon lasts about fifteen real minutes, then needs about fifty to recover.",
+  "tiers": {
+   "impact": {
+    "tier": 1,
+    "basis": "True flight in a straight line over any terrain (Mounts plate)."
+   },
+   "reach": {
+    "tier": 2,
+    "basis": "All of Pywel, but about 15 real minutes per summon and about 50 of cooldown."
+   },
+   "unlock": {
+    "tier": 4,
+    "basis": "Main story through Chapter 11."
+   }
+  },
+  "tags": [
+   "base"
+  ],
+  "remedy": {
+   "fixes": "Terrain between you and the target.",
+   "gain": "A straight line over mountains and water.",
+   "figures": [
+    {
+     "label": "Flight per summon",
+     "value": "≈ 15 min",
+     "basis": "guide",
+     "by": "game8"
+    },
+    {
+     "label": "Cooldown",
+     "value": "≈ 50 min",
+     "basis": "guide",
+     "by": "game8"
+    }
+   ],
+   "watch": [
+    "Resting does not shorten the cooldown, and it cannot be summoned inside the Abyss."
+   ],
+   "pairs": [
+    "royler",
+    "flight"
+   ]
+  }
+ },
+ {
+  "id": "flight",
+  "name": "Flight",
+  "leaf": "travel",
+  "cls": "unlock",
+  "kind": "Skill · glide",
+  "region": "Hernand",
+  "area": "Woman in White, main quest",
+  "trait": "Crow wings: glide off any height",
+  "summary": "White Crow's crow wings let Kliff glide from any height until his stamina runs out. Swift Flight, the level-2 upgrade, trades more stamina for more speed. Patches lowered the stamina cost of flying and gliding, and 1.03 made the Focused Aerial Roll an official skill: a forward burst paid in Spirit instead of Stamina.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "Turns every cliff and tower into a launch point; Swift Flight adds speed."
+   },
+   "reach": {
+    "tier": 1,
+    "basis": "Anywhere you can jump from height, every session."
+   },
+   "unlock": {
+    "tier": 3,
+    "basis": "Two main quests, Abyss Without Balance then Woman in White; one Abyss Artifact for Swift Flight."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "requires": [
+   "Main quest Abyss Without Balance, then Woman in White (Hernand)"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Finish Abyss Without Balance, then play Woman in White in Hernand.",
+     "Speak to White Crow the Witch when it ends: she gives Kliff the crow wings, and Flight unlocks on the red skill tree.",
+     "Jump from height and press Square, X or C in mid-air to glide.",
+     "Spend one Abyss Artifact on Swift Flight for speed at a higher stamina cost."
+    ]
+   }
+  ],
+  "location": "Story unlock in Hernand — no world location.",
+  "notes": [
+   "Flight cannot start from the ground.",
+   "Stamina levels and Movement Speed gear both stretch a glide."
+  ],
+  "variants": [
+   "Swift Flight",
+   "Focused Aerial Roll"
+  ],
+  "since": "Base game · cheaper and faster by patch",
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4444821/1583b2c824dca21ce2048e90fe001eeb.png/show",
+    "credit": "game8",
+    "crop": [
+     0.5,
+     0.5,
+     0.6
+    ],
+    "src": "media/qol/flight/portrait.webp",
+    "w": 72,
+    "h": 72
+   },
+   "captures": [
+    {
+     "from": "https://static.beebom.com/wp-content/uploads/2026/03/How-to-unlock-Flight-in-Crimson-Desert.jpg?quality=75&strip=all",
+     "credit": "beebom",
+     "kind": "menu",
+     "caption": "Tutorial card — Flight",
+     "src": "media/qol/flight/menu-1.webp",
+     "w": 1200,
+     "h": 691
+    }
+   ],
+   "gallery": [],
+   "hero": {
+    "from": "https://static.beebom.com/wp-content/uploads/2026/03/How-to-fly-in-Crimson-Desert.jpg?quality=75&strip=all",
+    "credit": "beebom",
+    "focus": "50% 50%",
+    "src": "media/qol/flight/hero.webp",
+    "w": 1200,
+    "h": 675
+   }
+  },
+  "sources": [
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/flight-skill-guide",
+    "title": "Flight Skill Guide"
+   },
+   {
+    "by": "destructoid",
+    "url": "https://www.destructoid.com/how-to-fly-in-crimson-desert",
+    "title": "How to fly in Crimson Desert"
+   },
+   {
+    "by": "beebom",
+    "url": "https://beebom.com/crimson-desert-flight-skill",
+    "title": "How to Fly in Crimson Desert"
+   },
+   {
+    "by": "wccftech",
+    "url": "https://wccftech.com/how-to/crimson-desert-how-to-fly-faster-the-focus-boost-movement-tech/amp/",
+    "title": "How to Fly Faster: the Focus-Boost tech"
+   },
+   {
+    "by": "epicgames",
+    "url": "https://store.epicgames.com/news/crimson-desert-biggest-updates-improvements-since-release",
+    "title": "Biggest updates and improvements since release"
+   }
+  ],
+  "remedy": {
+   "fixes": "Climbing down every height you climbed up.",
+   "gain": "Glide off any ledge; Swift Flight and the Focused Aerial Roll push it faster.",
+   "figures": [
+    {
+     "label": "Glide speed with 15 ranks of Movement Speed",
+     "value": "≈ +22%",
+     "basis": "guide",
+     "by": "thegameswiki"
+    },
+    {
+     "label": "Stamina cost of flying and gliding",
+     "value": "Lowered",
+     "basis": "guide",
+     "by": "epicgames"
+    }
+   ],
+   "patches": [
+    {
+     "v": "1.03.00",
+     "note": "Focused Aerial Roll: a forward boost paid in Spirit",
+     "by": "wccftech"
+    }
+   ],
+   "pairs": [
+    "movement-speed",
+    "axiom-force"
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "axiom-force",
+  "name": "Axiom Force",
+  "leaf": "travel",
+  "cls": "unlock",
+  "kind": "Skill · grab",
+  "region": "Story",
+  "area": "Chapter 1",
+  "trait": "Grab, launch and swing: ranks 2 and 3 make it traversal",
+  "summary": "Axiom Force grabs objects and enemies at range. Rank 2 adds Aerial Maneuver, which launches Kliff into the air after a grab; rank 3 adds Aerial Swing, which swings him the way he steers. Patch 1.03 gave Damiane and Oongka the skill too.",
+  "tiers": {
+   "impact": {
+    "tier": 3,
+    "basis": "Launch and swing add routes up and across; puzzles need it anyway."
+   },
+   "reach": {
+    "tier": 2,
+    "basis": "Traversal and puzzles all over Pywel."
+   },
+   "unlock": {
+    "tier": 2,
+    "basis": "Unlocked in Chapter 1; ranks 2 and 3 cost Abyss Artifacts."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "requires": [
+   "Chapter 1 of the story"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Axiom Force unlocks during Chapter 1.",
+     "Spend Abyss Artifacts in the skill tree: rank 2 for Aerial Maneuver, rank 3 for Aerial Swing.",
+     "Hold L3 / LS (Tab on keyboard) to grab, then launch or swing."
+    ]
+   }
+  ],
+  "location": "Story unlock — no world location.",
+  "notes": [],
+  "variants": [
+   "Aerial Maneuver",
+   "Aerial Swing"
+  ],
+  "since": "Base game · Damiane and Oongka in 1.03",
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4444818/78ff75a0b31a014826ef4d3f3f856558.png/show",
+    "credit": "game8",
+    "crop": [
+     0.5,
+     0.5,
+     0.6
+    ],
+    "src": "media/qol/axiom-force/portrait.webp",
+    "w": 72,
+    "h": 72
+   },
+   "captures": [
+    {
+     "from": "https://img.game8.co/4444801/e9c4dced6e521fa3fe1f08913dd8b85a.png/show",
+     "credit": "game8",
+     "kind": "overworld",
+     "caption": "Chapter 1 — where Axiom Force is learned",
+     "clip": [
+      0,
+      0,
+      0.5,
+      0.88
+     ],
+     "src": "media/qol/axiom-force/overworld-1.webp",
+     "w": 364,
+     "h": 361
+    }
+   ],
+   "gallery": [
+    {
+     "from": "https://static0.fextralifeimages.com/file/crimsondesertgame/8/88/Axiom-force-skill-crimson-desert-wiki-guide-anim.gif",
+     "credit": "fextralife",
+     "kind": "action",
+     "caption": "Axiom Force in use",
+     "src": "media/qol/axiom-force/gallery-1.webp",
+     "w": 300,
+     "h": 169
+    }
+   ]
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/587317",
+    "title": "How to Unlock Axiom Force"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Axiom+Force",
+    "title": "Axiom Force"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/aerial-combat",
+    "title": "Aerial Combat"
+   },
+   {
+    "by": "epicgames",
+    "url": "https://store.epicgames.com/news/crimson-desert-biggest-updates-improvements-since-release",
+    "title": "Biggest updates and improvements since release"
+   }
+  ],
+  "remedy": {
+   "fixes": "Ledges and gaps with no way up or across.",
+   "gain": "Launch off anything you grab, then swing where you steer.",
+   "figures": [
+    {
+     "label": "Aerial Maneuver",
+     "value": "Rank 2",
+     "basis": "guide",
+     "by": "game8"
+    },
+    {
+     "label": "Aerial Swing",
+     "value": "Rank 3",
+     "basis": "guide",
+     "by": "game8"
+    }
+   ],
+   "patches": [
+    {
+     "v": "1.03.00",
+     "note": "Damiane and Oongka learn it",
+     "by": "thegameswiki"
+    }
+   ],
+   "pairs": [
+    "flight"
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "thinkers-meadow-nexus",
+  "name": "Thinker's Meadow Nexus",
+  "leaf": "travel",
+  "cls": "unlock",
+  "kind": "Repaired fast-travel point",
+  "region": "Hernand",
+  "area": "Thinker's Meadow, by Howling Hill",
+  "trait": "A broken Nexus beside the camp, mended with a Kuku Pot",
+  "summary": "A fast-travel point near Howling Hill that starts broken. Fixing it takes three Chapter 2–4 unlocks: Karin Quarry cleared for House Roberts, the Kuku Pot from Grimnir's kiln quest, and Focused Force Palm. Then you carry an Abyss Transporter from the quarry in the pot and punch it into place.",
+  "tiers": {
+   "impact": {
+    "tier": 3,
+    "basis": "Saves the ride from the nearest working point; how much depends on which others you hold."
+   },
+   "reach": {
+    "tier": 2,
+    "basis": "Every trip to the camp while it sits at Howling Hill."
+   },
+   "unlock": {
+    "tier": 3,
+    "basis": "Estate in Dismay, the Kiln Repair quest and Focused Force Palm, then a puzzle."
+   }
+  },
+  "tags": [
+   "base"
+  ],
+  "requires": [
+   "Estate in Dismay (House Roberts): Karin Quarry liberated, the relic lifted",
+   "Kiln Repair at the Kilnden Workshop (Chapter 4), for the Kuku Pot",
+   "Focused Force Palm (Chapter 4 main quest)"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "In Karin Quarry, drop through the hole beneath where the giant relic was and head west.",
+     "Destroy the turrets, then smash the bismuth wall on the left with Focused Force Palm.",
+     "Behind it, grab the Abyss Transporter pad with Axiom Force and seal it in the Kuku Pot.",
+     "At Thinker's Meadow, burn the vines off the Nexus with Blinding Flash.",
+     "Release the Transporter from the pot, move it over the gap with Axiom Force and Force Palm it down into place.",
+     "Stand on it to unlock fast travel."
+    ]
+   }
+  ],
+  "location": "Thinker's Meadow, near Howling Hill, Hernand.",
+  "notes": [],
+  "variants": [],
+  "since": "Base game",
+  "media": {
+   "portrait": {
+    "from": "https://cdn.mos.cms.futurecdn.net/iHBZEPmSkBLdczCU2JTgpF-1920-80.jpg",
+    "credit": "pcgamer",
+    "crop": [
+     0.16,
+     0.58,
+     0.62
+    ],
+    "src": "media/qol/thinkers-meadow-nexus/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "from": "https://cdn.mos.cms.futurecdn.net/nW8WkaDoaeEiChRWWiFjYA-1200-80.jpg",
+     "credit": "pcgamer",
+     "kind": "menu",
+     "caption": "Quest map — Estate in Dismay, Karin Quarry",
+     "src": "media/qol/thinkers-meadow-nexus/menu-1.webp",
+     "w": 1200,
+     "h": 675
+    },
+    {
+     "from": "https://cdn.mos.cms.futurecdn.net/dV23zivizW4LVHY6C7BHPU-1200-80.jpg",
+     "credit": "pcgamer",
+     "kind": "overworld",
+     "caption": "On site — Grimnir at the Kilnden Workshop",
+     "src": "media/qol/thinkers-meadow-nexus/overworld-2.webp",
+     "w": 1200,
+     "h": 675
+    },
+    {
+     "from": "https://cdn.mos.cms.futurecdn.net/nsAiFq3CBCu2UEy5bgESpF-1200-80.jpg",
+     "credit": "pcgamer",
+     "kind": "overworld",
+     "caption": "On site — the wall Focused Force Palm breaks",
+     "src": "media/qol/thinkers-meadow-nexus/overworld-3.webp",
+     "w": 1200,
+     "h": 675
+    }
+   ],
+   "gallery": [],
+   "hero": {
+    "from": "https://cdn.mos.cms.futurecdn.net/iHBZEPmSkBLdczCU2JTgpF-1920-80.jpg",
+    "credit": "pcgamer",
+    "focus": "30% 55%",
+    "src": "media/qol/thinkers-meadow-nexus/hero.webp",
+    "w": 1920,
+    "h": 1080
+   }
+  },
+  "sources": [
+   {
+    "by": "pcgamer",
+    "url": "https://www.pcgamer.com/games/action/crimson-desert-thinkers-meadow-abyss-nexus-howling-hill",
+    "title": "How to repair the Thinker's Meadow Abyss Nexus"
+   }
+  ],
+  "remedy": {
+   "fixes": "A dead Nexus on the doorstep of the camp you return to most.",
+   "gain": "A working warp point next to Howling Hill.",
+   "figures": [
+    {
+     "label": "Unlocks needed first",
+     "value": "3",
+     "basis": "guide",
+     "by": "pcgamer"
+    }
+   ],
+   "pairs": [
+    "abyss-nexus",
+    "camp-expansion"
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "ocean-drifter",
+  "name": "Ocean Drifter",
+  "leaf": "underwater",
+  "cls": "unlock",
+  "domains": [],
+  "base": "mounts/ocean-drifter",
+  "trait": "The fastest way to travel underwater",
+  "summary": "The top underwater mount. An ancient diving machine sealed about 55 metres down in the Forgotten Ocean Ruins, it outruns every sea creature and your ship below the surface. It only works submerged, and surfacing locks it out for an hour.",
+  "tiers": {
+   "impact": {
+    "tier": 1,
+    "basis": "The fastest underwater mount, faster than your ship (Mounts plate)."
+   },
+   "reach": {
+    "tier": 4,
+    "basis": "One activity: underwater, from about 30 m down."
+   },
+   "unlock": {
+    "tier": 4,
+    "basis": "Charting the Unknown, a diving suit, and a dive into the Forgotten Ocean Ruins."
+   }
+  },
+  "tags": [
+   "dlc"
+  ],
+  "remedy": {
+   "fixes": "Crossing the seabed at swimming speed on a breath timer.",
+   "gain": "Outruns every sea creature, and your ship, below the surface.",
+   "figures": [
+    {
+     "label": "Works from",
+     "value": "≈ 30 m down",
+     "basis": "guide",
+     "by": "gamerant"
+    },
+    {
+     "label": "Lockout after surfacing",
+     "value": "60 min",
+     "basis": "guide",
+     "by": "gamerant"
+    }
+   ],
+   "watch": [
+    "Surfacing, warping away or summoning another mount starts a 60-minute real-time cooldown."
+   ],
+   "pairs": [
+    "diving-suits",
+    "breathing-apparatus"
+   ]
+  }
+ },
+ {
+  "id": "diving-suits",
+  "name": "Diving Suits",
+  "leaf": "underwater",
+  "cls": "unlock",
+  "kind": "Dive gear set",
+  "region": "Demeniss",
+  "area": "Silvermoon Tradehouse, Demeniss Port",
+  "trait": "Minutes more air per dive, bought with relics",
+  "summary": "Diving gear raises maximum breathing, the clock on every dive. The pre-order Charter's Diving Set adds up to 240 seconds at its starting refinement. The Marine Charter's set, sold for Ancient Relics by Sulivan at the Silvermoon Tradehouse, gives about half that and adds 2% swim speed on its gloves and boots.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "Minutes more per dive: +240 s on the Charter's set at Refinement 4."
+   },
+   "reach": {
+    "tier": 4,
+    "basis": "One activity: diving in Charting the Unknown's seas."
+   },
+   "unlock": {
+    "tier": 2,
+    "basis": "Twenty-two Ancient Relics at one shop, or a pre-order claim."
+   }
+  },
+  "tags": [
+   "dlc"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "Ancient Relics (Marine Charter's set)"
+  ],
+  "routes": [
+   {
+    "label": "Marine Charter's Diving Set",
+    "steps": [
+     "Collect Shattered Ancient Relics in the new regions; two make one Ancient Relic.",
+     "Go to Sulivan's Relic Exchange at the Silvermoon Tradehouse, Demeniss Port. If nobody is there, finish the Demeniss faction quest Silvermoon Trade Group first.",
+     "Buy the helm, gloves and boots for 5 relics each and the suit for 7: 22 for the set."
+    ]
+   },
+   {
+    "label": "Charter's Diving Set (pre-order)",
+    "steps": [
+     "Pause, open Others → Options → Add-ons, and claim the Pre-order Exclusive Bonus under Receivable Items: eight pieces across two sets."
+    ]
+   }
+  ],
+  "location": "Sulivan's Relic Exchange, Silvermoon Tradehouse, Demeniss Port.",
+  "notes": [
+   "The Marine Charter's set starts at Refinement 0; refining raises its breathing."
+  ],
+  "variants": [
+   "Charter's Diving Set",
+   "Charter's Light Diving Set",
+   "Marine Charter's Diving Set"
+  ],
+  "since": "Charting the Unknown · 2.04",
+  "media": {
+   "portrait": {
+    "from": "https://static.beebom.com/wp-content/uploads/2026/11/Buying-Marines-Charter-Diving-Suit-in-Crimson-Desert.jpg?quality=75&strip=all",
+    "credit": "beebom",
+    "crop": [
+     0.83,
+     0.42,
+     0.9
+    ],
+    "src": "media/qol/diving-suits/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "from": "https://static.beebom.com/wp-content/uploads/2026/11/Sulivan-Relic-Exchange-store-in-Crimson-Desert.jpg?quality=75&strip=all",
+     "credit": "beebom",
+     "kind": "map",
+     "caption": "World map — the Relic Exchange at Demeniss Port",
+     "src": "media/qol/diving-suits/map-1.webp",
+     "w": 1200,
+     "h": 675
+    },
+    {
+     "from": "https://static.beebom.com/wp-content/uploads/2026/11/Demeniss-Relic-Exchange-in-Crimson-Desert.jpg?quality=75&strip=all",
+     "credit": "beebom",
+     "kind": "overworld",
+     "caption": "On site — Sulivan at the Silvermoon Tradehouse",
+     "src": "media/qol/diving-suits/overworld-2.webp",
+     "w": 1200,
+     "h": 675
+    },
+    {
+     "from": "https://static.beebom.com/wp-content/uploads/2026/11/Crimson-Desert-Charting-the-Unknown-DLC-preorder-bonuses.jpg?quality=75&strip=all",
+     "credit": "beebom",
+     "kind": "menu",
+     "caption": "Add-ons — claiming the pre-order sets",
+     "src": "media/qol/diving-suits/menu-3.webp",
+     "w": 1200,
+     "h": 675
+    }
+   ],
+   "gallery": [
+    {
+     "from": "https://static.beebom.com/wp-content/uploads/2026/11/Swimming-underwater-in-Crimson-Desert.jpg?quality=75&strip=all",
+     "credit": "beebom",
+     "kind": "action",
+     "caption": "Diving off the Great Coral Reef",
+     "src": "media/qol/diving-suits/gallery-1.webp",
+     "w": 1200,
+     "h": 675
+    }
+   ],
+   "hero": {
+    "from": "https://static.beebom.com/wp-content/uploads/2026/11/Buying-Marines-Charter-Diving-Suit-in-Crimson-Desert.jpg?quality=75&strip=all",
+    "credit": "beebom",
+    "focus": "80% 40%",
+    "src": "media/qol/diving-suits/hero.webp",
+    "w": 1200,
+    "h": 675
+   }
+  },
+  "sources": [
+   {
+    "by": "gamingbolt",
+    "url": "https://gamingbolt.com/?p=656504",
+    "title": "Charting the Unknown: How to Unlock Diving Suits"
+   },
+   {
+    "by": "beebom",
+    "url": "https://beebom.com/how-to-get-diving-suit-in-crimson-desert/",
+    "title": "How to Get Diving Suit and Swim Underwater"
+   },
+   {
+    "by": "mobalytics",
+    "url": "https://mobalytics.gg/gamebase/guides/crimson-desert-underwater-exploration",
+    "title": "Underwater Exploration Guide"
+   }
+  ],
+  "remedy": {
+   "fixes": "Dives cut short by the breath meter.",
+   "gain": "Minutes more on the seabed, and faster strokes.",
+   "figures": [
+    {
+     "label": "Charter's set, max breathing at Refinement 4",
+     "value": "+240 s",
+     "basis": "guide",
+     "by": "gamingbolt"
+    },
+    {
+     "label": "Marine Charter's set",
+     "value": "22 Ancient Relics",
+     "basis": "guide",
+     "by": "gamingbolt"
+    },
+    {
+     "label": "Marine gloves and boots, swim speed",
+     "value": "+2%",
+     "basis": "guide",
+     "by": "gamingbolt"
+    }
+   ],
+   "pairs": [
+    "breathing-apparatus",
+    "forsaken-oath-plate",
+    "ocean-drifter"
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "breathing-apparatus",
+  "name": "Propulsion Breathing Device",
+  "leaf": "underwater",
+  "cls": "unlock",
+  "kind": "Dive gear · back unit",
+  "region": "East Sea",
+  "area": "Dead Coral Sea, far east of Delesyia",
+  "trait": "The underwater jetpack: more air, faster swimming",
+  "summary": "A breathing unit with a propulsion assist: it adds 600 to maximum breathing and its fin-shaped unit cuts water drag for faster swimming, paid for in stamina. It lies in a chest about 168 metres down in the Dead Coral Sea. All three characters can wear it, and a blueprint upgrades it further.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "+600 maximum breathing and a swim-speed boost (PlayNews)."
+   },
+   "reach": {
+    "tier": 4,
+    "basis": "One activity: diving in Charting the Unknown's seas."
+   },
+   "unlock": {
+    "tier": 3,
+    "basis": "A 168 m dive in the Dead Coral Sea; the upgrade is another deep chest."
+   }
+  },
+  "tags": [
+   "dlc"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown"
+  ],
+  "routes": [
+   {
+    "label": "Propulsion Breathing Device",
+    "steps": [
+     "Reach the north-west of the Dead Coral Sea, far east of Delesyia, by ship or flying mount.",
+     "Dive to about 168 m and find the chest under the broken roof of a sunken railcar.",
+     "Equip it; Kliff, Damiane and Oongka can all wear it."
+    ]
+   },
+   {
+    "label": "Enhanced version",
+    "steps": [
+     "Find the upgrade blueprint in a chest inside a sunken structure in the South Sea. PlayNews places it in the Forgotten Ocean Ruins, about 158 m down: enter through the ceiling holes and climb to the top floor.",
+     "Craft at a workbench: the device, 50 Shiny Ore, 30 Malachite and 20 Manganese."
+    ]
+   }
+  ],
+  "location": "North-west Dead Coral Sea, about 168 m down, under a sunken railcar.",
+  "notes": [
+   "The craftable Explorer's Breathing Device, a starter unit, gives +300 breathing and 2% swim speed (Vulkk).",
+   "Miss the chest and the manual sells for 30 Ancient Relics at Sulivan's Relic Exchange (PlayNews)."
+  ],
+  "variants": [
+   "Breathing Apparatus with Propulsion",
+   "Enhanced Propulsion Breathing Device",
+   "Explorer's Breathing Device"
+  ],
+  "since": "Charting the Unknown · 2.04",
+  "media": {
+   "portrait": {
+    "from": "https://img.e-xiste.com/q-L2g9ZG50_matfbFoufuEjx8W3W4igoEKpdqfpWg9M/q:80/format:webp/w:800/plain/https%3A%2F%2Fs3.fr-par.scw.cloud%2Fplaynews-media%2Farticles%2F1d58fdb839a1c192a110ac37521d1b85-e8609113-eb50-43d9-956a-ec2052a2b0a0.jpg",
+    "credit": "playnews",
+    "crop": [
+     0.45,
+     0.5,
+     0.9
+    ],
+    "src": "media/qol/breathing-apparatus/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [],
+   "gallery": [],
+   "hero": {
+    "from": "https://img.e-xiste.com/q-L2g9ZG50_matfbFoufuEjx8W3W4igoEKpdqfpWg9M/q:80/format:webp/w:800/plain/https%3A%2F%2Fs3.fr-par.scw.cloud%2Fplaynews-media%2Farticles%2F1d58fdb839a1c192a110ac37521d1b85-e8609113-eb50-43d9-956a-ec2052a2b0a0.jpg",
+    "credit": "playnews",
+    "focus": "45% 50%",
+    "src": "media/qol/breathing-apparatus/hero.webp",
+    "w": 800,
+    "h": 450
+   }
+  },
+  "sources": [
+   {
+    "by": "playnews",
+    "url": "https://www.playnews.gg/en/guides/breathing-apparatus-with-propulsion-in-crimson-desert-where-to-find-it-and-how-to-upgrade-it",
+    "title": "Breathing Apparatus with Propulsion: where to find and upgrade it"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/items/propulsion-breathing-device/",
+    "title": "Propulsion Breathing Device"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/items/enhanced-propulsion-breathing-device/",
+    "title": "Enhanced Propulsion Breathing Device"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/items/explorers-breathing-device/",
+    "title": "Explorer's Breathing Device"
+   }
+  ],
+  "remedy": {
+   "fixes": "Short, slow dives that end at the surface.",
+   "gain": "+600 breathing and a push through the water.",
+   "figures": [
+    {
+     "label": "Max breathing",
+     "value": "+600",
+     "basis": "guide",
+     "by": "playnews"
+    },
+    {
+     "label": "Chest depth",
+     "value": "≈ 168 m",
+     "basis": "guide",
+     "by": "playnews"
+    },
+    {
+     "label": "Explorer's Breathing Device",
+     "value": "+300 · 2% swim",
+     "basis": "guide",
+     "by": "vulkk"
+    }
+   ],
+   "watch": [
+    "The propulsion spends stamina while it pushes.",
+    "PlayNews is machine-translated and lists two upgrade recipes; Vulkk’s is used here."
+   ],
+   "pairs": [
+    "diving-suits",
+    "forsaken-oath-plate",
+    "ocean-drifter"
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "forsaken-oath-plate",
+  "name": "Forsaken Oath Plate",
+  "leaf": "underwater",
+  "cls": "unlock",
+  "kind": "Armor set · dive",
+  "region": "South Sea",
+  "area": "Razanui · Great Coral Reef · Hydrothermal Vents · Ocula",
+  "trait": "Plate that breathes: up to 615 seconds more air",
+  "summary": "A four-piece plate set for Kliff and Oongka that adds maximum breathing on every piece and 4% swim speed on three. Each piece sits in a fixed underwater chest sealed in a green rock that Force Palm breaks. Fully refined it adds 615 seconds of air. Damiane's version is the Sunken Azuretide set.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "Every piece adds breathing; the full set at Refinement 10 adds 615 s (GamingBolt)."
+   },
+   "reach": {
+    "tier": 4,
+    "basis": "One activity: diving in Charting the Unknown's seas."
+   },
+   "unlock": {
+    "tier": 3,
+    "basis": "Four chests from 15 m to 215 m down, each behind Force Palm."
+   }
+  },
+  "tags": [
+   "dlc"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "Force Palm"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Boots: about 15 m down off the north-west coast of Razanui Island, west of the Great Coral Reef.",
+     "Armor: about 60 m down in a sunken shipwreck by the islets north-east of Ocula Island; the chest is mid-wreck.",
+     "Gloves: about 125 m down by a large coral formation south of the 'R' of the Great Coral Reef label.",
+     "Helm: about 215 m down on the Great Hydrothermal Vents, north of the map label's 'T', beside a smaller spire north-west of the largest.",
+     "Break each green rock with Force Palm and open the chest."
+    ]
+   }
+  ],
+  "location": "Four chests across the South Sea: Razanui, the Great Coral Reef, the Great Hydrothermal Vents and Ocula Island.",
+  "notes": [
+   "The Helm also grants Daze immunity and Spirit regeneration (KeenGamer).",
+   "Sunken Azuretide Plate is Damiane's version with the same stats (Vulkk)."
+  ],
+  "variants": [
+   "Sunken Azuretide Plate (Damiane)"
+  ],
+  "since": "Charting the Unknown · 2.04",
+  "media": {
+   "portrait": {
+    "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Crimson-Desert-Forsake-Oath-Armor-Set.jpeg",
+    "credit": "keengamer",
+    "clip": [
+     0,
+     0,
+     1,
+     0.8
+    ],
+    "crop": [
+     0.5,
+     0.42,
+     0.95
+    ],
+    "src": "media/qol/forsaken-oath-plate/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Forsaken-Oath-Plate-Boots-Location.jpg",
+     "credit": "keengamer",
+     "kind": "map",
+     "caption": "World map — Boots, off Razanui Island",
+     "src": "media/qol/forsaken-oath-plate/map-1.webp",
+     "w": 1600,
+     "h": 814
+    },
+    {
+     "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Forsaken-Oath-Plate-Armor-Location.jpg",
+     "credit": "keengamer",
+     "kind": "map",
+     "caption": "World map — Armor, by Ocula Island",
+     "src": "media/qol/forsaken-oath-plate/map-2.webp",
+     "w": 1600,
+     "h": 814
+    },
+    {
+     "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Forsaken-Oath-Plate-Gloves-Location.jpg",
+     "credit": "keengamer",
+     "kind": "map",
+     "caption": "World map — Gloves, Great Coral Reef",
+     "src": "media/qol/forsaken-oath-plate/map-3.webp",
+     "w": 1600,
+     "h": 814
+    },
+    {
+     "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Forsaken-Oath-Plate-Helm-Location.jpg",
+     "credit": "keengamer",
+     "kind": "map",
+     "caption": "World map — Helm, Great Hydrothermal Vents",
+     "src": "media/qol/forsaken-oath-plate/map-4.webp",
+     "w": 1600,
+     "h": 815
+    },
+    {
+     "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Forsaken-Oath-Plate-Helm.jpg",
+     "credit": "keengamer",
+     "kind": "overworld",
+     "caption": "On site — the Helm chest on the seabed",
+     "src": "media/qol/forsaken-oath-plate/overworld-5.webp",
+     "w": 1600,
+     "h": 815
+    }
+   ],
+   "gallery": [],
+   "hero": {
+    "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Crimson-Desert-Forsake-Oath-Armor-Set.jpeg",
+    "credit": "keengamer",
+    "clip": [
+     0,
+     0,
+     1,
+     0.8
+    ],
+    "focus": "50% 30%",
+    "src": "media/qol/forsaken-oath-plate/hero.webp",
+    "w": 1673,
+    "h": 752
+   }
+  },
+  "sources": [
+   {
+    "by": "gamingbolt",
+    "url": "https://gamingbolt.com/?p=656504",
+    "title": "Charting the Unknown: How to Unlock Diving Suits"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-how-to-get-forsaken-oath-plate-armor-set/",
+    "title": "How to Get Forsaken Oath Plate Armor Set"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/2026/11/14/forsaken-oath-plate-armor-set-in-crimson-desert-how-to-get-stats/",
+    "title": "Forsaken Oath Plate Armor Set: How to Get & Stats"
+   },
+   {
+    "by": "mobalytics",
+    "url": "https://mobalytics.gg/gamebase/guides/crimson-desert-forsaken-oath-armor-set",
+    "title": "How to Get the Forsaken Oath Armor Set"
+   }
+  ],
+  "remedy": {
+   "fixes": "Choosing between armour and air.",
+   "gain": "Plate that adds breathing on every piece.",
+   "figures": [
+    {
+     "label": "Full set at Refinement 10",
+     "value": "+615 s",
+     "basis": "guide",
+     "by": "gamingbolt"
+    },
+    {
+     "label": "Helm at Refinement 4",
+     "value": "+120 s",
+     "basis": "guide",
+     "by": "gamingbolt"
+    },
+    {
+     "label": "Armor, gloves, boots: swim speed",
+     "value": "+4% each",
+     "basis": "guide",
+     "by": "keengamer"
+    }
+   ],
+   "pairs": [
+    "diving-suits",
+    "breathing-apparatus"
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "sturdy-gatherables-chest",
+  "name": "Sturdy Gatherables Chest",
+  "leaf": "inventory",
+  "cls": "unlock",
+  "kind": "House chest · materials",
+  "region": "All of Pywel",
+  "area": "Any furniture vendor",
+  "trait": "1,000 slots you craft straight from",
+  "summary": "A placeable chest for 1,000 slots of raw materials. Crafting and refining pull from it directly, so ore and timber no longer ride in your bag. It costs 50 Silver at any furniture vendor, and you can place more than one.",
+  "tiers": {
+   "impact": {
+    "tier": 1,
+    "basis": "Crafting and refining read from it: no hauling materials to the bench."
+   },
+   "reach": {
+    "tier": 1,
+    "basis": "Every craft and every refinement."
+   },
+   "unlock": {
+    "tier": 1,
+    "basis": "50 Silver at any furniture vendor; no quest."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "requires": [
+   "A house to place it in (the Hernand Residence opens in Chapter III)"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Buy it for 50 Silver from any furniture vendor, such as the one at Timberham Sawmill.",
+     "Place it in your house in build mode.",
+     "Move your materials in; crafting and refining draw from it."
+    ]
+   }
+  ],
+  "location": "Furniture vendors in every region, including Timberham Sawmill.",
+  "notes": [
+   "Raw materials only: food, gear and quest items have their own chests."
+  ],
+  "variants": [],
+  "since": "Patch 1.04",
+  "media": {
+   "portrait": {
+    "from": "https://keengamer.com/wp-content/uploads/2026/04/How-to-Unlock-All-Storage-Spaces-in-Crimson-Desert-Sturdy-Gatherables-Chest-in-Furniture-Shop-780x439.png",
+    "credit": "keengamer",
+    "crop": [
+     0.63,
+     0.66,
+     0.62
+    ],
+    "src": "media/qol/sturdy-gatherables-chest/portrait.webp",
+    "w": 272,
+    "h": 272
+   },
+   "captures": [
+    {
+     "from": "https://keengamer.com/wp-content/uploads/2026/04/How-to-Unlock-All-Storage-Spaces-in-Crimson-Desert-Sturdy-Gatherables-Chest-Menu-780x441.png",
+     "credit": "keengamer",
+     "kind": "menu",
+     "caption": "Gatherables Chest — 1,000 slots",
+     "src": "media/qol/sturdy-gatherables-chest/menu-1.webp",
+     "w": 780,
+     "h": 441
+    },
+    {
+     "from": "https://keengamer.com/wp-content/uploads/2026/04/How-to-Unlock-All-Storage-Spaces-in-Crimson-Desert-Placing-Sturdy-Gatherables-Chest-780x437.png",
+     "credit": "keengamer",
+     "kind": "menu",
+     "caption": "Build mode — placing it in the house",
+     "src": "media/qol/sturdy-gatherables-chest/menu-2.webp",
+     "w": 780,
+     "h": 437
+    }
+   ],
+   "gallery": [],
+   "hero": {
+    "from": "https://keengamer.com/wp-content/uploads/2026/04/How-to-Unlock-All-Storage-Spaces-in-Crimson-Desert-Sturdy-Gatherables-Chest-in-Furniture-Shop-780x439.png",
+    "credit": "keengamer",
+    "focus": "65% 55%",
+    "src": "media/qol/sturdy-gatherables-chest/hero.webp",
+    "w": 780,
+    "h": 439
+   }
+  },
+  "sources": [
+   {
+    "by": "keengamer",
+    "url": "https://keengamer.com/articles/guides/how-to-unlock-all-storage-spaces-in-crimson-desert",
+    "title": "How to Unlock All Storage Spaces"
+   },
+   {
+    "by": "pcgamer",
+    "url": "https://www.pcgamer.com/games/action/the-latest-crimson-desert-patch-is-finally-the-reason-i-needed-to-turn-my-once-useless-house-into-a-cosy-haven/",
+    "title": "The latest patch turns the house into a haven"
+   },
+   {
+    "by": "gameshub",
+    "url": "https://www.gameshub.com/?p=2868170",
+    "title": "Patch notes add a major inventory shakeup"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/sturdy-gatherables-chest",
+    "title": "Sturdy Gatherables Chest"
+   },
+   {
+    "by": "epicgames",
+    "url": "https://store.epicgames.com/news/crimson-desert-biggest-updates-improvements-since-release",
+    "title": "Biggest updates and improvements since release"
+   }
+  ],
+  "remedy": {
+   "fixes": "Carrying every ore and log to the bench.",
+   "gain": "Craft and refine straight from the chest.",
+   "figures": [
+    {
+     "label": "Slots",
+     "value": "1,000",
+     "basis": "guide",
+     "by": "keengamer"
+    },
+    {
+     "label": "Price",
+     "value": "50 Silver",
+     "basis": "guide",
+     "by": "keengamer"
+    }
+   ],
+   "patches": [
+    {
+     "v": "1.04.00",
+     "note": "Added with the specialised storage",
+     "by": "vgc"
+    }
+   ],
+   "pairs": [
+    "kuku-cooler",
+    "house-storage",
+    "dispatch-repeat"
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "bag-upgrades",
+  "name": "Bags",
+  "leaf": "inventory",
+  "cls": "unlock",
+  "kind": "Inventory expansion",
+  "region": "All of Pywel",
+  "area": "Vendors and quest rewards",
+  "trait": "Small +1, Medium +3, Large +5 — permanent",
+  "summary": "Kliff starts with 50 inventory slots, and every bag adds slots for good: a Small Bag one, a Medium three, a Large five, while campaign milestones hand out bags of up to ten. Small Bags cost 50 copper at almost any vendor. The 27 Greymane Commissions alone are worth 81 slots.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "Every Medium Bag is three fewer trips to sell or store."
+   },
+   "reach": {
+    "tier": 1,
+    "basis": "Every session: the bag fills wherever you go."
+   },
+   "unlock": {
+    "tier": 1,
+    "basis": "Small Bags at any vendor for 50 copper; Medium and Large from quests."
+   }
+  },
+  "tags": [
+   "base"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Buy a Small Bag from almost any vendor for 50 copper.",
+     "In Journal → Faction Quests, hover each quest and read the Reward panel; take the ones that pay a Medium or Large Bag.",
+     "Early in Hernand: Renee's, Rhett's and Turnali's Requests each pay a Medium Bag.",
+     "Run the Greymane Commissions: 27 of them, +81 slots in all."
+    ]
+   }
+  ],
+  "location": "Vendors in every town; Faction Quests and Greymane Commissions.",
+  "notes": [
+   "Stacks hold up to 50 of a consumable or material per slot (Power Up Gaming)."
+  ],
+  "variants": [
+   "Small Bag",
+   "Medium Bag",
+   "Large Bag"
+  ],
+  "since": "Base game",
+  "media": {
+   "portrait": {
+    "from": "https://static.beebom.com/wp-content/uploads/2026/03/unlockCrimson-Desert-inventory-slots.jpg?quality=75&strip=all",
+    "credit": "beebom",
+    "crop": [
+     0.5,
+     0.42,
+     0.85
+    ],
+    "src": "media/qol/bag-upgrades/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "from": "https://www.method.gg/images/uploads/guides/2003059-expand-inventory.jpg",
+     "credit": "method",
+     "kind": "menu",
+     "caption": "Quest reward — a Medium Bag",
+     "src": "media/qol/bag-upgrades/menu-1.webp",
+     "w": 900,
+     "h": 525
+    },
+    {
+     "from": "https://static.beebom.com/wp-content/uploads/2026/03/unlockCrimson-Desert-inventory-slots.jpg?quality=75&strip=all",
+     "credit": "beebom",
+     "kind": "menu",
+     "caption": "Inventory — locked slots waiting for bags",
+     "src": "media/qol/bag-upgrades/menu-2.webp",
+     "w": 1200,
+     "h": 675
+    }
+   ],
+   "gallery": [],
+   "hero": {
+    "from": "https://static.beebom.com/wp-content/uploads/2026/03/equipment-shop.jpg?quality=75&strip=all",
+    "credit": "beebom",
+    "focus": "60% 45%",
+    "src": "media/qol/bag-upgrades/hero.webp",
+    "w": 1920,
+    "h": 1080
+   }
+  },
+  "sources": [
+   {
+    "by": "powerpyx",
+    "url": "https://www.powerpyx.com/crimson-desert-how-to-increase-inventory-size/",
+    "title": "How to Increase Inventory Size"
+   },
+   {
+    "by": "beebom",
+    "url": "https://beebom.com/how-to-increase-inventory-space-in-crimson-desert",
+    "title": "How to Increase Inventory Space"
+   },
+   {
+    "by": "method",
+    "url": "https://www.method.gg/crimson-desert/how-to-expand-inventory-in-crimson-desert-get-more-slots-fast",
+    "title": "How to Expand Inventory: Get More Slots Fast"
+   },
+   {
+    "by": "powerupgaming",
+    "url": "https://powerupgaming.co.uk/?p=92439",
+    "title": "Expanded Storage Solutions Guide"
+   },
+   {
+    "by": "epicgames",
+    "url": "https://store.epicgames.com/news/crimson-desert-guide-greymane-camp-management-recruits",
+    "title": "Greymane camp management and recruits"
+   },
+   {
+    "by": "epicgames",
+    "url": "https://store.epicgames.com/news/crimson-desert-biggest-updates-improvements-since-release",
+    "title": "Biggest updates and improvements since release"
+   }
+  ],
+  "remedy": {
+   "fixes": "A 50-slot bag that fills before the first town.",
+   "gain": "Permanent slots from every bag you take.",
+   "figures": [
+    {
+     "label": "Starting slots",
+     "value": "50",
+     "basis": "guide",
+     "by": "beebom"
+    },
+    {
+     "label": "Small / Medium / Large",
+     "value": "+1 / +3 / +5",
+     "basis": "guide",
+     "by": "powerpyx"
+    },
+    {
+     "label": "Greymane Commissions",
+     "value": "27 → +81",
+     "basis": "guide",
+     "by": "epicgames"
+    },
+    {
+     "label": "Campaign bags",
+     "value": "up to +10",
+     "basis": "guide",
+     "by": "epicgames"
+    }
+   ],
+   "pairs": [
+    "extra-large-bag",
+    "pets"
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "private-storage",
+  "name": "Private Storage",
+  "leaf": "inventory",
+  "cls": "builtin",
+  "kind": "Storage chest",
+  "region": "Hernand",
+  "area": "Kliff's tent, Greymane Camp",
+  "trait": "Up to 1,000 slots, growing with the camp",
+  "summary": "Patch 1.00.03 added a private storage chest, first in the temporary Hernand lodgings and then at the Greymane Camp; 1.01 moved the camp's chest into Kliff's tent. Since 1.02 it grows with camp expansion, from 240 slots to 1,000.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "A thousand slots for everything the bag cannot hold."
+   },
+   "reach": {
+    "tier": 1,
+    "basis": "Every trip back to camp."
+   },
+   "unlock": {
+    "tier": 1,
+    "basis": "In Kliff's tent from the first camp; capacity rises with expansion."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Open the storage chest in Kliff's tent at the Greymane Camp.",
+     "Expand the camp to raise its capacity; the full camp holds 1,000."
+    ]
+   }
+  ],
+  "location": "Kliff's tent at the Greymane Camp.",
+  "notes": [
+   "Carl's Supply Chest is separate: it collects mission loot and items you dropped."
+  ],
+  "variants": [],
+  "since": "Patch 1.00.03 · 1,000 slots in 1.02",
+  "media": {
+   "portrait": {
+    "from": "https://gdm-universal-media.b-cdn.net/gfinityesports/d478e942-crimsondesertcamp.webp?width=1600",
+    "credit": "gfinity",
+    "crop": [
+     0.5,
+     0.5,
+     0.8
+    ],
+    "src": "media/qol/private-storage/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "from": "https://keengamer.com/wp-content/uploads/2026/03/Crimson-Desert-Greymane-Camp-Guide-All-Buildings-Upgrades-and-Camp-Management-Carl-780x441.png",
+     "credit": "keengamer",
+     "kind": "overworld",
+     "caption": "On site — Carl and the Supply Chest",
+     "src": "media/qol/private-storage/overworld-1.webp",
+     "w": 780,
+     "h": 441
+    }
+   ],
+   "gallery": [],
+   "hero": {
+    "from": "https://gdm-universal-media.b-cdn.net/gfinityesports/d478e942-crimsondesertcamp.webp?width=1600",
+    "credit": "gfinity",
+    "focus": "50% 45%",
+    "src": "media/qol/private-storage/hero.webp",
+    "w": 1200,
+    "h": 628
+   }
+  },
+  "sources": [
+   {
+    "by": "gamingbolt",
+    "url": "https://gamingbolt.com/crimson-desert-patch-adds-storage-chests-nerfs-several-bosses-and-enemies-and-much-more",
+    "title": "Patch adds storage chests and more Abyss Nexuses"
+   },
+   {
+    "by": "pcgamer",
+    "url": "https://www.pcgamer.com/games/rpg/the-latest-crimson-desert-patch-adds-five-new-mounts-and-makes-it-so-you-only-get-in-trouble-for-stealing-if-you-get-caught",
+    "title": "Patch 1.01: the storage chest moves to Kliff's tent"
+   },
+   {
+    "by": "comicbook",
+    "url": "https://comicbook.com/gaming/news/crimson-desert-game-patch-notes-update",
+    "title": "Update 1.02 patch notes"
+   },
+   {
+    "by": "epicgames",
+    "url": "https://store.epicgames.com/news/crimson-desert-biggest-updates-improvements-since-release",
+    "title": "Biggest updates and improvements since release"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-greymane-camp-guide-all-buildings-upgrades-and-camp-management",
+    "title": "Greymane Camp Guide"
+   }
+  ],
+  "remedy": {
+   "fixes": "Selling what you meant to keep because the bag was full.",
+   "gain": "A thousand-slot vault in your tent.",
+   "figures": [
+    {
+     "label": "Capacity",
+     "value": "240 → 1,000",
+     "basis": "patch",
+     "by": "comicbook"
+    }
+   ],
+   "patches": [
+    {
+     "v": "1.00.03",
+     "note": "Private storage added",
+     "by": "gamingbolt"
+    },
+    {
+     "v": "1.01.00",
+     "note": "Moved into Kliff's tent",
+     "by": "pcgamer"
+    },
+    {
+     "v": "1.02.00",
+     "note": "Grows with camp expansion to 1,000",
+     "by": "comicbook"
+    }
+   ],
+   "pairs": [
+    "camp-expansion",
+    "sturdy-gatherables-chest"
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "pets",
+  "name": "Pets",
+  "leaf": "inventory",
+  "cls": "unlock",
+  "kind": "Companion · auto-loot",
+  "region": "All of Pywel",
+  "area": "Stray dogs, cats and birds",
+  "trait": "Loots the fallen so you do not have to",
+  "summary": "Raise a stray animal's Trust to 100 and it becomes a pet. A summoned pet loots fallen enemies for you, with no filter, so it takes everything. You keep up to 30 and summon one at a time. Patches added birds, five new cats and the Abyss Heuklang.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "Loot gathers itself during and after every fight."
+   },
+   "reach": {
+    "tier": 1,
+    "basis": "Every fight, everywhere."
+   },
+   "unlock": {
+    "tier": 1,
+    "basis": "Stray dogs and cats from the first town: pet and feed to 100 Trust."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Pet a stray dog or cat (+5 Trust, five times a day) and feed it meat or fish (three times a day).",
+     "At 100 Trust, choose Take In.",
+     "Summon it from Inventory → Pets. If it goes missing, unsummon and summon it again."
+    ]
+   }
+  ],
+  "location": "Strays in towns and camps; birds at a placed bird feeder.",
+  "notes": [
+   "Pets do not fight.",
+   "Pet armour sells at shops (PC Gamer)."
+  ],
+  "variants": [
+   "Dogs",
+   "Cats",
+   "Birds",
+   "Abyss Heuklang"
+  ],
+  "since": "Base game · more pets by patch",
+  "media": {
+   "portrait": {
+    "from": "https://cdn.mos.cms.futurecdn.net/mWSJygEEnywwwi9HRnZ7KW-1920-80.jpg",
+    "credit": "pcgamer",
+    "crop": [
+     0.37,
+     0.55,
+     0.55
+    ],
+    "src": "media/qol/pets/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "from": "https://cdn.mos.cms.futurecdn.net/Vvpnr2ek4yPtAaJ7jBuo5D-1200-80.jpg",
+     "credit": "pcgamer",
+     "kind": "overworld",
+     "caption": "On site — Take In at 100 Trust",
+     "src": "media/qol/pets/overworld-1.webp",
+     "w": 1200,
+     "h": 675
+    },
+    {
+     "from": "https://cdn.mos.cms.futurecdn.net/3d6oFjDaZrb9uaTyk9n6tC-1200-80.jpg",
+     "credit": "pcgamer",
+     "kind": "menu",
+     "caption": "Inventory → Pets — summon one at a time",
+     "src": "media/qol/pets/menu-2.webp",
+     "w": 1200,
+     "h": 675
+    }
+   ],
+   "gallery": [
+    {
+     "from": "https://cdn.mos.cms.futurecdn.net/Fjsww9hkij89CM9iEqwZCC-1200-80.jpg",
+     "credit": "pcgamer",
+     "kind": "variant",
+     "caption": "A cat on Kliff's shoulder",
+     "src": "media/qol/pets/gallery-1.webp",
+     "w": 1200,
+     "h": 675
+    },
+    {
+     "from": "https://cdn.mos.cms.futurecdn.net/S2SfvgRqrTDSVZGmwXkzGC-1920-80.jpg",
+     "credit": "pcgamer",
+     "kind": "variant",
+     "caption": "A bird on Kliff's arm",
+     "src": "media/qol/pets/gallery-2.webp",
+     "w": 1280,
+     "h": 720
+    }
+   ],
+   "hero": {
+    "from": "https://cdn.mos.cms.futurecdn.net/mWSJygEEnywwwi9HRnZ7KW-1920-80.jpg",
+    "credit": "pcgamer",
+    "focus": "45% 50%",
+    "src": "media/qol/pets/hero.webp",
+    "w": 1920,
+    "h": 1080
+   }
+  },
+  "sources": [
+   {
+    "by": "pcgamer",
+    "url": "https://www.pcgamer.com/games/action/crimson-desert-pets-how-to-get",
+    "title": "How to get pets"
+   },
+   {
+    "by": "gfinity",
+    "url": "https://www.gfinityesports.com/article/how-to-get-and-use-pets-in-crimson-desert",
+    "title": "How to Get and Use Pets"
+   },
+   {
+    "by": "destructoid",
+    "url": "https://www.destructoid.com/all-pets-in-crimson-desert-and-how-to-get-them/",
+    "title": "All pets and how to get them"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/587248",
+    "title": "How to Unlock and Get Pets"
+   },
+   {
+    "by": "epicgames",
+    "url": "https://store.epicgames.com/news/crimson-desert-biggest-updates-improvements-since-release",
+    "title": "Biggest updates and improvements since release"
+   }
+  ],
+  "remedy": {
+   "fixes": "Walking body to body after every fight.",
+   "gain": "A companion that loots for you.",
+   "figures": [
+    {
+     "label": "Trust to adopt",
+     "value": "100",
+     "basis": "guide",
+     "by": "pcgamer"
+    },
+    {
+     "label": "Pets kept / summoned",
+     "value": "30 / 1",
+     "basis": "guide",
+     "by": "destructoid"
+    }
+   ],
+   "watch": [
+    "No loot filter: a pet fills your bag with everything it finds. Expand the bag first."
+   ],
+   "pairs": [
+    "bag-upgrades"
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "extra-large-bag",
+  "name": "Extra Large Bag",
+  "leaf": "inventory",
+  "cls": "unlock",
+  "kind": "Respawning bag",
+  "region": "Hernand",
+  "area": "South-east of the Hills of No Return",
+  "trait": "+10 slots that come back every seven in-game days",
+  "summary": "An Extra Large Bag lies beside an abandoned wagon on a road in eastern Hernand and adds ten inventory slots when you take it. It respawns every seven in-game days, which makes a weekly stop the fastest route to the 240-slot cap.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "+10 slots a visit, repeatable to the 240 cap (Wccftech)."
+   },
+   "reach": {
+    "tier": 1,
+    "basis": "Every session after: the slots are permanent."
+   },
+   "unlock": {
+    "tier": 2,
+    "basis": "A ride into eastern Hernand; no quest or level is listed."
+   }
+  },
+  "tags": [
+   "base"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Ride to the eastern edge of Hernand, south-east of the Hills of No Return; Wccftech starts at Saddlewind Ranch and takes the main road south.",
+     "Gamer Guides: follow the road north-east along the Anvil Hill cliffs, river on your left, to a switchback.",
+     "Find the lone abandoned wagon west of the road; the bag lies by its larger wheel.",
+     "Come back every seven in-game days. Resting at a bed or bonfire skips up to 12 hours at a time."
+    ]
+   }
+  ],
+  "location": "Abandoned wagon on the road south-east of the Hills of No Return, eastern Hernand.",
+  "notes": [],
+  "variants": [],
+  "since": "Base game",
+  "media": {
+   "portrait": {
+    "from": "https://cdn.wccftech.com/wp-content/uploads/2026/03/Crimson-Desert-Extra-Large-Bag-scaled.jpg",
+    "credit": "wccftech",
+    "crop": [
+     0.62,
+     0.42,
+     0.62
+    ],
+    "src": "media/qol/extra-large-bag/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "from": "https://cdn.wccftech.com/wp-content/uploads/2026/03/Crimson-Desert-Extra-Large-Bag-Location-1-scaled.jpg",
+     "credit": "wccftech",
+     "kind": "map",
+     "caption": "World map — south-east of the Hills of No Return",
+     "src": "media/qol/extra-large-bag/map-1.webp",
+     "w": 1600,
+     "h": 900
+    },
+    {
+     "from": "https://www.gamerguides.com/images/markup-img-half/17/390/crimson_desert_extra_large_bag_find-17f1eb35.jpg.jpeg",
+     "credit": "gamerguides",
+     "kind": "overworld",
+     "caption": "On site — the abandoned wagon by the road",
+     "src": "media/qol/extra-large-bag/overworld-2.webp",
+     "w": 555,
+     "h": 312
+    }
+   ],
+   "gallery": [],
+   "hero": {
+    "from": "https://cdn.wccftech.com/wp-content/uploads/2026/03/Crimson-Desert-Extra-Large-Bag-scaled.jpg",
+    "credit": "wccftech",
+    "focus": "60% 40%",
+    "src": "media/qol/extra-large-bag/hero.webp",
+    "w": 1920,
+    "h": 1080
+   }
+  },
+  "sources": [
+   {
+    "by": "wccftech",
+    "url": "https://wccftech.com/how-to/crimson-desert-how-to-max-inventory-slots-fast-secret-respawning-10-bag-location/",
+    "title": "How to Max Inventory Slots Fast (Respawning +10 Bag)"
+   },
+   {
+    "by": "gamerguides",
+    "url": "https://www.gamerguides.com/crimson-desert/guide/getting-started/tips-and-tricks/extra-large-bag-location",
+    "title": "Extra Large Bag Location"
+   }
+  ],
+  "remedy": {
+   "fixes": "Quest-by-quest slot growth that stalls once the quests run out.",
+   "gain": "Ten more slots every in-game week, up to the cap.",
+   "figures": [
+    {
+     "label": "Slots per bag",
+     "value": "+10",
+     "basis": "guide",
+     "by": "wccftech"
+    },
+    {
+     "label": "Respawn",
+     "value": "7 in-game days",
+     "basis": "guide",
+     "by": "wccftech"
+    },
+    {
+     "label": "Inventory cap",
+     "value": "240",
+     "basis": "guide",
+     "by": "wccftech"
+    }
+   ],
+   "pairs": [
+    "bag-upgrades",
+    "time-skip"
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "kuku-cooler",
+  "name": "Kuku Cooler",
+  "leaf": "inventory",
+  "cls": "unlock",
+  "kind": "House chest · food",
+  "region": "Hernand",
+  "area": "Kilnden Workshop",
+  "trait": "Food storage that cooking reads from",
+  "summary": "A food chest that cooking draws from: raw ingredients stay in the cooler while you cook. The quest version holds 40; the Enhanced Kuku Cooler holds 330, and stacked coolers reach 1,000. Cooked meals still go in your main inventory.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "Cook without carrying ingredients; up to 1,000 slots stacked."
+   },
+   "reach": {
+    "tier": 2,
+    "basis": "Every meal you cook at home."
+   },
+   "unlock": {
+    "tier": 2,
+    "basis": "A Hernand Request after Chapter IV, then a craft with Grimnir."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "requires": [
+   "Chapter IV's Mysterious Pot questline"
+  ],
+  "routes": [
+   {
+    "label": "Kuku Cooler",
+    "steps": [
+     "Take A Special Blueprint from Hernand Requests (Invention of the Workshop).",
+     "The Kilnden Workshop artisan gives you a Kuku Pot and the blueprint.",
+     "Craft it with Grimnir: the Kuku Pot, 5 Iron Ore, 3 Copper Ore and 1 Azurite."
+    ]
+   },
+   {
+    "label": "Enhanced Kuku Cooler",
+    "steps": [
+     "Craft from a Kuku Cooler, 3 Brimstone, 3 Mercury, 3 Rubber and 2 Electrical Components.",
+     "Mercury needs Delesyia research that opens after Chapter XI."
+    ]
+   }
+  ],
+  "location": "Kilnden Workshop, Hernand.",
+  "notes": [
+   "Holds ingredients, provisions, elixirs and horse feed."
+  ],
+  "variants": [
+   "Enhanced Kuku Cooler"
+  ],
+  "since": "Patch 1.04",
+  "media": {
+   "portrait": {
+    "from": "https://keengamer.com/wp-content/uploads/2026/04/How-to-Unlock-All-Storage-Spaces-in-Crimson-Desert-Kuku-Cooler-780x434.png",
+    "credit": "keengamer",
+    "crop": [
+     0.47,
+     0.7,
+     0.6
+    ],
+    "src": "media/qol/kuku-cooler/portrait.webp",
+    "w": 260,
+    "h": 260
+   },
+   "captures": [
+    {
+     "from": "https://keengamer.com/wp-content/uploads/2026/04/How-to-Unlock-All-Storage-Spaces-in-Crimson-Desert-Kuku-Cooler-780x434.png",
+     "credit": "keengamer",
+     "kind": "menu",
+     "caption": "Kuku Cooler — ingredients beside the inventory",
+     "src": "media/qol/kuku-cooler/menu-1.webp",
+     "w": 780,
+     "h": 434
+    },
+    {
+     "from": "https://keengamer.com/wp-content/uploads/2026/04/How-to-Unlock-All-Storage-Spaces-in-Crimson-Desert-A-Special-Blueprint-Quest-780x437.png",
+     "credit": "keengamer",
+     "kind": "menu",
+     "caption": "Journal — A Special Blueprint",
+     "src": "media/qol/kuku-cooler/menu-2.webp",
+     "w": 780,
+     "h": 437
+    },
+    {
+     "from": "https://keengamer.com/wp-content/uploads/2026/04/How-to-Unlock-All-Storage-Spaces-in-Crimson-Desert-Kuku-Cooler-Blueprint-780x438.png",
+     "credit": "keengamer",
+     "kind": "menu",
+     "caption": "The Kuku Cooler blueprint",
+     "src": "media/qol/kuku-cooler/menu-3.webp",
+     "w": 780,
+     "h": 438
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "keengamer",
+    "url": "https://keengamer.com/articles/guides/how-to-unlock-all-storage-spaces-in-crimson-desert",
+    "title": "How to Unlock All Storage Spaces"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/items/kuku-cooler/",
+    "title": "Kuku Cooler"
+   },
+   {
+    "by": "gameshub",
+    "url": "https://www.gameshub.com/?p=2868170",
+    "title": "Patch notes add a major inventory shakeup"
+   },
+   {
+    "by": "epicgames",
+    "url": "https://store.epicgames.com/news/crimson-desert-biggest-updates-improvements-since-release",
+    "title": "Biggest updates and improvements since release"
+   }
+  ],
+  "remedy": {
+   "fixes": "Carrying a pantry to cook one meal.",
+   "gain": "Cook from the cooler; ingredients stay put.",
+   "figures": [
+    {
+     "label": "Cooler / Enhanced",
+     "value": "40 / 330",
+     "basis": "guide",
+     "by": "keengamer"
+    },
+    {
+     "label": "Stacked coolers",
+     "value": "up to 1,000",
+     "basis": "guide",
+     "by": "vulkk"
+    }
+   ],
+   "patches": [
+    {
+     "v": "1.04.00",
+     "note": "Added with the specialised storage",
+     "by": "vgc"
+    }
+   ],
+   "watch": [
+    "Cooked meals must stay in the main inventory to be eaten."
+   ],
+   "pairs": [
+    "sturdy-gatherables-chest"
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "house-storage",
+  "name": "Wardrobes and Collectibles",
+  "leaf": "inventory",
+  "cls": "unlock",
+  "kind": "House chests · outfits and keys",
+  "region": "Delesyia · Hernand",
+  "area": "Timberton furniture vendor; Timberham Sawmill",
+  "trait": "Outfits and quest items out of the bag",
+  "summary": "Two sorted chests for the house. A Wardrobe holds 100 outfits and armour pieces, shared by Kliff, Damiane and Oongka and wearable from the housing screen; ten make 1,000 slots. The Collectibles Chest holds 1,000 key items, quest items, blueprints and recipes.",
+  "tiers": {
+   "impact": {
+    "tier": 3,
+    "basis": "Clears outfits and key items out of the bag for good."
+   },
+   "reach": {
+    "tier": 2,
+    "basis": "Every session: the slots stay free."
+   },
+   "unlock": {
+    "tier": 2,
+    "basis": "A 15-Silver wardrobe in Delesyia; a Hernand Request for the chest."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "label": "Wardrobe",
+    "steps": [
+     "Buy a Large Dark or Large Bright Timberton Wardrobe for 15 Silver from the furniture vendor in Timberton, Delesyia.",
+     "100 Trust with that vendor (gift Copper Pouches) adds Wardrobes to the Greymane Camp shop.",
+     "Place up to ten in your house."
+    ]
+   },
+   {
+    "label": "Collectibles Chest",
+    "steps": [
+     "Take Early Encounter from Hernand Requests (A Friendly Encounter); House Roberts' quests may need to come first.",
+     "Speak with the servant at the Timberturner Wainwright; a noble at Timberham Sawmill gives you the chest."
+    ]
+   }
+  ],
+  "location": "Timberton, Delesyia (Wardrobe); Timberham Sawmill, Hernand (Collectibles Chest).",
+  "notes": [],
+  "variants": [
+   "Wardrobe",
+   "Collectibles Chest"
+  ],
+  "since": "Patch 1.04",
+  "media": {
+   "portrait": {
+    "from": "https://keengamer.com/wp-content/uploads/2026/04/How-to-Unlock-All-Storage-Spaces-in-Crimson-Desert-Wardrobe-in-Furniture-Shop-780x441.png",
+    "credit": "keengamer",
+    "crop": [
+     0.6,
+     0.62,
+     0.6
+    ],
+    "src": "media/qol/house-storage/portrait.webp",
+    "w": 264,
+    "h": 264
+   },
+   "captures": [
+    {
+     "from": "https://keengamer.com/wp-content/uploads/2026/04/How-to-Unlock-All-Storage-Spaces-in-Crimson-Desert-Wardrobe-780x439.png",
+     "credit": "keengamer",
+     "kind": "menu",
+     "caption": "Wardrobe — outfits for all three",
+     "src": "media/qol/house-storage/menu-1.webp",
+     "w": 780,
+     "h": 439
+    },
+    {
+     "from": "https://keengamer.com/wp-content/uploads/2026/04/How-to-Unlock-All-Storage-Spaces-in-Crimson-Desert-Collectibles-Chest-780x436.png",
+     "credit": "keengamer",
+     "kind": "menu",
+     "caption": "Collectibles Chest",
+     "src": "media/qol/house-storage/menu-2.webp",
+     "w": 780,
+     "h": 436
+    },
+    {
+     "from": "https://keengamer.com/wp-content/uploads/2026/04/How-to-Unlock-All-Storage-Spaces-in-Crimson-Desert-Early-Encounters-Quest-780x444.png",
+     "credit": "keengamer",
+     "kind": "menu",
+     "caption": "Journal — Early Encounter",
+     "src": "media/qol/house-storage/menu-3.webp",
+     "w": 780,
+     "h": 444
+    }
+   ],
+   "gallery": [],
+   "hero": {
+    "from": "https://keengamer.com/wp-content/uploads/2026/04/How-to-Unlock-All-Storage-Spaces-in-Crimson-Desert-Wardrobe-in-Furniture-Shop-780x441.png",
+    "credit": "keengamer",
+    "focus": "60% 50%",
+    "src": "media/qol/house-storage/hero.webp",
+    "w": 780,
+    "h": 441
+   }
+  },
+  "sources": [
+   {
+    "by": "keengamer",
+    "url": "https://keengamer.com/articles/guides/how-to-unlock-all-storage-spaces-in-crimson-desert",
+    "title": "How to Unlock All Storage Spaces"
+   },
+   {
+    "by": "pcgamer",
+    "url": "https://www.pcgamer.com/games/action/the-latest-crimson-desert-patch-is-finally-the-reason-i-needed-to-turn-my-once-useless-house-into-a-cosy-haven/",
+    "title": "The latest patch turns the house into a haven"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/wardrobe",
+    "title": "Wardrobe"
+   },
+   {
+    "by": "epicgames",
+    "url": "https://store.epicgames.com/news/crimson-desert-biggest-updates-improvements-since-release",
+    "title": "Biggest updates and improvements since release"
+   }
+  ],
+  "remedy": {
+   "fixes": "Outfits, keys and recipes eating bag slots.",
+   "gain": "Sorted chests at home, wearable from the housing screen.",
+   "figures": [
+    {
+     "label": "Wardrobe",
+     "value": "100 each · 1,000 max",
+     "basis": "guide",
+     "by": "keengamer"
+    },
+    {
+     "label": "Collectibles Chest",
+     "value": "1,000",
+     "basis": "guide",
+     "by": "keengamer"
+    },
+    {
+     "label": "Wardrobe price",
+     "value": "15 Silver",
+     "basis": "guide",
+     "by": "keengamer"
+    }
+   ],
+   "patches": [
+    {
+     "v": "1.04.00",
+     "note": "Both added",
+     "by": "vgc"
+    }
+   ],
+   "pairs": [
+    "sturdy-gatherables-chest"
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "refinement-tokens",
+  "name": "Refinement Tokens",
+  "leaf": "gear",
+  "cls": "unlock",
+  "kind": "Upgrade currency",
+  "region": "Every region",
+  "area": "A region's main blacksmith",
+  "trait": "Refine to Stage 4 without materials",
+  "summary": "Patch 1.01 added Refinement Tokens. Each one refines a piece of equipment one stage without materials, up to Stage 4. Main and faction quests award them; spend them at a region's main blacksmith, such as Turnali in Hernand.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "Four free stages per item, no ore or timber."
+   },
+   "reach": {
+    "tier": 2,
+    "basis": "Every piece of gear you keep in the early and middle game."
+   },
+   "unlock": {
+    "tier": 1,
+    "basis": "Main and faction quests award them."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Earn tokens from main missions and faction quests.",
+     "At a region's main blacksmith, open Refinement and choose the Refinement Token tab.",
+     "Each token raises an item one stage; the tab disappears at Stage 4."
+    ]
+   }
+  ],
+  "location": "Any region's main blacksmith; Turnali in Hernand.",
+  "notes": [
+   "Tokens cannot be sold (Nerds Chalk)."
+  ],
+  "variants": [
+   "Hernand Refinement Token"
+  ],
+  "since": "Patch 1.01",
+  "media": {
+   "portrait": {
+    "from": "https://cdn.mos.cms.futurecdn.net/y5qkZxursTTQqBZYJ9rd5d-1920-80.jpg",
+    "credit": "pcgamer",
+    "crop": [
+     0.33,
+     0.42,
+     0.8
+    ],
+    "src": "media/qol/refinement-tokens/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "from": "https://cdn.mos.cms.futurecdn.net/3JNvuhHdqhfb5ofWPHdN6d-1200-80.jpg",
+     "credit": "pcgamer",
+     "kind": "menu",
+     "caption": "Refinement — the Token tab",
+     "src": "media/qol/refinement-tokens/menu-1.webp",
+     "w": 1200,
+     "h": 675
+    }
+   ],
+   "gallery": [],
+   "hero": {
+    "from": "https://cdn.mos.cms.futurecdn.net/y5qkZxursTTQqBZYJ9rd5d-1920-80.jpg",
+    "credit": "pcgamer",
+    "focus": "40% 40%",
+    "src": "media/qol/refinement-tokens/hero.webp",
+    "w": 1920,
+    "h": 1080
+   }
+  },
+  "sources": [
+   {
+    "by": "pcgamer",
+    "url": "https://www.pcgamer.com/games/action/crimson-desert-hernand-refinement-tokens",
+    "title": "How to use Hernand Refinement Tokens"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/refinement-tokens",
+    "title": "Refinement Tokens"
+   },
+   {
+    "by": "nerdschalk",
+    "url": "https://nerdschalk.com/crimson-desert-refinement-token-unlock-and-use-guide-refinement-system-for-weapons-and-gear-patch-1-01-00/",
+    "title": "Refinement Token Unlock and Use Guide"
+   },
+   {
+    "by": "epicgames",
+    "url": "https://store.epicgames.com/news/crimson-desert-biggest-updates-improvements-since-release",
+    "title": "Biggest updates and improvements since release"
+   }
+  ],
+  "remedy": {
+   "fixes": "Farming ore and timber for every early refinement.",
+   "gain": "Stages 1 to 4 for a token each.",
+   "figures": [
+    {
+     "label": "Cap",
+     "value": "Stage 4",
+     "basis": "guide",
+     "by": "pcgamer"
+    },
+    {
+     "label": "Stages per token",
+     "value": "1",
+     "basis": "guide",
+     "by": "thegameswiki"
+    }
+   ],
+   "patches": [
+    {
+     "v": "1.01.00",
+     "note": "Added",
+     "by": "pcgamer"
+    }
+   ],
+   "watch": [
+    "Spend them on gear you will keep."
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "movement-speed",
+  "name": "Movement Speed Gear",
+  "leaf": "gear",
+  "cls": "unlock",
+  "kind": "Gear stat · build",
+  "region": "Tariv · Demeniss",
+  "area": "Tailor's shops; Crowcaller",
+  "trait": "Faster on foot and in the air: +22% glide at 15 ranks",
+  "summary": "Movement Speed on gear speeds running and gliding: 15 ranks make a glide about 22% faster. Vulkk's build reaches it with Tariv Cloth Boots (Tariv's tailor, at 100 Trust) or Rabbit Cloth Boots (Demeniss Wildlife Park tailor), a Movement Speed shield, Ancient Earrings and Swift III Abyss Gears. Blackwing Leather Armor, from Crowcaller in Chapter 5, adds a rank early.",
+  "tiers": {
+   "impact": {
+    "tier": 3,
+    "basis": "About +22% glide speed at 15 ranks (The Games Wiki); running gains too."
+   },
+   "reach": {
+    "tier": 1,
+    "basis": "Every step and glide, everywhere."
+   },
+   "unlock": {
+    "tier": 3,
+    "basis": "Trust 100 with a tailor, several pieces and Abyss Gears."
+   }
+  },
+  "tags": [
+   "base"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Tariv Cloth Boots: reach 100 Trust with the Tailor's Shop in Tariv, then buy them.",
+     "Or Rabbit Cloth Boots from the tailor at Demeniss Wildlife Park.",
+     "Blackwing Leather Armor: defeat Crowcaller in Chapter 5.",
+     "Socket Swift III Abyss Gears into free slots.",
+     "Swap into the speed set before a long glide and back to combat gear on landing."
+    ]
+   }
+  ],
+  "location": "Tailor's Shop, Tariv; tailor, Demeniss Wildlife Park.",
+  "notes": [],
+  "variants": [
+   "Tariv Cloth Boots",
+   "Rabbit Cloth Boots",
+   "Blackwing Leather Armor",
+   "Ancient Earrings"
+  ],
+  "since": "Base game",
+  "media": {
+   "portrait": {
+    "from": "https://static0.fextralifeimages.com/file/crimsondesertgame/6/63/Tariv_cloth_boots_boots_armor_crimson_desert_wiki_guide.png",
+    "credit": "fextralife",
+    "matte": true,
+    "src": "media/qol/movement-speed/portrait.webp",
+    "w": 150,
+    "h": 150
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/2026/06/18/how-to-min-max-kliffs-equipment-crimson-desert-build-guide/",
+    "title": "How to Min-Max Kliff's Equipment"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/flight-skill-guide",
+    "title": "Flight Skill Guide"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/587193",
+    "title": "Blackwing Leather Armor"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Tariv+Cloth+Boots",
+    "title": "Tariv Cloth Boots"
+   }
+  ],
+  "remedy": {
+   "fixes": "Slow jogs and short glides between points.",
+   "gain": "More ground per stride and per glide.",
+   "figures": [
+    {
+     "label": "Glide speed at 15 ranks",
+     "value": "≈ +22%",
+     "basis": "guide",
+     "by": "thegameswiki"
+    },
+    {
+     "label": "Tariv Cloth Boots",
+     "value": "Lv 2 → 3 · 2 sockets",
+     "basis": "guide",
+     "by": "vulkk"
+    },
+    {
+     "label": "Blackwing Leather Armor",
+     "value": "+1 · 3 sockets",
+     "basis": "guide",
+     "by": "game8"
+    }
+   ],
+   "pairs": [
+    "flight"
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "cold-proofing",
+  "name": "Cold Immunity",
+  "leaf": "gear",
+  "cls": "unlock",
+  "kind": "Gear threshold · Ice Resistance 5",
+  "region": "Pailune · Hernand",
+  "area": "Sanctum of Expiation; provisioners",
+  "trait": "Ice Resistance 5 ends the cold's stamina penalty",
+  "summary": "The cold halves Stamina regeneration in Pailune and the frozen mountains. Ice Resistance Level 5 makes you immune to that, and higher levels resist freezing attacks. One Level 5 cloak is enough: the Frostcursed Plate Cloak sits in a chest at the Sanctum of Expiation, and Bear Hide and Wolf cloaks sell at provisioners. Kuku Ice-Resistant Armor, at Level 10, adds complete freeze immunity.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "Removes a −50% Stamina regeneration penalty (Vulkk)."
+   },
+   "reach": {
+    "tier": 4,
+    "basis": "Cold regions only: Pailune, the Everfrost and the snowbound peaks."
+   },
+   "unlock": {
+    "tier": 2,
+    "basis": "One chest in the Sanctum of Expiation, or a shop cloak."
+   }
+  },
+  "tags": [
+   "base"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "label": "Frostcursed Plate Cloak (Lv 5)",
+    "steps": [
+     "Go to the Sanctum of Expiation, a short climb west of the Chattering Rocks.",
+     "Burn the thorny roots with Blinding Flash, crawl down the passage and turn right to the chest."
+    ]
+   },
+   {
+    "label": "Shop cloaks (Lv 5)",
+    "steps": [
+     "Bear Hide Cloak: Provisioner's Shop, Odeck Tribe (Tobit).",
+     "Wolf Cloak: Provisioner's Shop, Kharonso (Norden)."
+    ]
+   },
+   {
+    "label": "Kuku Ice-Resistant Armor (Lv 10)",
+    "steps": [
+     "Cleanse the Sanctum of Devotion to receive Blueprint II, then craft the armor."
+    ]
+   }
+  ],
+  "location": "Sanctum of Expiation, west of the Chattering Rocks; provisioners in Odeck and Kharonso.",
+  "notes": [
+   "The Frostcursed Plate Armor chestpiece (Lv 7) is in Mistshard Cave, behind the waterfall near the Spire of Frost.",
+   "A Level 3 or 7 cloak reaches the next threshold with one Frostward Abyss Gear (Vulkk)."
+  ],
+  "variants": [
+   "Frostcursed Plate",
+   "Kuku Ice-Resistant Armor"
+  ],
+  "since": "Base game",
+  "media": {
+   "portrait": {
+    "from": "https://static0.fextralifeimages.com/file/crimsondesertgame/2/28/Frostcursed_plate_cloak_armor_crimson_desert_wiki_guide.png",
+    "credit": "fextralife",
+    "matte": true,
+    "src": "media/qol/cold-proofing/portrait.webp",
+    "w": 256,
+    "h": 256
+   },
+   "captures": [
+    {
+     "from": "https://cdn.mos.cms.futurecdn.net/d4dVfvme4mfbcbUnr3GBDe-1200-80.jpg",
+     "credit": "pcgamer",
+     "kind": "map",
+     "caption": "World map — the Sanctum of Expiation",
+     "src": "media/qol/cold-proofing/map-1.webp",
+     "w": 1200,
+     "h": 675
+    },
+    {
+     "from": "https://cdn.mos.cms.futurecdn.net/8cwDJwTj5GZeEtPp8vbECe-1200-80.jpg",
+     "credit": "pcgamer",
+     "kind": "overworld",
+     "caption": "On site — burn the roots with Blinding Flash",
+     "src": "media/qol/cold-proofing/overworld-2.webp",
+     "w": 1200,
+     "h": 675
+    },
+    {
+     "from": "https://img.consolepulse.com/_v/960/uploads/franchises/crimson-desert/tips/UI.webp",
+     "credit": "consolepulse",
+     "kind": "menu",
+     "caption": "HUD — the temperature gauge by the mini-map",
+     "src": "media/qol/cold-proofing/menu-3.webp",
+     "w": 960,
+     "h": 672
+    }
+   ],
+   "gallery": [
+    {
+     "from": "https://img.consolepulse.com/_v/960/uploads/franchises/crimson-desert/gear/armor/kuku-elemental-armor/kuku-ice-armor-showcase.webp",
+     "credit": "consolepulse",
+     "kind": "variant",
+     "caption": "Kuku Ice-Resistant Armor",
+     "src": "media/qol/cold-proofing/gallery-1.webp",
+     "w": 960,
+     "h": 630
+    }
+   ],
+   "hero": {
+    "from": "https://img.consolepulse.com/_v/960/uploads/franchises/crimson-desert/puzzles/sanctum-puzzles/Sanctum-of-Expiation/Frostcursed-Plate-Set.webp",
+    "credit": "consolepulse",
+    "focus": "55% 40%",
+    "src": "media/qol/cold-proofing/hero.webp",
+    "w": 960,
+    "h": 624
+   }
+  },
+  "sources": [
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/2026/06/17/how-to-maximize-stats-in-crimson-desert/",
+    "title": "How to Maximize Stats"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/2026/06/18/how-to-min-max-kliffs-equipment-crimson-desert-build-guide/",
+    "title": "How to Min-Max Kliff's Equipment"
+   },
+   {
+    "by": "allthingshow",
+    "url": "https://allthings.how/every-ice-resistance-armor-in-crimson-desert-and-where-to-find-them/",
+    "title": "Every Ice Resistance Armor and where to find it"
+   },
+   {
+    "by": "pcgamer",
+    "url": "https://www.pcgamer.com/games/action/crimson-desert-frostcursed-armor-location/",
+    "title": "How to get the Frostcursed Armor"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-cold-heat-weather-survival-guide",
+    "title": "Cold, Heat, Weather and Survival Guide"
+   }
+  ],
+  "remedy": {
+   "fixes": "Stamina that crawls back in the snow, mid-climb and mid-glide.",
+   "gain": "Full Stamina regeneration in the cold.",
+   "figures": [
+    {
+     "label": "Cold penalty without it",
+     "value": "−50% Stamina regen",
+     "basis": "guide",
+     "by": "vulkk"
+    },
+    {
+     "label": "Immunity threshold",
+     "value": "Ice Resistance 5",
+     "basis": "guide",
+     "by": "vulkk"
+    },
+    {
+     "label": "Kuku Ice-Resistant Armor",
+     "value": "Lv 10 · freeze immune",
+     "basis": "guide",
+     "by": "allthingshow"
+    }
+   ],
+   "pairs": [
+    "heat-proofing",
+    "flight"
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "heat-proofing",
+  "name": "Heat Immunity",
+  "leaf": "gear",
+  "cls": "unlock",
+  "kind": "Gear threshold · Fire Resistance 5",
+  "region": "Hernand · the Crimson Desert",
+  "area": "Silent Falls Hideout; Kilnden Workshop",
+  "trait": "Fire Resistance 5 ends the desert's stamina penalty",
+  "summary": "The desert's heat cuts Stamina regeneration the way the cold does, and Fire Resistance Level 5 ends it. The Scorchflame Plate Cloak (Level 5) sits in a chest behind a trick wall at Silent Falls Hideout. The Kuku Flame-Resistant Armor (Level 10) is crafted at the Kilnden Workshop from a blueprint in the Sanctum of Deliverance. Worn together they give complete Fire immunity.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "Removes the heat's Stamina regeneration penalty; with the Kuku armor, Fire immunity (Vulkk)."
+   },
+   "reach": {
+    "tier": 4,
+    "basis": "Hot regions only, the Crimson Desert above all."
+   },
+   "unlock": {
+    "tier": 3,
+    "basis": "A hidden chest and a crafted armour from a sanctum blueprint."
+   }
+  },
+  "tags": [
+   "base"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "label": "Scorchflame Plate Cloak (Lv 5)",
+    "steps": [
+     "At Silent Falls Hideout, find the trick wall and loot the chest behind it."
+    ]
+   },
+   {
+    "label": "Kuku Flame-Resistant Armor (Lv 10)",
+    "steps": [
+     "Get the blueprint from the Sanctum of Deliverance.",
+     "Craft the armor at the Kilnden Workshop in Hernand."
+    ]
+   }
+  ],
+  "location": "Silent Falls Hideout (cloak); Kilnden Workshop, Hernand (armor).",
+  "notes": [
+   "A Level 3 or 7 cloak reaches the next threshold with one Flameward Abyss Gear (Vulkk)."
+  ],
+  "variants": [
+   "Scorchflame Plate",
+   "Kuku Flame-Resistant Armor"
+  ],
+  "since": "Base game",
+  "media": {
+   "portrait": {
+    "from": "https://img.consolepulse.com/_v/960/uploads/franchises/crimson-desert/gear/armor/kuku-elemental-armor/kuku-flame-armor-showcase.webp",
+    "credit": "consolepulse",
+    "crop": [
+     0.5,
+     0.36,
+     0.7
+    ],
+    "src": "media/qol/heat-proofing/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [],
+   "gallery": [
+    {
+     "from": "https://img.consolepulse.com/_v/960/uploads/franchises/crimson-desert/gear/library/armors/crimson-desert-scorchflame-plate-set-showcase.webp",
+     "credit": "consolepulse",
+     "kind": "variant",
+     "caption": "Scorchflame Plate set",
+     "src": "media/qol/heat-proofing/gallery-1.webp",
+     "w": 637,
+     "h": 1000
+    }
+   ],
+   "hero": {
+    "from": "https://img.consolepulse.com/_v/960/uploads/franchises/crimson-desert/gear/armor/kuku-elemental-armor/kuku-flame-armor-showcase.webp",
+    "credit": "consolepulse",
+    "focus": "50% 30%",
+    "src": "media/qol/heat-proofing/hero.webp",
+    "w": 960,
+    "h": 782
+   }
+  },
+  "sources": [
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/2026/06/18/how-to-min-max-kliffs-equipment-crimson-desert-build-guide/",
+    "title": "How to Min-Max Kliff's Equipment"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/2026/06/17/how-to-maximize-stats-in-crimson-desert/",
+    "title": "How to Maximize Stats"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-cold-heat-weather-survival-guide",
+    "title": "Cold, Heat, Weather and Survival Guide"
+   }
+  ],
+  "remedy": {
+   "fixes": "Stamina that drains under the desert sun.",
+   "gain": "Full Stamina regeneration in the heat; Fire immunity with both pieces.",
+   "figures": [
+    {
+     "label": "Immunity threshold",
+     "value": "Fire Resistance 5",
+     "basis": "guide",
+     "by": "vulkk"
+    },
+    {
+     "label": "Scorchflame Plate Cloak",
+     "value": "Lv 5",
+     "basis": "guide",
+     "by": "vulkk"
+    },
+    {
+     "label": "Kuku Flame-Resistant Armor",
+     "value": "Lv 10",
+     "basis": "guide",
+     "by": "vulkk"
+    }
+   ],
+   "pairs": [
+    "cold-proofing"
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "time-skip",
+  "name": "Resting",
+  "leaf": "camp",
+  "cls": "builtin",
+  "domains": [],
+  "base": "riches/time-skip",
+  "trait": "Skip up to 12 hours: every timer finishes sooner",
+  "summary": "Every timer in Pywel runs on the in-game clock, roughly one hour per two real minutes: dispatches, bank cycles, builds, bag respawns. Sleeping in a bed or tent, or waiting at a campfire, skips up to 12 hours at a time.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "Turns a wait of hours into a few seconds."
+   },
+   "reach": {
+    "tier": 2,
+    "basis": "Every timed system: dispatch, building, banking, respawns."
+   },
+   "unlock": {
+    "tier": 1,
+    "basis": "Any bed, tent or campfire."
+   }
+  },
+  "tags": [
+   "base"
+  ],
+  "sources": [
+   {
+    "by": "wccftech",
+    "url": "https://wccftech.com/how-to/crimson-desert-how-to-max-inventory-slots-fast-secret-respawning-10-bag-location/",
+    "title": "Resting skips up to 12 in-game hours"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/camp-expansion",
+    "title": "Camp Expansion: one in-game hour per two real minutes"
+   }
+  ],
+  "remedy": {
+   "fixes": "Waiting out timers in real time.",
+   "gain": "Half a day gone in one rest.",
+   "figures": [
+    {
+     "label": "Skip per rest",
+     "value": "up to 12 h",
+     "basis": "guide",
+     "by": "wccftech"
+    },
+    {
+     "label": "One in-game hour",
+     "value": "≈ 2 real min",
+     "basis": "guide",
+     "by": "thegameswiki"
+    }
+   ],
+   "watch": [
+    "Fatigue gates sleep: you can sleep again only once it builds back up."
+   ],
+   "pairs": [
+    "dispatch-repeat",
+    "extra-large-bag"
+   ]
+  }
+ },
+ {
+  "id": "dispatch-repeat",
+  "name": "Auto-Repeat Dispatch",
+  "leaf": "camp",
+  "cls": "builtin",
+  "kind": "Dispatch option",
+  "region": "Hernand",
+  "area": "Greymane Camp dispatch board",
+  "trait": "Resource missions that renew themselves",
+  "summary": "Since 1.04 the dispatch board has two buttons: send once, or repeat. Repeat missions renew on their own, so food, Camp Funds and material runs keep going without re-assigning the team. Missions that pay Abyss Artifacts or other rare items stay one-shot.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "No re-assigning teams after every run."
+   },
+   "reach": {
+    "tier": 2,
+    "basis": "Every resource mission you keep running."
+   },
+   "unlock": {
+    "tier": 2,
+    "basis": "The camp dispatch board, from Chapter 3."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "also": [
+   "riches/supply-dispatches",
+   "riches/estate-security"
+  ],
+  "requires": [
+   "Camp dispatch (Chapter 3)"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Open the dispatch board: Ross at camp, or the map's Missions tab.",
+     "Pick a resource mission and assign the team.",
+     "Choose the repeat button instead of the one-shot send."
+    ]
+   }
+  ],
+  "location": "Greymane Camp dispatch board (Ross), or the map's Missions tab.",
+  "notes": [],
+  "variants": [],
+  "since": "Patch 1.04",
+  "media": {
+   "portrait": {
+    "from": "https://keengamer.com/wp-content/uploads/2026/03/Crimson-Desert-Greymane-Camp-Guide-All-Buildings-Upgrades-and-Camp-Management-Ross-780x439.png",
+    "credit": "keengamer",
+    "crop": [
+     0.55,
+     0.42,
+     0.85
+    ],
+    "src": "media/qol/dispatch-repeat/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "from": "https://www.method.gg/images/uploads/guides/0804034-greymane-camp-guides-missions-1.jpg",
+     "credit": "method",
+     "kind": "menu",
+     "caption": "Mission Dispatch — team and rewards",
+     "src": "media/qol/dispatch-repeat/menu-1.webp",
+     "w": 900,
+     "h": 525
+    }
+   ],
+   "gallery": [],
+   "hero": {
+    "from": "https://keengamer.com/wp-content/uploads/2026/03/Crimson-Desert-Greymane-Camp-Guide-All-Buildings-Upgrades-and-Camp-Management-Ross-780x439.png",
+    "credit": "keengamer",
+    "focus": "55% 40%",
+    "src": "media/qol/dispatch-repeat/hero.webp",
+    "w": 780,
+    "h": 439
+   }
+  },
+  "sources": [
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/auto-repeat-dispatch",
+    "title": "Auto-Repeat Dispatch"
+   },
+   {
+    "by": "nerdschalk",
+    "url": "https://nerdschalk.com/how-to-repeat-dispatch-missions-in-crimson-desert-unlimited-camp-funds-and-resource-farming/",
+    "title": "How to Repeat Dispatch Missions"
+   },
+   {
+    "by": "gfinity",
+    "url": "https://www.gfinityesports.com/article/how-to-dispatch-missions-in-crimson-desert-and-grow-greymane-camp",
+    "title": "How to Dispatch Missions"
+   }
+  ],
+  "remedy": {
+   "fixes": "Re-sending the same team every time a run ends.",
+   "gain": "Missions that renew until you stop them.",
+   "figures": [
+    {
+     "label": "Eligible",
+     "value": "Food · Camp Funds · materials",
+     "basis": "guide",
+     "by": "thegameswiki"
+    },
+    {
+     "label": "Stay one-shot",
+     "value": "Abyss Artifacts · rare items",
+     "basis": "guide",
+     "by": "thegameswiki"
+    }
+   ],
+   "patches": [
+    {
+     "v": "1.04.00",
+     "note": "Separate send-once and repeat buttons",
+     "by": "thegameswiki"
+    }
+   ],
+   "watch": [
+    "Sleeping just before a repeat finishes can restart it before you collect; cancel the restarted run to recover its provisions."
+   ],
+   "pairs": [
+    "time-skip",
+    "sturdy-gatherables-chest",
+    "camp-expansion"
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "camp-expansion",
+  "name": "Camp Expansion",
+  "leaf": "camp",
+  "cls": "unlock",
+  "kind": "Base upgrades",
+  "region": "Hernand",
+  "area": "Howling Hill",
+  "trait": "Each tier opens storage, vendors and dispatch slots",
+  "summary": "Howling Hill grows through expansion missions you dispatch from the map. Each tier adds facilities, mission slots and recruits, and private storage grows with it. The first costs 2 recruits, 100 food and 250 silver and finishes in 18 in-game hours; the fourth takes 10 recruits and 100,000. Since 1.04 the camp level also unlocks bigger house layouts.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "More storage, vendors, dispatch slots and recruits at every tier."
+   },
+   "reach": {
+    "tier": 2,
+    "basis": "Every trip to camp and every dispatch."
+   },
+   "unlock": {
+    "tier": 3,
+    "basis": "Chapter 3 onward; costs climb steeply by the fourth tier."
+   }
+  },
+  "tags": [
+   "base"
+  ],
+  "requires": [
+   "Chapter 3: Howling Hill"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Advance the Grounds of the Sunrise faction quests; Marius opens new recruitment after each tier.",
+     "Open the map, select Howling Hill and start the expansion from its Missions menu.",
+     "Let the timer run (18 in-game hours for the first) or rest to skip it."
+    ]
+   }
+  ],
+  "location": "Howling Hill, Hernand.",
+  "notes": [
+   "House layouts since 1.04: Compact, Standard, Spacious, and Spacious Pailune after the move.",
+   "A fully expanded Howling Hill is required to move to Pailune."
+  ],
+  "variants": [],
+  "since": "Base game",
+  "media": {
+   "portrait": {
+    "from": "https://gdm-universal-media.b-cdn.net/gfinityesports/851a22cb-crimsondesert.webp?width=1600",
+    "credit": "gfinity",
+    "crop": [
+     0.42,
+     0.5,
+     0.9
+    ],
+    "src": "media/qol/camp-expansion/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "from": "https://keengamer.com/wp-content/uploads/2026/03/Crimson-Desert-Greymane-Camp-Guide-All-Buildings-Upgrades-and-Camp-Management-Camp-Expansion-Quest-Chains-780x439.png",
+     "credit": "keengamer",
+     "kind": "menu",
+     "caption": "Journal — Expanding the Camp",
+     "src": "media/qol/camp-expansion/menu-1.webp",
+     "w": 780,
+     "h": 439
+    },
+    {
+     "from": "https://www.method.gg/images/uploads/guides/2003341-bustling-hill-map-mission.jpg",
+     "credit": "method",
+     "kind": "menu",
+     "caption": "Dispatch — an expansion in progress",
+     "src": "media/qol/camp-expansion/menu-2.webp",
+     "w": 900,
+     "h": 525
+    },
+    {
+     "from": "https://www.method.gg/images/uploads/guides/0804167-greymane-camp-guides-overview-1.jpg",
+     "credit": "method",
+     "kind": "overworld",
+     "caption": "On site — Howling Hill",
+     "src": "media/qol/camp-expansion/overworld-3.webp",
+     "w": 900,
+     "h": 525
+    }
+   ],
+   "gallery": [],
+   "hero": {
+    "from": "https://gdm-universal-media.b-cdn.net/gfinityesports/851a22cb-crimsondesert.webp?width=1600",
+    "credit": "gfinity",
+    "focus": "45% 45%",
+    "src": "media/qol/camp-expansion/hero.webp",
+    "w": 1600,
+    "h": 900
+   }
+  },
+  "sources": [
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-greymane-camp-guide-all-buildings-upgrades-and-camp-management",
+    "title": "Greymane Camp Guide"
+   },
+   {
+    "by": "epicgames",
+    "url": "https://store.epicgames.com/news/crimson-desert-guide-greymane-camp-management-recruits",
+    "title": "Greymane camp management and recruits"
+   },
+   {
+    "by": "method",
+    "url": "https://www.method.gg/crimson-desert/crimson-desert-greymane-camp-guide-how-to-upgrade-and-manage-your-camp",
+    "title": "Greymane Camp Guide: How to Upgrade and Manage"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/expanding-the-camp",
+    "title": "Expanding the Camp"
+   },
+   {
+    "by": "gfinity",
+    "url": "https://www.gfinityesports.com/article/how-to-expand-the-greymayne-camp-in-crimson-desert",
+    "title": "How to Expand the Greymane Camp"
+   }
+  ],
+  "remedy": {
+   "fixes": "A cramped camp with few slots, few vendors and small storage.",
+   "gain": "More of everything at camp, tier by tier.",
+   "figures": [
+    {
+     "label": "1st expansion",
+     "value": "2 recruits · 100 food · 250 silver",
+     "basis": "guide",
+     "by": "keengamer"
+    },
+    {
+     "label": "4th expansion",
+     "value": "10 recruits · 100,000 silver",
+     "basis": "guide",
+     "by": "keengamer"
+    },
+    {
+     "label": "Comrades at full size",
+     "value": "30+",
+     "basis": "guide",
+     "by": "epicgames"
+    }
+   ],
+   "pairs": [
+    "private-storage",
+    "dispatch-repeat",
+    "pailune-camp"
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "pailune-camp",
+  "name": "Pailune Camp",
+  "leaf": "camp",
+  "cls": "unlock",
+  "domains": [],
+  "base": "riches/pailune-camp",
+  "trait": "The final camp: storage at its ceiling, vendors close together",
+  "summary": "The last camp move. Storage reaches its 1,000-slot ceiling, the Spacious Pailune house layout opens, the farm and ranch grow, and since 1.03 the key NPCs and vendors stand closer together. The move is permanent.",
+  "tiers": {
+   "impact": {
+    "tier": 3,
+    "basis": "Bigger storage and farms, vendors closer together; little raw power (Nerds Chalk)."
+   },
+   "reach": {
+    "tier": 2,
+    "basis": "Every camp visit after the move."
+   },
+   "unlock": {
+    "tier": 5,
+    "basis": "The whole main story, every Scattered Embers quest and a fully expanded Howling Hill."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "remedy": {
+   "fixes": "Crossing the camp between vendors, and the storage ceiling at Howling Hill.",
+   "gain": "Everything at full size, closer together.",
+   "figures": [
+    {
+     "label": "Private storage",
+     "value": "1,000",
+     "basis": "guide",
+     "by": "nerdschalk"
+    }
+   ],
+   "patches": [
+    {
+     "v": "1.03.00",
+     "note": "Key NPCs easier to reach; farm and ranch expanded",
+     "by": "pushsquare"
+    }
+   ],
+   "watch": [
+    "Permanent: save manually first. Silver left at Howling Hill counts as theft afterwards."
+   ],
+   "pairs": [
+    "camp-expansion",
+    "private-storage"
+   ]
+  },
+  "sources": [
+   {
+    "by": "pushsquare",
+    "url": "https://www.pushsquare.com/news/2026/04/crimson-desert-update-1-03-out-now-on-ps5-get-the-patch-notes-here",
+    "title": "Update 1.03 patch notes"
+   },
+   {
+    "by": "nerdschalk",
+    "url": "https://nerdschalk.com/crimson-desert-how-to-move-to-pailune-and-unlock-the-final-camp-location-upgrade-requirements-unlock-steps-and-rewards/",
+    "title": "How to Move to Pailune"
+   }
+  ]
+ },
+ {
+  "id": "camp-donations",
+  "name": "Camp Donations",
+  "leaf": "money",
+  "cls": "builtin",
+  "domains": [],
+  "base": "riches/camp-donations",
+  "trait": "Since 2.01, one Silver buys 1,000 Camp Funds",
+  "summary": "Camp Funds pay for ships, leases and camp projects, and since patch 2.01 every Silver donated to Carl buys 1,000 of them. That shrinks the DLC's big prices: the 6,000,000 Large Hernandian Ship is 6,000 Silver, twelve Gold Bars.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "Turns Silver into Camp Funds at 1:1,000 since 2.01."
+   },
+   "reach": {
+    "tier": 2,
+    "basis": "Every Camp Funds purchase: ships, leases, castles."
+   },
+   "unlock": {
+    "tier": 1,
+    "basis": "Carl at camp, from the start."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "remedy": {
+   "fixes": "Grinding Camp Funds a dispatch at a time.",
+   "gain": "Silver in, Camp Funds out, at 1:1,000.",
+   "figures": [
+    {
+     "label": "One Silver donated",
+     "value": "1,000 Camp Funds",
+     "basis": "patch",
+     "by": "vulkk"
+    },
+    {
+     "label": "Large Hernandian Ship",
+     "value": "6,000 Silver",
+     "basis": "sum",
+     "by": "vulkk"
+    }
+   ],
+   "patches": [
+    {
+     "v": "2.01",
+     "note": "Donated Silver worth ten times more",
+     "by": "vulkk"
+    }
+   ],
+   "watch": [
+    "Donations are one-way. Never hand Carl a Gold Bar whole: exchange it for Silver first."
+   ],
+   "pairs": [
+    "gold-bar-crafting",
+    "large-ship"
+   ]
+  }
+ },
+ {
+  "id": "gold-bar-crafting",
+  "name": "Gold Bar Crafting",
+  "leaf": "money",
+  "cls": "unlock",
+  "domains": [],
+  "base": "riches/gold-bar-crafting",
+  "trait": "One recipe that ends money worries: 500 Silver a bar",
+  "summary": "The quickest way to stop counting coins. A Witch turns one Golden Apple and three Gold Ore into a Gold Bar, and a bank pays 500 Silver for it. The recipe sits in the Witch's Hideout south of Pailune.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "500 Silver per bar at a bank, the top earner in Riches."
+   },
+   "reach": {
+    "tier": 2,
+    "basis": "Money buys gear, permits, ships and leases across the game."
+   },
+   "unlock": {
+    "tier": 2,
+    "basis": "One recipe from the Witch's Hideout; apples and ore from the world."
+   }
+  },
+  "tags": [
+   "base"
+  ],
+  "remedy": {
+   "fixes": "Grinding small sales for every purchase.",
+   "gain": "A bar is 500 Silver at any bank.",
+   "figures": [
+    {
+     "label": "Bank price per bar",
+     "value": "500 Silver",
+     "basis": "guide",
+     "by": "consolepulse"
+    },
+    {
+     "label": "Recipe",
+     "value": "1 Golden Apple + 3 Gold Ore",
+     "basis": "guide",
+     "by": "consolepulse"
+    }
+   ],
+   "pairs": [
+    "bank-investment",
+    "camp-donations"
+   ]
+  }
+ },
+ {
+  "id": "golden-beer",
+  "name": "Golden Beer",
+  "leaf": "money",
+  "cls": "unlock",
+  "domains": [],
+  "base": "riches/golden-beer",
+  "trait": "Doubles every dispatch while it sits in your bag",
+  "summary": "Mazzul's premium beer doubles the main rewards of every Greymane dispatch while you hold it: Camp Funds, food, timber and the rest. Nothing to activate, nothing to renew.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "Every dispatch reward doubled while held."
+   },
+   "reach": {
+    "tier": 2,
+    "basis": "Every dispatch you run."
+   },
+   "unlock": {
+    "tier": 4,
+    "basis": "Chapter 8, the Demeniss noble houses in order, then the Mazzul fight."
+   }
+  },
+  "tags": [
+   "base"
+  ],
+  "remedy": {
+   "fixes": "Running twice the missions for the same materials.",
+   "gain": "Double rewards, passively.",
+   "figures": [
+    {
+     "label": "Dispatch rewards",
+     "value": "×2",
+     "basis": "guide",
+     "by": "thegameswiki"
+    }
+   ],
+   "watch": [
+    "Special drops such as Abyss Artifacts are not doubled."
+   ],
+   "pairs": [
+    "dispatch-repeat"
+   ]
+  }
+ },
+ {
+  "id": "bank-investment",
+  "name": "Bank Investment",
+  "leaf": "money",
+  "cls": "unlock",
+  "domains": [],
+  "base": "riches/bank-investment",
+  "trait": "Gold Bars that earn while you play",
+  "summary": "A 100-Silver Strongbox permit lets spare Gold Bars earn interest every three in-game days. Low risk cannot lose; Medium and High can, so save before each roll.",
+  "tiers": {
+   "impact": {
+    "tier": 3,
+    "basis": "Spare bars grow on their own, up to 40 a cycle since 1.16."
+   },
+   "reach": {
+    "tier": 3,
+    "basis": "Only bars you are not using."
+   },
+   "unlock": {
+    "tier": 2,
+    "basis": "A 100-Silver permit at any bank."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "remedy": {
+   "fixes": "Spare Gold Bars sitting idle.",
+   "gain": "Interest every three in-game days.",
+   "figures": [
+    {
+     "label": "Permit",
+     "value": "100 Silver",
+     "basis": "guide",
+     "by": "thegameswiki"
+    },
+    {
+     "label": "Cycle",
+     "value": "≈ 3 in-game days",
+     "basis": "guide",
+     "by": "thegameswiki"
+    }
+   ],
+   "watch": [
+    "Only Low risk cannot lose."
+   ],
+   "pairs": [
+    "gold-bar-crafting",
+    "time-skip"
+   ]
+  }
+ },
+ {
+  "id": "facility-leases",
+  "name": "Facility Leases",
+  "leaf": "facilities",
+  "cls": "unlock",
+  "domains": [],
+  "base": "riches/facility-leases",
+  "trait": "Businesses that earn, and make gear, while you explore",
+  "summary": "Charting the Unknown lets you lease 18 businesses — sawmills, restaurants, smithies and tailor's shops — for 15,000 copper each plus upkeep and wages. They earn Camp Funds while you are away, and each popularity level unlocks better recipes, equipment and blueprints.",
+  "tiers": {
+   "impact": {
+    "tier": 3,
+    "basis": "Income and gear without your hands on it; levels need tending."
+   },
+   "reach": {
+    "tier": 3,
+    "basis": "The DLC economy."
+   },
+   "unlock": {
+    "tier": 3,
+    "basis": "Renewed Vitality's tutorial lease, staff with the right skill, daily wages."
+   }
+  },
+  "tags": [
+   "dlc"
+  ],
+  "sources": [
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/2026/11/14/crimson-desert-facility-management-guide-unlock-earn-money/",
+    "title": "Facility Management Guide"
+   }
+  ],
+  "remedy": {
+   "fixes": "Every Camp Fund earned by hand.",
+   "gain": "Shops that sell and level while you explore.",
+   "figures": [
+    {
+     "label": "Facilities",
+     "value": "18 · four types",
+     "basis": "guide",
+     "by": "vulkk"
+    },
+    {
+     "label": "Lease",
+     "value": "15,000 copper + upkeep + wages",
+     "basis": "guide",
+     "by": "vulkk"
+    }
+   ],
+   "watch": [
+    "Wages and upkeep are daily; a shop can run at a loss until popularity rises."
+   ],
+   "pairs": [
+    "castles"
+   ]
+  }
+ },
+ {
+  "id": "castles",
+  "name": "Castles",
+  "leaf": "facilities",
+  "cls": "unlock",
+  "domains": [],
+  "base": "riches/castles",
+  "trait": "Merchants gathered in one courtyard",
+  "summary": "Drakesfall and Flame Knights' Castle can be claimed and rebuilt after Journey's End. Their Facilities options place stations that bring vendors into the castle, laid out as you choose, alongside room to store and furnish.",
+  "tiers": {
+   "impact": {
+    "tier": 3,
+    "basis": "Vendors in one courtyard instead of across a region (Mobalytics)."
+   },
+   "reach": {
+    "tier": 4,
+    "basis": "One place: the castle you rebuild."
+   },
+   "unlock": {
+    "tier": 5,
+    "basis": "Journey's End, 20 comrades and tens of thousands of materials."
+   }
+  },
+  "tags": [
+   "dlc"
+  ],
+  "sources": [
+   {
+    "by": "mobalytics",
+    "url": "https://mobalytics.gg/gamebase/guides/crimson-desert-castle-building",
+    "title": "How to Get a Castle"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/items/facilities-shop/",
+    "title": "Facilities Shop"
+   }
+  ],
+  "remedy": {
+   "fixes": "Riding between towns to reach different vendors.",
+   "gain": "Merchant stations placed where you want them.",
+   "figures": [
+    {
+     "label": "Rebuild",
+     "value": "20 comrades · 15 in-game days",
+     "basis": "guide",
+     "by": "noobfeed"
+    }
+   ],
+   "pairs": [
+    "facility-leases"
+   ]
+  }
+ },
+ {
+  "id": "ship-crew",
+  "name": "Crew and Outfitting",
+  "leaf": "ships",
+  "cls": "unlock",
+  "domains": [],
+  "base": "riches/ship-crew",
+  "trait": "A crew that steers, scouts, fishes and repairs",
+  "summary": "Crew roles take jobs off your hands: the First Mate takes the helm when you leave it in combat, the Rigger works the sails, the Lookout marks reefs and fishing areas on the map, Carpenters repair, Gunners fire and Deckhands fish. Outfitters at Demeniss and Delesyia sell sails, some with Speed and Health bonuses.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "Helm, sails, scouting and repairs handled for you."
+   },
+   "reach": {
+    "tier": 3,
+    "basis": "Every voyage in Charting the Unknown."
+   },
+   "unlock": {
+    "tier": 2,
+    "basis": "Assign comrades at any Ship Manager; parts at two ports."
+   }
+  },
+  "tags": [
+   "dlc"
+  ],
+  "sources": [
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+    "title": "DLC Shipbuilding Guide: All Ships and Upgrades"
+   }
+  ],
+  "remedy": {
+   "fixes": "Steering, scouting and patching the hull yourself.",
+   "gain": "A crew for every job on deck.",
+   "figures": [
+    {
+     "label": "Lookout",
+     "value": "Marks reefs and fishing areas",
+     "basis": "guide",
+     "by": "keengamer"
+    },
+    {
+     "label": "First Mate",
+     "value": "Takes the helm in combat",
+     "basis": "guide",
+     "by": "keengamer"
+    },
+    {
+     "label": "Sails",
+     "value": "Some add Speed and Health",
+     "basis": "guide",
+     "by": "keengamer"
+    }
+   ],
+   "watch": [
+    "Crew changes only at ports."
+   ],
+   "pairs": [
+    "ship-teleport",
+    "large-ship"
+   ]
+  }
+ },
+ {
+  "id": "ship-teleport",
+  "name": "Ship Teleportation Device",
+  "leaf": "ships",
+  "cls": "unlock",
+  "kind": "Ship fitting",
+  "region": "Great Ocean",
+  "area": "Auronui Island; Greymane Camp workbench",
+  "trait": "Your ship becomes a fast-travel point",
+  "summary": "Pioneering Auronui Island rewards the Forgotten Treasure Map, and the treasure is this device's blueprint. Craft it at the camp's furniture workbench, have a Ship Manager install it, and your ship becomes a fast-travel destination.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "Warp straight to the ship instead of to the nearest port."
+   },
+   "reach": {
+    "tier": 3,
+    "basis": "Every voyage in Charting the Unknown."
+   },
+   "unlock": {
+    "tier": 3,
+    "basis": "Pioneer Auronui, dig up the blueprint, craft and install."
+   }
+  },
+  "tags": [
+   "dlc"
+  ],
+  "also": [
+   "riches/island-pioneering"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "A Wider World questline; Auronui Island pioneered"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Sail to Auronui Island in A Wider World and complete its Pioneer mission: it rewards the Forgotten Treasure Map.",
+     "On the island's western coast, dig up the buried chest beneath the trees with a shovel: the blueprint.",
+     "Craft the device at the Greymane Camp furniture workbench: 15 Shiny Ore, 5 Azurite and 10 Iron Ore.",
+     "Have a Ship Manager install it. The ship now appears as a fast-travel destination."
+    ]
+   }
+  ],
+  "location": "Blueprint: buried on Auronui Island's western coast.",
+  "notes": [],
+  "variants": [],
+  "since": "Charting the Unknown · 2.04",
+  "media": {
+   "portrait": {
+    "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Ship-Gameplay-Crimson-Desert.jpg",
+    "credit": "keengamer",
+    "crop": [
+     0.55,
+     0.45,
+     0.85
+    ],
+    "src": "media/qol/ship-teleport/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Ship-Teleportation-Blueprint-Location.jpg",
+     "credit": "keengamer",
+     "kind": "map",
+     "caption": "World map — the blueprint chest on Auronui",
+     "src": "media/qol/ship-teleport/map-1.webp",
+     "w": 1600,
+     "h": 814
+    }
+   ],
+   "gallery": [],
+   "hero": {
+    "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Ship-Gameplay-Crimson-Desert.jpg",
+    "credit": "keengamer",
+    "focus": "55% 45%",
+    "src": "media/qol/ship-teleport/hero.webp",
+    "w": 1920,
+    "h": 977
+   }
+  },
+  "sources": [
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+    "title": "DLC Shipbuilding Guide: All Ships and Upgrades"
+   },
+   {
+    "by": "whisperofthehouse",
+    "url": "https://www.whisperofthehouse.com/crimson-desert/auronui-island",
+    "title": "How to Pioneer Auronui Island"
+   }
+  ],
+  "remedy": {
+   "fixes": "Warping to a port and sailing back out to the ship.",
+   "gain": "Fast travel straight to the deck.",
+   "figures": [
+    {
+     "label": "Craft",
+     "value": "15 Shiny Ore · 5 Azurite · 10 Iron Ore",
+     "basis": "guide",
+     "by": "keengamer"
+    }
+   ],
+   "pairs": [
+    "island-pioneering",
+    "ship-crew",
+    "abyss-nexus"
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "island-pioneering",
+  "name": "Island Pioneering",
+  "leaf": "ships",
+  "cls": "unlock",
+  "domains": [],
+  "base": "riches/island-pioneering",
+  "trait": "Each island claimed adds an anchorage, missions and shops",
+  "summary": "Pioneering sends three comrades on a 12-hour dispatch from an island's anchorage. A pioneered island gives an anchorage, ship teleportation, new missions and new shops. Auronui comes first, and its buried treasure is the Ship Teleportation Device blueprint.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "An anchorage, ship teleportation, missions and shops per island."
+   },
+   "reach": {
+    "tier": 3,
+    "basis": "The Great Ocean."
+   },
+   "unlock": {
+    "tier": 3,
+    "basis": "A ship with Deckhands, three free comrades and a 12-hour dispatch per island."
+   }
+  },
+  "tags": [
+   "dlc"
+  ],
+  "remedy": {
+   "fixes": "Open ocean with nowhere to stop.",
+   "gain": "Anchorages, shops and missions across the sea.",
+   "figures": [
+    {
+     "label": "Pioneer mission",
+     "value": "3 comrades · 12 h",
+     "basis": "guide",
+     "by": "whisperofthehouse"
+    }
+   ],
+   "pairs": [
+    "ship-teleport",
+    "ship-crew"
+   ]
+  }
+ },
+ {
+  "id": "large-ship",
+  "name": "Large Hernandian Ship",
+  "leaf": "ships",
+  "cls": "unlock",
+  "domains": [],
+  "base": "riches/fleetmaster-ships",
+  "kind": "Bought ship",
+  "trait": "36 cargo slots: fewer trips home",
+  "summary": "The biggest hold for sale: the Large Hernandian Ship carries 36 cargo slots against the quest-built ship's 14. Its 6,000,000 Camp Funds are 6,000 donated Silver since 2.01, about twelve Gold Bars.",
+  "tiers": {
+   "impact": {
+    "tier": 3,
+    "basis": "36 cargo slots against 14: fewer trips home."
+   },
+   "reach": {
+    "tier": 3,
+    "basis": "Trading and island runs in the DLC."
+   },
+   "unlock": {
+    "tier": 4,
+    "basis": "6,000,000 Camp Funds — 6,000 donated Silver."
+   }
+  },
+  "tags": [
+   "dlc"
+  ],
+  "remedy": {
+   "fixes": "Turning back with a full hold.",
+   "gain": "Two and a half times the cargo of the first ship.",
+   "figures": [
+    {
+     "label": "Cargo slots",
+     "value": "36 (vs 14)",
+     "basis": "guide",
+     "by": "whisperofthehouse"
+    },
+    {
+     "label": "Price",
+     "value": "6,000,000 Camp Funds",
+     "basis": "guide",
+     "by": "whisperofthehouse"
+    }
+   ],
+   "pairs": [
+    "camp-donations",
+    "ship-crew"
+   ]
+  }
+ },
+ {
+  "id": "map-markers",
+  "name": "Map Markers and Filters",
+  "leaf": "settings",
+  "cls": "builtin",
+  "kind": "Map features",
+  "region": "All of Pywel",
+  "area": "The world map",
+  "trait": "Ore, opened chests and looted caves mark themselves",
+  "summary": "Patches turned the world map into a checklist. Mineral deposits mark themselves as you pass, opened chests and Visione Memory Fragments are marked, looted caves get a checkmark, restored Abyss sites are flagged, and filters show only the landmarks you want. Fast-travel points show on the All and Environment tabs, not Quest or Faction.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "No more re-checking chests and caves, or hunting for ore you already passed."
+   },
+   "reach": {
+    "tier": 1,
+    "basis": "Every look at the map."
+   },
+   "unlock": {
+    "tier": 1,
+    "basis": "Built in; nothing to do."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Open the map; pick the All or Environment tab to see fast-travel points.",
+     "Use the filters to show only the landmarks and points of interest you want.",
+     "Pass near ore and the deposit is marked automatically."
+    ]
+   }
+  ],
+  "location": "The world map.",
+  "notes": [],
+  "variants": [],
+  "since": "Base game · patched through 1.04",
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4449864/8f8aaba6c8e6255eb01730c911132d50.png/show",
+    "credit": "game8",
+    "crop": [
+     0.35,
+     0.45,
+     0.9
+    ],
+    "src": "media/qol/map-markers/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [],
+   "gallery": [],
+   "hero": {
+    "from": "https://img.game8.co/4449864/8f8aaba6c8e6255eb01730c911132d50.png/show",
+    "credit": "game8",
+    "focus": "45% 45%",
+    "src": "media/qol/map-markers/hero.webp",
+    "w": 728,
+    "h": 410
+   }
+  },
+  "sources": [
+   {
+    "by": "epicgames",
+    "url": "https://store.epicgames.com/news/crimson-desert-biggest-updates-improvements-since-release",
+    "title": "Biggest updates and improvements since release"
+   },
+   {
+    "by": "gosugamers",
+    "url": "https://www.gosugamers.net/entertainment/news/78263-crimson-desert-patch-1-03-introduces-new-abilities-greymane-camp-improvements-and-more",
+    "title": "Patch 1.03: new abilities and camp improvements"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/585839",
+    "title": "How to Fast Travel: points not showing"
+   },
+   {
+    "by": "pcgamer",
+    "url": "https://www.pcgamer.com/games/action/the-latest-crimson-desert-patch-is-finally-the-reason-i-needed-to-turn-my-once-useless-house-into-a-cosy-haven/",
+    "title": "The latest patch turns the house into a haven"
+   }
+  ],
+  "remedy": {
+   "fixes": "Re-opening chests and re-checking caves you had cleared.",
+   "gain": "A map that remembers what you have done.",
+   "figures": [
+    {
+     "label": "Marked automatically",
+     "value": "Ore · opened chests · Visione fragments",
+     "basis": "guide",
+     "by": "epicgames"
+    }
+   ],
+   "patches": [
+    {
+     "v": "1.03.00",
+     "note": "Opened chests, visited caves and restored Abyss sites marked",
+     "by": "gosugamers"
+    }
+   ],
+   "pairs": [
+    "abyss-nexus"
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "difficulty",
+  "name": "Difficulty",
+  "leaf": "settings",
+  "cls": "builtin",
+  "kind": "Game setting",
+  "region": "Settings",
+  "area": "Settings → Gameplay",
+  "trait": "Easy, Normal or Hard — switch any time",
+  "summary": "Patch 1.04 added Easy, Normal and Hard, switchable at any time on an existing save. Easy reduces damage taken, lowers enemy stats and widens Parry and Dodge windows; Normal is the original game. In the one case documented, a boss beaten on Easy paid the same reward.",
+  "tiers": {
+   "impact": {
+    "tier": 3,
+    "basis": "Only matters in the fights you find hard."
+   },
+   "reach": {
+    "tier": 2,
+    "basis": "All combat."
+   },
+   "unlock": {
+    "tier": 1,
+    "basis": "A menu setting since 1.04."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Open Settings → Gameplay (Play in the patch notes).",
+     "Set Game Difficulty to Easy, Normal or Hard and Apply.",
+     "Switch back whenever you like."
+    ]
+   }
+  ],
+  "location": "Settings menu.",
+  "notes": [
+   "The Games Wiki notes Easy does not change Mazzul's Golden Beer reward."
+  ],
+  "variants": [
+   "Easy",
+   "Normal",
+   "Hard"
+  ],
+  "since": "Patch 1.04",
+  "media": {
+   "portrait": {
+    "from": "https://www.pcgamesn.com/wp-content/sites/pcgamesn/2026/04/crimson-desert-update-patch-notes-difficulty-settings.jpg",
+    "credit": "pcgamesn",
+    "crop": [
+     0.48,
+     0.42,
+     0.8
+    ],
+    "src": "media/qol/difficulty/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "from": "https://www.method.gg/images/uploads/guides/2704022-difficulty-option-1.jpg",
+     "credit": "method",
+     "kind": "menu",
+     "caption": "Settings — the difficulty selector",
+     "src": "media/qol/difficulty/menu-1.webp",
+     "w": 900,
+     "h": 525
+    }
+   ],
+   "gallery": [],
+   "hero": {
+    "from": "https://www.pcgamesn.com/wp-content/sites/pcgamesn/2026/04/crimson-desert-update-patch-notes-difficulty-settings.jpg",
+    "credit": "pcgamesn",
+    "focus": "50% 35%",
+    "src": "media/qol/difficulty/hero.webp",
+    "w": 1920,
+    "h": 1080
+   }
+  },
+  "sources": [
+   {
+    "by": "vgc",
+    "url": "https://www.videogameschronicle.com/news/crimson-desert-update-adds-difficulty-levels-graphical-improvements-and-new-storage-items/",
+    "title": "Version 1.04 patch notes"
+   },
+   {
+    "by": "wccftech",
+    "url": "https://wccftech.com/crimson-desert-patch-1-04-difficulty-settings-controls-visuals/",
+    "title": "Patch 1.04 adds difficulty settings"
+   },
+   {
+    "by": "gfinity",
+    "url": "https://www.gfinityesports.com/article/how-to-change-difficulty-settings-in-crimson-desert-easy-normal-and-hard-modes-explained",
+    "title": "How to Change Difficulty Settings"
+   },
+   {
+    "by": "method",
+    "url": "https://method.gg/crimson-desert/crimson-desert-difficulty-settings-guide-easy-normal-and-hard-explained",
+    "title": "Difficulty Settings Guide"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/golden-beer",
+    "title": "Golden Beer"
+   }
+  ],
+  "remedy": {
+   "fixes": "One fight blocking the road for hours.",
+   "gain": "Drop to Easy for the fight, then switch back.",
+   "figures": [
+    {
+     "label": "Easy",
+     "value": "Less damage taken · wider Parry and Dodge windows",
+     "basis": "patch",
+     "by": "wccftech"
+    }
+   ],
+   "patches": [
+    {
+     "v": "1.04.00",
+     "note": "Easy, Normal and Hard added",
+     "by": "vgc"
+    }
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "re-blockades",
+  "name": "Re-blockades",
+  "leaf": "settings",
+  "cls": "builtin",
+  "kind": "World setting",
+  "region": "Settings",
+  "area": "Game options",
+  "trait": "Keep liberated areas liberated",
+  "summary": "A May 2026 patch let factions retake areas you liberated, 13 factions across 23 areas, and gave you the dial: frequent, once in a blue moon (the default), or never.",
+  "tiers": {
+   "impact": {
+    "tier": 3,
+    "basis": "Turned off, no camp ever needs clearing twice."
+   },
+   "reach": {
+    "tier": 3,
+    "basis": "23 areas held by 13 factions."
+   },
+   "unlock": {
+    "tier": 1,
+    "basis": "A setting."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Find the re-blockade frequency in the options.",
+     "Choose frequent, once in a blue moon (the default) or none."
+    ]
+   }
+  ],
+  "location": "Game options.",
+  "notes": [
+   "The same patch added Rematch: fight defeated bosses again at their original balance or scaled to your gear, with consumables refunded and no loot."
+  ],
+  "variants": [],
+  "since": "Patch of 2 May 2026",
+  "media": {
+   "portrait": {
+    "from": "https://cdn.mos.cms.futurecdn.net/7ShLNLVumd8T77sGzsQz95.jpg",
+    "credit": "pcgamer",
+    "crop": [
+     0.5,
+     0.42,
+     0.85
+    ],
+    "src": "media/qol/re-blockades/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [],
+   "gallery": [],
+   "hero": {
+    "from": "https://cdn.mos.cms.futurecdn.net/7ShLNLVumd8T77sGzsQz95.jpg",
+    "credit": "pcgamer",
+    "focus": "50% 35%",
+    "src": "media/qol/re-blockades/hero.webp",
+    "w": 1920,
+    "h": 1049
+   }
+  },
+  "sources": [
+   {
+    "by": "pcgamer",
+    "url": "https://www.pcgamer.com/games/rpg/new-crimson-desert-update-lets-you-rematch-defeated-enemies-and-adds-new-legendary-creatures/",
+    "title": "New update lets you 'rematch' defeated enemies"
+   }
+  ],
+  "remedy": {
+   "fixes": "Enemy factions retaking camps you already cleared.",
+   "gain": "Cleared stays cleared.",
+   "figures": [
+    {
+     "label": "Affected",
+     "value": "13 factions · 23 areas",
+     "basis": "guide",
+     "by": "pcgamer"
+    },
+    {
+     "label": "Options",
+     "value": "Frequent · once in a blue moon · none",
+     "basis": "guide",
+     "by": "pcgamer"
+    }
+   ],
+   "watch": [
+    "PC Gamer does not name the menu; the official patch notes are linked from the game's site."
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "display-options",
+  "name": "Display Toggles",
+  "leaf": "settings",
+  "cls": "builtin",
+  "kind": "Game settings",
+  "region": "Settings",
+  "area": "Settings → Language & Gameplay",
+  "trait": "Hide the helmet, hide the weapons, tap to sprint",
+  "summary": "Settings → Language & Gameplay holds the switches patches added: Headgear Visibility hides your helmet (1.02), weapon display hides armaments on your back by type (1.03), and 1.02 also brought back tap-to-sprint for players who preferred it.",
+  "tiers": {
+   "impact": {
+    "tier": 4,
+    "basis": "Mostly cosmetic; tap-to-sprint is a comfort setting."
+   },
+   "reach": {
+    "tier": 1,
+    "basis": "Every session."
+   },
+   "unlock": {
+    "tier": 1,
+    "basis": "Menu settings."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Open Settings → Language & Gameplay.",
+     "Turn Headgear Visibility off to hide helmets.",
+     "Choose which weapon types show on your back.",
+     "Set sprint back to tap if you prefer it."
+    ]
+   }
+  ],
+  "location": "Settings menu.",
+  "notes": [],
+  "variants": [
+   "Headgear Visibility",
+   "Weapon display",
+   "Tap to sprint"
+  ],
+  "since": "Patches 1.02 and 1.03",
+  "media": {
+   "portrait": {
+    "from": "https://static.beebom.com/wp-content/uploads/2026/03/Hide-crimson-Desert-helmet.jpg?quality=75&strip=all",
+    "credit": "beebom",
+    "clip": [
+     0.5,
+     0,
+     1,
+     1
+    ],
+    "crop": [
+     0.42,
+     0.4,
+     0.95
+    ],
+    "src": "media/qol/display-options/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "from": "https://gdm-universal-media.b-cdn.net/gfinityesports/25d920c1-befunky_2026-3-4_18-25-9.webp?width=1600",
+     "credit": "gfinity",
+     "kind": "menu",
+     "caption": "Settings — the Gameplay toggles",
+     "src": "media/qol/display-options/menu-1.webp",
+     "w": 1600,
+     "h": 900
+    }
+   ],
+   "gallery": [],
+   "hero": {
+    "from": "https://static.beebom.com/wp-content/uploads/2026/03/Hide-crimson-Desert-helmet.jpg?quality=75&strip=all",
+    "credit": "beebom",
+    "clip": [
+     0.5,
+     0,
+     1,
+     1
+    ],
+    "focus": "40% 35%",
+    "src": "media/qol/display-options/hero.webp",
+    "w": 600,
+    "h": 675
+   }
+  },
+  "sources": [
+   {
+    "by": "presstart",
+    "url": "https://press-start.com.au/?p=166376",
+    "title": "Full 1.02.00 patch notes"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/2026/04/04/crimson-desert-1-02-00-patch-notes-even-more-requested-changes/",
+    "title": "1.02.00 patch notes: helmet and tap-to-sprint"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/2026/04/11/crimson-desert-1-03-00-patch-notes-better-fast-travel-and-appearance-updates",
+    "title": "1.03.00 patch notes: weapon visibility"
+   },
+   {
+    "by": "beebom",
+    "url": "https://beebom.com/how-to-hide-helmet-crimson-desert/",
+    "title": "Can You Hide Your Helmet?"
+   }
+  ],
+  "remedy": {
+   "fixes": "Settings you could not change at launch.",
+   "gain": "The look and the sprint you prefer.",
+   "figures": [
+    {
+     "label": "Where",
+     "value": "Settings → Language & Gameplay",
+     "basis": "patch",
+     "by": "presstart"
+    }
+   ],
+   "patches": [
+    {
+     "v": "1.02.00",
+     "note": "Headgear Visibility; tap-to-sprint option",
+     "by": "vulkk"
+    },
+    {
+     "v": "1.03.00",
+     "note": "Weapon visibility by type",
+     "by": "vulkk"
+    }
+   ]
+  },
+  "domains": []
+ }
+]

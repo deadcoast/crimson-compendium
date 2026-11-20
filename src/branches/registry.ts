@@ -1,6 +1,6 @@
 // Branch registry — the only file that changes when a branch is added to the tree.
 // A branch = branch.json (leaves, categories, metrics, lenses) + entries.json (data) + optional plate sections.
-import type { Branch, BranchDef, Category, CategoryLeaf, Entry, PlateSection } from '../core/types';
+import type { Branch, BranchDef, Category, CategoryLeaf, Entry, PlateSection, RatingRule } from '../core/types';
 import { matches } from '../core/select';
 import mountsDef from './mounts/branch.json';
 import mountsEntries from './mounts/entries.json';
@@ -8,8 +8,55 @@ import MountRecord from './mounts/MountRecord.svelte';
 import richesDef from './riches/branch.json';
 import richesEntries from './riches/entries.json';
 import RichesLedger from './riches/RichesLedger.svelte';
+import qolDef from './qol/branch.json';
+import qolEntries from './qol/entries.json';
+import QolRemedy from './qol/QolRemedy.svelte';
+
+/** Fields a plate with a `base` takes from the plate it is about when it leaves them out. Its own
+ *  summary, trait, ratings, tags and payload are always its own: they say why it sits in this branch. */
+const INHERIT = ['kind', 'region', 'area', 'requires', 'routes', 'location', 'notes', 'variants', 'media', 'since'] as const;
+
+/** Raw entries of every branch, by branch id, for resolving `base` and `also` across branches. */
+const RAW: Record<string, Entry[]> = {
+  mounts: mountsEntries as unknown as Entry[],
+  riches: richesEntries as unknown as Entry[],
+  qol: qolEntries as unknown as Entry[],
+};
+
+/** A cross-branch reference is exactly "branch/entry", both parts ids; anything else names no plate. */
+export const REF = /^[a-z0-9-]+\/[a-z0-9-]+$/;
+
+function findRaw(ref: string): Entry | undefined {
+  if (!REF.test(ref)) return undefined;
+  const [b, id] = ref.split('/');
+  return RAW[b]?.find((e) => e.id === id);
+}
+
+/** Fill a plate's missing fields from its base. Sources are merged: its own first, then the base's. */
+function inherit(branchId: string, entries: Entry[]): Entry[] {
+  return entries.map((e) => {
+    if (!e.base) return e;
+    if (!REF.test(e.base)) throw new Error(`${branchId}/${e.id}: base "${e.base}" is not "branch/entry"`);
+    const src = findRaw(e.base);
+    if (!src) throw new Error(`${branchId}/${e.id}: base "${e.base}" does not exist`);
+    if (src.base) throw new Error(`${branchId}/${e.id}: base "${e.base}" has a base of its own; point at the source plate`);
+    const out: Entry = { ...e };
+    for (const k of INHERIT) if (out[k] === undefined) (out as Record<string, unknown>)[k] = src[k];
+    const urls = new Set(e.sources?.map((s) => s.url) ?? []);
+    out.sources = [...(e.sources ?? []), ...src.sources.filter((s) => !urls.has(s.url))];
+    return out;
+  });
+}
 
 const ID = /^[a-z0-9-]+$/;
+
+/** Which of a rule's three leaves an entry falls in: 0 best, 2 worst, 1 between. Unrated counts as worst. */
+function ruleTier(r: RatingRule, e: Entry): number {
+  const tiers = r.metrics.map((m) => e.tiers[m]?.tier ?? 5);
+  if (tiers.every((t) => t <= r.best)) return 0;
+  if (tiers.some((t) => t >= r.worst)) return 2;
+  return 1;
+}
 
 /** Category branches resolve once, here: members, leaves and order are fixed at load. */
 function categories(def: BranchDef, entries: Entry[]): Category[] {
@@ -20,7 +67,8 @@ function categories(def: BranchDef, entries: Entry[]): Category[] {
         ? def.leaves
             .map((l) => ({ id: l.id, label: l.label, accent: l.accent, short: l.short, entries: members.filter((e) => e.leaf === l.id) }))
             .filter((l) => l.entries.length)
-        : c.leaves.map((l) => ({ id: l.id, label: l.label, accent: l.accent, short: l.short, entries: members.filter((e) => matches(e, l.where)) }));
+        : c.leaves.map((l, i) => ({ id: l.id, label: l.label, accent: l.accent, short: l.short,
+            entries: members.filter((e) => (c.rule ? ruleTier(c.rule, e) === i : matches(e, l.where ?? {}))) }));
     const ordered = [...new Set(leaves.flatMap((l) => l.entries))];
     return { ...c, leaves, entries: ordered };
   });
@@ -42,6 +90,13 @@ function define(def: BranchDef, entries: Entry[], sections: PlateSection[] = [])
   if (leaves.size !== def.leaves.length) fail('leaves', 'duplicate leaf id');
   for (const c of def.categories) {
     if (!ID.test(c.id) || leaves.has(c.id) || VIEWS.has(c.id) || c.id.startsWith('for-')) fail(c.id, 'category id collides with a route name');
+    if (c.rule) {
+      if (!c.tierList || c.leaves === 'rarity' || c.leaves.length !== 3) fail(c.id, 'a rule derives a tier list of exactly three leaves');
+      for (const m of c.rule.metrics) if (!metrics.includes(m)) fail(c.id, `rule names unknown metric "${m}"`);
+      if (!(c.rule.best < c.rule.worst)) fail(c.id, 'rule needs best < worst');
+    } else if (c.leaves !== 'rarity') {
+      for (const l of c.leaves) if (!l.where) fail(`${c.id}-${l.id}`, 'category leaf has no where');
+    }
   }
   if (cats.size !== def.categories.length) fail('categories', 'duplicate category id');
 
@@ -96,6 +151,20 @@ function define(def: BranchDef, entries: Entry[], sections: PlateSection[] = [])
 }
 
 export const branches: Branch[] = [
-  define(mountsDef as unknown as BranchDef, mountsEntries as unknown as Entry[], [MountRecord]),
-  define(richesDef as unknown as BranchDef, richesEntries as unknown as Entry[], [RichesLedger]),
+  define(mountsDef as unknown as BranchDef, inherit('mounts', RAW.mounts), [MountRecord]),
+  define(richesDef as unknown as BranchDef, inherit('riches', RAW.riches), [RichesLedger]),
+  define(qolDef as unknown as BranchDef, inherit('qol', RAW.qol), [QolRemedy]),
 ];
+
+// every cross-branch pointer names a real plate in another branch
+for (const b of branches) {
+  for (const e of b.entries) {
+    for (const ref of [...(e.base ? [e.base] : []), ...(e.also ?? [])]) {
+      if (!REF.test(ref)) throw new Error(`${b.id}/${e.id}: "${ref}" is not "branch/entry"`);
+      const [bid, id] = ref.split('/');
+      const target = branches.find((x) => x.id === bid);
+      if (!target || target.id === b.id) throw new Error(`${b.id}/${e.id}: "${ref}" must name a plate in another branch`);
+      if (!target.byId.has(id)) throw new Error(`${b.id}/${e.id}: "${ref}" does not exist`);
+    }
+  }
+}

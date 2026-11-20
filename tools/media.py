@@ -13,7 +13,8 @@ Roles
     portrait   square, 480 px. Optional "crop": [cx, cy, size] as fractions of the
                source (centre x, centre y, side relative to the short edge).
                Optional "matte": true composites a transparent in-game icon onto ink.
-    any role   optional "clip": [x0, y0, x1, y1] as fractions, applied first.
+    any role   optional "clip": [x0, y0, x1, y1] as fractions, applied first; optional "frame": n picks
+               frame n of an animated source (a GIF's first frame is often a title or an empty shot).
     hero       wide, max 1920 px.
     capture    location reference (map / on-site), max 1600 px; maps keep detail.
     gallery    extra stills, max 1280 px; "matte" supported.
@@ -86,6 +87,8 @@ def render(item, role, out_rel, force):
     if not force and os.path.exists(out_abs) and item.get("src") == out_rel and item.get("w"):
         return False
     im = fetch(item["from"])
+    if item.get("frame"):
+        im.seek(item["frame"])
     im.load()
     if item.get("clip"):  # [x0, y0, x1, y1] fractions of the source — cut away title cards or HUD first
         x0, y0, x1, y1 = item["clip"]
@@ -114,6 +117,8 @@ def process_branch(branch_dir, force):
     branch_path = os.path.join(branch_dir, "branch.json")
     entries = json.load(open(entries_path))
     for e in entries:
+        if "media" not in e:  # a plate with a `base` shows its source plate's media
+            continue
         base = f"media/{bid}/{e['id']}"
         m = e["media"]
         if m.get("portrait", {}).get("from"): made += render(m["portrait"], "portrait", f"{base}/portrait.webp", force)

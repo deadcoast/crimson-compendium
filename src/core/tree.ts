@@ -1,7 +1,7 @@
 // The TREE: resolves routes, lists and media across every registered branch.
 import { branches } from '../branches/registry';
 import { matches, tierOf } from './select';
-import type { Branch, Category, Entry, Leaf, LeafCover, Lens, ListContext, MediaItem, View } from './types';
+import type { Branch, Category, CrossLink, Entry, Leaf, LeafCover, Lens, ListContext, MediaItem, View } from './types';
 export { ROMAN, TIER_NAMES, mediaUrl } from './format';
 export { tierOf };
 
@@ -122,3 +122,33 @@ export function coverFrom(b: Branch, c: LeafCover): MediaItem | undefined {
 export const coverOf = (b: Branch, leaf: Leaf) => coverFrom(b, leaf.cover);
 
 export const classLabel = (b: Branch, id: string) => b.classes.find((c) => c.id === id)?.label ?? id;
+
+/** Plates in other branches tied to this one: the plate it is about (base), the plates it points at (also),
+ *  and, the other way round, plates elsewhere that are about this one or point at it. One row per plate. */
+export function crossLinks(b: Branch, e: Entry): CrossLink[] {
+  const out: CrossLink[] = [];
+  const seen = new Set<string>();
+  const add = (branch: Branch | undefined, entry: Entry | undefined, rel: CrossLink['rel']) => {
+    if (!branch || !entry) return;
+    const key = `${branch.id}/${entry.id}`;
+    if (seen.has(key)) return;
+    seen.add(key);
+    out.push({ branch, entry, rel });
+  };
+  const at = (ref: string) => {
+    const [bid, id] = ref.split('/');
+    const branch = branches.find((x) => x.id === bid);
+    return [branch, branch?.byId.get(id)] as const;
+  };
+  if (e.base) add(...at(e.base), 'base');
+  for (const ref of e.also ?? []) add(...at(ref), 'also');
+  const me = `${b.id}/${e.id}`;
+  for (const other of branches) {
+    if (other.id === b.id) continue;
+    for (const x of other.entries) {
+      if (x.base === me) add(other, x, 'source');
+      else if (x.also?.includes(me)) add(other, x, 'cited');
+    }
+  }
+  return out;
+}

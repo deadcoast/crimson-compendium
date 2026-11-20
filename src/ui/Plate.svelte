@@ -9,6 +9,7 @@
   import Where from './Where.svelte';
   import How from './How.svelte';
   import Glyph from './Glyph.svelte';
+  import Also from './Also.svelte';
 
   let { branch, entry, ctx }: { branch: Branch; entry: Entry; ctx: ListContext } = $props();
 
@@ -66,6 +67,8 @@
     {#each branch.sections as Section}
       <Section {entry} {branch} />
     {/each}
+
+    <Also {entry} {branch} />
 
     {#if entry.media.gallery.length}
       <section class="gallery" data-outline="Stills" use:reveal>
