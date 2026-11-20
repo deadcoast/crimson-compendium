@@ -54,7 +54,7 @@
     {:else}
       <p class="hint">
         <Glyph name="info" size={13} />
-        <span>Ranked against other {classLabel(branch, entry.cls).toLowerCase()} mounts. Tap a rating for the reasoning, or read <button onclick={() => (app.sheet = 'tiers')}>how tiers work</button>.</span>
+        <span>Ranked against other {classLabel(branch, entry.cls).toLowerCase()} {branch.plural.toLowerCase()}. Tap a rating for the reasoning, or read <button onclick={() => (app.sheet = 'tiers')}>how tiers work</button>.</span>
       </p>
     {/if}
   </div>

@@ -1,14 +1,14 @@
 <script lang="ts">
   import { reveal } from '../core/motion';
-  import type { Entry } from '../core/types';
+  import type { BranchLabels, Entry } from '../core/types';
   import Glyph from './Glyph.svelte';
 
-  let { entry }: { entry: Entry } = $props();
+  let { entry, labels }: { entry: Entry; labels?: BranchLabels } = $props();
 </script>
 
-<section class="how" data-outline="How to get" use:reveal={{ delay: 120 }}>
+<section class="how" data-outline={labels?.howOutline ?? 'How to get'} use:reveal={{ delay: 120 }}>
   <header class="sec-head">
-    <span class="eyebrow">Acquisition <i>·</i> {entry.since}</span>
+    <span class="eyebrow">{labels?.how ?? 'Acquisition'} <i>·</i> {entry.since}</span>
     <h3 class="display">How</h3>
   </header>
 

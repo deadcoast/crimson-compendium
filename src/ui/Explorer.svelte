@@ -69,7 +69,7 @@
           {/each}
         </ol>
       {:else}
-        <p class="hint">Mounts you open gather here.</p>
+        <p class="hint">Plates you open gather here.</p>
       {/if}
     </Pane>
 
@@ -92,7 +92,7 @@
       <button onclick={() => (app.sheet = 'tiers')}><Glyph name="info" size={13} /> How tiers work</button>
       <button onclick={() => (app.sheet = 'sources')}><Glyph name="book" size={13} /> Sources</button>
     </div>
-    <p class="asof">{branches[0].asOf}</p>
+    <p class="asof">{view.branch.asOf}</p>
   </footer>
 </nav>
 

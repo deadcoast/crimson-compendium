@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/current%20to-Charting%20the%20Unknown-4aa6bb" alt="Current to Charting the Unknown">
 </p>
 
-<p align="center">A field reference for <em>Crimson Desert</em>. Pywel's mounts: where each one lives, how to make it yours, and what it is worth riding for.</p>
+<p align="center">A field reference for <em>Crimson Desert</em>. Pywel's mounts: where each one lives, how to make it yours, and what it is worth riding for. And an endgame money guide that gets you into <em>Charting the Unknown</em> rich.</p>
 
 ---
 
@@ -34,6 +34,18 @@ Lists for every way you play a session:
 
 A mount can sit in several lists. The A.T.A.G. is Land, Underwater, Mechanical and DLC at once.
 
+**Riches**, the second branch: an endgame economy guide for a player who has finished the main story but not started *Charting the Unknown*. It has 24 money methods, each on its own plate.
+
+- **The Route**: eight phases in order, from arming the multipliers to pioneering islands. Every step links the plate that explains it.
+- **Ledger**: what a method pays in, each figure with its basis (patch notes, guide, in-game screenshot, player report, or a sum shown), costs, the multipliers that raise it, and what to watch out for.
+- **Tiers**: Return, Effort, Setup and Scale rated **I–V** within *Management* (camp, staff, assets) or *Player Control* (what Kliff does by hand). Where nothing documents a payout, the method is marked not rated.
+
+| | |
+|---|---|
+| **Leaves** | Greymanes · Trade · Bank · Pailune · Real Estate · Ships · Islands · Hustles |
+| **Category branches** | Management · Player Control · When · Multipliers · Can Lose Money |
+| **Best for** | Away From the Controller · Money This Session · Scaling Up |
+
 ## Screenshots
 
 <table>
@@ -44,6 +56,10 @@ A mount can sit in several lists. The A.T.A.G. is Land, Underwater, Mechanical a
   <tr>
     <td width="50%"><img src="docs/screenshots/ladder.webp" alt="The Tier Ladder"><br><sub>Tier Ladder</sub></td>
     <td width="50%"><img src="docs/screenshots/phone.webp" alt="Phone layout: list, plate and explorer drawer"><br><sub>Phone: list, plate, explorer drawer</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/riches-route.webp" alt="Riches: The Route, phase one"><br><sub>Riches: The Route</sub></td>
+    <td width="50%"><img src="docs/screenshots/riches-ledger.webp" alt="Riches: the ledger on the Trade Wagons plate"><br><sub>Riches: a ledger, every figure with its basis</sub></td>
   </tr>
 </table>
 
@@ -67,9 +83,15 @@ npm run media    # fetch + convert images for entries with a new "from" URL (Pyt
 ## Keyboard
 
 | Anywhere | |
+<<<<<<< HEAD
 | --- | --- |
 | `/` or `Ctrl/⌘ K` | search mounts, places, traits and branches |
 | `J` / `K` or `→` / `←` | next / previous mount in the current list |
+=======
+|---|---|
+| `/` or `Ctrl/⌘ K` | search mounts, money methods, places, traits and branches |
+| `J` / `K` or `→` / `←` | next / previous entry in the current list |
+>>>>>>> 479d8ce95100d81ec3cb9667ea5b6708e127b91e
 | `L` | Tier Ladder and back |
 | `Alt \` or `Ctrl ⇧ E` | focus the explorer |
 
@@ -113,10 +135,16 @@ src/
       branch.json    leaves, category branches, metrics, classes, lenses, redirects
       entries.json   the 48 mounts
       MountRecord.svelte
+    riches/
+      branch.json    the same, plus labels, tier rules and the Route
+      entries.json   the 24 money methods, each with its ledger
+      RichesLedger.svelte
   styles/            tokens.css (every colour, font, easing) + base.css
 public/media/        generated WebP files
 tools/media.py       image pipeline
 docs/
+  PLAN.md            the global plan (IDENTIFIED → PLAN → SHELVED → TODO)
+  RICHES-RESEARCH.md Riches research, every figure with its source
   spec/              treefold specs (tier-colors.txt)
   .archived/         original treefold prompts
   releases/          release notes, one per tag

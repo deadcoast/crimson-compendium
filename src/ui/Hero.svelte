@@ -40,7 +40,7 @@
     </div>
   {/key}
 
-  <Particles mode={entry.cls} />
+  <Particles mode={branch.classes.find((c) => c.id === entry.cls)?.ambient ?? entry.cls} />
   <div class="veil" aria-hidden="true"></div>
 
   <a class="back" href={backHref} aria-label="Back to list"><Glyph name="left" size={18} /></a>

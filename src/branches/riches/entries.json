@@ -1,0 +1,3672 @@
+[
+ {
+  "id": "golden-beer",
+  "name": "Golden Beer",
+  "leaf": "greymanes",
+  "cls": "management",
+  "domains": [
+   "funds"
+  ],
+  "kind": "Dispatch multiplier",
+  "region": "Demeniss",
+  "area": "Burnhand Quarry",
+  "trait": "Doubles every dispatch payout while it sits in your bag",
+  "summary": "Mazzul's stash of premium beer. Holding it doubles the main rewards of every Greymane dispatch: Camp Funds, food, timber and the rest, on every repeat cycle. Church Blessings multiply on top of it.",
+  "tiers": {
+   "return": {
+    "tier": 1,
+    "basis": "Doubles the main reward of every dispatch; one security run went from about 7,000 to about 14,000 Camp Funds."
+   },
+   "effort": {
+    "tier": 1,
+    "basis": "Passive once owned: no activation, no timer, no upkeep."
+   },
+   "setup": {
+    "tier": 4,
+    "basis": "Main story Chapter 8, the Demeniss noble houses in order up to House Byron, then the Mazzul boss fight."
+   },
+   "scale": {
+    "tier": 1,
+    "basis": "Applies to every dispatch you run, and to each repeat cycle."
+   }
+  },
+  "tags": [
+   "before-dlc",
+   "multiplier"
+  ],
+  "requires": [
+   "Main story Chapter 8 finished",
+   "Demeniss noble house chains cleared in order through House Elmore"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Clear the Demeniss noble house questlines in their fixed order; House Elmore's courts unlock House Byron.",
+     "Run House Byron's Dark Justice chain: A Secret Request, then One Step Ahead. Both lead to Burnhand Quarry.",
+     "Defeat Mazzul, the Dark Justiciar. You do not have to clear every soldier in the quarry first.",
+     "Keep the Golden Beer in your inventory. The effect applies while you hold it."
+    ]
+   }
+  ],
+  "location": "Burnhand Quarry, Demeniss, near the Kingshield Mountains.",
+  "notes": [
+   "Easy difficulty does not change the reward, so lowering it for the Mazzul fight costs nothing.",
+   "Special drops such as Abyss Artifacts from ruin dispatches are not doubled."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.fdaytalk.com/wp-content/uploads/2026/04/crimson-desert-golden-beer.avif",
+    "credit": "fdaytalk",
+    "crop": [
+     0.935,
+     0.1,
+     0.2
+    ],
+    "src": "media/riches/golden-beer/portrait.webp",
+    "w": 135,
+    "h": 135
+   },
+   "hero": {
+    "from": "https://img.fdaytalk.com/wp-content/uploads/2026/04/crimson-desert-golden-beer.avif",
+    "credit": "fdaytalk",
+    "focus": "60% 40%",
+    "src": "media/riches/golden-beer/hero.webp",
+    "w": 1200,
+    "h": 675
+   },
+   "captures": [
+    {
+     "from": "https://img.fdaytalk.com/wp-content/uploads/2026/04/crimson-desert-golden-beer-1.avif",
+     "credit": "fdaytalk",
+     "kind": "map",
+     "caption": "Quest map — House Byron's One Step Ahead, Demeniss",
+     "src": "media/riches/golden-beer/map-1.webp",
+     "w": 1200,
+     "h": 675
+    },
+    {
+     "from": "https://img.fdaytalk.com/wp-content/uploads/2026/04/crimson-desert-golden-beer.avif",
+     "credit": "fdaytalk",
+     "kind": "menu",
+     "caption": "Item card — Golden Beer: Double Mission Dispatch Rewards",
+     "src": "media/riches/golden-beer/menu-2.webp",
+     "w": 1200,
+     "h": 675
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/golden-beer",
+    "title": "Golden Beer"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/dispatch-missions",
+    "title": "Dispatch Missions"
+   },
+   {
+    "by": "fdaytalk",
+    "url": "https://www.fdaytalk.com/crimson-desert-golden-beer/",
+    "title": "How to Get Golden Beer"
+   },
+   {
+    "by": "thegamer",
+    "url": "https://www.pulse.bot/gaming/news/how-to-get-golden-beer-in-crimson-desert-c0760b2d-9444-4ae5-9102-a25760c1cedb/",
+    "title": "How to Get Golden Beer (via Pulse)"
+   }
+  ],
+  "since": "Base game · fixed in 1.04",
+  "ledger": {
+   "pays": "Multiplier",
+   "cycle": "Every dispatch, every repeat",
+   "figures": [
+    {
+     "label": "Dispatch rewards",
+     "value": "×2",
+     "basis": "guide",
+     "by": "thegameswiki"
+    },
+    {
+     "label": "Security run, before and after",
+     "value": "≈7,000 → ≈14,000 Camp Funds",
+     "basis": "guide",
+     "by": "thegameswiki"
+    }
+   ],
+   "costs": [
+    {
+     "label": "Price",
+     "value": "A boss fight and four questlines",
+     "basis": "guide",
+     "by": "fdaytalk"
+    }
+   ],
+   "stacks": [
+    "church-blessings"
+   ],
+   "watch": [
+    "Before patch 1.04 the bonus could silently stop applying after a few hours. Check that your next payout shows the doubled figure.",
+    "Rare drops are excluded; only the main reward categories double."
+   ]
+  },
+  "variants": []
+ },
+ {
+  "id": "church-blessings",
+  "name": "Church Blessings",
+  "leaf": "greymanes",
+  "cls": "management",
+  "domains": [
+   "funds"
+  ],
+  "kind": "Regional dispatch multiplier",
+  "region": "Every region",
+  "area": "Regional churches",
+  "trait": "+2% per Blessing level, up to +200%, region by region",
+  "summary": "Donating Camp Funds to a region's church raises its Blessing level. Each level adds 2% to every dispatch reward in that region, permanently, up to +200%. It multiplies with Golden Beer, so put it where your repeat dispatches already run.",
+  "tiers": {
+   "return": {
+    "tier": 2,
+    "basis": "Up to +200% on dispatch rewards in one region, multiplied with Golden Beer."
+   },
+   "effort": {
+    "tier": 1,
+    "basis": "A one-off donation; the bonus is permanent."
+   },
+   "setup": {
+    "tier": 3,
+    "basis": "About 110,000 for +100% in Hernand and about 150,000 in Demeniss."
+   },
+   "scale": {
+    "tier": 2,
+    "basis": "Each region needs its own donations, so it scales with how many regions you dispatch in."
+   }
+  },
+  "tags": [
+   "before-dlc",
+   "multiplier"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Pick the region where your strongest repeat dispatches run.",
+     "Open that region's church and donate Camp Funds to raise its Blessing level.",
+     "Keep raising the region you already dispatch in before starting a new one."
+    ]
+   }
+  ],
+  "location": "Each region's church, for example the Church of Hernand.",
+  "notes": [
+   "The donation comes out of camp money (Carl's pool), not Kliff's own Silver."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/farm-collection-guide/crimson-desert-camp-funds-church-blessing-donation.webp",
+    "credit": "consolepulse",
+    "crop": [
+     0.5,
+     0.15,
+     0.55
+    ],
+    "src": "media/riches/church-blessings/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/farm-collection-guide/crimson-desert-camp-funds-church-blessing-donation.webp",
+    "credit": "consolepulse",
+    "focus": "50% 12%",
+    "src": "media/riches/church-blessings/hero.webp",
+    "w": 620,
+    "h": 1000
+   },
+   "captures": [
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/farm-collection-guide/crimson-desert-camp-funds-church-blessing-donation.webp",
+     "credit": "consolepulse",
+     "kind": "menu",
+     "caption": "Church screen — Church of Hernand, Blessings on Hernand",
+     "src": "media/riches/church-blessings/menu-1.webp",
+     "w": 620,
+     "h": 1000
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/dispatch-missions",
+    "title": "Dispatch Missions"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/best-passive-income-setup-crimson-desert",
+    "title": "Best Passive Income Setup"
+   },
+   {
+    "by": "fdaytalk",
+    "url": "https://www.fdaytalk.com/crimson-desert-golden-beer/",
+    "title": "How to Get Golden Beer"
+   }
+  ],
+  "since": "Base game",
+  "ledger": {
+   "pays": "Multiplier",
+   "cycle": "Permanent, per region",
+   "figures": [
+    {
+     "label": "Per Blessing level",
+     "value": "+2% dispatch rewards",
+     "basis": "guide",
+     "by": "consolepulse"
+    },
+    {
+     "label": "Cap",
+     "value": "+200%",
+     "basis": "guide",
+     "by": "thegameswiki"
+    }
+   ],
+   "costs": [
+    {
+     "label": "+100% in Hernand",
+     "value": "≈110,000",
+     "basis": "guide",
+     "by": "thegameswiki"
+    },
+    {
+     "label": "+100% in Demeniss",
+     "value": "≈150,000",
+     "basis": "guide",
+     "by": "thegameswiki"
+    }
+   ],
+   "stacks": [
+    "golden-beer"
+   ],
+   "watch": [
+    "The bonus only applies to dispatches in the same region."
+   ]
+  },
+  "variants": [],
+  "requires": []
+ },
+ {
+  "id": "estate-security",
+  "name": "Estate Security",
+  "leaf": "greymanes",
+  "cls": "management",
+  "domains": [
+   "funds"
+  ],
+  "kind": "Camp Funds dispatch",
+  "region": "Hernand · Demeniss",
+  "area": "Hillside, Oakenshield, Azerian and Sungrove manors",
+  "trait": "Food in, Camp Funds out, on repeat",
+  "summary": "Greymanes guard a manor and bring back Camp Funds. It is the base of the dispatch engine: it costs food, it repeats, and Golden Beer and Blessings multiply it. Payouts in published screenshots run from 1.8K on a basic Hillside run to 13K at Azerian Manor.",
+  "tiers": {
+   "return": {
+    "tier": 3,
+    "basis": "1.8K to 13K Camp Funds per run in guide screenshots; about 30,000 on a buffed first run per The Games Wiki."
+   },
+   "effort": {
+    "tier": 1,
+    "basis": "Set it to Repeat and it re-queues itself while food lasts."
+   },
+   "setup": {
+    "tier": 2,
+    "basis": "Comrades with the Escort skill, a stock of food, and a camp at level 2 for the Dispatch Coordinator."
+   },
+   "scale": {
+    "tier": 2,
+    "basis": "Several manors run at once; each one multiplies with Beer and Blessings."
+   }
+  },
+  "tags": [
+   "before-dlc"
+  ],
+  "requires": [
+   "Dispatch Coordinator (Ross) at camp",
+   "Food to pay each run"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Talk to Ross at camp, or open Mission Dispatch from the world map.",
+     "Pick a manor's Estate Security mission and assign comrades; Escort specialists raise the payout.",
+     "Choose Repeat so the crew re-queues when it returns.",
+     "Keep a food dispatch running beside it so the queue never stops on an empty larder."
+    ]
+   }
+  ],
+  "location": "Hillside Manor and Oakenshield Manor in Hernand; Azerian and Sungrove manors further afield.",
+  "notes": [
+   "A mission that costs more food than your farms make will stall the whole repeat queue."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/passive-income/Azerian-Manor-defense-mission.webp",
+    "credit": "consolepulse",
+    "crop": [
+     0.5,
+     0.1,
+     0.5
+    ],
+    "src": "media/riches/estate-security/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/passive-income/Hillside-Manor-Estate-Security-mission.webp",
+    "credit": "consolepulse",
+    "focus": "50% 8%",
+    "src": "media/riches/estate-security/hero.webp",
+    "w": 631,
+    "h": 1000
+   },
+   "captures": [
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/passive-income/Azerian-Manor-defense-mission.webp",
+     "credit": "consolepulse",
+     "kind": "menu",
+     "caption": "Dispatch screen — Azerian Manor estate security, 13K reward in 7 hours",
+     "src": "media/riches/estate-security/menu-1.webp",
+     "w": 675,
+     "h": 1000
+    },
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/passive-income/Hillside-Manor-Estate-Security-mission.webp",
+     "credit": "consolepulse",
+     "kind": "menu",
+     "caption": "Dispatch screen — Hillside Manor estate security, 1.8K reward in 17 hours",
+     "src": "media/riches/estate-security/menu-2.webp",
+     "w": 631,
+     "h": 1000
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/best-passive-income-setup-crimson-desert",
+    "title": "Best Passive Income Setup"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/dispatch-missions",
+    "title": "Dispatch Missions"
+   },
+   {
+    "by": "playersua",
+    "url": "https://players.com.ua/en/news/how-to-earn-camp-funds-in-crimson-desert/",
+    "title": "How to Earn Camp Funds"
+   },
+   {
+    "by": "xboxplay",
+    "url": "https://xboxplay.games/crimson-desert/how-to-complete-the-saw-turns-again-quest-in-crimson-desert-77231",
+    "title": "The Saw Turns Again"
+   }
+  ],
+  "since": "Base game",
+  "ledger": {
+   "pays": "Camp Funds",
+   "cycle": "7 to 17 in-game hours per run",
+   "figures": [
+    {
+     "label": "Azerian Manor run",
+     "value": "13K Camp Funds, 7 hours",
+     "basis": "screenshot",
+     "by": "consolepulse"
+    },
+    {
+     "label": "Hillside Manor run",
+     "value": "1.8K Camp Funds, 17 hours",
+     "basis": "screenshot",
+     "by": "consolepulse"
+    },
+    {
+     "label": "Buffed first run",
+     "value": "≈30,000 Camp Funds",
+     "basis": "guide",
+     "by": "thegameswiki"
+    }
+   ],
+   "costs": [
+    {
+     "label": "Each run",
+     "value": "Food from camp provisions",
+     "basis": "guide",
+     "by": "consolepulse"
+    }
+   ],
+   "stacks": [
+    "golden-beer",
+    "church-blessings",
+    "time-skip"
+   ],
+   "watch": [
+    "The wiki notes auto-repeat runs paying about half of a buffed manual run (about 15,000 against 30,000) because of a repeat bug; compare your own payouts."
+   ]
+  },
+  "variants": []
+ },
+ {
+  "id": "supply-dispatches",
+  "name": "Supply Dispatches",
+  "leaf": "greymanes",
+  "cls": "management",
+  "domains": [
+   "goods"
+  ],
+  "kind": "Food and materials dispatch",
+  "region": "Every region",
+  "area": "Quarries, fishing docks, logging camps",
+  "trait": "Keeps the money missions fed",
+  "summary": "Quarries, fishing docks, farms and logging camps return food, stone and timber. They pay nothing you can spend at a merchant, but Estate Security eats food and castles, ships and research eat materials. A balanced set of these keeps every money dispatch on Repeat.",
+  "tiers": {
+   "return": {
+    "tier": null,
+    "basis": "Pays food and materials, not money."
+   },
+   "effort": {
+    "tier": 1,
+    "basis": "Runs on Repeat."
+   },
+   "setup": {
+    "tier": 1,
+    "basis": "Open from the start of camp management; generic workers can fill the slots."
+   },
+   "scale": {
+    "tier": 2,
+    "basis": "Runs many at once; Grey-0 workers fill the routine slots."
+   }
+  },
+  "tags": [
+   "before-dlc"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Run at least one food mission (fishing at Rodbel or Nas River docks, or farming) for every food-hungry money mission.",
+     "Add quarry and logging missions for the stone and timber that castles, ships and research need.",
+     "Measure the net change after a cycle: if food falls, add a producer or drop the weakest consumer."
+    ]
+   }
+  ],
+  "location": "Karin, Perwin and Crimson Mountains quarries; Rodbel and Nas River fishing docks; Dewhaven logging camp.",
+  "media": {
+   "portrait": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/passive-income/stone-at-Karin-Quarry-location.webp",
+    "credit": "consolepulse",
+    "crop": [
+     0.25,
+     0.3,
+     0.38
+    ],
+    "src": "media/riches/supply-dispatches/portrait.webp",
+    "w": 231,
+    "h": 231
+   },
+   "hero": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/passive-income/stone-at-Karin-Quarry-location.webp",
+    "credit": "consolepulse",
+    "focus": "40% 40%",
+    "src": "media/riches/supply-dispatches/hero.webp",
+    "w": 1000,
+    "h": 609
+   },
+   "captures": [
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/passive-income/stone-at-Karin-Quarry-location.webp",
+     "credit": "consolepulse",
+     "kind": "map",
+     "caption": "World map — Karin Quarry",
+     "src": "media/riches/supply-dispatches/map-1.webp",
+     "w": 1000,
+     "h": 609
+    },
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/passive-income/Rodbel-Fishing-Dock-Freshwater-Fishing-mission.webp",
+     "credit": "consolepulse",
+     "kind": "menu",
+     "caption": "Dispatch screen — Rodbel Fishing Dock freshwater fishing, 1.4K reward",
+     "src": "media/riches/supply-dispatches/menu-2.webp",
+     "w": 655,
+     "h": 1001
+    },
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/passive-income/mining-mission.webp",
+     "credit": "consolepulse",
+     "kind": "menu",
+     "caption": "Dispatch screen — small-scale mining, 2.4K reward",
+     "src": "media/riches/supply-dispatches/menu-3.webp",
+     "w": 620,
+     "h": 1000
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/best-passive-income-setup-crimson-desert",
+    "title": "Best Passive Income Setup"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/dispatch-missions",
+    "title": "Dispatch Missions"
+   }
+  ],
+  "since": "Base game",
+  "ledger": {
+   "pays": "Food, stone, timber",
+   "cycle": "Hours per run, on Repeat",
+   "figures": [
+    {
+     "label": "Large-scale logging",
+     "value": "≈16,000 wood per 18–24 hours",
+     "basis": "guide",
+     "by": "thegameswiki"
+    },
+    {
+     "label": "Cacao harvesting",
+     "value": "≈17,000 provisions with eight workers",
+     "basis": "guide",
+     "by": "thegameswiki"
+    }
+   ],
+   "costs": [
+    {
+     "label": "Each run",
+     "value": "Food and funds, by mission",
+     "basis": "guide",
+     "by": "consolepulse"
+    }
+   ],
+   "stacks": [
+    "golden-beer",
+    "church-blessings",
+    "grey-0-workers"
+   ],
+   "watch": [
+    "Demeniss quarry runs cap at 3,000 stone until regional reputation reaches 50."
+   ]
+  },
+  "variants": [],
+  "notes": [],
+  "requires": []
+ },
+ {
+  "id": "excavation-dispatches",
+  "name": "Excavation Dispatches",
+  "leaf": "greymanes",
+  "cls": "management",
+  "domains": [
+   "funds"
+  ],
+  "kind": "Camp Funds dispatch",
+  "region": "Every region",
+  "area": "Ruins and excavation sites",
+  "trait": "The biggest single dispatch payouts on record",
+  "summary": "Excavation and exploration missions at ruins pay larger lumps of Camp Funds than manor security: The Games Wiki records 37,000 per Tinkerton excavation and 20,000 at Acroser Village. Ruin digs at Timeworn and Bordig also turn up rare items. Patch 1.06 made stronghold excavations repeatable.",
+  "tiers": {
+   "return": {
+    "tier": 3,
+    "basis": "37,000 Camp Funds per Tinkerton completion; 20,000 at Acroser Village."
+   },
+   "effort": {
+    "tier": 1,
+    "basis": "Repeatable at strongholds since 1.06."
+   },
+   "setup": {
+    "tier": 3,
+    "basis": "Needs comrades with the right specialist skills; Explorer slots cap at five."
+   },
+   "scale": {
+    "tier": 2,
+    "basis": "Multiplies with Beer and Blessings; limited by specialists and the Explorer cap."
+   }
+  },
+  "tags": [
+   "before-dlc"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Keep named specialists free for excavation; give routine slots to Grey-0 or hired workers.",
+     "Dispatch to the excavation sites and check each one for the Repeat prompt; not every ruin has it."
+    ]
+   }
+  ],
+  "location": "Tinkerton, Acroser Village, and the Timeworn and Bordig ruins.",
+  "media": {
+   "portrait": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/quests/dispatch-missions/Serpent-Shrine-Exploration.webp",
+    "credit": "consolepulse",
+    "crop": [
+     0.1,
+     0.13,
+     0.28
+    ],
+    "src": "media/riches/excavation-dispatches/portrait.webp",
+    "w": 156,
+    "h": 156
+   },
+   "hero": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/quests/dispatch-missions/Serpent-Shrine-Exploration.webp",
+    "credit": "consolepulse",
+    "focus": "50% 30%",
+    "src": "media/riches/excavation-dispatches/hero.webp",
+    "w": 1000,
+    "h": 559
+   },
+   "captures": [
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/quests/dispatch-missions/Serpent-Shrine-Exploration.webp",
+     "credit": "consolepulse",
+     "kind": "menu",
+     "caption": "Dispatch screen — Serpent Shrine exploration with Grey-0 crew",
+     "src": "media/riches/excavation-dispatches/menu-1.webp",
+     "w": 1000,
+     "h": 559
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/dispatch-missions",
+    "title": "Dispatch Missions"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/best-passive-income-setup-crimson-desert",
+    "title": "Best Passive Income Setup"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-farming-guide-gold-abyss-gear",
+    "title": "Farming Guide: Gold and Abyss Gear"
+   }
+  ],
+  "since": "Base game · repeatable since 1.06",
+  "ledger": {
+   "pays": "Camp Funds, rare items",
+   "cycle": "Per completion",
+   "figures": [
+    {
+     "label": "Tinkerton excavation",
+     "value": "37,000 Camp Funds",
+     "basis": "guide",
+     "by": "thegameswiki"
+    },
+    {
+     "label": "Acroser Village",
+     "value": "20,000 Camp Funds",
+     "basis": "guide",
+     "by": "thegameswiki"
+    }
+   ],
+   "costs": [
+    {
+     "label": "Crew",
+     "value": "Skill-gated specialists",
+     "basis": "guide",
+     "by": "consolepulse"
+    }
+   ],
+   "stacks": [
+    "golden-beer",
+    "church-blessings",
+    "time-skip"
+   ],
+   "watch": [
+    "Check the Repeat prompt mission by mission; the wiki warns that not every ruin qualifies."
+   ]
+  },
+  "variants": [],
+  "notes": [],
+  "requires": []
+ },
+ {
+  "id": "grey-0-workers",
+  "name": "Grey-0 Workers",
+  "leaf": "greymanes",
+  "cls": "management",
+  "domains": [
+   "access"
+  ],
+  "kind": "Dispatch capacity",
+  "region": "Delesyia",
+  "area": "Marni's Steel Armory, near Mount Benos",
+  "trait": "Mecha workers that fill the routine slots",
+  "summary": "Grey-0 mecha workers take the ordinary positions on dispatches so your named Greymanes can lead the skill-gated ones, and they lift the roster past its cap of about 37 comrades. More workers mean more missions running at once. They also make a losing queue drain food and funds faster.",
+  "tiers": {
+   "return": {
+    "tier": null,
+    "basis": "Adds capacity; pays nothing itself."
+   },
+   "effort": {
+    "tier": 1,
+    "basis": "Built by a dispatch of their own."
+   },
+   "setup": {
+    "tier": 4,
+    "basis": "Chapter 10, the Chaya Research at Dewhaven, Marni's Steel Armory liberated, then 10,000 Camp Funds and camp stock per worker."
+   },
+   "scale": {
+    "tier": 1,
+    "basis": "Every worker opens another slot on another mission."
+   }
+  },
+  "tags": [
+   "before-dlc",
+   "multiplier",
+   "risk"
+  ],
+  "requires": [
+   "Main story Chapter 10 (Delesyia)",
+   "Chaya Research complete at the Dewhaven Research Institute",
+   "Marni's Steel Armory liberated (the Mechanicus)"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "At Dewhaven Keep in south-western Delesyia, finish the Electricity – Movement Conversion Mechanism Research, then the Chaya Research. Enter without a mask: the guards attack masked visitors.",
+     "Return the Chaya to the Research Assistant at Windrose Farm; the research completes about 8 in-game hours later.",
+     "Liberate Marni's Steel Armory by defeating the Mechanicus.",
+     "Open the Armory's Missions tab and choose Craft Mecha Worker with two comrades assigned, one an Engineer.",
+     "Put the workers on routine positions; keep specialists for excavation, facilities and crew roles."
+    ]
+   }
+  ],
+  "location": "Marni's Steel Armory, central Delesyia near Mount Benos; research at Dewhaven Keep.",
+  "notes": [
+   "Add workers only to a portfolio whose food and funds already balance."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/farm-collection-guide/crimson-desert-grey-0-workers.webp",
+    "credit": "consolepulse",
+    "crop": [
+     0.55,
+     0.42,
+     0.95
+    ],
+    "src": "media/riches/grey-0-workers/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/farm-collection-guide/crimson-desert-grey-0-workers.webp",
+    "credit": "consolepulse",
+    "focus": "55% 35%",
+    "src": "media/riches/grey-0-workers/hero.webp",
+    "w": 1000,
+    "h": 679
+   },
+   "captures": [
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/quests/dispatch-missions/Serpent-Shrine-Exploration.webp",
+     "credit": "consolepulse",
+     "kind": "menu",
+     "caption": "Dispatch screen — Grey-0 workers filling a mission crew",
+     "src": "media/riches/grey-0-workers/menu-1.webp",
+     "w": 1000,
+     "h": 559
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "allthingshow",
+    "url": "https://allthings.how/crimson-desert-grey-0-mecha-workers-unlock-craft-and-deploy-robot-comrades/",
+    "title": "Grey-0 Mecha Workers: Unlock, Craft, and Deploy"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-how-to-create-grey-0-mecha-workers",
+    "title": "How to Create Grey-0 Mecha Workers"
+   },
+   {
+    "by": "xboxplay",
+    "url": "https://xboxplay.games/crimson-desert/how-to-craft-robot-comrades-in-crimson-desert-72259",
+    "title": "How to Craft Robot Comrades"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/dispatch-missions",
+    "title": "Dispatch Missions"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/best-passive-income-setup-crimson-desert",
+    "title": "Best Passive Income Setup"
+   }
+  ],
+  "since": "Base game",
+  "ledger": {
+   "pays": "Dispatch slots",
+   "cycle": "About 4 in-game hours per worker",
+   "figures": [
+    {
+     "label": "Build time",
+     "value": "≈4 in-game hours per worker",
+     "basis": "guide",
+     "by": "allthingshow"
+    },
+    {
+     "label": "Output, per The Games Wiki",
+     "value": "1 to 3 workers every 3 hours",
+     "basis": "guide",
+     "by": "thegameswiki"
+    }
+   ],
+   "costs": [
+    {
+     "label": "Each worker",
+     "value": "5,000 weapons · 1,000 timber · 2,000 food · 10,000 Camp Funds",
+     "basis": "guide",
+     "by": "allthingshow"
+    }
+   ],
+   "stacks": [],
+   "watch": [
+    "Workers do not make a losing mission profitable; they make it lose faster.",
+    "Guides disagree on output: one worker per about 4 hours (All Things How, Console Pulse) against 1–3 every 3 hours (The Games Wiki)."
+   ]
+  },
+  "variants": []
+ },
+ {
+  "id": "timberham-sawmill",
+  "name": "Timberham Sawmill",
+  "leaf": "real-estate",
+  "cls": "management",
+  "domains": [
+   "funds"
+  ],
+  "kind": "Leased facility",
+  "region": "Hernand",
+  "area": "Timberham",
+  "trait": "The first lease: 15,000 and a working business",
+  "summary": "The DLC's first business. A notice on the Hernand board leads to the lease, and the quest that follows teaches workstations, pricing and popularity. In one published screenshot a young sawmill earned 48,422 Camp Funds across 40 hours open on 4,200 daily wages; finishing it opens leasing everywhere else.",
+  "tiers": {
+   "return": {
+    "tier": 3,
+    "basis": "48,422 earned over 40 hours open against 4,200 daily wages in a guide screenshot; a 7-hour day showed 18,094 against 33,660 in wages and upkeep."
+   },
+   "effort": {
+    "tier": 2,
+    "basis": "Earns while you are away, but stock, workstations and prices need setting up."
+   },
+   "setup": {
+    "tier": 2,
+    "basis": "15,000 lease and four comrades, ideally Logging and Crafting at level 3."
+   },
+   "scale": {
+    "tier": 3,
+    "basis": "One building; its popularity levels raise customers and unlock recipes."
+   }
+  },
+  "tags": [
+   "dlc",
+   "risk"
+  ],
+  "requires": [
+   "Charting the Unknown installed (2.04)",
+   "Main story Chapter 3",
+   "15,000 Camp Funds"
+  ],
+  "routes": [
+   {
+    "label": "The Stilled Saw → The Saw Turns Again",
+    "steps": [
+     "Read the Timberham Sawmill notice on the Hernand board to start Renewed Vitality.",
+     "Open the map's Facilities tab, select the sawmill and sign the 15,000 lease.",
+     "Assign four Greymanes, ideally with level 3 Logging and Crafting, and match workstations to the staff you have.",
+     "Price low until Popularity Level 3: give customers fair prices, enable Wood Synergy, sell 10 plank items.",
+     "Reaching Popularity Level 3 completes the quest and opens leasing at the other facilities."
+    ]
+   }
+  ],
+  "location": "Timberham, Hernand region.",
+  "notes": [
+   "Workers assigned to a facility cannot go on dispatches or crew a ship."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://xboxplay.games/imagenesSoporte/soporte-1794159032-5190.webp",
+    "credit": "xboxplay",
+    "crop": [
+     0.42,
+     0.55,
+     0.9
+    ],
+    "src": "media/riches/timberham-sawmill/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://xboxplay.games/imagenesSoporte/soporte-1794159032-5190.webp",
+    "credit": "xboxplay",
+    "focus": "40% 50%",
+    "src": "media/riches/timberham-sawmill/hero.webp",
+    "w": 1920,
+    "h": 1080
+   },
+   "captures": [
+    {
+     "from": "https://xboxplay.games/imagenesSoporte/soporte-1794159032-5190.webp",
+     "credit": "xboxplay",
+     "kind": "action",
+     "caption": "Sawmill open — 104 customers, 48,422 earned over 40 hours",
+     "src": "media/riches/timberham-sawmill/action-1.webp",
+     "w": 1600,
+     "h": 900
+    },
+    {
+     "from": "https://nfapi.noobfeed.com/storage/media/72780/crimson-desert-enhanced-charting-the-unknown-run-facilities-2.jpg",
+     "credit": "noobfeed",
+     "kind": "action",
+     "caption": "Sawmill open — 18,094 earned in 7 hours, 25,160 daily upkeep",
+     "src": "media/riches/timberham-sawmill/action-2.webp",
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "from": "https://nfapi.noobfeed.com/storage/media/72779/crimson-desert-enhanced-charting-the-unknown-run-facilities-1.jpg",
+     "credit": "noobfeed",
+     "kind": "action",
+     "caption": "Setting up — placing installables in the yard",
+     "src": "media/riches/timberham-sawmill/action-3.webp",
+     "w": 1280,
+     "h": 720
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "xboxplay",
+    "url": "https://xboxplay.games/crimson-desert/how-to-complete-the-saw-turns-again-quest-in-crimson-desert-77231",
+    "title": "The Saw Turns Again"
+   },
+   {
+    "by": "xboxplay",
+    "url": "https://xboxplay.games/crimson-desert/how-to-run-a-business-in-crimson-desert-77196",
+    "title": "How to Run a Business"
+   },
+   {
+    "by": "neonlights",
+    "url": "https://www.neonlightsmedia.com/blog/crimson-desert-facilities-guide",
+    "title": "Facilities Guide"
+   },
+   {
+    "by": "noobfeed",
+    "url": "https://www.noobfeed.com/articles/crimson-desert-enhanced-charting-the-unknown-run-facilities",
+    "title": "How to Run Facilities"
+   },
+   {
+    "by": "gamesgg",
+    "url": "https://games.gg/crimson-desert/guides/crimson-desert-facilities-guide-rent-and-manage-strongholds/",
+    "title": "Facilities Guide"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/2026/11/14/crimson-desert-facility-management-guide-unlock-earn-money/",
+    "title": "Facility Management Guide"
+   }
+  ],
+  "since": "Charting the Unknown · 2.04",
+  "ledger": {
+   "pays": "Camp Funds",
+   "cycle": "Daily, while open",
+   "figures": [
+    {
+     "label": "40 hours open",
+     "value": "48,422 earned · 4,200 daily wages",
+     "basis": "screenshot",
+     "by": "xboxplay"
+    },
+    {
+     "label": "7 hours open",
+     "value": "18,094 earned · 8,500 wages · 25,160 upkeep",
+     "basis": "screenshot",
+     "by": "noobfeed"
+    }
+   ],
+   "costs": [
+    {
+     "label": "Lease",
+     "value": "15,000 Camp Funds",
+     "basis": "guide",
+     "by": "xboxplay"
+    },
+    {
+     "label": "Running",
+     "value": "Daily wages + daily upkeep",
+     "basis": "guide",
+     "by": "vulkk"
+    }
+   ],
+   "stacks": [],
+   "watch": [
+    "Upkeep and wages are charged daily. A young shop can run at a loss, as the 7-hour screenshot shows.",
+    "Vulkk lists the lease as 15,000 Copper; Xbox Play shows 15,000 Camp Funds. Budget for the larger figure.",
+    "Patch 2.04.02 fixed a bug that inflated facility earnings; earnings figures from before October 30 overstate the real rate."
+   ]
+  },
+  "variants": []
+ },
+ {
+  "id": "facility-leases",
+  "name": "Facility Leases",
+  "leaf": "real-estate",
+  "cls": "management",
+  "domains": [
+   "funds"
+  ],
+  "kind": "Leased facilities",
+  "region": "Every region",
+  "area": "18 facilities: sawmills, restaurants, smithies, tailor's shops",
+  "trait": "Eighteen businesses that earn while you explore",
+  "summary": "After the sawmill, 17 more facilities can be leased: sawmills, restaurants, smithies and tailor's shops in liberated strongholds. Each needs staff with the matching skill. Players have reported around a million Camp Funds a day from one shop, but those reports predate the fix to inflated facility earnings.",
+  "tiers": {
+   "return": {
+    "tier": 2,
+    "basis": "Player reports of about 1M Camp Funds a day from one shop, made before the 2.04.02 earnings fix."
+   },
+   "effort": {
+    "tier": 2,
+    "basis": "Passive while open; prices, stock and popularity tasks need attention."
+   },
+   "setup": {
+    "tier": 3,
+    "basis": "A lease, a liberated stronghold, its regional faction quest finished, and staff with the matching skill."
+   },
+   "scale": {
+    "tier": 1,
+    "basis": "Up to 18 businesses at once; each levels up with popularity."
+   }
+  },
+  "tags": [
+   "dlc",
+   "risk"
+  ],
+  "requires": [
+   "The Saw Turns Again completed",
+   "Stronghold liberated and its faction quest finished",
+   "Staff with Cooking, Smithing, Tailoring or Woodworking"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Look for a purple lease notice in town, or open the map's Facilities tab.",
+     "Choose the business your roster can staff: Cooking for a restaurant, Smithing for a smithy, Tailoring for a tailor's shop.",
+     "Check the lease cost and your Camp Funds balance, then lease from the facility's icon.",
+     "Keep prices low while levelling popularity, then raise them at the top level."
+    ]
+   }
+  ],
+  "location": "Restaurant at Vellua; smithy at Zargan Tankworks; tailor's shops and further sawmills listed in the Facilities tab.",
+  "notes": [
+   "Skilled staff work faster and draw higher wages; keep cheaper staff until revenue covers them.",
+   "Popularity levels unlock wealthier customers, better recipes, equipment and blueprints."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://images.squarespace-cdn.com/content/v1/5f5a3ad1b3aa75691878d2a5/2e071559-9469-480b-9d72-29d20626eb2d/crimson-desert-stronghold-facilities.webp",
+    "credit": "neonlights",
+    "crop": [
+     0.5,
+     0.55,
+     0.9
+    ],
+    "src": "media/riches/facility-leases/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://images.squarespace-cdn.com/content/v1/5f5a3ad1b3aa75691878d2a5/2e071559-9469-480b-9d72-29d20626eb2d/crimson-desert-stronghold-facilities.webp",
+    "credit": "neonlights",
+    "focus": "50% 55%",
+    "src": "media/riches/facility-leases/hero.webp",
+    "w": 1280,
+    "h": 720
+   },
+   "captures": [
+    {
+     "from": "https://xboxplay.games/imagenesSoporte/soporte-1794159034-6957.webp",
+     "credit": "xboxplay",
+     "kind": "overworld",
+     "caption": "Smithy — “the finest blacksmith in town”",
+     "src": "media/riches/facility-leases/overworld-1.webp",
+     "w": 1193,
+     "h": 671
+    },
+    {
+     "from": "https://xboxplay.games/imagenesSoporte/soporte-1794159034-9348.webp",
+     "credit": "xboxplay",
+     "kind": "overworld",
+     "caption": "Restaurant — a cook at work",
+     "src": "media/riches/facility-leases/overworld-2.webp",
+     "w": 596,
+     "h": 335
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/2026/11/14/crimson-desert-facility-management-guide-unlock-earn-money/",
+    "title": "Facility Management Guide"
+   },
+   {
+    "by": "neonlights",
+    "url": "https://www.neonlightsmedia.com/blog/crimson-desert-facilities-guide",
+    "title": "Facilities Guide"
+   },
+   {
+    "by": "xboxplay",
+    "url": "https://xboxplay.games/crimson-desert/how-to-run-a-business-in-crimson-desert-77196",
+    "title": "How to Run a Business"
+   },
+   {
+    "by": "noobfeed",
+    "url": "https://www.noobfeed.com/articles/crimson-desert-enhanced-charting-the-unknown-run-facilities",
+    "title": "How to Run Facilities"
+   },
+   {
+    "by": "gamesradar",
+    "url": "https://www.gamesradar.com/games/open-world/crimson-desert-players-are-sharing-their-best-money-making-grinds-after-the-new-dlc-added-a-ship-that-costs-more-than-kliffs-soul/",
+    "title": "Players are sharing their best money-making grinds"
+   }
+  ],
+  "since": "Charting the Unknown · 2.04",
+  "ledger": {
+   "pays": "Camp Funds",
+   "cycle": "Daily, while open",
+   "figures": [
+    {
+     "label": "One shop, per day",
+     "value": "≈1,000,000 Camp Funds",
+     "basis": "player",
+     "by": "gamesradar"
+    },
+    {
+     "label": "Facilities",
+     "value": "18, in four types",
+     "basis": "guide",
+     "by": "vulkk"
+    }
+   ],
+   "costs": [
+    {
+     "label": "Lease",
+     "value": "15,000 each",
+     "basis": "guide",
+     "by": "vulkk"
+    },
+    {
+     "label": "Running",
+     "value": "Daily wages + daily upkeep",
+     "basis": "guide",
+     "by": "vulkk"
+    }
+   ],
+   "stacks": [],
+   "watch": [
+    "Patch 2.04.02 fixed a bug that inflated facility earnings. The million-a-day reports came out around launch; treat them as a ceiling.",
+    "A facility worker is out of the dispatch and ship-crew pool."
+   ]
+  },
+  "variants": []
+ },
+ {
+  "id": "castles",
+  "name": "Castles",
+  "leaf": "real-estate",
+  "cls": "management",
+  "domains": [
+   "access"
+  ],
+  "kind": "Owned stronghold",
+  "region": "Hernand · Demeniss",
+  "area": "Drakesfall Castle and Flame Knights' Castle",
+  "trait": "A home for the Greymanes that pays nothing back",
+  "summary": "Two castles can be claimed after Journey's End and rebuilt by a 20-comrade crew over 15 in-game days. They give room to furnish, store resources and house fighters, and they host merchants. No source reports income from either, so on this route they are something to buy with surplus.",
+  "tiers": {
+   "return": {
+    "tier": null,
+    "basis": "No source reports castle income."
+   },
+   "effort": {
+    "tier": 2,
+    "basis": "A single long dispatch per castle."
+   },
+   "setup": {
+    "tier": 5,
+    "basis": "Flame Knights' Castle takes 100,000 funds, 10,000 weapons, 10,000 provisions, 40,000 stone and 40,000 wood plus 20 comrades."
+   },
+   "scale": {
+    "tier": null,
+    "basis": "Two castles; nothing compounds."
+   }
+  },
+  "tags": [
+   "dlc"
+  ],
+  "requires": [
+   "Journey's End completed",
+   "20 comrades, one with Construction"
+  ],
+  "routes": [
+   {
+    "label": "Drakesfall Castle",
+    "steps": [
+     "Clear Drakesfall Castle's occupants to start Shield of Hernand; Duke Celeste awards the castle.",
+     "Select the castle on the map, open Missions and dispatch Castle Construction: 20 comrades and 30,000 funds.",
+     "Wait out the 15 in-game days."
+    ]
+   },
+   {
+    "label": "Flame Knights' Castle",
+    "steps": [
+     "Play Damiane's From the Ashes questline through Path of the Politician.",
+     "Rebuild with 20 comrades, 100,000 funds, 10,000 weapons, 10,000 provisions, 40,000 stone and 40,000 wood; it takes 15 in-game days."
+    ]
+   }
+  ],
+  "location": "Drakesfall Castle in Hernand; Flame Knights' Castle in western Demeniss.",
+  "media": {
+   "portrait": {
+    "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2026/10/crimson-desert-how-to-own-a-castle.jpg",
+    "credit": "gamerant",
+    "crop": [
+     0.5,
+     0.5,
+     0.9
+    ],
+    "src": "media/riches/castles/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2026/10/crimson-desert-how-to-own-a-castle.jpg",
+    "credit": "gamerant",
+    "focus": "50% 45%",
+    "src": "media/riches/castles/hero.webp",
+    "w": 1920,
+    "h": 1080
+   },
+   "captures": [
+    {
+     "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2026/10/flame-knight-s-castle.jpg",
+     "credit": "gamerant",
+     "kind": "map",
+     "caption": "World map — Flame Knights' Castle, Demeniss",
+     "src": "media/riches/castles/map-1.webp",
+     "w": 1600,
+     "h": 900
+    },
+    {
+     "from": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/wm/2026/10/drakesfall-castle.jpg",
+     "credit": "gamerant",
+     "kind": "map",
+     "caption": "World map — Drakesfall Castle, Hernand",
+     "src": "media/riches/castles/map-2.webp",
+     "w": 1600,
+     "h": 900
+    },
+    {
+     "from": "https://nfapi.noobfeed.com/storage/media/72707/crimson-desert-enhanced-charting-the-unknown-unlock-castle-1.jpg",
+     "credit": "noobfeed",
+     "kind": "action",
+     "caption": "Furnishing — placing installables inside a castle",
+     "src": "media/riches/castles/action-3.webp",
+     "w": 1280,
+     "h": 720
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "noobfeed",
+    "url": "https://www.noobfeed.com/articles/crimson-desert-enhanced-charting-the-unknown-unlock-castle",
+    "title": "How to Unlock Castle"
+   },
+   {
+    "by": "gamingbolt",
+    "url": "https://gamingbolt.com/?p=656503",
+    "title": "How to Unlock Greymane Castles"
+   },
+   {
+    "by": "mobalytics",
+    "url": "https://mobalytics.gg/gamebase/guides/crimson-desert-castle-building",
+    "title": "Castle Building"
+   }
+  ],
+  "since": "Charting the Unknown · 2.04",
+  "ledger": {
+   "pays": "Storage, housing, merchants",
+   "cycle": "15 in-game days to rebuild",
+   "figures": [
+    {
+     "label": "Income",
+     "value": "None reported",
+     "basis": "guide",
+     "by": "noobfeed"
+    }
+   ],
+   "costs": [
+    {
+     "label": "Drakesfall rebuild",
+     "value": "30,000 funds · 20 comrades",
+     "basis": "guide",
+     "by": "noobfeed"
+    },
+    {
+     "label": "Flame Knights' rebuild",
+     "value": "100,000 funds · 10,000 weapons · 10,000 provisions · 40,000 stone · 40,000 wood",
+     "basis": "guide",
+     "by": "gamingbolt"
+    }
+   ],
+   "stacks": [],
+   "watch": [
+    "Twenty comrades leave your dispatch queue for 15 days; stock food first."
+   ]
+  },
+  "variants": [],
+  "notes": []
+ },
+ {
+  "id": "small-greymane-ship",
+  "name": "Small Greymane Ship",
+  "leaf": "ships",
+  "cls": "management",
+  "domains": [
+   "access"
+  ],
+  "kind": "Built ship",
+  "region": "Grace Estate",
+  "area": "Vellua port",
+  "trait": "The quest-built ship: the Small Hernandian's 14 cargo slots without its 40,000 price",
+  "summary": "A Call from Beyond the Horizon has you build your first ship at a port: five comrades, a 12-hour dispatch and a list of camp materials. The result has the same 14 inventory slots as the 40,000 Small Hernandian Ship, so building it lets you skip that purchase and save toward the Medium.",
+  "tiers": {
+   "return": {
+    "tier": null,
+    "basis": "A vessel: it pays through the trade, bounties and island dispatches it opens."
+   },
+   "effort": {
+    "tier": 2,
+    "basis": "One 12-hour dispatch; sleeping advances the clock."
+   },
+   "setup": {
+    "tier": 2,
+    "basis": "Five comrades with the skill requirement met, and 600, 600, 1,200 and 10,000 of the listed materials."
+   },
+   "scale": {
+    "tier": 3,
+    "basis": "14 inventory slots and 5,100 health."
+   }
+  },
+  "tags": [
+   "dlc"
+  ],
+  "requires": [
+   "Howling Hill expanded until A Wider World unlocks",
+   "Five comrades, including the Engineering skill requirement"
+  ],
+  "routes": [
+   {
+    "label": "A Wider World",
+    "steps": [
+     "Select a port on the map and start Shipbuilding from its Missions menu.",
+     "Assign five comrades and meet the skill and material requirements.",
+     "Wait or sleep through the 12 in-game hours.",
+     "Crew it at the Ship Manager — First Mate, Rigger and Lookout are required to leave port — then follow Where the Wind Blows."
+    ]
+   }
+  ],
+  "location": "Vellua port, Grace Estate.",
+  "media": {
+   "portrait": {
+    "from": "https://powerupgaming.co.uk/wp-content/uploads/how-to-unlock-upgrade-ships-in-crimson-desert-charting-the-unknown-1.jpg",
+    "credit": "powerupgaming",
+    "crop": [
+     0.62,
+     0.35,
+     0.45
+    ],
+    "src": "media/riches/small-greymane-ship/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://powerupgaming.co.uk/wp-content/uploads/how-to-unlock-upgrade-ships-in-crimson-desert-charting-the-unknown-1.jpg",
+    "credit": "powerupgaming",
+    "focus": "50% 35%",
+    "src": "media/riches/small-greymane-ship/hero.webp",
+    "w": 1280,
+    "h": 720
+   },
+   "captures": [
+    {
+     "from": "https://www.whisperofthehouse.com/images/crimson-desert/crimson-desert-small-shipbuilding-12-hours.webp",
+     "credit": "whisperofthehouse",
+     "kind": "menu",
+     "caption": "Dispatch screen — Small Shipbuilding, 12 hours",
+     "src": "media/riches/small-greymane-ship/menu-1.webp",
+     "w": 1600,
+     "h": 445
+    },
+    {
+     "from": "https://www.whisperofthehouse.com/images/crimson-desert/crimson-desert-shipbuilding-port-missions.webp",
+     "credit": "whisperofthehouse",
+     "kind": "menu",
+     "caption": "Tutorial — Shipbuilding from a port's Missions menu",
+     "src": "media/riches/small-greymane-ship/menu-2.webp",
+     "w": 1100,
+     "h": 790
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "whisperofthehouse",
+    "url": "https://www.whisperofthehouse.com/crimson-desert/ships",
+    "title": "How Do You Get, Build, and Upgrade Ships"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+    "title": "DLC Shipbuilding Guide: All Ships and Upgrades"
+   },
+   {
+    "by": "powerupgaming",
+    "url": "https://powerupgaming.co.uk/2026/10/30/how-to-unlock-upgrade-ships-in-crimson-desert-charting-the-unknown/",
+    "title": "How to Unlock and Upgrade Ships"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/ships",
+    "title": "Ships"
+   }
+  ],
+  "since": "Charting the Unknown · 2.04",
+  "ledger": {
+   "pays": "A ship",
+   "cycle": "12 in-game hours to build",
+   "figures": [
+    {
+     "label": "Inventory",
+     "value": "14 slots, same as the 40,000 Small Hernandian",
+     "basis": "guide",
+     "by": "keengamer"
+    },
+    {
+     "label": "Health",
+     "value": "5,100",
+     "basis": "guide",
+     "by": "powerupgaming"
+    }
+   ],
+   "costs": [
+    {
+     "label": "Build",
+     "value": "Five comrades · 600 / 600 / 1,200 / 10,000 materials",
+     "basis": "screenshot",
+     "by": "whisperofthehouse"
+    }
+   ],
+   "stacks": [
+    "time-skip"
+   ],
+   "watch": [
+    "The three crew roles the departure check names are First Mate, Rigger and Lookout; without them the ship stays in port."
+   ]
+  },
+  "variants": [],
+  "notes": []
+ },
+ {
+  "id": "fleetmaster-ships",
+  "name": "Fleetmaster Ships",
+  "leaf": "ships",
+  "cls": "management",
+  "domains": [
+   "access"
+  ],
+  "kind": "Bought ships",
+  "region": "Grace Estate · Demeniss · Delesyia",
+  "area": "Fleetmasters at Vellua, Demeniss and Delesyia",
+  "trait": "2,000 to 6,000,000: buy cargo space, not the next size up",
+  "summary": "Fleetmasters sell four ships for Camp Funds. Inventory is what a trading ship is for: the Rowboat holds 6, the Small Hernandian 14, the Medium 22 and the Large 36. With the quest ship already at 14, the Medium is the first purchase that adds capacity, at 1.2M.",
+  "tiers": {
+   "return": {
+    "tier": null,
+    "basis": "Vessels pay through cargo and the routes they open."
+   },
+   "effort": {
+    "tier": 1,
+    "basis": "A purchase; no build time."
+   },
+   "setup": {
+    "tier": 4,
+    "basis": "1,200,000 Camp Funds for the Medium, 6,000,000 for the Large."
+   },
+   "scale": {
+    "tier": 1,
+    "basis": "The Large carries 36 slots and 10,000 health — the most capacity in the game."
+   }
+  },
+  "tags": [
+   "dlc"
+  ],
+  "requires": [
+   "A Wider World questline started"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Skip the 40,000 Small Hernandian Ship if you built the Small Greymane Ship: both hold 14.",
+     "Save for the Medium Hernandian Ship at 1,200,000: 22 slots.",
+     "Buy the Large Hernandian Ship at 6,000,000 once a route fills 22 slots every run: 36 slots.",
+     "Buy from Hopkins at Vellua (Grace Estate) or the Fleetmasters at Demeniss and Delesyia."
+    ]
+   }
+  ],
+  "location": "Hopkins at Vellua, Grace Estate; Fleetmasters at Demeniss and Delesyia.",
+  "media": {
+   "portrait": {
+    "from": "https://outputlag.com/wp-content/uploads/2026/10/crimson-desert-charting-the-unknown-ship-striped-sails.jpg",
+    "credit": "outputlag",
+    "crop": [
+     0.62,
+     0.5,
+     0.9
+    ],
+    "src": "media/riches/fleetmaster-ships/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://outputlag.com/wp-content/uploads/2026/10/crimson-desert-charting-the-unknown-ship-striped-sails.jpg",
+    "credit": "outputlag",
+    "focus": "60% 45%",
+    "src": "media/riches/fleetmaster-ships/hero.webp",
+    "w": 1920,
+    "h": 1080
+   },
+   "captures": [
+    {
+     "from": "https://www.whisperofthehouse.com/images/crimson-desert/crimson-desert-fleetmaster-ship-purchase.webp",
+     "credit": "whisperofthehouse",
+     "kind": "menu",
+     "caption": "Fleetmaster — all four ships and prices, Large Hernandian selected",
+     "src": "media/riches/fleetmaster-ships/menu-1.webp",
+     "w": 822,
+     "h": 760
+    },
+    {
+     "from": "https://powerupgaming.co.uk/wp-content/uploads/how-to-unlock-upgrade-ships-in-crimson-desert-charting-the-unknown-3.jpg",
+     "credit": "powerupgaming",
+     "kind": "action",
+     "caption": "At sea — a Hernandian ship under striped sails",
+     "src": "media/riches/fleetmaster-ships/action-2.webp",
+     "w": 1280,
+     "h": 720
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "whisperofthehouse",
+    "url": "https://www.whisperofthehouse.com/crimson-desert/ships",
+    "title": "How Do You Get, Build, and Upgrade Ships"
+   },
+   {
+    "by": "playnews",
+    "url": "https://www.playnews.gg/en/guides/crimson-desert-ships-how-to-unlock-and-buy-them-in-charting-the-unknown",
+    "title": "Ships: How to Unlock and Buy Them"
+   },
+   {
+    "by": "gamesgg",
+    "url": "https://games.gg/crimson-desert/guides/crimson-desert-ships-guide/",
+    "title": "Ships Guide"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+    "title": "DLC Shipbuilding Guide: All Ships and Upgrades"
+   },
+   {
+    "by": "powerupgaming",
+    "url": "https://powerupgaming.co.uk/2026/10/30/how-to-unlock-upgrade-ships-in-crimson-desert-charting-the-unknown/",
+    "title": "How to Unlock and Upgrade Ships"
+   },
+   {
+    "by": "gamesradar",
+    "url": "https://www.gamesradar.com/games/open-world/crimson-desert-players-are-sharing-their-best-money-making-grinds-after-the-new-dlc-added-a-ship-that-costs-more-than-kliffs-soul/",
+    "title": "Players are sharing their best money-making grinds"
+   }
+  ],
+  "since": "Charting the Unknown · 2.04",
+  "ledger": {
+   "pays": "Cargo capacity",
+   "cycle": "One purchase",
+   "figures": [
+    {
+     "label": "Humble Rowboat",
+     "value": "2,000 · 6 slots",
+     "basis": "screenshot",
+     "by": "whisperofthehouse"
+    },
+    {
+     "label": "Small Hernandian",
+     "value": "40,000 · 14 slots",
+     "basis": "screenshot",
+     "by": "whisperofthehouse"
+    },
+    {
+     "label": "Medium Hernandian",
+     "value": "1,200,000 · 22 slots",
+     "basis": "guide",
+     "by": "keengamer"
+    },
+    {
+     "label": "Large Hernandian",
+     "value": "6,000,000 · 36 slots · 10,000 health",
+     "basis": "screenshot",
+     "by": "whisperofthehouse"
+    }
+   ],
+   "costs": [
+    {
+     "label": "Paid in",
+     "value": "Camp Funds",
+     "basis": "guide",
+     "by": "playnews"
+    }
+   ],
+   "stacks": [],
+   "watch": [
+    "Buying the Large first ties up 6M before you know which waters you will trade in."
+   ]
+  },
+  "variants": [],
+  "notes": []
+ },
+ {
+  "id": "ship-crew",
+  "name": "Crew and Outfitting",
+  "leaf": "ships",
+  "cls": "management",
+  "domains": [
+   "access"
+  ],
+  "kind": "Ship upgrades",
+  "region": "Demeniss · Delesyia",
+  "area": "Ship Managers and Ship Outfitters",
+  "trait": "Gunners for cannons, Carpenters for hulls, Deckhands for islands",
+  "summary": "Crew roles decide what a ship can do. First Mate, Rigger and Lookout are required to leave port; Gunners fire the cannons, Carpenters repair faster, and Deckhands work the island dispatches. Outfitters at Demeniss and Delesyia sell sails, sterns, figureheads and guns. A Fleetmaster will retrieve a lost ship for a fee: 19,880 in one screenshot.",
+  "tiers": {
+   "return": {
+    "tier": null,
+    "basis": "Upgrades protect cargo and open combat and island work; no direct income."
+   },
+   "effort": {
+    "tier": 2,
+    "basis": "Roles change only in port."
+   },
+   "setup": {
+    "tier": 3,
+    "basis": "Comrades for every role, plus outfitter prices."
+   },
+   "scale": {
+    "tier": 2,
+    "basis": "A crewed, armed ship can take pirate bounties and island missions."
+   }
+  },
+  "tags": [
+   "dlc"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Assign First Mate, Rigger and Lookout at the Ship Manager before boarding.",
+     "Add a Gunner before fitting cannons, and a Carpenter if you expect damage.",
+     "Keep Deckhands for island dispatches.",
+     "Buy parts from the Ship Outfitters at Demeniss and Delesyia."
+    ]
+   }
+  ],
+  "location": "Ship Managers at any port; Ship Outfitters at Demeniss and Delesyia.",
+  "media": {
+   "portrait": {
+    "from": "https://www.whisperofthehouse.com/images/crimson-desert/crimson-desert-ship-manager-crew-roles.webp",
+    "credit": "whisperofthehouse",
+    "crop": [
+     0.47,
+     0.45,
+     0.85
+    ],
+    "src": "media/riches/ship-crew/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://www.whisperofthehouse.com/images/crimson-desert/crimson-desert-ship-manager-crew-roles.webp",
+    "credit": "whisperofthehouse",
+    "focus": "45% 40%",
+    "src": "media/riches/ship-crew/hero.webp",
+    "w": 1834,
+    "h": 822
+   },
+   "captures": [
+    {
+     "from": "https://www.whisperofthehouse.com/images/crimson-desert/crimson-desert-ship-manager-crew-roles.webp",
+     "credit": "whisperofthehouse",
+     "kind": "menu",
+     "caption": "Ship Manager — crew roles: First Mate, Lookout, Carpenter, Gunner, Deckhands",
+     "src": "media/riches/ship-crew/menu-1.webp",
+     "w": 1600,
+     "h": 717
+    },
+    {
+     "from": "https://www.whisperofthehouse.com/images/crimson-desert/crimson-desert-ship-repair-fleetmaster.webp",
+     "credit": "whisperofthehouse",
+     "kind": "menu",
+     "caption": "Fleetmaster — repair and retrieve a ship for 19,880",
+     "src": "media/riches/ship-crew/menu-2.webp",
+     "w": 1230,
+     "h": 622
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "whisperofthehouse",
+    "url": "https://www.whisperofthehouse.com/crimson-desert/ships",
+    "title": "How Do You Get, Build, and Upgrade Ships"
+   },
+   {
+    "by": "powerupgaming",
+    "url": "https://powerupgaming.co.uk/2026/10/30/how-to-unlock-upgrade-ships-in-crimson-desert-charting-the-unknown/",
+    "title": "How to Unlock and Upgrade Ships"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+    "title": "DLC Shipbuilding Guide: All Ships and Upgrades"
+   }
+  ],
+  "since": "Charting the Unknown · 2.04",
+  "ledger": {
+   "pays": "Capability",
+   "cycle": "In port",
+   "figures": [
+    {
+     "label": "Required to sail",
+     "value": "First Mate · Rigger · Lookout",
+     "basis": "screenshot",
+     "by": "whisperofthehouse"
+    }
+   ],
+   "costs": [
+    {
+     "label": "Repair and retrieve",
+     "value": "19,880",
+     "basis": "screenshot",
+     "by": "whisperofthehouse"
+    }
+   ],
+   "stacks": [],
+   "watch": [
+    "A ship fitted with cannons cannot fire them without a Gunner."
+   ]
+  },
+  "variants": [],
+  "notes": [],
+  "requires": []
+ },
+ {
+  "id": "island-pioneering",
+  "name": "Island Pioneering",
+  "leaf": "islands",
+  "cls": "management",
+  "domains": [
+   "access"
+  ],
+  "kind": "Island dispatch",
+  "region": "Great Ocean",
+  "area": "Auronui Island, then Samora and Winding Island",
+  "trait": "Three comrades, twelve hours, a new anchorage",
+  "summary": "Pioneering an island sends three comrades on a 12-hour dispatch from its anchorage. A pioneered island gives an anchorage, ship teleportation, new missions and new shops. Auronui comes first, and its buried treasure holds the Ship Teleportation Device blueprint. No source yet documents island upgrade tiers or island income.",
+  "tiers": {
+   "return": {
+    "tier": null,
+    "basis": "No source documents island income yet."
+   },
+   "effort": {
+    "tier": 2,
+    "basis": "One dispatch per island, started from the anchorage."
+   },
+   "setup": {
+    "tier": 3,
+    "basis": "A crewed ship with Deckhands, three free comrades and the mission's materials."
+   },
+   "scale": {
+    "tier": 3,
+    "basis": "Each island adds missions, shops and a teleport point."
+   }
+  },
+  "tags": [
+   "dlc"
+  ],
+  "requires": [
+   "A ship with Deckhands assigned",
+   "Three free comrades"
+  ],
+  "routes": [
+   {
+    "label": "Auronui Island",
+    "steps": [
+     "Sail south past the coast near Vellua to Auronui during A Wider World.",
+     "Keep the ship inside the island's marked Anchorage area.",
+     "Open Map → Facilities, select the Anchorage marker and start the Pioneer mission with three comrades.",
+     "After the 12 hours, return to the same Anchorage and choose Complete Mission."
+    ]
+   }
+  ],
+  "location": "Auronui Island, in the southern sea beyond Vellua.",
+  "notes": [
+   "Landing on the island does not complete pioneering; the dispatch does.",
+   "Islands after Auronui: Samora, held by pirates, and Winding Island."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://www.whisperofthehouse.com/images/crimson-desert/crimson-desert-auronui-pioneer-dispatch-requirements.webp",
+    "credit": "whisperofthehouse",
+    "crop": [
+     0.89,
+     0.55,
+     0.42
+    ],
+    "src": "media/riches/island-pioneering/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://www.whisperofthehouse.com/images/crimson-desert/crimson-desert-auronui-ship-teleportation-blueprint.webp",
+    "credit": "whisperofthehouse",
+    "focus": "45% 50%",
+    "src": "media/riches/island-pioneering/hero.webp",
+    "w": 1560,
+    "h": 964
+   },
+   "captures": [
+    {
+     "from": "https://www.whisperofthehouse.com/images/crimson-desert/crimson-desert-auronui-pioneer-dispatch-requirements.webp",
+     "credit": "whisperofthehouse",
+     "kind": "menu",
+     "caption": "Dispatch screen — Auronui Pioneer, three comrades, twelve hours",
+     "src": "media/riches/island-pioneering/menu-1.webp",
+     "w": 1600,
+     "h": 998
+    },
+    {
+     "from": "https://www.whisperofthehouse.com/images/crimson-desert/crimson-desert-auronui-pioneering-progress.webp",
+     "credit": "whisperofthehouse",
+     "kind": "menu",
+     "caption": "Dispatch screen — Pioneer in progress",
+     "src": "media/riches/island-pioneering/menu-2.webp",
+     "w": 1600,
+     "h": 666
+    },
+    {
+     "from": "https://www.whisperofthehouse.com/images/crimson-desert/crimson-desert-auronui-forgotten-treasure-map.webp",
+     "credit": "whisperofthehouse",
+     "kind": "overworld",
+     "caption": "On site — the Forgotten Treasure Map in an Auronui cave",
+     "src": "media/riches/island-pioneering/overworld-3.webp",
+     "w": 1600,
+     "h": 667
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "whisperofthehouse",
+    "url": "https://www.whisperofthehouse.com/crimson-desert/auronui-island",
+    "title": "How Do You Pioneer Auronui Island"
+   },
+   {
+    "by": "whisperofthehouse",
+    "url": "https://www.whisperofthehouse.com/crimson-desert/ships",
+    "title": "How Do You Get, Build, and Upgrade Ships"
+   }
+  ],
+  "since": "Charting the Unknown · 2.04",
+  "ledger": {
+   "pays": "Anchorage, missions, shops",
+   "cycle": "12 in-game hours",
+   "figures": [
+    {
+     "label": "Crew",
+     "value": "Three comrades",
+     "basis": "screenshot",
+     "by": "whisperofthehouse"
+    },
+    {
+     "label": "Island income",
+     "value": "Not yet documented",
+     "basis": "guide",
+     "by": "whisperofthehouse"
+    }
+   ],
+   "costs": [
+    {
+     "label": "Each pioneer run",
+     "value": "Three comrades plus listed materials",
+     "basis": "screenshot",
+     "by": "whisperofthehouse"
+    }
+   ],
+   "stacks": [
+    "time-skip"
+   ],
+   "watch": [
+    "A full progress bar does not finish pioneering: sail back to the same Anchorage and choose Complete Mission."
+   ]
+  },
+  "variants": []
+ },
+ {
+  "id": "pailune-reconstruction",
+  "name": "Pailune Reconstruction",
+  "leaf": "pailune",
+  "cls": "management",
+  "domains": [
+   "access"
+  ],
+  "kind": "Camp project",
+  "region": "Pailune",
+  "area": "Pailune city",
+  "trait": "Rebuild Kliff's hometown; the final camp depends on it",
+  "summary": "Rebuilding Pailune follows Chapter 7 and needs camp level 2: donate the listed materials and wait out about two days and six hours. A finished main story does not finish this rebuild, and the move to the final camp checks for it.",
+  "tiers": {
+   "return": {
+    "tier": null,
+    "basis": "Unlocks the final camp; no direct income."
+   },
+   "effort": {
+    "tier": 2,
+    "basis": "Donations and a wait."
+   },
+   "setup": {
+    "tier": 3,
+    "basis": "Material donations from the camp pool."
+   },
+   "scale": {
+    "tier": null,
+    "basis": "A one-time project."
+   }
+  },
+  "tags": [
+   "before-dlc"
+  ],
+  "requires": [
+   "Chapter 7 reached",
+   "Camp level 2"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Check Pailune's stronghold summary for the reconstruction requirements.",
+     "Donate the requested materials.",
+     "Wait out the rebuild, about two in-game days and six hours."
+    ]
+   }
+  ],
+  "location": "Pailune city, north of Hernand.",
+  "media": {
+   "portrait": {
+    "from": "https://img.fdaytalk.com/wp-content/uploads/2026/04/Reconstruct-Pailune-2.avif",
+    "credit": "fdaytalk",
+    "crop": [
+     0.35,
+     0.62,
+     0.75
+    ],
+    "src": "media/riches/pailune-reconstruction/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://img.fdaytalk.com/wp-content/uploads/2026/04/Reconstruct-Pailune-2.avif",
+    "credit": "fdaytalk",
+    "focus": "40% 60%",
+    "src": "media/riches/pailune-reconstruction/hero.webp",
+    "w": 1200,
+    "h": 675
+   },
+   "captures": [
+    {
+     "from": "https://img.fdaytalk.com/wp-content/uploads/2026/04/Reconstruct-Pailune-2.avif",
+     "credit": "fdaytalk",
+     "kind": "overworld",
+     "caption": "Stronghold summary — Pailune",
+     "src": "media/riches/pailune-reconstruction/overworld-1.webp",
+     "w": 1200,
+     "h": 675
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "playnews",
+    "url": "https://www.playnews.gg/de/guides/wiederaufbau-von-pailune-in-crimson-desert-die-schritte",
+    "title": "Wiederaufbau von Pailune (German)"
+   },
+   {
+    "by": "gamingpromax",
+    "url": "https://gamingpromax.com/how-to-move-to-pailune-in-crimson-desert/",
+    "title": "How to Move to Pailune"
+   }
+  ],
+  "since": "Base game",
+  "ledger": {
+   "pays": "Final camp unlock",
+   "cycle": "≈2 days 6 hours, in-game",
+   "figures": [
+    {
+     "label": "Rebuild time",
+     "value": "≈2 days 6 hours",
+     "basis": "guide",
+     "by": "playnews"
+    }
+   ],
+   "costs": [
+    {
+     "label": "Rebuild",
+     "value": "Listed material donations",
+     "basis": "guide",
+     "by": "playnews"
+    }
+   ],
+   "stacks": [
+    "time-skip"
+   ],
+   "watch": []
+  },
+  "variants": [],
+  "notes": []
+ },
+ {
+  "id": "pailune-camp",
+  "name": "Pailune Camp",
+  "leaf": "pailune",
+  "cls": "management",
+  "domains": [
+   "access"
+  ],
+  "kind": "Final camp",
+  "region": "Pailune",
+  "area": "Pailune city",
+  "trait": "Double the farm and ranch, 1,000 storage slots",
+  "summary": "Moving the Greymanes to Pailune is the last camp upgrade. Twice the farm and ranch space means more food for the dispatch queue, and 1,000 Private Storage slots hold cargo between runs. It needs the full main story, every Scattered Embers and Grounds of the Sunrise quest, a rebuilt Pailune and a fully upgraded Howling Hill.",
+  "tiers": {
+   "return": {
+    "tier": null,
+    "basis": "Indirect: doubled farm and ranch space feeds food-hungry dispatches."
+   },
+   "effort": {
+    "tier": 3,
+    "basis": "A long quest checklist, then one move."
+   },
+   "setup": {
+    "tier": 4,
+    "basis": "At least 31 Scattered Embers and 37 Grounds of the Sunrise quests, plus a full Howling Hill."
+   },
+   "scale": {
+    "tier": 3,
+    "basis": "Doubles food capacity for the dispatch engine."
+   }
+  },
+  "tags": [
+   "before-dlc"
+  ],
+  "requires": [
+   "Main story and Epilogue finished",
+   "All Scattered Embers and Grounds of the Sunrise quests",
+   "Pailune rebuilt; Howling Hill fully upgraded"
+  ],
+  "routes": [
+   {
+    "label": "The Return Home",
+    "steps": [
+     "Make a manual save; the relocation cutscene overwrites the autosave.",
+     "Harvest crops, cancel dispatches and empty every camp building's storage.",
+     "Talk to Serkis in Hernand Town to take The Return Home.",
+     "Return to Howling Hill and step into the camp's centre to trigger the move."
+    ]
+   }
+  ],
+  "location": "Pailune city; the move starts with Serkis in Hernand Town.",
+  "notes": [
+   "After the move, Silver boxes left at Howling Hill count as theft if you take them."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://gamingpromax.com/wp-content/uploads/2026/06/returning-pailune.webp",
+    "credit": "gamingpromax",
+    "crop": [
+     0.5,
+     0.3,
+     0.3
+    ],
+    "src": "media/riches/pailune-camp/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://gamingpromax.com/wp-content/uploads/2026/06/returning-pailune.webp",
+    "credit": "gamingpromax",
+    "focus": "50% 25%",
+    "src": "media/riches/pailune-camp/hero.webp",
+    "w": 1920,
+    "h": 1214
+   },
+   "captures": [
+    {
+     "from": "https://gamingpromax.com/wp-content/uploads/2026/06/returning-pailune.webp",
+     "credit": "gamingpromax",
+     "kind": "menu",
+     "caption": "Tutorial — Returning to Pailune requirements",
+     "src": "media/riches/pailune-camp/menu-1.webp",
+     "w": 1600,
+     "h": 1011
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "gamingpromax",
+    "url": "https://gamingpromax.com/how-to-move-to-pailune-in-crimson-desert/",
+    "title": "How to Move to Pailune"
+   },
+   {
+    "by": "nerdschalk",
+    "url": "https://nerdschalk.com/crimson-desert-how-to-move-to-pailune-and-unlock-the-final-camp-location-upgrade-requirements-unlock-steps-and-rewards/",
+    "title": "How to Move to Pailune and Unlock the Final Camp"
+   },
+   {
+    "by": "trueachievements",
+    "url": "https://www.trueachievements.com/a628268/proud-returnee-achievement",
+    "title": "Proud Returnee achievement"
+   }
+  ],
+  "since": "Base game",
+  "ledger": {
+   "pays": "Food capacity, storage",
+   "cycle": "One move",
+   "figures": [
+    {
+     "label": "Farm and ranch space",
+     "value": "×2",
+     "basis": "guide",
+     "by": "gamingpromax"
+    },
+    {
+     "label": "Private Storage",
+     "value": "1,000 slots (+360)",
+     "basis": "guide",
+     "by": "gamingpromax"
+    }
+   ],
+   "costs": [
+    {
+     "label": "Quests",
+     "value": "≥31 Scattered Embers · ≥37 Grounds of the Sunrise",
+     "basis": "guide",
+     "by": "gamingpromax"
+    }
+   ],
+   "stacks": [],
+   "watch": [
+    "Dispatches still running during the cutscene may reset; cancel them first."
+   ]
+  },
+  "variants": []
+ },
+ {
+  "id": "trade-wagons",
+  "name": "Trade Wagons",
+  "leaf": "trade",
+  "cls": "player",
+  "domains": [
+   "silver"
+  ],
+  "kind": "Hauling run",
+  "region": "Every region",
+  "area": "133 Trading Posts, 7 Wagon Workshops",
+  "trait": "Buy where it is cheap, drive it where it is not",
+  "summary": "Patch 1.16 rebuilt trading: 133 Trading Posts, 28 new trade goods, seven Wagon Workshops, live prices on a Trade map tab, and prices that sag when one good floods a market. One published run sold 150 Packaged Salt, bought 22% below its reference price, at 563 each: 84,450 Silver, which donates as 844,500 Camp Funds.",
+  "tiers": {
+   "return": {
+    "tier": 2,
+    "basis": "84,450 Silver for one 150-unit Salt sale in a guide's screenshot; ×10 when donated as Camp Funds."
+   },
+   "effort": {
+    "tier": 3,
+    "basis": "You drive every run and choose every load."
+   },
+   "setup": {
+    "tier": 3,
+    "basis": "Brice, an Engineer and the Timberturner Wainwright, after A Rumor in Glenbright Farm."
+   },
+   "scale": {
+    "tier": 2,
+    "basis": "Packaged goods stack to 10 or 100; supply pressure lowers a price you keep selling into."
+   }
+  },
+  "tags": [
+   "before-dlc",
+   "risk"
+  ],
+  "requires": [
+   "Greymane Camp at Howling Hill",
+   "Brice recruited through A Rumor in Glenbright Farm",
+   "An Engineer for the wagon chain"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Open the Trade tab on the world map and filter by good before loading anything.",
+     "Find the buyer first, then buy or package the cargo.",
+     "Test a route with a small load before sending a full wagon down mountain roads.",
+     "Load a return cargo so the wagon never drives back empty."
+    ]
+   }
+  ],
+  "location": "Trading Posts across Pywel; Wagon Workshops in seven towns.",
+  "notes": [
+   "Since 1.16 you can move trade goods between wagon and horse.",
+   "Package raw trade goods at camp before loading; only packaged goods sell at Trading Posts."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/guide/crimson-desert-trading-guide-wagon-goods-hero.webp",
+    "credit": "consolepulse",
+    "crop": [
+     0.55,
+     0.55,
+     0.9
+    ],
+    "src": "media/riches/trade-wagons/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/guide/crimson-desert-trading-guide-wagon-goods-hero.webp",
+    "credit": "consolepulse",
+    "focus": "55% 50%",
+    "src": "media/riches/trade-wagons/hero.webp",
+    "w": 1000,
+    "h": 632
+   },
+   "captures": [
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/guide/crimson-desert-trade-tab-market-prices-filters.webp",
+     "credit": "consolepulse",
+     "kind": "map",
+     "caption": "Trade tab — market prices and filters",
+     "src": "media/riches/trade-wagons/map-1.webp",
+     "w": 1000,
+     "h": 489
+    },
+    {
+     "from": "https://www.whisperofthehouse.com/images/crimson-desert/crimson-desert-84450-packaged-salt-sale.webp",
+     "credit": "whisperofthehouse",
+     "kind": "menu",
+     "caption": "Sale — 150 Packaged Salt at 563, 84,450 total",
+     "src": "media/riches/trade-wagons/menu-2.webp",
+     "w": 559,
+     "h": 215
+    },
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/guide/crimson-desert-package-load-trade-goods-wagon.webp",
+     "credit": "consolepulse",
+     "kind": "action",
+     "caption": "Loading — packaged goods onto the wagon",
+     "src": "media/riches/trade-wagons/action-3.webp",
+     "w": 1000,
+     "h": 565
+    },
+    {
+     "from": "https://www.whisperofthehouse.com/images/crimson-desert/crimson-desert-wagon-off-trade-route-risk.webp",
+     "credit": "whisperofthehouse",
+     "kind": "action",
+     "caption": "On the road — a loaded wagon leaving the safer route",
+     "src": "media/riches/trade-wagons/action-4.webp",
+     "w": 721,
+     "h": 609
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-trading-guide",
+    "title": "Trading Guide"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/news/crimson-desert-patch-1-16-trading-bank-update",
+    "title": "Patch 1.16: Trading and Bank Update"
+   },
+   {
+    "by": "whisperofthehouse",
+    "url": "https://www.whisperofthehouse.com/crimson-desert/trading-guide",
+    "title": "How I Plan Profitable Trading Routes"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/wagon-trading",
+    "title": "Wagon Trading"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://keengamer.com/articles/guides/crimson-desert-trading-guide-wagons-routes-and-camp-resources",
+    "title": "Trading Guide: Wagons, Routes, and Camp Resources"
+   },
+   {
+    "by": "pcgamer",
+    "url": "https://www.pcgamer.com/games/action/crimson-desert-trade-goods-wagon",
+    "title": "How to trade and get a wagon"
+   }
+  ],
+  "since": "Base game · rebuilt in 1.16",
+  "ledger": {
+   "pays": "Silver",
+   "cycle": "Per run",
+   "figures": [
+    {
+     "label": "150 Packaged Salt sold",
+     "value": "563 each · 84,450 Silver",
+     "basis": "screenshot",
+     "by": "whisperofthehouse"
+    },
+    {
+     "label": "Margin on that load",
+     "value": "84,450 − 22,650 = 61,800 Silver",
+     "basis": "sum",
+     "by": "whisperofthehouse"
+    },
+    {
+     "label": "Same sale, donated to camp",
+     "value": "84,450 × 10 = 844,500 Camp Funds",
+     "basis": "sum",
+     "by": "vulkk"
+    }
+   ],
+   "costs": [
+    {
+     "label": "150 Packaged Salt bought",
+     "value": "151 each · 150 × 151 = 22,650 Silver",
+     "basis": "sum",
+     "by": "whisperofthehouse"
+    }
+   ],
+   "stacks": [
+    "camp-donations",
+    "royal-trading-posts"
+   ],
+   "watch": [
+    "Patch 1.16 raised the cargo lost when a wagon is destroyed or retrieved, or a loaded horse is retrieved.",
+    "Selling a lot of one good at one post lowers its price there."
+   ]
+  },
+  "variants": []
+ },
+ {
+  "id": "royal-trading-posts",
+  "name": "Royal Trading Posts",
+  "leaf": "trade",
+  "cls": "player",
+  "domains": [
+   "silver"
+  ],
+  "kind": "Premium buyer",
+  "region": "Every region",
+  "area": "Royal Trading Posts",
+  "trait": "Patch 1.16 multiplied their trade-good prices by four",
+  "summary": "Royal Trading Posts buy only the packaged goods their court lists, at four times the old price since 1.16, and your wagon now stays after a Royal delivery. One guide found Varnia's Royal post paying 1,000 for Packaged Cheese bought at 118 elsewhere.",
+  "tiers": {
+   "return": {
+    "tier": 1,
+    "basis": "Varnia's Royal post listed Packaged Cheese at 1,000 against a 118 buy price."
+   },
+   "effort": {
+    "tier": 3,
+    "basis": "Long hauls to the court that wants the good."
+   },
+   "setup": {
+    "tier": 3,
+    "basis": "A working wagon and the right packaged good for each court."
+   },
+   "scale": {
+    "tier": 2,
+    "basis": "Each court has a purchase limit and supply pressure moves its price."
+   }
+  },
+  "tags": [
+   "before-dlc",
+   "risk"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Open the stronghold's Royal Trading list to see which packaged good the court wants and its limit.",
+     "Buy that good where the Trade tab shows it cheapest.",
+     "Deliver it, then reload at a nearby post for the next leg."
+    ]
+   }
+  ],
+  "location": "Royal Trading Posts, including Varnia's and the one north of Hernand Castle.",
+  "media": {
+   "portrait": {
+    "from": "https://www.whisperofthehouse.com/images/crimson-desert/crimson-desert-royal-trading-post-cheese.webp",
+    "credit": "whisperofthehouse",
+    "crop": [
+     0.13,
+     0.27,
+     0.36
+    ],
+    "src": "media/riches/royal-trading-posts/portrait.webp",
+    "w": 193,
+    "h": 193
+   },
+   "hero": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/guide/crimson-desert-royal-trading-post-delivery.webp",
+    "credit": "consolepulse",
+    "focus": "40% 50%",
+    "src": "media/riches/royal-trading-posts/hero.webp",
+    "w": 1000,
+    "h": 647
+   },
+   "captures": [
+    {
+     "from": "https://www.whisperofthehouse.com/images/crimson-desert/crimson-desert-royal-trading-post-cheese.webp",
+     "credit": "whisperofthehouse",
+     "kind": "map",
+     "caption": "World map — Varnia's Royal Trading Post",
+     "src": "media/riches/royal-trading-posts/map-1.webp",
+     "w": 935,
+     "h": 538
+    },
+    {
+     "from": "https://www.whisperofthehouse.com/images/crimson-desert/crimson-desert-buy-150-packaged-cheese.webp",
+     "credit": "whisperofthehouse",
+     "kind": "menu",
+     "caption": "Purchase — 150 Packaged Cheese at 118, 17,700 total",
+     "src": "media/riches/royal-trading-posts/menu-2.webp",
+     "w": 694,
+     "h": 214
+    },
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/guide/crimson-desert-royal-trading-post-delivery.webp",
+     "credit": "consolepulse",
+     "kind": "menu",
+     "caption": "Royal Trading list — Packaged Honey at 328, limit 100",
+     "src": "media/riches/royal-trading-posts/menu-3.webp",
+     "w": 1000,
+     "h": 647
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "whisperofthehouse",
+    "url": "https://www.whisperofthehouse.com/crimson-desert/trading-guide",
+    "title": "How I Plan Profitable Trading Routes"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-trading-guide",
+    "title": "Trading Guide"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/best-trade-routes-crimson-desert-patch-1-16",
+    "title": "Best Trade Routes After Patch 1.16"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/news/crimson-desert-patch-1-16-trading-bank-update",
+    "title": "Patch 1.16: Trading and Bank Update"
+   }
+  ],
+  "since": "Rebuilt in 1.16",
+  "ledger": {
+   "pays": "Silver",
+   "cycle": "Per delivery",
+   "figures": [
+    {
+     "label": "Packaged Cheese at Varnia",
+     "value": "1,000 each (bought at 118)",
+     "basis": "guide",
+     "by": "whisperofthehouse"
+    },
+    {
+     "label": "Royal prices since 1.16",
+     "value": "×4",
+     "basis": "patch",
+     "by": "consolepulse"
+    }
+   ],
+   "costs": [
+    {
+     "label": "150 Packaged Cheese",
+     "value": "17,700 Silver",
+     "basis": "screenshot",
+     "by": "whisperofthehouse"
+    }
+   ],
+   "stacks": [
+    "camp-donations",
+    "trade-wagons"
+   ],
+   "watch": [
+    "A Royal post buys only the good its court lists; other cargo will not sell.",
+    "Prices move: the guide warns its Varnia price is not a permanent route."
+   ]
+  },
+  "variants": [],
+  "notes": [],
+  "requires": []
+ },
+ {
+  "id": "camp-donations",
+  "name": "Camp Donations",
+  "leaf": "bank",
+  "cls": "management",
+  "domains": [
+   "funds"
+  ],
+  "kind": "Currency exchange",
+  "region": "Howling Hill or Pailune",
+  "area": "Carl, Provisions Keeper",
+  "trait": "1 Silver → 10 Camp Funds since 2.01; a Gold Bar was worth 50,000",
+  "summary": "Ships, leases, Blessings and dispatch fees are paid in Camp Funds, and Carl turns your money into them. Patch 2.01 made donated Silver worth ten times as much. The Games Wiki measured a donated Gold Bar at 50,000 Camp Funds before 2.01 — ten times what its 500 Silver now donates for — and has not re-measured it since.",
+  "tiers": {
+   "return": {
+    "tier": 1,
+    "basis": "Silver converts at 1 → 10 since 2.01; a whole Gold Bar measured 50,000 before 2.01."
+   },
+   "effort": {
+    "tier": 1,
+    "basis": "One menu at camp."
+   },
+   "setup": {
+    "tier": 1,
+    "basis": "Available from the start of camp management."
+   },
+   "scale": {
+    "tier": 1,
+    "basis": "No cap is documented."
+   }
+  },
+  "tags": [
+   "before-dlc"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Talk to Carl at camp and choose Donate Funds.",
+     "Donate one Gold Bar on its own and watch the Camp Funds counter.",
+     "If the bar pays 50,000, keep donating bars whole and only exchange bars for Silver when Kliff needs Silver.",
+     "Donate Silver you do not need: since 2.01 each one adds 10 Camp Funds."
+    ]
+   }
+  ],
+  "location": "Carl, the Provisions Keeper, at camp.",
+  "notes": [
+   "A bank exchanges a Gold Bar for 500 Silver; a merchant pays about 190."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/camp.webp",
+    "credit": "consolepulse",
+    "crop": [
+     0.42,
+     0.5,
+     0.95
+    ],
+    "src": "media/riches/camp-donations/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/camp.webp",
+    "credit": "consolepulse",
+    "focus": "45% 55%",
+    "src": "media/riches/camp-donations/hero.webp",
+    "w": 1000,
+    "h": 606
+   },
+   "captures": [
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/farm-collection-guide/banker.webp",
+     "credit": "consolepulse",
+     "kind": "menu",
+     "caption": "Bank exchange — 1 Gold Bar ↔ 500 Silver",
+     "src": "media/riches/camp-donations/menu-1.webp",
+     "w": 1000,
+     "h": 288
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/2026/09/04/crimson-desert-update-2-01-improves-photo-mode-camp-funds-visual-noise-bugfixes/",
+    "title": "Update 2.01: Camp Funds and Bugfixes"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/patch-2-01-00",
+    "title": "Patch 2.01.00"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/camp-funds/diff",
+    "title": "Camp Funds"
+   },
+   {
+    "by": "gamingbolt",
+    "url": "https://gamingbolt.com/crimson-desert-update-buffs-camp-funds-from-silver-adds-new-dispatch-mission-and-more",
+    "title": "Update Buffs Camp Funds From Silver"
+   },
+   {
+    "by": "playersua",
+    "url": "https://players.com.ua/en/news/how-to-earn-camp-funds-in-crimson-desert/",
+    "title": "How to Earn Camp Funds"
+   }
+  ],
+  "since": "Rebalanced in 2.01",
+  "ledger": {
+   "pays": "Camp Funds",
+   "cycle": "Instant",
+   "figures": [
+    {
+     "label": "1 Silver donated",
+     "value": "10 Camp Funds (was 1)",
+     "basis": "patch",
+     "by": "vulkk"
+    },
+    {
+     "label": "1 Gold Bar donated",
+     "value": "50,000 Camp Funds — measured before 2.01",
+     "basis": "guide",
+     "by": "thegameswiki"
+    },
+    {
+     "label": "1 Gold Bar as Silver, donated",
+     "value": "500 × 10 = 5,000 Camp Funds",
+     "basis": "sum",
+     "by": "vulkk"
+    }
+   ],
+   "costs": [],
+   "stacks": [],
+   "watch": [
+    "The 50,000-per-bar figure predates 2.01 and the wiki marks it unconfirmed for the current build; test one bar before committing a stack.",
+    "Patch 2.01 also made donation missions charge exactly the amount they display."
+   ]
+  },
+  "variants": [],
+  "requires": []
+ },
+ {
+  "id": "bank-investment",
+  "name": "Bank Investment",
+  "leaf": "bank",
+  "cls": "management",
+  "domains": [
+   "gold"
+  ],
+  "kind": "Gold Bar interest",
+  "region": "Every bank",
+  "area": "Banks; the Bank Strongbox",
+  "trait": "Gold Bars that swing every three in-game days",
+  "summary": "A 100-Silver Strongbox permit lets you invest Gold Bars at Low (0% to +2%), Medium (−15% to +20%) or High (−50% to +55%) risk. Each cycle rolls about every three in-game days, and the strategy can change only every 15. Only Low cannot lose. Patch 1.16 capped gains and losses at 40 bars a cycle and added Hernand Bonds, which need 100 bars to start.",
+  "tiers": {
+   "return": {
+    "tier": 3,
+    "basis": "Medium swings −15% to +20% a cycle and High −50% to +55%; Low is safe at 0% to +2%. All Things How saves before each roll and reloads a loss."
+   },
+   "effort": {
+    "tier": 1,
+    "basis": "Deposit and collect; sleeping speeds the cycle."
+   },
+   "setup": {
+    "tier": 2,
+    "basis": "A 100-Silver permit and spare Gold Bars."
+   },
+   "scale": {
+    "tier": 3,
+    "basis": "Capped at 40 bars gained or lost per cycle since 1.16."
+   }
+  },
+  "tags": [
+   "before-dlc",
+   "risk"
+  ],
+  "routes": [
+   {
+    "label": "Gold Bar interest",
+    "steps": [
+     "Buy the Personal Strongbox Permit for 100 Silver at a bank.",
+     "Deposit only bars you will not need for gear, recipes or donations.",
+     "Choose Low for bars you cannot afford to lose; Medium or High only with a manual save before the roll.",
+     "Collect each cycle, about three in-game days."
+    ]
+   },
+   {
+    "label": "Hernand Bonds",
+    "steps": [
+     "Claim Bank Strongbox converts bars to Hernand Bonds: one Bond is 10 bars.",
+     "Bond investing unlocks at 10 Bonds — 100 genuinely spare bars."
+    ]
+   }
+  ],
+  "location": "Any bank in Pywel; Grover in Hernand.",
+  "notes": [
+   "Crude Gold Bars cannot be invested or turned into Bonds.",
+   "The Golden Piggy Bank produces Copper Pouches while you are offline."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/guide/crimson-desert-bank-bonds-strongbox-investing-hero.webp",
+    "credit": "consolepulse",
+    "crop": [
+     0.76,
+     0.5,
+     0.95
+    ],
+    "src": "media/riches/bank-investment/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/guide/crimson-desert-bank-bonds-strongbox-investing-hero.webp",
+    "credit": "consolepulse",
+    "focus": "70% 45%",
+    "src": "media/riches/bank-investment/hero.webp",
+    "w": 1000,
+    "h": 549
+   },
+   "captures": [
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/guide/crimson-desert-claim-bank-strongbox-bonds-menu.webp",
+     "credit": "consolepulse",
+     "kind": "menu",
+     "caption": "Claim Bank Strongbox — Hernand Bond ↔ 10 Gold Bars, Medium risk",
+     "src": "media/riches/bank-investment/menu-1.webp",
+     "w": 950,
+     "h": 758
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/bank-investment",
+    "title": "Bank Investment"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/best-ways-make-silver-gold-bars-crimson-desert",
+    "title": "Best Ways to Make Silver and Gold Bars"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/news/crimson-desert-patch-1-16-trading-bank-update",
+    "title": "Patch 1.16: Trading and Bank Update"
+   },
+   {
+    "by": "allthingshow",
+    "url": "https://allthings.how/crimson-desert-banking-system-guaranteed-profits-with-save-scumming/",
+    "title": "Banking System: Profits With Save-Scumming"
+   }
+  ],
+  "since": "Base game · reworked in 1.16",
+  "ledger": {
+   "pays": "Gold Bars",
+   "cycle": "≈3 in-game days",
+   "figures": [
+    {
+     "label": "Low risk",
+     "value": "0% to +2% a cycle",
+     "basis": "guide",
+     "by": "thegameswiki"
+    },
+    {
+     "label": "Medium risk",
+     "value": "−15% to +20% a cycle",
+     "basis": "guide",
+     "by": "thegameswiki"
+    },
+    {
+     "label": "High risk",
+     "value": "−50% to +55% a cycle",
+     "basis": "guide",
+     "by": "thegameswiki"
+    },
+    {
+     "label": "Cap per cycle",
+     "value": "40 bars",
+     "basis": "patch",
+     "by": "consolepulse"
+    }
+   ],
+   "costs": [
+    {
+     "label": "Strongbox permit",
+     "value": "100 Silver",
+     "basis": "guide",
+     "by": "thegameswiki"
+    },
+    {
+     "label": "Bond entry",
+     "value": "10 Bonds = 100 Gold Bars",
+     "basis": "patch",
+     "by": "consolepulse"
+    }
+   ],
+   "stacks": [
+    "time-skip"
+   ],
+   "watch": [
+    "Strategy can change only every 15 in-game days.",
+    "Patch 2.01 added a separate Gold Bar Investment dispatch mission; no source we found documents its cost or payout, so this route does not use it.",
+    "A bar tied up in the bank cannot be donated."
+   ]
+  },
+  "variants": [],
+  "requires": []
+ },
+ {
+  "id": "gold-bar-crafting",
+  "name": "Gold Bar Crafting",
+  "leaf": "hustles",
+  "cls": "player",
+  "domains": [
+   "gold"
+  ],
+  "kind": "Crafting loop",
+  "region": "Pailune · Delesyia · Demeniss",
+  "area": "Witch's Hideout, gold caves, hedgehog trails",
+  "trait": "1 Golden Apple + 3 Gold Ore = 1 Gold Bar",
+  "summary": "A Witch turns one Golden Apple and three Gold Ore into a Gold Bar. The bank pays 500 Silver for it; donated whole it was measured at 50,000 Camp Funds. Golden Apples ride on hedgehogs' backs — watch the ground for the glint — and Gold Ore comes from caves such as Silver Wolf Cave.",
+  "tiers": {
+   "return": {
+    "tier": 2,
+    "basis": "500 Silver per bar at a bank; 50,000 Camp Funds per bar donated, measured before 2.01."
+   },
+   "effort": {
+    "tier": 3,
+    "basis": "Hunting hedgehogs and mining ore by hand."
+   },
+   "setup": {
+    "tier": 2,
+    "basis": "The recipe from the bookshelf in the Witch's Hideout south of Pailune."
+   },
+   "scale": {
+    "tier": 3,
+    "basis": "Bound by hedgehog spawns, which 2.04 reduced."
+   }
+  },
+  "tags": [
+   "before-dlc"
+  ],
+  "requires": [
+   "Gold Bar recipe from the Witch's Hideout, south of Pailune"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Take the recipe from the bookshelf inside the Witch's Hideout south of Pailune.",
+     "Mine Gold Ore on a cave circuit; Silver Wolf Cave has dense clusters.",
+     "Hunt Golden Apple hedgehogs near Grey Rock Dock, the Eastern Hills of Delesyia or Tariv, roughly 16:00 to midnight.",
+     "Craft at a Witch, then donate the bars whole or bank them for 500 Silver."
+    ]
+   }
+  ],
+  "location": "Witch's Hideout south of Pailune; Grey Rock Dock in Demeniss; Silver Wolf Cave.",
+  "notes": [
+   "A blacksmith converts 100 Gold Ore into one bar: over thirty times the ore of the Witch recipe.",
+   "Never sell a Golden Apple raw (114 Silver) or a Gold Bar to a merchant (about 190)."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/farm-collection-guide/gold_bar_craft_at_the_witch.webp",
+    "credit": "consolepulse",
+    "crop": [
+     0.78,
+     0.5,
+     0.95
+    ],
+    "src": "media/riches/gold-bar-crafting/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/farm-collection-guide/gold_bar_craft_at_the_witch.webp",
+    "credit": "consolepulse",
+    "focus": "65% 45%",
+    "src": "media/riches/gold-bar-crafting/hero.webp",
+    "w": 1000,
+    "h": 562
+   },
+   "captures": [
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/farm-collection-guide/gold_bar_recipe_location_map.webp",
+     "credit": "consolepulse",
+     "kind": "map",
+     "caption": "World map — the Witch's Hideout south of Pailune",
+     "src": "media/riches/gold-bar-crafting/map-1.webp",
+     "w": 1000,
+     "h": 680
+    },
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/farm-collection-guide/gold_bar_recipe_location.webp",
+     "credit": "consolepulse",
+     "kind": "overworld",
+     "caption": "On site — the recipe on the Hideout's bookshelf",
+     "src": "media/riches/gold-bar-crafting/overworld-2.webp",
+     "w": 1000,
+     "h": 618
+    },
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/farm-collection-guide/grey_rock_dock_map.webp",
+     "credit": "consolepulse",
+     "kind": "map",
+     "caption": "World map — Grey Rock Dock hedgehog trail",
+     "src": "media/riches/gold-bar-crafting/map-3.webp",
+     "w": 1000,
+     "h": 765
+    },
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/farm-collection-guide/grey_rock_dock_hedgehog.webp",
+     "credit": "consolepulse",
+     "kind": "overworld",
+     "caption": "On site — a Golden Apple Hedgehog",
+     "src": "media/riches/gold-bar-crafting/overworld-4.webp",
+     "w": 1000,
+     "h": 596
+    }
+   ],
+   "gallery": [
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/farm-collection-guide/golden_apple.webp",
+     "credit": "consolepulse",
+     "kind": "variant",
+     "caption": "Golden Apple — Alchemy Material, sells for 114",
+     "src": "media/riches/gold-bar-crafting/gallery-1.webp",
+     "w": 882,
+     "h": 530
+    }
+   ]
+  },
+  "sources": [
+   {
+    "by": "consolepulse",
+    "url": "https://www.consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-gold-bar-farming-guide",
+    "title": "Gold Bar Farming Guide"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/best-ways-make-silver-gold-bars-crimson-desert",
+    "title": "Best Ways to Make Silver and Gold Bars"
+   },
+   {
+    "by": "method",
+    "url": "https://www.method.gg/crimson-desert/crimson-desert-golden-apple-guide-how-to-find-and-use-golden-apples",
+    "title": "Golden Apple Guide"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-farming-guide-gold-abyss-gear",
+    "title": "Farming Guide: Gold and Abyss Gear"
+   }
+  ],
+  "since": "Base game",
+  "ledger": {
+   "pays": "Gold Bars",
+   "cycle": "Per craft",
+   "figures": [
+    {
+     "label": "Bar at a bank",
+     "value": "500 Silver",
+     "basis": "guide",
+     "by": "consolepulse"
+    },
+    {
+     "label": "Bar donated whole",
+     "value": "50,000 Camp Funds — measured before 2.01",
+     "basis": "guide",
+     "by": "thegameswiki"
+    }
+   ],
+   "costs": [
+    {
+     "label": "Each bar",
+     "value": "1 Golden Apple + 3 Gold Ore",
+     "basis": "guide",
+     "by": "consolepulse"
+    }
+   ],
+   "stacks": [
+    "camp-donations"
+   ],
+   "watch": [
+    "Patch 2.04 reduced hedgehog spawns."
+   ]
+  },
+  "variants": []
+ },
+ {
+  "id": "noble-pickpocketing",
+  "name": "Noble Pickpocketing",
+  "leaf": "hustles",
+  "cls": "player",
+  "domains": [
+   "gold"
+  ],
+  "kind": "Theft loop",
+  "region": "Demeniss",
+  "area": "Demeniss Wildlife Park",
+  "trait": "Gold Bars lifted from wealthy visitors",
+  "summary": "Nobles strolling Demeniss Wildlife Park carry Gold Bars. Inspect them with the lantern, pick the ones showing a stacked bar, and lift it with a mask on. One player reports six bars in about 25 minutes; at the pre-2.01 donation value that is 300,000 Camp Funds.",
+  "tiers": {
+   "return": {
+    "tier": 2,
+    "basis": "About six bars in 25 minutes in a player report."
+   },
+   "effort": {
+    "tier": 3,
+    "basis": "Hands-on, target by target."
+   },
+   "setup": {
+    "tier": 1,
+    "basis": "A mask and a lantern."
+   },
+   "scale": {
+    "tier": 4,
+    "basis": "Limited by targets and bounty."
+   }
+  },
+  "tags": [
+   "before-dlc",
+   "risk"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Equip a mask before entering the park.",
+     "Inspect nobles with the lantern; look for the stacked Gold Bar icon, not a pouch.",
+     "Pickpocket, then leave the red witness circle before the next target.",
+     "Pay off bounty at a confessional in Hernand Castle town."
+    ]
+   }
+  ],
+  "location": "Demeniss Wildlife Park, about 2,000 metres east of Castle Hernand; a cluster of about 50 nobles in the south-east.",
+  "media": {
+   "portrait": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/farm-collection-guide/noble_inspect.webp",
+    "credit": "consolepulse",
+    "crop": [
+     0.5,
+     0.5,
+     1.0
+    ],
+    "src": "media/riches/noble-pickpocketing/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/farm-collection-guide/noble_inspect.webp",
+    "credit": "consolepulse",
+    "focus": "50% 45%",
+    "src": "media/riches/noble-pickpocketing/hero.webp",
+    "w": 758,
+    "h": 486
+   },
+   "captures": [
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/tips/farm-collection-guide/noble_pickpocket.webp",
+     "credit": "consolepulse",
+     "kind": "action",
+     "caption": "Pickpocket — a Wildlife Park visitor",
+     "src": "media/riches/noble-pickpocketing/action-1.webp",
+     "w": 482,
+     "h": 262
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "consolepulse",
+    "url": "https://www.consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-gold-bar-farming-guide",
+    "title": "Gold Bar Farming Guide"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-farming-guide-gold-abyss-gear",
+    "title": "Farming Guide: Gold and Abyss Gear"
+   },
+   {
+    "by": "gamesradar",
+    "url": "https://www.gamesradar.com/games/open-world/crimson-desert-players-are-sharing-their-best-money-making-grinds-after-the-new-dlc-added-a-ship-that-costs-more-than-kliffs-soul/",
+    "title": "Players are sharing their best money-making grinds"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/all-gold-bar-locations",
+    "title": "All Gold Bar Locations"
+   }
+  ],
+  "since": "Base game",
+  "ledger": {
+   "pays": "Gold Bars",
+   "cycle": "Per target",
+   "figures": [
+    {
+     "label": "One session",
+     "value": "≈6 Gold Bars in 25 minutes",
+     "basis": "player",
+     "by": "gamesradar"
+    },
+    {
+     "label": "Optimised run",
+     "value": "2 bars",
+     "basis": "guide",
+     "by": "consolepulse"
+    }
+   ],
+   "costs": [
+    {
+     "label": "Risk",
+     "value": "Bounty when seen",
+     "basis": "guide",
+     "by": "thegameswiki"
+    }
+   ],
+   "stacks": [
+    "camp-donations"
+   ],
+   "watch": [
+    "Theft builds bounty; clear it at a confessional."
+   ]
+  },
+  "variants": [],
+  "notes": [],
+  "requires": []
+ },
+ {
+  "id": "crude-gold-circuit",
+  "name": "Crude Gold Circuit",
+  "leaf": "hustles",
+  "cls": "player",
+  "domains": [
+   "silver"
+  ],
+  "kind": "Collection run",
+  "region": "Pailune · Demeniss · Delesyia",
+  "area": "Harpy Nest, Demeniss warehouse and three more caches",
+  "trait": "400 bars, 5 Silver each",
+  "summary": "Five static caches hold roughly 400 Crude Gold Bars, which any merchant buys at 5 Silver: about 2,000 Silver a circuit, or 20,000 Camp Funds donated. The Harpy Nest in Pailune alone holds about 150. It is the smallest earner here; run it only when you are passing the caches.",
+  "tiers": {
+   "return": {
+    "tier": 5,
+    "basis": "About 2,000 Silver per full circuit."
+   },
+   "effort": {
+    "tier": 4,
+    "basis": "A five-stop route by hand."
+   },
+   "setup": {
+    "tier": 2,
+    "basis": "A bandit mask and an ice-resistance cloak for the Harpy Nest."
+   },
+   "scale": {
+    "tier": 5,
+    "basis": "Caches respawn after several in-game days."
+   }
+  },
+  "tags": [
+   "before-dlc"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Equip a bandit mask for the Demeniss warehouse and Delesyia Castle stops, where the bars must be stolen.",
+     "Wear ice resistance (+5) at the Harpy Nest in Pailune; hold E to collect everything nearby.",
+     "Sell to any merchant at 5 Silver each."
+    ]
+   }
+  ],
+  "location": "Harpy Nest, north-west of the A in Pailune (≈150); Demeniss warehouse north of Flame Knights' Castle (≈80); three more caches.",
+  "notes": [
+   "Crude Gold Bars cannot fund investments or Bonds."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/collectibles/harpy-nest-pailune-crude-gold-bars.webp",
+    "credit": "consolepulse",
+    "crop": [
+     0.5,
+     0.5,
+     0.95
+    ],
+    "src": "media/riches/crude-gold-circuit/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/collectibles/harpy-nest-pailune-crude-gold-bars.webp",
+    "credit": "consolepulse",
+    "focus": "50% 45%",
+    "src": "media/riches/crude-gold-circuit/hero.webp",
+    "w": 1000,
+    "h": 696
+   },
+   "captures": [
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/collectibles/harpy-nest-pailune-map-location.webp",
+     "credit": "consolepulse",
+     "kind": "map",
+     "caption": "World map — Harpy Nest, Pailune",
+     "src": "media/riches/crude-gold-circuit/map-1.webp",
+     "w": 1000,
+     "h": 606
+    },
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/collectibles/demeniss-warehouse-map-location.webp",
+     "credit": "consolepulse",
+     "kind": "map",
+     "caption": "World map — Demeniss warehouse",
+     "src": "media/riches/crude-gold-circuit/map-2.webp",
+     "w": 1000,
+     "h": 649
+    },
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/collectibles/demeniss-warehouse-crude-gold-bars.webp",
+     "credit": "consolepulse",
+     "kind": "overworld",
+     "caption": "On site — the warehouse cache",
+     "src": "media/riches/crude-gold-circuit/overworld-3.webp",
+     "w": 1000,
+     "h": 657
+    }
+   ],
+   "gallery": [
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/collectibles/crude-gold-bars-info-hero.webp",
+     "credit": "consolepulse",
+     "kind": "variant",
+     "caption": "Crude Gold Bar — Currency, sells for 5",
+     "src": "media/riches/crude-gold-circuit/gallery-1.webp",
+     "w": 876,
+     "h": 406
+    }
+   ]
+  },
+  "sources": [
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-crude-gold-bars",
+    "title": "Where to Find Crude Gold Bars"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/best-ways-make-silver-gold-bars-crimson-desert",
+    "title": "Best Ways to Make Silver and Gold Bars"
+   }
+  ],
+  "since": "Base game",
+  "ledger": {
+   "pays": "Silver",
+   "cycle": "Caches respawn after several in-game days",
+   "figures": [
+    {
+     "label": "Full circuit",
+     "value": "≈400 bars · ≈2,000 Silver",
+     "basis": "guide",
+     "by": "consolepulse"
+    },
+    {
+     "label": "Harpy Nest",
+     "value": "≈150 bars",
+     "basis": "guide",
+     "by": "consolepulse"
+    }
+   ],
+   "costs": [],
+   "stacks": [
+    "camp-donations",
+    "time-skip"
+   ],
+   "watch": [
+    "Two stops count as theft."
+   ]
+  },
+  "variants": [],
+  "requires": []
+ },
+ {
+  "id": "card-tables",
+  "name": "Duo and Five-Card",
+  "leaf": "hustles",
+  "cls": "player",
+  "domains": [
+   "silver"
+  ],
+  "kind": "Gambling",
+  "region": "Hernand · Pailune · Crimson Desert",
+  "area": "Hernand inn, Beighen, Tommaso",
+  "trait": "Three tables: 15, 150 and 300 Silver buy-ins",
+  "summary": "Two stick-card games. Duo plays at the Hernand inn for 15 Silver and at Tommaso for 300; Five-Card plays only at Beighen for 150. NeonLights reports the table AI calls reckless all-ins in the opening round. Watch cheaters three times to learn their trick, and accuse one mid-deal to take the pot.",
+  "tiers": {
+   "return": {
+    "tier": 4,
+    "basis": "400–600 Silver per winning Five-Card session at Beighen."
+   },
+   "effort": {
+    "tier": 3,
+    "basis": "Played hand by hand."
+   },
+   "setup": {
+    "tier": 1,
+    "basis": "A buy-in."
+   },
+   "scale": {
+    "tier": 4,
+    "basis": "One table at a time, capped by its stakes."
+   }
+  },
+  "tags": [
+   "before-dlc",
+   "risk"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Learn the hands at the 15-Silver Hernand table, upstairs at the inn.",
+     "Go all in early on a strong opener; opponents tend to call.",
+     "Watch for the dealer's elbow-and-thumb tell and hold Accuse while they deal.",
+     "Move to Beighen's Five-Card or Tommaso's Duo once the bankroll covers losing streaks."
+    ]
+   }
+  ],
+  "location": "Hernand inn (Duo, 15); Beighen (Five-Card, 150); Tommaso (Duo, 300).",
+  "notes": [
+   "Patch 2.03.01 fixed the Tommaso Duo dealers not appearing."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://images.squarespace-cdn.com/content/v1/5f5a3ad1b3aa75691878d2a5/31b86bde-69cf-4607-a4ed-43b4109e6b7e/crimson-desert-1+%2821%29.webp",
+    "credit": "neonlights",
+    "crop": [
+     0.92,
+     0.32,
+     0.42
+    ],
+    "src": "media/riches/card-tables/portrait.webp",
+    "w": 302,
+    "h": 302
+   },
+   "hero": {
+    "from": "https://gamertagmythras.com/images/blog/crimson-desert/crimson-desert-duo-five-card-guide/hernand-town-hero.webp",
+    "credit": "mythras",
+    "focus": "50% 50%",
+    "src": "media/riches/card-tables/hero.webp",
+    "w": 1400,
+    "h": 788
+   },
+   "captures": [
+    {
+     "from": "https://images.squarespace-cdn.com/content/v1/5f5a3ad1b3aa75691878d2a5/31b86bde-69cf-4607-a4ed-43b4109e6b7e/crimson-desert-1+%2821%29.webp",
+     "credit": "neonlights",
+     "kind": "menu",
+     "caption": "Rules screen — hand rankings",
+     "src": "media/riches/card-tables/menu-1.webp",
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "from": "https://gamertagmythras.com/images/blog/crimson-desert/crimson-desert-duo-five-card-guide/hernand-town-hero.webp",
+     "credit": "mythras",
+     "kind": "overworld",
+     "caption": "Hernand — the first Duo table is upstairs at the inn",
+     "src": "media/riches/card-tables/overworld-2.webp",
+     "w": 1400,
+     "h": 788
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/duo-and-five-card-strategy-guide",
+    "title": "Duo and Five-Card Strategy Guide"
+   },
+   {
+    "by": "neonlights",
+    "url": "https://www.neonlightsmedia.com/blog/crimson-desert-gambling-duo-five-card",
+    "title": "Gambling Guide: Duo and Five-Card"
+   },
+   {
+    "by": "mythras",
+    "url": "https://gamertagmythras.com/blog/crimson-desert/crimson-desert-duo-five-card-guide",
+    "title": "Duo and Five-Card: How to Play and Win"
+   },
+   {
+    "by": "allthingshow",
+    "url": "https://allthings.how/crimson-desert-how-to-spot-and-accuse-cheating-gamblers-in-duo/",
+    "title": "How to Spot and Accuse Cheating Gamblers"
+   }
+  ],
+  "since": "Base game",
+  "ledger": {
+   "pays": "Silver",
+   "cycle": "Per session",
+   "figures": [
+    {
+     "label": "Five-Card session at Beighen",
+     "value": "400–600 Silver",
+     "basis": "guide",
+     "by": "thegameswiki"
+    },
+    {
+     "label": "Buy-ins",
+     "value": "15 · 150 · 300 Silver",
+     "basis": "guide",
+     "by": "neonlights"
+    }
+   ],
+   "costs": [
+    {
+     "label": "Each sit-down",
+     "value": "The table's buy-in",
+     "basis": "guide",
+     "by": "thegameswiki"
+    }
+   ],
+   "stacks": [
+    "camp-donations"
+   ],
+   "watch": [
+    "A false accusation gets you banned from the table."
+   ]
+  },
+  "variants": [],
+  "requires": []
+ },
+ {
+  "id": "time-skip",
+  "name": "Sleep and Wait",
+  "leaf": "hustles",
+  "cls": "player",
+  "domains": [
+   "access"
+  ],
+  "kind": "Clock control",
+  "region": "Anywhere",
+  "area": "Beds, tents and campfires",
+  "trait": "Every timer on this route runs on the in-game clock",
+  "summary": "Dispatches, bank cycles, shipbuilding, castle rebuilds and island pioneering all count in-game hours. Sleeping or waiting at a campfire moves the clock forward, so every timer on the route finishes sooner. Fatigue gates sleep: you can only sleep again once it builds back up.",
+  "tiers": {
+   "return": {
+    "tier": 2,
+    "basis": "Pays nothing itself; shortens every timer on this route."
+   },
+   "effort": {
+    "tier": 2,
+    "basis": "A rest between other jobs."
+   },
+   "setup": {
+    "tier": 1,
+    "basis": "Any bed, tent or campfire."
+   },
+   "scale": {
+    "tier": 1,
+    "basis": "Applies to every timed system at once."
+   }
+  },
+  "tags": [
+   "before-dlc",
+   "multiplier"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Before resting, check every dispatch, crop, research task and build so one skip finishes several at once.",
+     "Sleep at a bed or tent, or wait at a campfire.",
+     "Collect, re-queue, and rest again when fatigue allows."
+    ]
+   }
+  ],
+  "location": "Any bed, tent or campfire.",
+  "notes": [
+   "Sleeping just before a Repeat mission finishes can restart it before you collect; cancel the restarted run to recover its provisions."
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/guide/crimson-desert-wait-bed-options.webp",
+    "credit": "consolepulse",
+    "crop": [
+     0.5,
+     0.45,
+     0.95
+    ],
+    "src": "media/riches/time-skip/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/guide/crimson-desert-wait-bed-options.webp",
+    "credit": "consolepulse",
+    "focus": "50% 40%",
+    "src": "media/riches/time-skip/hero.webp",
+    "w": 1200,
+    "h": 908
+   },
+   "captures": [
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/guide/crimson-desert-wait-campfire-options.webp",
+     "credit": "consolepulse",
+     "kind": "action",
+     "caption": "Waiting — at a campfire",
+     "src": "media/riches/time-skip/action-1.webp",
+     "w": 1200,
+     "h": 1100
+    },
+    {
+     "from": "https://img.consolepulse.com/uploads/franchises/crimson-desert/guide/crimson-desert-wait-right-time-prompt.webp",
+     "credit": "consolepulse",
+     "kind": "menu",
+     "caption": "Sleeping — rested until fatigue builds up again",
+     "src": "media/riches/time-skip/menu-2.webp",
+     "w": 1200,
+     "h": 566
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/dispatch-missions",
+    "title": "Dispatch Missions"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/best-passive-income-setup-crimson-desert",
+    "title": "Best Passive Income Setup"
+   },
+   {
+    "by": "whisperofthehouse",
+    "url": "https://www.whisperofthehouse.com/crimson-desert/ships",
+    "title": "How Do You Get, Build, and Upgrade Ships"
+   }
+  ],
+  "since": "Base game",
+  "ledger": {
+   "pays": "Time",
+   "cycle": "Whenever fatigue allows",
+   "figures": [
+    {
+     "label": "Affects",
+     "value": "Dispatches · bank cycles · builds · rebuilds",
+     "basis": "guide",
+     "by": "consolepulse"
+    }
+   ],
+   "costs": [],
+   "stacks": [],
+   "watch": [
+    "Repeat missions can restart during sleep before you collect."
+   ]
+  },
+  "variants": [],
+  "requires": []
+ }
+]

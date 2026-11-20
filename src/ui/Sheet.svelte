@@ -2,11 +2,12 @@
   import { fade, fly } from 'svelte/transition';
   import { quintOut } from 'svelte/easing';
   import { app } from '../core/state.svelte';
-  import { tree, ROMAN, TIER_NAMES } from '../core/tree';
+  import { resolve, tree, ROMAN, TIER_NAMES } from '../core/tree';
   import { PUBLISHERS, CREDITS } from '../core/format';
   import Glyph from './Glyph.svelte';
 
-  const branch = $derived(tree.branches[0]);
+  // the sheet explains the branch the reader is in
+  const branch = $derived(resolve(app.hash).branch);
 
   const RULES: Record<number, string> = {
     1: 'The best in its class. Reserved for the best of the best.',
@@ -61,11 +62,7 @@
 
       <h3 class="eyebrow">Rules of the ladder</h3>
       <ul class="rules">
-        <li><b>Class means terrain.</b> A mount is ranked against others of its own class — Land, Sea or Sky — so a Tier I sea mount is the best thing that swims, not the best mount overall.</li>
-        <li><b>Traits can lift a metric.</b> A mount with a decisive trait scores higher on the metric that trait serves: no fall damage lifts Travel, a unique attack lifts Combat.</li>
-        <li><b>Horses are rated at Lv 5.</b> They grow with riding and trust; beasts and machines arrive at full strength.</li>
-        <li><b>“Not rated”</b> marks a metric that does not apply, such as Stamina on a balloon or mech.</li>
-        <li><b>Every rating carries its basis.</b> Ratings are editorial calls built on recorded stats and the cited guides. Where no source compares a mount, it sits at Tier III and says so.</li>
+        {#each branch.rules as r}<li><b>{r.lead}</b> {r.text}</li>{/each}
       </ul>
     {:else}
       <p class="eyebrow">{branch.asOf}</p>

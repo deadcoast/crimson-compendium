@@ -8,12 +8,13 @@ export { tierOf };
 export const tree = { branches };
 
 /* Route grammar (hash, ASCII + hyphens only):
-     #mounts                     → first leaf
+     #mounts                     → first leaf (the route instead, when the branch has one)
      #mounts-legendary           → leaf
      #mounts-underwater          → category branch
      #mounts-underwater-rare     → a leaf of that category
      #mounts-for-battle          → lens
      #mounts-ladder              → tier ladder
+     #riches-route               → the branch's route, when it defines one
      #mounts-royler              → entry
    Retired names (branch.json "redirects") resolve to their replacement.            */
 export function resolve(hash: string): View {
@@ -22,6 +23,8 @@ export function resolve(hash: string): View {
   let rest = hash.startsWith(branch.id + '-') ? hash.slice(branch.id.length + 1) : '';
   rest = branch.redirects?.[rest] ?? rest;
   if (rest === 'ladder') return { kind: 'ladder', branch };
+  // a branch with a route opens on it: the plan is the front door, the catalogue sits behind it
+  if (branch.route && (rest === 'route' || rest === '')) return { kind: 'route', branch };
   if (rest.startsWith('for-')) {
     const lens = branch.lenses.find((l) => l.id === rest.slice(4));
     if (lens) return { kind: 'lens', branch, lens };
@@ -46,6 +49,7 @@ export const href = {
   lens: (b: Branch, lensId: string) => `#${b.id}-for-${lensId}`,
   cat: (b: Branch, catId: string, leafId?: string) => `#${b.id}-${catId}${leafId ? '-' + leafId : ''}`,
   ladder: (b: Branch) => `#${b.id}-ladder`,
+  route: (b: Branch) => `#${b.id}-route`,
   entry: (b: Branch, entryId: string) => `#${b.id}-${entryId}`,
   ctx: (b: Branch, ctx: ListContext) =>
     ctx.kind === 'leaf' ? href.leaf(b, ctx.id) : ctx.kind === 'lens' ? href.lens(b, ctx.id) : href.cat(b, ctx.id, ctx.leaf),
@@ -53,6 +57,14 @@ export const href = {
 
 export const leafOf = (b: Branch, e: Entry): Leaf => b.leaves.find((l) => l.id === e.leaf) ?? b.leaves[0];
 export const catOf = (b: Branch, id: string): Category | undefined => b.categories.find((c) => c.id === id);
+
+/** Whether a list context names a list in this branch. Contexts outlive branch switches in app state. */
+export function ctxIn(b: Branch, c: ListContext): boolean {
+  if (c.kind === 'leaf') return b.leaves.some((l) => l.id === c.id);
+  if (c.kind === 'lens') return b.lenses.some((l) => l.id === c.id);
+  const cat = catOf(b, c.id);
+  return !!cat && (!c.leaf || cat.leaves.some((l) => l.id === c.leaf));
+}
 
 export function entriesFor(b: Branch, ctx: ListContext): Entry[] {
   if (ctx.kind === 'leaf') return b.entries.filter((e) => e.leaf === ctx.id);
@@ -95,7 +107,7 @@ export function contextLabel(b: Branch, ctx: ListContext): ContextLabel {
     return { title: cat?.label ?? '', subtitle: cat?.subtitle, blurb: cat?.blurb ?? '', accent: cat?.accent ?? 'crimson', trail: [{ label: 'Branch' }] };
   }
   const lens = b.lenses.find((x) => x.id === ctx.id);
-  return { title: lens?.label ?? '', blurb: lens?.blurb ?? '', accent: 'crimson', trail: [{ label: 'Ride for' }] };
+  return { title: lens?.label ?? '', blurb: lens?.blurb ?? '', accent: b.accent ?? 'crimson', trail: [{ label: b.labels?.lenses ?? 'Ride for' }] };
 }
 
 /** Resolve a cover to a concrete image — its own file, or an entry's hero, portrait or capture. */

@@ -5,7 +5,6 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
 ## [Unreleased]
 
 ### Added
-
 - `npm run verify`: builds the site and checks it in a headless browser, failing on any problem. CI and the Release workflow run it. It covers:
   - the data lint;
   - every plate, list, redirect and the ladder;
