@@ -23,8 +23,8 @@ A milestone is delivered when its TODO is complete, `npm run verify` and CI are 
 | M1 | Ground truth | a regression gate in the repo; the offline release renders as designed; accessible to keyboard and screen readers | delivered: `npm run verify` in CI and Release; see `DESIGN.md` › Build and release |
 | R1 | Riches tree | an endgame economy guide beside Mounts: methods rated I–V, the Route, a ledger on every plate (`DESIGN.md` › Riches) | delivered: 24 methods, the Route, the ledger; see `DESIGN.md` › Riches tree |
 | M2 | Full roster | every mount you can keep, one entry per registered mount, ships included (IDENTIFIED §5) | delivered: 80 mounts (36 new plates; 3 temporary rides removed; the Sea Turtle became the Green Sea Turtle); see `DESIGN.md` › Revision 4 |
-| M3 | Where, for every mount | map and on-site captures and full-bleed heroes for the whole roster | in progress → `SHELVED.md` › M3 |
-| M4 | Ratings on evidence | no rating defaults to III for lack of data | shelved → `SHELVED.md` › M4 |
+| M3 | Where, for every mount | map and on-site captures and full-bleed heroes for the whole roster | delivered: 29 plates gained maps and 10 gained banners; every plate still without one is listed with its reason; see `DESIGN.md` › Revision 5 |
+| M4 | Ratings on evidence | no rating defaults to III for lack of data | in progress → `SHELVED.md` › M4 |
 | M5 | Compare and navigate *(proposal)* | compare mounts side by side, section links, keyboard sheet, explorer split | shelved → `SHELVED.md` › M5 |
 | R2 | Riches depth | all 18 facilities with location and staff skill, island upgrades and income once sources publish them, a trade-route table | shelved → `SHELVED.md` › R2 |
 

@@ -1,16 +1,15 @@
-# TODO: M3 Where, for every mount
+# TODO: M4 Ratings on evidence
 
 ```txt
 [IDENTIFIED + PLAN] -> [SHELVED] -> [TODO]
 ```
 
-Items are from `SHELVED.md` › M3 `[todo]`. M2 Full roster is delivered (`DESIGN.md` › Revision 4).
+Items are from `SHELVED.md` › M4 `[todo]`. M3 Where, for every mount is delivered (`DESIGN.md` › Revision 5).
 
-- [ ] NF-01: map captures for the 57 entries without one
-- [ ] NF-02: heroes for the 68 entries without one
+- [ ] CORE-01: replace the ratings that default to III with sourced comparisons (30 ratings on 17 plates as of M3: dolphin, eagle-ray, electric-ray, both iguanas, hammerhead-shark, leaping-kuku-bird, manta-ray, orca, pink-dolphin, pink-manta-ray, red-feathered-raptor, rosehorn-deer, sandwalk-camel, shark, spotted-seal, sunfish), and name a source for the bears' "Slow." Speed basis
 
-**Done when:** `npm run verify` and CI are green, M3 is marked delivered in `PLAN.md`, and its decisions are in `DESIGN.md`.
+**Done when:** `npm run verify` and CI are green, M4 is marked delivered in `PLAN.md`, and its decisions are in `DESIGN.md`.
 
 ## Next
 
-`SHELVED.md`: when this list is complete, M4 moves in.
+`SHELVED.md`: when this list is complete, M5 moves in.

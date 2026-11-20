@@ -6,6 +6,11 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
 
 ### Added
 
+- **Where, for every mount (M3)**: 29 plates gained world maps and 10 gained full-bleed banners. Maps still missing went from 57 to 28 and banners from 68 to 58; every plate still without one is listed in `DESIGN.md` › Known gaps with its reason.
+  - Legendary ships: every blueprint spot on a map, each followed by its on-site view.
+  - Sea mounts: a spawn-zone map for all 14 that lacked one, plus In action footage of the Hammerhead, Orca, Spotted Seal, Eagle Ray, Electric Ray and Sunfish. The turtle map is cut per species.
+  - Vellua for the ships sold or built there; Emberwind Workshop for the Cloudcruiser and Skystreaker; Timberturner Wainwright for the Freight and Trading Wagons; Fort Windridge and Wyvern's Cradle for the Wyvern; the Sanctum of Penitence for the Brown Bear.
+  - Banners for Royler, Rokade, the Lion, Red-Feathered Raptor, Giant Green Iguana, Brown Bear, Large White Wolf, Wyvern, Cloudcart and A.T.A.G.
 - **Full mount roster (M2)**: 80 mounts you can keep, up from 48: 36 new plates, minus the 3 temporary rides removed and the old Sea Turtle plate, which became the Green Sea Turtle. Each new plate has a real in-game image, its sources and rated tiers.
   - **Ships**, a new category and a fourth terrain class, Surface: the four legendary ships (Flagship of the East, Assault Ship of the East, Phantom Ship, The Drunken Catfish), the Small, Medium and Large Greymane Ships your comrades build, the Hernandian, Delesyian and Demenissian ships in three sizes, and four rowboats. Each plate shows the in-game shop or fleet screen, Health and hold, and Movement Speed, Acceleration and Handling.
   - Mounts that were hidden as variants now have their own plates: Cloudcruiser, Skystreaker, Swift Wolf, Large White Wolf and High-Mobility A.T.A.G.
@@ -37,6 +42,7 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
 
 ### Changed
 
+- **Sea-mount locations.** Sportskeeda's guide places spawns that the plates used to call "no fixed spawn". Electric Rays are in the Trench and the Great Trench. Eagle Rays share the manta-ray zone. Sunfish are sure at the Silent Serpent Shrine Cave by the Phragma Islands. Hammerheads and Orcas also swim the Central Waters. The Giant Manta Ray is narrowed to the manta-ray zone.
 - **Fonts are self-hosted.** Bodoni Moda, Archivo and JetBrains Mono (Latin, variable) ship with the site, so the release zip renders as designed offline and from disk. The app no longer contacts a font CDN.
 - **Readable secondary text meets WCAG AA.** It is now at least 4.5:1 on every ink surface. Counts, hints, credits and placeholders moved from the ornament tone to the readable one.
 - **Screen-reader structure.** The index and plate sit in a `main` landmark, and pip ratings read as "n of 5".

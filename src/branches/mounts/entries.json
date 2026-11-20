@@ -156,7 +156,15 @@
      "h": 410
     }
    ],
-   "gallery": []
+   "gallery": [],
+   "hero": {
+    "from": "https://cdn.mos.cms.futurecdn.net/sg9rCsuwb7AGNcj5bA5XLh-2560-80.jpg",
+    "credit": "pcgamer",
+    "focus": "50% 45%",
+    "src": "media/mounts/royler/hero.webp",
+    "w": 1920,
+    "h": 1080
+   }
   },
   "sources": [
    {
@@ -330,7 +338,21 @@
      "h": 410
     }
    ],
-   "gallery": []
+   "gallery": [],
+   "hero": {
+    "from": "https://cdn.mos.cms.futurecdn.net/EorVrk72WkKUXXZjTGyyVh-2560-80.jpg",
+    "credit": "pcgamer",
+    "focus": "62% 64%",
+    "clip": [
+     0,
+     0,
+     0.68,
+     1
+    ],
+    "src": "media/mounts/rokade/hero.webp",
+    "w": 1741,
+    "h": 1440
+   }
   },
   "sources": [
    {
@@ -1797,11 +1819,47 @@
    },
    "captures": [
     {
+     "kind": "map",
+     "from": "https://img.game8.co/tbcttm3maxh4a8clbeljyml15rqf",
+     "credit": "game8",
+     "caption": "Blueprint 1 — Fisher's Haven, Delesyia",
+     "src": "media/mounts/flagship-of-the-east/map-1.webp",
+     "w": 728,
+     "h": 410
+    },
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/zurm52toqatq5erracbjcao84vbt",
+     "credit": "game8",
+     "caption": "On site — Blueprint 1's box, Fisher's Haven",
+     "src": "media/mounts/flagship-of-the-east/overworld-2.webp",
+     "w": 728,
+     "h": 410
+    },
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/mqt605pe15fgycey2a4diuuvlgki",
+     "credit": "game8",
+     "caption": "Blueprint 2 — Helmara, Tashkalp",
+     "src": "media/mounts/flagship-of-the-east/map-3.webp",
+     "w": 728,
+     "h": 410
+    },
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/03gqky9mjuk6x7k5fiat2iranuhn",
+     "credit": "game8",
+     "caption": "On site — Blueprint 2's box, Helmara",
+     "src": "media/mounts/flagship-of-the-east/overworld-4.webp",
+     "w": 728,
+     "h": 410
+    },
+    {
      "kind": "menu",
      "from": "https://img.game8.co/pr0lywfdw8xujmudqww2xltv9e7x",
      "credit": "game8",
      "caption": "Manage Ships — Flagship of the East",
-     "src": "media/mounts/flagship-of-the-east/menu-1.webp",
+     "src": "media/mounts/flagship-of-the-east/menu-5.webp",
      "w": 728,
      "h": 410
     }
@@ -1917,11 +1975,101 @@
    },
    "captures": [
     {
+     "kind": "map",
+     "from": "https://img.game8.co/urq0pm0ykgp12x5aaoy3l6j6flzw",
+     "credit": "game8",
+     "caption": "Blueprints 1 & 2 — the wreck 140 m down, Great Rocky Reef",
+     "clip": [
+      0,
+      0,
+      0.5,
+      1
+     ],
+     "src": "media/mounts/assault-ship-of-the-east/map-1.webp",
+     "w": 364,
+     "h": 409
+    },
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/urq0pm0ykgp12x5aaoy3l6j6flzw",
+     "credit": "game8",
+     "caption": "On site — Blueprints 1 & 2 in the wreck",
+     "clip": [
+      0.5,
+      0,
+      1,
+      1
+     ],
+     "src": "media/mounts/assault-ship-of-the-east/overworld-2.webp",
+     "w": 364,
+     "h": 409
+    },
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/v6vnilg7fm05yqlzapeu649gflzy",
+     "credit": "game8",
+     "caption": "Blueprint 3 — Bravgork Shipyard, Gorthak",
+     "clip": [
+      0,
+      0,
+      0.5,
+      1
+     ],
+     "src": "media/mounts/assault-ship-of-the-east/map-3.webp",
+     "w": 364,
+     "h": 409
+    },
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/v6vnilg7fm05yqlzapeu649gflzy",
+     "credit": "game8",
+     "caption": "On site — Blueprint 3 in the shipyard",
+     "clip": [
+      0.5,
+      0,
+      1,
+      1
+     ],
+     "src": "media/mounts/assault-ship-of-the-east/overworld-4.webp",
+     "w": 364,
+     "h": 409
+    },
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/bnvubi6y1bkwqd5xgjvxoe18mso1",
+     "credit": "game8",
+     "caption": "Blueprint 4 — Estra Island",
+     "clip": [
+      0,
+      0,
+      0.5,
+      1
+     ],
+     "src": "media/mounts/assault-ship-of-the-east/map-5.webp",
+     "w": 364,
+     "h": 409
+    },
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/bnvubi6y1bkwqd5xgjvxoe18mso1",
+     "credit": "game8",
+     "caption": "On site — Blueprint 4 on the beach",
+     "clip": [
+      0.5,
+      0,
+      1,
+      1
+     ],
+     "src": "media/mounts/assault-ship-of-the-east/overworld-6.webp",
+     "w": 364,
+     "h": 409
+    },
+    {
      "kind": "menu",
      "from": "https://img.game8.co/fk6duedt990y1vdky9ejxopx8t4j",
      "credit": "game8",
      "caption": "Manage Ships — Assault Ship of the East",
-     "src": "media/mounts/assault-ship-of-the-east/menu-1.webp",
+     "src": "media/mounts/assault-ship-of-the-east/menu-7.webp",
      "w": 728,
      "h": 410
     }
@@ -2042,11 +2190,35 @@
    },
    "captures": [
     {
+     "kind": "map",
+     "from": "https://img.game8.co/ifrttb67o2ic2i2w0a6ttowytfgj",
+     "credit": "game8",
+     "caption": "Blueprint — buried treasure, Iliya Island's south-west cliffs",
+     "clip": [
+      0,
+      0,
+      0.5,
+      1
+     ],
+     "src": "media/mounts/phantom-ship/map-1.webp",
+     "w": 364,
+     "h": 410
+    },
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/nmjxe2guchazj79x40vafkbr94u1",
+     "credit": "game8",
+     "caption": "On site — the buried treasure beside the burial mounds",
+     "src": "media/mounts/phantom-ship/overworld-2.webp",
+     "w": 728,
+     "h": 410
+    },
+    {
      "kind": "menu",
      "from": "https://img.game8.co/vd28n7wwtr88fd6rv0jej1k1p8z0",
      "credit": "game8",
      "caption": "Manage Ships — Phantom Ship",
-     "src": "media/mounts/phantom-ship/menu-1.webp",
+     "src": "media/mounts/phantom-ship/menu-3.webp",
      "w": 728,
      "h": 410
     }
@@ -2164,11 +2336,35 @@
    },
    "captures": [
     {
+     "kind": "map",
+     "from": "https://img.game8.co/r84rkztvz9zgov31d08g0cnlss02",
+     "credit": "game8",
+     "caption": "Blueprint — the pirate ship patrols west of Samora Island",
+     "clip": [
+      0.5,
+      0,
+      1,
+      1
+     ],
+     "src": "media/mounts/the-drunken-catfish/map-1.webp",
+     "w": 364,
+     "h": 410
+    },
+    {
+     "kind": "map",
+     "from": "https://gameshorizon.com/wp-content/uploads/2026/10/How-to-Build-a-Ship-in-Crimson-Desert-4.jpg",
+     "credit": "gameshorizon",
+     "caption": "World map — Vellua, where it is built",
+     "src": "media/mounts/the-drunken-catfish/map-2.webp",
+     "w": 1600,
+     "h": 900
+    },
+    {
      "kind": "menu",
      "from": "https://img.game8.co/ff4hjiauqz0lgjh7yszzp0h5j99x",
      "credit": "game8",
      "caption": "Manage Ships — The Drunken Catfish",
-     "src": "media/mounts/the-drunken-catfish/menu-1.webp",
+     "src": "media/mounts/the-drunken-catfish/menu-3.webp",
      "w": 728,
      "h": 410
     }
@@ -2423,6 +2619,15 @@
      "src": "media/mounts/giant-red-iguana/map-1.webp",
      "w": 727,
      "h": 409
+    },
+    {
+     "kind": "overworld",
+     "from": "https://cdn.mos.cms.futurecdn.net/CkQcSKDpvbgxUJh34PWinP-1920-80.jpg",
+     "credit": "gamesradar",
+     "caption": "On site — winning its trust in the Sovereign Wastes",
+     "src": "media/mounts/giant-red-iguana/overworld-2.webp",
+     "w": 1600,
+     "h": 900
     }
    ],
    "gallery": []
@@ -2520,7 +2725,15 @@
      "h": 410
     }
    ],
-   "gallery": []
+   "gallery": [],
+   "hero": {
+    "from": "https://gdm-universal-media.b-cdn.net/gfinityesports/cd2b14f2-crimson-desert.webp?width=1600&height=840",
+    "credit": "gfinity",
+    "focus": "50% 50%",
+    "src": "media/mounts/giant-green-iguana/hero.webp",
+    "w": 1493,
+    "h": 840
+   }
   },
   "sources": [
    {
@@ -2602,7 +2815,15 @@
      "h": 410
     }
    ],
-   "gallery": []
+   "gallery": [],
+   "hero": {
+    "from": "https://cdn.mos.cms.futurecdn.net/gju8pincd3hH55u3bsPAjG-1920-80.jpg",
+    "credit": "gamesradar",
+    "focus": "45% 30%",
+    "src": "media/mounts/red-feathered-raptor/hero.webp",
+    "w": 1920,
+    "h": 1080
+   }
   },
   "sources": [
    {
@@ -2720,7 +2941,15 @@
      "h": 409
     }
    ],
-   "gallery": []
+   "gallery": [],
+   "hero": {
+    "from": "https://cdn.mos.cms.futurecdn.net/mYJoHvHDBbhMGsUsLr9WkP-1920-80.jpg",
+    "credit": "gamesradar",
+    "focus": "50% 45%",
+    "src": "media/mounts/lion/hero.webp",
+    "w": 1920,
+    "h": 1080
+   }
   },
   "sources": [
    {
@@ -2932,8 +3161,35 @@
     "w": 480,
     "h": 480
    },
-   "captures": [],
-   "gallery": []
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/4501583/7687196f6a929c5deb4fd59880465b9f.png/show",
+     "credit": "game8",
+     "caption": "World map — the Sanctum of Penitence, south-east of the Abyss Nexus",
+     "src": "media/mounts/brown-bear/map-1.webp",
+     "w": 727,
+     "h": 409
+    },
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/4501584/8f4c016049a779347fee96da6a15fcb7.png/show",
+     "credit": "game8",
+     "caption": "On site — a brown bear in the grass",
+     "src": "media/mounts/brown-bear/overworld-2.webp",
+     "w": 727,
+     "h": 409
+    }
+   ],
+   "gallery": [],
+   "hero": {
+    "from": "https://static.beebom.com/wp-content/uploads/2026/03/Kliff-riding-a-bear.jpg",
+    "credit": "beebom",
+    "focus": "50% 45%",
+    "src": "media/mounts/brown-bear/hero.webp",
+    "w": 1200,
+    "h": 675
+   }
   },
   "sources": [
    {
@@ -3408,7 +3664,15 @@
      "h": 899
     }
    ],
-   "gallery": []
+   "gallery": [],
+   "hero": {
+    "from": "https://www.gameshedge.com/wp-content/uploads/2026/06/Crimson-desert-247.jpg",
+    "credit": "gameshedge",
+    "focus": "45% 50%",
+    "src": "media/mounts/large-white-wolf/hero.webp",
+    "w": 1600,
+    "h": 899
+   }
   },
   "sources": [
    {
@@ -3849,8 +4113,35 @@
     "w": 480,
     "h": 480
    },
-   "captures": [],
-   "gallery": []
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://cdn.mos.cms.futurecdn.net/Lmr83F7wtL8DL4gTKipuHc-1200-80.jpg",
+     "credit": "pcgamer",
+     "caption": "World map — Wyvern's Cradle, Dewhaven: the egg",
+     "src": "media/mounts/wyvern/map-1.webp",
+     "w": 1200,
+     "h": 675
+    },
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/4514487/c489ca2b963da3e096ecf4f67b291329.png/show",
+     "credit": "game8",
+     "caption": "World map — Fort Windridge, south of Delesyia: wild adults",
+     "src": "media/mounts/wyvern/map-2.webp",
+     "w": 727,
+     "h": 409
+    }
+   ],
+   "gallery": [],
+   "hero": {
+    "from": "https://cdn.mos.cms.futurecdn.net/GFc8pWghD7sLW8hpgr4Wsm-2560-80.jpg",
+    "credit": "pcgamer",
+    "focus": "50% 42%",
+    "src": "media/mounts/wyvern/hero.webp",
+    "w": 1920,
+    "h": 1080
+   }
   },
   "sources": [
    {
@@ -4026,7 +4317,7 @@
     ]
    }
   ],
-  "location": "Trench north of the Great Coral Reef, South Sea.",
+  "location": "Trench north of the Great Coral Reef, South Sea (Game8); Sportskeeda adds the Central Waters, where common Sharks swim.",
   "notes": [],
   "media": {
    "portrait": {
@@ -4036,7 +4327,38 @@
     "w": 300,
     "h": 300
    },
-   "captures": [],
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://staticg.sportskeeda.com/editor/2026/11/5ce01-17935370865019-1920.jpg",
+     "credit": "sportskeeda",
+     "caption": "Spawn area — the Central Waters, South Sea",
+     "clip": [
+      0.5,
+      0,
+      1,
+      1
+     ],
+     "src": "media/mounts/hammerhead-shark/map-1.webp",
+     "w": 960,
+     "h": 1080
+    },
+    {
+     "kind": "action",
+     "from": "https://staticg.sportskeeda.com/editor/2026/11/5ce01-17935370865019-1920.jpg",
+     "credit": "sportskeeda",
+     "caption": "In action — riding a Hammerhead",
+     "clip": [
+      0,
+      0,
+      0.5,
+      1
+     ],
+     "src": "media/mounts/hammerhead-shark/action-2.webp",
+     "w": 960,
+     "h": 1080
+    }
+   ],
    "gallery": []
   },
   "sources": [
@@ -4049,6 +4371,11 @@
     "by": "mobalytics",
     "url": "https://mobalytics.gg/gamebase/guides/crimson-desert-ocean-mounts-hidden-encounters",
     "title": "Ocean Mounts & Hidden Encounters — Mobalytics"
+   },
+   {
+    "by": "sportskeeda",
+    "url": "https://www.sportskeeda.com/esports/all-new-mounts-crimson-desert-dlc-far-get",
+    "title": "All new mounts in the DLC and how to get them — Sportskeeda"
    }
   ],
   "since": "DLC: Charting the Unknown",
@@ -4104,7 +4431,7 @@
     ]
    }
   ],
-  "location": "Great Rocky Reef and waters far from the mainland.",
+  "location": "Great Rocky Reef and waters far from the mainland (Game8); Sportskeeda points to the Central Waters stretch.",
   "notes": [
    "The Great Rocky Reef is also home to a Megalodon boss — keep your distance while hunting."
   ],
@@ -4116,7 +4443,38 @@
     "w": 300,
     "h": 300
    },
-   "captures": [],
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://staticg.sportskeeda.com/editor/2026/11/64553-17935368323203-1920.jpg",
+     "credit": "sportskeeda",
+     "caption": "Spawn area — the Central Waters stretch",
+     "clip": [
+      0.5,
+      0,
+      1,
+      1
+     ],
+     "src": "media/mounts/orca/map-1.webp",
+     "w": 960,
+     "h": 1080
+    },
+    {
+     "kind": "action",
+     "from": "https://staticg.sportskeeda.com/editor/2026/11/64553-17935368323203-1920.jpg",
+     "credit": "sportskeeda",
+     "caption": "In action — riding an Orca",
+     "clip": [
+      0,
+      0,
+      0.5,
+      1
+     ],
+     "src": "media/mounts/orca/action-2.webp",
+     "w": 960,
+     "h": 1080
+    }
+   ],
    "gallery": []
   },
   "sources": [
@@ -4129,6 +4487,11 @@
     "by": "mobalytics",
     "url": "https://mobalytics.gg/gamebase/guides/crimson-desert-ocean-mounts-hidden-encounters",
     "title": "Ocean Mounts & Hidden Encounters — Mobalytics"
+   },
+   {
+    "by": "sportskeeda",
+    "url": "https://www.sportskeeda.com/esports/all-new-mounts-crimson-desert-dlc-far-get",
+    "title": "All new mounts in the DLC and how to get them — Sportskeeda"
    }
   ],
   "since": "DLC: Charting the Unknown",
@@ -4197,11 +4560,26 @@
    },
    "captures": [
     {
+     "kind": "map",
+     "from": "https://staticg.sportskeeda.com/editor/2026/11/092ac-17935378418509-1920.jpg",
+     "credit": "sportskeeda",
+     "caption": "Spawn area — Shipwreck Shore, by Bowsprit Cape",
+     "clip": [
+      0.5,
+      0.5,
+      1,
+      1
+     ],
+     "src": "media/mounts/green-sea-turtle/map-1.webp",
+     "w": 960,
+     "h": 540
+    },
+    {
      "kind": "action",
      "from": "https://img.game8.co/33r3w0jqxdvmm5qiq8gessy430l8",
      "credit": "game8",
      "caption": "In action — riding a sea turtle (Game8 does not name the species)",
-     "src": "media/mounts/green-sea-turtle/action-1.webp",
+     "src": "media/mounts/green-sea-turtle/action-2.webp",
      "w": 728,
      "h": 728
     }
@@ -4303,7 +4681,23 @@
     "w": 256,
     "h": 256
    },
-   "captures": [],
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://staticg.sportskeeda.com/editor/2026/11/092ac-17935378418509-1920.jpg",
+     "credit": "sportskeeda",
+     "caption": "Spawn area — Shipwreck Shore, by Bowsprit Cape",
+     "clip": [
+      0.5,
+      0.5,
+      1,
+      1
+     ],
+     "src": "media/mounts/hawksbill-sea-turtle/map-1.webp",
+     "w": 960,
+     "h": 540
+    }
+   ],
    "gallery": []
   },
   "sources": [
@@ -4406,7 +4800,23 @@
     "w": 256,
     "h": 256
    },
-   "captures": [],
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://staticg.sportskeeda.com/editor/2026/11/092ac-17935378418509-1920.jpg",
+     "credit": "sportskeeda",
+     "caption": "Spawn area — Shipwreck Shore, by Bowsprit Cape",
+     "clip": [
+      0.5,
+      0.5,
+      1,
+      1
+     ],
+     "src": "media/mounts/loggerhead-sea-turtle/map-1.webp",
+     "w": 960,
+     "h": 540
+    }
+   ],
    "gallery": []
   },
   "sources": [
@@ -4504,7 +4914,23 @@
     "w": 256,
     "h": 256
    },
-   "captures": [],
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://staticg.sportskeeda.com/editor/2026/11/092ac-17935378418509-1920.jpg",
+     "credit": "sportskeeda",
+     "caption": "Spawn area — the Great Hydrothermal Vents",
+     "clip": [
+      0.5,
+      0,
+      1,
+      0.5
+     ],
+     "src": "media/mounts/olive-ridley-sea-turtle/map-1.webp",
+     "w": 960,
+     "h": 540
+    }
+   ],
    "gallery": []
   },
   "sources": [
@@ -4612,7 +5038,23 @@
     "w": 256,
     "h": 256
    },
-   "captures": [],
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://staticg.sportskeeda.com/editor/2026/11/092ac-17935378418509-1920.jpg",
+     "credit": "sportskeeda",
+     "caption": "Spawn area — the Great Hydrothermal Vents",
+     "clip": [
+      0.5,
+      0,
+      1,
+      0.5
+     ],
+     "src": "media/mounts/hydrothermal-turtle/map-1.webp",
+     "w": 960,
+     "h": 540
+    }
+   ],
    "gallery": []
   },
   "sources": [
@@ -4670,7 +5112,7 @@
   ],
   "kind": "Fish",
   "region": "Open ocean",
-  "area": "—",
+  "area": "Phragma Islands",
   "trait": "Extends your dive",
   "summary": "A huge, gentle sunfish whose ride ability lets you stay down longer.",
   "tiers": {
@@ -4708,7 +5150,7 @@
     ]
    }
   ],
-  "location": "Open ocean (no fixed spawn documented).",
+  "location": "Sure spawns at the Silent Serpent Shrine Cave by the Phragma Islands; also the Great Coral Reef, the Sea Serpent Kelp Forest and the Trench (Sportskeeda).",
   "notes": [],
   "media": {
    "portrait": {
@@ -4718,7 +5160,38 @@
     "w": 480,
     "h": 480
    },
-   "captures": [],
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://staticg.sportskeeda.com/editor/2026/11/39914-17935374319017-1920.jpg",
+     "credit": "sportskeeda",
+     "caption": "Spawn area — around the Phragma Islands",
+     "clip": [
+      0.5,
+      0,
+      1,
+      1
+     ],
+     "src": "media/mounts/sunfish/map-1.webp",
+     "w": 960,
+     "h": 1080
+    },
+    {
+     "kind": "action",
+     "from": "https://staticg.sportskeeda.com/editor/2026/11/39914-17935374319017-1920.jpg",
+     "credit": "sportskeeda",
+     "caption": "In action — riding a Sunfish",
+     "clip": [
+      0,
+      0,
+      0.5,
+      1
+     ],
+     "src": "media/mounts/sunfish/action-2.webp",
+     "w": 960,
+     "h": 1080
+    }
+   ],
    "gallery": []
   },
   "sources": [
@@ -4731,6 +5204,11 @@
     "by": "mobalytics",
     "url": "https://mobalytics.gg/gamebase/guides/crimson-desert-ocean-mounts-hidden-encounters",
     "title": "Ocean Mounts & Hidden Encounters — Mobalytics"
+   },
+   {
+    "by": "sportskeeda",
+    "url": "https://www.sportskeeda.com/esports/all-new-mounts-crimson-desert-dlc-far-get",
+    "title": "All new mounts in the DLC and how to get them — Sportskeeda"
    }
   ],
   "since": "DLC: Charting the Unknown",
@@ -4797,7 +5275,23 @@
     "w": 300,
     "h": 300
    },
-   "captures": [],
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://staticg.sportskeeda.com/editor/2026/11/8a78a-17935361955159-1920.jpg",
+     "credit": "sportskeeda",
+     "caption": "Spawn area — the Great Coral Reef, shared with the Pink Dolphin",
+     "clip": [
+      0.5,
+      0,
+      1,
+      1
+     ],
+     "src": "media/mounts/dolphin/map-1.webp",
+     "w": 960,
+     "h": 1080
+    }
+   ],
    "gallery": []
   },
   "sources": [
@@ -4810,6 +5304,11 @@
     "by": "gamerant",
     "url": "https://gamerant.com/crimson-desert-legendary-pink-dolphin-location/",
     "title": "Pink Dolphin Location — GameRant"
+   },
+   {
+    "by": "sportskeeda",
+    "url": "https://www.sportskeeda.com/esports/all-new-mounts-crimson-desert-dlc-far-get",
+    "title": "All new mounts in the DLC and how to get them — Sportskeeda"
    }
   ],
   "since": "DLC: Charting the Unknown",
@@ -4873,7 +5372,23 @@
     "w": 300,
     "h": 300
    },
-   "captures": [],
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://staticg.sportskeeda.com/editor/2026/11/5dd46-17935386115780-1920.jpg",
+     "credit": "sportskeeda",
+     "caption": "Spawn area — the zone Sportskeeda marks for manta-type rays",
+     "clip": [
+      0.5,
+      0,
+      1,
+      1
+     ],
+     "src": "media/mounts/manta-ray/map-1.webp",
+     "w": 960,
+     "h": 1080
+    }
+   ],
    "gallery": []
   },
   "sources": [
@@ -4886,6 +5401,11 @@
     "by": "mobalytics",
     "url": "https://mobalytics.gg/gamebase/guides/crimson-desert-ocean-mounts-hidden-encounters",
     "title": "Ocean Mounts & Hidden Encounters — Mobalytics"
+   },
+   {
+    "by": "sportskeeda",
+    "url": "https://www.sportskeeda.com/esports/all-new-mounts-crimson-desert-dlc-far-get",
+    "title": "All new mounts in the DLC and how to get them — Sportskeeda"
    }
   ],
   "since": "DLC: Charting the Unknown",
@@ -4941,7 +5461,7 @@
     ]
    }
   ],
-  "location": "The Great Ocean. TH.GL maps a single spawn; no guide names the place yet.",
+  "location": "The Great Ocean. Sportskeeda groups it with the Manta and Eagle Rays (the Dead Coral Sea or the Great Coral Reef); TH.GL maps a single spawn, and no guide names that spot.",
   "notes": [],
   "variants": [],
   "media": {
@@ -4953,7 +5473,23 @@
     "w": 256,
     "h": 256
    },
-   "captures": [],
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://staticg.sportskeeda.com/editor/2026/11/5dd46-17935386115780-1920.jpg",
+     "credit": "sportskeeda",
+     "caption": "Spawn area — Sportskeeda's zone for all manta-type rays, not this ray's own spot",
+     "clip": [
+      0.5,
+      0,
+      1,
+      1
+     ],
+     "src": "media/mounts/giant-manta-ray/map-1.webp",
+     "w": 960,
+     "h": 1080
+    }
+   ],
    "gallery": []
   },
   "sources": [
@@ -5001,7 +5537,7 @@
   ],
   "kind": "Ray",
   "region": "Open ocean",
-  "area": "—",
+  "area": "Dead Coral Sea, Great Coral Reef",
   "trait": "Spotted ray, tamed with fillets",
   "summary": "A spotted ray tamed the gentle way — ride it and feed it.",
   "tiers": {
@@ -5039,7 +5575,7 @@
     ]
    }
   ],
-  "location": "Open ocean (no fixed spawn documented).",
+  "location": "Sportskeeda groups it with the Manta Rays: the Dead Coral Sea or the Great Coral Reef.",
   "notes": [],
   "media": {
    "portrait": {
@@ -5049,7 +5585,38 @@
     "w": 300,
     "h": 300
    },
-   "captures": [],
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://staticg.sportskeeda.com/editor/2026/11/5dd46-17935386115780-1920.jpg",
+     "credit": "sportskeeda",
+     "caption": "Spawn area — the zone Sportskeeda marks for manta-type rays",
+     "clip": [
+      0.5,
+      0,
+      1,
+      1
+     ],
+     "src": "media/mounts/eagle-ray/map-1.webp",
+     "w": 960,
+     "h": 1080
+    },
+    {
+     "kind": "action",
+     "from": "https://staticg.sportskeeda.com/editor/2026/11/5dd46-17935386115780-1920.jpg",
+     "credit": "sportskeeda",
+     "caption": "In action — riding an Eagle Ray",
+     "clip": [
+      0,
+      0,
+      0.5,
+      1
+     ],
+     "src": "media/mounts/eagle-ray/action-2.webp",
+     "w": 960,
+     "h": 1080
+    }
+   ],
    "gallery": []
   },
   "sources": [
@@ -5057,6 +5624,11 @@
     "by": "game8",
     "url": "https://game8.co/games/Crimson-Desert/archives/635858",
     "title": "All New Mounts (DLC) — Game8"
+   },
+   {
+    "by": "sportskeeda",
+    "url": "https://www.sportskeeda.com/esports/all-new-mounts-crimson-desert-dlc-far-get",
+    "title": "All new mounts in the DLC and how to get them — Sportskeeda"
    }
   ],
   "since": "DLC: Charting the Unknown",
@@ -5073,7 +5645,7 @@
   ],
   "kind": "Ray",
   "region": "Open ocean",
-  "area": "Deep, dark water",
+  "area": "The Trench",
   "trait": "Glowing ray of the dark depths",
   "summary": "A dark-water ray with a glowing body, tamed with fillets like the other rays.",
   "tiers": {
@@ -5111,7 +5683,7 @@
     ]
    }
   ],
-  "location": "Open ocean (no fixed spawn documented).",
+  "location": "The Trench and the Great Trench (Sportskeeda).",
   "notes": [],
   "media": {
    "portrait": {
@@ -5121,7 +5693,38 @@
     "w": 480,
     "h": 480
    },
-   "captures": [],
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://staticg.sportskeeda.com/editor/2026/11/48f85-17935394110417-1920.jpg",
+     "credit": "sportskeeda",
+     "caption": "Spawn area — the Trench and the Great Trench",
+     "clip": [
+      0.5,
+      0,
+      1,
+      1
+     ],
+     "src": "media/mounts/electric-ray/map-1.webp",
+     "w": 960,
+     "h": 1080
+    },
+    {
+     "kind": "action",
+     "from": "https://staticg.sportskeeda.com/editor/2026/11/48f85-17935394110417-1920.jpg",
+     "credit": "sportskeeda",
+     "caption": "In action — riding an Electric Ray",
+     "clip": [
+      0,
+      0,
+      0.5,
+      1
+     ],
+     "src": "media/mounts/electric-ray/action-2.webp",
+     "w": 960,
+     "h": 1080
+    }
+   ],
    "gallery": []
   },
   "sources": [
@@ -5129,6 +5732,11 @@
     "by": "game8",
     "url": "https://game8.co/games/Crimson-Desert/archives/635858",
     "title": "All New Mounts (DLC) — Game8"
+   },
+   {
+    "by": "sportskeeda",
+    "url": "https://www.sportskeeda.com/esports/all-new-mounts-crimson-desert-dlc-far-get",
+    "title": "All new mounts in the DLC and how to get them — Sportskeeda"
    }
   ],
   "since": "DLC: Charting the Unknown",
@@ -5193,7 +5801,38 @@
     "w": 300,
     "h": 300
    },
-   "captures": [],
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://staticg.sportskeeda.com/editor/2026/11/d16ad-17935391526405-1920.jpg",
+     "credit": "sportskeeda",
+     "caption": "Spawn area — the shores of Iliya Island",
+     "clip": [
+      0.5,
+      0,
+      1,
+      1
+     ],
+     "src": "media/mounts/spotted-seal/map-1.webp",
+     "w": 960,
+     "h": 1080
+    },
+    {
+     "kind": "action",
+     "from": "https://staticg.sportskeeda.com/editor/2026/11/d16ad-17935391526405-1920.jpg",
+     "credit": "sportskeeda",
+     "caption": "In action — riding a Spotted Seal",
+     "clip": [
+      0,
+      0,
+      0.5,
+      1
+     ],
+     "src": "media/mounts/spotted-seal/action-2.webp",
+     "w": 960,
+     "h": 1080
+    }
+   ],
    "gallery": []
   },
   "sources": [
@@ -5201,6 +5840,11 @@
     "by": "game8",
     "url": "https://game8.co/games/Crimson-Desert/archives/635858",
     "title": "All New Mounts (DLC) — Game8"
+   },
+   {
+    "by": "sportskeeda",
+    "url": "https://www.sportskeeda.com/esports/all-new-mounts-crimson-desert-dlc-far-get",
+    "title": "All new mounts in the DLC and how to get them — Sportskeeda"
    }
   ],
   "since": "DLC: Charting the Unknown",
@@ -6343,7 +6987,15 @@
      "h": 410
     }
    ],
-   "gallery": []
+   "gallery": [],
+   "hero": {
+    "from": "https://gdm-universal-media.b-cdn.net/gfinityesports/cb5f737b-4667824-crimson-desert-cloudcart-guide-(1).webp?width=1600",
+    "credit": "gfinity",
+    "focus": "50% 40%",
+    "src": "media/mounts/cloudcart/hero.webp",
+    "w": 1280,
+    "h": 720
+   }
   },
   "sources": [
    {
@@ -6439,7 +7091,26 @@
     "w": 170,
     "h": 170
    },
-   "captures": [],
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/4468483/df322228289b9dbd8166c26afb9ee56a.png/show",
+     "credit": "game8",
+     "caption": "World map — Emberwind Workshop, north of Glenbright Manor",
+     "src": "media/mounts/cloudcruiser/map-1.webp",
+     "w": 728,
+     "h": 410
+    },
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/4468485/e88044b2f4ac232a93501496007f4d02.png/show",
+     "credit": "game8",
+     "caption": "On site — the Emberwind Workshop yard",
+     "src": "media/mounts/cloudcruiser/overworld-2.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
    "gallery": []
   },
   "sources": [
@@ -6531,7 +7202,26 @@
     "w": 170,
     "h": 170
    },
-   "captures": [],
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/4468483/df322228289b9dbd8166c26afb9ee56a.png/show",
+     "credit": "game8",
+     "caption": "World map — Emberwind Workshop, north of Glenbright Manor",
+     "src": "media/mounts/skystreaker/map-1.webp",
+     "w": 728,
+     "h": 410
+    },
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/4468485/e88044b2f4ac232a93501496007f4d02.png/show",
+     "credit": "game8",
+     "caption": "On site — the Emberwind Workshop yard",
+     "src": "media/mounts/skystreaker/overworld-2.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
    "gallery": []
   },
   "sources": [
@@ -6651,7 +7341,21 @@
      "h": 579
     }
    ],
-   "captures": []
+   "captures": [],
+   "hero": {
+    "from": "https://www.powerpyx.com/wp-content/uploads/crimson-desert-141-6.jpg",
+    "credit": "powerpyx",
+    "focus": "50% 50%",
+    "clip": [
+     0,
+     0,
+     1,
+     0.84
+    ],
+    "src": "media/mounts/atag/hero.webp",
+    "w": 1280,
+    "h": 605
+   }
   },
   "sources": [
    {
@@ -6938,11 +7642,20 @@
    },
    "captures": [
     {
+     "kind": "map",
+     "from": "https://img.game8.co/4451531/8b93f8ac9eed19d6543a13b509e73309.png/show",
+     "credit": "game8",
+     "caption": "World map — Timberturner Wainwright, east of Howling Hill",
+     "src": "media/mounts/freight-wagon/map-1.webp",
+     "w": 727,
+     "h": 409
+    },
+    {
      "kind": "menu",
      "from": "https://img.game8.co/4451573/8017afcf380b1d97d938f05723ff9362.png/show",
      "credit": "game8",
      "caption": "Mission list — Timberturner Wainwright: Old, Freight and Trading Wagon",
-     "src": "media/mounts/freight-wagon/menu-1.webp",
+     "src": "media/mounts/freight-wagon/menu-2.webp",
      "w": 727,
      "h": 409
     }
@@ -7047,11 +7760,20 @@
    },
    "captures": [
     {
+     "kind": "map",
+     "from": "https://img.game8.co/4451531/8b93f8ac9eed19d6543a13b509e73309.png/show",
+     "credit": "game8",
+     "caption": "World map — Timberturner Wainwright, east of Howling Hill",
+     "src": "media/mounts/trading-wagon/map-1.webp",
+     "w": 727,
+     "h": 409
+    },
+    {
      "kind": "menu",
      "from": "https://img.game8.co/4451573/8017afcf380b1d97d938f05723ff9362.png/show",
      "credit": "game8",
      "caption": "Mission list — Timberturner Wainwright: Old, Freight and Trading Wagon",
-     "src": "media/mounts/trading-wagon/menu-1.webp",
+     "src": "media/mounts/trading-wagon/menu-2.webp",
      "w": 727,
      "h": 409
     }
@@ -7159,11 +7881,20 @@
    },
    "captures": [
     {
+     "kind": "map",
+     "from": "https://gameshorizon.com/wp-content/uploads/2026/10/How-to-Build-a-Ship-in-Crimson-Desert-4.jpg",
+     "credit": "gameshorizon",
+     "caption": "World map — Vellua, where it is built and docked",
+     "src": "media/mounts/small-greymane-ship/map-1.webp",
+     "w": 1600,
+     "h": 900
+    },
+    {
      "kind": "menu",
      "from": "https://img.game8.co/tc04wthpcuueojn2xagimpd80iy0",
      "credit": "game8",
      "caption": "Manage Ships — Small Greymane Ship",
-     "src": "media/mounts/small-greymane-ship/menu-1.webp",
+     "src": "media/mounts/small-greymane-ship/menu-2.webp",
      "w": 728,
      "h": 410
     }
@@ -7500,11 +8231,20 @@
    },
    "captures": [
     {
+     "kind": "map",
+     "from": "https://gameshorizon.com/wp-content/uploads/2026/10/How-to-Build-a-Ship-in-Crimson-Desert-4.jpg",
+     "credit": "gameshorizon",
+     "caption": "World map — Vellua: Hopkins, the Ship Manager",
+     "src": "media/mounts/large-hernandian-ship/map-1.webp",
+     "w": 1600,
+     "h": 900
+    },
+    {
      "kind": "menu",
      "from": "https://img.game8.co/7m85kwxmphhi42enampof8ej1mkk",
      "credit": "game8",
      "caption": "Buy Ship — Large Hernandian Ship, 6,000,000 Camp Funds",
-     "src": "media/mounts/large-hernandian-ship/menu-1.webp",
+     "src": "media/mounts/large-hernandian-ship/menu-2.webp",
      "w": 728,
      "h": 410
     }
@@ -7845,11 +8585,20 @@
    },
    "captures": [
     {
+     "kind": "map",
+     "from": "https://gameshorizon.com/wp-content/uploads/2026/10/How-to-Build-a-Ship-in-Crimson-Desert-4.jpg",
+     "credit": "gameshorizon",
+     "caption": "World map — Vellua: Hopkins, the Ship Manager",
+     "src": "media/mounts/medium-hernandian-ship/map-1.webp",
+     "w": 1600,
+     "h": 900
+    },
+    {
      "kind": "menu",
      "from": "https://img.game8.co/shll3ug4cxcu2ko44jkofgop5gr6",
      "credit": "game8",
      "caption": "Buy Ship — Medium Hernandian Ship, 1,200,000 Camp Funds",
-     "src": "media/mounts/medium-hernandian-ship/menu-1.webp",
+     "src": "media/mounts/medium-hernandian-ship/menu-2.webp",
      "w": 728,
      "h": 410
     }
@@ -8183,11 +8932,20 @@
    },
    "captures": [
     {
+     "kind": "map",
+     "from": "https://gameshorizon.com/wp-content/uploads/2026/10/How-to-Build-a-Ship-in-Crimson-Desert-4.jpg",
+     "credit": "gameshorizon",
+     "caption": "World map — Vellua: Hopkins, the Ship Manager",
+     "src": "media/mounts/small-hernandian-ship/map-1.webp",
+     "w": 1600,
+     "h": 900
+    },
+    {
      "kind": "menu",
      "from": "https://img.game8.co/2d6zqcja39fb1wgkvmec6bsvxyl5",
      "credit": "game8",
      "caption": "Buy Ship — Small Hernandian Ship, 40,000 Camp Funds",
-     "src": "media/mounts/small-hernandian-ship/menu-1.webp",
+     "src": "media/mounts/small-hernandian-ship/menu-2.webp",
      "w": 728,
      "h": 410
     }
@@ -8520,11 +9278,20 @@
    },
    "captures": [
     {
+     "kind": "map",
+     "from": "https://gameshorizon.com/wp-content/uploads/2026/10/How-to-Build-a-Ship-in-Crimson-Desert-4.jpg",
+     "credit": "gameshorizon",
+     "caption": "World map — Vellua: Hopkins, the Ship Manager",
+     "src": "media/mounts/humble-rowboat/map-1.webp",
+     "w": 1600,
+     "h": 900
+    },
+    {
      "kind": "menu",
      "from": "https://img.game8.co/bbdl1dw979ap147sc85rdhb2u20a",
      "credit": "game8",
      "caption": "Buy Ship — Humble Rowboat, 2,000 Camp Funds",
-     "src": "media/mounts/humble-rowboat/menu-1.webp",
+     "src": "media/mounts/humble-rowboat/menu-2.webp",
      "w": 728,
      "h": 410
     }

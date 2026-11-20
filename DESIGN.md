@@ -115,6 +115,16 @@ Rules added while building the Mounts branch (Claude's calls, not in the brief):
   - *Kept out after checking:* the Heavy Assault A.T.A.G. is borrowed from Gorthak hangars and no blueprint builds one (Gaming ProMax lists three craftable variants). The Race Horse and Black Bear have no source showing they can be kept; Game8's "Black Bear" is the Clawed Bear.
   - *Counts after M2:* 80 mounts: 48, plus 36 new plates, minus 3 temporary rides and the old Sea Turtle plate (now the Green Sea Turtle). DLC: 19 sea mounts, 20 ships and the A.T.A.G. refit. Flying: Blackstar, the Wyvern and three balloons. Mechanical: two mechs and three balloons. The Easter Eggs cover moved to the Leaping Kuku Bird.
 
+- **Revision 5: M3 Where, for every mount** (2026-11-19):
+  - *Banner rule* *(my call)*: a hero must be an in-game shot in which the mount itself is visible and named by the publishing article (its title, caption or alt text), at least 1,200 px wide. Stat panels and watermarks are clipped off (`clip`): Rokade's register panel, PowerPyx's mark on the A.T.A.G. A plate with no such shot keeps the framed portrait (`Hero.svelte`). 10 plates gained one: Royler, Rokade, Wyvern (PC Gamer), Lion, Red-Feathered Raptor (GamesRadar+), Giant Green Iguana, Cloudcart (Gfinity), Brown Bear (Beebom), Large White Wolf (GamesHedge), A.T.A.G. (PowerPyx).
+  - *Map rule:* a map must mark the place the plate's Where line names, from the source that names it. 29 plates gained one; 28 are still without (Known gaps), down from 57.
+    - Legendary ships: every blueprint spot on Game8's maps, each followed by its on-site view. Game8 ships map and view in one image, so each half is clipped into its own capture.
+    - Sea mounts: Sportskeeda's composites put creator footage on the left and a map with the spawn zone on the right. The right half is the map; the left half, where it shows the named creature, is an In action capture. The turtle map is cut per species: Shipwreck Shore for Green, Hawksbill and Loggerhead; the Great Hydrothermal Vents for Olive Ridley and Hydrothermal. Sportskeeda marks one zone for all manta-type rays, so the Giant Manta Ray's caption says it is the group's zone, not its own spot.
+    - Vellua (GamesHorizon) for the ships Hopkins sells and the ones built there; Emberwind Workshop for the Cloudcruiser and Skystreaker; Timberturner Wainwright for the Freight and Trading Wagons; Fort Windridge and Wyvern's Cradle for the Wyvern; the Sanctum of Penitence for the Brown Bear (Game8, PC Gamer).
+    - Captures run map first, then on-site, then the plate's older shop or action shots.
+  - *Facts the new sources settled* (Sportskeeda's section text): Electric Rays spawn in the Trench and the Great Trench. Eagle Rays share the manta zone (the Dead Coral Sea or the Great Coral Reef). Sunfish are sure at the Silent Serpent Shrine Cave by the Phragma Islands. Hammerheads and Orcas also swim the Central Waters. The Giant Manta Ray's place is narrowed to the manta zone. Those plates no longer say "no fixed spawn".
+  - *Checked and left out:* GamesRadar+'s white tiger shot. Its own text says legendary animals other than horses still can't be tamed, and the shot shows Kliff climbing it in combat. PC Gamer's white goat is not the Ibex. The striped-sail ships in Pearl Abyss's Steam shots and in guides were not used: sails are customisable, so the model can't be told. Also unused: PC Gamer's tamed-Camora shot (dark, half covered by the register panel) and its covered wagon (no caption says which wagon). TH.GL stays off-limits.
+
 ## Riches tree — decisions
 
 You asked for Riches on 2026-11-19: an endgame economy guide for a player who has **finished the main story but not started Charting the Unknown**. Its job is to have the player arrive at the DLC rich, then turn the DLC's systems (real estate, ships, islands) into more money. It covers management mechanics and direct player control. The research, with sources, is in `docs/RICHES-RESEARCH.md`. R1 shipped it with 24 methods.
@@ -178,8 +188,16 @@ Left out for lack of reliable data or real imagery:
 
 - **Scout Automation** and **Golden Star Mech**: reported by one outlet (Destructoid, March 2026), absent from Game8's and Fextralife's mount lists, and Destructoid's own Golden Star unlock never appeared. No game imagery found. Add when a second source confirms them.
 - **Cows/bulls, race horses and other temporary rides**: out by Revision 4, since the player cannot keep them. The Delesyia Train is out: it is not a personal mount (Revision 3).
-- **Spawns no guide pins**: the Giant Manta Ray (TH.GL maps one spawn, unnamed), the Grizzly Bear (forests and mountains) and several common sea mounts. Their plates say so.
-- **Rowboat portraits** are cropped from Game8's 728 × 410 shop screenshots, where the boat is small, so they are soft. No larger in-game image of a rowboat was found.
+- **Spawns no guide pins**: the Grizzly Bear (forests and mountains). The Giant Manta Ray is narrowed to Sportskeeda's manta-ray zone, but TH.GL's single spawn is still unnamed. Their plates say so.
+- **Rowboat portraits** are cropped from Game8's 728 × 410 shop screenshots, where the boat is small, so they are soft. M3 searched again; no larger in-game image of a rowboat was found.
+- **Plates without a map (28)**, by reason:
+  - *No single place to mark:* Blackstar (story unlock), the five stable breeds (wild herds anywhere and stable stock), the soldiers' and scouts' horses (any road), the Large Wolf (wilds across Pywel), and the Medium and Large Greymane Ships (built at any port).
+  - *No published static map of the named place:* Clawed Bear (Black Bear forts, Pailune), Grizzly Bear, Swift Wolf (Howlsands Camp), Rosehorn Deer (Mistwood Hunters' patrols), Ibex (Pailune mountains), Savage Fang Boar (Savage Fang raiders), the A.T.A.G. (Zargan Tankworks), the High-Mobility A.T.A.G. (Sanctum of Exaltation), and the ships and rowboats sold at Port Delesyia, Port Demeniss and Stoneward Harbor (9 plates). TH.GL marks these, but its data is off-limits.
+- **Plates without a banner (58)** keep the framed portrait. None has a wide, identified in-game shot under the Revision 5 rule:
+  - *Ships (20):* guides show ships with custom sails and never name the model.
+  - *Sea mounts (14):* no wide, named shot. Where Sportskeeda's 960 px half-frames show the creature, they are In action captures instead.
+  - *Horses (8):* Camora, the five breeds and the two road horses; no guide names the breed of the horse in its shots.
+  - *Other land and sky mounts (16):* only sub-1,200 px or unnamed shots exist (consolepulse's 960 px Leaping Kuku Bird, Game8's 728 px views).
 - **Large Greymane Ship hold size**: Game8 does not list it, so its record shows Health only.
 
 ## Build and release

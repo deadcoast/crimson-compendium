@@ -31,12 +31,12 @@ These are the item IDs from `IDENTIFIED.md`, placed under the milestones in `PLA
 - ~~NF-09: fleeting rides~~ dropped: permanent mounts only (`DESIGN.md` › Revision 4)
 - NF-03: re-check the remaining known gaps (Scout Automation, Golden Star Mech)
 
-## M3 Where, for every mount `[todo]`
+## M3 Where, for every mount `[done]`
 
 - NF-01: map captures for every entry without one (57 of 80 after M2)
 - NF-02: heroes for every entry without one (68 of 80 after M2)
 
-## M4 Ratings on evidence `[shelved]`
+## M4 Ratings on evidence `[todo]`
 
 - CORE-01: replace the ratings that default to III with sourced comparisons
 
