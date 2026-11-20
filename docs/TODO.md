@@ -1,6 +1,6 @@
 # TODO: M2 Full roster
 
-```
+```txt
 [IDENTIFIED + PLAN] -> [SHELVED] -> [TODO]
 ```
 

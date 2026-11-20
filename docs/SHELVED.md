@@ -1,6 +1,6 @@
 # SHELVED
 
-```
+```txt
 [IDENTIFIED + PLAN] -> [SHELVED] -> [TODO]
 ```
 

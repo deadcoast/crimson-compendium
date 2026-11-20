@@ -5,6 +5,7 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
 ## [Unreleased]
 
 ### Added
+
 - `npm run verify`: builds the site and checks it in a headless browser, failing on any problem. CI and the Release workflow run it. It covers:
   - the data lint;
   - every plate, list, redirect and the ladder;
@@ -18,6 +19,7 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
   - Nothing under `public/media` may be orphaned.
 
 ### Changed
+
 - **Fonts are self-hosted.** Bodoni Moda, Archivo and JetBrains Mono (Latin, variable) ship with the site, so the release zip renders as designed offline and from disk. The app no longer contacts a font CDN.
 - **Readable secondary text meets WCAG AA.** It is now at least 4.5:1 on every ink surface. Counts, hints, credits and placeholders moved from the ornament tone to the readable one.
 - **Screen-reader structure.** The index and plate sit in a `main` landmark, and pip ratings read as "n of 5".
@@ -25,7 +27,8 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
 
 ## [0.2.0] — 2026-11-18
 
-### Added
+### 0.2.0 - Added
+
 - **Explorer**, an IDE-style tree that replaces the spine, built on the VS Code tree widget and Atom tree-view. It has three panes: Recent, Compendium and Outline (the open plate's sections, tracking where you are reading).
   - Focus is separate from selection.
   - `←` / `→` collapse or step out, and expand or step in; `Alt` folds a whole subtree.
@@ -41,7 +44,8 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
 - The palette (`/`) now finds branches as well as mounts, so typing `dlc` or `under` jumps to them.
 - GitHub packaging: this changelog, a README with screenshots, CI (type check + build), and a one-click Release workflow that builds the site and publishes the release with its zip. Its tag input can be left blank (it releases the `package.json` version) and tolerates a stray trailing dot or missing `v`. Workflows run on the Node 24 actions (`checkout`, `setup-node`, `upload-artifact` v6).
 
-### Changed
+### 0.2.0 - Changed
+
 - **Tier colours.** Red is now reserved for the root. Legendary is orange, Rare is royal blue and Easter Eggs is cyan, following the traditional loot-tier scheme; category leaves inherit. Spec: `docs/spec/tier-colors.txt`.
 - **Long haul → All Around Best.** Same members, now ranked on all four ratings together.
 - **Deep water → Underwater** and **Flight → Flying** moved from Ride-for lenses to category branches. Old links redirect.
@@ -49,13 +53,15 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
 - Tier seals fold to a 2×2 grid whenever the plate is narrow, not only on phones.
 
 ### Fixed
+
 - Gallery cards share one height.
 - The Sources sheet reads "1 image", not "1 images".
 - The footer date no longer orphans a word.
 
 ## [0.1.0] — 2026-11-18
 
-### Added
+### 0.1.0 - Added
+
 - The Mounts branch: 47 mounts across five leaves (Legendary, Rare, Stable, Engineered, Fleeting), each with real in-game captures, routes, field notes and Speed / Stamina / Travel / Combat tiers.
 - Plates with map loupe and lightbox, a Tier Ladder, Ride-for lenses, `/` search and keyboard stepping.
 - An image pipeline (`tools/media.py`) and a registry that validates every branch at load.

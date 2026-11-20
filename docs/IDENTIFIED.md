@@ -1,6 +1,6 @@
 # IDENTIFIED
 
-```
+```txt
 [IDENTIFIED + PLAN] -> [SHELVED] -> [TODO]
 ```
 
@@ -9,7 +9,7 @@ This review was done at commit `db93c9d` (v0.2.0 released, Release workflow fixe
 ## 1. Measured
 
 | What | Number | How it was measured |
-|---|---|---|
+| --- | --- | --- |
 | Source | `src/core` 693 lines over 8 modules; `src/ui` 2,781 lines over 19 components; `ExplorerTree.svelte` alone is 594 lines (21 % of the UI) | `wc -l` |
 | Data | 48 entries; `entries.json` 5,296 lines; `branch.json` 308 lines | `wc -l`, node |
 | Debt markers | 0 `TODO`/`FIXME`; 1 `any` | grep |
@@ -27,7 +27,7 @@ This review was done at commit `db93c9d` (v0.2.0 released, Release workflow fixe
 ## 2. Current state vs intended design
 
 | Requirement (brief, `DESIGN.md`) | State | Evidence |
-|---|---|---|
+| --- | --- | --- |
 | TREE → BRANCH → LEAF; later branches built from the source with no scaffolded branches | met | `core/` names no branch except in route comments (`tree.ts:11-15`); a branch is one import block in `registry.ts:5-7` |
 | Tiers I–V on Speed, Stamina, Travel, Combat; traits can lift a metric | met | `entries.json` tiers; overrides recorded in `DESIGN.md` |
 | Every rating backed by evidence | partial | 32 of 192 ratings default to III for lack of data |
@@ -43,13 +43,15 @@ This review was done at commit `db93c9d` (v0.2.0 released, Release workflow fixe
 
 ## 3. Strengths and weaknesses
 
-**Strengths**
+**Strengths**:
+
 - The core is generic: 693 lines handle routing, selectors, lists, lenses, covers and the explorer model, and no mount fields leak into it.
 - The registry fails loudly: duplicate routes, unknown leaves, empty categories and missing portraits all stop the load (`registry.ts`).
 - Data carries its own evidence: every rating has a `basis`, every image a `credit`, every entry at least one source (2.4 on average, Game8 on 43 and Fextralife on 36).
 - One classic-script bundle that opens from `file://`, a one-click release, and CI on every push.
 
-**Weaknesses**
+**Weaknesses**:
+
 - No regression gate. A broken route, explorer key or missing image passes CI as long as types check and the build succeeds.
 - `ExplorerTree.svelte` holds keys, type navigation, find, sticky rows, reveal and the hover card in 594 lines. All three explorer fixes in v0.2.0 (`b34caaf`, `c4607fe`, `a637202`) landed in this one file.
 - Typography depends on Google Fonts at runtime, which contradicts the offline release.
@@ -142,7 +144,7 @@ This review was done at commit `db93c9d` (v0.2.0 released, Release workflow fixe
 You challenged the roster, and you were right. The app lists 48 mounts. Current guides list 58 (crimsondesert.gg) to 66 (GamingBolt) by name, and GamingBolt puts the full count near a hundred once every rideable is included. Below is what is missing, by how you keep it. "Hidden" means the mount is in the data, but only as a variant line on another plate.
 
 | Mount | Kept how | State in the app | Sources |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Cloudcruiser, Skystreaker | permanent flying (Cloudcart upgrades via research) | hidden in Cloudcart | thegameswiki Cloudcart and Cloudcruiser; crimsondesert.gg; GamingBolt |
 | Swift Wolf, Large White Wolf | permanent special mount since 1.07 | hidden in Large Wolf | thegameswiki Large White Wolf; crimsondesert.gg; GamingBolt |
 | High-Mobility A.T.A.G. | permanent mech | hidden in A.T.A.G. | Vulkk; GamingBolt |
@@ -158,6 +160,7 @@ You challenged the roster, and you were right. The app lists 48 mounts. Current 
 | Worn Wagon | basic wagon | missing | GamingBolt |
 
 Checked and kept out:
+
 - **Mountain God Boar** is a boss fight added in 1.05, not a mount, per thegameswiki and Gaming ProMax. One outlet, consolepulse, lists it as a mount.
 - **Delesyia Train** is fixed-route transport, not a personal mount, per Game8 and thegameswiki.
 

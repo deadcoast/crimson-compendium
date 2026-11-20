@@ -7,7 +7,7 @@ The global design for the Crimson Compendium. Every branch builds on this; decis
 Existing guides (Game8, Fextralife, GameRant) spread one mount across a long article, show the map capture at thumbnail size, and never compare mounts against each other. The compendium answers three questions in one place, each one click deep:
 
 | Question | Answer in the app |
-|---|---|
+| --- | --- |
 | Where is it? | **Where**: the in-game map capture and on-site capture, full width, with a loupe for map labels and a zoomable lightbox. |
 | How do I get it? | **How**: requirement chips, numbered steps, alternate routes, field notes. |
 | Is it worth it? | **Seals** on every plate and the **Tier Ladder** ranking everything per metric. |
@@ -30,7 +30,7 @@ Three columns on desktop: **Explorer** (the tree) · **Index** (the leaf, catego
 Motion is a reveal language, not decoration. Easing `cubic-bezier(.16,1,.3,1)`.
 
 | Element | Motion |
-|---|---|
+| --- | --- |
 | Plate hero | Crimson blade slash across the frame, image unveils behind it, slow Ken Burns drift, pointer parallax |
 | Entry name | Letters rise from blur in sequence; breaks only between words |
 | Terrain layer | Canvas particles by class: embers (land), bubbles + light shafts (sea), wind streaks (sky); pauses off-screen and in hidden tabs |
@@ -55,7 +55,7 @@ Motion is a reveal language, not decoration. Easing `cubic-bezier(.16,1,.3,1)`.
 Built on the VS Code tree widget and Atom tree-view, read from their source (`microsoft/vscode` `abstractTree.ts`, `listWidget.ts`, `tree.css`, `paneview.css`; `atom/tree-view` `tree-view.less`, `tree-view.cson`) and translated onto this theme.
 
 | Standard | Source | Here |
-|---|---|---|
+| --- | --- | --- |
 | View panes | VS Code paneview: 22 px uppercase headers, actions shown on hover/focus, animated height | **Recent** (last opened mounts), **Compendium** (the tree, takes the free height), **Outline** (sections of the open plate, tracks reading position). Open/closed state persists. Side panes cap their height on short screens so the tree keeps its room. |
 | Rows | VS Code list: fixed 22 px rows, 16 px twistie, indent per level | 22 px rows, 12 px indent (VS Code's default is 8; 12 keeps guides legible beside portrait icons). Touch and phone layouts use 32 px rows. |
 | Focus ≠ selection | VS Code list | The selection slab marks the open route; a separate outline marks the keyboard cursor. Arrows move focus only; Enter opens. |
@@ -107,6 +107,7 @@ Rules added while building the Mounts branch (Claude's calls, not in the brief):
 ## Known gaps
 
 Left out for lack of reliable data or real imagery:
+
 - **Scout Automation** and **Golden Star Mech**: reported by one outlet (Destructoid, March 2026), absent from Game8's and Fextralife's mount lists, and Destructoid's own Golden Star unlock never appeared. No game imagery found. Add when a second source confirms them.
 - **Cows/bulls**: confirmed by Game8, but no hostable in-game capture was found. They are now part of M2 (NF-09) and go in Fleeting once imagery exists. The Delesyia Train is out: it is not a personal mount (Revision 3).
 - Soldier and race horses (temporary). Several common sea mounts have no documented fixed spawn; their plates say so.

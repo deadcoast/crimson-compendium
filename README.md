@@ -26,7 +26,7 @@
 Lists for every way you play a session:
 
 | | |
-|---|---|
+| --- | --- |
 | **Rarity** | Legendary · Rare · Stable · Engineered · Fleeting |
 | **Category branches** | Land · Underwater · Flying · Mechanical · Easter Eggs · DLC: *Charting the Unknown* |
 | **Ride for** | All Around Best · Battle · Cliffs & drops · Cargo |
@@ -67,14 +67,14 @@ npm run media    # fetch + convert images for entries with a new "from" URL (Pyt
 ## Keyboard
 
 | Anywhere | |
-|---|---|
+| --- | --- |
 | `/` or `Ctrl/⌘ K` | search mounts, places, traits and branches |
 | `J` / `K` or `→` / `←` | next / previous mount in the current list |
 | `L` | Tier Ladder and back |
 | `Alt \` or `Ctrl ⇧ E` | focus the explorer |
 
 | In the explorer | |
-|---|---|
+| --- | --- |
 | `↑` `↓` `PgUp` `PgDn` `Home` `End` | move |
 | `→` / `←` | expand, or step into the folder · collapse, or step out to the parent |
 | `Alt →` / `Alt ←` | expand / collapse a whole subtree |
@@ -87,7 +87,7 @@ The explorer follows the VS Code tree widget and Atom tree-view: focus is separa
 ## Tiers
 
 | | |
-|---|---|
+| --- | --- |
 | **I** | Best in class — only the best of the best |
 | **II** | Not as good as I, better than everything else |
 | **III** | Average |
@@ -98,7 +98,7 @@ Traits can lift a rating: no fall damage lifts Travel, a unique attack lifts Com
 
 ## Project layout
 
-```
+```txt
 src/
   core/              engine — knows nothing about mounts
     types.ts         TREE → BRANCH → (CATEGORY) → LEAF → ENTRY

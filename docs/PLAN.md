@@ -4,7 +4,7 @@ This is the single global plan. Each milestone has one theme, and its items live
 
 ## Docs chain
 
-```
+```txt
 [IDENTIFIED + PLAN] -> [SHELVED] -> [TODO]
 ```
 
@@ -18,7 +18,7 @@ A milestone is delivered when its TODO is complete, `npm run verify` and CI are 
 ## Milestones
 
 | # | Milestone | Theme | Status |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | M0 | Mounts branch (v0.1) and Explorer & category branches (v0.2.0) | the first branch | delivered |
 | M1 | Ground truth | a regression gate in the repo; the offline release renders as designed; accessible to keyboard and screen readers | delivered: `npm run verify` in CI and Release; see `DESIGN.md` › Build and release |
 | M2 | Full roster | every mount the game lets you ride, one entry per registered mount, ships included (IDENTIFIED §5) | in progress → `SHELVED.md` › M2 |
