@@ -83,15 +83,9 @@ npm run media    # fetch + convert images for entries with a new "from" URL (Pyt
 ## Keyboard
 
 | Anywhere | |
-<<<<<<< HEAD
 | --- | --- |
 | `/` or `Ctrl/⌘ K` | search mounts, places, traits and branches |
 | `J` / `K` or `→` / `←` | next / previous mount in the current list |
-=======
-|---|---|
-| `/` or `Ctrl/⌘ K` | search mounts, money methods, places, traits and branches |
-| `J` / `K` or `→` / `←` | next / previous entry in the current list |
->>>>>>> 479d8ce95100d81ec3cb9667ea5b6708e127b91e
 | `L` | Tier Ladder and back |
 | `Alt \` or `Ctrl ⇧ E` | focus the explorer |
 
