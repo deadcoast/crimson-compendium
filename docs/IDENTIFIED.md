@@ -61,28 +61,33 @@ This review was done at commit `db93c9d` (v0.2.0 released, Release workflow fixe
 
 ### NEW-FEATURES-AND-ADDITIONS
 
-- **NF-01: Map captures for the 23 entries without one.** blackstar, brown-bear, clawed-bear, wolf, rosehorn-deer, ibex, boar, wyvern, hammerhead-shark, orca, sea-turtle, sunfish, dolphin, manta-ray, eagle-ray, electric-ray, spotted-seal, herspia, priden, brianto, elantrima, numont, atag.
+- **NF-01: Map captures for the entries without one** (23 before M2; 57 of 80 after it). blackstar, brown-bear, clawed-bear, wolf, rosehorn-deer, ibex, boar, wyvern, hammerhead-shark, orca, sea-turtle, sunfish, dolphin, manta-ray, eagle-ray, electric-ray, spotted-seal, herspia, priden, brianto, elantrima, numont, atag.
   - Where: `entries.json` `media.captures` (`kind: "map"`), then `tools/media.py`.
   - Why: "Where is it?" is the first question in `DESIGN.md`. Today 48 % of plates answer it in text only. Stable breeds get the stable locations. Open-ocean spawns get the region with the plate's "no fixed spawn" note.
   - Verify: "no map capture" count reaches 0, or the entry is listed with a reason in `DESIGN.md` › Known gaps; the verify suite asserts every Where image returns 200.
-- **NF-02: Hero captures for the 36 entries without one.**
+- **NF-02: Hero captures for the entries without one** (36 before M2; 68 of 80 after it).
   - Where: `entries.json` `media.hero`.
   - Why: `Hero.svelte:17-19` falls back to a framed portrait, so the plate's reveal motion never runs for three quarters of the roster.
   - Verify: hero count; screenshots of a land, a sea and a sky plate.
 - **NF-03: Re-check `DESIGN.md` › Known gaps against current sources** (see §5): Scout Automation, Golden Star Mech, Delesyia Train and cows/bulls.
   - Why: the compendium claims to cover every mount.
   - Verify: each one is added, or kept out with the source that says why.
+  - **Outcome (M2):** still kept out. Scout Automation and Golden Star Mech have one source and no mount database lists them; the Delesyia Train and cows/bulls are not mounts you keep.
 - **NF-06: One entry per separately registered mount** (§5).
   - Cloudcruiser, Skystreaker, Swift Wolf, Large White Wolf and High-Mobility A.T.A.G. are currently hidden as `variants` inside another plate, but the game registers each as its own mount with its own stats.
   - Cosmetic coats, such as the 16 Large Wolf coats, stay as variants.
   - Why: the Flying branch shows 3 mounts when you can keep 5, and the user had no way to see the other 2.
   - Verify: the Flying count, a route for each, and the lint.
+  - **Outcome (M2):** all five have their own plates; Flying now lists 5.
 - **NF-07: Keepable mounts missing from the data** (§5): the sea turtle species, Giant Manta Ray, Grizzly Bear, Heavy Assault A.T.A.G., and the Freight and Trading wagons.
   - Verify: the registry loads, and the verify suite covers the new routes and category membership.
+  - **Outcome (M2):** added, except the Heavy Assault A.T.A.G., which you only borrow from hangars (`DESIGN.md` › Revision 4). The Hernandian Soldier's and Calphadean Scout's Horses register at stables, so they were added here under Stable.
 - **NF-08: Ships** (§5). The game files ships as a mount type, so they join the Mounts branch as a Ships category: Humble Bark, and the Small, Medium and Large Hernandian Ship. This supersedes NF-05. Speed, Travel (cargo) and Combat (cannons) apply; Stamina is not rated.
   - Verify: as NF-07, plus the Ships category route.
+  - **Outcome (M2):** 20 ships, not 4: the 4 legendary blueprint ships, 3 Greymane-built ships, 9 regional ships and 4 rowboats. "Humble Bark" is the Humble Rowboat in game.
 - **NF-09: Fleeting rides missing from the data** (§5): soldier, scout and race horses, Captured Bear, Circus Lion, Gristle Wolf, Helms Hyena, Misthorn Branhok, Giant Bison, cattle, camels and the Worn Wagon. Each needs real imagery before it ships.
   - Verify: as NF-07.
+  - **Outcome (M2): dropped.** You ruled that mounts the player cannot keep don't belong in the guide, and the Fleeting leaf was removed with its three plates (`DESIGN.md` › Revision 4).
 - **NF-04: Compare view** *(proposal)*. Pin two or three mounts and see their seals, stats, traits and Where side by side at a route such as `#mounts-compare-royler+camora`.
   - Why: `DESIGN.md` says existing guides "never compare mounts against each other". The ladder compares one metric at a time, never two mounts across all four.
   - Verify: route sweep, keyboard path, screenshots.
@@ -165,6 +170,10 @@ Checked and kept out:
 - **Delesyia Train** is fixed-route transport, not a personal mount, per Game8 and thegameswiki.
 
 Flying, as you can keep it: Blackstar (a summon on a cooldown), Wyvern, Cloudcart, Cloudcruiser and Skystreaker. The Leaping Kuku Bird glides.
+
+### M2 result (2026-11-19)
+
+80 mounts: 48, plus 36 new plates, minus 3 temporary rides and the old Sea Turtle plate (now the Green Sea Turtle). Every new plate has a real in-game image (crimsondesert.gg, The Games Wiki and Fextralife icons, Game8 ship screens, GamesHedge map and on-site shots) and at least two sources. `DESIGN.md` › Revision 4 records the decisions.
 
 ## Next
 

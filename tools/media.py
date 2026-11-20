@@ -43,7 +43,7 @@ SPEC = {
     "cover": dict(max=1600, q=78),
 }
 REFERER = {"fextralifeimages": "https://crimsondesertgame.wiki.fextralife.com/", "game8": "https://game8.co/",
-           "gamerantimages": "https://gamerant.com/"}
+           "gamerantimages": "https://gamerant.com/", "crimsondesert.gg": "https://crimsondesert.gg/"}
 
 
 def fetch(url):

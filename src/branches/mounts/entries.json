@@ -1724,6 +1724,491 @@
   "skills": []
  },
  {
+  "id": "flagship-of-the-east",
+  "name": "Flagship of the East",
+  "leaf": "legendary",
+  "cls": "surface",
+  "domains": [
+   "surface"
+  ],
+  "kind": "Legendary ship",
+  "region": "Delesyia",
+  "area": "Stoneward Harbor",
+  "trait": "The best statline of any ship",
+  "summary": "Top Movement Speed and Acceleration with 14,000 Health — the best statline of any vessel (KeenGamer). Two blueprint halves, one in Delesyia and one in the desert.",
+  "tiers": {
+   "speed": {
+    "tier": 1,
+    "basis": "Movement Speed 5, Acceleration 5, Handling 4 (Game8)."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "Ships have no stamina bar."
+   },
+   "travel": {
+    "tier": 1,
+    "basis": "Movement Speed 5, Acceleration 5; Game8 lists no hold size."
+   },
+   "combat": {
+    "tier": 1,
+    "basis": "14,000 Health; firepower comes from the cannons you fit at a Ship Manager."
+   }
+  },
+  "tags": [
+   "dlc",
+   "ship"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "A Wider World questline"
+  ],
+  "routes": [
+   {
+    "label": "Blueprint",
+    "steps": [
+     "Find Unfinished Ship Blueprint Part 1 in an Unidentified Box in the smaller shack at Fisher's Haven, Delesyia.",
+     "Find Part 2 on the workbench on the second floor of the main workshop at Helmara, north-east of Tommaso (Tashkalp). Without the faction quest Workshop Forged in Revenge done, the area is full of enemies.",
+     "Combine the two halves into one blueprint from your inventory, then read it."
+    ]
+   },
+   {
+    "label": "Build",
+    "steps": [
+     "Select Stoneward Harbor (Delesyia) on the map, open its Missions tab and dispatch Unfinished Ship Construction with 10 Greymanes. It is the only port that builds this ship (KeenGamer).",
+     "Materials: 5 Natural Pearls, 15 Sea Fan Coral, 50 Malachite. Dispatch requirements: 750,000 Camp Funds, 45,000 Stone, 45,000 Timber, 90,000 Provisions; it takes 4 days 4 hours in-game."
+    ]
+   }
+  ],
+  "location": "Built at Stoneward Harbor, Delesyia. Blueprints: Fisher's Haven (Delesyia) and Helmara (Tashkalp).",
+  "notes": [],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/pr0lywfdw8xujmudqww2xltv9e7x",
+    "credit": "game8",
+    "crop": [
+     0.72,
+     0.6,
+     0.62
+    ],
+    "src": "media/mounts/flagship-of-the-east/portrait.webp",
+    "w": 254,
+    "h": 254
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://img.game8.co/pr0lywfdw8xujmudqww2xltv9e7x",
+     "credit": "game8",
+     "caption": "Manage Ships — Flagship of the East",
+     "src": "media/mounts/flagship-of-the-east/menu-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/637427",
+    "title": "How to Get the Flagship of the East — Game8"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/636503",
+    "title": "List of All Ships — Game8"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-how-to-get-the-flagship-of-the-east/",
+    "title": "How to Get the Flagship of the East — KeenGamer"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "ship",
+   "values": [
+    14000,
+    null
+   ],
+   "move": [
+    5,
+    5,
+    4
+   ],
+   "source": "game8"
+  }
+ },
+ {
+  "id": "assault-ship-of-the-east",
+  "name": "Assault Ship of the East",
+  "leaf": "legendary",
+  "cls": "surface",
+  "domains": [
+   "surface"
+  ],
+  "kind": "Legendary ship",
+  "region": "Great Ocean",
+  "area": "Any port",
+  "trait": "A turtle-shelled warship with a dragon-head prow",
+  "summary": "A turtle-shelled legendary warship (KeenGamer) with Movement Speed 5 — tied for the fastest — and 12,000 Health. Four blueprint parts, two of them 140 m down in a reef wreck.",
+  "tiers": {
+   "speed": {
+    "tier": 1,
+    "basis": "Movement Speed 5, Acceleration 4, Handling 4 (Game8)."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "Ships have no stamina bar."
+   },
+   "travel": {
+    "tier": 1,
+    "basis": "Movement Speed 5, Acceleration 4; Game8 lists no hold size."
+   },
+   "combat": {
+    "tier": 2,
+    "basis": "12,000 Health; firepower comes from the cannons you fit at a Ship Manager."
+   }
+  },
+  "tags": [
+   "dlc",
+   "ship"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "A Wider World questline"
+  ],
+  "routes": [
+   {
+    "label": "Blueprint",
+    "steps": [
+     "The hunt starts on Samora Island: read the books Legendary Ship Hunt and Ship of the East (KeenGamer, FinalBoss).",
+     "Blueprints 1 and 2: a shipwreck in the Great Rocky Reef, about 3,000 m south-west of the Spagnola Island Abyss Nexus and 140 m down; one Unidentified Box at each end.",
+     "Blueprint 3: Bravgork Shipyard, Delesyia — a room at the bottom back of the ship under construction.",
+     "Blueprint 4: a hut stacked with cannonballs on the east coast of Estra Island.",
+     "Restore the four parts into the full blueprint."
+    ]
+   },
+   {
+    "label": "Build",
+    "steps": [
+     "Dispatch the construction at any port. The mission is listed as the Mysterious Ship, not by the ship's name (FinalBoss).",
+     "Materials: 5 Natural Pearls, 10 Giant Hydrothermal Salamander Hides, 10 Ambergris. Dispatch requirements: 750,000 Camp Funds, 45,000 Stone, 45,000 Timber, 90,000 Provisions; it takes 4 days 4 hours in-game."
+    ]
+   }
+  ],
+  "location": "Built at any port. Blueprints: Great Rocky Reef wreck, Bravgork Shipyard (Delesyia), Estra Island.",
+  "notes": [],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/fk6duedt990y1vdky9ejxopx8t4j",
+    "credit": "game8",
+    "crop": [
+     0.75,
+     0.7,
+     0.45
+    ],
+    "src": "media/mounts/assault-ship-of-the-east/portrait.webp",
+    "w": 184,
+    "h": 184
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://img.game8.co/fk6duedt990y1vdky9ejxopx8t4j",
+     "credit": "game8",
+     "caption": "Manage Ships — Assault Ship of the East",
+     "src": "media/mounts/assault-ship-of-the-east/menu-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/636800",
+    "title": "How to Get the Assault Ship of the East — Game8"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/636503",
+    "title": "List of All Ships — Game8"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-how-to-get-the-legendary-assault-ship-of-the-east/",
+    "title": "How to Get the Legendary Assault Ship of the East — KeenGamer"
+   },
+   {
+    "by": "finalboss",
+    "url": "https://finalboss.io/crimson-desert-how-to-craft-the-legendary-assault-ship-of-the-east",
+    "title": "How to Craft the Assault Ship of the East — FinalBoss"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "ship",
+   "values": [
+    12000,
+    null
+   ],
+   "move": [
+    5,
+    4,
+    4
+   ],
+   "source": "game8"
+  }
+ },
+ {
+  "id": "phantom-ship",
+  "name": "Phantom Ship",
+  "leaf": "legendary",
+  "cls": "surface",
+  "domains": [
+   "surface"
+  ],
+  "kind": "Legendary ship",
+  "region": "Great Ocean",
+  "area": "Any port",
+  "trait": "A ghost ship whose homing bolts fire on their own",
+  "summary": "A black-sailed legendary ship whose homing bolts fire on their own (KeenGamer). Movement Speed 4 and 9,200 Health — the lowest of the four. Its blueprint is buried on Iliya Island.",
+  "tiers": {
+   "speed": {
+    "tier": 2,
+    "basis": "Movement Speed 4, Acceleration 3, Handling 3 (Game8)."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "Ships have no stamina bar."
+   },
+   "travel": {
+    "tier": 2,
+    "basis": "Movement Speed 4, Acceleration 3; Game8 lists no hold size."
+   },
+   "combat": {
+    "tier": 3,
+    "basis": "9,200 Health; firepower comes from the cannons you fit at a Ship Manager."
+   }
+  },
+  "tags": [
+   "dlc",
+   "ship"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "A Wider World questline"
+  ],
+  "routes": [
+   {
+    "label": "Blueprint",
+    "steps": [
+     "Go to Iliya Island in the Great Ocean. From the Abyss Nexus head south-west over the mountain to two burial mounds on the cliffs.",
+     "Dig the buried treasure beside them with a shovel and read the Phantom Ship Blueprint from the chest. (Solving the Rocky Hill Ocean Ruins puzzle gives an Abyss Cresset right above the spot.)"
+    ]
+   },
+   {
+    "label": "Build",
+    "steps": [
+     "Dispatch Construct Phantom Ship at any port.",
+     "Materials: 5 Natural Pearls, 10 Giant Jellyfish Skin, 30 Obsidian. Dispatch requirements: 750,000 Camp Funds, 45,000 Stone, 45,000 Timber, 90,000 Provisions; it takes 4 days 4 hours in-game."
+    ]
+   }
+  ],
+  "location": "Built at any port. Blueprint: buried treasure on Iliya Island's south-west cliffs.",
+  "notes": [
+   "Game8's written stat table lists 14,000 Health; its in-game Manage Ships screenshot shows 9,200, which this plate follows.",
+   "Game8 says every port offers the build; Gaming Deputy shows it at Stoneward Harbor."
+  ],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/vd28n7wwtr88fd6rv0jej1k1p8z0",
+    "credit": "game8",
+    "crop": [
+     0.73,
+     0.5,
+     0.85
+    ],
+    "src": "media/mounts/phantom-ship/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://img.game8.co/vd28n7wwtr88fd6rv0jej1k1p8z0",
+     "credit": "game8",
+     "caption": "Manage Ships — Phantom Ship",
+     "src": "media/mounts/phantom-ship/menu-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/637428",
+    "title": "How to Get the Phantom Ship — Game8"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/636503",
+    "title": "List of All Ships — Game8"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-how-to-get-the-legendary-phantom-ship/",
+    "title": "How to Get the Legendary Phantom Ship — KeenGamer"
+   },
+   {
+    "by": "gamingdeputy",
+    "url": "https://www.gamingdeputy.com/france/crimson-desert-obtenir-navire-fantome/",
+    "title": "Obtenir le légendaire Navire Fantôme — Gaming Deputy"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "ship",
+   "values": [
+    9200,
+    null
+   ],
+   "move": [
+    4,
+    3,
+    3
+   ],
+   "source": "game8"
+  }
+ },
+ {
+  "id": "the-drunken-catfish",
+  "name": "The Drunken Catfish",
+  "leaf": "legendary",
+  "cls": "surface",
+  "domains": [
+   "surface"
+  ],
+  "kind": "Legendary ship",
+  "region": "Hernand",
+  "area": "Vellua",
+  "trait": "A pirate ship you sink, then build",
+  "summary": "A pirate flagship you sink off Samora Island and then build for yourself: Acceleration 5, 14,000 Health.",
+  "tiers": {
+   "speed": {
+    "tier": 2,
+    "basis": "Movement Speed 4, Acceleration 5, Handling 4 (Game8)."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "Ships have no stamina bar."
+   },
+   "travel": {
+    "tier": 2,
+    "basis": "Movement Speed 4, Acceleration 5; Game8 lists no hold size."
+   },
+   "combat": {
+    "tier": 1,
+    "basis": "14,000 Health; firepower comes from the cannons you fit at a Ship Manager."
+   }
+  },
+  "tags": [
+   "dlc",
+   "ship"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "A Wider World questline"
+  ],
+  "routes": [
+   {
+    "label": "Blueprint",
+    "steps": [
+     "Sink the pirate ship The Drunken Catfish and its escorts off Samora Island in the East Sea; the Remote Islands questline often runs into it.",
+     "The Drunken Catfish Blueprint lands in your inventory; read it."
+    ]
+   },
+   {
+    "label": "Build",
+    "steps": [
+     "Open the port at Vellua and dispatch Construct the Drunken Catfish.",
+     "Materials: 5 Natural Pearls, 25 Golden Coral, 20 Hydrothermal Mineral Deposits. Dispatch requirements: 750,000 Camp Funds, 45,000 Stone, 45,000 Timber, 90,000 Provisions; it takes 4 days 4 hours in-game."
+    ]
+   }
+  ],
+  "location": "Built at Vellua (south of Hernand). Blueprint: sink the pirate ship off Samora Island.",
+  "notes": [],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/ff4hjiauqz0lgjh7yszzp0h5j99x",
+    "credit": "game8",
+    "crop": [
+     0.73,
+     0.5,
+     0.85
+    ],
+    "src": "media/mounts/the-drunken-catfish/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://img.game8.co/ff4hjiauqz0lgjh7yszzp0h5j99x",
+     "credit": "game8",
+     "caption": "Manage Ships — The Drunken Catfish",
+     "src": "media/mounts/the-drunken-catfish/menu-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/637648",
+    "title": "How to Get the The Drunken Catfish — Game8"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/636503",
+    "title": "List of All Ships — Game8"
+   },
+   {
+    "by": "finalboss",
+    "url": "https://finalboss.io/crimson-desert-how-to-get-the-drunken-catfish-legendary-galleon",
+    "title": "How to Get the Drunken Catfish Legendary Galleon — FinalBoss"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "ship",
+   "values": [
+    14000,
+    null
+   ],
+   "move": [
+    4,
+    5,
+    4
+   ],
+   "source": "game8"
+  }
+ },
+ {
   "id": "leaping-kuku-bird",
   "name": "Leaping Kuku Bird",
   "leaf": "rare",
@@ -2423,7 +2908,7 @@
   ],
   "location": "Wild across Pywel except the Crimson Desert; fields north-west of the Sanctum of Penitence.",
   "notes": [
-   "Grizzly and Captured Bear variants share the bear moveset."
+   "The Grizzly Bear is a separate, heavier bear you can register; it has its own plate."
   ],
   "variants": [
    "Brown",
@@ -2555,6 +3040,107 @@
   "skills": []
  },
  {
+  "id": "grizzly-bear",
+  "name": "Grizzly Bear",
+  "leaf": "rare",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Bear",
+  "region": "Most regions",
+  "area": "Forests and highlands",
+  "trait": "The heavy bear: the Clawed Bear's statline in the wild",
+  "summary": "Patch 1.07 opened more bears to registration, and the Grizzly is the heavy one: 1,500 Health and 180 Attack, the Clawed Bear's statline, without the Black Bears' deadline.",
+  "tiers": {
+   "speed": {
+    "tier": 5,
+    "basis": "Speed 1; slow and heavy (crimsondesert.gg)."
+   },
+   "stamina": {
+    "tier": 4,
+    "basis": "200 Stamina (crimsondesert.gg)."
+   },
+   "travel": {
+    "tier": 5,
+    "basis": "Slow and heavy."
+   },
+   "combat": {
+    "tier": 2,
+    "basis": "1,500 Health and 180 Attack, tied with the Clawed Bear (crimsondesert.gg)."
+   }
+  },
+  "tags": [
+   "battle"
+  ],
+  "requires": [
+   "Meat or Garlic",
+   "Healing items"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Find a Grizzly Bear in the forests and mountains; stock healing and several pieces of food first, because the subduing fight hits hard.",
+     "Fight it until it lowers its head, then mount it with the Ride prompt.",
+     "Feed it until Trust reaches 100: Garlic is its favourite (+100); salmon and honey give +50, meat +40 (crimsondesert.gg).",
+     "Press Take In (Y / Triangle) to register it as a special mount."
+    ]
+   }
+  ],
+  "location": "Forested and mountainous regions across Pywel (The Games Wiki); no guide pins one spawn.",
+  "notes": [
+   "Bear saddles are sold at saddleries such as the one in the City of Hernand (The Games Wiki).",
+   "Patch 1.07 added \"additional wolf and bear types that can be registered as mounts\" without naming them; The Games Wiki's Grizzly page confirms this one registers."
+  ],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://crimsondesert.gg/images/mount/d02d0ee3.webp",
+    "credit": "crimsondesertgg",
+    "matte": true,
+    "src": "media/mounts/grizzly-bear/portrait.webp",
+    "w": 256,
+    "h": 256
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/grizzly-bear",
+    "title": "Grizzly Bear — The Games Wiki"
+   },
+   {
+    "by": "crimsondesertgg",
+    "url": "https://crimsondesert.gg/mounts/grizzly-bear",
+    "title": "Grizzly Bear — crimsondesert.gg"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/2026/05/15/crimson-desert-1-07-00-changes-overview-more-bosses-to-rematch-unarmed-combat-improvements/",
+    "title": "Patch 1.07.00 notes — Vulkk"
+   },
+   {
+    "by": "gamingbolt",
+    "url": "https://gamingbolt.com/crimson-desert-guide-everything-you-need-to-know-about-mounts",
+    "title": "Everything You Need to Know About Mounts — GamingBolt"
+   }
+  ],
+  "since": "Patch 1.07",
+  "skills": [],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    1500,
+    200,
+    180,
+    35
+   ],
+   "source": "crimsondesertgg"
+  }
+ },
+ {
   "id": "wolf",
   "name": "Large Wolf",
   "leaf": "rare",
@@ -2566,7 +3152,7 @@
   "region": "Most regions",
   "area": "Western mountains",
   "trait": "Pack hunter in 16 coats",
-  "summary": "Pywel's pack hunters. Large Wolf, Swift Wolf and Large White Wolf share one kit: no mount skills, dependable in a fight.",
+  "summary": "Pywel's pack hunters. The Large Wolf shares its kit and statline with the Swift Wolf and the Large White Wolf: no mount skills, dependable in a fight.",
   "tiers": {
    "speed": {
     "tier": 4,
@@ -2601,12 +3187,11 @@
   ],
   "location": "Wilds across most of Pywel; most common in the western mountains.",
   "notes": [
-   "Wolf saddles: Annabella (Hernand Saddlery) and Bruna (Equinsher Saddlery)."
+   "Wolf saddles: Annabella (Hernand Saddlery) and Bruna (Equinsher Saddlery).",
+   "The Swift Wolf and Large White Wolf are registered under their own names; each has its own plate."
   ],
   "variants": [
-   "Large Wolf — 16 coats",
-   "Swift Wolf",
-   "Large White Wolf"
+   "16 coats"
   ],
   "stats": {
    "kind": "beast",
@@ -2636,9 +3221,92 @@
     "title": "Large Wolf — Fextralife Wiki"
    },
    {
-    "by": "fextralife",
-    "url": "https://crimsondesertgame.wiki.fextralife.com/Swift_Wolf",
-    "title": "Swift Wolf — Fextralife Wiki"
+    "by": "gamerant",
+    "url": "https://gamerant.com/crimson-desert-special-mount-saddles-saddlery-locations/",
+    "title": "Special Mount Saddles — GameRant"
+   }
+  ],
+  "since": "Patch 1.06",
+  "skills": []
+ },
+ {
+  "id": "swift-wolf",
+  "name": "Swift Wolf",
+  "leaf": "rare",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Wolf",
+  "region": "Tashkalp",
+  "area": "Howlsands Camp",
+  "trait": "The bandit wolf of the northern desert",
+  "summary": "The Sandfang Marauders' riding wolf. Despite the name it carries the Large Wolf's exact statline; you take it from the bandits at Howlsands Camp.",
+  "tiers": {
+   "speed": {
+    "tier": 4,
+    "basis": "Speed 1, the same listed stat as the Large Wolf (crimsondesert.gg)."
+   },
+   "stamina": {
+    "tier": 4,
+    "basis": "200 Stamina (crimsondesert.gg)."
+   },
+   "travel": {
+    "tier": 4,
+    "basis": "A fighting mount."
+   },
+   "combat": {
+    "tier": 3,
+    "basis": "250 Health, 70 Attack (crimsondesert.gg)."
+   }
+  },
+  "tags": [],
+  "requires": [
+   "Force Palm",
+   "Meat"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Go to Howlsands Camp in Tashkalp, where Sandfang Marauders ride wolves (the \"Bandits Riding Wolves\" objective of Outlaws of the Desert).",
+     "Leave one wolf standing. Use only Force Palm on it — weapon attacks can kill it — until the Ride prompt appears, then mount.",
+     "Feed meat until Trust reaches 100 (Hearty Grilled Meat is its favourite, +50 — crimsondesert.gg).",
+     "Press Take In (Y / Triangle) to register it as a permanent special mount."
+    ]
+   }
+  ],
+  "location": "Howlsands Camp, Tashkalp — ridden by the Sandfang Marauders.",
+  "notes": [
+   "Wolf saddles: Annabella (Hernand Saddlery) and Bruna (Equinsher Saddlery)."
+  ],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://crimsondesert.gg/images/mount/fa0a3e79.webp",
+    "credit": "crimsondesertgg",
+    "matte": true,
+    "src": "media/mounts/swift-wolf/portrait.webp",
+    "w": 256,
+    "h": 256
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "crimsondesertgg",
+    "url": "https://crimsondesert.gg/mounts/swift-wolf",
+    "title": "Swift Wolf — crimsondesert.gg"
+   },
+   {
+    "by": "nerdschalk",
+    "url": "https://nerdschalk.com/?p=489754",
+    "title": "Wolf Mount Guide: Location, Trust and Registration — Nerdschalk"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/wolf",
+    "title": "Wolf — The Games Wiki"
    },
    {
     "by": "gamerant",
@@ -2647,7 +3315,135 @@
    }
   ],
   "since": "Patch 1.06",
-  "skills": []
+  "skills": [],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    250,
+    200,
+    70,
+    20
+   ],
+   "source": "crimsondesertgg"
+  }
+ },
+ {
+  "id": "large-white-wolf",
+  "name": "Large White Wolf",
+  "leaf": "rare",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Wolf",
+  "region": "Pailune",
+  "area": "Pailune Beacon",
+  "trait": "A white pack leader on the slopes below the beacon",
+  "summary": "Patch 1.07 added a free-roaming white wolf you can register, with no quest gate. It roams near Pailune Beacon and shares the Large Wolf's kit.",
+  "tiers": {
+   "speed": {
+    "tier": 4,
+    "basis": "Speed 1, the same listed stat as the Large Wolf (crimsondesert.gg)."
+   },
+   "stamina": {
+    "tier": 4,
+    "basis": "200 Stamina (crimsondesert.gg)."
+   },
+   "travel": {
+    "tier": 4,
+    "basis": "A fighting mount."
+   },
+   "combat": {
+    "tier": 3,
+    "basis": "250 Health, 70 Attack (crimsondesert.gg)."
+   }
+  },
+  "tags": [],
+  "requires": [
+   "Force Palm",
+   "Meat"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Buy meat first, then fast travel near Pailune Beacon in Pailune.",
+     "Go to the beacon and look toward the mountains. The wolf does not always appear; come back if the slope is empty.",
+     "Subdue it with Force Palm until it lowers its head and the Ride prompt appears, then mount it.",
+     "Feed meat until Trust reaches 100 — GamesHedge counts 40 per piece of meat and 35 per bird meat — then Take In to register it."
+    ]
+   }
+  ],
+  "location": "Around Pailune Beacon, Pailune (GamesHedge, with in-game screenshots).",
+  "notes": [
+   "Not the Hadum questline white wolf, which is a story encounter, and not Silver Fang (The Games Wiki).",
+   "Saddle: the Hernand saddlery (GamesHedge)."
+  ],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://crimsondesert.gg/images/mount/a70322ea.webp",
+    "credit": "crimsondesertgg",
+    "matte": true,
+    "src": "media/mounts/large-white-wolf/portrait.webp",
+    "w": 256,
+    "h": 256
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://www.gameshedge.com/wp-content/uploads/2026/06/Crimson-desert-249.jpg",
+     "credit": "gameshedge",
+     "caption": "World map — Pailune Beacon",
+     "src": "media/mounts/large-white-wolf/map-1.webp",
+     "w": 1600,
+     "h": 899
+    },
+    {
+     "kind": "overworld",
+     "from": "https://www.gameshedge.com/wp-content/uploads/2026/06/Crimson-desert-251.jpg",
+     "credit": "gameshedge",
+     "caption": "On site — the slope below the beacon",
+     "src": "media/mounts/large-white-wolf/overworld-2.webp",
+     "w": 1600,
+     "h": 899
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "gameshedge",
+    "url": "https://www.gameshedge.com/?p=86040",
+    "title": "Large White Wolf Mount Guide — GamesHedge"
+   },
+   {
+    "by": "crimsondesertgg",
+    "url": "https://crimsondesert.gg/mounts/large-white-wolf",
+    "title": "Large White Wolf — crimsondesert.gg"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/large-white-wolf",
+    "title": "Large White Wolf — The Games Wiki"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/2026/05/15/crimson-desert-1-07-00-changes-overview-more-bosses-to-rematch-unarmed-combat-improvements/",
+    "title": "Patch 1.07.00 notes — Vulkk"
+   }
+  ],
+  "since": "Patch 1.07",
+  "skills": [],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    250,
+    200,
+    70,
+    20
+   ],
+   "source": "crimsondesertgg"
+  }
  },
  {
   "id": "rosehorn-deer",
@@ -3340,26 +4136,26 @@
   "skills": []
  },
  {
-  "id": "sea-turtle",
-  "name": "Sea Turtle",
+  "id": "green-sea-turtle",
+  "name": "Green Sea Turtle",
   "leaf": "rare",
   "cls": "sea",
   "domains": [
    "sea"
   ],
   "kind": "Turtle",
-  "region": "Open ocean",
-  "area": "Common everywhere",
+  "region": "Great Ocean",
+  "area": "Shipwreck Shore, near Bowsprit Cape",
   "trait": "Common but skittish — approach fast or unseen",
-  "summary": "Plentiful across the ocean but hard to catch: it bolts unless you close in fast or stay unseen.",
+  "summary": "Plentiful across the ocean but hard to catch: it bolts unless you close in fast or stay unseen. Its ride ability is defensive.",
   "tiers": {
    "speed": {
     "tier": 4,
-    "basis": "Slow swimmer."
+    "basis": "Speed 1 on crimsondesert.gg; kept at the old Sea Turtle plate's rating."
    },
    "stamina": {
     "tier": 3,
-    "basis": "No comparative data — rated average."
+    "basis": "200 Stamina, the common sea-mount figure (crimsondesert.gg)."
    },
    "travel": {
     "tier": 4,
@@ -3367,7 +4163,7 @@
    },
    "combat": {
     "tier": 4,
-    "basis": "Its ride ability is defensive rather than offensive (Mobalytics)."
+    "basis": "10 Attack; its ride ability is defensive (Mobalytics)."
    }
   },
   "tags": [
@@ -3381,26 +4177,48 @@
   "routes": [
    {
     "steps": [
-     "Find one anywhere in the ocean.",
-     "Approach with high swim speed or stealth so it does not startle, then mount it.",
-     "Feed Seaweed Clusters or Jellyfish Fillets until Trust reaches 100, then register it."
+     "Find one at Shipwreck Shore, near Bowsprit Cape.",
+     "Close in fast or unseen so it does not startle, then mount it (Game8).",
+     "Feed it until Trust reaches 100, then register it. A Golden Apple gives +100 and Red Seaweed +50 (crimsondesert.gg); Game8 lists Seaweed Clusters and Jellyfish Fillets."
     ]
    }
   ],
-  "location": "Common across the ocean.",
+  "location": "Common across the ocean (Game8); Sportskeeda points to Shipwreck Shore near Bowsprit Cape.",
   "notes": [],
+  "variants": [],
   "media": {
    "portrait": {
-    "from": "https://img.game8.co/33r3w0jqxdvmm5qiq8gessy430l8",
-    "credit": "game8",
-    "src": "media/mounts/sea-turtle/portrait.webp",
-    "w": 480,
-    "h": 480
+    "from": "https://crimsondesert.gg/images/mount/4a22d9ca.webp",
+    "credit": "crimsondesertgg",
+    "matte": true,
+    "src": "media/mounts/green-sea-turtle/portrait.webp",
+    "w": 256,
+    "h": 256
    },
-   "captures": [],
+   "captures": [
+    {
+     "kind": "action",
+     "from": "https://img.game8.co/33r3w0jqxdvmm5qiq8gessy430l8",
+     "credit": "game8",
+     "caption": "In action — riding a sea turtle (Game8 does not name the species)",
+     "src": "media/mounts/green-sea-turtle/action-1.webp",
+     "w": 728,
+     "h": 728
+    }
+   ],
    "gallery": []
   },
   "sources": [
+   {
+    "by": "crimsondesertgg",
+    "url": "https://crimsondesert.gg/mounts/green-sea-turtle",
+    "title": "Green Sea Turtle — crimsondesert.gg"
+   },
+   {
+    "by": "sportskeeda",
+    "url": "https://www.sportskeeda.com/esports/all-new-mounts-crimson-desert-dlc-far-get",
+    "title": "All new mounts in the DLC and how to get them — Sportskeeda"
+   },
    {
     "by": "game8",
     "url": "https://game8.co/games/Crimson-Desert/archives/635858",
@@ -3413,8 +4231,434 @@
    }
   ],
   "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    100,
+    200,
+    10,
+    80
+   ],
+   "source": "crimsondesertgg"
+  }
+ },
+ {
+  "id": "hawksbill-sea-turtle",
+  "name": "Hawksbill Sea Turtle",
+  "leaf": "rare",
+  "cls": "sea",
+  "domains": [
+   "sea"
+  ],
+  "kind": "Turtle",
+  "region": "Great Ocean",
+  "area": "Shipwreck Shore, near Bowsprit Cape",
+  "trait": "Same kit as the Green, amber-plated shell",
+  "summary": "A sea turtle with an amber, overlapping shell. It shares the Green Sea Turtle's statline and ride ability; only the look and the spawns differ.",
+  "tiers": {
+   "speed": {
+    "tier": 4,
+    "basis": "Speed 1 on crimsondesert.gg; kept at the old Sea Turtle plate's rating."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "200 Stamina, the common sea-mount figure (crimsondesert.gg)."
+   },
+   "travel": {
+    "tier": 4,
+    "basis": "A defensive mount, not a racer."
+   },
+   "combat": {
+    "tier": 4,
+    "basis": "10 Attack; its ride ability is defensive (Mobalytics)."
+   }
+  },
+  "tags": [
+   "underwater",
+   "dlc"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "Diving Suit"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Find one at Shipwreck Shore, near Bowsprit Cape.",
+     "Close in fast or unseen so it does not startle, then mount it (Game8).",
+     "Feed it until Trust reaches 100, then register it. A Golden Apple gives +100 and Red Seaweed +50 (crimsondesert.gg); Game8 lists Seaweed Clusters and Jellyfish Fillets."
+    ]
+   }
+  ],
+  "location": "Shipwreck Shore near Bowsprit Cape (Sportskeeda); TH.GL maps 37 spawns.",
+  "notes": [],
   "variants": [],
-  "skills": []
+  "media": {
+   "portrait": {
+    "from": "https://crimsondesert.gg/images/mount/8fd54f45.webp",
+    "credit": "crimsondesertgg",
+    "matte": true,
+    "src": "media/mounts/hawksbill-sea-turtle/portrait.webp",
+    "w": 256,
+    "h": 256
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "crimsondesertgg",
+    "url": "https://crimsondesert.gg/mounts/hawksbill-sea-turtle",
+    "title": "Hawksbill Sea Turtle — crimsondesert.gg"
+   },
+   {
+    "by": "sportskeeda",
+    "url": "https://www.sportskeeda.com/esports/all-new-mounts-crimson-desert-dlc-far-get",
+    "title": "All new mounts in the DLC and how to get them — Sportskeeda"
+   },
+   {
+    "by": "thgl",
+    "url": "https://crimsondesert.th.gl/guides/Hawksbill%20Sea%20Turtle",
+    "title": "Hawksbill Sea Turtle locations — TH.GL"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/635858",
+    "title": "All New Mounts (DLC) — Game8"
+   },
+   {
+    "by": "mobalytics",
+    "url": "https://mobalytics.gg/gamebase/guides/crimson-desert-ocean-mounts-hidden-encounters",
+    "title": "Ocean Mounts & Hidden Encounters — Mobalytics"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    100,
+    200,
+    10,
+    80
+   ],
+   "source": "crimsondesertgg"
+  }
+ },
+ {
+  "id": "loggerhead-sea-turtle",
+  "name": "Loggerhead Sea Turtle",
+  "leaf": "rare",
+  "cls": "sea",
+  "domains": [
+   "sea"
+  ],
+  "kind": "Turtle",
+  "region": "Great Ocean",
+  "area": "Shipwreck Shore, near Bowsprit Cape",
+  "trait": "Same kit as the Green, red-shelled",
+  "summary": "A red-shelled sea turtle with the same statline and ride ability as the Green Sea Turtle.",
+  "tiers": {
+   "speed": {
+    "tier": 4,
+    "basis": "Speed 1 on crimsondesert.gg; kept at the old Sea Turtle plate's rating."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "200 Stamina, the common sea-mount figure (crimsondesert.gg)."
+   },
+   "travel": {
+    "tier": 4,
+    "basis": "A defensive mount, not a racer."
+   },
+   "combat": {
+    "tier": 4,
+    "basis": "10 Attack; its ride ability is defensive (Mobalytics)."
+   }
+  },
+  "tags": [
+   "underwater",
+   "dlc"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "Diving Suit"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Find one at Shipwreck Shore, near Bowsprit Cape.",
+     "Close in fast or unseen so it does not startle, then mount it (Game8).",
+     "Feed it until Trust reaches 100, then register it. A Golden Apple gives +100 and Red Seaweed +50 (crimsondesert.gg); Game8 lists Seaweed Clusters and Jellyfish Fillets."
+    ]
+   }
+  ],
+  "location": "Shipwreck Shore near Bowsprit Cape (Sportskeeda).",
+  "notes": [],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://crimsondesert.gg/images/mount/785b332e.webp",
+    "credit": "crimsondesertgg",
+    "matte": true,
+    "src": "media/mounts/loggerhead-sea-turtle/portrait.webp",
+    "w": 256,
+    "h": 256
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "crimsondesertgg",
+    "url": "https://crimsondesert.gg/mounts/loggerhead-sea-turtle",
+    "title": "Loggerhead Sea Turtle — crimsondesert.gg"
+   },
+   {
+    "by": "sportskeeda",
+    "url": "https://www.sportskeeda.com/esports/all-new-mounts-crimson-desert-dlc-far-get",
+    "title": "All new mounts in the DLC and how to get them — Sportskeeda"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/635858",
+    "title": "All New Mounts (DLC) — Game8"
+   },
+   {
+    "by": "mobalytics",
+    "url": "https://mobalytics.gg/gamebase/guides/crimson-desert-ocean-mounts-hidden-encounters",
+    "title": "Ocean Mounts & Hidden Encounters — Mobalytics"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    100,
+    200,
+    10,
+    80
+   ],
+   "source": "crimsondesertgg"
+  }
+ },
+ {
+  "id": "olive-ridley-sea-turtle",
+  "name": "Olive Ridley Sea Turtle",
+  "leaf": "rare",
+  "cls": "sea",
+  "domains": [
+   "sea"
+  ],
+  "kind": "Turtle",
+  "region": "South Sea",
+  "area": "the Great Hydrothermal Vents, near the Drangar Islands",
+  "trait": "The olive-shelled turtle of the vents",
+  "summary": "An olive-shelled turtle of the South Sea vents. Same statline and ride ability as the others.",
+  "tiers": {
+   "speed": {
+    "tier": 4,
+    "basis": "Speed 1 on crimsondesert.gg; kept at the old Sea Turtle plate's rating."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "200 Stamina, the common sea-mount figure (crimsondesert.gg)."
+   },
+   "travel": {
+    "tier": 4,
+    "basis": "A defensive mount, not a racer."
+   },
+   "combat": {
+    "tier": 4,
+    "basis": "10 Attack; its ride ability is defensive (Mobalytics)."
+   }
+  },
+  "tags": [
+   "underwater",
+   "dlc"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "Diving Suit"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Find one at the Great Hydrothermal Vents, near the Drangar Islands.",
+     "Close in fast or unseen so it does not startle, then mount it (Game8).",
+     "Feed it until Trust reaches 100, then register it. A Golden Apple gives +100 and Red Seaweed +50 (crimsondesert.gg); Game8 lists Seaweed Clusters and Jellyfish Fillets."
+    ]
+   }
+  ],
+  "location": "The Great Hydrothermal Vents near the Drangar Islands, South Sea (Sportskeeda); TH.GL maps 35 spawns.",
+  "notes": [],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://crimsondesert.gg/images/mount/3165d4e1.webp",
+    "credit": "crimsondesertgg",
+    "matte": true,
+    "src": "media/mounts/olive-ridley-sea-turtle/portrait.webp",
+    "w": 256,
+    "h": 256
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "crimsondesertgg",
+    "url": "https://crimsondesert.gg/mounts/olive-ridley-sea-turtle",
+    "title": "Olive Ridley Sea Turtle — crimsondesert.gg"
+   },
+   {
+    "by": "sportskeeda",
+    "url": "https://www.sportskeeda.com/esports/all-new-mounts-crimson-desert-dlc-far-get",
+    "title": "All new mounts in the DLC and how to get them — Sportskeeda"
+   },
+   {
+    "by": "thgl",
+    "url": "https://crimsondesert.th.gl/guides/Olive%20Ridley%20Sea%20Turtle",
+    "title": "Olive Ridley Sea Turtle locations — TH.GL"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/items/hydrothermal-mineral-deposit/",
+    "title": "Hydrothermal Mineral Deposit (Great Hydrothermal Vents) — Vulkk"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/635858",
+    "title": "All New Mounts (DLC) — Game8"
+   },
+   {
+    "by": "mobalytics",
+    "url": "https://mobalytics.gg/gamebase/guides/crimson-desert-ocean-mounts-hidden-encounters",
+    "title": "Ocean Mounts & Hidden Encounters — Mobalytics"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    100,
+    200,
+    10,
+    80
+   ],
+   "source": "crimsondesertgg"
+  }
+ },
+ {
+  "id": "hydrothermal-turtle",
+  "name": "Hydrothermal Turtle",
+  "leaf": "rare",
+  "cls": "sea",
+  "domains": [
+   "sea"
+  ],
+  "kind": "Turtle",
+  "region": "South Sea",
+  "area": "the Great Hydrothermal Vents, near the Drangar Islands",
+  "trait": "The rarest turtle: two known spawns",
+  "summary": "A turtle of the volcanic vents, and the rarest of the five: TH.GL maps only two spawns. Same statline and ride ability as the others.",
+  "tiers": {
+   "speed": {
+    "tier": 4,
+    "basis": "Speed 1 on crimsondesert.gg; kept at the old Sea Turtle plate's rating."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "200 Stamina, the common sea-mount figure (crimsondesert.gg)."
+   },
+   "travel": {
+    "tier": 4,
+    "basis": "A defensive mount, not a racer."
+   },
+   "combat": {
+    "tier": 4,
+    "basis": "10 Attack; its ride ability is defensive (Mobalytics)."
+   }
+  },
+  "tags": [
+   "underwater",
+   "dlc"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "Diving Suit"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Find one at the Great Hydrothermal Vents, near the Drangar Islands.",
+     "Close in fast or unseen so it does not startle, then mount it (Game8).",
+     "Feed it until Trust reaches 100, then register it. A Golden Apple gives +100 and Red Seaweed +50 (crimsondesert.gg); Game8 lists Seaweed Clusters and Jellyfish Fillets."
+    ]
+   }
+  ],
+  "location": "The Great Hydrothermal Vents near the Drangar Islands, South Sea (Sportskeeda). TH.GL maps only two spawns: the rarest turtle.",
+  "notes": [],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://crimsondesert.gg/images/mount/412756d4.webp",
+    "credit": "crimsondesertgg",
+    "matte": true,
+    "src": "media/mounts/hydrothermal-turtle/portrait.webp",
+    "w": 256,
+    "h": 256
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "crimsondesertgg",
+    "url": "https://crimsondesert.gg/mounts/hydrothermal-turtle",
+    "title": "Hydrothermal Turtle — crimsondesert.gg"
+   },
+   {
+    "by": "sportskeeda",
+    "url": "https://www.sportskeeda.com/esports/all-new-mounts-crimson-desert-dlc-far-get",
+    "title": "All new mounts in the DLC and how to get them — Sportskeeda"
+   },
+   {
+    "by": "thgl",
+    "url": "https://crimsondesert.th.gl/guides",
+    "title": "Location guides (spawn counts) — TH.GL"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/items/hydrothermal-mineral-deposit/",
+    "title": "Hydrothermal Mineral Deposit (Great Hydrothermal Vents) — Vulkk"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/635858",
+    "title": "All New Mounts (DLC) — Game8"
+   },
+   {
+    "by": "mobalytics",
+    "url": "https://mobalytics.gg/gamebase/guides/crimson-desert-ocean-mounts-hidden-encounters",
+    "title": "Ocean Mounts & Hidden Encounters — Mobalytics"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    100,
+    200,
+    10,
+    80
+   ],
+   "source": "crimsondesertgg"
+  }
  },
  {
   "id": "sunfish",
@@ -3647,6 +4891,105 @@
   "since": "DLC: Charting the Unknown",
   "variants": [],
   "skills": []
+ },
+ {
+  "id": "giant-manta-ray",
+  "name": "Giant Manta Ray",
+  "leaf": "rare",
+  "cls": "sea",
+  "domains": [
+   "sea"
+  ],
+  "kind": "Ray",
+  "region": "Great Ocean",
+  "area": "One known spawn",
+  "trait": "The largest ray; tamed with food",
+  "summary": "The big cousin of the Manta Ray: a neutral giant you ride up to and feed. TH.GL maps a single spawn, and no guide names the spot yet.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "Speed 1, the same listed stat as the Manta Ray (crimsondesert.gg); no source compares it."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "200 Stamina, the common sea-mount figure (crimsondesert.gg)."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "An average sea traveller."
+   },
+   "combat": {
+    "tier": 4,
+    "basis": "30 Attack; manta ride abilities are defensive (Mobalytics)."
+   }
+  },
+  "tags": [
+   "underwater",
+   "dlc"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "Diving Suit",
+   "Golden Coral or small fish"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Find the Giant Manta Ray. TH.GL maps one spawn in the Great Ocean; no published guide names it yet.",
+     "Swim up and mount it. Mobalytics says sea mounts use a taming minigame that works like horse taming.",
+     "Feed it until Trust reaches 100, then register it. Golden Coral is its favourite (+100); Shrimp gives +50 and small fish +35 (crimsondesert.gg)."
+    ]
+   }
+  ],
+  "location": "The Great Ocean. TH.GL maps a single spawn; no guide names the place yet.",
+  "notes": [],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://crimsondesert.gg/images/mount/185762be.webp",
+    "credit": "crimsondesertgg",
+    "matte": true,
+    "src": "media/mounts/giant-manta-ray/portrait.webp",
+    "w": 256,
+    "h": 256
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "crimsondesertgg",
+    "url": "https://crimsondesert.gg/mounts/giant-manta-ray",
+    "title": "Giant Manta Ray — crimsondesert.gg"
+   },
+   {
+    "by": "sportskeeda",
+    "url": "https://www.sportskeeda.com/esports/all-new-mounts-crimson-desert-dlc-far-get",
+    "title": "All new mounts in the DLC and how to get them — Sportskeeda"
+   },
+   {
+    "by": "thgl",
+    "url": "https://crimsondesert.th.gl/guides",
+    "title": "Location guides (spawn counts) — TH.GL"
+   },
+   {
+    "by": "mobalytics",
+    "url": "https://mobalytics.gg/gamebase/guides/crimson-desert-underwater-exploration",
+    "title": "Underwater Exploration Guide — Mobalytics"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    200,
+    200,
+    30,
+    null
+   ],
+   "source": "crimsondesertgg"
+  }
  },
  {
   "id": "eagle-ray",
@@ -4620,6 +5963,287 @@
   "since": "Base game"
  },
  {
+  "id": "hernandian-soldiers-horse",
+  "name": "Hernandian Soldier's Horse",
+  "leaf": "stable",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Horse",
+  "region": "Hernand",
+  "area": "Roads around the City of Hernand",
+  "trait": "A Priden-grade army horse, never sold",
+  "summary": "The Duchy of Hernand's patrol horse. It matches the Priden stat for stat but is never sold or found wild: you take one from a soldier and register it.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "Speed 3, Acceleration 3 at Lv 5 (The Games Wiki)."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "270 Stamina at Lv 5."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "High Jump plus Double Jump open shortcuts, as on the Priden."
+   },
+   "combat": {
+    "tier": 4,
+    "basis": "23 Attack at Lv 5."
+   }
+  },
+  "tags": [
+   "vertical"
+  ],
+  "requires": [
+   "Mask (stealing is a crime)"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Find a mounted Hernandian soldier patrolling the roads around the City of Hernand.",
+     "Mask on, then take the horse while its rider is off it or distracted, and ride clear. Stealing raises your bounty.",
+     "Register it at any stable to keep it; it then levels like any horse."
+    ]
+   }
+  ],
+  "location": "Roads around the City of Hernand, under Hernandian soldiers.",
+  "notes": [
+   "Statistically identical to the Priden and the Calphadean Scout's Horse (The Games Wiki)."
+  ],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://crimsondesert.gg/images/mount/ea2608a1.webp",
+    "credit": "crimsondesertgg",
+    "matte": true,
+    "src": "media/mounts/hernandian-soldiers-horse/portrait.webp",
+    "w": 256,
+    "h": 256
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/hernandian-soldiers-horse",
+    "title": "Hernandian Soldier's Horse — The Games Wiki"
+   },
+   {
+    "by": "crimsondesertgg",
+    "url": "https://crimsondesert.gg/mounts/hernandian-soldiers-horse",
+    "title": "Hernandian Soldier's Horse — crimsondesert.gg"
+   },
+   {
+    "by": "gamingbolt",
+    "url": "https://gamingbolt.com/crimson-desert-guide-everything-you-need-to-know-about-mounts",
+    "title": "Everything You Need to Know About Mounts — GamingBolt"
+   }
+  ],
+  "since": "Base game",
+  "skills": [
+   [
+    2,
+    "Dash"
+   ],
+   [
+    3,
+    "Drift"
+   ],
+   [
+    3,
+    "Back Kick"
+   ],
+   [
+    4,
+    "Sprint"
+   ],
+   [
+    5,
+    "Swimming III"
+   ],
+   [
+    5,
+    "Quick Start"
+   ],
+   [
+    5,
+    "Double Jump"
+   ],
+   [
+    5,
+    "High Jump"
+   ]
+  ],
+  "stats": {
+   "kind": "horse",
+   "levels": {
+    "1": [
+     400,
+     195,
+     10,
+     60,
+     1,
+     1,
+     2,
+     2
+    ],
+    "5": [
+     520,
+     270,
+     23,
+     72,
+     3,
+     3,
+     3,
+     4
+    ]
+   },
+   "source": "thegameswiki"
+  }
+ },
+ {
+  "id": "calphadean-scouts-horse",
+  "name": "Calphadean Scout's Horse",
+  "leaf": "stable",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Horse",
+  "region": "Hernand · Demeniss · Delesyia",
+  "area": "The main roads",
+  "trait": "A road horse you tame where it stands",
+  "summary": "A scout's horse that wanders the main roads of three regions day and night. Mount one where you find it to tame and register it; it levels like the Priden.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "Speed 3, Acceleration 3 at Lv 5 (The Games Wiki)."
+   },
+   "stamina": {
+    "tier": 3,
+    "basis": "270 Stamina at Lv 5."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "High Jump plus Double Jump open shortcuts, as on the Priden."
+   },
+   "combat": {
+    "tier": 4,
+    "basis": "23 Attack at Lv 5."
+   }
+  },
+  "tags": [
+   "vertical"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Ride the main roads of Hernand, Demeniss or Delesyia; these horses wander them day and night.",
+     "Approach one on the road and mount it to tame and register it (crimsondesert.gg)."
+    ]
+   }
+  ],
+  "location": "The roads of the Duchy of Hernand, the Kingdom of Demeniss and the Republic of Delesyia (crimsondesert.gg).",
+  "notes": [
+   "Statistically identical to the Priden and the Hernandian Soldier's Horse (The Games Wiki)."
+  ],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://crimsondesert.gg/images/mount/d8f7a08d.webp",
+    "credit": "crimsondesertgg",
+    "matte": true,
+    "src": "media/mounts/calphadean-scouts-horse/portrait.webp",
+    "w": 256,
+    "h": 256
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "crimsondesertgg",
+    "url": "https://crimsondesert.gg/mounts/calphadean-scouts-horse",
+    "title": "Calphadean Scout's Horse — crimsondesert.gg"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/hernandian-soldiers-horse",
+    "title": "Hernandian Soldier's Horse (comparison) — The Games Wiki"
+   },
+   {
+    "by": "gamingbolt",
+    "url": "https://gamingbolt.com/crimson-desert-guide-everything-you-need-to-know-about-mounts",
+    "title": "Everything You Need to Know About Mounts — GamingBolt"
+   }
+  ],
+  "since": "Base game",
+  "skills": [
+   [
+    2,
+    "Dash"
+   ],
+   [
+    3,
+    "Drift"
+   ],
+   [
+    3,
+    "Back Kick"
+   ],
+   [
+    4,
+    "Sprint"
+   ],
+   [
+    5,
+    "Swimming III"
+   ],
+   [
+    5,
+    "Quick Start"
+   ],
+   [
+    5,
+    "Double Jump"
+   ],
+   [
+    5,
+    "High Jump"
+   ]
+  ],
+  "stats": {
+   "kind": "horse",
+   "levels": {
+    "1": [
+     400,
+     195,
+     10,
+     60,
+     1,
+     1,
+     2,
+     2
+    ],
+    "5": [
+     520,
+     270,
+     23,
+     72,
+     3,
+     3,
+     3,
+     4
+    ]
+   },
+   "source": "thegameswiki"
+  }
+ },
+ {
   "id": "cloudcart",
   "name": "Cloudcart",
   "leaf": "engineered",
@@ -4631,7 +6255,7 @@
   "region": "Hernand",
   "area": "Glenbright Manor · Emberwind Workshop",
   "trait": "Craftable balloon for cross-continent hops",
-  "summary": "The village's first flying prototype — a hot-air balloon built through your Greymane camp for long hops across the continent. Two upgraded hulls follow it.",
+  "summary": "The village's first flying prototype — a hot-air balloon built through your Greymane camp for long hops across the continent. The Cloudcruiser and Skystreaker are separate balloons built after it.",
   "tiers": {
    "speed": {
     "tier": 3,
@@ -4678,14 +6302,10 @@
   ],
   "location": "Blueprint: Glenbright Manor basement. Workshop: Emberwind Workshop, north of the manor.",
   "notes": [
-   "Cloudcruiser (stronger fabric, higher altitude) and Skystreaker (high-altitude flagship) are built through further dispatch missions — reported at five Greymanes including an Engineer, plus a fresh batch of materials.",
+   "Two more balloons follow it, each a separate mount with its own plate: the Cloudcruiser (after Cloudcart Efficiency Enhancement Research) and the Skystreaker (after Cloudcart Altitude Enhancement Research).",
    "No Engineer yet? The quest A Rumor in St. Halssius recruits Arnold."
   ],
-  "variants": [
-   "Cloudcart",
-   "Cloudcruiser",
-   "Skystreaker"
-  ],
+  "variants": [],
   "media": {
    "portrait": {
     "from": "https://img.game8.co/4468575/6af021c265da4dfa689920c631e08a5a.png/show",
@@ -4723,28 +6343,7 @@
      "h": 410
     }
    ],
-   "gallery": [
-    {
-     "kind": "variant",
-     "from": "https://static0.fextralifeimages.com/file/crimsondesertgame/5/5a/Cloudcruiser-mounts-crimson-desert-wiki-guide.png",
-     "credit": "fextralife",
-     "caption": "Cloudcruiser",
-     "matte": true,
-     "src": "media/mounts/cloudcart/gallery-1.webp",
-     "w": 170,
-     "h": 170
-    },
-    {
-     "kind": "variant",
-     "from": "https://static0.fextralifeimages.com/file/crimsondesertgame/4/4d/Skystreaker-mounts-crimson-desert-wiki-guide.png",
-     "credit": "fextralife",
-     "caption": "Skystreaker",
-     "matte": true,
-     "src": "media/mounts/cloudcart/gallery-2.webp",
-     "w": 170,
-     "h": 170
-    }
-   ]
+   "gallery": []
   },
   "sources": [
    {
@@ -4775,6 +6374,190 @@
   ],
   "since": "Base game",
   "skills": []
+ },
+ {
+  "id": "cloudcruiser",
+  "name": "Cloudcruiser",
+  "leaf": "engineered",
+  "cls": "sky",
+  "domains": [
+   "sky"
+  ],
+  "kind": "Balloon",
+  "region": "Hernand",
+  "area": "Emberwind Workshop",
+  "trait": "The efficiency-upgraded balloon",
+  "summary": "The second balloon off the Emberwind line, built once your camp researches Cloudcart efficiency. Like the Cloudcart it has 300 Health (crimsondesert.gg).",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "A balloon: steady rather than fast. Same listed Speed as the Cloudcart (crimsondesert.gg)."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "No stamina bar."
+   },
+   "travel": {
+    "tier": 2,
+    "basis": "Long-distance flight with no ground obstacles; the efficiency research is its upgrade."
+   },
+   "combat": {
+    "tier": 5,
+    "basis": "No attack."
+   }
+  },
+  "tags": [
+   "flying",
+   "mechanical"
+  ],
+  "requires": [
+   "Emberwind Workshop under your control",
+   "Cloudcart Efficiency Enhancement Research",
+   "6 comrades"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Take or hold Emberwind Workshop, north of Glenbright Manor in Hernand.",
+     "Complete the camp research Cloudcart Efficiency Enhancement Research.",
+     "Dispatch Cloudcruiser Crafting with exactly 6 comrades: 6,000 Camp Funds, 360 Camp Food, 180 Timber, 180 Stone. Your faction wanted level must be below 4.",
+     "It is a one-time mission: the Cloudcruiser is delivered to your camp."
+    ]
+   }
+  ],
+  "location": "Emberwind Workshop (Hernand, north of Glenbright Manor) — the stronghold must be under your camp's control.",
+  "notes": [
+   "Builds after the Cloudcart; the Skystreaker is the third balloon."
+  ],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://static0.fextralifeimages.com/file/crimsondesertgame/5/5a/Cloudcruiser-mounts-crimson-desert-wiki-guide.png",
+    "credit": "fextralife",
+    "matte": true,
+    "src": "media/mounts/cloudcruiser/portrait.webp",
+    "w": 170,
+    "h": 170
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "crimsondesertgg",
+    "url": "https://crimsondesert.gg/mounts/cloudcruiser",
+    "title": "Cloudcruiser — crimsondesert.gg"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Cloudcruiser",
+    "title": "Cloudcruiser — Fextralife Wiki"
+   }
+  ],
+  "since": "Base game",
+  "skills": [],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    300,
+    null,
+    null,
+    null
+   ],
+   "source": "crimsondesertgg"
+  }
+ },
+ {
+  "id": "skystreaker",
+  "name": "Skystreaker",
+  "leaf": "engineered",
+  "cls": "sky",
+  "domains": [
+   "sky"
+  ],
+  "kind": "Balloon",
+  "region": "Hernand",
+  "area": "Emberwind Workshop",
+  "trait": "The altitude-upgraded balloon",
+  "summary": "The third and costliest balloon, unlocked by the Cloudcart altitude research. Same 300 Health as the other two (crimsondesert.gg).",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "A balloon: steady rather than fast. Same listed Speed as the Cloudcart (crimsondesert.gg)."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "No stamina bar."
+   },
+   "travel": {
+    "tier": 2,
+    "basis": "Long-distance flight with no ground obstacles; the altitude research is its upgrade."
+   },
+   "combat": {
+    "tier": 5,
+    "basis": "No attack."
+   }
+  },
+  "tags": [
+   "flying",
+   "mechanical"
+  ],
+  "requires": [
+   "Emberwind Workshop under your control",
+   "Cloudcart Altitude Enhancement Research",
+   "7 comrades"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Take or hold Emberwind Workshop, north of Glenbright Manor in Hernand.",
+     "Complete the camp research Cloudcart Altitude Enhancement Research.",
+     "Dispatch Skystreaker Crafting with exactly 7 comrades: 14,000 Camp Funds, 840 Camp Food, 420 Timber, 420 Stone. Your faction wanted level must be below 4.",
+     "It is a one-time mission: the Skystreaker is delivered to your camp."
+    ]
+   }
+  ],
+  "location": "Emberwind Workshop (Hernand, north of Glenbright Manor) — the stronghold must be under your camp's control.",
+  "notes": [
+   "The costliest of the three balloons to build."
+  ],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://static0.fextralifeimages.com/file/crimsondesertgame/4/4d/Skystreaker-mounts-crimson-desert-wiki-guide.png",
+    "credit": "fextralife",
+    "matte": true,
+    "src": "media/mounts/skystreaker/portrait.webp",
+    "w": 170,
+    "h": 170
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "crimsondesertgg",
+    "url": "https://crimsondesert.gg/mounts/skystreaker",
+    "title": "Skystreaker — crimsondesert.gg"
+   },
+   {
+    "by": "fextralife",
+    "url": "https://crimsondesertgame.wiki.fextralife.com/Skystreaker",
+    "title": "Skystreaker — Fextralife Wiki"
+   }
+  ],
+  "since": "Base game",
+  "skills": [],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    300,
+    null,
+    null,
+    null
+   ],
+   "source": "crimsondesertgg"
+  }
  },
  {
   "id": "atag",
@@ -4838,7 +6621,7 @@
   "location": "Blueprint: Marek, Zargan Tankworks (west Gorthak).",
   "notes": [
    "Game8 calls the refitted A.T.A.G. the ideal choice for underwater combat.",
-   "High-Mobility A.T.A.G.: a lighter build stripped of armour for mobility, crafted from the same Small Kuku A.T.A.G. plus Cogwheels, two Crown of Shadows power cores and a Core of Temperance (Vulkk)."
+   "The High-Mobility A.T.A.G. is a separate, lighter mech built from the same Small Kuku A.T.A.G.; it has its own plate."
   ],
   "media": {
    "portrait": {
@@ -4893,11 +6676,108 @@
    }
   ],
   "since": "Base game · marine parts DLC",
-  "variants": [
-   "A.T.A.G.",
-   "High-Mobility A.T.A.G."
-  ],
+  "variants": [],
   "skills": []
+ },
+ {
+  "id": "high-mobility-atag",
+  "name": "High-Mobility A.T.A.G.",
+  "leaf": "engineered",
+  "cls": "land",
+  "domains": [
+   "land"
+  ],
+  "kind": "Mech suit",
+  "region": "Hernand",
+  "area": "Grimnir's Kuku Shop",
+  "trait": "A lighter mech, stripped of armour for mobility",
+  "summary": "An A.T.A.G. stripped of its excess armour: lighter and quicker on its feet, at the cost of half the Health and some punch. You build it from a Small Kuku A.T.A.G. at Grimnir's shop.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "Stripped of armour to enhance mobility (Vulkk) — quicker than the A.T.A.G."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "No stamina bar."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "All-terrain walker with a cooldown."
+   },
+   "combat": {
+    "tier": 3,
+    "basis": "500 Health and 25 Attack — a fifth of the A.T.A.G.'s 2,500 Health (The Games Wiki)."
+   }
+  },
+  "tags": [
+   "mechanical",
+   "battle"
+  ],
+  "requires": [
+   "Blueprint II (Sanctum of Exaltation)",
+   "Small Kuku A.T.A.G.",
+   "Grimnir's Kuku Shop"
+  ],
+  "routes": [
+   {
+    "label": "Blueprint",
+    "steps": [
+     "Cleanse the Sanctum of Exaltation, between Silver Wolf Mountain and the City of Pailune (The Witch of Kindness questline). It gives Kuku Robot Special Blueprint II: High-Mobility A.T.A.G."
+    ]
+   },
+   {
+    "label": "Build",
+    "steps": [
+     "Go to Grimnir's Kuku Shop in Hernand and open Kuku Item Crafting and Enhancement.",
+     "Craft it from 1 Small Kuku A.T.A.G., 400 Small Batteries, 200 Cogwheels, 2 Power Cores – Crown of Shadows and 1 Core of Temperance."
+    ]
+   }
+  ],
+  "location": "Blueprint: Sanctum of Exaltation, Pailune. Crafted at Grimnir's Kuku Shop, Hernand.",
+  "notes": [
+   "Heal it with Healing Force Palm.",
+   "An A.T.A.G. Emergency Power Device cuts its cooldown by 10 minutes.",
+   "The Heavy Assault A.T.A.G. is not on the roster: it is only borrowed from Gorthak hangars, and no blueprint builds one.",
+   "The Games Wiki describes a research-project unlock instead; this plate follows Vulkk's blueprint-and-craft route."
+  ],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://1cb6tlwvfkhv5nag.public.blob.vercel-storage.com/wiki-images/mounts/mount-high-mobility-a-t-a-g.webp",
+    "credit": "thegameswiki",
+    "matte": true,
+    "src": "media/mounts/high-mobility-atag/portrait.webp",
+    "w": 256,
+    "h": 256
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/mounts/high-mobility-a-t-a-g/",
+    "title": "High-Mobility A.T.A.G. — Vulkk"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/high-mobility-a-t-a-g",
+    "title": "High-Mobility A.T.A.G. — The Games Wiki"
+   }
+  ],
+  "since": "Base game",
+  "skills": [],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    500,
+    null,
+    25,
+    null
+   ],
+   "source": "thegameswiki"
+  }
  },
  {
   "id": "pywel-wagon",
@@ -4950,8 +6830,8 @@
   ],
   "location": "Timberturner Wainwright, east of Howling Hill, Hernand.",
   "notes": [
-   "Bigger wagons can be crafted for more resources, workers and time.",
-   "Wagons can also be stolen from NPCs as temporary rides."
+   "The same mission list builds two bigger wagons, each with its own plate: the Freight Wagon and the Trading Wagon.",
+   "Wagons can also be stolen from NPCs, but a stolen wagon cannot run your own trade."
   ],
   "media": {
    "portrait": {
@@ -4995,70 +6875,76 @@
   "skills": []
  },
  {
-  "id": "kuku-bird-hatchling",
-  "name": "Kuku Bird Hatchling",
-  "leaf": "fleeting",
+  "id": "freight-wagon",
+  "name": "Freight Wagon",
+  "leaf": "engineered",
   "cls": "land",
   "domains": [
    "land"
   ],
-  "kind": "Bird",
+  "kind": "Wagon",
   "region": "Hernand",
-  "area": "Steel Mountains",
-  "trait": "Temporary glider — steal one for a cliff",
-  "summary": "Young kuku birds ridden by Blinding Arrow soldiers. They glide down any drop without fall damage, but you cannot keep one.",
+  "area": "Timberturner Wainwright",
+  "trait": "The middle wagon: more cargo, more cost",
+  "summary": "The second of the three wagons on the Timberturner Wainwright mission list: a bigger cart with 3,000 Health, built by the same Greymane dispatch as the Old Wagon.",
   "tiers": {
    "speed": {
-    "tier": 3,
-    "basis": "Flees fast; average under a rider."
+    "tier": 5,
+    "basis": "The Games Wiki calls its base speed slow; no figure is published."
    },
    "stamina": {
-    "tier": 3,
-    "basis": "300 Stamina listed."
+    "tier": null,
+    "basis": "No stamina bar."
    },
    "travel": {
-    "tier": 2,
-    "basis": "Trait override: no fall damage from any height."
+    "tier": 4,
+    "basis": "Roads only, slowly, with a bigger hold."
    },
    "combat": {
     "tier": 5,
-    "basis": "No combat moves."
+    "basis": "No attack; 3,000 Health (GamingBolt)."
    }
   },
   "tags": [
-   "vertical"
+   "cargo"
   ],
-  "requires": [],
+  "requires": [
+   "Brice the Wagonmaster",
+   "Brice's Request",
+   "An Engineering comrade"
+  ],
   "routes": [
    {
     "steps": [
-     "Steel Mountains, east of the Spire of Insight: Blinding Arrow soldiers ride hatchlings.",
-     "Defeat a rider, then sprint after the bird before it escapes and mount it."
+     "Recruit Brice through A Rumor in Glenbright Farm and an Engineer (A Rumor in St. Halssius recruits Arnold).",
+     "Take Brice's Request and talk to the Stranger by the wagon wheels at Timberturner Wainwright, east of Howling Hill.",
+     "Inspect Timberturner Wainwright on the map, open the Mission List and dispatch Freight Wagon Production. Bigger wagons need more members, resources and time than the Old Wagon (6 members, 4 hours)."
     ]
    }
   ],
-  "location": "Blinding Arrow occupation, Steel Mountains, east of the Spire of Insight.",
+  "location": "Timberturner Wainwright, east of Howling Hill (Hernand); the wagon is parked at Brice's post in camp.",
   "notes": [
-   "Cannot be registered. For a permanent bird, see the Leaping Kuku Bird.",
-   "Step off and it wanders nearby; re-mount without another chase."
+   "Upgraded wheels help most on the slow Freight Wagon (The Games Wiki)."
   ],
+  "variants": [],
   "media": {
    "portrait": {
-    "from": "https://img.game8.co/4451866/65f0ea46dfe18b6d02b7fec95f9404fa.png/show",
-    "credit": "game8",
-    "src": "media/mounts/kuku-bird-hatchling/portrait.webp",
+    "from": "https://1cb6tlwvfkhv5nag.public.blob.vercel-storage.com/wiki-images/mounts/mount-freight-wagon.webp",
+    "credit": "thegameswiki",
+    "matte": true,
+    "src": "media/mounts/freight-wagon/portrait.webp",
     "w": 480,
     "h": 480
    },
    "captures": [
     {
-     "kind": "map",
-     "from": "https://img.game8.co/4451827/fa180202700ee06d7d57e5cc0e550e83.png/show",
+     "kind": "menu",
+     "from": "https://img.game8.co/4451573/8017afcf380b1d97d938f05723ff9362.png/show",
      "credit": "game8",
-     "caption": "World map — Blinding Soldier occupation",
-     "src": "media/mounts/kuku-bird-hatchling/map-1.webp",
-     "w": 728,
-     "h": 410
+     "caption": "Mission list — Timberturner Wainwright: Old, Freight and Trading Wagon",
+     "src": "media/mounts/freight-wagon/menu-1.webp",
+     "w": 727,
+     "h": 409
     }
    ],
    "gallery": []
@@ -5066,90 +6952,218 @@
   "sources": [
    {
     "by": "game8",
-    "url": "https://game8.co/games/Crimson-Desert/archives/588550",
-    "title": "Kuku Bird — Game8"
+    "url": "https://game8.co/games/Crimson-Desert/archives/588455",
+    "title": "Brice's Request Walkthrough — Game8"
+   },
+   {
+    "by": "method",
+    "url": "https://method.gg/crimson-desert/crimson-desert-trading-guide-how-to-trade-goods-and-make-money-with-wagons",
+    "title": "Trading Guide: How to Trade Goods and Make Money With Wagons — Method"
+   },
+   {
+    "by": "gamingbolt",
+    "url": "https://gamingbolt.com/crimson-desert-guide-everything-you-need-to-know-about-mounts",
+    "title": "Everything You Need to Know About Mounts — GamingBolt"
    },
    {
     "by": "thegameswiki",
-    "url": "https://thegameswiki.com/crimson-desert/wiki/kuku-bird-hatchling",
-    "title": "Kuku Bird Hatchling — The Games Wiki"
+    "url": "https://thegameswiki.com/crimson-desert/wiki/wagon-trading",
+    "title": "Wagon Trading — The Games Wiki"
    }
   ],
   "since": "Base game",
-  "variants": [],
-  "skills": []
+  "skills": [],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    3000,
+    null,
+    null,
+    null
+   ],
+   "source": "gamingbolt"
+  }
  },
  {
-  "id": "elephant",
-  "name": "Elephant",
-  "leaf": "fleeting",
+  "id": "trading-wagon",
+  "name": "Trading Wagon",
+  "leaf": "engineered",
   "cls": "land",
   "domains": [
    "land"
   ],
-  "kind": "Elephant",
-  "region": "Demeniss",
-  "area": "Demeniss Wildlife Park",
-  "trait": "Ride the giants of the wildlife park",
-  "summary": "The wildlife park's elephants carry riders on request. Walk up and climb on — they stay behind when you leave.",
+  "kind": "Wagon",
+  "region": "Hernand",
+  "area": "Timberturner Wainwright",
+  "trait": "The biggest wagon you can build",
+  "summary": "The top wagon on the Timberturner Wainwright mission list: the largest cart you can build, with 5,000 Health. It needs about ten comrades, so it comes later.",
   "tiers": {
    "speed": {
     "tier": 5,
-    "basis": "Lumbering."
+    "basis": "No speed figure is published; rated with the Freight Wagon."
    },
    "stamina": {
-    "tier": 3,
-    "basis": "No data — rated average."
+    "tier": null,
+    "basis": "No stamina bar."
    },
    "travel": {
+    "tier": 3,
+    "basis": "Roads only, but the largest hold of any wagon."
+   },
+   "combat": {
     "tier": 5,
-    "basis": "Park grounds only."
+    "basis": "No attack; 5,000 Health (GamingBolt)."
+   }
+  },
+  "tags": [
+   "cargo"
+  ],
+  "requires": [
+   "Brice the Wagonmaster",
+   "Brice's Request",
+   "An Engineering comrade",
+   "About 10 comrades"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Recruit Brice through A Rumor in Glenbright Farm and an Engineer (A Rumor in St. Halssius recruits Arnold).",
+     "Take Brice's Request and talk to the Stranger by the wagon wheels at Timberturner Wainwright, east of Howling Hill.",
+     "Inspect Timberturner Wainwright on the map, open the Mission List and dispatch Trading Wagon Production once you have about ten comrades."
+    ]
+   }
+  ],
+  "location": "Timberturner Wainwright, east of Howling Hill (Hernand); the wagon is parked at Brice's post in camp.",
+  "notes": [],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://1cb6tlwvfkhv5nag.public.blob.vercel-storage.com/wiki-images/mounts/mount-trading-wagon.webp",
+    "credit": "thegameswiki",
+    "matte": true,
+    "src": "media/mounts/trading-wagon/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://img.game8.co/4451573/8017afcf380b1d97d938f05723ff9362.png/show",
+     "credit": "game8",
+     "caption": "Mission list — Timberturner Wainwright: Old, Freight and Trading Wagon",
+     "src": "media/mounts/trading-wagon/menu-1.webp",
+     "w": 727,
+     "h": 409
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/588455",
+    "title": "Brice's Request Walkthrough — Game8"
+   },
+   {
+    "by": "method",
+    "url": "https://method.gg/crimson-desert/crimson-desert-trading-guide-how-to-trade-goods-and-make-money-with-wagons",
+    "title": "Trading Guide: How to Trade Goods and Make Money With Wagons — Method"
+   },
+   {
+    "by": "gamingbolt",
+    "url": "https://gamingbolt.com/crimson-desert-guide-everything-you-need-to-know-about-mounts",
+    "title": "Everything You Need to Know About Mounts — GamingBolt"
+   },
+   {
+    "by": "mythras",
+    "url": "https://gamertagmythras.com/blog/crimson-desert/crimson-desert-trading-guide",
+    "title": "Trading Guide: Wagons, Royal Posts and the 1.16 Rewrite — Mythras"
+   }
+  ],
+  "since": "Base game",
+  "skills": [],
+  "stats": {
+   "kind": "beast",
+   "values": [
+    5000,
+    null,
+    null,
+    null
+   ],
+   "source": "gamingbolt"
+  }
+ },
+ {
+  "id": "small-greymane-ship",
+  "name": "Small Greymane Ship",
+  "leaf": "engineered",
+  "cls": "surface",
+  "domains": [
+   "surface"
+  ],
+  "kind": "Ship",
+  "region": "Hernand",
+  "area": "Vellua docks",
+  "trait": "The quest-built first ship",
+  "summary": "Your first ship, built by your own comrades at Vellua in A Call From Beyond the Horizon. It beats the bought small ships on speed (Movement 3) with the same 14-slot hold.",
+  "tiers": {
+   "speed": {
+    "tier": 3,
+    "basis": "Movement Speed 3, Acceleration 1, Handling 1 (Game8)."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "Ships have no stamina bar."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "Movement Speed 3, Acceleration 1, 14-slot hold."
    },
    "combat": {
     "tier": 4,
-    "basis": "No documented attack."
+    "basis": "5,100 Health; firepower comes from the cannons you fit at a Ship Manager."
    }
   },
   "tags": [
-   "egg-oddity"
+   "dlc",
+   "ship"
   ],
-  "requires": [],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "A Wider World questline"
+  ],
   "routes": [
    {
     "steps": [
-     "Go to Demeniss Wildlife Park, south of the City of Demeniss.",
-     "Approach an elephant and ride it."
+     "Finish Gathered Will and Expanding the Camp (Grounds of the Sunrise), then start A Wider World with the Greymanes at camp.",
+     "In A Call From Beyond the Horizon, go to Vellua (south of Hernand) and dispatch comrades on Small Shipbuilding — talk to Ross at camp or inspect Vellua on the map.",
+     "Collect the ship at Vellua's docks and assign its crew at the Ship Manager."
     ]
    }
   ],
-  "location": "Demeniss Wildlife Park, south of the City of Demeniss.",
-  "notes": [
-   "Temporary only."
-  ],
+  "location": "Built at Vellua, south of Hernand; it waits at the docks.",
+  "notes": [],
+  "variants": [],
   "media": {
    "portrait": {
-    "from": "https://img.game8.co/4465000/00498c6ba58f115e1c38a7adb5a85f37.png/show",
+    "from": "https://img.game8.co/tc04wthpcuueojn2xagimpd80iy0",
     "credit": "game8",
-    "src": "media/mounts/elephant/portrait.webp",
+    "crop": [
+     0.74,
+     0.5,
+     0.8
+    ],
+    "src": "media/mounts/small-greymane-ship/portrait.webp",
     "w": 480,
     "h": 480
    },
    "captures": [
     {
-     "kind": "map",
-     "from": "https://img.game8.co/4467992/a2a8d815d091ecdaa53e98c02cbb38df.png/show",
+     "kind": "menu",
+     "from": "https://img.game8.co/tc04wthpcuueojn2xagimpd80iy0",
      "credit": "game8",
-     "caption": "World map — Demeniss Wildlife Park",
-     "src": "media/mounts/elephant/map-1.webp",
-     "w": 728,
-     "h": 410
-    },
-    {
-     "kind": "overworld",
-     "from": "https://img.game8.co/4467990/912e46757bc9ba49428e14eac58e5294.png/show",
-     "credit": "game8",
-     "caption": "On site — the park",
-     "src": "media/mounts/elephant/overworld-2.webp",
+     "caption": "Manage Ships — Small Greymane Ship",
+     "src": "media/mounts/small-greymane-ship/menu-1.webp",
      "w": 728,
      "h": 410
     }
@@ -5159,111 +7173,115 @@
   "sources": [
    {
     "by": "game8",
-    "url": "https://game8.co/games/Crimson-Desert/archives/594286",
-    "title": "Elephant — Game8"
+    "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+    "title": "How to Get Ships — Game8"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/636503",
+    "title": "List of All Ships — Game8"
+   },
+   {
+    "by": "whisperofthehouse",
+    "url": "https://www.whisperofthehouse.com/crimson-desert/ships",
+    "title": "How Do You Get, Build, and Upgrade Ships — Whisper of the House"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/2026/10/30/how-to-unlock-a-ship-in-crimson-desert-charting-the-unknown-dlc/",
+    "title": "How to Unlock a Ship — Vulkk"
    }
   ],
-  "since": "Base game",
-  "variants": [],
+  "since": "DLC: Charting the Unknown",
   "skills": [],
-  "egg": "A zoo exhibit turned mount: the Demeniss Wildlife Park lets you climb onto its elephants."
+  "stats": {
+   "kind": "ship",
+   "values": [
+    5100,
+    14
+   ],
+   "move": [
+    3,
+    1,
+    1
+   ],
+   "source": "game8"
+  }
  },
  {
-  "id": "marnis-mechahorse",
-  "name": "Marni's Mechahorse",
-  "leaf": "fleeting",
-  "cls": "land",
+  "id": "medium-greymane-ship",
+  "name": "Medium Greymane Ship",
+  "leaf": "engineered",
+  "cls": "surface",
   "domains": [
-   "land",
-   "sea"
+   "surface"
   ],
-  "kind": "Machine",
+  "kind": "Ship",
   "region": "Delesyia",
-  "area": "Eastern Hills",
-  "trait": "Never tires — no stamina drain while riding",
-  "summary": "A clockwork horse parked outside Delesyia's south gate. Steal it masked and it runs without ever spending stamina, swims and carries two riders — but it is gone the moment you fast travel.",
+  "area": "Port shipbuilding mission",
+  "trait": "The fastest medium hull",
+  "summary": "Built by your comrades on the Shipbuilding mission rather than bought: Movement Speed 4 on a 22-slot hold, faster than any medium ship for sale.",
   "tiers": {
    "speed": {
-    "tier": null,
-    "basis": "No measured speed. Since patch 1.04 it sprints on the same input as a horse."
+    "tier": 2,
+    "basis": "Movement Speed 4, Acceleration 1, Handling 1 (Game8)."
    },
    "stamina": {
-    "tier": 1,
-    "basis": "Never drains stamina during normal riding — the only mount that does not tire (All Things How)."
+    "tier": null,
+    "basis": "Ships have no stamina bar."
    },
    "travel": {
-    "tier": 3,
-    "basis": "Endless stamina and it swims, but it spawns only at Delesyia and is lost on fast travel."
+    "tier": 2,
+    "basis": "Movement Speed 4, Acceleration 1, 22-slot hold."
    },
    "combat": {
-    "tier": 5,
-    "basis": "Cannot fight and takes no armour (The Games Wiki)."
+    "tier": 3,
+    "basis": "7,600 Health; firepower comes from the cannons you fit at a Ship Manager."
    }
   },
   "tags": [
-   "mechanical",
-   "egg-nod"
+   "dlc",
+   "ship"
   ],
   "requires": [
-   "Mask"
+   "DLC: Charting the Unknown",
+   "A Wider World questline",
+   "7 comrades"
   ],
   "routes": [
    {
     "steps": [
-     "Ride to the stables outside the south gate of the City of Delesyia, Eastern Hills.",
-     "Equip a Mask — mounting the Mechahorse counts as theft.",
-     "Mount it and ride off. It cannot be registered at a stable."
+     "Shipbuilding missions unlock as A Wider World progresses. Select a port on the map and open its Missions tab.",
+     "Dispatch Shipbuilding (1 day 12 hours in-game): 100,000 Camp Funds, 2,400 Wood, 2,400 Stone, 5,000 Provisions and 7 comrades, one with Engineering.",
+     "Raw materials: 100 Shiny Ore and 50 Malachite."
     ]
    }
   ],
-  "location": "Stables outside the south gate of the City of Delesyia (Eastern Hills, Delesyia).",
-  "notes": [
-   "Temporary only: lost when you fast travel, and it cannot be summoned later.",
-   "Patch 1.04.00 fixed sprinting and swimming while riding it.",
-   "Seats two riders (The Games Wiki).",
-   "If it is missing after a fast travel, reload the area or wait out a day."
-  ],
-  "egg": "Marni is the eccentric inventor from Pearl Abyss's earlier game, Black Desert Online — the name and the machines carry over to Delesyia.",
+  "location": "Built on a port's Shipbuilding mission.",
+  "notes": [],
+  "variants": [],
   "media": {
    "portrait": {
-    "from": "https://gamingpromax.com/wp-content/uploads/2026/04/marni-s-mechahorse-in-crimson-desert-2-1024x666.webp",
-    "credit": "gamingpromax",
+    "from": "https://img.game8.co/0j1mssqlibhd64m1nepld7lopwut",
+    "credit": "game8",
     "crop": [
-     0.64,
-     0.57,
-     0.42
+     0.73,
+     0.5,
+     0.85
     ],
-    "w": 279,
-    "h": 279,
-    "src": "media/mounts/marnis-mechahorse/portrait.webp"
+    "src": "media/mounts/medium-greymane-ship/portrait.webp",
+    "w": 480,
+    "h": 480
    },
    "captures": [
     {
-     "kind": "map",
-     "from": "https://gamingpromax.com/wp-content/uploads/2026/04/marni-s-mechahorse-in-crimson-desert-1024x563.webp",
-     "credit": "gamingpromax",
-     "caption": "World map — the south gate of the City of Delesyia",
-     "src": "media/mounts/marnis-mechahorse/map-1.webp",
-     "w": 1024,
-     "h": 563
-    },
-    {
-     "kind": "action",
-     "from": "https://gamingpromax.com/wp-content/uploads/2026/04/keep-marni-s-mechahorse-in-crimson-desert-1024x621.webp",
-     "credit": "gamingpromax",
-     "caption": "On site — the Steal prompt at the stables",
-     "src": "media/mounts/marnis-mechahorse/action-2.webp",
-     "w": 1024,
-     "h": 621
-    },
-    {
-     "kind": "overworld",
-     "from": "https://gamingpromax.com/wp-content/uploads/2026/04/marni-s-mechahorse-in-crimson-desert-2-1024x666.webp",
-     "credit": "gamingpromax",
-     "caption": "On site — the Mechahorse outside the south gate",
-     "src": "media/mounts/marnis-mechahorse/overworld-3.webp",
-     "w": 1024,
-     "h": 666
+     "kind": "menu",
+     "from": "https://img.game8.co/0j1mssqlibhd64m1nepld7lopwut",
+     "credit": "game8",
+     "caption": "Manage Ships — Medium Greymane Ship",
+     "src": "media/mounts/medium-greymane-ship/menu-1.webp",
+     "w": 728,
+     "h": 410
     }
    ],
    "gallery": []
@@ -5271,27 +7289,1602 @@
   "sources": [
    {
     "by": "game8",
-    "url": "https://game8.co/games/Crimson-Desert/archives/587091",
-    "title": "List of All Mounts — Game8"
+    "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+    "title": "How to Get Ships — Game8"
    },
    {
-    "by": "allthingshow",
-    "url": "https://allthings.how/crimson-deserts-secret-mechahorse-where-to-find-it-and-why-it-cant-stay/",
-    "title": "Crimson Desert's Secret Mechahorse — All Things How"
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/636503",
+    "title": "List of All Ships — Game8"
    },
    {
-    "by": "gamingpromax",
-    "url": "https://gamingpromax.com/crimson-desert-how-to-get-marnis-mechahorse/",
-    "title": "How to Get Marni's Mechahorse — Gaming ProMax"
-   },
-   {
-    "by": "thegameswiki",
-    "url": "https://thegameswiki.com/crimson-desert/wiki/marnis-mechahorse",
-    "title": "Marni's Mechahorse — The Games Wiki"
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+    "title": "DLC Shipbuilding Guide: All Ships and Upgrades — KeenGamer"
    }
   ],
-  "since": "Base game · fixed 1.04",
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "ship",
+   "values": [
+    7600,
+    22
+   ],
+   "move": [
+    4,
+    1,
+    1
+   ],
+   "source": "game8"
+  }
+ },
+ {
+  "id": "large-greymane-ship",
+  "name": "Large Greymane Ship",
+  "leaf": "engineered",
+  "cls": "surface",
+  "domains": [
+   "surface"
+  ],
+  "kind": "Ship",
+  "region": "Delesyia",
+  "area": "Port shipbuilding mission",
+  "trait": "Movement 5 on a large hull",
+  "summary": "The big Greymane build: Movement Speed 5, the top rating, on a large hull with 10,100 Health. Acceleration 1 means it takes a while to get there.",
+  "tiers": {
+   "speed": {
+    "tier": 1,
+    "basis": "Movement Speed 5, Acceleration 1, Handling 2 (Game8)."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "Ships have no stamina bar."
+   },
+   "travel": {
+    "tier": 2,
+    "basis": "Movement Speed 5, Acceleration 1; Game8 lists no hold size."
+   },
+   "combat": {
+    "tier": 2,
+    "basis": "10,100 Health; firepower comes from the cannons you fit at a Ship Manager."
+   }
+  },
+  "tags": [
+   "dlc",
+   "ship"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "A Wider World questline",
+   "20 comrades"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Shipbuilding missions unlock as A Wider World progresses. Select a port on the map and open its Missions tab.",
+     "Dispatch Large Shipbuilding (2 days 10 hours in-game): 500,000 Camp Funds, 12,000 Wood, 12,000 Stone, 25,000 Provisions and 20 comrades, one with Engineering.",
+     "Raw materials: 100 Shiny Ore, 50 Malachite, 45 Hydrothermal Mineral Deposits and 20 Manganese."
+    ]
+   }
+  ],
+  "location": "Built on a port's Large Shipbuilding mission.",
+  "notes": [
+   "Game8 lists no hold size for it."
+  ],
   "variants": [],
-  "skills": []
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/dv1sbxzqkkj8r4hqpey1oasz0aym",
+    "credit": "game8",
+    "crop": [
+     0.73,
+     0.5,
+     0.85
+    ],
+    "src": "media/mounts/large-greymane-ship/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://img.game8.co/dv1sbxzqkkj8r4hqpey1oasz0aym",
+     "credit": "game8",
+     "caption": "Manage Ships — Large Greymane Ship",
+     "src": "media/mounts/large-greymane-ship/menu-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+    "title": "How to Get Ships — Game8"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/636503",
+    "title": "List of All Ships — Game8"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+    "title": "DLC Shipbuilding Guide: All Ships and Upgrades — KeenGamer"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "ship",
+   "values": [
+    10100,
+    null
+   ],
+   "move": [
+    5,
+    1,
+    2
+   ],
+   "source": "game8"
+  }
+ },
+ {
+  "id": "large-hernandian-ship",
+  "name": "Large Hernandian Ship",
+  "leaf": "engineered",
+  "cls": "surface",
+  "domains": [
+   "surface"
+  ],
+  "kind": "Ship",
+  "region": "Hernand",
+  "area": "Vellua (south of Hernand)",
+  "trait": "The 36-slot cargo hauler",
+  "summary": "The largest hold you can buy, 36 slots, and 10,000 Health. Movement Speed 2.",
+  "tiers": {
+   "speed": {
+    "tier": 4,
+    "basis": "Movement Speed 2, Acceleration 2, Handling 1 (Game8)."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "Ships have no stamina bar."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "Movement Speed 2, Acceleration 2, 36-slot hold."
+   },
+   "combat": {
+    "tier": 2,
+    "basis": "10,000 Health; firepower comes from the cannons you fit at a Ship Manager."
+   }
+  },
+  "tags": [
+   "dlc",
+   "ship",
+   "cargo"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "A Wider World questline",
+   "6,000,000 Camp Funds"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Unlock the Ship Managers through Where the Wind Blows (A Wider World), which follows building the Small Greymane Ship.",
+     "Go to the Ship Manager at Vellua (south of Hernand) and buy the Large Hernandian Ship for 6,000,000 Camp Funds.",
+     "Assign its crew at the Ship Manager before you sail (KeenGamer)."
+    ]
+   }
+  ],
+  "location": "Ship Manager, Vellua (south of Hernand).",
+  "notes": [],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/7m85kwxmphhi42enampof8ej1mkk",
+    "credit": "game8",
+    "crop": [
+     0.73,
+     0.5,
+     0.85
+    ],
+    "src": "media/mounts/large-hernandian-ship/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://img.game8.co/7m85kwxmphhi42enampof8ej1mkk",
+     "credit": "game8",
+     "caption": "Buy Ship — Large Hernandian Ship, 6,000,000 Camp Funds",
+     "src": "media/mounts/large-hernandian-ship/menu-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/636503",
+    "title": "List of All Ships — Game8"
+   },
+   {
+    "by": "whisperofthehouse",
+    "url": "https://www.whisperofthehouse.com/crimson-desert/ships",
+    "title": "How Do You Get, Build, and Upgrade Ships — Whisper of the House"
+   },
+   {
+    "by": "powerupgaming",
+    "url": "https://powerupgaming.co.uk/2026/10/30/how-to-unlock-upgrade-ships-in-crimson-desert-charting-the-unknown/",
+    "title": "How to Unlock and Upgrade Ships — Power Up Gaming"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+    "title": "How to Get Ships — Game8"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+    "title": "DLC Shipbuilding Guide: All Ships and Upgrades — KeenGamer"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "ship",
+   "values": [
+    10000,
+    36
+   ],
+   "move": [
+    2,
+    2,
+    1
+   ],
+   "source": "game8"
+  }
+ },
+ {
+  "id": "large-delesyian-ship",
+  "name": "Large Delesyian Ship",
+  "leaf": "engineered",
+  "cls": "surface",
+  "domains": [
+   "surface"
+  ],
+  "kind": "Ship",
+  "region": "Delesyia",
+  "area": "the Port of Delesyia (outside the City of Delesyia)",
+  "trait": "The large hull that accelerates best",
+  "summary": "Delesyia's large ship: the same 36-slot hold and 10,000 Health as the Hernandian, with Acceleration 3 instead of 2.",
+  "tiers": {
+   "speed": {
+    "tier": 4,
+    "basis": "Movement Speed 2, Acceleration 3, Handling 1 (Game8)."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "Ships have no stamina bar."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "Movement Speed 2, Acceleration 3, 36-slot hold."
+   },
+   "combat": {
+    "tier": 2,
+    "basis": "10,000 Health; firepower comes from the cannons you fit at a Ship Manager."
+   }
+  },
+  "tags": [
+   "dlc",
+   "ship",
+   "cargo"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "A Wider World questline",
+   "6,000,000 Camp Funds"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Unlock the Ship Managers through Where the Wind Blows (A Wider World), which follows building the Small Greymane Ship.",
+     "Go to the Ship Manager at the Port of Delesyia (outside the City of Delesyia) and buy the Large Delesyian Ship for 6,000,000 Camp Funds.",
+     "Assign its crew at the Ship Manager before you sail (KeenGamer)."
+    ]
+   }
+  ],
+  "location": "Ship Manager, the Port of Delesyia (outside the City of Delesyia).",
+  "notes": [],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/wjc6uv3l4692qhwaqklkvbpo5x2u",
+    "credit": "game8",
+    "crop": [
+     0.73,
+     0.5,
+     0.85
+    ],
+    "src": "media/mounts/large-delesyian-ship/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://img.game8.co/wjc6uv3l4692qhwaqklkvbpo5x2u",
+     "credit": "game8",
+     "caption": "Buy Ship — Large Delesyian Ship, 6,000,000 Camp Funds",
+     "src": "media/mounts/large-delesyian-ship/menu-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/636503",
+    "title": "List of All Ships — Game8"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/stores/delesyia-ship-manager/",
+    "title": "Delesyia Ship Manager — Vulkk"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+    "title": "DLC Shipbuilding Guide: All Ships and Upgrades — KeenGamer"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "ship",
+   "values": [
+    10000,
+    36
+   ],
+   "move": [
+    2,
+    3,
+    1
+   ],
+   "source": "game8"
+  }
+ },
+ {
+  "id": "large-demenissian-ship",
+  "name": "Large Demenissian Ship",
+  "leaf": "engineered",
+  "cls": "surface",
+  "domains": [
+   "surface"
+  ],
+  "kind": "Ship",
+  "region": "Demeniss",
+  "area": "the Port of Demeniss (south-east of the City of Demeniss)",
+  "trait": "The large hull that turns best",
+  "summary": "Demeniss's large ship trades speed for handling: Movement Speed 1 but Handling 3, the best of the large hulls, with the same 36-slot hold.",
+  "tiers": {
+   "speed": {
+    "tier": 5,
+    "basis": "Movement Speed 1, Acceleration 2, Handling 3 (Game8)."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "Ships have no stamina bar."
+   },
+   "travel": {
+    "tier": 3,
+    "basis": "Movement Speed 1, Acceleration 2, 36-slot hold."
+   },
+   "combat": {
+    "tier": 2,
+    "basis": "10,000 Health; firepower comes from the cannons you fit at a Ship Manager."
+   }
+  },
+  "tags": [
+   "dlc",
+   "ship",
+   "cargo"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "A Wider World questline",
+   "6,000,000 Camp Funds"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Unlock the Ship Managers through Where the Wind Blows (A Wider World), which follows building the Small Greymane Ship.",
+     "Go to the Ship Manager at the Port of Demeniss (south-east of the City of Demeniss) and buy the Large Demenissian Ship for 6,000,000 Camp Funds.",
+     "Assign its crew at the Ship Manager before you sail (KeenGamer)."
+    ]
+   }
+  ],
+  "location": "Ship Manager, the Port of Demeniss (south-east of the City of Demeniss).",
+  "notes": [],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/rxdjslro88jnjg4k3lbmkm7smy04",
+    "credit": "game8",
+    "crop": [
+     0.73,
+     0.5,
+     0.85
+    ],
+    "src": "media/mounts/large-demenissian-ship/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://img.game8.co/rxdjslro88jnjg4k3lbmkm7smy04",
+     "credit": "game8",
+     "caption": "Buy Ship — Large Demenissian Ship, 6,000,000 Camp Funds",
+     "src": "media/mounts/large-demenissian-ship/menu-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/636503",
+    "title": "List of All Ships — Game8"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/stores/demeniss-port-ship-manager/",
+    "title": "Demeniss Port Ship Manager — Vulkk"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+    "title": "DLC Shipbuilding Guide: All Ships and Upgrades — KeenGamer"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "ship",
+   "values": [
+    10000,
+    36
+   ],
+   "move": [
+    1,
+    2,
+    3
+   ],
+   "source": "game8"
+  }
+ },
+ {
+  "id": "medium-hernandian-ship",
+  "name": "Medium Hernandian Ship",
+  "leaf": "engineered",
+  "cls": "surface",
+  "domains": [
+   "surface"
+  ],
+  "kind": "Ship",
+  "region": "Hernand",
+  "area": "Vellua (south of Hernand)",
+  "trait": "The fastest medium hull for sale",
+  "summary": "A 22-slot medium ship with 7,500 Health and Movement Speed 2, the quickest of the bought mediums.",
+  "tiers": {
+   "speed": {
+    "tier": 4,
+    "basis": "Movement Speed 2, Acceleration 1, Handling 1 (Game8)."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "Ships have no stamina bar."
+   },
+   "travel": {
+    "tier": 4,
+    "basis": "Movement Speed 2, Acceleration 1, 22-slot hold."
+   },
+   "combat": {
+    "tier": 3,
+    "basis": "7,500 Health; firepower comes from the cannons you fit at a Ship Manager."
+   }
+  },
+  "tags": [
+   "dlc",
+   "ship"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "A Wider World questline",
+   "1,200,000 Camp Funds"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Unlock the Ship Managers through Where the Wind Blows (A Wider World), which follows building the Small Greymane Ship.",
+     "Go to the Ship Manager at Vellua (south of Hernand) and buy the Medium Hernandian Ship for 1,200,000 Camp Funds.",
+     "Assign its crew at the Ship Manager before you sail (KeenGamer)."
+    ]
+   }
+  ],
+  "location": "Ship Manager, Vellua (south of Hernand).",
+  "notes": [],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/shll3ug4cxcu2ko44jkofgop5gr6",
+    "credit": "game8",
+    "crop": [
+     0.73,
+     0.5,
+     0.85
+    ],
+    "src": "media/mounts/medium-hernandian-ship/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://img.game8.co/shll3ug4cxcu2ko44jkofgop5gr6",
+     "credit": "game8",
+     "caption": "Buy Ship — Medium Hernandian Ship, 1,200,000 Camp Funds",
+     "src": "media/mounts/medium-hernandian-ship/menu-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/636503",
+    "title": "List of All Ships — Game8"
+   },
+   {
+    "by": "whisperofthehouse",
+    "url": "https://www.whisperofthehouse.com/crimson-desert/ships",
+    "title": "How Do You Get, Build, and Upgrade Ships — Whisper of the House"
+   },
+   {
+    "by": "powerupgaming",
+    "url": "https://powerupgaming.co.uk/2026/10/30/how-to-unlock-upgrade-ships-in-crimson-desert-charting-the-unknown/",
+    "title": "How to Unlock and Upgrade Ships — Power Up Gaming"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+    "title": "DLC Shipbuilding Guide: All Ships and Upgrades — KeenGamer"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "ship",
+   "values": [
+    7500,
+    22
+   ],
+   "move": [
+    2,
+    1,
+    1
+   ],
+   "source": "game8"
+  }
+ },
+ {
+  "id": "medium-delesyian-ship",
+  "name": "Medium Delesyian Ship",
+  "leaf": "engineered",
+  "cls": "surface",
+  "domains": [
+   "surface"
+  ],
+  "kind": "Ship",
+  "region": "Delesyia",
+  "area": "the Port of Delesyia (outside the City of Delesyia)",
+  "trait": "Medium hull, quicker off the mark",
+  "summary": "Delesyia's medium ship: 22 slots and 7,500 Health, Acceleration 2 over Movement Speed 1.",
+  "tiers": {
+   "speed": {
+    "tier": 5,
+    "basis": "Movement Speed 1, Acceleration 2, Handling 1 (Game8)."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "Ships have no stamina bar."
+   },
+   "travel": {
+    "tier": 4,
+    "basis": "Movement Speed 1, Acceleration 2, 22-slot hold."
+   },
+   "combat": {
+    "tier": 3,
+    "basis": "7,500 Health; firepower comes from the cannons you fit at a Ship Manager."
+   }
+  },
+  "tags": [
+   "dlc",
+   "ship"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "A Wider World questline",
+   "1,200,000 Camp Funds"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Unlock the Ship Managers through Where the Wind Blows (A Wider World), which follows building the Small Greymane Ship.",
+     "Go to the Ship Manager at the Port of Delesyia (outside the City of Delesyia) and buy the Medium Delesyian Ship for 1,200,000 Camp Funds.",
+     "Assign its crew at the Ship Manager before you sail (KeenGamer)."
+    ]
+   }
+  ],
+  "location": "Ship Manager, the Port of Delesyia (outside the City of Delesyia).",
+  "notes": [],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/kl5m9mz706h61l4oko61svivo5o8",
+    "credit": "game8",
+    "crop": [
+     0.73,
+     0.5,
+     0.85
+    ],
+    "src": "media/mounts/medium-delesyian-ship/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://img.game8.co/kl5m9mz706h61l4oko61svivo5o8",
+     "credit": "game8",
+     "caption": "Buy Ship — Medium Delesyian Ship, 1,200,000 Camp Funds",
+     "src": "media/mounts/medium-delesyian-ship/menu-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/636503",
+    "title": "List of All Ships — Game8"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/stores/delesyia-ship-manager/",
+    "title": "Delesyia Ship Manager — Vulkk"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+    "title": "DLC Shipbuilding Guide: All Ships and Upgrades — KeenGamer"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "ship",
+   "values": [
+    7500,
+    22
+   ],
+   "move": [
+    1,
+    2,
+    1
+   ],
+   "source": "game8"
+  }
+ },
+ {
+  "id": "medium-demenissian-ship",
+  "name": "Medium Demenissian Ship",
+  "leaf": "engineered",
+  "cls": "surface",
+  "domains": [
+   "surface"
+  ],
+  "kind": "Ship",
+  "region": "Demeniss",
+  "area": "the Port of Demeniss (south-east of the City of Demeniss)",
+  "trait": "Medium hull, better handling",
+  "summary": "Demeniss's medium ship: 22 slots and 7,500 Health, Handling 2 over Movement Speed 1.",
+  "tiers": {
+   "speed": {
+    "tier": 5,
+    "basis": "Movement Speed 1, Acceleration 1, Handling 2 (Game8)."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "Ships have no stamina bar."
+   },
+   "travel": {
+    "tier": 4,
+    "basis": "Movement Speed 1, Acceleration 1, 22-slot hold."
+   },
+   "combat": {
+    "tier": 3,
+    "basis": "7,500 Health; firepower comes from the cannons you fit at a Ship Manager."
+   }
+  },
+  "tags": [
+   "dlc",
+   "ship"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "A Wider World questline",
+   "1,200,000 Camp Funds"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Unlock the Ship Managers through Where the Wind Blows (A Wider World), which follows building the Small Greymane Ship.",
+     "Go to the Ship Manager at the Port of Demeniss (south-east of the City of Demeniss) and buy the Medium Demenissian Ship for 1,200,000 Camp Funds.",
+     "Assign its crew at the Ship Manager before you sail (KeenGamer)."
+    ]
+   }
+  ],
+  "location": "Ship Manager, the Port of Demeniss (south-east of the City of Demeniss).",
+  "notes": [],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/y87l9c9i7r091v0jed3oyru2c7ku",
+    "credit": "game8",
+    "crop": [
+     0.73,
+     0.5,
+     0.85
+    ],
+    "src": "media/mounts/medium-demenissian-ship/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://img.game8.co/y87l9c9i7r091v0jed3oyru2c7ku",
+     "credit": "game8",
+     "caption": "Buy Ship — Medium Demenissian Ship, 1,200,000 Camp Funds",
+     "src": "media/mounts/medium-demenissian-ship/menu-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/636503",
+    "title": "List of All Ships — Game8"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/stores/demeniss-port-ship-manager/",
+    "title": "Demeniss Port Ship Manager — Vulkk"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+    "title": "DLC Shipbuilding Guide: All Ships and Upgrades — KeenGamer"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "ship",
+   "values": [
+    7500,
+    22
+   ],
+   "move": [
+    1,
+    1,
+    2
+   ],
+   "source": "game8"
+  }
+ },
+ {
+  "id": "small-hernandian-ship",
+  "name": "Small Hernandian Ship",
+  "leaf": "engineered",
+  "cls": "surface",
+  "domains": [
+   "surface"
+  ],
+  "kind": "Ship",
+  "region": "Hernand",
+  "area": "Vellua (south of Hernand)",
+  "trait": "The cheap small ship",
+  "summary": "A 14-slot small ship with 5,000 Health. The quest-built Small Greymane Ship has the same hold and a faster hull (Movement Speed 3).",
+  "tiers": {
+   "speed": {
+    "tier": 5,
+    "basis": "Movement Speed 1, Acceleration 1, Handling 1 (Game8)."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "Ships have no stamina bar."
+   },
+   "travel": {
+    "tier": 4,
+    "basis": "Movement Speed 1, Acceleration 1, 14-slot hold."
+   },
+   "combat": {
+    "tier": 4,
+    "basis": "5,000 Health; firepower comes from the cannons you fit at a Ship Manager."
+   }
+  },
+  "tags": [
+   "dlc",
+   "ship"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "A Wider World questline",
+   "40,000 Camp Funds"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Unlock the Ship Managers through Where the Wind Blows (A Wider World), which follows building the Small Greymane Ship.",
+     "Go to the Ship Manager at Vellua (south of Hernand) and buy the Small Hernandian Ship for 40,000 Camp Funds.",
+     "Assign its crew at the Ship Manager before you sail (KeenGamer)."
+    ]
+   }
+  ],
+  "location": "Ship Manager, Vellua (south of Hernand).",
+  "notes": [],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/2d6zqcja39fb1wgkvmec6bsvxyl5",
+    "credit": "game8",
+    "crop": [
+     0.74,
+     0.52,
+     0.8
+    ],
+    "src": "media/mounts/small-hernandian-ship/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://img.game8.co/2d6zqcja39fb1wgkvmec6bsvxyl5",
+     "credit": "game8",
+     "caption": "Buy Ship — Small Hernandian Ship, 40,000 Camp Funds",
+     "src": "media/mounts/small-hernandian-ship/menu-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/636503",
+    "title": "List of All Ships — Game8"
+   },
+   {
+    "by": "whisperofthehouse",
+    "url": "https://www.whisperofthehouse.com/crimson-desert/ships",
+    "title": "How Do You Get, Build, and Upgrade Ships — Whisper of the House"
+   },
+   {
+    "by": "powerupgaming",
+    "url": "https://powerupgaming.co.uk/2026/10/30/how-to-unlock-upgrade-ships-in-crimson-desert-charting-the-unknown/",
+    "title": "How to Unlock and Upgrade Ships — Power Up Gaming"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+    "title": "DLC Shipbuilding Guide: All Ships and Upgrades — KeenGamer"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "ship",
+   "values": [
+    5000,
+    14
+   ],
+   "move": [
+    1,
+    1,
+    1
+   ],
+   "source": "game8"
+  }
+ },
+ {
+  "id": "small-delesyian-ship",
+  "name": "Small Delesyian Ship",
+  "leaf": "engineered",
+  "cls": "surface",
+  "domains": [
+   "surface"
+  ],
+  "kind": "Ship",
+  "region": "Delesyia",
+  "area": "Stoneward Harbor (south of Dewhaven, Delesyia)",
+  "trait": "Small ship, sold at Stoneward Harbor",
+  "summary": "Delesyia's small ship, sold at Stoneward Harbor: the same 14 slots, 5,000 Health and ones across the board as the other bought small ships.",
+  "tiers": {
+   "speed": {
+    "tier": 5,
+    "basis": "Movement Speed 1, Acceleration 1, Handling 1 (Game8)."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "Ships have no stamina bar."
+   },
+   "travel": {
+    "tier": 4,
+    "basis": "Movement Speed 1, Acceleration 1, 14-slot hold."
+   },
+   "combat": {
+    "tier": 4,
+    "basis": "5,000 Health; firepower comes from the cannons you fit at a Ship Manager."
+   }
+  },
+  "tags": [
+   "dlc",
+   "ship"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "A Wider World questline",
+   "40,000 Camp Funds"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Unlock the Ship Managers through Where the Wind Blows (A Wider World), which follows building the Small Greymane Ship.",
+     "Go to the Ship Manager at Stoneward Harbor (south of Dewhaven, Delesyia) and buy the Small Delesyian Ship for 40,000 Camp Funds.",
+     "Assign its crew at the Ship Manager before you sail (KeenGamer)."
+    ]
+   }
+  ],
+  "location": "Ship Manager, Stoneward Harbor (south of Dewhaven, Delesyia).",
+  "notes": [],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/v9q6k0t7ffi0f9apw5na7lvnq05o",
+    "credit": "game8",
+    "crop": [
+     0.74,
+     0.52,
+     0.8
+    ],
+    "src": "media/mounts/small-delesyian-ship/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://img.game8.co/v9q6k0t7ffi0f9apw5na7lvnq05o",
+     "credit": "game8",
+     "caption": "Buy Ship — Small Delesyian Ship, 40,000 Camp Funds",
+     "src": "media/mounts/small-delesyian-ship/menu-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/636503",
+    "title": "List of All Ships — Game8"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/stores/stoneward-harbor-ship-manager/",
+    "title": "Stoneward Harbor Ship Manager — Vulkk"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+    "title": "DLC Shipbuilding Guide: All Ships and Upgrades — KeenGamer"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "ship",
+   "values": [
+    5000,
+    14
+   ],
+   "move": [
+    1,
+    1,
+    1
+   ],
+   "source": "game8"
+  }
+ },
+ {
+  "id": "small-demenissian-ship",
+  "name": "Small Demenissian Ship",
+  "leaf": "engineered",
+  "cls": "surface",
+  "domains": [
+   "surface"
+  ],
+  "kind": "Ship",
+  "region": "Demeniss",
+  "area": "the Port of Demeniss (south-east of the City of Demeniss)",
+  "trait": "Small ship, sold in Demeniss",
+  "summary": "Demeniss's small ship: 14 slots, 5,000 Health and ones across the board, like the other bought small ships.",
+  "tiers": {
+   "speed": {
+    "tier": 5,
+    "basis": "Movement Speed 1, Acceleration 1, Handling 1 (Game8)."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "Ships have no stamina bar."
+   },
+   "travel": {
+    "tier": 4,
+    "basis": "Movement Speed 1, Acceleration 1, 14-slot hold."
+   },
+   "combat": {
+    "tier": 4,
+    "basis": "5,000 Health; firepower comes from the cannons you fit at a Ship Manager."
+   }
+  },
+  "tags": [
+   "dlc",
+   "ship"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "A Wider World questline",
+   "40,000 Camp Funds"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Unlock the Ship Managers through Where the Wind Blows (A Wider World), which follows building the Small Greymane Ship.",
+     "Go to the Ship Manager at the Port of Demeniss (south-east of the City of Demeniss) and buy the Small Demenissian Ship for 40,000 Camp Funds.",
+     "Assign its crew at the Ship Manager before you sail (KeenGamer)."
+    ]
+   }
+  ],
+  "location": "Ship Manager, the Port of Demeniss (south-east of the City of Demeniss).",
+  "notes": [],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/yk0tfsgnhcrp7sdbzdt10m5b8c01",
+    "credit": "game8",
+    "crop": [
+     0.74,
+     0.52,
+     0.8
+    ],
+    "src": "media/mounts/small-demenissian-ship/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://img.game8.co/yk0tfsgnhcrp7sdbzdt10m5b8c01",
+     "credit": "game8",
+     "caption": "Buy Ship — Small Demenissian Ship, 40,000 Camp Funds",
+     "src": "media/mounts/small-demenissian-ship/menu-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/636503",
+    "title": "List of All Ships — Game8"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/stores/demeniss-port-ship-manager/",
+    "title": "Demeniss Port Ship Manager — Vulkk"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+    "title": "DLC Shipbuilding Guide: All Ships and Upgrades — KeenGamer"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "ship",
+   "values": [
+    5000,
+    14
+   ],
+   "move": [
+    1,
+    1,
+    1
+   ],
+   "source": "game8"
+  }
+ },
+ {
+  "id": "humble-rowboat",
+  "name": "Humble Rowboat",
+  "leaf": "engineered",
+  "cls": "surface",
+  "domains": [
+   "surface"
+  ],
+  "kind": "Rowboat",
+  "region": "Hernand",
+  "area": "Vellua (south of Hernand)",
+  "trait": "The 2,000-Fund starter boat",
+  "summary": "The cheapest boat on the water: 100 Health and a 6-slot hold for short hops along the coast.",
+  "tiers": {
+   "speed": {
+    "tier": 5,
+    "basis": "Movement Speed 1, Acceleration 1, Handling 1 (Game8)."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "Ships have no stamina bar."
+   },
+   "travel": {
+    "tier": 5,
+    "basis": "Movement Speed 1, Acceleration 1, 6-slot hold."
+   },
+   "combat": {
+    "tier": 5,
+    "basis": "100 Health; firepower comes from the cannons you fit at a Ship Manager."
+   }
+  },
+  "tags": [
+   "dlc",
+   "ship"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "A Wider World questline",
+   "2,000 Camp Funds"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Unlock the Ship Managers through Where the Wind Blows (A Wider World), which follows building the Small Greymane Ship.",
+     "Buy it from the Ship Manager at Vellua (south of Hernand) for 2,000 Camp Funds."
+    ]
+   }
+  ],
+  "location": "Ship Manager, Vellua (south of Hernand).",
+  "notes": [],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/bbdl1dw979ap147sc85rdhb2u20a",
+    "credit": "game8",
+    "crop": [
+     0.745,
+     0.76,
+     0.34
+    ],
+    "src": "media/mounts/humble-rowboat/portrait.webp",
+    "w": 139,
+    "h": 139
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://img.game8.co/bbdl1dw979ap147sc85rdhb2u20a",
+     "credit": "game8",
+     "caption": "Buy Ship — Humble Rowboat, 2,000 Camp Funds",
+     "src": "media/mounts/humble-rowboat/menu-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/636503",
+    "title": "List of All Ships — Game8"
+   },
+   {
+    "by": "whisperofthehouse",
+    "url": "https://www.whisperofthehouse.com/crimson-desert/ships",
+    "title": "How Do You Get, Build, and Upgrade Ships — Whisper of the House"
+   },
+   {
+    "by": "powerupgaming",
+    "url": "https://powerupgaming.co.uk/2026/10/30/how-to-unlock-upgrade-ships-in-crimson-desert-charting-the-unknown/",
+    "title": "How to Unlock and Upgrade Ships — Power Up Gaming"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "ship",
+   "values": [
+    100,
+    6
+   ],
+   "move": [
+    1,
+    1,
+    1
+   ],
+   "source": "game8"
+  }
+ },
+ {
+  "id": "balanced-rowboat",
+  "name": "Balanced Rowboat",
+  "leaf": "engineered",
+  "cls": "surface",
+  "domains": [
+   "surface"
+  ],
+  "kind": "Rowboat",
+  "region": "Delesyia",
+  "area": "Stoneward Harbor (south of Dewhaven, Delesyia)",
+  "trait": "A sturdier rowboat for 6,000",
+  "summary": "Twice the Humble Rowboat's Health (200) with the same 6-slot hold.",
+  "tiers": {
+   "speed": {
+    "tier": 5,
+    "basis": "Movement Speed 1, Acceleration 1, Handling 1 (Game8)."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "Ships have no stamina bar."
+   },
+   "travel": {
+    "tier": 5,
+    "basis": "Movement Speed 1, Acceleration 1, 6-slot hold."
+   },
+   "combat": {
+    "tier": 5,
+    "basis": "200 Health; firepower comes from the cannons you fit at a Ship Manager."
+   }
+  },
+  "tags": [
+   "dlc",
+   "ship"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "A Wider World questline",
+   "6,000 Camp Funds"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Unlock the Ship Managers through Where the Wind Blows (A Wider World), which follows building the Small Greymane Ship.",
+     "Buy it from the Ship Manager at Stoneward Harbor (south of Dewhaven, Delesyia) for 6,000 Camp Funds."
+    ]
+   }
+  ],
+  "location": "Ship Manager, Stoneward Harbor (south of Dewhaven, Delesyia).",
+  "notes": [],
+  "variants": [],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/fou009oq58fewpw00z0bke6n28sj",
+    "credit": "game8",
+    "crop": [
+     0.745,
+     0.76,
+     0.34
+    ],
+    "src": "media/mounts/balanced-rowboat/portrait.webp",
+    "w": 139,
+    "h": 139
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://img.game8.co/fou009oq58fewpw00z0bke6n28sj",
+     "credit": "game8",
+     "caption": "Buy Ship — Balanced Rowboat, 6,000 Camp Funds",
+     "src": "media/mounts/balanced-rowboat/menu-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/636503",
+    "title": "List of All Ships — Game8"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/stores/stoneward-harbor-ship-manager/",
+    "title": "Stoneward Harbor Ship Manager — Vulkk"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "ship",
+   "values": [
+    200,
+    6
+   ],
+   "move": [
+    1,
+    1,
+    1
+   ],
+   "source": "game8"
+  }
+ },
+ {
+  "id": "sturdy-tawny-rowboat",
+  "name": "Sturdy Tawny Rowboat",
+  "leaf": "engineered",
+  "cls": "surface",
+  "domains": [
+   "surface"
+  ],
+  "kind": "Rowboat",
+  "region": "Delesyia",
+  "area": "the Port of Delesyia (outside the City of Delesyia)",
+  "trait": "Port Delesyia's rowboat, in two coats",
+  "summary": "200 Health and 6 slots. The Sturdy Grayish-Brown Rowboat is the same boat in another colour.",
+  "tiers": {
+   "speed": {
+    "tier": 5,
+    "basis": "Movement Speed 1, Acceleration 1, Handling 1 (Game8)."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "Ships have no stamina bar."
+   },
+   "travel": {
+    "tier": 5,
+    "basis": "Movement Speed 1, Acceleration 1, 6-slot hold."
+   },
+   "combat": {
+    "tier": 5,
+    "basis": "200 Health; firepower comes from the cannons you fit at a Ship Manager."
+   }
+  },
+  "tags": [
+   "dlc",
+   "ship"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "A Wider World questline",
+   "8,000 Camp Funds"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Unlock the Ship Managers through Where the Wind Blows (A Wider World), which follows building the Small Greymane Ship.",
+     "Buy it from the Ship Manager at the Port of Delesyia (outside the City of Delesyia) for 8,000 Camp Funds."
+    ]
+   }
+  ],
+  "location": "Ship Manager, the Port of Delesyia (outside the City of Delesyia).",
+  "notes": [],
+  "variants": [
+   "Sturdy Tawny",
+   "Sturdy Grayish-Brown"
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/f0uz78dgkapt3d84bojhdppgr112",
+    "credit": "game8",
+    "crop": [
+     0.745,
+     0.76,
+     0.34
+    ],
+    "src": "media/mounts/sturdy-tawny-rowboat/portrait.webp",
+    "w": 139,
+    "h": 139
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://img.game8.co/f0uz78dgkapt3d84bojhdppgr112",
+     "credit": "game8",
+     "caption": "Buy Ship — Sturdy Tawny Rowboat, 8,000 Camp Funds",
+     "src": "media/mounts/sturdy-tawny-rowboat/menu-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/636503",
+    "title": "List of All Ships — Game8"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/stores/delesyia-ship-manager/",
+    "title": "Delesyia Ship Manager — Vulkk"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "ship",
+   "values": [
+    200,
+    6
+   ],
+   "move": [
+    1,
+    1,
+    1
+   ],
+   "source": "game8"
+  }
+ },
+ {
+  "id": "sand-colored-rowboat",
+  "name": "Sand-Colored Rowboat",
+  "leaf": "engineered",
+  "cls": "surface",
+  "domains": [
+   "surface"
+  ],
+  "kind": "Rowboat",
+  "region": "Demeniss",
+  "area": "the Port of Demeniss (south-east of the City of Demeniss)",
+  "trait": "Demeniss's rowboat, in two coats",
+  "summary": "200 Health and 6 slots — the dearest rowboat, sold in two colours.",
+  "tiers": {
+   "speed": {
+    "tier": 5,
+    "basis": "Movement Speed 1, Acceleration 1, Handling 1 (Game8)."
+   },
+   "stamina": {
+    "tier": null,
+    "basis": "Ships have no stamina bar."
+   },
+   "travel": {
+    "tier": 5,
+    "basis": "Movement Speed 1, Acceleration 1, 6-slot hold."
+   },
+   "combat": {
+    "tier": 5,
+    "basis": "200 Health; firepower comes from the cannons you fit at a Ship Manager."
+   }
+  },
+  "tags": [
+   "dlc",
+   "ship"
+  ],
+  "requires": [
+   "DLC: Charting the Unknown",
+   "A Wider World questline",
+   "10,000 Camp Funds"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Unlock the Ship Managers through Where the Wind Blows (A Wider World), which follows building the Small Greymane Ship.",
+     "Buy it from the Ship Manager at the Port of Demeniss (south-east of the City of Demeniss) for 10,000 Camp Funds."
+    ]
+   }
+  ],
+  "location": "Ship Manager, the Port of Demeniss (south-east of the City of Demeniss).",
+  "notes": [
+   "The shop lists them as \"A sand-colored rowboat cutting through the waves\" and \"A dark brown rowboat cutting through the waves\"."
+  ],
+  "variants": [
+   "Sand-Colored",
+   "Dark Brown"
+  ],
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/3cscuzb2khyi18biwyy1cpdhqa8g",
+    "credit": "game8",
+    "crop": [
+     0.745,
+     0.76,
+     0.34
+    ],
+    "src": "media/mounts/sand-colored-rowboat/portrait.webp",
+    "w": 139,
+    "h": 139
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://img.game8.co/3cscuzb2khyi18biwyy1cpdhqa8g",
+     "credit": "game8",
+     "caption": "Buy Ship — Sand-Colored Rowboat, 10,000 Camp Funds",
+     "src": "media/mounts/sand-colored-rowboat/menu-1.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/636503",
+    "title": "List of All Ships — Game8"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/stores/demeniss-port-ship-manager/",
+    "title": "Demeniss Port Ship Manager — Vulkk"
+   }
+  ],
+  "since": "DLC: Charting the Unknown",
+  "skills": [],
+  "stats": {
+   "kind": "ship",
+   "values": [
+    200,
+    6
+   ],
+   "move": [
+    1,
+    1,
+    1
+   ],
+   "source": "game8"
+  }
  }
 ]

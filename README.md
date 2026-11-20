@@ -16,19 +16,19 @@
 
 ## What's inside
 
-**Mounts**, the first branch of the tree: 48 mounts, each on its own plate.
+**Mounts**, the first branch of the tree: 80 mounts you can keep, ships included, each on its own plate.
 
 - **Where**: the in-game map capture and an on-site capture, full width, with a loupe for map labels and a zoomable lightbox.
 - **How**: requirement chips, numbered steps, alternate routes and field notes.
-- **Tiers**: Speed, Stamina, Travel and Combat rated **I–V** against mounts of the same terrain. Tap a seal to read why it got that rating.
-- **Record**: level 1 and level 5 stats for horses, skills, variants and extra stills.
+- **Tiers**: Speed, Stamina, Travel and Combat rated **I–V** against mounts of the same terrain (Land, Sea, Sky, or Surface for ships). Tap a seal to read why it got that rating.
+- **Record**: level 1 and level 5 stats for horses, beast stats, ship Health, hold and handling, skills, variants and extra stills.
 
 Lists for every way you play a session:
 
 | | |
 | --- | --- |
-| **Rarity** | Legendary · Rare · Stable · Engineered · Fleeting |
-| **Category branches** | Land · Underwater · Flying · Mechanical · Easter Eggs · DLC: *Charting the Unknown* |
+| **Rarity** | Legendary · Rare · Stable · Engineered |
+| **Category branches** | Land · Underwater · Flying · Ships · Mechanical · Easter Eggs · DLC: *Charting the Unknown* |
 | **Ride for** | All Around Best · Battle · Cliffs & drops · Cargo |
 | **Tier Ladder** | every mount ranked per metric, filterable by terrain and rarity |
 
@@ -127,7 +127,7 @@ src/
     registry.ts      lists the branches and validates them at load
     mounts/
       branch.json    leaves, category branches, metrics, classes, lenses, redirects
-      entries.json   the 48 mounts
+      entries.json   the 80 mounts
       MountRecord.svelte
     riches/
       branch.json    the same, plus labels, tier rules and the Route

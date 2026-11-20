@@ -33,6 +33,7 @@
   --land: #c9a26b;
   --sea: #4aa6bb;
   --sky: #a9b6dc;
+  --deck: #5fae94; /* Surface (ships): verdigris, the green of weathered ship's copper — a hue no other class or leaf uses */
 
   /* type */
   --f-display: 'Bodoni Moda', 'Didot', 'Times New Roman', serif;
@@ -65,9 +66,11 @@
 [data-accent='land'] { --accent: var(--land); --accent-dim: rgba(201, 162, 107, 0.16); }
 [data-accent='sea'] { --accent: var(--sea); --accent-dim: rgba(74, 166, 187, 0.16); }
 [data-accent='sky'] { --accent: var(--sky); --accent-dim: rgba(169, 182, 220, 0.16); }
+[data-accent='deck'] { --accent: var(--deck); --accent-dim: rgba(95, 174, 148, 0.16); }
 
 [data-cls='land'] { --cls: var(--land); }
 [data-cls='sea'] { --cls: var(--sea); }
 [data-cls='sky'] { --cls: var(--sky); }
+[data-cls='surface'] { --cls: var(--deck); }
 [data-cls='management'] { --cls: var(--brass); }
 [data-cls='player'] { --cls: var(--ember); }

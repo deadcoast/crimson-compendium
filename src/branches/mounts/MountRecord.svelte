@@ -1,13 +1,14 @@
 <script lang="ts">
   // MOUNT-branch plate section: recorded stats, movement ratings, skills and coats.
   // Reads the branch-specific `stats` / `skills` fields that core never touches.
+  // Ships (`kind: 'ship'`) record Health and Inventory, then Movement Speed, Acceleration and Handling.
   import { untrack } from 'svelte';
   import { reveal, tween } from '../../core/motion';
   import { app } from '../../core/state.svelte';
-  import { CREDITS } from '../../core/format';
+  import { CREDITS, PUBLISHERS } from '../../core/format';
   import type { Branch, Entry } from '../../core/types';
 
-  type Stats = { kind: 'horse' | 'beast'; levels?: Record<string, (number | null)[]>; values?: (number | null)[]; move?: number[]; source: string };
+  type Stats = { kind: 'horse' | 'beast' | 'ship'; levels?: Record<string, (number | null)[]>; values?: (number | null)[]; move?: number[]; source: string };
 
   let { entry, branch }: { entry: Entry; branch: Branch } = $props();
 
@@ -25,10 +26,11 @@
   const core = $derived(row.slice(0, 4));
   const move = $derived(stats?.levels ? row.slice(4, 8) : (stats?.move ?? []));
 
-  // top recorded value per stat across the branch, for the proportional hairline
+  // top recorded value per stat across the branch, for the proportional hairline: the same class and
+  // the same kind of record, so a ship's Inventory is never measured against a beast's Stamina
   const maxes = $derived.by(() => {
     const m = [0, 0, 0, 0];
-    for (const e of branch.entries.filter((x) => x.cls === entry.cls)) {
+    for (const e of branch.entries.filter((x) => x.cls === entry.cls && (x.stats as Stats | undefined)?.kind === stats?.kind)) {
       const s = e.stats as Stats | undefined;
       const vals = s?.levels ? Object.values(s.levels).flat() : (s?.values ?? []);
       const rows = s?.levels ? Object.values(s.levels) : [vals];
@@ -46,8 +48,8 @@
     return tween(0, 1, 700, (k) => { shown = target.map((t, i) => Math.round((from[i] ?? 0) + (t - (from[i] ?? 0)) * k)); });
   });
 
-  const LABELS = ['Health', 'Stamina', 'Attack', 'Defense'];
-  const MOVE = ['Speed', 'Acceleration', 'Handling', 'Jump'];
+  const LABELS = $derived(stats?.kind === 'ship' ? ['Health', 'Inventory'] : ['Health', 'Stamina', 'Attack', 'Defense']);
+  const MOVE = $derived(stats?.kind === 'ship' ? ['Movement Speed', 'Acceleration', 'Handling'] : ['Speed', 'Acceleration', 'Handling', 'Jump']);
   const hasAnything = $derived(!!stats || skills.length > 0 || entry.variants.length > 0);
 </script>
 
@@ -93,7 +95,7 @@
           {/each}
         </dl>
       {/if}
-      <p class="src mono">Stats · {CREDITS[stats.source]?.name ?? stats.source}{stats.levels ? ' level tables' : ''}</p>
+      <p class="src mono">Stats · {CREDITS[stats.source]?.name ?? PUBLISHERS[stats.source] ?? stats.source}{stats.levels ? ' level tables' : ''}</p>
     {/if}
 
     {#if skills.length}

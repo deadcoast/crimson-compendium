@@ -6,6 +6,11 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
 
 ### Added
 
+- **Full mount roster (M2)**: 80 mounts you can keep, up from 48: 36 new plates, minus the 3 temporary rides removed and the old Sea Turtle plate, which became the Green Sea Turtle. Each new plate has a real in-game image, its sources and rated tiers.
+  - **Ships**, a new category and a fourth terrain class, Surface: the four legendary ships (Flagship of the East, Assault Ship of the East, Phantom Ship, The Drunken Catfish), the Small, Medium and Large Greymane Ships your comrades build, the Hernandian, Delesyian and Demenissian ships in three sizes, and four rowboats. Each plate shows the in-game shop or fleet screen, Health and hold, and Movement Speed, Acceleration and Handling.
+  - Mounts that were hidden as variants now have their own plates: Cloudcruiser, Skystreaker, Swift Wolf, Large White Wolf and High-Mobility A.T.A.G.
+  - Green, Hawksbill, Loggerhead, Olive Ridley and Hydrothermal sea turtles, the Giant Manta Ray, the Grizzly Bear, the Freight and Trading Wagons, and the Hernandian Soldier's and Calphadean Scout's Horses.
+
 - **Riches**, a second branch: an endgame economy guide for a player who has finished the main story but not started *Charting the Unknown*.
   - 24 money methods across eight leaves (Greymanes, Trade, Bank, Pailune, Real Estate, Ships, Islands, Hustles), rated I–V on Return, Effort, Setup and Scale within Management or Player Control. Return is compared in Silver; Camp Funds count at 1,000 to the Silver, the donation rate since 2.01.
   - **The Route** (`#riches`, `#riches-route`): eight phases in order, image-led, with a rail that tracks your place and every step linked to its plate.
@@ -25,6 +30,10 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
   - Each rating needs a basis, each image a credit, each capture a caption, and each source a valid https URL.
   - Every cover must resolve to an image, and every image file must exist.
   - Nothing under `public/media` may be orphaned.
+
+### Removed
+
+- **Temporary rides.** The guide now lists only mounts you can keep. The Fleeting leaf is gone with the Kuku Bird Hatchling (it grows into the Leaping Kuku Bird, which stays), the wildlife-park elephant and Marni's Mechahorse. Their old links redirect.
 
 ### Changed
 

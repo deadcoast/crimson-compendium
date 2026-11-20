@@ -23,18 +23,18 @@ These are the item IDs from `IDENTIFIED.md`, placed under the milestones in `PLA
 - RI-04: imagery: a real in-game capture for every method, credited
 - RI-05: verify covers both roots; lint passes for both branches
 
-## M2 Full roster `[todo]`
+## M2 Full roster `[done]`
 
 - NF-06: split mounts that the game registers separately out of `variants` (Cloudcruiser, Skystreaker, Swift Wolf, Large White Wolf, High-Mobility A.T.A.G.)
-- NF-07: keepable mounts missing from the data (sea turtle species, Giant Manta Ray, Grizzly Bear, Heavy Assault A.T.A.G., Freight and Trading wagons)
-- NF-08: Ships category in Mounts (Humble Bark; Small, Medium and Large Hernandian Ship)
-- NF-09: fleeting rides (soldier, scout and race horses, Captured Bear, Circus Lion, Gristle Wolf, Helms Hyena, Misthorn Branhok, Giant Bison, cattle, camels, Worn Wagon)
+- NF-07: keepable mounts missing from the data (sea turtle species, Giant Manta Ray, Grizzly Bear, Freight and Trading wagons, soldiers' and scouts' horses; the Heavy Assault A.T.A.G. stays out)
+- NF-08: Ships category in Mounts (20 ships)
+- ~~NF-09: fleeting rides~~ dropped: permanent mounts only (`DESIGN.md` › Revision 4)
 - NF-03: re-check the remaining known gaps (Scout Automation, Golden Star Mech)
 
-## M3 Where, for every mount `[shelved]`
+## M3 Where, for every mount `[todo]`
 
-- NF-01: map captures for every entry without one (23 before M2; recounted after it)
-- NF-02: heroes for every entry without one (36 before M2; recounted after it)
+- NF-01: map captures for every entry without one (57 of 80 after M2)
+- NF-02: heroes for every entry without one (68 of 80 after M2)
 
 ## M4 Ratings on evidence `[shelved]`
 
