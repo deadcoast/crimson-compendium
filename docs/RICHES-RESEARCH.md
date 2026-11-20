@@ -94,9 +94,9 @@ Basis: guide · KeenGamer (inventory), PowerUp Gaming (health); screenshot · Wh
 
   It also raised the cargo lost when a wagon is destroyed or retrieved. Basis: patch · Console Pulse.
 - Wagons need Brice (*A Rumor in Glenbright Farm*), an Engineer and the Timberturner Wainwright. Basis: guide · Console Pulse.
-- **A published run** (screenshots · Whisper of the House):
-  - 150 Packaged Cheese bought at 118 (17,700 Silver), for Varnia's Royal post, which listed Cheese at 1,000.
-  - 150 Packaged Salt bought 22% below reference and sold at 563 each: 84,450 Silver.
+- **A published run** (screenshots · Whisper of the House). The write-up calls these sums Silver. The screenshots show the Camp Funds icon, the one a facility's earnings use, and The Games Wiki says packaged goods pay Camp Funds:
+  - 150 Packaged Cheese bought at 118 (17,700 Camp Funds), for Varnia's Royal post, which listed Cheese at 1,000.
+  - 150 Packaged Salt bought 22% below reference and sold at 563 each: 84,450 Camp Funds, a 61,800 margin, or about 62 Silver at the donation rate.
 
 ## Bank
 

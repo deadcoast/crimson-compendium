@@ -126,7 +126,7 @@ You asked for Riches on 2026-11-19: an endgame economy guide for a player who ha
   - Copper → Silver (100:1) → Gold Bar (500 Silver at a bank; about 190 at a merchant).
   - Camp Funds are counted in copper. Before 2.01, one donated copper gave one Camp Fund (100 per Silver); patch 2.01 multiplied donated Silver by ten, so **one Silver now gives 1,000 Camp Funds** and a Gold Bar, exchanged and donated, gives 500,000. Sources: Vulkk (the ×10 and the old 1:1), All Things How (100 per Silver before 2.01), and the Camp-Funds-Withdraw mod, which inverts the game's own donation and states the current rate.
   - The Games Wiki's 50,000 Camp Funds per donated Gold Bar is the pre-2.01 copper value of 500 Silver. The Route says to exchange bars for Silver first and never donate a bar whole.
-  - **Silver is the yardstick for Return.** Camp Funds count at 1,000 to the Silver, so management methods that pay Camp Funds (dispatch, facilities) rate low next to the Silver earners (trade, the bank, pickpocketing). The DLC's Camp Funds prices fall to a few Gold Bars: the 6,000,000 Large Hernandian Ship is 6,000 Silver.
+  - **Silver is the yardstick for Return.** Camp Funds count at 1,000 to the Silver, so methods that pay Camp Funds rate low next to the Silver earners (pickpocketing, Gold Bar crafting, the bank). Those Camp Funds methods are dispatch, facilities and wagon trading. Packaged trade goods are bought and sold in Camp Funds: Whisper of the House's write-up calls its sums Silver, but its screenshots show the Camp Funds icon, the same one a facility's earnings use. The DLC's Camp Funds prices fall to a few Gold Bars: the 6,000,000 Large Hernandian Ship is 6,000 Silver.
   - One Hernand Bond is 10 Gold Bars; Bonds need 10 (100 bars) to invest.
 - **Every figure carries its basis.** The ledger labels each figure:
   - *Patch notes*.
@@ -137,14 +137,16 @@ You asked for Riches on 2026-11-19: an endgame economy guide for a player who ha
 
   When sources disagree, the plate shows both. Facility income is shown three ways: screenshot figures from a young sawmill (48,422 over 40 hours open; a 7-hour day earning 18,094 against 33,660 in wages and upkeep), the player-reported million a day, and NeonLights' note that patch 2.04.02 fixed inflated facility earnings.
 - **The Route** (`#riches-route`) is a generic branch view (`BranchDef.route`). It is an ordered plan of phases. Each phase has a stage, a reason, a cover, steps that link to plates, and optional *meanwhile* loops (player-control work to do while timers run). It is the "targeted strategy" you asked for:
-  1. Arm the multipliers.
-  2. Build the dispatch engine.
-  3. Open the trade routes.
-  4. Convert at the best rate.
-  5. Finish Pailune.
-  6. Lease before you sail.
-  7. Build the first ship, buy the second.
-  8. Pioneer the islands.
+  1. Make Silver.
+  2. Put the bars to work.
+  3. Convert only what you spend.
+  4. Arm the multipliers.
+  5. Build the materials engine.
+  6. Finish Pailune.
+  7. Build the first ship, buy the big one.
+  8. Lease, pioneer, build.
+
+  The order follows the corrected exchange rate. Silver earners lead because one Silver buys 1,000 Camp Funds. Dispatch stays for the materials (food, stone, timber, weapons) that castles, shipbuilding and Grey-0 workers consume. Trading pays Camp Funds, so it runs alongside, never as a phase of its own.
 
   The ship call in phase 7 comes from the data. The quest-built Small Greymane Ship holds 14 slots, the same as the 40,000 Small Hernandian, so the Route skips that purchase. At the 2.01 donation rate the Large (36 slots, 6,000,000) costs 6,000 Silver, twelve Gold Bars, so the Route buys it outright and keeps the Medium as the fallback.
 - **Route view design.** It is image-led:

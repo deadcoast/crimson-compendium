@@ -36,7 +36,7 @@ A mount can sit in several lists. The A.T.A.G. is Land, Underwater, Mechanical a
 
 **Riches**, the second branch: an endgame economy guide for a player who has finished the main story but not started *Charting the Unknown*. It has 24 money methods, each on its own plate.
 
-- **The Route**: eight phases in order, from arming the multipliers to pioneering islands. Every step links the plate that explains it.
+- **The Route**: eight phases in order, from making Silver to pioneering islands. Every step links the plate that explains it.
 - **Ledger**: what a method pays in, each figure with its basis (patch notes, guide, in-game screenshot, player report, or a sum shown), costs, the multipliers that raise it, and what to watch out for.
 - **Tiers**: Return, Effort, Setup and Scale rated **I–V** within *Management* (camp, staff, assets) or *Player Control* (what Kliff does by hand). Where nothing documents a payout, the method is marked not rated.
 

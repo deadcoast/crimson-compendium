@@ -1093,7 +1093,7 @@
   "summary": "After the sawmill, 17 more facilities can be leased: sawmills, restaurants, smithies and tailor's shops in liberated strongholds. Each needs staff with the matching skill. Players have reported around a million Camp Funds a day from one shop, but those reports predate the fix to inflated facility earnings.",
   "tiers": {
    "return": {
-    "tier": 3,
+    "tier": 2,
     "basis": "About 1M Camp Funds a day from one shop — 1,000 Silver at the donation rate — in a player report from before the 2.04.02 earnings fix."
    },
    "effort": {
@@ -2275,17 +2275,17 @@
   "leaf": "trade",
   "cls": "player",
   "domains": [
-   "silver"
+   "funds"
   ],
   "kind": "Hauling run",
   "region": "Every region",
   "area": "133 Trading Posts, 7 Wagon Workshops",
   "trait": "Buy where it is cheap, drive it where it is not",
-  "summary": "Patch 1.16 rebuilt trading: 133 Trading Posts, 28 new trade goods, seven Wagon Workshops, live prices on a Trade map tab, and prices that sag when one good floods a market. One published run sold 150 Packaged Salt, bought 22% below its reference price, at 563 each: 84,450 Silver, a 61,800 margin. Donated, that sale is 84,450,000 Camp Funds.",
+  "summary": "Patch 1.16 rebuilt trading: 133 Trading Posts, 28 new trade goods, seven Wagon Workshops, live prices on a Trade map tab, and prices that sag when one good floods a market. Packaged goods are bought and sold in Camp Funds: one published run sold 150 Packaged Salt at 563 for 84,450 Camp Funds, a 61,800 margin. At 1,000 Camp Funds to the Silver that load cleared about 62 Silver.",
   "tiers": {
    "return": {
-    "tier": 1,
-    "basis": "A 61,800-Silver margin on one 150-unit Salt load in a guide's screenshots; no other method here pays that much Silver per trip."
+    "tier": 5,
+    "basis": "A 61,800 Camp Funds margin on one 150-unit Salt load — about 62 Silver at the donation rate."
    },
    "effort": {
     "tier": 3,
@@ -2419,24 +2419,24 @@
   ],
   "since": "Base game · rebuilt in 1.16",
   "ledger": {
-   "pays": "Silver",
+   "pays": "Camp Funds",
    "cycle": "Per run",
    "figures": [
     {
      "label": "150 Packaged Salt sold",
-     "value": "563 each · 84,450 Silver",
+     "value": "563 each · 84,450 Camp Funds",
      "basis": "screenshot",
      "by": "whisperofthehouse"
     },
     {
      "label": "Margin on that load",
-     "value": "84,450 − 22,650 = 61,800 Silver",
+     "value": "84,450 − 22,650 = 61,800 Camp Funds",
      "basis": "sum",
      "by": "whisperofthehouse"
     },
     {
-     "label": "Same sale, donated to camp",
-     "value": "84,450 × 1,000 = 84,450,000 Camp Funds",
+     "label": "Margin in Silver",
+     "value": "61,800 ÷ 1,000 ≈ 62 Silver",
      "basis": "sum",
      "by": "github"
     }
@@ -2444,16 +2444,14 @@
    "costs": [
     {
      "label": "150 Packaged Salt bought",
-     "value": "151 each · 150 × 151 = 22,650 Silver",
+     "value": "151 each · 150 × 151 = 22,650 Camp Funds",
      "basis": "sum",
      "by": "whisperofthehouse"
     }
    ],
-   "stacks": [
-    "camp-donations",
-    "royal-trading-posts"
-   ],
+   "stacks": [],
    "watch": [
+    "Whisper of the House's write-up calls these sums Silver; its screenshots show the Camp Funds icon, the same one a facility's earnings use, and The Games Wiki says packaged goods pay Camp Funds.",
     "Patch 1.16 raised the cargo lost when a wagon is destroyed or retrieved, or a loaded horse is retrieved.",
     "Selling a lot of one good at one post lowers its price there."
    ]
@@ -2466,17 +2464,17 @@
   "leaf": "trade",
   "cls": "player",
   "domains": [
-   "silver"
+   "funds"
   ],
   "kind": "Premium buyer",
   "region": "Every region",
   "area": "Royal Trading Posts",
   "trait": "Patch 1.16 multiplied their trade-good prices by four",
-  "summary": "Royal Trading Posts buy only the packaged goods their court lists, at four times the old price since 1.16, and your wagon now stays after a Royal delivery. One guide found Varnia's Royal post paying 1,000 for Packaged Cheese bought at 118 elsewhere.",
+  "summary": "Royal Trading Posts buy only the packaged goods their court lists, at four times the old price since 1.16, and your wagon now stays after a Royal delivery. One guide found Varnia's Royal post paying 1,000 Camp Funds for Packaged Cheese bought at 118 elsewhere: about 132,000 on a 150-unit load, or 132 Silver at the donation rate.",
   "tiers": {
    "return": {
-    "tier": 1,
-    "basis": "Varnia's Royal post listed Packaged Cheese at 1,000 against a 118 buy price."
+    "tier": 4,
+    "basis": "Varnia listed Packaged Cheese at 1,000 Camp Funds against a 118 buy price: about 132 Silver on a 150-unit load."
    },
    "effort": {
     "tier": 3,
@@ -2581,13 +2579,19 @@
   ],
   "since": "Rebuilt in 1.16",
   "ledger": {
-   "pays": "Silver",
+   "pays": "Camp Funds",
    "cycle": "Per delivery",
    "figures": [
     {
      "label": "Packaged Cheese at Varnia",
      "value": "1,000 each (bought at 118)",
      "basis": "guide",
+     "by": "whisperofthehouse"
+    },
+    {
+     "label": "Margin on 150 units, in Silver",
+     "value": "150 × (1,000 − 118) = 132,300 Camp Funds ≈ 132 Silver",
+     "basis": "sum",
      "by": "whisperofthehouse"
     },
     {
@@ -2600,15 +2604,12 @@
    "costs": [
     {
      "label": "150 Packaged Cheese",
-     "value": "17,700 Silver",
+     "value": "17,700 Camp Funds",
      "basis": "screenshot",
      "by": "whisperofthehouse"
     }
    ],
-   "stacks": [
-    "camp-donations",
-    "trade-wagons"
-   ],
+   "stacks": [],
    "watch": [
     "A Royal post buys only the good its court lists; other cargo will not sell.",
     "Prices move: the guide warns its Varnia price is not a permanent route."
@@ -2811,7 +2812,7 @@
   "tiers": {
    "return": {
     "tier": 1,
-    "basis": "Up to 40 bars a cycle: with a save before each roll and a reload on a loss, Medium returns +15% to +20% every three days. Without one it averages about +2.5%."
+    "basis": "Gold Bars, up to 40 a cycle: with a save before each roll and a reload on a loss, Medium never loses and gains up to +20% every three days. Without one it averages about +2.5%."
    },
    "effort": {
     "tier": 1,
@@ -2980,7 +2981,7 @@
   "summary": "A Witch turns one Golden Apple and three Gold Ore into a Gold Bar. The bank pays 500 Silver for it, and that Silver donates as 500,000 Camp Funds. Golden Apples ride on hedgehogs' backs — watch the ground for the glint — and Gold Ore comes from caves such as Silver Wolf Cave.",
   "tiers": {
    "return": {
-    "tier": 3,
+    "tier": 2,
     "basis": "500 Silver per bar at a bank; supply is bound by hedgehog spawns."
    },
    "effort": {
@@ -3160,8 +3161,8 @@
   "summary": "Nobles strolling Demeniss Wildlife Park carry Gold Bars. Inspect them with the lantern, pick the ones showing a stacked bar, and lift it with a mask on. One player reports six bars in about 25 minutes: 3,000 Silver at a bank, or 3,000,000 Camp Funds donated.",
   "tiers": {
    "return": {
-    "tier": 2,
-    "basis": "About six bars in 25 minutes in a player report."
+    "tier": 1,
+    "basis": "About six Gold Bars in 25 minutes in a player report: 3,000 Silver, the fastest Silver documented here."
    },
    "effort": {
     "tier": 3,
@@ -3299,8 +3300,8 @@
   "summary": "Five static caches hold roughly 400 Crude Gold Bars, which any merchant buys at 5 Silver: about 2,000 Silver a circuit, or 2,000,000 Camp Funds donated. The Harpy Nest in Pailune alone holds about 150. It is the smallest earner here; run it only when you are passing the caches.",
   "tiers": {
    "return": {
-    "tier": 5,
-    "basis": "About 2,000 Silver per full circuit."
+    "tier": 4,
+    "basis": "About 2,000 Silver per full circuit; the caches take several in-game days to respawn."
    },
    "effort": {
     "tier": 4,
@@ -3450,7 +3451,7 @@
   "summary": "Two stick-card games. Duo plays at the Hernand inn for 15 Silver and at Tommaso for 300; Five-Card plays only at Beighen for 150. NeonLights reports the table AI calls reckless all-ins in the opening round. Watch cheaters three times to learn their trick, and accuse one mid-deal to take the pot.",
   "tiers": {
    "return": {
-    "tier": 4,
+    "tier": 3,
     "basis": "400–600 Silver per winning Five-Card session at Beighen."
    },
    "effort": {

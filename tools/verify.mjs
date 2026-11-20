@@ -381,12 +381,16 @@ try {
       await a.evaluate(async () => {
         const panes = [...document.querySelectorAll('.plate, .ladder, .route, .index .scroll')].filter((p) => p.scrollHeight > p.clientHeight);
         for (const p of panes) {
+          // jump, don't glide: a smooth-scrolling pane (the route) can still be travelling when the sweep ends
+          p.style.scrollBehavior = 'auto';
           for (let y = 0; y <= p.scrollHeight; y += p.clientHeight * 0.7) { p.scrollTop = y; await new Promise((r) => setTimeout(r, 140)); }
+          p.scrollTop = p.scrollHeight;
+          await new Promise((r) => setTimeout(r, 140));
         }
       });
       await a.waitForTimeout(1200);
-      const hidden = await a.evaluate(() => [...document.querySelectorAll('.reveal')].filter((n) => getComputedStyle(n).opacity === '0' && n.getClientRects().length).length);
-      if (hidden) problems.push(`${hash} @${vp.width}: ${hidden} section(s) never revealed, so axe could not read them`);
+      const hidden = await a.evaluate(() => [...document.querySelectorAll('.reveal')].filter((n) => getComputedStyle(n).opacity === '0' && n.getClientRects().length).map((n) => n.getAttribute('data-outline') ?? n.className.split(' ')[0]));
+      if (hidden.length) problems.push(`${hash} @${vp.width}: ${hidden.length} section(s) never revealed, so axe could not read them (${hidden.join(', ')})`);
       await a.addScriptTag({ content: AXE });
       const v = await a.evaluate(async () => (await window.axe.run(document, { resultTypes: ['violations'] })).violations
         .map((x) => ({ id: x.id, impact: x.impact, n: x.nodes.length, at: x.nodes[0]?.target.join(' ') })));
