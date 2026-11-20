@@ -121,21 +121,21 @@ You asked for Riches on 2026-11-19: an endgame economy guide for a player who ha
   - **Setup:** funds, quests and staff needed to start; I means available now and cheap.
   - **Scale:** how far it grows when you reinvest or stack multipliers.
 
-  A method with no documented income (castles, islands, ships, Pailune) is not rated on Return. It does not get a default III. Multipliers are rated on what they add: Golden Beer doubles every payout, so its Return is I.
-- **Currencies.**
+  A method with no documented income (castles, islands, ships, Pailune) is not rated on Return. It does not get a default III. Multipliers are rated on what they add, in Silver: Golden Beer doubles dispatch payouts, but those are Camp Funds, so its Return is III.
+- **Currencies.** *(Corrected after R1 shipped: the first version read the 2.01 rate as 1 Silver → 10 Camp Funds.)*
   - Copper → Silver (100:1) → Gold Bar (500 Silver at a bank; about 190 at a merchant).
-  - Camp Funds buy ships, leases, Blessings and dispatch fees.
-  - Since patch 2.01, 1 Silver donates as 10 Camp Funds (it was 1:1; Vulkk).
-  - The Games Wiki measured a donated Gold Bar at **50,000 Camp Funds** before 2.01. That is ten times its 500 Silver at the new rate (5,000), and the wiki marks it unconfirmed for the current build. The Route therefore says to donate one bar, read the counter, and donate whole bars if it holds. This is the guide's biggest single lever, and it is flagged as unconfirmed everywhere it appears.
+  - Camp Funds are counted in copper. Before 2.01, one donated copper gave one Camp Fund (100 per Silver); patch 2.01 multiplied donated Silver by ten, so **one Silver now gives 1,000 Camp Funds** and a Gold Bar, exchanged and donated, gives 500,000. Sources: Vulkk (the ×10 and the old 1:1), All Things How (100 per Silver before 2.01), and the Camp-Funds-Withdraw mod, which inverts the game's own donation and states the current rate.
+  - The Games Wiki's 50,000 Camp Funds per donated Gold Bar is the pre-2.01 copper value of 500 Silver. The Route says to exchange bars for Silver first and never donate a bar whole.
+  - **Silver is the yardstick for Return.** Camp Funds count at 1,000 to the Silver, so management methods that pay Camp Funds (dispatch, facilities) rate low next to the Silver earners (trade, the bank, pickpocketing). The DLC's Camp Funds prices fall to a few Gold Bars: the 6,000,000 Large Hernandian Ship is 6,000 Silver.
   - One Hernand Bond is 10 Gold Bars; Bonds need 10 (100 bars) to invest.
 - **Every figure carries its basis.** The ledger labels each figure:
   - *Patch notes*.
   - *Guide*.
   - *Screenshot*: read off an in-game screenshot a guide published.
   - *Player report*: shown in ember italics as one player's result.
-  - *Sum shown*: my arithmetic, with the sum printed, for example 84,450 × 10 = 844,500.
+  - *Sum shown*: my arithmetic, with the sum printed, for example 84,450 × 1,000 = 84,450,000.
 
-  When sources disagree, the plate shows both. One example is the facility lease: 15,000, listed as Copper by Vulkk and as Camp Funds by Xbox Play. Facility income is shown three ways: screenshot figures from a young sawmill (48,422 over 40 hours open; a 7-hour day earning 18,094 against 33,660 in wages and upkeep), the player-reported million a day, and NeonLights' note that patch 2.04.02 fixed inflated facility earnings.
+  When sources disagree, the plate shows both. Facility income is shown three ways: screenshot figures from a young sawmill (48,422 over 40 hours open; a 7-hour day earning 18,094 against 33,660 in wages and upkeep), the player-reported million a day, and NeonLights' note that patch 2.04.02 fixed inflated facility earnings.
 - **The Route** (`#riches-route`) is a generic branch view (`BranchDef.route`). It is an ordered plan of phases. Each phase has a stage, a reason, a cover, steps that link to plates, and optional *meanwhile* loops (player-control work to do while timers run). It is the "targeted strategy" you asked for:
   1. Arm the multipliers.
   2. Build the dispatch engine.
@@ -146,7 +146,7 @@ You asked for Riches on 2026-11-19: an endgame economy guide for a player who ha
   7. Build the first ship, buy the second.
   8. Pioneer the islands.
 
-  The ship call in phase 7 comes from the data: the quest-built Small Greymane Ship holds 14 slots, the same as the 40,000 Small Hernandian, so the Route skips that purchase and saves for the Medium (22 slots, 1.2M).
+  The ship call in phase 7 comes from the data. The quest-built Small Greymane Ship holds 14 slots, the same as the 40,000 Small Hernandian, so the Route skips that purchase. At the 2.01 donation rate the Large (36 slots, 6,000,000) costs 6,000 Silver, twelve Gold Bars, so the Route buys it outright and keeps the Medium as the fallback.
 - **Route view design.** It is image-led:
   - Each phase opens on its cover. The cover desaturates into full colour as it enters view, and an outlined phase numeral rises into the corner.
   - A sticky rail lists the phases, marks the current one, and has a spine that fills with scroll. The current phase is measured on scroll against a line 40% down the view, so tracking holds at any window shape.

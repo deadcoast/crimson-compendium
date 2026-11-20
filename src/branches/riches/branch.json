@@ -18,7 +18,7 @@
   {
    "id": "return",
    "label": "Return",
-   "blurb": "What it pays next to the other methods, on the best documented figure. Converted to Camp Funds where the guide shows the sum; not rated where nothing is documented."
+   "blurb": "What it pays next to the other methods, on the best documented figure, compared in Silver: Camp Funds count at 1,000 to the Silver, the donation rate since 2.01. Not rated where nothing is documented."
   },
   {
    "id": "effort",
@@ -44,6 +44,10 @@
   {
    "lead": "Effort and Setup read like the rest.",
    "text": "Tier I is always the good end: Tier I Effort runs while you are away, Tier I Setup can start today."
+  },
+  {
+   "lead": "Silver is the yardstick.",
+   "text": "Camp Funds are counted in copper and, since 2.01, one donated Silver buys 1,000 of them. A dispatch paying 13,000 Camp Funds is worth 13 Silver next to a wagon run."
   },
   {
    "lead": "“Not rated”",
@@ -319,14 +323,14 @@
  ],
  "route": {
   "title": "The Route",
-  "blurb": "Eight phases, in order. Each one raises what the next earns: multipliers before income, income before conversion, conversion before the DLC's big purchases.",
+  "blurb": "Eight phases, in order. Silver is the money that matters: since 2.01 each Silver donates as 1,000 Camp Funds, so the DLC's Camp Funds prices fall to a few Gold Bars.",
   "premise": "You have finished the main story through Journey's End and own Charting the Unknown without starting it. Your camp is at Howling Hill with a working roster.",
   "phases": [
    {
     "id": "multipliers",
     "label": "Arm the multipliers",
     "stage": "Before the DLC",
-    "why": "Golden Beer doubles every dispatch payout and Blessings add up to +200% in a region. Both apply to every cycle you run after them, so they come before any income.",
+    "why": "Golden Beer doubles every dispatch payout and Blessings add up to +200% in a region; both apply to every cycle after them. At 1,000 Camp Funds per Silver, maxing Hernand's Blessing costs about 300 Silver.",
     "cover": {
      "entry": "golden-beer",
      "role": "hero"
@@ -338,7 +342,7 @@
      },
      {
       "entry": "church-blessings",
-      "text": "Donate to the church of the region your best dispatches run in; about 110,000 buys +100% in Hernand."
+      "text": "Donate to the church of the region your best dispatches run in; about 110,000 Camp Funds (110 Silver) buys +100% in Hernand."
      },
      {
       "entry": "time-skip",
@@ -356,7 +360,7 @@
     "id": "engine",
     "label": "Build the dispatch engine",
     "stage": "Before the DLC",
-    "why": "Estate Security turns food into Camp Funds on Repeat. Supply dispatches keep the food coming, excavations pay the largest lumps, and Grey-0 workers fill the routine slots.",
+    "why": "Dispatch pays Camp Funds plus the food, stone, timber and weapons that castles, shipbuilding and Grey-0 workers consume. Its Camp Funds are small next to Silver; its materials are why it runs on Repeat.",
     "cover": {
      "entry": "estate-security",
      "role": "hero"
@@ -390,7 +394,7 @@
     "id": "trade",
     "label": "Open the trade routes",
     "stage": "Before the DLC",
-    "why": "Patch 1.16 quadrupled Royal post prices and added 133 posts. One wagon of Salt sold for 84,450 Silver, and every Silver donated becomes 10 Camp Funds.",
+    "why": "Patch 1.16 quadrupled Royal post prices and added 133 posts. One wagon of Salt cleared a 61,800-Silver margin: more Silver than any other trip on this route.",
     "cover": {
      "entry": "trade-wagons",
      "role": "hero"
@@ -416,7 +420,7 @@
     "id": "convert",
     "label": "Convert at the best rate",
     "stage": "Before the DLC",
-    "why": "Ships, leases and Blessings cost Camp Funds. Silver converts at 10 to 1 since 2.01; a whole Gold Bar was measured at 50,000, ten times its Silver value. Test one bar, then convert the cheaper way.",
+    "why": "Ships, leases and Blessings cost Camp Funds, and Camp Funds are counted in copper. Since 2.01 one donated Silver gives 1,000, so a Gold Bar exchanged at a bank and donated gives 500,000. Convert only what the next purchase needs: the donation is one way.",
     "cover": {
      "entry": "camp-donations",
      "role": "hero"
@@ -424,11 +428,11 @@
     "steps": [
      {
       "entry": "camp-donations",
-      "text": "Donate one bar and read the counter. At 50,000, donate bars whole and keep Silver for Kliff."
+      "text": "Exchange bars at a bank for 500 Silver each, then donate the Silver to Carl. Never hand him a bar whole."
      },
      {
       "entry": "bank-investment",
-      "text": "Bars you will not donate sit at Low risk; Medium swings −15% to +20% a cycle. Bonds only past 100 spare bars."
+      "text": "Spare bars go to the bank. Save before each roll: Medium then returns +15% to +20% a cycle. Bonds only past 100 spare bars."
      }
     ]
    },
@@ -456,7 +460,7 @@
     "id": "lease",
     "label": "Lease before you sail",
     "stage": "In the DLC",
-    "why": "Facilities are the DLC's first income: the Timberham lease costs 15,000 and pays daily while you are at sea. Upkeep is daily too, so lease only what your roster can staff.",
+    "why": "A lease costs 15,000 Camp Funds — 15 Silver — and a levelled shop was reported at about a million Camp Funds a day, 1,000 Silver, before the 2.04.02 earnings fix. Wages and upkeep are daily, so lease only what your roster can staff.",
     "cover": {
      "entry": "timberham-sawmill",
      "role": "hero"
@@ -476,7 +480,7 @@
     "id": "fleet",
     "label": "Build the first ship, buy the second",
     "stage": "In the DLC",
-    "why": "The quest-built Small Greymane Ship holds 14, the same as the 40,000 Small Hernandian. Skip that purchase; the Medium at 1.2M is the first ship that adds cargo space.",
+    "why": "The quest-built Small Greymane Ship holds 14, the same as the 40,000 Small Hernandian, so skip that purchase. The Large's 6,000,000 is 6,000 donated Silver: twelve Gold Bars buy the 36-slot ship outright.",
     "cover": {
      "entry": "fleetmaster-ships",
      "role": "hero"
@@ -492,7 +496,7 @@
      },
      {
       "entry": "fleetmaster-ships",
-      "text": "Buy the Medium at 1.2M; the Large at 6M only when routes fill 22 slots."
+      "text": "Buy the Large with twelve bars' worth of donated Silver; the Medium (1,200 Silver) if you are short."
      }
     ]
    },

@@ -14,8 +14,8 @@
   "summary": "Mazzul's stash of premium beer. Holding it doubles the main rewards of every Greymane dispatch: Camp Funds, food, timber and the rest, on every repeat cycle. Church Blessings multiply on top of it.",
   "tiers": {
    "return": {
-    "tier": 1,
-    "basis": "Doubles the main reward of every dispatch; one security run went from about 7,000 to about 14,000 Camp Funds."
+    "tier": 3,
+    "basis": "Doubles every dispatch, but dispatch pays in Camp Funds: the ≈7,000 → ≈14,000 security run is 7 → 14 Silver at the donation rate."
    },
    "effort": {
     "tier": 1,
@@ -169,16 +169,16 @@
   "summary": "Donating Camp Funds to a region's church raises its Blessing level. Each level adds 2% to every dispatch reward in that region, permanently, up to +200%. It multiplies with Golden Beer, so put it where your repeat dispatches already run.",
   "tiers": {
    "return": {
-    "tier": 2,
-    "basis": "Up to +200% on dispatch rewards in one region, multiplied with Golden Beer."
+    "tier": 3,
+    "basis": "Up to +200% on dispatch rewards in one region; the rewards are Camp Funds worth 1/1,000 Silver each."
    },
    "effort": {
     "tier": 1,
     "basis": "A one-off donation; the bonus is permanent."
    },
    "setup": {
-    "tier": 3,
-    "basis": "About 110,000 for +100% in Hernand and about 150,000 in Demeniss."
+    "tier": 1,
+    "basis": "About 110,000 Camp Funds for +100% in Hernand — 110 Silver donated."
    },
    "scale": {
     "tier": 2,
@@ -243,6 +243,11 @@
     "title": "Dispatch Missions"
    },
    {
+    "by": "allthingshow",
+    "url": "https://allthings.how/crimson-desert-church-donations-how-conversion-bonuses-work/",
+    "title": "Church Donations: How Conversion Bonuses Work"
+   },
+   {
     "by": "consolepulse",
     "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/best-passive-income-setup-crimson-desert",
     "title": "Best Passive Income Setup"
@@ -274,13 +279,19 @@
    "costs": [
     {
      "label": "+100% in Hernand",
-     "value": "≈110,000",
+     "value": "≈110,000 Camp Funds (≈110 Silver)",
      "basis": "guide",
      "by": "thegameswiki"
     },
     {
+     "label": "+200% cap in Hernand",
+     "value": "≈300,000–315,000 Camp Funds",
+     "basis": "guide",
+     "by": "allthingshow"
+    },
+    {
      "label": "+100% in Demeniss",
-     "value": "≈150,000",
+     "value": "≈150,000 Camp Funds",
      "basis": "guide",
      "by": "thegameswiki"
     }
@@ -310,8 +321,8 @@
   "summary": "Greymanes guard a manor and bring back Camp Funds. It is the base of the dispatch engine: it costs food, it repeats, and Golden Beer and Blessings multiply it. Payouts in published screenshots run from 1.8K on a basic Hillside run to 13K at Azerian Manor.",
   "tiers": {
    "return": {
-    "tier": 3,
-    "basis": "1.8K to 13K Camp Funds per run in guide screenshots; about 30,000 on a buffed first run per The Games Wiki."
+    "tier": 4,
+    "basis": "1.8K to 13K Camp Funds per run in guide screenshots — 2 to 13 Silver at the donation rate."
    },
    "effort": {
     "tier": 1,
@@ -617,8 +628,8 @@
   "summary": "Excavation and exploration missions at ruins pay larger lumps of Camp Funds than manor security: The Games Wiki records 37,000 per Tinkerton excavation and 20,000 at Acroser Village. Ruin digs at Timeworn and Bordig also turn up rare items. Patch 1.06 made stronghold excavations repeatable.",
   "tiers": {
    "return": {
-    "tier": 3,
-    "basis": "37,000 Camp Funds per Tinkerton completion; 20,000 at Acroser Village."
+    "tier": 4,
+    "basis": "37,000 Camp Funds per Tinkerton completion — 37 Silver at the donation rate — plus rare items."
    },
    "effort": {
     "tier": 1,
@@ -901,8 +912,8 @@
   "summary": "The DLC's first business. A notice on the Hernand board leads to the lease, and the quest that follows teaches workstations, pricing and popularity. In one published screenshot a young sawmill earned 48,422 Camp Funds across 40 hours open on 4,200 daily wages; finishing it opens leasing everywhere else.",
   "tiers": {
    "return": {
-    "tier": 3,
-    "basis": "48,422 earned over 40 hours open against 4,200 daily wages in a guide screenshot; a 7-hour day showed 18,094 against 33,660 in wages and upkeep."
+    "tier": 5,
+    "basis": "48,422 Camp Funds over 40 hours open in a guide screenshot — 48 Silver at the donation rate; a 7-hour day ran at a loss."
    },
    "effort": {
     "tier": 2,
@@ -1061,7 +1072,7 @@
    "stacks": [],
    "watch": [
     "Upkeep and wages are charged daily. A young shop can run at a loss, as the 7-hour screenshot shows.",
-    "Vulkk lists the lease as 15,000 Copper; Xbox Play shows 15,000 Camp Funds. Budget for the larger figure.",
+    "Vulkk writes the lease as 15,000 Copper and Xbox Play as 15,000 Camp Funds: the same sum, since Camp Funds are counted in copper. Donated, it is 15 Silver.",
     "Patch 2.04.02 fixed a bug that inflated facility earnings; earnings figures from before October 30 overstate the real rate."
    ]
   },
@@ -1082,8 +1093,8 @@
   "summary": "After the sawmill, 17 more facilities can be leased: sawmills, restaurants, smithies and tailor's shops in liberated strongholds. Each needs staff with the matching skill. Players have reported around a million Camp Funds a day from one shop, but those reports predate the fix to inflated facility earnings.",
   "tiers": {
    "return": {
-    "tier": 2,
-    "basis": "Player reports of about 1M Camp Funds a day from one shop, made before the 2.04.02 earnings fix."
+    "tier": 3,
+    "basis": "About 1M Camp Funds a day from one shop — 1,000 Silver at the donation rate — in a player report from before the 2.04.02 earnings fix."
    },
    "effort": {
     "tier": 2,
@@ -1554,7 +1565,7 @@
   "region": "Grace Estate · Demeniss · Delesyia",
   "area": "Fleetmasters at Vellua, Demeniss and Delesyia",
   "trait": "2,000 to 6,000,000: buy cargo space, not the next size up",
-  "summary": "Fleetmasters sell four ships for Camp Funds. Inventory is what a trading ship is for: the Rowboat holds 6, the Small Hernandian 14, the Medium 22 and the Large 36. With the quest ship already at 14, the Medium is the first purchase that adds capacity, at 1.2M.",
+  "summary": "Fleetmasters sell four ships for Camp Funds. Inventory is what a trading ship is for: the Rowboat holds 6, the Small Hernandian 14, the Medium 22 and the Large 36. With the quest ship already at 14, the Medium (1.2M) is the first purchase that adds capacity — and since 2.01 1.2M Camp Funds is 1,200 donated Silver, and the Large's 6M is 6,000.",
   "tiers": {
    "return": {
     "tier": null,
@@ -1565,8 +1576,8 @@
     "basis": "A purchase; no build time."
    },
    "setup": {
-    "tier": 4,
-    "basis": "1,200,000 Camp Funds for the Medium, 6,000,000 for the Large."
+    "tier": 3,
+    "basis": "1,200,000 Camp Funds for the Medium and 6,000,000 for the Large: 1,200 and 6,000 Silver donated."
    },
    "scale": {
     "tier": 1,
@@ -1583,8 +1594,8 @@
    {
     "steps": [
      "Skip the 40,000 Small Hernandian Ship if you built the Small Greymane Ship: both hold 14.",
-     "Save for the Medium Hernandian Ship at 1,200,000: 22 slots.",
-     "Buy the Large Hernandian Ship at 6,000,000 once a route fills 22 slots every run: 36 slots.",
+     "Buy the Large Hernandian Ship at 6,000,000 — 6,000 donated Silver, twelve Gold Bars — once you hold that much spare: 36 slots.",
+     "Short of that, the Medium at 1,200,000 (1,200 Silver) gives 22 slots.",
      "Buy from Hopkins at Vellua (Grace Estate) or the Fleetmasters at Demeniss and Delesyia."
     ]
    }
@@ -1698,14 +1709,14 @@
    "costs": [
     {
      "label": "Paid in",
-     "value": "Camp Funds",
+     "value": "Camp Funds: 1,000 per donated Silver",
      "basis": "guide",
-     "by": "playnews"
+     "by": "github"
     }
    ],
    "stacks": [],
    "watch": [
-    "Buying the Large first ties up 6M before you know which waters you will trade in."
+    "Camp Funds prices look large because they are counted in copper; check them against Silver at 1,000 to 1 before saving for months."
    ]
   },
   "variants": [],
@@ -2270,11 +2281,11 @@
   "region": "Every region",
   "area": "133 Trading Posts, 7 Wagon Workshops",
   "trait": "Buy where it is cheap, drive it where it is not",
-  "summary": "Patch 1.16 rebuilt trading: 133 Trading Posts, 28 new trade goods, seven Wagon Workshops, live prices on a Trade map tab, and prices that sag when one good floods a market. One published run sold 150 Packaged Salt, bought 22% below its reference price, at 563 each: 84,450 Silver, which donates as 844,500 Camp Funds.",
+  "summary": "Patch 1.16 rebuilt trading: 133 Trading Posts, 28 new trade goods, seven Wagon Workshops, live prices on a Trade map tab, and prices that sag when one good floods a market. One published run sold 150 Packaged Salt, bought 22% below its reference price, at 563 each: 84,450 Silver, a 61,800 margin. Donated, that sale is 84,450,000 Camp Funds.",
   "tiers": {
    "return": {
-    "tier": 2,
-    "basis": "84,450 Silver for one 150-unit Salt sale in a guide's screenshot; ×10 when donated as Camp Funds."
+    "tier": 1,
+    "basis": "A 61,800-Silver margin on one 150-unit Salt load in a guide's screenshots; no other method here pays that much Silver per trip."
    },
    "effort": {
     "tier": 3,
@@ -2425,9 +2436,9 @@
     },
     {
      "label": "Same sale, donated to camp",
-     "value": "84,450 × 10 = 844,500 Camp Funds",
+     "value": "84,450 × 1,000 = 84,450,000 Camp Funds",
      "basis": "sum",
-     "by": "vulkk"
+     "by": "github"
     }
    ],
    "costs": [
@@ -2618,12 +2629,12 @@
   "kind": "Currency exchange",
   "region": "Howling Hill or Pailune",
   "area": "Carl, Provisions Keeper",
-  "trait": "1 Silver → 10 Camp Funds since 2.01; a Gold Bar was worth 50,000",
-  "summary": "Ships, leases, Blessings and dispatch fees are paid in Camp Funds, and Carl turns your money into them. Patch 2.01 made donated Silver worth ten times as much. The Games Wiki measured a donated Gold Bar at 50,000 Camp Funds before 2.01 — ten times what its 500 Silver now donates for — and has not re-measured it since.",
+  "trait": "1 Silver → 1,000 Camp Funds since 2.01",
+  "summary": "Camp Funds are counted in copper, and since patch 2.01 every copper of Silver you donate to Carl becomes ten: one Silver buys 1,000 Camp Funds and one Gold Bar, exchanged at a bank, buys 500,000. That makes the DLC's Camp Funds prices small in Silver: the 6,000,000 Large Hernandian Ship is 6,000 Silver, twelve Gold Bars.",
   "tiers": {
    "return": {
-    "tier": 1,
-    "basis": "Silver converts at 1 → 10 since 2.01; a whole Gold Bar measured 50,000 before 2.01."
+    "tier": null,
+    "basis": "Converts Silver into Camp Funds; earns nothing itself."
    },
    "effort": {
     "tier": 1,
@@ -2644,16 +2655,16 @@
   "routes": [
    {
     "steps": [
+     "Exchange Gold Bars for Silver at a bank: 500 Silver each. A merchant pays about 190.",
      "Talk to Carl at camp and choose Donate Funds.",
-     "Donate one Gold Bar on its own and watch the Camp Funds counter.",
-     "If the bar pays 50,000, keep donating bars whole and only exchange bars for Silver when Kliff needs Silver.",
-     "Donate Silver you do not need: since 2.01 each one adds 10 Camp Funds."
+     "Donate the Silver you will not spend: each Silver adds 1,000 Camp Funds, and the donation cannot be reversed.",
+     "Do not hand Carl a Gold Bar itself: the only measured bar donation is 50,000, from before 2.01, against 500,000 for the same bar as Silver."
     ]
    }
   ],
   "location": "Carl, the Provisions Keeper, at camp.",
   "notes": [
-   "A bank exchanges a Gold Bar for 500 Silver; a merchant pays about 190."
+   "Camp Funds are counted in copper: 100 Camp Funds was one Silver before 2.01, 1,000 since."
   ],
   "media": {
    "portrait": {
@@ -2701,6 +2712,26 @@
     "title": "Patch 2.01.00"
    },
    {
+    "by": "github",
+    "url": "https://github.com/Marukooh/Camp-Funds-Withdraw",
+    "title": "Camp-Funds-Withdraw: the game's donation rate, inverted"
+   },
+   {
+    "by": "nexusmods",
+    "url": "https://www.nexusmods.com/crimsondesert/mods/3946?tab=posts",
+    "title": "Withdraw Camp Funds (mod notes on the donation rate)"
+   },
+   {
+    "by": "allthingshow",
+    "url": "https://allthings.how/crimson-desert-church-donations-how-conversion-bonuses-work/",
+    "title": "Church Donations: How Conversion Bonuses Work"
+   },
+   {
+    "by": "steam",
+    "url": "https://steamcommunity.com/app/3321460/discussions/0/796715497279334911/?ctp=2",
+    "title": "How much money is enough? (Steam discussion)"
+   },
+   {
     "by": "thegameswiki",
     "url": "https://thegameswiki.com/crimson-desert/wiki/camp-funds/diff",
     "title": "Camp Funds"
@@ -2709,11 +2740,6 @@
     "by": "gamingbolt",
     "url": "https://gamingbolt.com/crimson-desert-update-buffs-camp-funds-from-silver-adds-new-dispatch-mission-and-more",
     "title": "Update Buffs Camp Funds From Silver"
-   },
-   {
-    "by": "playersua",
-    "url": "https://players.com.ua/en/news/how-to-earn-camp-funds-in-crimson-desert/",
-    "title": "How to Earn Camp Funds"
    }
   ],
   "since": "Rebalanced in 2.01",
@@ -2722,29 +2748,48 @@
    "cycle": "Instant",
    "figures": [
     {
-     "label": "1 Silver donated",
-     "value": "10 Camp Funds (was 1)",
+     "label": "Before 2.01",
+     "value": "1 copper → 1 Camp Fund · 1 Silver → 100",
+     "basis": "guide",
+     "by": "allthingshow"
+    },
+    {
+     "label": "Patch 2.01",
+     "value": "Camp Funds from donated Silver ×10",
      "basis": "patch",
      "by": "vulkk"
     },
     {
-     "label": "1 Gold Bar donated",
-     "value": "50,000 Camp Funds — measured before 2.01",
+     "label": "Since 2.01",
+     "value": "1 Silver → 1,000 Camp Funds",
      "basis": "guide",
-     "by": "thegameswiki"
+     "by": "github"
     },
     {
-     "label": "1 Gold Bar as Silver, donated",
-     "value": "500 × 10 = 5,000 Camp Funds",
+     "label": "1 Gold Bar, exchanged then donated",
+     "value": "500 × 1,000 = 500,000 Camp Funds",
      "basis": "sum",
      "by": "vulkk"
+    },
+    {
+     "label": "Large Hernandian Ship in Silver",
+     "value": "6,000,000 ÷ 1,000 = 6,000 Silver",
+     "basis": "sum",
+     "by": "playnews"
     }
    ],
-   "costs": [],
+   "costs": [
+    {
+     "label": "Direction",
+     "value": "One way: Camp Funds cannot become Silver again",
+     "basis": "guide",
+     "by": "github"
+    }
+   ],
    "stacks": [],
    "watch": [
-    "The 50,000-per-bar figure predates 2.01 and the wiki marks it unconfirmed for the current build; test one bar before committing a stack.",
-    "Patch 2.01 also made donation missions charge exactly the amount they display."
+    "The Games Wiki's 50,000 Camp Funds per donated Gold Bar is the pre-2.01 copper value (500 Silver × 100). Exchange bars for Silver first.",
+    "The 1,000-per-Silver rate comes from players who measured it (a mod that reverses the game's own donation, and its notes); Pearl Abyss's patch note says ×10 without a base."
    ]
   },
   "variants": [],
@@ -2765,8 +2810,8 @@
   "summary": "A 100-Silver Strongbox permit lets you invest Gold Bars at Low (0% to +2%), Medium (−15% to +20%) or High (−50% to +55%) risk. Each cycle rolls about every three in-game days, and the strategy can change only every 15. Only Low cannot lose. Patch 1.16 capped gains and losses at 40 bars a cycle and added Hernand Bonds, which need 100 bars to start.",
   "tiers": {
    "return": {
-    "tier": 3,
-    "basis": "Medium swings −15% to +20% a cycle and High −50% to +55%; Low is safe at 0% to +2%. All Things How saves before each roll and reloads a loss."
+    "tier": 1,
+    "basis": "Up to 40 bars a cycle: with a save before each roll and a reload on a loss, Medium returns +15% to +20% every three days. Without one it averages about +2.5%."
    },
    "effort": {
     "tier": 1,
@@ -2932,11 +2977,11 @@
   "region": "Pailune · Delesyia · Demeniss",
   "area": "Witch's Hideout, gold caves, hedgehog trails",
   "trait": "1 Golden Apple + 3 Gold Ore = 1 Gold Bar",
-  "summary": "A Witch turns one Golden Apple and three Gold Ore into a Gold Bar. The bank pays 500 Silver for it; donated whole it was measured at 50,000 Camp Funds. Golden Apples ride on hedgehogs' backs — watch the ground for the glint — and Gold Ore comes from caves such as Silver Wolf Cave.",
+  "summary": "A Witch turns one Golden Apple and three Gold Ore into a Gold Bar. The bank pays 500 Silver for it, and that Silver donates as 500,000 Camp Funds. Golden Apples ride on hedgehogs' backs — watch the ground for the glint — and Gold Ore comes from caves such as Silver Wolf Cave.",
   "tiers": {
    "return": {
-    "tier": 2,
-    "basis": "500 Silver per bar at a bank; 50,000 Camp Funds per bar donated, measured before 2.01."
+    "tier": 3,
+    "basis": "500 Silver per bar at a bank; supply is bound by hedgehog spawns."
    },
    "effort": {
     "tier": 3,
@@ -2963,7 +3008,7 @@
      "Take the recipe from the bookshelf inside the Witch's Hideout south of Pailune.",
      "Mine Gold Ore on a cave circuit; Silver Wolf Cave has dense clusters.",
      "Hunt Golden Apple hedgehogs near Grey Rock Dock, the Eastern Hills of Delesyia or Tariv, roughly 16:00 to midnight.",
-     "Craft at a Witch, then donate the bars whole or bank them for 500 Silver."
+     "Craft at a Witch, then exchange the bars at a bank for 500 Silver each."
     ]
    }
   ],
@@ -3077,10 +3122,10 @@
      "by": "consolepulse"
     },
     {
-     "label": "Bar donated whole",
-     "value": "50,000 Camp Funds — measured before 2.01",
-     "basis": "guide",
-     "by": "thegameswiki"
+     "label": "Bar as Silver, donated",
+     "value": "500 × 1,000 = 500,000 Camp Funds",
+     "basis": "sum",
+     "by": "github"
     }
    ],
    "costs": [
@@ -3112,7 +3157,7 @@
   "region": "Demeniss",
   "area": "Demeniss Wildlife Park",
   "trait": "Gold Bars lifted from wealthy visitors",
-  "summary": "Nobles strolling Demeniss Wildlife Park carry Gold Bars. Inspect them with the lantern, pick the ones showing a stacked bar, and lift it with a mask on. One player reports six bars in about 25 minutes; at the pre-2.01 donation value that is 300,000 Camp Funds.",
+  "summary": "Nobles strolling Demeniss Wildlife Park carry Gold Bars. Inspect them with the lantern, pick the ones showing a stacked bar, and lift it with a mask on. One player reports six bars in about 25 minutes: 3,000 Silver at a bank, or 3,000,000 Camp Funds donated.",
   "tiers": {
    "return": {
     "tier": 2,
@@ -3251,7 +3296,7 @@
   "region": "Pailune · Demeniss · Delesyia",
   "area": "Harpy Nest, Demeniss warehouse and three more caches",
   "trait": "400 bars, 5 Silver each",
-  "summary": "Five static caches hold roughly 400 Crude Gold Bars, which any merchant buys at 5 Silver: about 2,000 Silver a circuit, or 20,000 Camp Funds donated. The Harpy Nest in Pailune alone holds about 150. It is the smallest earner here; run it only when you are passing the caches.",
+  "summary": "Five static caches hold roughly 400 Crude Gold Bars, which any merchant buys at 5 Silver: about 2,000 Silver a circuit, or 2,000,000 Camp Funds donated. The Harpy Nest in Pailune alone holds about 150. It is the smallest earner here; run it only when you are passing the caches.",
   "tiers": {
    "return": {
     "tier": 5,

@@ -52,6 +52,7 @@ These are the item IDs from `IDENTIFIED.md`, placed under the milestones in `PLA
 - RI-06: all 18 facilities listed with location, type and staff skill
 - RI-07: island upgrades and income, once a source documents them
 - RI-08: trade-route table from the in-game Trade tab
+- RI-09: methods from your notes in `docs/money-methods.md` not yet in Riches: Supply Contracts through merchant trust, the Silk Crafting dispatch, Accountant dispatches, two-slot horse trading, Tinkerton Dig Site Protection; each needs a retrievable source and an in-game capture before it ships
 
 ## Not yet placed
 
