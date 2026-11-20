@@ -6,6 +6,7 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
 
 ### Added
 
+- **Potential**, a three-tier list of earning power for Riches. Every method sits in exactly one tier across both classes: **Fortune** (pays Gold Bars, or 500 Silver or more per payout), **Income** (pays money, but less) or **Groundwork** (no money of its own; it multiplies, converts, houses or unlocks). Each plate shows its tier first, as a chip that links to the tier's list. A branch can now declare a category a tier list; the registry refuses a method placed in no tier or in two.
 - **Where, for every mount (M3)**: 29 plates gained world maps and 10 gained full-bleed banners. Maps still missing went from 57 to 28 and banners from 68 to 58; every plate still without one is listed in `DESIGN.md` › Known gaps with its reason.
   - Legendary ships: every blueprint spot on a map, each followed by its on-site view.
   - Sea mounts: a spawn-zone map for all 14 that lacked one, plus In action footage of the Hammerhead, Orca, Spotted Seal, Eagle Ray, Electric Ray and Sunfish. The turtle map is cut per species.

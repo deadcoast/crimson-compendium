@@ -73,6 +73,12 @@ function define(def: BranchDef, entries: Entry[], sections: PlateSection[] = [])
       if (!l.entries.length) fail(route, 'category leaf matches no entries');
       claim(route, 'category leaf');
     }
+    if (c.tierList) {
+      for (const e of entries) {
+        const n = c.leaves.filter((l) => l.entries.includes(e)).length;
+        if (n !== 1) fail(c.id, `tier list puts "${e.id}" in ${n} tiers; it needs exactly one`);
+      }
+    }
   }
 
   // a route step that names a plate must name a real one; a phase cover must resolve like a leaf cover

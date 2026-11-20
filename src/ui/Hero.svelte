@@ -1,6 +1,6 @@
 <script lang="ts">
   import { parallax } from '../core/motion';
-  import { mediaUrl, classLabel } from '../core/tree';
+  import { mediaUrl, classLabel, href } from '../core/tree';
   import { CREDITS } from '../core/format';
   import type { Branch, Entry, Leaf } from '../core/types';
   import Glyph from './Glyph.svelte';
@@ -22,6 +22,8 @@
   const size = $derived(entry.name.length > 16 ? 'xl' : entry.name.length > 11 ? 'l' : 'm');
   const credit = $derived(CREDITS[shown.credit]?.name ?? shown.credit);
   const pad = (n: number) => String(n).padStart(2, '0');
+  // a branch tier list (Riches' Potential) names this entry's tier first, linked to that tier's list
+  const tiers = $derived(branch.categories.filter((c) => c.tierList).flatMap((c) => c.leaves.filter((l) => l.entries.includes(entry)).map((l) => ({ c, l }))));
 </script>
 
 <header class="hero" data-outline="Overview" data-cls={entry.cls} data-accent={leaf.accent} use:parallax>
@@ -48,6 +50,9 @@
   <div class="caption">
     {#key entry.id}
       <p class="eyebrow tags">
+        {#each tiers as t (t.c.id)}
+          <a class="tier" data-accent={t.l.accent} href={href.cat(branch, t.c.id, t.l.id)} title="{t.c.label}: {t.l.short}"><Glyph name={t.c.glyph} size={13} />{t.l.label}</a>
+        {/each}
         <span class="leaf">{leaf.label}</span>
         <span class="cls"><Glyph name={entry.cls} size={13} />{classLabel(branch, entry.cls)}</span>
         <span>{entry.kind}</span>
@@ -139,8 +144,14 @@
 
   /* ── caption ─────────────────────── */
   .caption { position: absolute; left: var(--gutter); right: var(--gutter); bottom: 34px; z-index: 1; }
-  .tags { display: flex; gap: 16px; align-items: center; color: var(--bone-2); animation: up 700ms var(--ease-out) both 300ms; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; color: var(--bone-2); animation: up 700ms var(--ease-out) both 300ms; }
   .tags .leaf { color: var(--accent); }
+  .tags .tier {
+    display: inline-flex; gap: 6px; align-items: center; padding: 3px 9px 3px 7px;
+    color: var(--accent); background: var(--accent-dim); border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+    border-radius: 2px; text-decoration: none; transition: border-color var(--t-micro);
+  }
+  .tags .tier:hover, .tags .tier:focus-visible { border-color: var(--accent); }
   .tags .cls { display: inline-flex; gap: 6px; align-items: center; color: var(--cls); }
   .name { margin: 14px 0 0 -4px; font-weight: 500; text-shadow: 0 6px 40px rgba(0, 0, 0, 0.6); }
   .name.m { font-size: clamp(60px, 7.4vw, 118px); }

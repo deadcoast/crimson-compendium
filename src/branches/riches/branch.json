@@ -207,6 +207,61 @@
  ],
  "categories": [
   {
+   "id": "potential",
+   "label": "Potential",
+   "glyph": "coin",
+   "accent": "gold",
+   "subtitle": "Fortune, Income, Groundwork",
+   "blurb": "Every method in one of three tiers by what it can pay you, across both classes: a Gold Bar or more per payout, money below that, or no money of its own.",
+   "where": {
+    "tags": [
+     "fortune",
+     "income",
+     "groundwork"
+    ]
+   },
+   "tierList": true,
+   "leaves": [
+    {
+     "id": "fortune",
+     "label": "Fortune",
+     "accent": "gold",
+     "short": "Pays Gold Bars, or a Gold Bar's worth (500 Silver) or more per payout.",
+     "where": {
+      "tags": [
+       "fortune"
+      ]
+     }
+    },
+    {
+     "id": "income",
+     "label": "Income",
+     "accent": "bone",
+     "short": "Pays money, but less than a Gold Bar's worth per payout.",
+     "where": {
+      "tags": [
+       "income"
+      ]
+     }
+    },
+    {
+     "id": "groundwork",
+     "label": "Groundwork",
+     "accent": "brass",
+     "short": "No money of its own on record: it multiplies, converts, houses or unlocks what pays.",
+     "where": {
+      "tags": [
+       "groundwork"
+      ]
+     }
+    }
+   ],
+   "cover": {
+    "entry": "gold-bar-crafting",
+    "role": "hero"
+   }
+  },
+  {
    "id": "management",
    "label": "Management",
    "glyph": "management",

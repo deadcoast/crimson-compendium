@@ -146,6 +146,9 @@ export interface CategoryDef {
   cover: LeafCover;
   /** which entry field the list's third line shows instead of the trait */
   line?: 'egg';
+  /** a tier list over the whole branch: every entry sits in exactly one of its leaves (the registry
+   *  refuses anything else) and the plate's hero shows that leaf first, linked to its list */
+  tierList?: boolean;
 }
 
 /** A category leaf after registry resolution: concrete members, in rank order. */
