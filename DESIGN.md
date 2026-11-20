@@ -113,7 +113,7 @@ Rules added while building the Mounts branch (Claude's calls, not in the brief):
   - *Ships category*, after Flying, split by rarity: 4 Legendary (built from blueprints) and 16 Engineered (3 Greymane ships your comrades build, 9 regional ships and 4 rowboats sold by Ship Managers). The Sturdy Tawny and Sand-Colored Rowboats each come in a second colour, recorded as variants.
   - *Sea turtles by species* (Revision 3's rule): Green, Hawksbill, Loggerhead, Olive Ridley and Hydrothermal, plus the Giant Manta Ray. `#mounts-sea-turtle` opens the Green Sea Turtle, which keeps Game8's action shot captioned as an unnamed species.
   - *Kept out after checking:* the Heavy Assault A.T.A.G. is borrowed from Gorthak hangars and no blueprint builds one (Gaming ProMax lists three craftable variants). The Race Horse and Black Bear have no source showing they can be kept; Game8's "Black Bear" is the Clawed Bear.
-  - *Counts after M2:* 80 mounts (36 added, 3 removed). DLC: 19 sea mounts, 20 ships and the A.T.A.G. refit. Flying: Blackstar, the Wyvern and three balloons. Mechanical: two mechs and three balloons. The Easter Eggs cover moved to the Leaping Kuku Bird.
+  - *Counts after M2:* 80 mounts: 48, plus 36 new plates, minus 3 temporary rides and the old Sea Turtle plate (now the Green Sea Turtle). DLC: 19 sea mounts, 20 ships and the A.T.A.G. refit. Flying: Blackstar, the Wyvern and three balloons. Mechanical: two mechs and three balloons. The Easter Eggs cover moved to the Leaping Kuku Bird.
 
 ## Riches tree — decisions
 

@@ -6,7 +6,7 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
 
 ### Added
 
-- **Full mount roster (M2)**: 80 mounts you can keep, up from 48. Each new plate has a real in-game image, its sources and rated tiers.
+- **Full mount roster (M2)**: 80 mounts you can keep, up from 48: 36 new plates, minus the 3 temporary rides removed and the old Sea Turtle plate, which became the Green Sea Turtle. Each new plate has a real in-game image, its sources and rated tiers.
   - **Ships**, a new category and a fourth terrain class, Surface: the four legendary ships (Flagship of the East, Assault Ship of the East, Phantom Ship, The Drunken Catfish), the Small, Medium and Large Greymane Ships your comrades build, the Hernandian, Delesyian and Demenissian ships in three sizes, and four rowboats. Each plate shows the in-game shop or fleet screen, Health and hold, and Movement Speed, Acceleration and Handling.
   - Mounts that were hidden as variants now have their own plates: Cloudcruiser, Skystreaker, Swift Wolf, Large White Wolf and High-Mobility A.T.A.G.
   - Green, Hawksbill, Loggerhead, Olive Ridley and Hydrothermal sea turtles, the Giant Manta Ray, the Grizzly Bear, the Freight and Trading Wagons, and the Hernandian Soldier's and Calphadean Scout's Horses.

@@ -173,7 +173,7 @@ Flying, as you can keep it: Blackstar (a summon on a cooldown), Wyvern, Cloudcar
 
 ### M2 result (2026-11-19)
 
-80 mounts: 36 added and 3 temporary rides removed. Every new plate has a real in-game image (crimsondesert.gg, The Games Wiki and Fextralife icons, Game8 ship screens, GamesHedge map and on-site shots) and at least two sources. `DESIGN.md` › Revision 4 records the decisions.
+80 mounts: 48, plus 36 new plates, minus 3 temporary rides and the old Sea Turtle plate (now the Green Sea Turtle). Every new plate has a real in-game image (crimsondesert.gg, The Games Wiki and Fextralife icons, Game8 ship screens, GamesHedge map and on-site shots) and at least two sources. `DESIGN.md` › Revision 4 records the decisions.
 
 ## Next
 
