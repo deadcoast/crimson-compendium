@@ -46,7 +46,8 @@ export function lint() {
   const dirs = readdirSync(join(ROOT, 'src/branches')).filter((d) => existsSync(join(ROOT, 'src/branches', d, 'branch.json')));
   // a plate with a `base` takes the fields it leaves out from that plate, as src/branches/registry.ts does
   const raw = Object.fromEntries(dirs.map((d) => [d, read(`src/branches/${d}/entries.json`)]));
-  const find = (ref) => { const [b, id] = String(ref).split('/'); return raw[b]?.find((e) => e.id === id); };
+  const REF = /^[a-z0-9-]+\/[a-z0-9-]+$/; // exactly "branch/entry"
+  const find = (ref) => { if (!REF.test(String(ref))) return undefined; const [b, id] = String(ref).split('/'); return raw[b]?.find((e) => e.id === id); };
   const INHERIT = ['kind', 'region', 'area', 'requires', 'routes', 'location', 'notes', 'variants', 'media', 'since'];
 
   for (const id of dirs) {
@@ -84,9 +85,11 @@ export function lint() {
     }
     for (const e of entries) {
       for (const ref of [...(e.base ? [e.base] : []), ...(e.also ?? [])]) {
-        if (String(ref).split('/')[0] === id) bad(e.id, `"${ref}" points into its own branch; cross-branch links name another branch`);
+        if (!REF.test(String(ref))) bad(e.id, `"${ref}" is not "branch/entry"`);
+        else if (String(ref).split('/')[0] === id) bad(e.id, `"${ref}" points into its own branch; cross-branch links name another branch`);
         else if (!find(ref)) bad(e.id, `"${ref}" names no plate`);
       }
+      if (e.base && find(e.base)?.base) bad(e.id, `base "${e.base}" has a base of its own; point at the source plate`);
       if (!e.media) { bad(e.id, 'no media (and no base to take it from)'); continue; }
       for (const f of ['name', 'kind', 'region', 'trait', 'summary', 'since']) text(e.id, e[f], f);
       for (const m of def.metrics) {
@@ -143,6 +146,7 @@ export function lint() {
       if (c.src || c.from) return image(where, c, 'cover');
       const e = byId.get(c.entry);
       if (!e) return bad(where, `cover entry "${c.entry}" does not exist`);
+      if (!e.media) return bad(where, `cover entry "${c.entry}" has no media`);
       const m = c.capture !== undefined ? e.media.captures[c.capture] : c.role === 'portrait' ? e.media.portrait : (e.media.hero ?? e.media.portrait);
       if (!m?.src) bad(where, c.capture !== undefined ? `cover capture ${c.capture} does not exist on ${e.id} (${e.media.captures.length} captures)` : `cover resolves to no image on ${e.id}`);
     };

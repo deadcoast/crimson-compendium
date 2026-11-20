@@ -23,7 +23,11 @@ const RAW: Record<string, Entry[]> = {
   qol: qolEntries as unknown as Entry[],
 };
 
+/** A cross-branch reference is exactly "branch/entry", both parts ids; anything else names no plate. */
+export const REF = /^[a-z0-9-]+\/[a-z0-9-]+$/;
+
 function findRaw(ref: string): Entry | undefined {
+  if (!REF.test(ref)) return undefined;
   const [b, id] = ref.split('/');
   return RAW[b]?.find((e) => e.id === id);
 }
@@ -32,6 +36,7 @@ function findRaw(ref: string): Entry | undefined {
 function inherit(branchId: string, entries: Entry[]): Entry[] {
   return entries.map((e) => {
     if (!e.base) return e;
+    if (!REF.test(e.base)) throw new Error(`${branchId}/${e.id}: base "${e.base}" is not "branch/entry"`);
     const src = findRaw(e.base);
     if (!src) throw new Error(`${branchId}/${e.id}: base "${e.base}" does not exist`);
     if (src.base) throw new Error(`${branchId}/${e.id}: base "${e.base}" has a base of its own; point at the source plate`);
@@ -146,8 +151,8 @@ function define(def: BranchDef, entries: Entry[], sections: PlateSection[] = [])
 }
 
 export const branches: Branch[] = [
-  define(mountsDef as unknown as BranchDef, RAW.mounts, [MountRecord]),
-  define(richesDef as unknown as BranchDef, RAW.riches, [RichesLedger]),
+  define(mountsDef as unknown as BranchDef, inherit('mounts', RAW.mounts), [MountRecord]),
+  define(richesDef as unknown as BranchDef, inherit('riches', RAW.riches), [RichesLedger]),
   define(qolDef as unknown as BranchDef, inherit('qol', RAW.qol), [QolRemedy]),
 ];
 
@@ -155,6 +160,7 @@ export const branches: Branch[] = [
 for (const b of branches) {
   for (const e of b.entries) {
     for (const ref of [...(e.base ? [e.base] : []), ...(e.also ?? [])]) {
+      if (!REF.test(ref)) throw new Error(`${b.id}/${e.id}: "${ref}" is not "branch/entry"`);
       const [bid, id] = ref.split('/');
       const target = branches.find((x) => x.id === bid);
       if (!target || target.id === b.id) throw new Error(`${b.id}/${e.id}: "${ref}" must name a plate in another branch`);

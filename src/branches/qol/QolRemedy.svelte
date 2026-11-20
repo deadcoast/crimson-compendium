@@ -10,7 +10,7 @@
 
   type Figure = { label: string; value: string; basis: 'patch' | 'guide' | 'screenshot' | 'player' | 'sum'; by: string };
   type Patch = { v: string; note: string; by: string };
-  type Remedy = { fixes: string; gain: string; figures: Figure[]; patches?: Patch[]; pairs?: string[]; watch?: string[] };
+  type Remedy = { fixes: string; gain: string; figures?: Figure[]; patches?: Patch[]; pairs?: string[]; watch?: string[] };
 
   let { entry, branch }: { entry: Entry; branch: Branch } = $props();
 
@@ -50,7 +50,7 @@
       </div>
     </div>
 
-    {#if remedy.figures.length}
+    {#if remedy.figures?.length}
       <ol class="figures">
         {#each remedy.figures as f, i (f.label)}
           <li style:--i={i} data-basis={f.basis}>
