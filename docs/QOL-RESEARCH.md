@@ -85,7 +85,30 @@ These are the research notes for the Quality of Life tree, as of 2026-11-20 (Cha
 | 1.04: Easy, Normal and Hard under Settings; switchable on an existing save. Easy cuts damage taken, lowers enemy stats and widens Parry and Dodge windows | patch · VGC, Wccftech, Gfinity, Method |
 | 1.02: Headgear Visibility (Settings → Language & Gameplay) and a tap-to-sprint option | patch · Press Start, Vulkk |
 | 1.03: weapon visibility by type | patch · Vulkk |
-| Re-blockades (patch of 2 May 2026): frequent, once in a blue moon (default) or none; 13 factions, 23 areas | guide · PC Gamer |
+| **2.05.01 menu**: the Others tab → Settings → Gameplay lists Game Difficulty, Re-Blockade Frequency, View 3D Stronghold Details on the Map, Display Kliff's / Damiane's / Oongka's Accessories, Display Headgear, Display Melee Weapons, Display Sheath, Display Ranged Weapons, Fix Minimap Rotation, Fast Forward Speed (to 4.0), Display All Guides, Show Group Icon in Inventory | screenshot · your in-game capture, `tools/sources/settings-gameplay-2.05.01.webp` |
+| Re-blockades (1.05.00, 2 May 2026): Re-Blockade Frequency under Settings > Gameplay. Stable: none. Conflict (default): intermittent. War: frequent. A change applies after the re-blockades already planned; they roll only after a loading screen (save and load, or sleeping). 13 factions, 23 forts and quarries | patch · MP1st (official notes), Mythras, The Games Wiki, Nerds Chalk |
+| 1.08: re-blockades extended to bandit camps and ruins · 1.10: re-blockade reworked with stronghold defence | guide · Mythras · patch · Windows Central |
+| PC Gamer's launch report named the options "frequent, once in a blue moon, none"; superseded by the notes and the menu | guide · PC Gamer |
+| 1.01: minimap can lock north to the top; keys and anvils marked on it | patch · DSOGaming |
+| 1.00.02: recently viewed cutscenes fast-forward · 1.03: Fast Forward Speed to 4×, and dialogue without letterbox fast-forwards | patch · Beebom, PC Gamer, Insider Gaming |
+| 1.06: Display Sheath | guide · Nerds Chalk, The Games Wiki |
+| 1.03: camera sliders in Accessibility (Visual Range, Vertical and Horizontal Offset, Auto-follow, Lookahead); over-the-shoulder at 5 / 0 / 40 | guide · Gfinity, PC Gamer, Gaming ProMax |
+| 1.02: Movement Controls (tap-to-sprint) · 1.04: keyboard and mouse customisation · 1.18: Lock-on Camera Rotation Manual / Semi-auto / Auto | patch · Vulkk, DSOGaming |
+| 1.03: Minimum Font Size (restart) · 1.04: Colorblind, Photosensitive, Chromatic Aberration, larger subtitles | patch · DSOGaming, The Games Wiki |
+
+## Patch sweep, 1.00.02 to 2.05.01 (Q2)
+
+| Fact | Basis · source |
+|---|---|
+| 1.00.03: keyboard shortcuts (I Inventory, K Skills) · 1.04: inventory category tabs · 1.16: explosives stack by 10 and take quick slots · 2.05.01: treasure maps, wanted posters and books examined via View Details → Examine | patch · Insider Gaming, DSOGaming, Wccftech |
+| 1.06: Extraction at any Smithy; Abyss Artifacts and Aeserion's Scales return 100%, common materials about 70%; not below the item's base refinement; item and Abyss Gear kept; Camp smithy (Alec) after Second Upgrade: Gathered Will | guide · Vulkk, The Games Wiki, Nerds Chalk, ConsolePulse |
+| Extraction fee: XboxPlay says Silver; Vulkk says none | guide · XboxPlay, Vulkk (conflict, on the plate) |
+| 1.11: lost rare equipment (quests, chests, special sources) back in shops within 7 days, above its value; Carl's Recover Items tab for Kuku Pot items | patch · DSOGaming · guide · Nerds Chalk, All Things How, XboxPlay |
+| 1.11: four Pets challenges (Journal → Challenges → Continued Journey → Pets); 100 registered, 50 at camp | patch · DSOGaming, Vulkk |
+| Pet Accessory slot: Hunter's Sigil (bird pets gather, 1.13), Sigil of Valor (dogs, Baby Wyverns, Iron Eagle, Phoenix fight), Sigil of Bonding (cats); sold by Lacey, roaming the Florindale road after about 9 a.m. | guide · ConsolePulse, Vulkk |
+| 1.16: map filter registration from the horse or wagon inventory · 1.18: bell-revealed areas drawn apart · 2.04: L3 centres the map on your summoned ship, horse, wagon or Blackstar | patch · DSOGaming, KeenGamer |
+| Carried inventory caps at 240 slots; past it, expansion rewards become material boxes | guide · Gaming Ideology |
+| 2.05.00: mounts can be summoned at housing outside villages (on the Mounts horse Inventory notes) | patch · Twisted Voxel |
 
 ## Ships and pioneering
 

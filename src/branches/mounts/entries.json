@@ -184,7 +184,12 @@
    }
   ],
   "since": "Base game",
-  "variants": []
+  "variants": [],
+  "kit": {
+   "profile": "horse",
+   "carry": 1,
+   "note": "Royler and Camora carry one slot, like an ordinary horse."
+  }
  },
  {
   "id": "rokade",
@@ -219,7 +224,8 @@
   },
   "tags": [
    "all-around-best",
-   "vertical"
+   "vertical",
+   "cargo"
   ],
   "requires": [
    "Stamina Lv. 6 minimum (Lv. 8 recommended)"
@@ -367,7 +373,12 @@
    }
   ],
   "since": "Base game",
-  "variants": []
+  "variants": [],
+  "kit": {
+   "profile": "horse",
+   "carry": 2,
+   "note": "Rokade carries two trade-goods slots from the moment it is caught (one player loaded 100 + 50 salt). A Steam thread reports a bug that hid the stablemaster’s load option for Rokade."
+  }
  },
  {
   "id": "camora",
@@ -535,7 +546,12 @@
    }
   ],
   "since": "Base game",
-  "variants": []
+  "variants": [],
+  "kit": {
+   "profile": "horse",
+   "carry": 1,
+   "note": "Camora and Royler carry one slot, like an ordinary horse."
+  }
  },
  {
   "id": "blackstar",
@@ -652,7 +668,8 @@
   ],
   "since": "Base game",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "dragon"
  },
  {
   "id": "silver-fang",
@@ -775,7 +792,8 @@
   ],
   "since": "Patch 1.01",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "wolf"
  },
  {
   "id": "white-bear",
@@ -896,7 +914,8 @@
   ],
   "since": "Patch 1.01",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "bear"
  },
  {
   "id": "snowwhite-deer",
@@ -1016,7 +1035,8 @@
   ],
   "since": "Patch 1.01",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "deer"
  },
  {
   "id": "icicle-edge-alpine-ibex",
@@ -1139,7 +1159,8 @@
   ],
   "since": "Patch 1.01",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "ibex"
  },
  {
   "id": "rock-tusk-warthog",
@@ -1266,7 +1287,8 @@
    }
   ],
   "since": "Patch 1.01",
-  "skills": []
+  "skills": [],
+  "kit": "warthog"
  },
  {
   "id": "ocean-drifter",
@@ -1389,7 +1411,18 @@
   ],
   "since": "DLC: Charting the Unknown",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "drifter",
+  "stats": {
+   "kind": "beast",
+   "values": [
+    1000,
+    null,
+    null,
+    null
+   ],
+   "source": "crimsondesertgg"
+  }
  },
  {
   "id": "golden-shark",
@@ -1512,7 +1545,18 @@
   ],
   "since": "DLC: Charting the Unknown",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "sea",
+  "stats": {
+   "kind": "beast",
+   "values": [
+    200,
+    null,
+    null,
+    null
+   ],
+   "source": "crimsondesertgg"
+  }
  },
  {
   "id": "pink-dolphin",
@@ -1626,7 +1670,18 @@
   ],
   "since": "DLC: Charting the Unknown",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "sea",
+  "stats": {
+   "kind": "beast",
+   "values": [
+    200,
+    null,
+    null,
+    null
+   ],
+   "source": "crimsondesertgg"
+  }
  },
  {
   "id": "pink-manta-ray",
@@ -1743,7 +1798,18 @@
   ],
   "since": "DLC: Charting the Unknown",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "sea",
+  "stats": {
+   "kind": "beast",
+   "values": [
+    200,
+    null,
+    null,
+    null
+   ],
+   "source": "crimsondesertgg"
+  }
  },
  {
   "id": "flagship-of-the-east",
@@ -1897,6 +1963,10 @@
     4
    ],
    "source": "game8"
+  },
+  "kit": {
+   "profile": "ship",
+   "note": "No source lists the Flagship’s slot layout; the outfitters’ parts are shown. No source publishes a hold size for the legendary ships."
   }
  },
  {
@@ -2112,6 +2182,10 @@
     4
    ],
    "source": "game8"
+  },
+  "kit": {
+   "profile": "ship-assault",
+   "note": "No source publishes a hold size for the legendary ships."
   }
  },
  {
@@ -2172,7 +2246,8 @@
   "location": "Built at any port. Blueprint: buried treasure on Iliya Island's south-west cliffs.",
   "notes": [
    "Game8's written stat table lists 14,000 Health; its in-game Manage Ships screenshot shows 9,200, which this plate follows.",
-   "Game8 says every port offers the build; Gaming Deputy shows it at Stoneward Harbor."
+   "Game8 says every port offers the build; Gaming Deputy shows it at Stoneward Harbor.",
+   "Health follows Game8’s in-game screenshot, Sportskeeda and XboxPlay: 9,200. Game8’s ship pages give 14,000 in their text."
   ],
   "variants": [],
   "media": {
@@ -2261,6 +2336,10 @@
     3
    ],
    "source": "game8"
+  },
+  "kit": {
+   "profile": "ship-phantom",
+   "note": "No source publishes a hold size for the legendary ships."
   }
  },
  {
@@ -2402,6 +2481,10 @@
     4
    ],
    "source": "game8"
+  },
+  "kit": {
+   "profile": "ship",
+   "note": "Game8 reports that on the Drunken Catfish the cannon slots work, but the figurehead and stern slots are blank, the middle slot is locked and none of the new sails equip. No source publishes a hold size for the legendary ships."
   }
  },
  {
@@ -2423,8 +2506,8 @@
     "basis": "No comparative speed data — rated average."
    },
    "stamina": {
-    "tier": 3,
-    "basis": "No verified stamina figure — rated average."
+    "tier": 2,
+    "basis": "300 Stamina (GamingBolt)."
    },
    "travel": {
     "tier": 2,
@@ -2467,7 +2550,8 @@
   "notes": [
    "Before patch 1.10 the egg hatched straight into an adult mount; guides written before June 2026 skip the chick stage.",
    "Want both the pet and the mount? Hatch two eggs.",
-   "Kuku Bird Saddle (+20 Defense): Driana at Calphade Saddlery or Fiona at Demeniss Saddlery, 28 Silver."
+   "Kuku Bird Saddle (+20 Defense): Driana at Calphade Saddlery or Fiona at Demeniss Saddlery, 28 Silver.",
+   "Health is GamingBolt’s 400; crimsondesert.gg lists 300. The bird grows through three levels, so the two may be different stages."
   ],
   "media": {
    "portrait": {
@@ -2547,7 +2631,18 @@
   "since": "Patch 1.06 · reworked 1.10",
   "variants": [],
   "skills": [],
-  "egg": "GameRant and TheGamer both read the Kuku Bird as Crimson Desert's Chocobo — Final Fantasy's riding bird, here with red feathers."
+  "egg": "GameRant and TheGamer both read the Kuku Bird as Crimson Desert's Chocobo — Final Fantasy's riding bird, here with red feathers.",
+  "kit": "kuku",
+  "stats": {
+   "kind": "beast",
+   "values": [
+    400,
+    300,
+    null,
+    null
+   ],
+   "source": "gamingbolt"
+  }
  },
  {
   "id": "giant-red-iguana",
@@ -2568,8 +2663,8 @@
     "basis": "Moves swiftly over dunes and rock; no comparative figure — rated average."
    },
    "stamina": {
-    "tier": 3,
-    "basis": "No verified stamina figure — rated average. Every spit costs stamina."
+    "tier": 2,
+    "basis": "300 Stamina (GamingBolt); every spit costs some."
    },
    "travel": {
     "tier": 3,
@@ -2646,7 +2741,18 @@
   ],
   "since": "Patch 1.06",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "iguana",
+  "stats": {
+   "kind": "beast",
+   "values": [
+    400,
+    300,
+    null,
+    null
+   ],
+   "source": "gamingbolt"
+  }
  },
  {
   "id": "giant-green-iguana",
@@ -2667,8 +2773,8 @@
     "basis": "Moves swiftly over dunes and rock; rated average."
    },
    "stamina": {
-    "tier": 3,
-    "basis": "No verified stamina figure — rated average."
+    "tier": 2,
+    "basis": "300 Stamina (GamingBolt)."
    },
    "travel": {
     "tier": 3,
@@ -2749,7 +2855,18 @@
   ],
   "since": "Patch 1.06",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "iguana",
+  "stats": {
+   "kind": "beast",
+   "values": [
+    400,
+    300,
+    null,
+    null
+   ],
+   "source": "gamingbolt"
+  }
  },
  {
   "id": "red-feathered-raptor",
@@ -2770,8 +2887,8 @@
     "basis": "No comparative speed data — rated average."
    },
    "stamina": {
-    "tier": 3,
-    "basis": "No verified stamina figure — rated average."
+    "tier": 2,
+    "basis": "300 Stamina (GamingBolt)."
    },
    "travel": {
     "tier": 3,
@@ -2839,7 +2956,18 @@
   ],
   "since": "Patch 1.06",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "special-bare",
+  "stats": {
+   "kind": "beast",
+   "values": [
+    400,
+    300,
+    null,
+    null
+   ],
+   "source": "gamingbolt"
+  }
  },
  {
   "id": "lion",
@@ -2966,7 +3094,8 @@
   "since": "Patch 1.06",
   "variants": [],
   "skills": [],
-  "egg": "The lion you can ride is a circus act: steal it from The Laughing Marionette — Game8 notes the ride prompt only appears with your Mask off."
+  "egg": "The lion you can ride is a circus act: steal it from The Laughing Marionette — Game8 notes the ride prompt only appears with your Mask off.",
+  "kit": "special-bare"
  },
  {
   "id": "tiger",
@@ -3086,7 +3215,8 @@
   ],
   "since": "Patch 1.06",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "special-bare"
  },
  {
   "id": "brown-bear",
@@ -3204,7 +3334,8 @@
    }
   ],
   "since": "Patch 1.06",
-  "skills": []
+  "skills": [],
+  "kit": "bear"
  },
  {
   "id": "clawed-bear",
@@ -3293,7 +3424,8 @@
   ],
   "since": "Patch 1.06",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "bear"
  },
  {
   "id": "grizzly-bear",
@@ -3394,7 +3526,8 @@
     35
    ],
    "source": "crimsondesertgg"
-  }
+  },
+  "kit": "bear"
  },
  {
   "id": "wolf",
@@ -3483,7 +3616,8 @@
    }
   ],
   "since": "Patch 1.06",
-  "skills": []
+  "skills": [],
+  "kit": "wolf"
  },
  {
   "id": "swift-wolf",
@@ -3581,7 +3715,8 @@
     20
    ],
    "source": "crimsondesertgg"
-  }
+  },
+  "kit": "wolf"
  },
  {
   "id": "large-white-wolf",
@@ -3707,7 +3842,8 @@
     20
    ],
    "source": "crimsondesertgg"
-  }
+  },
+  "kit": "wolf"
  },
  {
   "id": "rosehorn-deer",
@@ -3728,8 +3864,8 @@
     "basis": "No comparative speed data — rated average."
    },
    "stamina": {
-    "tier": 3,
-    "basis": "Described with “exceptional endurance”; no verified figure."
+    "tier": 2,
+    "basis": "300 Stamina (GamingBolt), matching its “exceptional endurance”."
    },
    "travel": {
     "tier": 3,
@@ -3783,7 +3919,18 @@
   ],
   "since": "Patch 1.06",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "deer",
+  "stats": {
+   "kind": "beast",
+   "values": [
+    400,
+    300,
+    null,
+    null
+   ],
+   "source": "gamingbolt"
+  }
  },
  {
   "id": "ibex",
@@ -3867,7 +4014,8 @@
   ],
   "since": "Patch 1.06",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "ibex"
  },
  {
   "id": "sandwalk-camel",
@@ -3888,8 +4036,8 @@
     "basis": "No comparative speed data — rated average."
    },
    "stamina": {
-    "tier": 3,
-    "basis": "No verified stamina figure — rated average."
+    "tier": 5,
+    "basis": "100 Stamina (GamingBolt), the floor among beasts."
    },
    "travel": {
     "tier": 3,
@@ -3968,7 +4116,18 @@
   ],
   "since": "Patch 1.06",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "camel",
+  "stats": {
+   "kind": "beast",
+   "values": [
+    400,
+    100,
+    null,
+    null
+   ],
+   "source": "gamingbolt"
+  }
  },
  {
   "id": "boar",
@@ -4016,7 +4175,9 @@
    }
   ],
   "location": "Ridden by Savage Fangs raiders, Tashkalp and the Crimson Desert.",
-  "notes": [],
+  "notes": [
+   "No source publishes the common boar’s stats; the Rock Tusk Warthog’s are on its own plate."
+  ],
   "media": {
    "portrait": {
     "from": "https://img.game8.co/4501079/24e92433a5605065b9eee02442592f9f.png/show",
@@ -4042,7 +4203,8 @@
   ],
   "since": "Patch 1.06",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "special-bare"
  },
  {
   "id": "wyvern",
@@ -4167,7 +4329,8 @@
   ],
   "since": "Patch 1.10",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "wyvern"
  },
  {
   "id": "shark",
@@ -4267,7 +4430,18 @@
   ],
   "since": "DLC: Charting the Unknown",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "sea",
+  "stats": {
+   "kind": "beast",
+   "values": [
+    200,
+    null,
+    null,
+    null
+   ],
+   "source": "crimsondesertgg"
+  }
  },
  {
   "id": "hammerhead-shark",
@@ -4380,7 +4554,18 @@
   ],
   "since": "DLC: Charting the Unknown",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "sea",
+  "stats": {
+   "kind": "beast",
+   "values": [
+    200,
+    null,
+    null,
+    null
+   ],
+   "source": "crimsondesertgg"
+  }
  },
  {
   "id": "orca",
@@ -4496,7 +4681,18 @@
   ],
   "since": "DLC: Charting the Unknown",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "sea",
+  "stats": {
+   "kind": "beast",
+   "values": [
+    200,
+    null,
+    null,
+    null
+   ],
+   "source": "crimsondesertgg"
+  }
  },
  {
   "id": "green-sea-turtle",
@@ -4619,7 +4815,8 @@
     80
    ],
    "source": "crimsondesertgg"
-  }
+  },
+  "kit": "sea"
  },
  {
   "id": "hawksbill-sea-turtle",
@@ -4738,7 +4935,8 @@
     80
    ],
    "source": "crimsondesertgg"
-  }
+  },
+  "kit": "sea"
  },
  {
   "id": "loggerhead-sea-turtle",
@@ -4852,7 +5050,8 @@
     80
    ],
    "source": "crimsondesertgg"
-  }
+  },
+  "kit": "sea"
  },
  {
   "id": "olive-ridley-sea-turtle",
@@ -4976,7 +5175,8 @@
     80
    ],
    "source": "crimsondesertgg"
-  }
+  },
+  "kit": "sea"
  },
  {
   "id": "hydrothermal-turtle",
@@ -5100,7 +5300,8 @@
     80
    ],
    "source": "crimsondesertgg"
-  }
+  },
+  "kit": "sea"
  },
  {
   "id": "sunfish",
@@ -5213,7 +5414,18 @@
   ],
   "since": "DLC: Charting the Unknown",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "sea",
+  "stats": {
+   "kind": "beast",
+   "values": [
+    200,
+    null,
+    null,
+    null
+   ],
+   "source": "crimsondesertgg"
+  }
  },
  {
   "id": "dolphin",
@@ -5313,7 +5525,18 @@
   ],
   "since": "DLC: Charting the Unknown",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "sea",
+  "stats": {
+   "kind": "beast",
+   "values": [
+    200,
+    null,
+    null,
+    null
+   ],
+   "source": "crimsondesertgg"
+  }
  },
  {
   "id": "manta-ray",
@@ -5410,7 +5633,18 @@
   ],
   "since": "DLC: Charting the Unknown",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "sea",
+  "stats": {
+   "kind": "beast",
+   "values": [
+    200,
+    null,
+    null,
+    null
+   ],
+   "source": "crimsondesertgg"
+  }
  },
  {
   "id": "giant-manta-ray",
@@ -5525,7 +5759,8 @@
     null
    ],
    "source": "crimsondesertgg"
-  }
+  },
+  "kit": "sea"
  },
  {
   "id": "eagle-ray",
@@ -5633,7 +5868,18 @@
   ],
   "since": "DLC: Charting the Unknown",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "sea",
+  "stats": {
+   "kind": "beast",
+   "values": [
+    200,
+    null,
+    null,
+    null
+   ],
+   "source": "crimsondesertgg"
+  }
  },
  {
   "id": "electric-ray",
@@ -5741,7 +5987,18 @@
   ],
   "since": "DLC: Charting the Unknown",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "sea",
+  "stats": {
+   "kind": "beast",
+   "values": [
+    200,
+    null,
+    null,
+    null
+   ],
+   "source": "crimsondesertgg"
+  }
  },
  {
   "id": "spotted-seal",
@@ -5849,7 +6106,18 @@
   ],
   "since": "DLC: Charting the Unknown",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "sea",
+  "stats": {
+   "kind": "beast",
+   "values": [
+    100,
+    null,
+    null,
+    null
+   ],
+   "source": "crimsondesertgg"
+  }
  },
  {
   "id": "herspia",
@@ -6014,7 +6282,8 @@
     "title": "Herspia — Fextralife Wiki"
    }
   ],
-  "since": "Base game"
+  "since": "Base game",
+  "kit": "horse"
  },
  {
   "id": "priden",
@@ -6163,7 +6432,8 @@
     "title": "Priden — Fextralife Wiki"
    }
   ],
-  "since": "Base game"
+  "since": "Base game",
+  "kit": "horse"
  },
  {
   "id": "brianto",
@@ -6314,7 +6584,8 @@
     "title": "Brianto — Fextralife Wiki"
    }
   ],
-  "since": "Base game"
+  "since": "Base game",
+  "kit": "horse"
  },
  {
   "id": "elantrima",
@@ -6459,7 +6730,12 @@
     "title": "Elantrima — Fextralife Wiki"
    }
   ],
-  "since": "Base game"
+  "since": "Base game",
+  "kit": {
+   "profile": "horse",
+   "carry": 2,
+   "note": "Elantrima carries an extra trade-goods slot over the other breeds — the hauler’s breed."
+  }
  },
  {
   "id": "numont",
@@ -6604,7 +6880,8 @@
     "title": "Numont — Fextralife Wiki"
    }
   ],
-  "since": "Base game"
+  "since": "Base game",
+  "kit": "horse"
  },
  {
   "id": "hernandian-soldiers-horse",
@@ -6746,7 +7023,8 @@
     ]
    },
    "source": "thegameswiki"
-  }
+  },
+  "kit": "horse"
  },
  {
   "id": "calphadean-scouts-horse",
@@ -6885,7 +7163,8 @@
     ]
    },
    "source": "thegameswiki"
-  }
+  },
+  "kit": "horse"
  },
  {
   "id": "cloudcart",
@@ -7025,7 +7304,18 @@
    }
   ],
   "since": "Base game",
-  "skills": []
+  "skills": [],
+  "kit": "balloon",
+  "stats": {
+   "kind": "beast",
+   "values": [
+    300,
+    null,
+    null,
+    null
+   ],
+   "source": "gamingbolt"
+  }
  },
  {
   "id": "cloudcruiser",
@@ -7136,7 +7426,8 @@
     null
    ],
    "source": "crimsondesertgg"
-  }
+  },
+  "kit": "balloon"
  },
  {
   "id": "skystreaker",
@@ -7247,7 +7538,8 @@
     null
    ],
    "source": "crimsondesertgg"
-  }
+  },
+  "kit": "balloon"
  },
  {
   "id": "atag",
@@ -7381,7 +7673,18 @@
   ],
   "since": "Base game · marine parts DLC",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": "atag",
+  "stats": {
+   "kind": "beast",
+   "values": [
+    2500,
+    null,
+    null,
+    null
+   ],
+   "source": "gamingbolt"
+  }
  },
  {
   "id": "high-mobility-atag",
@@ -7481,7 +7784,8 @@
     null
    ],
    "source": "thegameswiki"
-  }
+  },
+  "kit": "atag"
  },
  {
   "id": "pywel-wagon",
@@ -7576,7 +7880,21 @@
   ],
   "since": "Base game",
   "variants": [],
-  "skills": []
+  "skills": [],
+  "kit": {
+   "profile": "wagon",
+   "carryLabel": "Smallest hold"
+  },
+  "stats": {
+   "kind": "beast",
+   "values": [
+    1000,
+    null,
+    null,
+    null
+   ],
+   "source": "gamingbolt"
+  }
  },
  {
   "id": "freight-wagon",
@@ -7695,6 +8013,10 @@
     null
    ],
    "source": "gamingbolt"
+  },
+  "kit": {
+   "profile": "wagon",
+   "carryLabel": "Middle hold"
   }
  },
  {
@@ -7813,6 +8135,10 @@
     null
    ],
    "source": "gamingbolt"
+  },
+  "kit": {
+   "profile": "wagon",
+   "carryLabel": "Largest hold"
   }
  },
  {
@@ -7937,7 +8263,8 @@
     1
    ],
    "source": "game8"
-  }
+  },
+  "kit": "ship"
  },
  {
   "id": "medium-greymane-ship",
@@ -8048,7 +8375,8 @@
     1
    ],
    "source": "game8"
-  }
+  },
+  "kit": "ship"
  },
  {
   "id": "large-greymane-ship",
@@ -8161,6 +8489,10 @@
     2
    ],
    "source": "game8"
+  },
+  "kit": {
+   "profile": "ship",
+   "note": "No source publishes the Large Greymane Ship’s hold."
   }
  },
  {
@@ -8292,7 +8624,8 @@
     1
    ],
    "source": "game8"
-  }
+  },
+  "kit": "ship"
  },
  {
   "id": "large-delesyian-ship",
@@ -8404,7 +8737,8 @@
     1
    ],
    "source": "game8"
-  }
+  },
+  "kit": "ship"
  },
  {
   "id": "large-demenissian-ship",
@@ -8516,7 +8850,8 @@
     3
    ],
    "source": "game8"
-  }
+  },
+  "kit": "ship"
  },
  {
   "id": "medium-hernandian-ship",
@@ -8641,7 +8976,8 @@
     1
    ],
    "source": "game8"
-  }
+  },
+  "kit": "ship"
  },
  {
   "id": "medium-delesyian-ship",
@@ -8752,7 +9088,8 @@
     1
    ],
    "source": "game8"
-  }
+  },
+  "kit": "ship"
  },
  {
   "id": "medium-demenissian-ship",
@@ -8863,7 +9200,8 @@
     2
    ],
    "source": "game8"
-  }
+  },
+  "kit": "ship"
  },
  {
   "id": "small-hernandian-ship",
@@ -8988,7 +9326,8 @@
     1
    ],
    "source": "game8"
-  }
+  },
+  "kit": "ship"
  },
  {
   "id": "small-delesyian-ship",
@@ -9099,7 +9438,8 @@
     1
    ],
    "source": "game8"
-  }
+  },
+  "kit": "ship"
  },
  {
   "id": "small-demenissian-ship",
@@ -9210,7 +9550,8 @@
     1
    ],
    "source": "game8"
-  }
+  },
+  "kit": "ship"
  },
  {
   "id": "humble-rowboat",
@@ -9329,7 +9670,8 @@
     1
    ],
    "source": "game8"
-  }
+  },
+  "kit": "rowboat"
  },
  {
   "id": "balanced-rowboat",
@@ -9434,7 +9776,8 @@
     1
    ],
    "source": "game8"
-  }
+  },
+  "kit": "rowboat"
  },
  {
   "id": "sturdy-tawny-rowboat",
@@ -9542,7 +9885,8 @@
     1
    ],
    "source": "game8"
-  }
+  },
+  "kit": "rowboat"
  },
  {
   "id": "sand-colored-rowboat",
@@ -9652,6 +9996,7 @@
     1
    ],
    "source": "game8"
-  }
+  },
+  "kit": "rowboat"
  }
 ]

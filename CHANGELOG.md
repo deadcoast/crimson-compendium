@@ -6,7 +6,14 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
 
 ### Added
 
-- **Quality of Life**, a third branch: 39 upgrades that take the friction out of Pywel.
+- **Inventory on every mount plate**: what the mount carries and what it wears, after its Record.
+  - *Carries*: trade-goods slots or hold as a figure, with the rules beside it. Horses hold one slot of packed trade goods (Elantrima and Rokade two); a slot stacks 10 or 100 packaged goods or 5 or 50 unpackaged; calling a loaded horse loses part of the load. Ships show their hold, wagons their rank by size. Mounts with no documented cargo say so.
+  - *Equipment*: a card per slot. Horse tack's five slots with what each raises, the early pieces and the best (Delesyian Saddle, Four-Leaf Horseshoes 8 Attack, Delesyian or Hagmund Champron 15 Attack, Hagmund Barding 80 Defense); each species' saddle and the saddler who sells it; Blackstar's Abyssal Dragon Armor; the A.T.A.G.'s weapons, Mk I–III plating, boots and thrusterpacks and the marine set; wagon barding; ship sails, cannons, figureheads, sterns and the teleporter with outfitter prices.
+  - *Where to get it*, *Feeding and healing* for horses, and the menu path.
+  - Recorded stats for 23 more mounts: the sea mounts, Ocean Drifter, iguanas, raptor, Rosehorn Deer, Kuku Bird, camel, A.T.A.G., Pywel Wagon and Cloudcart. 79 of 80 now have a Record.
+- **Quality of Life**, seven new upgrades from a sweep of every patch through 2.05.01: Fast Forward Speed, Camera and Controls, Readability and Comfort, Inventory Screen Tools, Pet Sigils, Extraction and Lost Gear Recovery. The tree has 46.
+- The settings plates show the game's own 2.05.01 Gameplay menu (`tools/sources`, read by `media.py` as `local:`).
+- **Quality of Life**, a third branch: 39 upgrades at launch that take the friction out of Pywel.
   - Nine leaves: Travel, Underwater, Inventory, Gear, Camp, Money, Facilities, Ships & Pioneering, Settings.
   - Ratings: Impact, Reach and Unlock, I–V. The classes are *Built-in* (settings, patch features, systems) and *Unlock* (things you earn, find, buy or build).
   - **Priority**, a tier list worked out from the ratings: Essential, Worthwhile, Situational.
@@ -55,6 +62,10 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
 
 ### Changed
 
+- **Re-blockades** now give the real menu path, Others → Settings → Gameplay → Re-Blockade Frequency, and the real options: Stable (none), Conflict (the default) and War. The plate adds how a change takes effect, the 1.08 and 1.10 changes, and the in-game screenshot.
+- **Settings plates** use the 2.05.01 menu: Difficulty is the first row of Others → Settings → Gameplay; Display Toggles lists every display switch in that tab (headgear, melee and ranged weapons, sheath, each character's accessories, 3D stronghold details, guides, group icon); Map Markers adds the minimap north lock, key and anvil icons, the 1.16 map filter, 1.18 bell-revealed areas and 2.04's map focus. Tap-to-sprint moved to Camera and Controls.
+- **Pets** reflect 1.11: up to 100 registered and 50 at camp, not 30; pets with a Sigil of Valor fight. **Bags** give the 240-slot carried cap.
+- **Riches** wagon and ship plates link to the Mounts plates they are about, and the Mounts Cargo lens adds Rokade.
 - **Sea-mount locations.** Sportskeeda's guide places spawns that the plates used to call "no fixed spawn". Electric Rays are in the Trench and the Great Trench. Eagle Rays share the manta-ray zone. Sunfish are sure at the Silent Serpent Shrine Cave by the Phragma Islands. Hammerheads and Orcas also swim the Central Waters. The Giant Manta Ray is narrowed to the manta-ray zone.
 - **Fonts are self-hosted.** Bodoni Moda, Archivo and JetBrains Mono (Latin, variable) ship with the site, so the release zip renders as designed offline and from disk. The app no longer contacts a font CDN.
 - **Readable secondary text meets WCAG AA.** It is now at least 4.5:1 on every ink surface. Counts, hints, credits and placeholders moved from the ornament tone to the readable one.

@@ -125,6 +125,15 @@ Rules added while building the Mounts branch (Claude's calls, not in the brief):
   - *Facts the new sources settled* (Sportskeeda's section text): Electric Rays spawn in the Trench and the Great Trench. Eagle Rays share the manta zone (the Dead Coral Sea or the Great Coral Reef). Sunfish are sure at the Silent Serpent Shrine Cave by the Phragma Islands. Hammerheads and Orcas also swim the Central Waters. The Giant Manta Ray's place is narrowed to the manta zone. Those plates no longer say "no fixed spawn".
   - *Checked and left out:* GamesRadar+'s white tiger shot. Its own text says legendary animals other than horses still can't be tamed, and the shot shows Kliff climbing it in combat. PC Gamer's white goat is not the Ibex. The striped-sail ships in Pearl Abyss's Steam shots and in guides were not used: sails are customisable, so the model can't be told. Also unused: PC Gamer's tamed-Camora shot (dark, half covered by the register panel) and its covered wagon (no caption says which wagon). TH.GL stays off-limits.
 
+- **Revision 6: Inventory, for every mount** (2026-11-21). You asked why no plate said what a mount carries. Every Mounts plate now has an **Inventory** section (`MountKit.svelte`) after Record:
+  - *Carries*: the trade-goods slots or hold as a figure, with the rules beside it. A horse holds one slot of packed trade goods and nothing else; Elantrima and Rokade hold two; Royler and Camora one. A slot stacks 10 or 100 packaged goods by price, or 5 or 50 unpackaged (1.16). Calling a loaded horse drops part of the load (one player's 150 salt arrived as 55). A ship's hold is its recorded Inventory stat. Wagons are ranked Smallest, Middle, Largest because no source publishes a slot count. Every other mount reads "None documented": no guide or patch note puts cargo on it.
+  - *Equipment*: one numbered card per slot. Horses: Saddle, Stirrups, Horseshoes, Champron and Barding, each with what it raises, the early pieces and the best piece. Special mounts: the one Special Mount Armor slot (1.06) and the saddles that fit it, with the saddler who sells each. Blackstar: the Abyssal Dragon Armor. A.T.A.G.: weapons, plating, boots, thrusterpack, module and the DLC marine set. Wagons: the barding the horse wears. Ships: sail, cannons, bow cannon, figurehead, stern and transporter, with outfitter prices; the Assault Ship's turtle hull and the Phantom Ship's six slots have their own layouts.
+  - *Where to get it*, *Feeding and healing* (horses), notes, the menu path, and the section's own source line.
+  - *Data*: one profile per gear system in `src/branches/mounts/kits.json` (21 profiles). A plate names its profile in `kit`, or `{profile, carry, carryLabel, note}` where it differs (Elantrima, Rokade, the wagons, the legendary ships). The lint requires a kit on every Mounts plate, a known profile, a publisher on every line and slot, a reason on every profile without slots, and no unused profile.
+  - *Stats filled while auditing*: Health for the eleven sea mounts and the Ocean Drifter from crimsondesert.gg's mount list; Health and Stamina for the iguanas, raptor, Rosehorn Deer, Leaping Kuku Bird and Sandwalk Camel, and Health for the A.T.A.G., Pywel Wagon and Cloudcart, from GamingBolt. crimsondesert.gg prints two unlabelled numbers per card; the first matches every Health already recorded, so it is read as Health *(my inference)*. The new Stamina figures moved those plates' Stamina ratings onto the beast scale (300 → II, 100 → V). 79 of 80 plates have stats; the common boar has none published.
+  - *Cargo lens* now holds Rokade beside Elantrima, the wagons and the 36-slot ships.
+  - *Riches links*: Trade Wagons, Royal Trading Posts, the Small Greymane Ship and Fleetmaster Ships name the Mounts plates they are about (`also`), so each wagon and ship plate shows where it earns.
+
 ## Riches tree — decisions
 
 You asked for Riches on 2026-11-19: an endgame economy guide for a player who has **finished the main story but not started Charting the Unknown**. Its job is to have the player arrive at the DLC rich, then turn the DLC's systems (real estate, ships, islands) into more money. It covers management mechanics and direct player control. The research, with sources, is in `docs/RICHES-RESEARCH.md`. R1 shipped it with 24 methods.
@@ -196,13 +205,19 @@ You asked for QOL on 2026-11-20: a tree of guides to the mechanics that improve 
 - **Leaves** (your domains, plus the ones research added):
   - Travel (land): Abyss Nexus Network, Royler, Blackstar, Flight, Thinker's Meadow Nexus, Axiom Force.
   - Underwater (sea): Ocean Drifter, Diving Suits, Propulsion Breathing Device, Forsaken Oath Plate.
-  - Inventory (brass) *(research addition)*: Sturdy Gatherables Chest, Bags, Private Storage, Pets, Extra Large Bag, Kuku Cooler, Wardrobes and Collectibles.
-  - Gear (ember): Refinement Tokens, Cold Immunity, Heat Immunity, Movement Speed Gear.
+  - Inventory (brass) *(research addition)*: Sturdy Gatherables Chest, Bags, Private Storage, Pets, Extra Large Bag, Kuku Cooler, Wardrobes and Collectibles, Inventory Screen Tools, Pet Sigils.
+  - Gear (ember): Refinement Tokens, Extraction, Lost Gear Recovery, Cold Immunity, Heat Immunity, Movement Speed Gear.
   - Camp (bone) *(research addition)*: Resting, Auto-Repeat Dispatch, Camp Expansion, Pailune Camp.
   - Money (gold): Camp Donations, Gold Bar Crafting, Golden Beer, Bank Investment.
   - Facilities (royal): Facility Leases, Castles.
   - Ships & Pioneering (deck): Crew and Outfitting, Ship Teleportation Device, Island Pioneering, Large Hernandian Ship. You named ship upgrades and pioneering separately. They share one leaf because pioneering is how the ship teleporter is earned, and either alone held one or two plates *(my call)*.
-  - Settings (sky) *(research addition)*: Map Markers and Filters, Difficulty, Display Toggles, Re-blockades.
+  - Settings (sky) *(research addition)*: Map Markers and Filters, Difficulty, Display Toggles, Re-blockades, Fast Forward Speed, Camera and Controls, Readability and Comfort.
+- **Q2: the 2.05.01 menu and the patch sweep** (2026-11-21):
+  - *Menu paths follow your screenshot of game version 2.05.01*: the Others tab, then Settings → Gameplay holds Game Difficulty, Re-Blockade Frequency, the display switches, Fix Minimap Rotation, Fast Forward Speed, Display All Guides and Show Group Icon in Inventory. Patch notes call it Language & Gameplay; plates use the game's current names. The screenshot is kept at `tools/sources/settings-gameplay-2.05.01.webp` and `media.py` reads `"from": "local:<file>"` from there. A local source must be a bare file name that resolves, symlinks included, inside `tools/sources`; `media.py` refuses anything else and the lint flags it. Media runs hold a lock (`tools/.cache/media.lock`) and write each image and JSON file through a per-process temp file, so two runs never interleave. Cuts of it are the menu captures on Difficulty, Re-blockades, Display Toggles, Fast Forward Speed and Inventory Screen Tools, credited "In-game screenshot · v2.05.01". Figures read off it use the *screenshot* basis with the publisher `ingame`.
+  - *Re-blockades* rebuilt from the 1.05.00 notes: Stable (none), Conflict (the default, intermittent), War (frequent); changes wait for planned re-blockades; they roll only on a loading screen; 1.08 widened them to bandit camps and ruins; 1.10 reworked them.
+  - *Every patch from 1.00.02 to 2.05.01 swept* for convenience features. New plates: Fast Forward Speed (1.00.02, 1.03), Camera and Controls (1.00.03 shortcuts, 1.02 Movement Controls, 1.03 camera sliders, 1.04 remapping, 1.18 lock-on modes), Readability and Comfort (1.03 Minimum Font Size, 1.04 Colorblind, Photosensitive, Chromatic Aberration, subtitles), Inventory Screen Tools (1.04 tabs, 1.16 explosives, 2.05.01 examine), Pet Sigils (1.10, 1.13), Extraction (1.06), Lost Gear Recovery (1.11). Tap-to-sprint moved from Display Toggles to Camera and Controls, where the 1.02 notes file it.
+  - *Facts corrected*: Pets registered rose from 30 to 100 (50 at camp) in 1.11, and pets fight with a Sigil of Valor; Bags now give the 240-slot carried cap; Map Markers gained the minimap lock, key and anvil icons, the 1.16 map filter, the 1.18 bell-revealed areas and 2.04's L3 map focus.
+  - *Counts after Q2*: 46 upgrades; Priority 19 Essential, 18 Worthwhile, 9 Situational; 24 patched in; 15 built in.
   - Weapons: no weapon has a documented convenience effect, only combat stats, so none is listed. Armour sets are listed where they remove a penalty: Frostcursed and Kuku Ice for the cold, Scorchflame and Kuku Flame for the heat, Forsaken Oath for air, Blackwing and the tailors' boots for speed.
 - **Two classes** *(my call)*: *Built-in* means settings, patch features and systems everyone has once they know about them. *Unlock* means things you earn, find, buy or build. A reader can filter for "what can I turn on now". Each class has its own glyph (sliders and a key).
 - **Metrics**, with Tier I always the good end:
@@ -239,7 +254,6 @@ You asked for QOL on 2026-11-20: a tree of guides to the mechanics that improve 
 - **Calls a reader should know about**:
   - *Thinker's Meadow Nexus* is Worthwhile, not Essential. Epic's write-up says the Greymane Camp has its own Nexus, so how much the repair saves depends on which points you hold.
   - *Difficulty*: "a boss beaten on Easy paid the same reward" rests on one documented case (The Games Wiki, Mazzul's Golden Beer), and the plate says so.
-  - *Re-blockades*: PC Gamer does not name the menu, and the plate says so.
   - *Propulsion Breathing Device*: the English name follows Vulkk's database. PlayNews, which is machine-translated, gives two upgrade recipes; the plate uses Vulkk's.
   - *Camp Expansion* lists the first tier at "250 silver" as KeenGamer writes it. The unit may be camp funds.
 
@@ -259,9 +273,18 @@ Left out for lack of reliable data or real imagery:
   - *Sea mounts (14):* no wide, named shot. Where Sportskeeda's 960 px half-frames show the creature, they are In action captures instead.
   - *Horses (8):* Camora, the five breeds and the two road horses; no guide names the breed of the horse in its shots.
   - *Other land and sky mounts (16):* only sub-1,200 px or unnamed shots exist (consolepulse's 960 px Leaping Kuku Bird, Game8's 728 px views).
-- **Large Greymane Ship hold size**: Game8 does not list it, so its record shows Health only.
+- **Hold sizes not published**: the Large Greymane Ship and the four legendary ships. Their records show Health only and their Inventory sections say so.
+- **Mount inventory facts no source pins** (each plate's Inventory section says so):
+  - *Wagon slot counts.* No guide or patch note gives one, and The Games Wiki's two wagon pages disagree on whether the Freight or the Trading Wagon holds more. The tree follows the Timberturner mission order and the comrade cost.
+  - *2.04 wagon equipment and the port wainwright's stock*: the patch notes add both and name neither.
+  - *Saddles without item names*: the deer and warthog saddles (ConsolePulse lists them by saddlery only).
+  - *No saddle documented* for the lion, tiger, raptor and common boar, and *no gear or cargo documented* for the sea mounts, the Ocean Drifter and the balloons.
+  - *The Flagship of the East's and the Drunken Catfish's slot layouts*; Game8 reports the Catfish's figurehead and stern slots blank and its new sails refusing to equip.
+  - *Conflicting horse-gear sources*: one Games Wiki page swaps the Stirrups and Horseshoes effects; the plates follow ConsolePulse and the wiki's item table.
+  - *Stamina from one source*: the iguanas, raptor, Rosehorn Deer, Kuku Bird and camel take Stamina from GamingBolt alone, and GamingBolt's Ibex (250) disagrees with crimsondesert.gg's (200). The Leaping Kuku Bird's Health is 400 (GamingBolt) or 300 (crimsondesert.gg); its plate notes both.
+- **Common boar stats**: no source publishes them.
 - **QOL plates without a banner**: Kuku Cooler and Axiom Force (every wide shot is a menu or a split cutscene) and Movement Speed Gear (only item icons). They keep the framed portrait.
-- **QOL facts no source pins**: where the re-blockade option sits in the menus; the unit of the first camp expansion's 250 cost; the full list of islands past Auronui and what each anchorage sells.
+- **QOL facts no source pins**: the unit of the first camp expansion's 250 cost; the full list of islands past Auronui and what each anchorage sells; what Display All Guides changes and which patch added the accessories switches (both named only by the 2.05.01 menu); the Extraction fee (XboxPlay says Silver, Vulkk says none).
 
 ## Build and release
 

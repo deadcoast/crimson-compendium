@@ -2,7 +2,7 @@
 """Media pipeline for every branch of the compendium.
 
 Reads src/branches/<branch>/branch.json and entries.json, downloads each image
-referenced by a "from" URL, converts it to WebP for its role, writes it to
+referenced by a "from" URL (or reads tools/sources/<file> for "local:<file>"), converts it to WebP for its role, writes it to
 public/media/<branch>/..., and records "src", "w" and "h" back into the JSON.
 
     python3 tools/media.py            # process new or missing media
@@ -29,11 +29,12 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def write_json(path, data):
     """Write JSON atomically (temp file, then rename), so a build or lint reading it never sees a half-written file."""
-    tmp = f"{path}.tmp"
+    tmp = f"{path}.{os.getpid()}.tmp"  # per-process temp: two runs never share one
     with open(tmp, "w") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
     os.replace(tmp, path)
 CACHE = os.path.join(ROOT, "tools", ".cache")
+SOURCES = os.path.join(ROOT, "tools", "sources")  # images with no URL: "from": "local:<file>"
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130 Safari/537.36"
 INK = (21, 17, 15)
 SPEC = {
@@ -48,6 +49,8 @@ REFERER = {"fextralifeimages": "https://crimsondesertgame.wiki.fextralife.com/",
 
 
 def fetch(url):
+    if url.startswith("local:"):  # an in-game screenshot kept in the repo (tools/sources), not downloaded
+        return Image.open(local_source(url))
     os.makedirs(CACHE, exist_ok=True)
     path = os.path.join(CACHE, hashlib.sha1(url.encode()).hexdigest()[:20])
     if not os.path.exists(path) or os.path.getsize(path) < 1000:
@@ -56,6 +59,35 @@ def fetch(url):
         if subprocess.run(cmd).returncode != 0:
             raise RuntimeError(f"download failed: {url}")
     return Image.open(path)
+
+
+def local_source(url):
+    """The file a "local:<name>" source names. It must resolve, symlinks included, to a file inside
+    tools/sources, so a crafted name cannot pull an image from elsewhere on disk into public/media."""
+    root = os.path.realpath(SOURCES)
+    path = os.path.realpath(os.path.join(root, url[len("local:"):]))
+    if os.path.commonpath([root, path]) != root or not os.path.isfile(path):
+        raise RuntimeError(f"local source outside tools/sources or missing: {url}")
+    return path
+
+
+def run_lock():
+    """Hold an exclusive lock on tools/.cache/media.lock for the life of the run (POSIX or Windows)."""
+    os.makedirs(CACHE, exist_ok=True)
+    f = open(os.path.join(CACHE, "media.lock"), "a+")
+    try:
+        import fcntl
+        fcntl.flock(f, fcntl.LOCK_EX)
+    except ImportError:  # Windows
+        import msvcrt
+        f.seek(0)
+        while True:
+            try:
+                msvcrt.locking(f.fileno(), msvcrt.LK_LOCK, 1)
+                break
+            except OSError:
+                continue
+    return f
 
 
 def matte(im):
@@ -105,7 +137,11 @@ def render(item, role, out_rel, force):
         ratio = spec["max"] / im.width
         im = im.resize((spec["max"], round(im.height * ratio)), Image.LANCZOS)
     os.makedirs(os.path.dirname(out_abs), exist_ok=True)
-    buf = BytesIO(); im.save(buf, "WEBP", quality=spec["q"], method=6); open(out_abs, "wb").write(buf.getvalue())
+    buf = BytesIO(); im.save(buf, "WEBP", quality=spec["q"], method=6)
+    tmp = f"{out_abs}.{os.getpid()}.tmp"  # write then rename, so a reader never sees half an image
+    with open(tmp, "wb") as f:
+        f.write(buf.getvalue())
+    os.replace(tmp, out_abs)
     item["src"], item["w"], item["h"] = out_rel, im.width, im.height
     return True
 
@@ -139,6 +175,8 @@ def process_branch(branch_dir, force):
 
 
 if __name__ == "__main__":
+    # one media run at a time: a second run waits here instead of writing the same files alongside
+    lock = run_lock()
     force = "--force" in sys.argv
     only = [a for a in sys.argv[1:] if not a.startswith("--")]
     root = os.path.join(ROOT, "src", "branches")

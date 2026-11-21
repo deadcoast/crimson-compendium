@@ -22,6 +22,7 @@
 - **How**: requirement chips, numbered steps, alternate routes and field notes.
 - **Tiers**: Speed, Stamina, Travel and Combat rated **I–V** against mounts of the same terrain (Land, Sea, Sky, or Surface for ships). Tap a seal to read why it got that rating.
 - **Record**: level 1 and level 5 stats for horses, beast stats, ship Health, hold and handling, skills, variants and extra stills.
+- **Inventory**: what it carries (trade-goods slots, hold, cargo rules) and what it wears: every equipment slot with what it raises and the best piece, the saddler or outfitter that sells it, and for horses how to feed and heal them.
 
 Lists for every way you play a session:
 
@@ -46,7 +47,7 @@ A mount can sit in several lists. The A.T.A.G. is Land, Underwater, Mechanical a
 | **Category branches** | Potential (Fortune · Income · Groundwork) · Management · Player Control · When · Multipliers · Can Lose Money |
 | **Best for** | Away From the Controller · Money This Session · Scaling Up |
 
-**Quality of Life**, the third branch: 39 upgrades that take the friction out of Pywel, from fast travel to the ship teleporter, each on its own plate.
+**Quality of Life**, the third branch: 46 upgrades that take the friction out of Pywel, from fast travel to the ship teleporter, each on its own plate.
 
 - **The Order**: ten phases from the first hour to the deep sea, so each upgrade comes as soon as the story allows it.
 - **Remedy**: the friction an upgrade removes against what replaces it, figures with their basis, the patches that shaped it, and the upgrades it pairs with.
@@ -77,6 +78,10 @@ A mount can sit in several lists. The A.T.A.G. is Land, Underwater, Mechanical a
   <tr>
     <td width="50%"><img src="docs/screenshots/qol-order.webp" alt="Quality of Life: The Order, phase one"><br><sub>Quality of Life: The Order</sub></td>
     <td width="50%"><img src="docs/screenshots/qol-remedy.webp" alt="Quality of Life: the Remedy on the Extra Large Bag plate"><br><sub>Quality of Life: a Remedy, before and after</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/mount-inventory.webp" alt="Mounts: the Inventory section on the Elantrima plate"><br><sub>Mounts: Inventory — trade-goods slots and the five tack slots</sub></td>
+    <td width="50%"><img src="docs/screenshots/qol-settings.webp" alt="Quality of Life: Re-blockades with the in-game Gameplay menu"><br><sub>Quality of Life: a settings plate on the 2.05.01 menu</sub></td>
   </tr>
 </table>
 
@@ -145,14 +150,16 @@ src/
     mounts/
       branch.json    leaves, category branches, metrics, classes, lenses, redirects
       entries.json   the 80 mounts
+      kits.json      what each mount carries and wears, one profile per gear system
       MountRecord.svelte
+      MountKit.svelte
     riches/
       branch.json    the same, plus labels, tier rules and the Route
       entries.json   the 24 money methods, each with its ledger
       RichesLedger.svelte
   styles/            tokens.css (every colour, font, easing) + base.css
 public/media/        generated WebP files
-tools/media.py       image pipeline
+tools/media.py       image pipeline (tools/sources holds in-game screenshots with no URL)
 docs/
   PLAN.md            the global plan (IDENTIFIED → PLAN → SHELVED → TODO)
   RICHES-RESEARCH.md Riches research, every figure with its source

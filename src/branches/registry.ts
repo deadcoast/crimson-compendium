@@ -5,6 +5,7 @@ import { matches } from '../core/select';
 import mountsDef from './mounts/branch.json';
 import mountsEntries from './mounts/entries.json';
 import MountRecord from './mounts/MountRecord.svelte';
+import MountKit from './mounts/MountKit.svelte';
 import richesDef from './riches/branch.json';
 import richesEntries from './riches/entries.json';
 import RichesLedger from './riches/RichesLedger.svelte';
@@ -151,7 +152,7 @@ function define(def: BranchDef, entries: Entry[], sections: PlateSection[] = [])
 }
 
 export const branches: Branch[] = [
-  define(mountsDef as unknown as BranchDef, inherit('mounts', RAW.mounts), [MountRecord]),
+  define(mountsDef as unknown as BranchDef, inherit('mounts', RAW.mounts), [MountRecord, MountKit]),
   define(richesDef as unknown as BranchDef, inherit('riches', RAW.riches), [RichesLedger]),
   define(qolDef as unknown as BranchDef, inherit('qol', RAW.qol), [QolRemedy]),
 ];

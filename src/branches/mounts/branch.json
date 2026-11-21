@@ -169,7 +169,7 @@
   {
    "id": "cargo",
    "label": "Cargo",
-   "blurb": "Extra carrying capacity for trading runs.",
+   "blurb": "The haulers for trading runs: the two-slot horses Elantrima and Rokade, the three wagons and the 36-slot ships. Every plate’s Inventory section gives the count.",
    "where": {
     "tags": [
      "cargo"

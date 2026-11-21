@@ -1406,7 +1406,7 @@
   "region": "All of Pywel",
   "area": "Vendors and quest rewards",
   "trait": "Small +1, Medium +3, Large +5 — permanent",
-  "summary": "Kliff starts with 50 inventory slots, and every bag adds slots for good: a Small Bag one, a Medium three, a Large five, while campaign milestones hand out bags of up to ten. Small Bags cost 50 copper at almost any vendor. The 27 Greymane Commissions alone are worth 81 slots.",
+  "summary": "Kliff starts with 50 inventory slots, and every bag adds slots for good: a Small Bag one, a Medium three, a Large five, while campaign milestones hand out bags of up to ten. Small Bags cost 50 copper at almost any vendor. The 27 Greymane Commissions alone are worth 81 slots. Carried inventory stops at 240 slots; past the cap, expansion rewards turn into boxes of materials.",
   "tiers": {
    "impact": {
     "tier": 2,
@@ -1495,6 +1495,11 @@
     "title": "How to Increase Inventory Size"
    },
    {
+    "by": "gamingideology",
+    "url": "https://www.gamingideology.com/crimson-desert-inventory-and-storage-expand-bags-and-find-chests/",
+    "title": "Inventory and Storage: Bags, Chests and 1,000 Slots"
+   },
+   {
     "by": "beebom",
     "url": "https://beebom.com/how-to-increase-inventory-space-in-crimson-desert",
     "title": "How to Increase Inventory Space"
@@ -1547,6 +1552,12 @@
      "value": "up to +10",
      "basis": "guide",
      "by": "epicgames"
+    },
+    {
+     "label": "Carried cap",
+     "value": "240 slots",
+     "basis": "guide",
+     "by": "gamingideology"
     }
    ],
    "pairs": [
@@ -1704,7 +1715,7 @@
   "region": "All of Pywel",
   "area": "Stray dogs, cats and birds",
   "trait": "Loots the fallen so you do not have to",
-  "summary": "Raise a stray animal's Trust to 100 and it becomes a pet. A summoned pet loots fallen enemies for you, with no filter, so it takes everything. You keep up to 30 and summon one at a time. Patches added birds, five new cats and the Abyss Heuklang.",
+  "summary": "Raise a stray animal's Trust to 100 and it becomes a pet. A summoned pet loots fallen enemies for you, with no filter, so it takes everything. Since 1.11 the Pets challenges raise registration to 100, with up to 50 out at camp; one follows you at a time. Patches added birds, five new cats and the Abyss Heuklang.",
   "tiers": {
    "impact": {
     "tier": 2,
@@ -1735,8 +1746,9 @@
   ],
   "location": "Strays in towns and camps; birds at a placed bird feeder.",
   "notes": [
-   "Pets do not fight.",
-   "Pet armour sells at shops (PC Gamer)."
+   "Pets do not fight unless they wear a Sigil of Valor; see Pet Sigils.",
+   "Pet helms and outfits are cosmetic and sell at shops.",
+   "The four Pets challenges sit under Journal → Challenges → Continued Journey → Pets."
   ],
   "variants": [
    "Dogs",
@@ -1832,6 +1844,16 @@
     "by": "epicgames",
     "url": "https://store.epicgames.com/news/crimson-desert-biggest-updates-improvements-since-release",
     "title": "Biggest updates and improvements since release"
+   },
+   {
+    "by": "dsogaming",
+    "url": "https://www.dsogaming.com/?p=195262",
+    "title": "Patch 1.11.00 release notes"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/2026/06/12/crimson-desert-update-1-11-patch-notes-new-challenges-new-pets/",
+    "title": "Update 1.11: New Challenges, More Pet Slots"
    }
   ],
   "remedy": {
@@ -1845,17 +1867,31 @@
      "by": "pcgamer"
     },
     {
-     "label": "Pets kept / summoned",
-     "value": "30 / 1",
+     "label": "Registered · out at camp",
+     "value": "100 · 50, since 1.11",
+     "basis": "patch",
+     "by": "dsogaming"
+    },
+    {
+     "label": "Following you",
+     "value": "One at a time",
      "basis": "guide",
      "by": "destructoid"
+    }
+   ],
+   "patches": [
+    {
+     "v": "1.11.00",
+     "note": "Pets challenges raise registration from 30 to 100; 50 at camp",
+     "by": "dsogaming"
     }
    ],
    "watch": [
     "No loot filter: a pet fills your bag with everything it finds. Expand the bag first."
    ],
    "pairs": [
-    "bag-upgrades"
+    "bag-upgrades",
+    "pet-sigils"
    ]
   },
   "domains": []
@@ -2143,6 +2179,171 @@
   "domains": []
  },
  {
+  "id": "inventory-tools",
+  "name": "Inventory Screen Tools",
+  "leaf": "inventory",
+  "cls": "builtin",
+  "kind": "Menu features",
+  "region": "All of Pywel",
+  "area": "The Inventory screen",
+  "trait": "Tabs, grouping, quick slots and examine-in-place",
+  "summary": "Patches turned the bag screen into a tool: keyboard shortcuts to open it (1.00.03), category tabs (1.04), explosives that stack in tens and fit quick slots (1.16), and since 2.05.01 treasure maps, wanted posters and books examined straight from the bag instead of taken out first. Show Group Icon in Inventory, in the Gameplay settings, marks grouped items.",
+  "tiers": {
+   "impact": {
+    "tier": 3,
+    "basis": "Seconds saved on every bag visit; examining maps in place ends a fiddly ritual."
+   },
+   "reach": {
+    "tier": 1,
+    "basis": "Every time you open the bag."
+   },
+   "unlock": {
+    "tier": 1,
+    "basis": "Built in."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Press I on a keyboard to open the Inventory.",
+     "Use the category tabs to narrow the bag.",
+     "On a treasure map, poster or book: View Details → Examine.",
+     "Put explosives on a quick slot; they stack by ten."
+    ]
+   }
+  ],
+  "location": "The Inventory screen.",
+  "notes": [],
+  "variants": [
+   "Category tabs",
+   "View Details → Examine",
+   "Show Group Icon in Inventory"
+  ],
+  "since": "Patches 1.00.03 to 2.05.01",
+  "media": {
+   "portrait": {
+    "from": "https://www.keengamer.com/wp-content/uploads/2026/04/How-to-Increase-Inventory-Space-in-Crimson-Desert-Inventory-Menu-780x439.png",
+    "credit": "keengamer",
+    "crop": [
+     0.5,
+     0.5,
+     0.95
+    ],
+    "src": "media/qol/inventory-tools/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "from": "local:settings-gameplay-2.05.01.webp",
+     "credit": "ingame",
+     "kind": "menu",
+     "caption": "Others → Settings → Gameplay in 2.05.01 — Show Group Icon in Inventory on the last row",
+     "clip": [
+      0.04,
+      0.775,
+      0.59,
+      0.875
+     ],
+     "src": "media/qol/inventory-tools/menu-1.webp",
+     "w": 1408,
+     "h": 144
+    }
+   ],
+   "gallery": [],
+   "hero": {
+    "from": "https://www.keengamer.com/wp-content/uploads/2026/04/How-to-Increase-Inventory-Space-in-Crimson-Desert-Inventory-Menu-780x439.png",
+    "credit": "keengamer",
+    "focus": "50% 45%",
+    "src": "media/qol/inventory-tools/hero.webp",
+    "w": 780,
+    "h": 439
+   }
+  },
+  "sources": [
+   {
+    "by": "dsogaming",
+    "url": "https://www.dsogaming.com/?p=198462",
+    "title": "Patch 2.05.01 release notes"
+   },
+   {
+    "by": "wccftech",
+    "url": "https://wccftech.com/crimson-desert-patch-2-05-01-examine-documents-rpg-mechanics/",
+    "title": "Patch 2.05.01 lets players examine treasure maps from the inventory"
+   },
+   {
+    "by": "dsogaming",
+    "url": "https://www.dsogaming.com/?p=194143",
+    "title": "Patch 1.04.00 release notes"
+   },
+   {
+    "by": "dsogaming",
+    "url": "https://www.dsogaming.com/patches/crimson-desert-patch-1-16-00-released-detailed/",
+    "title": "Patch 1.16.00 release notes"
+   },
+   {
+    "by": "insidergaming",
+    "url": "https://www.insider-gaming.com/crimson-desert-update/",
+    "title": "Patch 1.00.03 notes"
+   },
+   {
+    "by": "ingame",
+    "url": "https://crimsondesert.pearlabyss.com/",
+    "title": "Others → Settings → Gameplay, game version 2.05.01 (screenshot in this repo)"
+   }
+  ],
+  "remedy": {
+   "fixes": "Taking a treasure map out of the bag and watching Kliff unfold it, every time.",
+   "gain": "Read it in the bag; find it by tab.",
+   "figures": [
+    {
+     "label": "Examine",
+     "value": "View Details → Examine, since 2.05.01",
+     "basis": "patch",
+     "by": "dsogaming"
+    },
+    {
+     "label": "Explosives",
+     "value": "Stack by 10 · fit quick slots",
+     "basis": "patch",
+     "by": "dsogaming"
+    }
+   ],
+   "patches": [
+    {
+     "v": "1.00.03",
+     "note": "Keyboard shortcuts: I opens the Inventory",
+     "by": "insidergaming"
+    },
+    {
+     "v": "1.04.00",
+     "note": "Inventory category tabs",
+     "by": "dsogaming"
+    },
+    {
+     "v": "1.16.00",
+     "note": "Explosives stack by ten and fit quick slots",
+     "by": "dsogaming"
+    },
+    {
+     "v": "2.05.01",
+     "note": "Treasure maps, wanted posters and books examined from the Inventory",
+     "by": "dsogaming"
+    }
+   ],
+   "pairs": [
+    "bag-upgrades",
+    "private-storage"
+   ]
+  },
+  "domains": []
+ },
+ {
   "id": "house-storage",
   "name": "Wardrobes and Collectibles",
   "leaf": "inventory",
@@ -2306,6 +2507,143 @@
   "domains": []
  },
  {
+  "id": "pet-sigils",
+  "name": "Pet Sigils",
+  "leaf": "inventory",
+  "cls": "unlock",
+  "kind": "Pet accessory",
+  "region": "Hernand",
+  "area": "Lacey, on the Florindale road",
+  "trait": "A bird that gathers, a dog that fights",
+  "summary": "A pet’s Accessory slot is its one working slot; helms and outfits are cosmetic. Lacey, a roaming seller on the Florindale road after about 9 a.m., sells the sigils. Hunter’s Sigil (1.13) sets a bird pet gathering suitable resources on its own; Sigil of Valor makes dogs, Baby Wyverns, the Iron Eagle and the Phoenix fight, the birds with lightning or fire; Sigil of Bonding keeps a cat on your shoulder longer.",
+  "tiers": {
+   "impact": {
+    "tier": 3,
+    "basis": "A pet that gathers or fights adds a second pair of hands."
+   },
+   "reach": {
+    "tier": 2,
+    "basis": "Wherever the pet follows."
+   },
+   "unlock": {
+    "tier": 3,
+    "basis": "Find a roaming seller with no fixed stall, and own the right pet."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "requires": [
+   "A bird, dog, cat or Baby Wyvern pet",
+   "Lacey (roaming, Florindale road)"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Take the Florindale road after about 9 a.m. and look for Lacey; she has no shop marker.",
+     "Buy the sigil that suits your pet: Hunter’s for birds, Valor for dogs, Baby Wyverns, the Iron Eagle and the Phoenix, Bonding for cats.",
+     "Equip it in the pet’s Accessory slot."
+    ]
+   }
+  ],
+  "location": "Lacey roams the Florindale road; she has no fixed stall.",
+  "notes": [
+   "The Sigil of Bond that tames birds is a feeder, not this accessory."
+  ],
+  "variants": [
+   "Hunter’s Sigil",
+   "Sigil of Valor",
+   "Sigil of Bonding"
+  ],
+  "since": "Patches 1.10 to 1.13",
+  "media": {
+   "portrait": {
+    "from": "https://img.consolepulse.com/_v/960/uploads/franchises/crimson-desert/pets/iron-eagle-phoenix-combat/crimson-desert-sigil-of-valor-equip-pet-menu.webp",
+    "credit": "consolepulse",
+    "crop": [
+     0.14,
+     0.31,
+     0.56
+    ],
+    "src": "media/qol/pet-sigils/portrait.webp",
+    "w": 268,
+    "h": 268
+   },
+   "captures": [
+    {
+     "from": "https://img.consolepulse.com/_v/960/uploads/franchises/crimson-desert/pets/iron-eagle-phoenix-combat/crimson-desert-lacey-florindale-pororin-vendor-map.webp",
+     "credit": "consolepulse",
+     "kind": "map",
+     "caption": "Lacey’s road through Florindale — no fixed shop marker",
+     "src": "media/qol/pet-sigils/map-1.webp",
+     "w": 960,
+     "h": 760
+    }
+   ],
+   "gallery": [],
+   "hero": {
+    "from": "https://img.consolepulse.com/_v/960/uploads/franchises/crimson-desert/pets/iron-eagle-phoenix-combat/crimson-desert-sigil-of-valor-equip-pet-menu.webp",
+    "credit": "consolepulse",
+    "focus": "50% 45%",
+    "src": "media/qol/pet-sigils/hero.webp",
+    "w": 960,
+    "h": 480
+   }
+  },
+  "sources": [
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-mount-pet-equipment-guide",
+    "title": "Mount and Pet Equipment Guide"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/pets/iron-eagle/",
+    "title": "Iron Eagle — database"
+   },
+   {
+    "by": "windowscentral",
+    "url": "https://www.windowscentral.com/gaming/crimson-desert-first-summer-patch-rolling-out-re-blockade-mounts-mini-games-more",
+    "title": "Patch 1.10.00 notes"
+   }
+  ],
+  "remedy": {
+   "fixes": "A pet that only follows.",
+   "gain": "A pet that gathers or fights beside you.",
+   "figures": [
+    {
+     "label": "Hunter’s Sigil",
+     "value": "Bird pets gather suitable resources",
+     "basis": "guide",
+     "by": "consolepulse"
+    },
+    {
+     "label": "Sigil of Valor",
+     "value": "Dogs · Baby Wyverns · Iron Eagle · Phoenix",
+     "basis": "guide",
+     "by": "consolepulse"
+    }
+   ],
+   "patches": [
+    {
+     "v": "1.10.00",
+     "note": "Sigil of Valor announced for the Iron Eagle and the Phoenix",
+     "by": "windowscentral"
+    },
+    {
+     "v": "1.13.00",
+     "note": "Hunter’s Sigil: bird pets gather",
+     "by": "consolepulse"
+    }
+   ],
+   "pairs": [
+    "pets"
+   ]
+  },
+  "domains": []
+ },
+ {
   "id": "refinement-tokens",
   "name": "Refinement Tokens",
   "leaf": "gear",
@@ -2433,6 +2771,254 @@
    ],
    "watch": [
     "Spend them on gear you will keep."
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "refinement-extraction",
+  "name": "Extraction",
+  "leaf": "gear",
+  "cls": "builtin",
+  "kind": "Smithy service",
+  "region": "All of Pywel",
+  "area": "Any Smithy",
+  "trait": "Take an upgrade back and keep the rare materials",
+  "summary": "Since 1.06 a Smithy rolls a weapon, armour piece or accessory back to a lower refinement and returns what the upgrade cost: Abyss Artifacts and Aeserion’s Scales in full, ore, hide and bone at about 70%. The item keeps its socketed Abyss Gear and cannot drop below the level it came at.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "Rare materials stop being locked into gear you outgrow."
+   },
+   "reach": {
+    "tier": 2,
+    "basis": "Every gear swap."
+   },
+   "unlock": {
+    "tier": 1,
+    "basis": "Any Smithy; Hernand’s is open early."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Unequip and unlock the item; equipped or locked items do not appear.",
+     "At a Smithy, choose Extraction and pick the item.",
+     "Choose the refinement level to drop to and check what comes back, then confirm."
+    ]
+   }
+  ],
+  "location": "Any Smithy — Hernand’s early on, or Alec at the Greymane Camp after Second Upgrade: Gathered Will.",
+  "notes": [
+   "Gear crafted at a high refinement, Aeserion gear at Level 5 for one, cannot be extracted below it."
+  ],
+  "variants": [],
+  "since": "Patch 1.06",
+  "media": {
+   "portrait": {
+    "from": "https://xboxplay.games/uploadStream/72983.webp",
+    "credit": "xboxplay",
+    "crop": [
+     0.5,
+     0.5,
+     0.95
+    ],
+    "src": "media/qol/refinement-extraction/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [],
+   "gallery": [],
+   "hero": {
+    "from": "https://xboxplay.games/uploadStream/72983.webp",
+    "credit": "xboxplay",
+    "focus": "50% 45%",
+    "src": "media/qol/refinement-extraction/hero.webp",
+    "w": 1920,
+    "h": 1080
+   }
+  },
+  "sources": [
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/2026/05/12/crimson-desert-extraction-guide-how-it-works-requirements-limitations/",
+    "title": "Extraction Guide: How it works, Requirements, Limitations"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/extraction",
+    "title": "Extraction"
+   },
+   {
+    "by": "nerdschalk",
+    "url": "https://nerdschalk.com/crimson-desert-extraction-feature-explained-how-to-refund-upgrade-materials-from-patch-1-06-00/",
+    "title": "Extraction Feature Explained"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-equipment-crafting-refinement-guide",
+    "title": "Equipment Crafting and Refinement Guide"
+   },
+   {
+    "by": "xboxplay",
+    "url": "https://xboxplay.games/crimson-desert/how-to-extract-materials-from-weapons-armor-in-crimson-desert-72983",
+    "title": "How to Extract Materials from Weapons and Armor"
+   }
+  ],
+  "remedy": {
+   "fixes": "Rare materials locked forever into a weapon you have outgrown.",
+   "gain": "Roll it back and spend them on the next one.",
+   "figures": [
+    {
+     "label": "Special materials",
+     "value": "100% back · Abyss Artifacts, Aeserion’s Scales",
+     "basis": "guide",
+     "by": "vulkk"
+    },
+    {
+     "label": "Common materials",
+     "value": "About 70% back · ore, hide, bone",
+     "basis": "guide",
+     "by": "vulkk"
+    }
+   ],
+   "patches": [
+    {
+     "v": "1.06.00",
+     "note": "Extraction added to Smithies",
+     "by": "thegameswiki"
+    }
+   ],
+   "watch": [
+    "XboxPlay says the service charges Silver; Vulkk says it costs nothing but the lost common materials. Check the cost before confirming."
+   ],
+   "pairs": [
+    "refinement-tokens"
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "lost-gear-recovery",
+  "name": "Lost Gear Recovery",
+  "leaf": "gear",
+  "cls": "builtin",
+  "kind": "Shop buyback",
+  "region": "All of Pywel",
+  "area": "Shops · Carl at the Greymane Camp",
+  "trait": "Sold or lost a rare piece? It comes back to the shops",
+  "summary": "Since 1.11 shopkeepers collect rare equipment you lose, from quests, treasure chests and other one-off sources, and offer it back for sale within seven days, at more than it was worth. Rare Kuku Pot items you discard go to Carl at the camp, who sells them back from his Recover Items tab.",
+  "tiers": {
+   "impact": {
+    "tier": 2,
+    "basis": "A one-of-a-kind weapon sold by mistake is no longer gone for good."
+   },
+   "reach": {
+    "tier": 3,
+    "basis": "Only when something rare is lost."
+   },
+   "unlock": {
+    "tier": 1,
+    "basis": "Built in; pay the buyback price."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Lost or sold a rare quest or chest item? Wait up to seven in-game days.",
+     "Check the shops: the piece appears for sale at more than its original value.",
+     "For a lost Kuku Pot item, talk to Carl at the Greymane Camp and open Recover Items."
+    ]
+   }
+  ],
+  "location": "Shops across Pywel; Carl, the camp provisioner, at the Greymane Camp.",
+  "notes": [
+   "Ordinary drops are not covered: the buyback is for rare equipment from quests, chests and special sources."
+  ],
+  "variants": [],
+  "since": "Patch 1.11",
+  "media": {
+   "portrait": {
+    "from": "https://xboxplay.games/uploadStream/71825.webp",
+    "credit": "xboxplay",
+    "crop": [
+     0.5,
+     0.5,
+     0.95
+    ],
+    "src": "media/qol/lost-gear-recovery/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [],
+   "gallery": [],
+   "hero": {
+    "from": "https://xboxplay.games/uploadStream/71825.webp",
+    "credit": "xboxplay",
+    "focus": "50% 45%",
+    "src": "media/qol/lost-gear-recovery/hero.webp",
+    "w": 1920,
+    "h": 1080
+   }
+  },
+  "sources": [
+   {
+    "by": "nerdschalk",
+    "url": "https://nerdschalk.com/how-to-recover-lost-rare-items-in-crimson-desert-after-update-1-11-00/",
+    "title": "How to Recover Lost Rare Items After Update 1.11.00"
+   },
+   {
+    "by": "allthingshow",
+    "url": "https://allthings.how/crimson-desert-update-1-11-00-more-pet-slots-and-lost-gear-recovery/",
+    "title": "Update 1.11.00: More Pet Slots and Lost Gear Recovery"
+   },
+   {
+    "by": "dsogaming",
+    "url": "https://www.dsogaming.com/?p=195262",
+    "title": "Patch 1.11.00 release notes"
+   },
+   {
+    "by": "xboxplay",
+    "url": "https://xboxplay.games/crimson-desert/how-to-get-lost-loot-in-crimson-desert-71825",
+    "title": "How to Get Lost Loot"
+   }
+  ],
+  "remedy": {
+   "fixes": "A unique weapon sold by mistake, gone for good.",
+   "gain": "Buy it back within a week.",
+   "figures": [
+    {
+     "label": "Back in shops",
+     "value": "Within 7 days of the loss",
+     "basis": "patch",
+     "by": "dsogaming"
+    },
+    {
+     "label": "Price",
+     "value": "Above the original value",
+     "basis": "guide",
+     "by": "nerdschalk"
+    }
+   ],
+   "patches": [
+    {
+     "v": "1.11.00",
+     "note": "Lost rare equipment returns to shops within seven days",
+     "by": "dsogaming"
+    }
+   ],
+   "pairs": [
+    "refinement-extraction"
    ]
   },
   "domains": []
@@ -3872,9 +4458,9 @@
   "cls": "builtin",
   "kind": "Map features",
   "region": "All of Pywel",
-  "area": "The world map",
+  "area": "The world map and minimap",
   "trait": "Ore, opened chests and looted caves mark themselves",
-  "summary": "Patches turned the world map into a checklist. Mineral deposits mark themselves as you pass, opened chests and Visione Memory Fragments are marked, looted caves get a checkmark, restored Abyss sites are flagged, and filters show only the landmarks you want. Fast-travel points show on the All and Environment tabs, not Quest or Faction.",
+  "summary": "Patches turned the world map into a checklist. Mineral deposits mark themselves as you pass, opened chests and Visione Memory Fragments are marked, looted caves get a checkmark, restored Abyss sites are flagged, and filters show only the landmarks you want. The minimap can lock north to the top (Fix Minimap Rotation) and shows keys and anvils, and since 2.04 one press centres the map on your summoned ship, horse, wagon or Blackstar.",
   "tiers": {
    "impact": {
     "tier": 2,
@@ -3899,14 +4485,21 @@
     "steps": [
      "Open the map; pick the All or Environment tab to see fast-travel points.",
      "Use the filters to show only the landmarks and points of interest you want.",
-     "Pass near ore and the deposit is marked automatically."
+     "Pass near ore and the deposit is marked automatically.",
+     "Turn Fix Minimap Rotation on in Others → Settings → Gameplay if you want north always up.",
+     "Press L3 on the map (controller) to centre it on your summoned mount, wagon or ship."
     ]
    }
   ],
-  "location": "The world map.",
-  "notes": [],
-  "variants": [],
-  "since": "Base game · patched through 1.04",
+  "location": "The world map; minimap options under Others → Settings → Gameplay.",
+  "notes": [
+   "View 3D Stronghold Details on the Map, in the same Gameplay tab, switches the map’s 3D stronghold view on or off."
+  ],
+  "variants": [
+   "Fix Minimap Rotation",
+   "View 3D Stronghold Details on the Map"
+  ],
+  "since": "Base game · patched through 2.04",
   "media": {
    "portrait": {
     "from": "https://img.game8.co/4449864/8f8aaba6c8e6255eb01730c911132d50.png/show",
@@ -3951,6 +4544,31 @@
     "by": "pcgamer",
     "url": "https://www.pcgamer.com/games/action/the-latest-crimson-desert-patch-is-finally-the-reason-i-needed-to-turn-my-once-useless-house-into-a-cosy-haven/",
     "title": "The latest patch turns the house into a haven"
+   },
+   {
+    "by": "dsogaming",
+    "url": "https://www.dsogaming.com/?p=193724",
+    "title": "Patch 1.01.00 release notes"
+   },
+   {
+    "by": "dsogaming",
+    "url": "https://www.dsogaming.com/patches/crimson-desert-patch-1-16-00-released-detailed/",
+    "title": "Patch 1.16.00 release notes"
+   },
+   {
+    "by": "dsogaming",
+    "url": "https://www.dsogaming.com/?p=196212",
+    "title": "Patch 1.18.00 release notes"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-patch-2-04-notes-all-charting-the-unknown-dlc-features-and-changes/",
+    "title": "Patch 2.04 notes"
+   },
+   {
+    "by": "ingame",
+    "url": "https://crimsondesert.pearlabyss.com/",
+    "title": "Others → Settings → Gameplay, game version 2.05.01 (screenshot in this repo)"
    }
   ],
   "remedy": {
@@ -3962,17 +4580,383 @@
      "value": "Ore · opened chests · Visione fragments",
      "basis": "guide",
      "by": "epicgames"
+    },
+    {
+     "label": "Minimap",
+     "value": "North locked up · keys and anvils shown",
+     "basis": "patch",
+     "by": "dsogaming"
     }
    ],
    "patches": [
     {
+     "v": "1.01.00",
+     "note": "Minimap can lock north to the top; keys and anvils marked",
+     "by": "dsogaming"
+    },
+    {
      "v": "1.03.00",
      "note": "Opened chests, visited caves and restored Abyss sites marked",
      "by": "gosugamers"
+    },
+    {
+     "v": "1.16.00",
+     "note": "A packed trade good in the horse or wagon inventory can be pinned to the map filter",
+     "by": "dsogaming"
+    },
+    {
+     "v": "1.18.00",
+     "note": "Areas revealed by ringing a bell drawn apart from ones you explored",
+     "by": "dsogaming"
+    },
+    {
+     "v": "2.04.00",
+     "note": "L3 centres the map on your summoned ship, horse, wagon or Blackstar",
+     "by": "keengamer"
     }
    ],
    "pairs": [
     "abyss-nexus"
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "fast-forward",
+  "name": "Fast Forward Speed",
+  "leaf": "settings",
+  "cls": "builtin",
+  "kind": "Game setting",
+  "region": "Settings",
+  "area": "Others → Settings → Gameplay",
+  "trait": "Cutscenes and dialogue at up to 4×",
+  "summary": "Scenes you fast-forward run at the speed you set. The day-one patch let recently watched cutscenes be fast-forwarded; 1.03 extended fast-forward to ordinary dialogue without letterbox bars and added the Fast Forward Speed slider, which goes to 4×.",
+  "tiers": {
+   "impact": {
+    "tier": 3,
+    "basis": "Hours of dialogue across a long story, cut to a quarter."
+   },
+   "reach": {
+    "tier": 1,
+    "basis": "Every quest conversation."
+   },
+   "unlock": {
+    "tier": 1,
+    "basis": "A slider."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Open the Others tab, then Settings → Gameplay.",
+     "Drag Fast Forward Speed to 4.0.",
+     "Fast-forward a cutscene or conversation as usual: it now runs at that speed."
+    ]
+   }
+  ],
+  "location": "Others → Settings → Gameplay.",
+  "notes": [
+   "Patch notes called the menu Others → Language & Gameplay; in 2.05.01 the slider sits in Settings → Gameplay."
+  ],
+  "variants": [],
+  "since": "Patches 1.00.02 and 1.03",
+  "media": {
+   "portrait": {
+    "from": "local:settings-gameplay-2.05.01.webp",
+    "credit": "ingame",
+    "clip": [
+     0.04,
+     0.64,
+     0.59,
+     0.88
+    ],
+    "crop": [
+     0.13,
+     0.5,
+     1
+    ],
+    "src": "media/qol/fast-forward/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "from": "local:settings-gameplay-2.05.01.webp",
+     "credit": "ingame",
+     "kind": "menu",
+     "caption": "Others → Settings → Gameplay in 2.05.01 — Fast Forward Speed at 4.0",
+     "clip": [
+      0.04,
+      0.655,
+      0.59,
+      0.875
+     ],
+     "src": "media/qol/fast-forward/menu-1.webp",
+     "w": 1408,
+     "h": 316
+    }
+   ],
+   "gallery": [],
+   "hero": {
+    "from": "local:settings-gameplay-2.05.01.webp",
+    "credit": "ingame",
+    "focus": "30% 70%",
+    "src": "media/qol/fast-forward/hero.webp",
+    "w": 1920,
+    "h": 1080
+   }
+  },
+  "sources": [
+   {
+    "by": "pcgamer",
+    "url": "https://www.pcgamer.com/games/action/crimson-desert-update-has-a-few-surprise-improvements-like-finally-letting-you-teleport-on-your-horse-and-a-new-ability",
+    "title": "Update 1.03 lets you teleport on your horse"
+   },
+   {
+    "by": "insidergaming",
+    "url": "https://insider-gaming.com/crimson-desert-patch-game-speed-fast-travel-camp/",
+    "title": "Patch 1.03.00: game speed and fast travel"
+   },
+   {
+    "by": "dsogaming",
+    "url": "https://www.dsogaming.com/?p=193928",
+    "title": "Patch 1.03.00 release notes"
+   },
+   {
+    "by": "beebom",
+    "url": "https://beebom.com/crimson-desert-day-one-patch-notes",
+    "title": "Day One Patch 1.00.02 notes"
+   },
+   {
+    "by": "ingame",
+    "url": "https://crimsondesert.pearlabyss.com/",
+    "title": "Others → Settings → Gameplay, game version 2.05.01 (screenshot in this repo)"
+   }
+  ],
+  "remedy": {
+   "fixes": "Sitting through dialogue at talking pace.",
+   "gain": "Every scene at up to four times speed.",
+   "figures": [
+    {
+     "label": "Top speed",
+     "value": "4×",
+     "basis": "patch",
+     "by": "pcgamer"
+    },
+    {
+     "label": "Covers",
+     "value": "Cutscenes, and dialogue without letterbox bars since 1.03",
+     "basis": "patch",
+     "by": "insidergaming"
+    },
+    {
+     "label": "Where",
+     "value": "Others → Settings → Gameplay",
+     "basis": "screenshot",
+     "by": "ingame"
+    }
+   ],
+   "patches": [
+    {
+     "v": "1.00.02",
+     "note": "Recently watched cutscenes can be fast-forwarded",
+     "by": "beebom"
+    },
+    {
+     "v": "1.03.00",
+     "note": "Fast Forward Speed slider up to 4×; plain dialogue fast-forwards too",
+     "by": "pcgamer"
+    }
+   ],
+   "pairs": [
+    "display-options"
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "camera-controls",
+  "name": "Camera and Controls",
+  "leaf": "settings",
+  "cls": "builtin",
+  "kind": "Game settings",
+  "region": "Settings",
+  "area": "Others → Settings → Accessibility · Input",
+  "trait": "Over the shoulder, top-down, or lock-on your way",
+  "summary": "Patch 1.03 put the camera in your hands: Visual Range, Vertical and Horizontal Offset, Auto-follow and Lookahead sit in the Accessibility settings with shake, blur and depth of field. Players dial them into an over-the-shoulder view or a near-isometric one. 1.02 added Movement Controls (tap-to-sprint is back), 1.04 keyboard and mouse remapping, and 1.18 three lock-on camera modes.",
+  "tiers": {
+   "impact": {
+    "tier": 3,
+    "basis": "The camera and the controls you play every minute with."
+   },
+   "reach": {
+    "tier": 1,
+    "basis": "Every session."
+   },
+   "unlock": {
+    "tier": 1,
+    "basis": "Menu settings."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Open the Others tab, then Settings → Accessibility for the camera sliders.",
+     "Over the shoulder: Visual Range 5, Vertical Offset 0, Horizontal Offset 40.",
+     "Top-down: push Visual Range, Camera Distance and both offsets high, then pull back to taste.",
+     "In Input, set Lock-on Camera Rotation: Manual, Semi-auto or Auto."
+    ]
+   }
+  ],
+  "location": "Others → Settings → Accessibility (camera) and Input (controls).",
+  "notes": [
+   "The camera still pulls in on Kliff when a building blocks the view, so a top-down setup will not stay top-down indoors.",
+   "Keyboard shortcuts open the menus: I for the Inventory, K for Skills (1.00.03)."
+  ],
+  "variants": [
+   "Camera Visual Range",
+   "Camera Vertical Offset",
+   "Camera Horizontal Offset",
+   "Camera Auto-follow",
+   "Camera Lookahead",
+   "Movement Controls",
+   "Lock-on Camera Rotation",
+   "Keyboard/Mouse Customization"
+  ],
+  "since": "Patches 1.02 to 1.18",
+  "media": {
+   "portrait": {
+    "from": "https://gdm-universal-media.b-cdn.net/gfinityesports/b82fbc4e-befunky_2026-3-1_19-27-29.webp?width=1600",
+    "credit": "gfinity",
+    "crop": [
+     0.5,
+     0.5,
+     0.95
+    ],
+    "src": "media/qol/camera-controls/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "from": "https://gdm-universal-media.b-cdn.net/gfinityesports/3aa62162-befunky_2026-3-1_19-23-22.webp?width=1600",
+     "credit": "gfinity",
+     "kind": "menu",
+     "caption": "Settings → Accessibility — the camera sliders",
+     "src": "media/qol/camera-controls/menu-1.webp",
+     "w": 1600,
+     "h": 900
+    }
+   ],
+   "gallery": [],
+   "hero": {
+    "from": "https://gdm-universal-media.b-cdn.net/gfinityesports/b82fbc4e-befunky_2026-3-1_19-27-29.webp?width=1600",
+    "credit": "gfinity",
+    "focus": "50% 45%",
+    "src": "media/qol/camera-controls/hero.webp",
+    "w": 1600,
+    "h": 900
+   }
+  },
+  "sources": [
+   {
+    "by": "gfinity",
+    "url": "https://www.gfinityesports.com/article/how-to-get-the-god-of-war-camera-in-crimson-desert-settings-guide",
+    "title": "How to Get the God of War Camera"
+   },
+   {
+    "by": "pcgamer",
+    "url": "https://www.pcgamer.com/games/rpg/psa-crimson-deserts-new-camera-settings-can-make-the-game-look-like-baldurs-gate-3/",
+    "title": "New camera settings can make it look like Baldur's Gate 3"
+   },
+   {
+    "by": "gamingpromax",
+    "url": "https://gamingpromax.com/crimson-desert-best-camera-settings/",
+    "title": "Best Camera Settings"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/2026/04/04/crimson-desert-1-02-00-patch-notes-even-more-requested-changes/",
+    "title": "1.02.00 patch notes"
+   },
+   {
+    "by": "dsogaming",
+    "url": "https://www.dsogaming.com/?p=194143",
+    "title": "Patch 1.04.00 release notes"
+   },
+   {
+    "by": "dsogaming",
+    "url": "https://www.dsogaming.com/?p=196212",
+    "title": "Patch 1.18.00 release notes"
+   },
+   {
+    "by": "insidergaming",
+    "url": "https://www.insider-gaming.com/crimson-desert-update/",
+    "title": "Patch 1.00.03 notes"
+   }
+  ],
+  "remedy": {
+   "fixes": "A fixed camera and controls you could not change at launch.",
+   "gain": "Your camera, your sprint, your lock-on.",
+   "figures": [
+    {
+     "label": "Over the shoulder",
+     "value": "Visual Range 5 · Vertical 0 · Horizontal 40",
+     "basis": "guide",
+     "by": "gfinity"
+    },
+    {
+     "label": "Horizontal Offset default",
+     "value": "50, the character centred",
+     "basis": "guide",
+     "by": "gamingpromax"
+    },
+    {
+     "label": "Lock-on Camera Rotation",
+     "value": "Manual · Semi-auto · Auto",
+     "basis": "patch",
+     "by": "dsogaming"
+    }
+   ],
+   "patches": [
+    {
+     "v": "1.00.03",
+     "note": "Keyboard shortcuts for the menus",
+     "by": "insidergaming"
+    },
+    {
+     "v": "1.02.00",
+     "note": "Movement Controls: tap-to-sprint returns",
+     "by": "vulkk"
+    },
+    {
+     "v": "1.03.00",
+     "note": "Camera sliders in Accessibility",
+     "by": "gfinity"
+    },
+    {
+     "v": "1.04.00",
+     "note": "Keyboard and mouse customisation",
+     "by": "dsogaming"
+    },
+    {
+     "v": "1.18.00",
+     "note": "Lock-on camera: Manual, Semi-auto or Auto",
+     "by": "dsogaming"
+    }
+   ],
+   "pairs": [
+    "readability"
    ]
   },
   "domains": []
@@ -3984,9 +4968,9 @@
   "cls": "builtin",
   "kind": "Game setting",
   "region": "Settings",
-  "area": "Settings → Gameplay",
+  "area": "Others → Settings → Gameplay",
   "trait": "Easy, Normal or Hard — switch any time",
-  "summary": "Patch 1.04 added Easy, Normal and Hard, switchable at any time on an existing save. Easy reduces damage taken, lowers enemy stats and widens Parry and Dodge windows; Normal is the original game. In the one case documented, a boss beaten on Easy paid the same reward.",
+  "summary": "Patch 1.04 added Easy, Normal and Hard, switchable at any time on an existing save. Game Difficulty is the first row of the Gameplay settings. Easy reduces damage taken, lowers enemy stats and widens Parry and Dodge windows; Normal is the original game. In the one case documented, a boss beaten on Easy paid the same reward.",
   "tiers": {
    "impact": {
     "tier": 3,
@@ -4009,13 +4993,13 @@
   "routes": [
    {
     "steps": [
-     "Open Settings → Gameplay (Play in the patch notes).",
-     "Set Game Difficulty to Easy, Normal or Hard and Apply.",
+     "Open the Others tab, then Settings → Gameplay.",
+     "Game Difficulty is the first row: set Easy, Normal or Hard and Apply.",
      "Switch back whenever you like."
     ]
    }
   ],
-  "location": "Settings menu.",
+  "location": "Others → Settings → Gameplay, first row.",
   "notes": [
    "The Games Wiki notes Easy does not change Mazzul's Golden Beer reward."
   ],
@@ -4040,11 +5024,26 @@
    },
    "captures": [
     {
+     "from": "local:settings-gameplay-2.05.01.webp",
+     "credit": "ingame",
+     "kind": "menu",
+     "caption": "Others → Settings → Gameplay in 2.05.01 — Game Difficulty on the first row, Normal described on the right",
+     "clip": [
+      0.04,
+      0.02,
+      0.96,
+      0.4
+     ],
+     "src": "media/qol/difficulty/menu-1.webp",
+     "w": 1600,
+     "h": 372
+    },
+    {
      "from": "https://www.method.gg/images/uploads/guides/2704022-difficulty-option-1.jpg",
      "credit": "method",
      "kind": "menu",
      "caption": "Settings — the difficulty selector",
-     "src": "media/qol/difficulty/menu-1.webp",
+     "src": "media/qol/difficulty/menu-2.webp",
      "w": 900,
      "h": 525
     }
@@ -4084,12 +5083,23 @@
     "by": "thegameswiki",
     "url": "https://thegameswiki.com/crimson-desert/wiki/golden-beer",
     "title": "Golden Beer"
+   },
+   {
+    "by": "ingame",
+    "url": "https://crimsondesert.pearlabyss.com/",
+    "title": "Others → Settings → Gameplay, game version 2.05.01 (screenshot in this repo)"
    }
   ],
   "remedy": {
    "fixes": "One fight blocking the road for hours.",
    "gain": "Drop to Easy for the fight, then switch back.",
    "figures": [
+    {
+     "label": "Where",
+     "value": "Others → Settings → Gameplay, first row",
+     "basis": "screenshot",
+     "by": "ingame"
+    },
     {
      "label": "Easy",
      "value": "Less damage taken · wider Parry and Dodge windows",
@@ -4114,17 +5124,17 @@
   "cls": "builtin",
   "kind": "World setting",
   "region": "Settings",
-  "area": "Game options",
-  "trait": "Keep liberated areas liberated",
-  "summary": "A May 2026 patch let factions retake areas you liberated, 13 factions across 23 areas, and gave you the dial: frequent, once in a blue moon (the default), or never.",
+  "area": "Others → Settings → Gameplay",
+  "trait": "Stable keeps cleared forts cleared",
+  "summary": "Since 1.05 enemy factions can retake strongholds you liberated: 13 factions across 23 forts and quarries, widened to bandit camps and ruins in 1.08. Re-Blockade Frequency sets the pace: Stable (none), Conflict (now and then, the default) or War (often). A change waits until the re-blockades already planned have happened, and new ones roll only on a loading screen, after a reload or a night in bed.",
   "tiers": {
    "impact": {
     "tier": 3,
-    "basis": "Turned off, no camp ever needs clearing twice."
+    "basis": "Stable ends repeat clears; War turns cleared forts into a farm for experience and drops."
    },
    "reach": {
     "tier": 3,
-    "basis": "23 areas held by 13 factions."
+    "basis": "23 forts and quarries held by 13 factions, plus bandit camps and ruins since 1.08."
    },
    "unlock": {
     "tier": 1,
@@ -4139,17 +5149,24 @@
   "routes": [
    {
     "steps": [
-     "Find the re-blockade frequency in the options.",
-     "Choose frequent, once in a blue moon (the default) or none."
+     "Open the Others tab, then Settings → Gameplay.",
+     "Re-Blockade Frequency is the second row: choose Stable, Conflict or War and Apply.",
+     "Sleep in a bed, or save and reload: re-blockades only roll on a loading screen."
     ]
    }
   ],
-  "location": "Game options.",
+  "location": "Others → Settings → Gameplay, second row.",
   "notes": [
-   "The same patch added Rematch: fight defeated bosses again at their original balance or scaled to your gear, with consumables refunded and no loot."
+   "The same patch added Rematch: fight defeated bosses again at their original balance or scaled to your gear, with consumables refunded and no loot.",
+   "War brings back the same garrisons, which is how players re-farm a camp for its mount or its drops.",
+   "Patch 1.10 reworked re-blockades with new stronghold-defence mechanics."
   ],
-  "variants": [],
-  "since": "Patch of 2 May 2026",
+  "variants": [
+   "Stable",
+   "Conflict",
+   "War"
+  ],
+  "since": "Patch 1.05.00 (2 May 2026)",
   "media": {
    "portrait": {
     "from": "https://cdn.mos.cms.futurecdn.net/7ShLNLVumd8T77sGzsQz95.jpg",
@@ -4163,7 +5180,23 @@
     "w": 480,
     "h": 480
    },
-   "captures": [],
+   "captures": [
+    {
+     "from": "local:settings-gameplay-2.05.01.webp",
+     "credit": "ingame",
+     "kind": "menu",
+     "caption": "Others → Settings → Gameplay in 2.05.01 — Re-Blockade Frequency on the second row, set to Stable",
+     "clip": [
+      0.04,
+      0.02,
+      0.6,
+      0.25
+     ],
+     "src": "media/qol/re-blockades/menu-1.webp",
+     "w": 1433,
+     "h": 331
+    }
+   ],
    "gallery": [],
    "hero": {
     "from": "https://cdn.mos.cms.futurecdn.net/7ShLNLVumd8T77sGzsQz95.jpg",
@@ -4176,30 +5209,96 @@
   },
   "sources": [
    {
+    "by": "mp1st",
+    "url": "https://mp1st.com/?p=306623",
+    "title": "Version 1.05.00 introduces Rematch and Re-blockade"
+   },
+   {
+    "by": "mythras",
+    "url": "https://gamertagmythras.com/blog/crimson-desert/crimson-desert-re-blockade-guide",
+    "title": "Re-Blockade: How to Stop Forts Being Retaken"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/re-blockade",
+    "title": "Re-Blockade"
+   },
+   {
+    "by": "nerdschalk",
+    "url": "https://nerdschalk.com/crimson-desert-re-blockades-explained-how-to-adjust-frequency-of-stable-conflict-and-war-modes/",
+    "title": "Re-Blockades Explained: Stable, Conflict and War"
+   },
+   {
+    "by": "windowscentral",
+    "url": "https://www.windowscentral.com/gaming/crimson-desert-first-summer-patch-rolling-out-re-blockade-mounts-mini-games-more",
+    "title": "Patch 1.10.00: improving Re-Blockade"
+   },
+   {
     "by": "pcgamer",
     "url": "https://www.pcgamer.com/games/rpg/new-crimson-desert-update-lets-you-rematch-defeated-enemies-and-adds-new-legendary-creatures/",
     "title": "New update lets you 'rematch' defeated enemies"
+   },
+   {
+    "by": "ingame",
+    "url": "https://crimsondesert.pearlabyss.com/",
+    "title": "Others → Settings → Gameplay, game version 2.05.01 (screenshot in this repo)"
    }
   ],
   "remedy": {
-   "fixes": "Enemy factions retaking camps you already cleared.",
-   "gain": "Cleared stays cleared.",
+   "fixes": "Enemy factions retaking forts you already cleared.",
+   "gain": "Your call: cleared stays cleared, or cleared forts refill for farming.",
    "figures": [
     {
-     "label": "Affected",
-     "value": "13 factions · 23 areas",
-     "basis": "guide",
-     "by": "pcgamer"
+     "label": "Where",
+     "value": "Others → Settings → Gameplay, second row",
+     "basis": "screenshot",
+     "by": "ingame"
     },
     {
-     "label": "Options",
-     "value": "Frequent · once in a blue moon · none",
-     "basis": "guide",
-     "by": "pcgamer"
+     "label": "Stable",
+     "value": "Re-blockades will not occur",
+     "basis": "patch",
+     "by": "mp1st"
+    },
+    {
+     "label": "Conflict — the default",
+     "value": "Re-blockades occur now and then",
+     "basis": "patch",
+     "by": "mythras"
+    },
+    {
+     "label": "War",
+     "value": "Re-blockades occur often",
+     "basis": "patch",
+     "by": "mythras"
+    },
+    {
+     "label": "Affected",
+     "value": "13 factions · 23 forts and quarries",
+     "basis": "patch",
+     "by": "mp1st"
+    }
+   ],
+   "patches": [
+    {
+     "v": "1.05.00",
+     "note": "Re-blockades and the frequency setting added",
+     "by": "mp1st"
+    },
+    {
+     "v": "1.08.00",
+     "note": "Extended to bandit camps and ruins",
+     "by": "mythras"
+    },
+    {
+     "v": "1.10.00",
+     "note": "Re-blockade reworked with stronghold defence",
+     "by": "windowscentral"
     }
    ],
    "watch": [
-    "PC Gamer does not name the menu; the official patch notes are linked from the game's site."
+    "Switching the frequency does not cancel re-blockades already planned; they happen first.",
+    "The patch notes put no numbers on Conflict’s “intermittently” or War’s “frequently”."
    ]
   },
   "domains": []
@@ -4211,13 +5310,13 @@
   "cls": "builtin",
   "kind": "Game settings",
   "region": "Settings",
-  "area": "Settings → Language & Gameplay",
-  "trait": "Hide the helmet, hide the weapons, tap to sprint",
-  "summary": "Settings → Language & Gameplay holds the switches patches added: Headgear Visibility hides your helmet (1.02), weapon display hides armaments on your back by type (1.03), and 1.02 also brought back tap-to-sprint for players who preferred it.",
+  "area": "Others → Settings → Gameplay",
+  "trait": "Helmet, weapons, sheath and accessories, each on its own switch",
+  "summary": "The Gameplay settings hold the look-and-feel switches patches added: Display Headgear (1.02), Display Melee Weapons and Display Ranged Weapons (1.03), Display Sheath (1.06), an accessories switch each for Kliff, Damiane and Oongka, and View 3D Stronghold Details on the Map, Display All Guides and Show Group Icon in Inventory.",
   "tiers": {
    "impact": {
     "tier": 4,
-    "basis": "Mostly cosmetic; tap-to-sprint is a comfort setting."
+    "basis": "Cosmetic, except the map and inventory switches."
    },
    "reach": {
     "tier": 1,
@@ -4236,21 +5335,28 @@
   "routes": [
    {
     "steps": [
-     "Open Settings → Language & Gameplay.",
-     "Turn Headgear Visibility off to hide helmets.",
-     "Choose which weapon types show on your back.",
-     "Set sprint back to tap if you prefer it."
+     "Open the Others tab, then Settings → Gameplay.",
+     "Display Headgear: Always Show, Show in Combat, Hide in Cutscenes or Always Hide.",
+     "Display Melee Weapons: All, or Selected Only for the weapon in hand. Display Ranged Weapons: Always, or Only When Used.",
+     "Display Sheath, and each character’s accessories, switch on or off."
     ]
    }
   ],
-  "location": "Settings menu.",
-  "notes": [],
-  "variants": [
-   "Headgear Visibility",
-   "Weapon display",
-   "Tap to sprint"
+  "location": "Others → Settings → Gameplay.",
+  "notes": [
+   "Tap-to-sprint is the 1.02 Movement Controls option; it is on the Camera and Controls plate."
   ],
-  "since": "Patches 1.02 and 1.03",
+  "variants": [
+   "Display Headgear",
+   "Display Melee Weapons",
+   "Display Ranged Weapons",
+   "Display Sheath",
+   "Display Kliff’s · Damiane’s · Oongka’s Accessories",
+   "View 3D Stronghold Details on the Map",
+   "Display All Guides",
+   "Show Group Icon in Inventory"
+  ],
+  "since": "Patches 1.02, 1.03 and 1.06",
   "media": {
    "portrait": {
     "from": "https://static.beebom.com/wp-content/uploads/2026/03/Hide-crimson-Desert-helmet.jpg?quality=75&strip=all",
@@ -4272,16 +5378,41 @@
    },
    "captures": [
     {
+     "from": "local:settings-gameplay-2.05.01.webp",
+     "credit": "ingame",
+     "kind": "menu",
+     "caption": "Others → Settings → Gameplay in 2.05.01 — the display switches, from 3D stronghold details to ranged weapons",
+     "clip": [
+      0.04,
+      0.238,
+      0.59,
+      0.66
+     ],
+     "src": "media/qol/display-options/menu-1.webp",
+     "w": 1408,
+     "h": 608
+    },
+    {
      "from": "https://gdm-universal-media.b-cdn.net/gfinityesports/25d920c1-befunky_2026-3-4_18-25-9.webp?width=1600",
      "credit": "gfinity",
      "kind": "menu",
-     "caption": "Settings — the Gameplay toggles",
-     "src": "media/qol/display-options/menu-1.webp",
+     "caption": "Settings — the Gameplay toggles at launch",
+     "src": "media/qol/display-options/menu-2.webp",
      "w": 1600,
      "h": 900
     }
    ],
-   "gallery": [],
+   "gallery": [
+    {
+     "from": "local:settings-gameplay-2.05.01.webp",
+     "credit": "ingame",
+     "kind": "menu",
+     "caption": "The whole Gameplay tab in 2.05.01",
+     "src": "media/qol/display-options/gallery-1.webp",
+     "w": 1280,
+     "h": 720
+    }
+   ],
    "hero": {
     "from": "https://static.beebom.com/wp-content/uploads/2026/03/Hide-crimson-Desert-helmet.jpg?quality=75&strip=all",
     "credit": "beebom",
@@ -4306,7 +5437,7 @@
    {
     "by": "vulkk",
     "url": "https://vulkk.com/2026/04/04/crimson-desert-1-02-00-patch-notes-even-more-requested-changes/",
-    "title": "1.02.00 patch notes: helmet and tap-to-sprint"
+    "title": "1.02.00 patch notes"
    },
    {
     "by": "vulkk",
@@ -4314,33 +5445,205 @@
     "title": "1.03.00 patch notes: weapon visibility"
    },
    {
+    "by": "dsogaming",
+    "url": "https://www.dsogaming.com/?p=193928",
+    "title": "Patch 1.03.00 release notes"
+   },
+   {
+    "by": "nerdschalk",
+    "url": "https://nerdschalk.com/crimson-desert-display-sheath-option-explained-in-patch-1-06-00/",
+    "title": "Display Sheath Option Explained in Patch 1.06.00"
+   },
+   {
     "by": "beebom",
     "url": "https://beebom.com/how-to-hide-helmet-crimson-desert/",
     "title": "Can You Hide Your Helmet?"
+   },
+   {
+    "by": "ingame",
+    "url": "https://crimsondesert.pearlabyss.com/",
+    "title": "Others → Settings → Gameplay, game version 2.05.01 (screenshot in this repo)"
    }
   ],
   "remedy": {
-   "fixes": "Settings you could not change at launch.",
-   "gain": "The look and the sprint you prefer.",
+   "fixes": "A helmet, a back full of weapons and a sheath in every cutscene.",
+   "gain": "The look you want, switch by switch.",
    "figures": [
     {
      "label": "Where",
-     "value": "Settings → Language & Gameplay",
+     "value": "Others → Settings → Gameplay",
+     "basis": "screenshot",
+     "by": "ingame"
+    },
+    {
+     "label": "Display Headgear",
+     "value": "Always Show · Show in Combat · Hide in Cutscenes · Always Hide",
      "basis": "patch",
-     "by": "presstart"
+     "by": "vulkk"
+    },
+    {
+     "label": "Weapons",
+     "value": "Melee: All or Selected Only · Ranged: Always or Only When Used",
+     "basis": "patch",
+     "by": "dsogaming"
     }
    ],
    "patches": [
     {
      "v": "1.02.00",
-     "note": "Headgear Visibility; tap-to-sprint option",
+     "note": "Headgear Visibility",
      "by": "vulkk"
     },
     {
      "v": "1.03.00",
-     "note": "Weapon visibility by type",
-     "by": "vulkk"
+     "note": "Weapon display by type, melee and ranged",
+     "by": "dsogaming"
+    },
+    {
+     "v": "1.06.00",
+     "note": "Display Sheath",
+     "by": "nerdschalk"
     }
+   ],
+   "watch": [
+    "No patch note found says what Display All Guides changes or which patch added the accessories switches; the names are from the 2.05.01 menu."
+   ]
+  },
+  "domains": []
+ },
+ {
+  "id": "readability",
+  "name": "Readability and Comfort",
+  "leaf": "settings",
+  "cls": "builtin",
+  "kind": "Game settings",
+  "region": "Settings",
+  "area": "Others → Settings → Accessibility",
+  "trait": "Bigger text, colour-blind palettes, no flicker",
+  "summary": "The Accessibility settings hold the text and comfort options. Minimum Font Size (1.03, after a restart) lifts the smallest text, tooltips and item descriptions above all, and leaves larger text alone. Patch 1.04 added a larger subtitle size, Colorblind modes, a Chromatic Aberration switch and a Photosensitive mode. Simplified Combo Mode turns multi-button combos into single presses for less damage.",
+  "tiers": {
+   "impact": {
+    "tier": 4,
+    "basis": "Decisive if you need it; most players never touch it."
+   },
+   "reach": {
+    "tier": 1,
+    "basis": "Every screen of text."
+   },
+   "unlock": {
+    "tier": 1,
+    "basis": "Menu settings."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Open the Others tab, then Settings → Accessibility.",
+     "Raise Minimum Font Size, then restart the game for it to take hold.",
+     "Pick a Colorblind mode, and turn on Photosensitive mode or off Chromatic Aberration if you need to."
+    ]
+   }
+  ],
+  "location": "Others → Settings → Accessibility.",
+  "notes": [
+   "On PlayStation 5 and Xbox the pause menu’s quick settings carry the Colorblind switch too."
+  ],
+  "variants": [
+   "Minimum Font Size",
+   "Subtitle Font Size",
+   "Colorblind Mode",
+   "Chromatic Aberration",
+   "Photosensitive Mode",
+   "Simplified Combo Mode"
+  ],
+  "since": "Patches 1.03 and 1.04",
+  "media": {
+   "portrait": {
+    "from": "https://gdm-universal-media.b-cdn.net/gfinityesports/3aa62162-befunky_2026-3-1_19-23-22.webp?width=1600",
+    "credit": "gfinity",
+    "crop": [
+     0.3,
+     0.5,
+     0.95
+    ],
+    "src": "media/qol/readability/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [],
+   "gallery": [],
+   "hero": {
+    "from": "https://gdm-universal-media.b-cdn.net/gfinityesports/3aa62162-befunky_2026-3-1_19-23-22.webp?width=1600",
+    "credit": "gfinity",
+    "focus": "30% 50%",
+    "src": "media/qol/readability/hero.webp",
+    "w": 1600,
+    "h": 900
+   }
+  },
+  "sources": [
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/accessibility-settings",
+    "title": "Accessibility Settings"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/minimum-font-size",
+    "title": "Minimum Font Size"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/colorblind-mode",
+    "title": "Colorblind Mode"
+   },
+   {
+    "by": "dsogaming",
+    "url": "https://www.dsogaming.com/?p=193928",
+    "title": "Patch 1.03.00 release notes"
+   },
+   {
+    "by": "dsogaming",
+    "url": "https://www.dsogaming.com/?p=194143",
+    "title": "Patch 1.04.00 release notes"
+   }
+  ],
+  "remedy": {
+   "fixes": "Tooltips too small to read and palettes that hide what matters.",
+   "gain": "Text and colour you can read.",
+   "figures": [
+    {
+     "label": "Minimum Font Size",
+     "value": "A floor: smaller text is raised, larger text left alone",
+     "basis": "guide",
+     "by": "thegameswiki"
+    },
+    {
+     "label": "Added in 1.04",
+     "value": "Colorblind · Chromatic Aberration · Photosensitive · larger subtitles",
+     "basis": "patch",
+     "by": "dsogaming"
+    }
+   ],
+   "patches": [
+    {
+     "v": "1.03.00",
+     "note": "Minimum Font Size",
+     "by": "dsogaming"
+    },
+    {
+     "v": "1.04.00",
+     "note": "Colorblind and Photosensitive modes, Chromatic Aberration switch, larger subtitles",
+     "by": "dsogaming"
+    }
+   ],
+   "pairs": [
+    "camera-controls"
    ]
   },
   "domains": []

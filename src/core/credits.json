@@ -116,6 +116,10 @@
     "pcgamesn": {
       "name": "PCGamesN",
       "url": "https://www.pcgamesn.com/crimson-desert/update-patch-notes-difficulty-options"
+    },
+    "ingame": {
+      "name": "In-game screenshot · v2.05.01",
+      "url": "https://crimsondesert.pearlabyss.com/"
     }
   },
   "publishers": {
@@ -172,6 +176,15 @@
     "gosugamers": "GosuGamers",
     "pushsquare": "Push Square",
     "presstart": "Press Start",
-    "powerpyx": "PowerPyx"
+    "powerpyx": "PowerPyx",
+    "notecom": "note (うれしょん)",
+    "dsogaming": "DSOGaming",
+    "gamingtools": "Crimson Desert gaming.tools",
+    "patchbot": "PatchBot",
+    "mp1st": "MP1st",
+    "windowscentral": "Windows Central",
+    "ingame": "In-game menu · v2.05.01",
+    "twistedvoxel": "Twisted Voxel",
+    "gamingideology": "Gaming Ideology"
   }
 }
