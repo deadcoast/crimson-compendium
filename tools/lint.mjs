@@ -138,6 +138,39 @@ export function lint() {
       for (const [k, v] of Object.entries(own)) if (!['media', 'tiers', 'sources', 'routes', 'base', 'also'].includes(k)) payload(v, k);
     }
 
+    // a branch with kits.json (Mounts): every plate says what it carries and wears through a profile
+    // that exists; every profile names its pieces, credits each line to a known publisher and links
+    // its sources; a profile with no slots says why in a note; no profile sits unused
+    if (existsSync(join(ROOT, 'src/branches', id, 'kits.json'))) {
+      const { profiles } = read(`src/branches/${id}/kits.json`);
+      const pub = (where, by) => { if (!credits.publishers[by]) bad(where, `publisher "${by}" is not in src/core/credits.json`); };
+      for (const [pid, k] of Object.entries(profiles)) {
+        const where = `kit ${pid}`;
+        text(where, k.title, 'title');
+        if (!k.carry || !('slots' in k.carry)) bad(where, 'no carry (say what it holds, or that nothing is documented)');
+        text(where, k.carry?.label, 'carry label');
+        for (const l of k.carry?.lines ?? []) { text(where, l.text, 'carry line'); pub(where, l.by); }
+        for (const s of k.slots) {
+          text(where, s.slot, 'slot name');
+          text(where, s.raises, `${s.slot} effect`);
+          pub(`${where}/${s.slot}`, s.by);
+          if (!s.best && !s.early && !s.items?.length) bad(where, `${s.slot} names no piece`);
+        }
+        if (!k.slots.length && !k.notes.length) bad(where, 'no slots and no note saying why');
+        if (!k.sources.length) bad(where, 'no sources');
+        for (const s of k.sources) { pub(where, s.by); if (!/^https:\/\//.test(s.url)) bad(where, `source "${s.url}" is not https`); }
+      }
+      const usedKits = new Set();
+      for (const e of raw[id]) {
+        const pid = typeof e.kit === 'string' ? e.kit : e.kit?.profile;
+        if (!pid) { bad(e.id, 'no kit: say what it carries and wears'); continue; }
+        if (!profiles[pid]) { bad(e.id, `kit "${pid}" is not a profile in kits.json`); continue; }
+        usedKits.add(pid);
+        if (typeof e.kit === 'object' && e.kit.note !== undefined) text(e.id, e.kit.note, 'kit note');
+      }
+      for (const pid of Object.keys(profiles)) if (!usedKits.has(pid)) bad(`kit ${pid}`, 'no plate uses this profile');
+    }
+
     // a cover resolves the way core/tree.ts coverFrom does: its own file, or an entry's capture,
     // portrait or hero (falling back to the portrait); it must end at an image
     const byId = new Map(entries.map((e) => [e.id, e]));

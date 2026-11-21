@@ -2,7 +2,7 @@
 """Media pipeline for every branch of the compendium.
 
 Reads src/branches/<branch>/branch.json and entries.json, downloads each image
-referenced by a "from" URL, converts it to WebP for its role, writes it to
+referenced by a "from" URL (or reads tools/sources/<file> for "local:<file>"), converts it to WebP for its role, writes it to
 public/media/<branch>/..., and records "src", "w" and "h" back into the JSON.
 
     python3 tools/media.py            # process new or missing media
@@ -34,6 +34,7 @@ def write_json(path, data):
         json.dump(data, f, ensure_ascii=False, indent=1)
     os.replace(tmp, path)
 CACHE = os.path.join(ROOT, "tools", ".cache")
+SOURCES = os.path.join(ROOT, "tools", "sources")  # images with no URL: "from": "local:<file>"
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130 Safari/537.36"
 INK = (21, 17, 15)
 SPEC = {
@@ -48,6 +49,8 @@ REFERER = {"fextralifeimages": "https://crimsondesertgame.wiki.fextralife.com/",
 
 
 def fetch(url):
+    if url.startswith("local:"):  # an in-game screenshot kept in the repo (tools/sources), not downloaded
+        return Image.open(os.path.join(SOURCES, url[len("local:"):]))
     os.makedirs(CACHE, exist_ok=True)
     path = os.path.join(CACHE, hashlib.sha1(url.encode()).hexdigest()[:20])
     if not os.path.exists(path) or os.path.getsize(path) < 1000:

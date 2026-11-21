@@ -5,7 +5,7 @@
  "plural": "Upgrades",
  "accent": "violet",
  "tagline": "Everything that takes the friction out of Pywel: faster travel, longer dives, bigger bags, gear that ends penalties, a camp that works while you don't, and the switches patches added.",
- "asOf": "Current to Charting the Unknown · patches through 2.04 · November 2026",
+ "asOf": "Current to Charting the Unknown · patches through 2.05.01 · November 2026",
  "labels": {
   "lenses": "Shortlists",
   "how": "Unlock",
@@ -99,8 +99,8 @@
    "id": "inventory",
    "label": "Inventory",
    "accent": "brass",
-   "short": "Bag slots, storage you craft from, pets that loot.",
-   "blurb": "Carrying and keeping: bags, the respawning +10, private storage, the house chests that crafting and cooking read from, and pets.",
+   "short": "Bag slots, storage you craft from, pets that loot and gather.",
+   "blurb": "Carrying and keeping: bags, the respawning +10, private storage, the house chests that crafting and cooking read from, pets and their sigils, and the bag screen itself.",
    "cover": {
     "entry": "extra-large-bag",
     "role": "hero"
@@ -110,8 +110,8 @@
    "id": "gear",
    "label": "Gear",
    "accent": "ember",
-   "short": "Armour that ends penalties, free refinement.",
-   "blurb": "Equipment as convenience: cold and heat immunity, Movement Speed, and Refinement Tokens.",
+   "short": "Armour that ends penalties, refinement you can take back.",
+   "blurb": "Equipment as convenience: cold and heat immunity, Movement Speed, Refinement Tokens, Extraction that hands back rare materials, and shops that sell lost rare gear back.",
    "cover": {
     "entry": "cold-proofing",
     "role": "hero"
@@ -166,7 +166,7 @@
    "label": "Settings",
    "accent": "sky",
    "short": "Switches and map features patches added.",
-   "blurb": "Nothing to find: map markers and filters, difficulty, display toggles and re-blockades.",
+   "blurb": "Nothing to find, all under Others → Settings: map and minimap, fast-forward, difficulty, re-blockades, display switches, camera, controls and readability.",
    "cover": {
     "entry": "difficulty",
     "role": "hero"
@@ -360,7 +360,7 @@
     "id": "switches",
     "label": "Flip the switches",
     "stage": "Any time",
-    "why": "Patches added settings that cost nothing and change every session. The map marks ore, opened chests and looted caves on its own, and difficulty can drop for one fight and come back.",
+    "why": "Patches added settings that cost nothing and change every session. The map marks ore, opened chests and looted caves on its own, scenes play at four times speed, and difficulty can drop for one fight and come back. Everything below sits under Others → Settings.",
     "cover": {
      "entry": "difficulty",
      "role": "hero"
@@ -371,16 +371,28 @@
       "text": "Use the map's All tab and its filters; ore, opened chests and looted caves mark themselves."
      },
      {
-      "entry": "difficulty",
-      "text": "Know the dial is there: Easy for a wall of a fight, back to Normal after."
+      "entry": "fast-forward",
+      "text": "Gameplay: drag Fast Forward Speed to 4.0."
      },
      {
-      "entry": "display-options",
-      "text": "Hide the helmet or the weapons, or set sprint back to tap."
+      "entry": "difficulty",
+      "text": "Gameplay, first row: Easy for a wall of a fight, back to Normal after."
      },
      {
       "entry": "re-blockades",
-      "text": "Turn re-blockades off if you would rather cleared camps stay cleared."
+      "text": "Gameplay, second row: Re-Blockade Frequency to Stable if cleared forts should stay cleared, War to farm them."
+     },
+     {
+      "entry": "display-options",
+      "text": "Gameplay: hide the helmet, the weapons you are not holding, the sheath or the accessories."
+     },
+     {
+      "entry": "camera-controls",
+      "text": "Accessibility and Input: set the camera, tap-to-sprint and the lock-on camera."
+     },
+     {
+      "entry": "readability",
+      "text": "Accessibility: raise Minimum Font Size if tooltips are hard to read."
      }
     ]
    },
@@ -431,8 +443,16 @@
       "text": "Raise a stray to 100 Trust and summon it in every fight."
      },
      {
+      "entry": "pet-sigils",
+      "text": "Find Lacey on the Florindale road: Hunter's Sigil sets a bird pet gathering, Sigil of Valor makes a dog fight."
+     },
+     {
       "entry": "private-storage",
       "text": "Use the chest in Kliff's tent for everything the bag cannot hold."
+     },
+     {
+      "entry": "inventory-tools",
+      "text": "Learn the bag: category tabs, and examine maps and posters in place with View Details."
      }
     ],
     "meanwhile": [
@@ -481,12 +501,22 @@
       "text": "Spend tokens on the gear you keep: Stage 4 without materials."
      },
      {
+      "entry": "refinement-extraction",
+      "text": "Outgrown a refined weapon? Extract it at a Smithy: the Abyss Artifacts come back in full."
+     },
+     {
       "entry": "cold-proofing",
       "text": "Take the Frostcursed Plate Cloak from the Sanctum of Expiation before Pailune."
      },
      {
       "entry": "heat-proofing",
       "text": "Take the Scorchflame Plate Cloak from Silent Falls Hideout before the desert."
+     }
+    ],
+    "meanwhile": [
+     {
+      "entry": "lost-gear-recovery",
+      "text": "Sold something rare by mistake? It comes back to the shops within a week."
      }
     ]
    },

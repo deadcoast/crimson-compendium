@@ -1562,7 +1562,10 @@
    ]
   },
   "variants": [],
-  "notes": []
+  "notes": [],
+  "also": [
+   "mounts/small-greymane-ship"
+  ]
  },
  {
   "id": "fleetmaster-ships",
@@ -1732,7 +1735,13 @@
    ]
   },
   "variants": [],
-  "notes": []
+  "notes": [],
+  "also": [
+   "mounts/large-hernandian-ship",
+   "mounts/medium-hernandian-ship",
+   "mounts/small-hernandian-ship",
+   "mounts/humble-rowboat"
+  ]
  },
  {
   "id": "ship-crew",
@@ -2473,7 +2482,14 @@
     "Selling a lot of one good at one post lowers its price there."
    ]
   },
-  "variants": []
+  "variants": [],
+  "also": [
+   "mounts/trading-wagon",
+   "mounts/freight-wagon",
+   "mounts/pywel-wagon",
+   "mounts/elantrima",
+   "mounts/rokade"
+  ]
  },
  {
   "id": "royal-trading-posts",
@@ -2635,7 +2651,10 @@
   },
   "variants": [],
   "notes": [],
-  "requires": []
+  "requires": [],
+  "also": [
+   "mounts/trading-wagon"
+  ]
  },
  {
   "id": "camp-donations",
