@@ -4,6 +4,10 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
 
 ## [Unreleased]
 
+## [0.3.0] — 2026-11-21
+
+Two new trees, Riches and Quality of Life, the full roster of 80 mounts with what each carries and wears, and a regression gate behind every release.
+
 ### Added
 
 - **Inventory on every mount plate**: what the mount carries and what it wears, after its Record.
@@ -11,9 +15,8 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
   - *Equipment*: a card per slot. Horse tack's five slots with what each raises, the early pieces and the best (Delesyian Saddle, Four-Leaf Horseshoes 8 Attack, Delesyian or Hagmund Champron 15 Attack, Hagmund Barding 80 Defense); each species' saddle and the saddler who sells it; Blackstar's Abyssal Dragon Armor; the A.T.A.G.'s weapons, Mk I–III plating, boots and thrusterpacks and the marine set; wagon barding; ship sails, cannons, figureheads, sterns and the teleporter with outfitter prices.
   - *Where to get it*, *Feeding and healing* for horses, and the menu path.
   - Recorded stats for 23 more mounts: the sea mounts, Ocean Drifter, iguanas, raptor, Rosehorn Deer, Kuku Bird, camel, A.T.A.G., Pywel Wagon and Cloudcart. 79 of 80 now have a Record.
-- **Quality of Life**, seven new upgrades from a sweep of every patch through 2.05.01: Fast Forward Speed, Camera and Controls, Readability and Comfort, Inventory Screen Tools, Pet Sigils, Extraction and Lost Gear Recovery. The tree has 46.
 - The settings plates show the game's own 2.05.01 Gameplay menu (`tools/sources`, read by `media.py` as `local:`).
-- **Quality of Life**, a third branch: 39 upgrades at launch that take the friction out of Pywel.
+- **Quality of Life**, a third branch: 46 upgrades that take the friction out of Pywel. 39 shipped with the tree; a sweep of every patch through 2.05.01 added Fast Forward Speed, Camera and Controls, Readability and Comfort, Inventory Screen Tools, Pet Sigils, Extraction and Lost Gear Recovery.
   - Nine leaves: Travel, Underwater, Inventory, Gear, Camp, Money, Facilities, Ships & Pioneering, Settings.
   - Ratings: Impact, Reach and Unlock, I–V. The classes are *Built-in* (settings, patch features, systems) and *Unlock* (things you earn, find, buy or build).
   - **Priority**, a tier list worked out from the ratings: Essential, Worthwhile, Situational.
@@ -113,5 +116,7 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
 - Plates with map loupe and lightbox, a Tier Ladder, Ride-for lenses, `/` search and keyboard stepping.
 - An image pipeline (`tools/media.py`) and a registry that validates every branch at load.
 
+[Unreleased]: https://github.com/deadcoast/crimson-compendium/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/deadcoast/crimson-compendium/releases/tag/v0.3.0
 [0.2.0]: https://github.com/deadcoast/crimson-compendium/releases/tag/v0.2.0
 [0.1.0]: https://github.com/deadcoast/crimson-compendium/commit/db6bd26
