@@ -68,6 +68,12 @@ export function lint() {
     const image = (where, m, role, needCaption) => {
       if (!m) return;
       images++;
+      if (typeof m.from === 'string' && m.from.startsWith('local:')) {
+        // an in-game screenshot kept in tools/sources: a bare file name that exists there, nothing else
+        const name = m.from.slice('local:'.length);
+        if (!name || /[\\/]/.test(name) || name.includes('..')) bad(where, `${role} local source "${name}" must be a file name in tools/sources`);
+        else if (!existsSync(join(ROOT, 'tools/sources', name))) bad(where, `${role} local source tools/sources/${name} is missing`);
+      }
       if (!m.src) return bad(where, `${role} has no built file (run npm run media)`);
       used.add(m.src);
       if (!existsSync(join(ROOT, 'public', m.src))) bad(where, `${role} file missing: public/${m.src}`);
