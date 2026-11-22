@@ -7,6 +7,7 @@
   import Plate from './ui/Plate.svelte';
   import Ladder from './ui/Ladder.svelte';
   import Route from './ui/Route.svelte';
+  import Matrix from './ui/Matrix.svelte';
   import Palette from './ui/Palette.svelte';
   import Sheet from './ui/Sheet.svelte';
   import Lightbox from './ui/Lightbox.svelte';
@@ -49,7 +50,7 @@
   $effect(() => { void app.hash; menu = false; });
   $effect(() => {
     const title =
-      view.kind === 'entry' ? `${view.entry.name} · ` : view.kind === 'ladder' ? 'Tier Ladder · ' : view.kind === 'route' ? `${branch.route?.title} · ` : '';
+      view.kind === 'entry' ? `${view.entry.name} · ` : view.kind === 'ladder' ? 'Tier Ladder · ' : view.kind === 'route' ? `${branch.route?.title} · ` : view.kind === 'matrix' ? `${branch.matrix?.title} · ` : '';
     document.title = `${title}${branch.title} — Crimson Compendium`;
   });
 
@@ -81,7 +82,7 @@
     }
     if (app.overlayOpen) return;
     if (ev.key === 'l' || ev.key === 'L') { app.go(view.kind === 'ladder' ? href.ctx(branch, ctx) : href.ladder(branch)); return; }
-    if (view.kind === 'ladder' || view.kind === 'route') return;
+    if (view.kind === 'ladder' || view.kind === 'route' || view.kind === 'matrix') return;
     if (ev.key === 'j' || ev.key === 'ArrowRight') { ev.preventDefault(); step(1); }
     else if (ev.key === 'k' || ev.key === 'ArrowLeft') { ev.preventDefault(); step(-1); }
   }
@@ -115,6 +116,8 @@
       {#key branch.id}<Ladder {branch} />{/key}
     {:else if view.kind === 'route'}
       {#key branch.id}<Route {branch} />{/key}
+    {:else if view.kind === 'matrix'}
+      {#key branch.id}<Matrix {branch} />{/key}
     {:else if entry}
       <LeafIndex {branch} {ctx} selectedId={entry.id} />
       <Plate {branch} {entry} {ctx} />
@@ -145,7 +148,7 @@
     grid-template-rows: minmax(0, 1fr);
     grid-template-areas: 'index plate';
   }
-  .main > :global(.ladder), .main > :global(.route) { grid-column: 1 / -1; grid-row: 1; }
+  .main > :global(.ladder), .main > :global(.route), .main > :global(.matrix) { grid-column: 1 / -1; grid-row: 1; }
   .topbar, .spine-scrim { display: none; }
 
   @media (max-width: 1240px) {
@@ -159,7 +162,7 @@
       grid-template-areas: 'top' 'main';
     }
     .main { grid-area: main; grid-template-columns: minmax(0, 1fr); grid-template-areas: 'main'; }
-    .app .main > :global(.index), .app .main > :global(.plate), .app .main > :global(.ladder), .app .main > :global(.route) { grid-area: main; }
+    .app .main > :global(.index), .app .main > :global(.plate), .app .main > :global(.ladder), .app .main > :global(.route), .app .main > :global(.matrix) { grid-area: main; }
     .app[data-pane='list'] .main > :global(.plate) { display: none; }
     .app[data-pane='plate'] .main > :global(.index) { display: none; }
 

@@ -4,6 +4,27 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
 
 ## [Unreleased]
 
+### Added
+
+- **Materials**, a fourth branch: where every item goes and what reads it, across 20 plates in House Storage, Ship Storage and Mount Storage.
+  - **The Sorter** (`#materials`, the front door): 30 item families against 12 places that hold items, and 12 mechanics against the places they read. Seven shape-coded marks (Home, Read here, Fits, Donate, Arrives, Reported, Refused). Pinned column heads with each place's portrait and slots, a crosshair and a readout that explains any cell with its source, keyboard navigation, and an item search that answers where an item goes in one card. On a phone, one card per family.
+  - **Search any item from the palette**: `/` now knows the 339 items and item types the Sorter names, and picking one opens the Sorter on it.
+  - **The Set-up Order**: six phases, by when the story opens each store, with what to move in.
+  - **Manifest** on every plate: capacity beside what reads the store in place; the shelves of what goes in, by mark, with every item by name and a filter; where everything else goes instead; hold sizes from the Mounts plates; bills of materials; figures with their basis; tips, patch history and what to watch out for.
+  - Plates include the Wardrobe, Collectibles Chest, Kuku Pot, Camp Provisions and Supply Chest; ship holds, shipbuilding stock, both outfitters' parts, the four hidden sea blueprints, ocean materials and Island Storage; horse trade slots, wagon cargo, horse feed, the Wells Military tack and Kuku mount gear.
+  - Ratings: Capacity, Payoff and Unlock, I–V. Classes Storage and Supplies. A moss root accent and falling-grain ambient motion.
+  - Research notes with every source: `docs/MATERIALS-RESEARCH.md`.
+- A generic **matrix view** for any branch (`matrix.json`), and `front` to choose whether a branch opens on its route or its matrix.
+
+### Changed
+
+- The lint checks a branch's matrix (marks explained, publishers known, items listed once) and that every credited line in a plate's payload names a known publisher.
+- `npm run verify` checks every matrix (sheets, marks, portraits, search, readout, palette hand-off, phone cards) and runs branches in the registry's order.
+
+### Fixed
+
+- Lists keyed by plate id alone (search results, Recent, cross-links) broke when two branches shared an id; they now key by branch and plate.
+
 ## [0.3.0] — 2026-11-21
 
 Two new trees, Riches and Quality of Life, the full roster of 80 mounts with what each carries and wears, and a regression gate behind every release.

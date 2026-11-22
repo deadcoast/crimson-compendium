@@ -1,7 +1,8 @@
 <script lang="ts">
   // Ambient motion behind a plate: embers (land), bubbles + light shafts (sea), wind (sky),
   // gold dust (gold: slow-falling motes that catch the light as they turn), and abyss light (abyss:
-  // violet motes that rise and pulse, while now and then a ring opens on the ground like a Nexus waking).
+  // violet motes that rise and pulse, while now and then a ring opens on the ground like a Nexus waking),
+  // and sift (grain falling through a sieve in a few thin streams, with loose motes drifting past: sorting).
   import { app } from '../core/state.svelte';
 
   let { mode = 'land' }: { mode?: string } = $props();
@@ -15,13 +16,21 @@
     const ctx = cv.getContext('2d')!;
     const dpr = Math.min(devicePixelRatio || 1, 1.5);
     let w = 0, h = 0, raf = 0, visible = true, t = 0;
-    const count = mode === 'sea' ? 38 : mode === 'sky' ? 30 : mode === 'gold' ? 40 : mode === 'abyss' ? 34 : 46;
+    const count = mode === 'sea' ? 38 : mode === 'sky' ? 30 : mode === 'gold' ? 40 : mode === 'abyss' ? 34 : mode === 'sift' ? 64 : 46;
+    // sift: the x positions of the sieve's streams, re-drawn on resize
+    let streams: number[] = [];
     const rnd = (a: number, b: number) => a + Math.random() * (b - a);
 
     const spawn = (initial: boolean): P => {
       if (mode === 'sea') return { x: rnd(0, w), y: initial ? rnd(0, h) : h + 10, vx: 0, vy: -rnd(0.25, 0.9), r: rnd(1, 3.6), a: rnd(0.15, 0.5), ph: rnd(0, 6.28), len: 0 };
       if (mode === 'gold') return { x: rnd(0, w), y: initial ? rnd(0, h) : -rnd(4, 40), vx: rnd(-0.12, 0.12), vy: rnd(0.12, 0.42), r: rnd(0.6, 2.1), a: rnd(0.3, 0.85), ph: rnd(0, 6.28), len: rnd(0.6, 1.6) };
       if (mode === 'abyss') return { x: rnd(0, w), y: initial ? rnd(0, h) : h + 6, vx: rnd(-0.08, 0.08), vy: -rnd(0.12, 0.4), r: rnd(0.6, 1.9), a: rnd(0.25, 0.75), ph: rnd(0, 6.28), len: rnd(0.5, 1.5) };
+      if (mode === 'sift') {
+        // most grains fall in a stream; a few drift free across the plate
+        const free = Math.random() < 0.22;
+        const x = free || !streams.length ? rnd(0, w) : streams[Math.floor(rnd(0, streams.length))] + rnd(-6, 6);
+        return { x, y: initial ? rnd(0, h) : -rnd(2, 60), vx: free ? rnd(-0.18, 0.18) : 0, vy: free ? rnd(0.15, 0.35) : rnd(0.5, 1.1), r: rnd(0.5, free ? 1.6 : 1.2), a: rnd(0.25, free ? 0.55 : 0.8), ph: rnd(0, 6.28), len: free ? 1 : 0 };
+      }
       if (mode === 'sky') return { x: initial ? rnd(-w * 0.2, w) : -rnd(40, 200), y: rnd(0, h), vx: rnd(1.6, 4.2), vy: rnd(-0.15, 0.15), r: rnd(0.6, 1.2), a: rnd(0.08, 0.3), ph: rnd(0, 6.28), len: rnd(40, 160) };
       return { x: rnd(0, w), y: initial ? rnd(h * 0.2, h) : h + 6, vx: rnd(0.05, 0.45), vy: -rnd(0.2, 0.75), r: rnd(0.5, 2), a: rnd(0.35, 0.95), ph: rnd(0, 6.28), len: 0 };
     };
@@ -36,6 +45,7 @@
       w = r.width; h = r.height;
       cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      streams = Array.from({ length: 5 }, (_, i) => w * (0.12 + i * 0.19) + rnd(-w * 0.04, w * 0.04));
       ps = Array.from({ length: count }, () => spawn(true));
       if (mode === 'abyss') rings = [ring(performance.now(), -2600), ring(performance.now(), 1800)];
     };
@@ -106,6 +116,15 @@
           ctx.fillStyle = `rgba(214,200,255,${p.a * pulse})`;
           ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.fill();
           if (p.y < -8) ps[i] = spawn(false);
+        } else if (mode === 'sift') {
+          // a grain: streams fall straight and speed up a little; loose motes wander; all fade near the floor
+          if (p.len) { p.x += p.vx + Math.sin(p.ph * 0.4) * 0.12; p.y += p.vy; }
+          else { p.vy = Math.min(p.vy * 1.004, 2.2); p.y += p.vy; }
+          const floor = Math.max(0, Math.min(1, (h - p.y) / (h * 0.25)));
+          const moss = p.ph % 6.28 > 5.6;
+          ctx.fillStyle = moss ? `rgba(196,226,140,${p.a * floor})` : `rgba(236,222,190,${p.a * floor * 0.85})`;
+          ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.fill();
+          if (p.y > h + 4) ps[i] = spawn(false);
         } else if (mode === 'sky') {
           p.x += p.vx; p.y += p.vy + Math.sin(p.ph * 0.5) * 0.2;
           const g = ctx.createLinearGradient(p.x - p.len, p.y, p.x, p.y);

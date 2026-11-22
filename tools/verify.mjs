@@ -2,9 +2,11 @@
 // browser and exits non-zero on any failure. CI and the Release workflow run it.
 //
 //   data lint     content rules on every branch (tools/lint.mjs)
-//   routes        every entry plate, leaf, category, category leaf, lens, redirect, the ladder and a
-//                 branch's route, each checked for the right title, member count, images that load
-//                 and the explorer row it selects
+//   routes        every entry plate, leaf, category, category leaf, lens, redirect, the ladder, a
+//                 branch's route and its matrix, each checked for the right title, member count, images
+//                 that load and the explorer row it selects; the branch root opens on its front view
+//   matrix        every sheet's rows and marks, column portraits, the item search, the cell readout,
+//                 an item handed over from the palette, and the phone cards
 //   explorer      focus, arrows, Enter, type navigation, expand, filter, Esc; recent and outline;
 //                 the phone drawer
 //   accessibility axe-core on the first branch's four views plus every route and one plate per
@@ -75,10 +77,14 @@ const ruleTier = (r, e) => {
 };
 const matches = (e, w) => shares(w.cls, [e.cls]) && shares(w.domains, e.domains) && shares(w.tags, e.tags) && (!w.atMost || tierOf(e, w.atMost.metric) <= w.atMost.tier);
 
+// in the registry's order, so the first branch here is the app's first branch (its front door)
+const ORDER = [...readFileSync(join(ROOT, 'src/branches/registry.ts'), 'utf8').matchAll(/define\(\s*(?:\{\s*\.\.\.)?([a-z]+)Def\b/g)].map((m) => m[1]);
 const branches = readdirSync(join(ROOT, 'src/branches'))
   .filter((d) => existsSync(join(ROOT, 'src/branches', d, 'branch.json')))
+  .sort((x, y) => ORDER.indexOf(x) - ORDER.indexOf(y))
   .map((id) => {
     const def = read(`src/branches/${id}/branch.json`);
+    const matrix = existsSync(join(ROOT, 'src/branches', id, 'matrix.json')) ? read(`src/branches/${id}/matrix.json`) : null;
     const entries = read(`src/branches/${id}/entries.json`);
     const lists = []; // [route, title, count]
     for (const l of def.leaves) lists.push([l.id, l.label, entries.filter((e) => e.leaf === l.id).length]);
@@ -91,8 +97,11 @@ const branches = readdirSync(join(ROOT, 'src/branches'))
       for (const [lid, label, n] of leaves) if (n) lists.push([`${c.id}-${lid}`, label, n]);
     }
     for (const l of def.lenses) lists.push([`for-${l.id}`, l.label, entries.filter((e) => matches(e, l.where)).length]);
-    return { id, def, entries, lists };
+    // the view the branch root opens on: the one branch.json names, else its route, else its matrix (core/tree.ts frontOf)
+    const front = def.front ?? (def.route ? 'route' : matrix ? 'matrix' : undefined);
+    return { id, def, entries, lists, matrix, front };
   });
+if (ORDER.length !== branches.length) throw new Error(`verify: registry.ts defines ${ORDER.length} branches, src/branches holds ${branches.length}`);
 
 // ── browser ─────────────────────────────────────────────────────────────────────────────────
 // appType 'mpa': a missing file is a 404, not the SPA fallback page with a 200
@@ -205,8 +214,8 @@ try {
       const problems = [];
       const r = b.def.route;
       await go(pg, `${b.id}-route`);
-      await go(pg, b.id);
-      if (!(await waitText(pg, '.route h1', r.title))) problems.push(`#${b.id} does not open the route (h1 "${await text(pg, '.route h1')}")`);
+      if (b.front === 'route') await go(pg, b.id);
+      if (!(await waitText(pg, '.route h1', r.title))) problems.push(`#${b.id}${b.front === 'route' ? '' : '-route'} does not open the route (h1 "${await text(pg, '.route h1')}")`);
       // phases in order, and each phase's links in its own step order (steps, then meanwhile)
       const got = await pg.evaluate(() => [...document.querySelectorAll('.route .phase')].map((p) => ({
         label: p.querySelector('h2')?.textContent.trim(),
@@ -244,6 +253,72 @@ try {
         if (top < 200) problems.push('rail click did not scroll the route');
       }
       row('route', `${b.id} · ${got.length} phases in order · ${want} step links`, problems);
+    }
+
+    // the matrix: the root opens on it when it is the front; every sheet shows its rows and exactly its
+    // marks; column heads load their plates' portraits; a search names the row an item belongs to; the
+    // readout explains a cell; the palette hands an item over
+    if (b.matrix) {
+      const problems = [];
+      const mx = b.matrix;
+      await go(pg, `${b.id}-${b.entries[0].id}`);
+      await pg.waitForFunction((n) => document.querySelector('.hero h2')?.getAttribute('aria-label') === n, b.entries[0].name, { timeout: 6000 }).catch(() => {});
+      await go(pg, b.front === 'matrix' ? b.id : `${b.id}-${mx.id}`);
+      if (!(await waitText(pg, '.matrix h1', mx.title))) problems.push(`#${b.id}${b.front === 'matrix' ? '' : `-${mx.id}`} does not open the matrix (h1 "${await text(pg, '.matrix h1')}")`);
+      let rows = 0, marks = 0;
+      for (const [i, sh] of mx.sheets.entries()) {
+        await pg.click(`.matrix [role=tab]:nth-child(${i + 1})`);
+        const on = await pg.waitForFunction((k) => document.querySelector(`.matrix [role=tab]:nth-child(${k})`)?.getAttribute('aria-selected') === 'true', i + 1, { timeout: 3000 }).then(() => true, () => false);
+        if (!on) { problems.push(`sheet "${sh.label}" tab does not select`); continue; }
+        await pg.waitForTimeout(150);
+        const got = await pg.evaluate(() => ({
+          rows: document.querySelectorAll('.matrix tbody tr[data-row]').length,
+          marks: document.querySelectorAll('.matrix tbody td:not([data-mark=blank])').length,
+          cols: document.querySelectorAll('.matrix thead th').length - 1,
+        }));
+        const want = { rows: sh.rows.length, marks: sh.rows.reduce((n, r) => n + Object.keys(r.cells).length, 0), cols: (sh.cols ?? mx.cols).length };
+        for (const k of ['rows', 'marks', 'cols']) if (got[k] !== want[k]) problems.push(`sheet "${sh.label}": ${got[k]} ${k}, want ${want[k]}`);
+        rows += got.rows; marks += got.marks;
+      }
+      await pg.click('.matrix [role=tab]:nth-child(1)');
+      const heads = await pg
+        .waitForFunction(() => { const i = [...document.querySelectorAll('.matrix thead img')]; return i.length > 0 && i.every((x) => x.complete && x.naturalWidth > 0); }, null, { timeout: 6000 })
+        .then(() => true, () => false);
+      if (!heads) problems.push('column portraits missing or did not load');
+      // the readout explains the first marked cell
+      const cell = await pg.$('.matrix tbody td:not([data-mark=blank]) button');
+      if (cell) {
+        await cell.hover();
+        const says = await pg.waitForFunction(() => document.querySelector('.readout.on .ro-says em')?.textContent.trim().length > 1, null, { timeout: 3000 }).then(() => true, () => false);
+        if (!says) problems.push('hovering a marked cell does not explain it in the readout');
+      }
+      // search: the last item of the first row that names items finds that row
+      const sh0 = mx.sheets[0];
+      const probe = sh0.rows.find((r) => r.items?.length);
+      if (probe) {
+        const item = probe.items.at(-1);
+        await pg.fill('.matrix .find input', item);
+        const found = await pg.waitForFunction((l) => [...document.querySelectorAll('.matrix .answers .fam')].some((n) => n.textContent.trim() === l), probe.label, { timeout: 3000 }).then(() => true, () => false);
+        if (!found) problems.push(`searching "${item}" does not answer "${probe.label}"`);
+        await pg.fill('.matrix .find input', '');
+        // the palette hands an item to the matrix: open it from a plate, pick the item, land on the search
+        await go(pg, `${b.id}-${b.entries[0].id}`);
+        await pg.waitForTimeout(300);
+        await pg.keyboard.press('Control+k');
+        await pg.waitForSelector('.palette input', { timeout: 3000 }).catch(() => {});
+        await pg.keyboard.type(item);
+        const pick = await pg.waitForSelector('.palette .jump.item', { timeout: 3000 }).catch(() => null);
+        if (!pick) problems.push(`the palette offers no item for "${item}"`);
+        else {
+          await pick.click();
+          const handed = await pg.waitForFunction((w) => document.querySelector('.matrix .find input')?.value === w, item, { timeout: 4000 }).then(() => true, () => false);
+          if (!handed) problems.push(`picking "${item}" in the palette does not open the matrix searching it (input "${await pg.evaluate(() => document.querySelector('.matrix .find input')?.value)}")`);
+          await pg.fill('.matrix .find input', '').catch(() => {});
+        }
+      }
+      const sel = await text(pg, '[role=tree] [aria-selected=true]');
+      if (!sel?.startsWith(mx.title)) problems.push(`explorer selects "${sel}"`);
+      row('matrix', `${b.id} · ${mx.sheets.length} sheets · ${rows} rows · ${marks} marks · search · readout · palette`, problems);
     }
   }
 
@@ -364,7 +439,22 @@ try {
     await ph.keyboard.press('Alt+\\');
     await ph.waitForTimeout(500);
     if (!(await shown())) problems.push('Alt+\\ does not open the drawer');
-    row('phone', '390 × 844 · drawer opens, closes, summons', problems);
+    // a matrix becomes one card per row on a phone, with no grid to scroll sideways
+    const mb = branches.find((x) => x.matrix);
+    if (mb) {
+      await ph.evaluate((h) => { location.hash = h; }, `${mb.id}-${mb.matrix.id}`);
+      await ph.waitForSelector('.matrix .cards', { timeout: 6000 }).catch(() => {});
+      await ph.waitForTimeout(300);
+      const got = await ph.evaluate(() => ({
+        cards: document.querySelectorAll('.matrix .cards > li').length,
+        grid: getComputedStyle(document.querySelector('.matrix .grid') ?? document.body).display,
+        wide: document.querySelector('.matrix')?.scrollWidth > innerWidth + 1,
+      }));
+      if (got.cards !== mb.matrix.sheets[0].rows.length) problems.push(`matrix shows ${got.cards} cards, want ${mb.matrix.sheets[0].rows.length}`);
+      if (got.grid !== 'none') problems.push(`matrix grid still shows on a phone (display ${got.grid})`);
+      if (got.wide) problems.push('matrix scrolls sideways on a phone');
+    }
+    row('phone', `390 × 844 · drawer opens, closes, summons${mb ? ' · matrix cards' : ''}`, problems);
     await ph.context().close();
   }
 
@@ -380,6 +470,7 @@ try {
       // every further branch: its route on desktop and phone, and a plate with its own sections
       ...branches.slice(1).flatMap((o) => [
         ...(o.def.route ? [[`${o.id}-route`, { width: 1440, height: 900 }], [`${o.id}-route`, { width: 390, height: 844 }]] : []),
+        ...(o.matrix ? [[`${o.id}-${o.matrix.id}`, { width: 1440, height: 900 }], [`${o.id}-${o.matrix.id}`, { width: 390, height: 844 }]] : []),
         [`${o.id}-${o.entries[0].id}`, { width: 1440, height: 900 }],
       ]),
     ];
@@ -391,7 +482,7 @@ try {
       // sections reveal as they scroll into view (opacity 0 until then, which axe skips), so scroll
       // every pane through to the end and let the reveals finish before auditing
       await a.evaluate(async () => {
-        const panes = [...document.querySelectorAll('.plate, .ladder, .route, .index .scroll')].filter((p) => p.scrollHeight > p.clientHeight);
+        const panes = [...document.querySelectorAll('.plate, .ladder, .route, .matrix, .index .scroll')].filter((p) => p.scrollHeight > p.clientHeight);
         for (const p of panes) {
           // jump, don't glide: a smooth-scrolling pane (the route) can still be travelling when the sweep ends
           p.style.scrollBehavior = 'auto';

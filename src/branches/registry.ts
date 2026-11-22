@@ -1,6 +1,7 @@
 // Branch registry — the only file that changes when a branch is added to the tree.
-// A branch = branch.json (leaves, categories, metrics, lenses) + entries.json (data) + optional plate sections.
-import type { Branch, BranchDef, Category, CategoryLeaf, Entry, PlateSection, RatingRule } from '../core/types';
+// A branch = branch.json (leaves, categories, metrics, lenses) + entries.json (data) + optional plate sections
+// + an optional matrix.json (a rows-by-places grid the branch opens on, Materials' Sorter).
+import type { Branch, BranchDef, Category, CategoryLeaf, Entry, MatrixDef, PlateSection, RatingRule } from '../core/types';
 import { matches } from '../core/select';
 import mountsDef from './mounts/branch.json';
 import mountsEntries from './mounts/entries.json';
@@ -12,6 +13,10 @@ import RichesLedger from './riches/RichesLedger.svelte';
 import qolDef from './qol/branch.json';
 import qolEntries from './qol/entries.json';
 import QolRemedy from './qol/QolRemedy.svelte';
+import materialsDef from './materials/branch.json';
+import materialsEntries from './materials/entries.json';
+import materialsMatrix from './materials/matrix.json';
+import MaterialsManifest from './materials/MaterialsManifest.svelte';
 
 /** Fields a plate with a `base` takes from the plate it is about when it leaves them out. Its own
  *  summary, trait, ratings, tags and payload are always its own: they say why it sits in this branch. */
@@ -22,6 +27,7 @@ const RAW: Record<string, Entry[]> = {
   mounts: mountsEntries as unknown as Entry[],
   riches: richesEntries as unknown as Entry[],
   qol: qolEntries as unknown as Entry[],
+  materials: materialsEntries as unknown as Entry[],
 };
 
 /** A cross-branch reference is exactly "branch/entry", both parts ids; anything else names no plate. */
@@ -73,6 +79,37 @@ function categories(def: BranchDef, entries: Entry[]): Category[] {
     const ordered = [...new Set(leaves.flatMap((l) => l.entries))];
     return { ...c, leaves, entries: ordered };
   });
+}
+
+/** A matrix names real columns, rows and marks: every cell sits in a column its sheet shows and carries a
+ *  mark the legend explains, and every column that names a plate names one in this branch. */
+function matrix(m: MatrixDef, byId: Map<string, Entry>, fail: (where: string, msg: string) => never, claim: (route: string, what: string) => void) {
+  if (!ID.test(m.id)) fail(`matrix ${m.id}`, 'matrix id is lowercase ASCII and hyphens');
+  claim(m.id, 'matrix');
+  const marks = new Set(m.marks.map((k) => k.id));
+  if (marks.size !== m.marks.length) fail('matrix', 'duplicate mark id');
+  const cols = new Set(m.cols.map((c) => c.id));
+  if (cols.size !== m.cols.length) fail('matrix', 'duplicate column id');
+  for (const c of m.cols) if (c.entry && !byId.has(c.entry)) fail(`matrix/${c.id}`, `column names unknown entry "${c.entry}"`);
+  if (!m.sheets.length) fail('matrix', 'a matrix needs at least one sheet');
+  const sheets = new Set<string>();
+  for (const sh of m.sheets) {
+    if (sheets.has(sh.id)) fail(`matrix/${sh.id}`, 'duplicate sheet id');
+    sheets.add(sh.id);
+    const shown = new Set(sh.cols ?? cols);
+    for (const c of shown) if (!cols.has(c)) fail(`matrix/${sh.id}`, `sheet shows unknown column "${c}"`);
+    const rows = new Set<string>();
+    if (!sh.rows.length) fail(`matrix/${sh.id}`, 'sheet has no rows');
+    for (const r of sh.rows) {
+      if (rows.has(r.id)) fail(`matrix/${sh.id}/${r.id}`, 'duplicate row id');
+      rows.add(r.id);
+      for (const [c, cell] of Object.entries(r.cells)) {
+        if (!shown.has(c)) fail(`matrix/${sh.id}/${r.id}`, `cell in column "${c}", which the sheet does not show`);
+        const mk = typeof cell === 'string' ? cell : cell.mark;
+        if (!marks.has(mk)) fail(`matrix/${sh.id}/${r.id}`, `cell mark "${mk}" is not in the legend`);
+      }
+    }
+  }
 }
 
 function define(def: BranchDef, entries: Entry[], sections: PlateSection[] = []): Branch {
@@ -143,6 +180,10 @@ function define(def: BranchDef, entries: Entry[], sections: PlateSection[] = [])
     if (ph.cover?.entry && !byId.has(ph.cover.entry)) fail(`route/${ph.id}`, `cover entry "${ph.cover.entry}" does not exist`);
   }
 
+  if (def.matrix) matrix(def.matrix, byId, fail, claim);
+  if (def.front === 'matrix' && !def.matrix) fail('front', 'front is "matrix" but the branch declares no matrix');
+  if (def.front === 'route' && !def.route) fail('front', 'front is "route" but the branch declares no route');
+
   for (const [from, to] of Object.entries(def.redirects ?? {})) {
     if (routes.has(from)) fail(from, 'redirect shadows a live route');
     if (!routes.has(to)) fail(from, `redirect target "${to}" does not exist`);
@@ -155,6 +196,7 @@ export const branches: Branch[] = [
   define(mountsDef as unknown as BranchDef, inherit('mounts', RAW.mounts), [MountRecord, MountKit]),
   define(richesDef as unknown as BranchDef, inherit('riches', RAW.riches), [RichesLedger]),
   define(qolDef as unknown as BranchDef, inherit('qol', RAW.qol), [QolRemedy]),
+  define({ ...materialsDef, matrix: materialsMatrix } as unknown as BranchDef, inherit('materials', RAW.materials), [MaterialsManifest]),
 ];
 
 // every cross-branch pointer names a real plate in another branch

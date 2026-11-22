@@ -28,6 +28,7 @@
   --cyan: #29d0e3;
   --gold: #e0b345; /* Riches root: coin gold, kept clear of brass so the two read apart side by side */
   --violet: #ac8ef4; /* Quality of Life root: the one hue no class, leaf or other root uses; 7.5:1 on ink-0, 5.7:1 on ink-4 */
+  --moss: #a3c46c; /* Materials root: the green of gathered herbs, a yellow-green clear of verdigris (deck); 10.2:1 on ink-0 */
   --parchment: #dbd5c8;
 
   /* classes (terrain) — drawn from the in-game map: ochre land, map-water teal, pale sky */
@@ -64,6 +65,7 @@
 [data-accent='cyan'] { --accent: var(--cyan); --accent-dim: rgba(41, 208, 227, 0.16); }
 [data-accent='gold'] { --accent: var(--gold); --accent-dim: rgba(224, 179, 69, 0.16); }
 [data-accent='violet'] { --accent: var(--violet); --accent-dim: rgba(172, 142, 244, 0.16); }
+[data-accent='moss'] { --accent: var(--moss); --accent-dim: rgba(163, 196, 108, 0.16); }
 /* category branches defined by terrain take the terrain colour */
 [data-accent='land'] { --accent: var(--land); --accent-dim: rgba(201, 162, 107, 0.16); }
 [data-accent='sea'] { --accent: var(--sea); --accent-dim: rgba(74, 166, 187, 0.16); }
@@ -76,3 +78,5 @@
 [data-cls='surface'] { --cls: var(--deck); }
 [data-cls='management'] { --cls: var(--brass); }
 [data-cls='player'] { --cls: var(--ember); }
+[data-cls='store'] { --cls: var(--brass); }
+[data-cls='supply'] { --cls: var(--moss); }

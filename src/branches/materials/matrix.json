@@ -1,0 +1,1371 @@
+{
+ "id": "sort",
+ "title": "The Sorter",
+ "blurb": "Thirteen places hold items, and each takes different things: the house chests, Carl's stock and chest, the Kuku Pot, a horse's slot, a wagon, a ship's hold and an island store. One sheet says where each kind of item belongs; the other says which of them crafting, cooking, trade and the camp can read without you carrying it. Search any item to see where it goes.",
+ "marks": [
+  {
+   "id": "home",
+   "label": "Home",
+   "text": "Built for it, and the mechanic that uses it reads it here."
+  },
+  {
+   "id": "draw",
+   "label": "Read here",
+   "text": "The mechanic takes it from here without you carrying it."
+  },
+  {
+   "id": "ok",
+   "label": "Fits",
+   "text": "Kept safe here; take it out to use it."
+  },
+  {
+   "id": "give",
+   "label": "Donate",
+   "text": "One-way into the camp's stock, which missions and builds spend."
+  },
+  {
+   "id": "recv",
+   "label": "Arrives",
+   "text": "You can't put it in; missed loot and rewards land here."
+  },
+  {
+   "id": "unk",
+   "label": "Reported",
+   "text": "One source says so; no patch note or second source confirms it."
+  },
+  {
+   "id": "no",
+   "label": "Refused",
+   "text": "A source says it won't go in, or won't be read."
+  }
+ ],
+ "cols": [
+  {
+   "id": "bag",
+   "label": "Your bag",
+   "short": "Bag",
+   "slots": "50–240"
+  },
+  {
+   "id": "private",
+   "label": "Private Storage",
+   "entry": "private-storage",
+   "slots": "240–1,000"
+  },
+  {
+   "id": "gather",
+   "label": "Sturdy Gatherables Chest",
+   "short": "Gatherables Chest",
+   "entry": "gatherables-chest",
+   "slots": "1,000 each"
+  },
+  {
+   "id": "cooler",
+   "label": "Kuku Cooler",
+   "entry": "kuku-cooler",
+   "slots": "40 · 330"
+  },
+  {
+   "id": "wardrobe",
+   "label": "Wardrobe",
+   "entry": "wardrobe",
+   "slots": "100 each"
+  },
+  {
+   "id": "collect",
+   "label": "Collectibles Chest",
+   "short": "Collectibles",
+   "entry": "collectibles-chest",
+   "slots": "1,000"
+  },
+  {
+   "id": "pot",
+   "label": "Kuku Pot",
+   "entry": "kuku-pot",
+   "slots": "230"
+  },
+  {
+   "id": "camp",
+   "label": "Camp Provisions",
+   "short": "Camp stock",
+   "entry": "camp-provisions",
+   "slots": "stock"
+  },
+  {
+   "id": "supply",
+   "label": "Supply Chest",
+   "entry": "supply-chest",
+   "slots": "230"
+  },
+  {
+   "id": "horse",
+   "label": "Horse trade slots",
+   "short": "Horse",
+   "entry": "horse-trade-slots",
+   "slots": "1–2"
+  },
+  {
+   "id": "wagon",
+   "label": "Wagon cargo",
+   "short": "Wagon",
+   "entry": "wagon-cargo",
+   "slots": "—"
+  },
+  {
+   "id": "hold",
+   "label": "Ship hold",
+   "short": "Ship hold",
+   "entry": "ship-holds",
+   "slots": "6–36"
+  },
+  {
+   "id": "island",
+   "label": "Island Storage",
+   "short": "Island",
+   "entry": "island-storage",
+   "slots": "—"
+  }
+ ],
+ "sheets": [
+  {
+   "id": "where",
+   "label": "Where it goes",
+   "rowLabel": "Item family",
+   "blurb": "Each kind of item against every place that holds items. ◆ marks the place built for it; a blank means no source puts it there. Names and stack sizes follow Gamer Guides' item database; ×1 means every one takes a slot.",
+   "cols": [
+    "private",
+    "gather",
+    "cooler",
+    "wardrobe",
+    "collect",
+    "pot",
+    "camp",
+    "supply",
+    "horse",
+    "wagon",
+    "hold",
+    "island"
+   ],
+   "rows": [
+    {
+     "id": "ores",
+     "label": "Ores and minerals",
+     "group": "Gathered",
+     "stack": 50,
+     "items": [
+      "Iron Ore",
+      "Copper Ore",
+      "Silver Ore",
+      "Gold Ore",
+      "Bismuth Ore",
+      "Scolecite Ore",
+      "Bloodstone",
+      "Azurite",
+      "Garnet",
+      "Epidote",
+      "Diamond"
+     ],
+     "by": "keengamer",
+     "note": "Refine plate armour, weapons, metal shields and jewellery (PowerPyx).",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "gather": {
+       "mark": "home",
+       "note": "KeenGamer names ores among what it takes."
+      },
+      "camp": {
+       "mark": "give",
+       "note": "Stone: stone, ore and minerals."
+      },
+      "supply": {
+       "mark": "recv"
+      }
+     }
+    },
+    {
+     "id": "timber",
+     "label": "Timber",
+     "group": "Gathered",
+     "stack": 50,
+     "items": [
+      "Timber",
+      "Fine Timber",
+      "Flawless Timber"
+     ],
+     "by": "keengamer",
+     "note": "Wooden shields, camp building and ship parts (PowerPyx, FinalBoss).",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "gather": {
+       "mark": "home",
+       "note": "KeenGamer names wood."
+      },
+      "camp": {
+       "mark": "give",
+       "note": "Timber."
+      },
+      "supply": {
+       "mark": "recv"
+      }
+     }
+    },
+    {
+     "id": "hides",
+     "label": "Hides, bones and fangs",
+     "group": "Gathered",
+     "stack": 50,
+     "items": [
+      "Thin Hide",
+      "Thick Hide",
+      "Short Hair Hide",
+      "Long Hair Hide",
+      "Sturdy Hide",
+      "Small Bone",
+      "Large Bone",
+      "Fang"
+     ],
+     "by": "keengamer",
+     "note": "Leather armour and jewellery (PowerPyx).",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "gather": {
+       "mark": "home",
+       "note": "KeenGamer names hides."
+      },
+      "supply": {
+       "mark": "recv"
+      }
+     }
+    },
+    {
+     "id": "cloth",
+     "label": "Cloth, fleece and feathers",
+     "group": "Gathered",
+     "stack": 50,
+     "items": [
+      "Cloth Piece",
+      "Fleece",
+      "Feather",
+      "Ivory",
+      "Spider Web"
+     ],
+     "by": "powerpyx",
+     "note": "Soft armour and cloaks (PowerPyx).",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "gather": {
+       "mark": "unk",
+       "note": "Crafting materials, but neither the patch note nor KeenGamer names them.",
+       "by": "thegameswiki"
+      },
+      "supply": {
+       "mark": "recv"
+      }
+     }
+    },
+    {
+     "id": "reagents",
+     "label": "Reagents",
+     "group": "Gathered",
+     "stack": 50,
+     "items": [
+      "Brimstone",
+      "Mercury",
+      "Rubber",
+      "Gunpowder",
+      "Acidic Spider Venom"
+     ],
+     "by": "consolepulse",
+     "note": "High-tier Abyss Gear and the Enhanced Kuku Cooler (Console Pulse, KeenGamer).",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "gather": {
+       "mark": "unk",
+       "note": "Not named by the patch note or KeenGamer.",
+       "by": "thegameswiki"
+      },
+      "supply": {
+       "mark": "recv"
+      }
+     }
+    },
+    {
+     "id": "herbs",
+     "label": "Herbs and flowers",
+     "group": "Gathered",
+     "stack": 50,
+     "items": [
+      "Rosemary",
+      "Lavender",
+      "Yellow Rosemary",
+      "Yellow Lavender",
+      "White Rosemary",
+      "White Lavender",
+      "Pink Rosemary",
+      "Cotton",
+      "Dendrobium Orchid",
+      "Satintail Root",
+      "Shrubby Sophora",
+      "Peony",
+      "Begonia",
+      "Dunbaria",
+      "Marigold",
+      "False Starwort",
+      "Snapdragon",
+      "Ginseng",
+      "Wild Ginseng",
+      "Croton",
+      "Red Croton",
+      "Lily of the Valley",
+      "Pansy",
+      "Rosebay",
+      "False Hellebore"
+     ],
+     "by": "gamerguides",
+     "note": "Alchemy and dyes (Game8).",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "gather": {
+       "mark": "home",
+       "note": "KeenGamer names herbs."
+      },
+      "camp": {
+       "mark": "give",
+       "note": "Food takes alchemy ingredients.",
+       "by": "allthingshow"
+      },
+      "supply": {
+       "mark": "recv"
+      }
+     }
+    },
+    {
+     "id": "mushrooms",
+     "label": "Mushrooms",
+     "group": "Gathered",
+     "stack": 50,
+     "items": [
+      "Grisette Mushroom",
+      "Poison Fire Coral Mushroom",
+      "Coral Mushroom",
+      "Oakwood Mushroom",
+      "Pine Mushroom"
+     ],
+     "by": "allthingshow",
+     "note": "Alchemy materials since 1.16; cooking ingredients before.",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "gather": {
+       "mark": "unk",
+       "note": "Alchemy materials since 1.16; no source confirms the chest takes them.",
+       "by": "thegameswiki"
+      },
+      "cooler": {
+       "mark": "unk",
+       "note": "Cooking ingredients until 1.16; no source says whether the cooler still takes them.",
+       "by": "allthingshow"
+      },
+      "camp": {
+       "mark": "give",
+       "note": "Food takes alchemy ingredients.",
+       "by": "allthingshow"
+      },
+      "supply": {
+       "mark": "recv"
+      }
+     }
+    },
+    {
+     "id": "horns",
+     "label": "Horns and organs",
+     "group": "Gathered",
+     "stack": 50,
+     "items": [
+      "Short Horn",
+      "Long Horn",
+      "Bear's Gallbladder"
+     ],
+     "by": "gamerguides",
+     "note": "Alchemy (Vulkk files animal horns under Alchemy Ingredients).",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "gather": {
+       "mark": "unk",
+       "note": "Not named by the patch note or KeenGamer.",
+       "by": "thegameswiki"
+      },
+      "camp": {
+       "mark": "give",
+       "note": "Food takes alchemy ingredients.",
+       "by": "allthingshow"
+      },
+      "supply": {
+       "mark": "recv"
+      }
+     }
+    },
+    {
+     "id": "insects",
+     "label": "Insects and small creatures",
+     "group": "Gathered",
+     "stack": 1,
+     "items": [
+      "Dragonfly",
+      "Golden Silk Spider",
+      "Silkworm Moth",
+      "Wild Silkworm Moth",
+      "Swallowtail",
+      "Ornythion Swallowtail Butterfly",
+      "Polydamas Swallowtail Butterfly",
+      "Zebra Swallowtail",
+      "Zebra Longwing Butterfly",
+      "Orange Oakleaf Butterfly",
+      "Nawab Butterfly",
+      "Purple Emperor Butterfly",
+      "Green Sulphur Butterfly",
+      "Malachite Butterfly",
+      "Bluewing Butterfly",
+      "Blue Lycaenid Butterfly",
+      "Blue Tailed Butterfly",
+      "Theona Checkerspot Butterfly",
+      "Little Metalmark Butterfly",
+      "Guava Skipper Butterfly",
+      "Southern Blue Peacock Butterfly",
+      "Great Purple Hairstreak Butterfly",
+      "Spicebush Swallowtail Butterfly",
+      "Pipevine Swallowtail Butterfly",
+      "Firefly",
+      "Grasshopper",
+      "Honeybee",
+      "Hornet",
+      "Bumblebee",
+      "Banded Peacock Butterfly",
+      "Green Birdwing Butterfly",
+      "Palmar Beetle",
+      "Water Strider",
+      "House Centipede",
+      "White Streaked Butterfly",
+      "Violet Hairstreak Butterfly",
+      "Red Lycaenid Butterfly",
+      "Meadow Butterfly",
+      "Checkered White Butterfly",
+      "Fruit Fly",
+      "Medium Fly",
+      "Grizzled Skipper Butterfly",
+      "Little Wood Satyr Butterfly",
+      "White Butterfly",
+      "Mountain Moth",
+      "White Peacock Butterfly",
+      "Painted Lady Butterfly",
+      "Eighty-eight Butterfly",
+      "Orange-Barred Sulphur Butterfly",
+      "Scarlet Leafwing Butterfly",
+      "Spotted Lycaenid Butterfly",
+      "Crimson Patch Butterfly",
+      "Red-spotted Purple Butterfly",
+      "Regal Fritillary Butterfly",
+      "Diana Fritillary Butterfly",
+      "Buckeye Butterfly",
+      "Yellow Comma Butterfly",
+      "Rusty Tipped Page Butterfly",
+      "Sleepy Scarlet Butterfly",
+      "Ruddy Daggerwing Butterfly",
+      "Flame-Bordered Butterfly",
+      "Tiger Mimic Queen Butterfly",
+      "Commander Butterfly",
+      "Monarch Butterfly",
+      "Cockroach",
+      "Camel Cricket",
+      "Wharf Roach",
+      "Jewel Beetle",
+      "Snail",
+      "Yellow Garden Spider",
+      "Beetle",
+      "Stag Beetle",
+      "Longhorn Beetle",
+      "Rhinoceros Beetle",
+      "Scorpion",
+      "Spider",
+      "Centipede",
+      "Black Centipede",
+      "Poison Frog",
+      "Tree Frog",
+      "Toad",
+      "Burrowing Toad"
+     ],
+     "by": "gamerguides",
+     "note": "They don't stack: every one takes a slot. Alchemy and dyes.",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "gather": {
+       "mark": "unk",
+       "note": "The Games Wiki lists insects among its examples and marks the list unverified.",
+       "by": "thegameswiki"
+      },
+      "camp": {
+       "mark": "give",
+       "note": "Food takes alchemy ingredients.",
+       "by": "allthingshow"
+      },
+      "supply": {
+       "mark": "recv"
+      }
+     }
+    },
+    {
+     "id": "abyss",
+     "label": "Abyss Artifacts, Scales and Cells",
+     "group": "Gathered",
+     "stack": 10,
+     "items": [
+      "Abyss Artifact",
+      "Faded Abyss Artifact",
+      "Aeserion's Scale",
+      "Abyss Cell"
+     ],
+     "by": "vulkk",
+     "note": "Artifacts stack to 10 and refine gear from level 4; Aeserion's Scale takes gear to 10; Abyss Cells feed Kuku crafting (Vulkk, PowerPyx, method.gg).",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "pot": {
+       "mark": "ok",
+       "note": "Aeserion's Scales and Abyss Cells only; Take Out moves them to the bag.",
+       "by": "method"
+      },
+      "gather": {
+       "mark": "unk",
+       "note": "No source says.",
+       "by": "thegameswiki"
+      }
+     }
+    },
+    {
+     "id": "machine",
+     "label": "Machine parts and Abyss objects",
+     "group": "Gathered",
+     "items": [
+      "Electrical Components",
+      "Sanctum components",
+      "Abyss puzzle components",
+      "Giant-robot set parts",
+      "Abyss Transporter"
+     ],
+     "by": "method",
+     "note": "Picked up with Axiom Force, not into the bag.",
+     "cells": {
+      "pot": {
+       "mark": "home",
+       "note": "Seal them with Axiom Force; Grimnir's Kuku recipes use them.",
+       "by": "method"
+      }
+     }
+    },
+    {
+     "id": "sea",
+     "label": "Ocean materials",
+     "group": "Gathered",
+     "stack": 50,
+     "items": [
+      "Shiny Ore",
+      "Hydrothermal Mineral Deposit",
+      "Manganese",
+      "Amberress",
+      "Natural Pearl",
+      "Relic",
+      "Sea Fan Coral",
+      "Malachite"
+     ],
+     "by": "finalboss",
+     "note": "Charting the Unknown: ship parts, sails and DLC gear.",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "gather": {
+       "mark": "unk",
+       "note": "Raw materials, but no source names them for the chest.",
+       "by": "thegameswiki"
+      }
+     }
+    },
+    {
+     "id": "meat",
+     "label": "Meat",
+     "group": "Food",
+     "stack": 50,
+     "items": [
+      "Tough Meat",
+      "Lean Meat",
+      "Fine Meat",
+      "Tender Meat",
+      "Marbled Meat",
+      "Lean Bird Meat",
+      "Bird Meat"
+     ],
+     "by": "gamerguides",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "cooler": {
+       "mark": "home",
+       "note": "Cooking reads it in the cooler (1.04 notes).",
+       "by": "vgc"
+      },
+      "camp": {
+       "mark": "give",
+       "note": "Food."
+      },
+      "supply": {
+       "mark": "recv"
+      }
+     }
+    },
+    {
+     "id": "grains",
+     "label": "Grains and pulses",
+     "group": "Food",
+     "stack": 50,
+     "items": [
+      "Lentils",
+      "Peas",
+      "Beans",
+      "Barley",
+      "Wheat",
+      "Buckwheat",
+      "Corn",
+      "Oats",
+      "Amaranth"
+     ],
+     "by": "gamerguides",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "cooler": {
+       "mark": "home",
+       "by": "vgc"
+      },
+      "camp": {
+       "mark": "give",
+       "note": "Food."
+      },
+      "supply": {
+       "mark": "recv"
+      }
+     }
+    },
+    {
+     "id": "produce",
+     "label": "Fruit and vegetables",
+     "group": "Food",
+     "stack": 50,
+     "items": [
+      "Apple",
+      "Pear",
+      "Peach",
+      "Fig",
+      "Grape",
+      "Orange",
+      "Pineapple",
+      "Pomegranate",
+      "Strawberry",
+      "Raspberry",
+      "Elderberry",
+      "Blackberry",
+      "Blueberry",
+      "Desert Melon",
+      "Prickly Pear",
+      "Coffee Cherry",
+      "Cacao",
+      "Tomato",
+      "Onion",
+      "Garlic",
+      "Wild Garlic",
+      "Potato",
+      "Sweet Potato",
+      "Pumpkin",
+      "Cabbage",
+      "Carrot",
+      "Turnip",
+      "Beet",
+      "Cucumber",
+      "Asparagus",
+      "Fennel",
+      "Parsley",
+      "Flax",
+      "Taro"
+     ],
+     "by": "gamerguides",
+     "note": "The only ordinary food a mounted Kliff can Feed to Horse (Vulkk).",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "cooler": {
+       "mark": "home",
+       "by": "vgc"
+      },
+      "camp": {
+       "mark": "give",
+       "note": "Food."
+      },
+      "supply": {
+       "mark": "recv"
+      }
+     }
+    },
+    {
+     "id": "forage",
+     "label": "Wild greens and seaweed",
+     "group": "Food",
+     "stack": 50,
+     "items": [
+      "Green Algae",
+      "Red Seaweed",
+      "Chaya",
+      "Enset",
+      "Skyroot",
+      "Palmar Leaf",
+      "Blue Lavender",
+      "Acorn",
+      "Razor Clam"
+     ],
+     "by": "gamerguides",
+     "note": "Red Seaweed is the one ingredient with an Attack buff (The Games Wiki).",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "cooler": {
+       "mark": "home",
+       "by": "vgc"
+      },
+      "camp": {
+       "mark": "give",
+       "note": "Food."
+      },
+      "supply": {
+       "mark": "recv"
+      }
+     }
+    },
+    {
+     "id": "pantry",
+     "label": "Pantry staples",
+     "group": "Food",
+     "stack": 50,
+     "items": [
+      "Egg",
+      "Milk",
+      "Cheese",
+      "Salt",
+      "Sugar",
+      "Water",
+      "Cooking Oil",
+      "Honey",
+      "Beehive",
+      "Wild Honey",
+      "Wild Rock Honey",
+      "Chocolate",
+      "Fish Fillet"
+     ],
+     "by": "gamerguides",
+     "note": "Grocers sell eggs, milk, salt, sugar, water and cooking oil (Game8).",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "cooler": {
+       "mark": "home",
+       "by": "vgc"
+      },
+      "camp": {
+       "mark": "give",
+       "note": "Food."
+      },
+      "supply": {
+       "mark": "recv"
+      }
+     }
+    },
+    {
+     "id": "fish",
+     "label": "Fish",
+     "group": "Food",
+     "stack": 1,
+     "items": [
+      "Ricefish",
+      "Small Blackbrow Bleak",
+      "Small Minnow",
+      "Small Spirlin",
+      "Small Gudgeon",
+      "Small Rasbora",
+      "Pond Loach",
+      "Red Tonguesole",
+      "Mackerel",
+      "Threeline Grunt",
+      "Tench",
+      "Perch",
+      "Bass",
+      "Yellow Bass",
+      "Leopard Perch",
+      "Crucian Carp",
+      "Northern Pike",
+      "Catfish",
+      "Carp",
+      "Lenok",
+      "Burbot",
+      "Salmon",
+      "Sockeye Salmon",
+      "Trout",
+      "Freshwater Eel",
+      "Opaleye",
+      "Red Seabream",
+      "Blackhead Seabream",
+      "Barred Knifejaw",
+      "Saw-Edged Perch",
+      "Striped Marlin",
+      "Sturgeon",
+      "Electric Eel",
+      "Giant Pond Loach",
+      "Crimson Opaleye",
+      "Anglerfish",
+      "Giant Red Seabream",
+      "Paddlefish",
+      "Broadnose Sevengill Shark",
+      "Sailfish",
+      "Golden Tench",
+      "Golden Carp",
+      "Golden Coelacanth",
+      "Coelacanth",
+      "Clockwork Fish"
+     ],
+     "by": "gamerguides",
+     "note": "They don't stack. A Fish Fillet stacks to 50; Game8 says cleaning a fish gives fillets.",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "cooler": {
+       "mark": "home",
+       "by": "vgc"
+      },
+      "camp": {
+       "mark": "give",
+       "note": "Food."
+      },
+      "supply": {
+       "mark": "recv"
+      }
+     }
+    },
+    {
+     "id": "shellfish",
+     "label": "Shellfish and sea creatures",
+     "group": "Food",
+     "stack": 1,
+     "items": [
+      "Freshwater Clam",
+      "Blue Crab",
+      "Freshwater Crab",
+      "Crayfish",
+      "Squid",
+      "Starfish",
+      "Seahorse",
+      "Shrimp"
+     ],
+     "by": "gamerguides",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "cooler": {
+       "mark": "home",
+       "by": "vgc"
+      },
+      "camp": {
+       "mark": "give",
+       "note": "Food."
+      },
+      "supply": {
+       "mark": "recv"
+      }
+     }
+    },
+    {
+     "id": "meals",
+     "label": "Meals and provisions",
+     "group": "Food",
+     "items": [
+      "Grilled Meat",
+      "Grilled Fish",
+      "Fish Porridge",
+      "Soups",
+      "Porridges",
+      "Feasts"
+     ],
+     "by": "keengamer",
+     "note": "Eaten only from the bag.",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "cooler": {
+       "mark": "ok",
+       "note": "Kept there, but a meal must be in the bag to be eaten.",
+       "by": "keengamer"
+      },
+      "camp": {
+       "mark": "give",
+       "note": "Food: meals.",
+       "by": "keengamer"
+      },
+      "supply": {
+       "mark": "recv"
+      }
+     }
+    },
+    {
+     "id": "elixirs",
+     "label": "Elixirs and drinks",
+     "group": "Food",
+     "items": [
+      "Palmar Pills",
+      "Refined Palmar Pills",
+      "Elixirs",
+      "Drinks"
+     ],
+     "by": "keengamer",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "cooler": {
+       "mark": "ok",
+       "note": "KeenGamer lists elixirs among what it takes.",
+       "by": "keengamer"
+      }
+     }
+    },
+    {
+     "id": "feed",
+     "label": "Horse feed",
+     "group": "Food",
+     "stack": 20,
+     "items": [
+      "Hay",
+      "Sugar Beet",
+      "Sugar Cubes",
+      "Horse Tonic",
+      "Horse Stimulant"
+     ],
+     "by": "gamerguides",
+     "note": "Hay, beets and cubes stack to 20; tonics and stimulants to 10. Fed from the bag.",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "cooler": {
+       "mark": "ok",
+       "note": "KeenGamer lists horse feed among what it takes.",
+       "by": "keengamer"
+      }
+     }
+    },
+    {
+     "id": "outfits",
+     "label": "Armour and outfits",
+     "group": "Gear and paper",
+     "items": [
+      "Headgear",
+      "Body armour",
+      "Cloaks",
+      "Gloves",
+      "Footwear",
+      "Outfits"
+     ],
+     "by": "vgc",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "wardrobe": {
+       "mark": "home",
+       "note": "Worn straight from the housing screen; one pool for all three characters.",
+       "by": "keengamer"
+      },
+      "camp": {
+       "mark": "give",
+       "note": "Armaments: weapons, armour and clothing.",
+       "by": "keengamer"
+      },
+      "supply": {
+       "mark": "recv"
+      }
+     }
+    },
+    {
+     "id": "weapons",
+     "label": "Weapons, shields and tools",
+     "group": "Gear and paper",
+     "items": [
+      "One-handed weapons",
+      "Two-handed weapons",
+      "Bows",
+      "Guns",
+      "Handcannons",
+      "Shields",
+      "Daggers",
+      "Tools"
+     ],
+     "by": "thegameswiki",
+     "note": "Store boss and exploration gear: it can't be had again once discarded (PowerPyx).",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "camp": {
+       "mark": "give",
+       "note": "Armaments: weapons and armour; tools aren't named.",
+       "by": "keengamer"
+      },
+      "supply": {
+       "mark": "recv"
+      }
+     }
+    },
+    {
+     "id": "jewels",
+     "label": "Rings, earrings and necklaces",
+     "group": "Gear and paper",
+     "items": [
+      "Rings",
+      "Earrings",
+      "Necklaces"
+     ],
+     "by": "keengamer",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "camp": {
+       "mark": "give",
+       "note": "Silver: coin and jewellery.",
+       "by": "keengamer"
+      },
+      "supply": {
+       "mark": "recv"
+      }
+     }
+    },
+    {
+     "id": "paper",
+     "label": "Recipes, blueprints and books",
+     "group": "Gear and paper",
+     "items": [
+      "Crafting recipes",
+      "Blueprints",
+      "Crafting books",
+      "Crafting manuals"
+     ],
+     "by": "vgc",
+     "note": "Once read, a recipe is learned and can be sold (Vulkk).",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "collect": {
+       "mark": "home",
+       "note": "The 1.04 notes name crafting recipes; KeenGamer adds blueprints and books.",
+       "by": "vgc"
+      }
+     }
+    },
+    {
+     "id": "quest",
+     "label": "Quest items, keys and notes",
+     "group": "Gear and paper",
+     "items": [
+      "Quest items",
+      "Keys",
+      "Notes",
+      "Bounty posters",
+      "Wanted posters",
+      "Treasure maps",
+      "Documents"
+     ],
+     "by": "keengamer",
+     "note": "Key Items can't be sold, dropped or grouped (The Games Wiki).",
+     "cells": {
+      "private": {
+       "mark": "no",
+       "note": "Key Items and quest items can't be deposited.",
+       "by": "thegameswiki"
+      },
+      "collect": {
+       "mark": "home",
+       "note": "The 1.04 notes name quest items; KeenGamer adds keys, notes and posters.",
+       "by": "vgc"
+      }
+     }
+    },
+    {
+     "id": "trade",
+     "label": "Trade goods",
+     "group": "Trade and coin",
+     "items": [
+      "Packed trade goods",
+      "Unpacked trade goods",
+      "Sea trade goods"
+     ],
+     "by": "thegameswiki",
+     "note": "Packed goods stack 10 or 100 by price, unpacked 5 or 50 (1.16).",
+     "cells": {
+      "private": {
+       "mark": "ok",
+       "note": "Trade goods are accepted.",
+       "by": "thegameswiki"
+      },
+      "horse": {
+       "mark": "home",
+       "note": "Trade goods only.",
+       "by": "pcgamer"
+      },
+      "wagon": {
+       "mark": "home",
+       "note": "Loaded by Brice or at a wagon workshop.",
+       "by": "method"
+      },
+      "hold": {
+       "mark": "home",
+       "note": "Sea trade goods for maritime trading.",
+       "by": "keengamer"
+      },
+      "camp": {
+       "mark": "ok",
+       "note": "Carl's trade window; packing costs Camp Funds.",
+       "by": "allthingshow"
+      }
+     }
+    },
+    {
+     "id": "coin",
+     "label": "Coin pouches",
+     "group": "Trade and coin",
+     "items": [
+      "Copper Pouch",
+      "Silver Pouch"
+     ],
+     "by": "keengamer",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "camp": {
+       "mark": "give",
+       "note": "Silver: coin.",
+       "by": "keengamer"
+      }
+     }
+    },
+    {
+     "id": "island",
+     "label": "Island produce",
+     "group": "Trade and coin",
+     "items": [
+      "Island produce",
+      "Rough-quest loot"
+     ],
+     "by": "vulkk",
+     "cells": {
+      "island": {
+       "mark": "home",
+       "note": "Its item text: loot from rough quests and missions, and supplies produced on islands.",
+       "by": "vulkk"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "reads",
+   "label": "What reads it",
+   "rowLabel": "Mechanic",
+   "blurb": "Which places each mechanic reads without you carrying the item. Most read only the bag: the 1.04 chests are the exceptions, and the camp's missions read only its donated stock. When a recipe says a material is missing, it is usually in the wrong place.",
+   "rows": [
+    {
+     "id": "craft",
+     "label": "Crafting at a Smithy",
+     "by": "vgc",
+     "cells": {
+      "bag": "draw",
+      "gather": {
+       "mark": "draw",
+       "note": "Read even when not carried (1.04 notes)."
+      }
+     }
+    },
+    {
+     "id": "refine",
+     "label": "Refinement at a Smithy",
+     "by": "vgc",
+     "cells": {
+      "bag": "draw",
+      "gather": {
+       "mark": "draw",
+       "note": "Read even when not carried (1.04 notes)."
+      }
+     }
+    },
+    {
+     "id": "cook",
+     "label": "Cooking at a fire or Cooking Tool",
+     "by": "vgc",
+     "cells": {
+      "bag": "draw",
+      "cooler": {
+       "mark": "draw",
+       "note": "Ingredients in either cooler count even when not carried (1.04 notes)."
+      }
+     }
+    },
+    {
+     "id": "eat",
+     "label": "Eating a meal",
+     "by": "keengamer",
+     "cells": {
+      "bag": "draw",
+      "cooler": {
+       "mark": "no",
+       "note": "Meals must be in the main inventory to be eaten."
+      }
+     }
+    },
+    {
+     "id": "alchemy",
+     "label": "Alchemy at a Cauldron",
+     "by": "consolepulse",
+     "cells": {
+      "bag": "draw",
+      "gather": {
+       "mark": "unk",
+       "note": "No source says; the patch note names crafting and refinement only.",
+       "by": "vgc"
+      }
+     }
+    },
+    {
+     "id": "kuku",
+     "label": "Kuku crafting at Grimnir's",
+     "by": "method",
+     "cells": {
+      "bag": "draw",
+      "pot": {
+       "mark": "draw",
+       "note": "Sealed parts are recipe ingredients; recipes needing an Electrical Component may need it in the pot.",
+       "by": "consolepulse"
+      }
+     }
+    },
+    {
+     "id": "camp",
+     "label": "Camp missions, expansions and ship builds",
+     "by": "keengamer",
+     "cells": {
+      "camp": {
+       "mark": "draw",
+       "note": "Dispatches spend the donated stock and Camp Funds; Small Shipbuilding's panel lists camp resources.",
+       "by": "whisperofthehouse"
+      }
+     }
+    },
+    {
+     "id": "pack",
+     "label": "Packing trade goods",
+     "by": "keengamer",
+     "cells": {
+      "camp": {
+       "mark": "draw",
+       "note": "1,000 camp resources and 100 Camp Funds make one packed good."
+      }
+     }
+    },
+    {
+     "id": "sell",
+     "label": "Selling trade goods",
+     "by": "dsogaming",
+     "cells": {
+      "bag": {
+       "mark": "draw",
+       "note": "Unpacked goods sell at black markets.",
+       "by": "allthingshow"
+      },
+      "horse": "draw",
+      "wagon": "draw",
+      "hold": {
+       "mark": "draw",
+       "note": "Sea trade goods.",
+       "by": "keengamer"
+      }
+     }
+    },
+    {
+     "id": "feed",
+     "label": "Feeding a horse",
+     "by": "thegameswiki",
+     "cells": {
+      "bag": {
+       "mark": "draw",
+       "note": "Mounted: hold Use on the feed and choose Feed to Horse; or drop it."
+      }
+     }
+    },
+    {
+     "id": "wear",
+     "label": "Changing outfits",
+     "by": "keengamer",
+     "cells": {
+      "bag": "draw",
+      "wardrobe": {
+       "mark": "draw",
+       "note": "Stored outfits are equipped from the housing screen."
+      }
+     }
+    },
+    {
+     "id": "quest",
+     "label": "Handing in quest items",
+     "by": "keengamer",
+     "cells": {
+      "bag": "draw",
+      "collect": {
+       "mark": "unk",
+       "note": "No source says a quest reads the chest."
+      }
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -15,6 +15,7 @@ export const tree = { branches };
      #mounts-for-battle          → lens
      #mounts-ladder              → tier ladder
      #riches-route               → the branch's route, when it defines one
+     #materials-sort             → the branch's matrix, under the id it declares
      #mounts-royler              → entry
    Retired names (branch.json "redirects") resolve to their replacement.            */
 export function resolve(hash: string): View {
@@ -23,7 +24,9 @@ export function resolve(hash: string): View {
   let rest = hash.startsWith(branch.id + '-') ? hash.slice(branch.id.length + 1) : '';
   rest = branch.redirects?.[rest] ?? rest;
   if (rest === 'ladder') return { kind: 'ladder', branch };
-  // a branch with a route opens on it: the plan is the front door, the catalogue sits behind it
+  if (branch.matrix && rest === branch.matrix.id) return { kind: 'matrix', branch };
+  // the branch root opens its front door: the matrix or the plan, with the catalogue behind it
+  if (rest === '' && frontOf(branch) === 'matrix') return { kind: 'matrix', branch };
   if (branch.route && (rest === 'route' || rest === '')) return { kind: 'route', branch };
   if (rest.startsWith('for-')) {
     const lens = branch.lenses.find((l) => l.id === rest.slice(4));
@@ -50,10 +53,18 @@ export const href = {
   cat: (b: Branch, catId: string, leafId?: string) => `#${b.id}-${catId}${leafId ? '-' + leafId : ''}`,
   ladder: (b: Branch) => `#${b.id}-ladder`,
   route: (b: Branch) => `#${b.id}-route`,
+  matrix: (b: Branch) => `#${b.id}-${b.matrix?.id ?? 'matrix'}`,
   entry: (b: Branch, entryId: string) => `#${b.id}-${entryId}`,
   ctx: (b: Branch, ctx: ListContext) =>
     ctx.kind === 'leaf' ? href.leaf(b, ctx.id) : ctx.kind === 'lens' ? href.lens(b, ctx.id) : href.cat(b, ctx.id, ctx.leaf),
 };
+
+/** The view a branch root opens: its declared front, else its route, else none (the first leaf). */
+export function frontOf(b: Branch): 'matrix' | 'route' | undefined {
+  if (b.front === 'matrix' && b.matrix) return 'matrix';
+  if (b.front === 'route' && b.route) return 'route';
+  return b.route ? 'route' : b.matrix ? 'matrix' : undefined;
+}
 
 export const leafOf = (b: Branch, e: Entry): Leaf => b.leaves.find((l) => l.id === e.leaf) ?? b.leaves[0];
 export const catOf = (b: Branch, id: string): Category | undefined => b.categories.find((c) => c.id === id);

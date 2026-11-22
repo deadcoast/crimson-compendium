@@ -48,6 +48,8 @@ Motion is a reveal language, not decoration. Easing `cubic-bezier(.16,1,.3,1)`.
 
 `TREE → BRANCH → (CATEGORY BRANCH →) LEAF → ENTRY`. A branch is data (`branch.json`, `entries.json`) plus optional plate sections. Core reads only generic fields; branch-specific payloads (mount `stats` and `skills`, a Riches `ledger`) are read by that branch's own section component. Routes are hash names (`#mounts`, `#mounts-rare`, `#mounts-underwater`, `#mounts-underwater-rare`, `#mounts-for-battle`, `#mounts-ladder`, `#mounts-royler`, `#riches-route`) so every view is a shareable link. Retired names keep working through `redirects` in `branch.json`.
 
+**Matrix** (core, MT1): a branch can carry a `matrix.json`, a grid of rows against places with one mark per cell, over one or more sheets, at `#<branch>-<matrix id>`. The marks, columns and sheets are data; `Matrix.svelte` draws any of them, and `Mark.svelte` draws one mark the same everywhere. A branch opens on its route or its matrix: `front` in `branch.json` names which, else the route wins (`tree.ts` `frontOf`). The registry refuses a cell in a column its sheet doesn't show, a mark the legend doesn't explain, a column naming a plate that doesn't exist, and a `front` without its view.
+
 **Category branches** are play-style lists that sit inside a branch. Each declares a selector (`where`: terrain `domains`, `tags`, `cls`) and either `"leaves": "rarity"` — one leaf per branch leaf that has members, so Underwater › Legendary, Underwater › Rare… appear only when populated — or its own leaves with their own selectors (Easter Eggs › Nods, Oddities). Membership resolves once in the registry. **Overlap is intended**: the A.T.A.G. is Land, Underwater, Mechanical and DLC at once, because each list answers a different session ("I'm diving today", "I want machines"). The registry refuses empty categories, empty leaves and route collisions.
 
 ## Explorer — the main browser window
@@ -68,7 +70,7 @@ Built on the VS Code tree widget and Atom tree-view, read from their source (`mi
 | Collapse all, reveal | VS Code explorer actions, Atom `reveal-active-file` | Pane actions: Filter, Reveal the open page, Collapse folders. |
 | Hover | VS Code hover widget, delayed | Entry rows show a card after ~0.5 s: portrait, kind, trait and all four tiers. |
 
-Tree order under a branch: the original rarity leaves first (unchanged), then the category branches, then **Ride for**, then the Tier ladder. Every list folder also holds its mounts as rows with portrait icons, so the explorer alone reaches every page.
+Tree order under a branch: its front view first (a matrix or a route; the other view follows it), then the original rarity leaves (unchanged), then the category branches, then **Ride for**, then the Tier ladder. Every list folder also holds its mounts as rows with portrait icons, so the explorer alone reaches every page.
 
 ## Tier system
 
@@ -257,6 +259,42 @@ You asked for QOL on 2026-11-20: a tree of guides to the mechanics that improve 
   - *Propulsion Breathing Device*: the English name follows Vulkk's database. PlayNews, which is machine-translated, gives two upgrade recipes; the plate uses Vulkk's.
   - *Camp Expansion* lists the first tier at "250 silver" as KeenGamer writes it. The unit may be camp funds.
 
+## Materials tree — decisions
+
+You asked for Materials on 2026-11-21: a tree that speeds up the game's cluttered item screens, with three branches fixed by you: **House Storage**, **Ship Storage** and **Mount Storage**. Everything inside them was mine to design. MT1 shipped it with 20 plates and the Sorter. The research, with sources, is in `docs/MATERIALS-RESEARCH.md`.
+
+- **What makes items convoluted** (from the research, not your brief). Thirteen places hold items, and each takes different families. Different mechanics read different places: the Smithy reads the 1.04 Gatherables Chest, cooking reads the Kuku Cooler, the camp's missions and ship builds read only Carl's donated stock, and nothing reads Private Storage. Stacks run from 1 to 100, so an insect or a fish fills a slot on its own. Patches move items between classes (1.16 made mushrooms alchemy materials). A plate per chest can't answer "where does this go?", so the tree opens on a grid that can.
+- **Where it sits.** A fourth root (`#materials…`), `src/branches/materials/`. The noun is *Manifest* *(my call)*. Its accent is a new `--moss` (#a3c46c, 10.2:1 on ink-0), the one green no class, leaf or root uses. Leaves keep accents already meaning the same thing: House brass (the Inventory leaf's), Ship deck (ships), Mount land.
+- **The front door is the Sorter, not a route** *(my call)*. `#materials` opens a matrix of item families against every place that holds items, on two sheets:
+  - *Where it goes*: 30 item families against 12 places, with 339 items and item types named. Names and stack sizes follow Gamer Guides' database where it lists them.
+  - *What reads it*: 12 mechanics (crafting, cooking, alchemy, Kuku crafting, camp builds, packing, selling, feeding, outfits, quests) against the same places plus your bag.
+  - *Marks*, each a shape, so they read apart without colour: ◆ Home (built for it, and read there), ↘ Read here, ○ Fits, ▲ Donate (one-way into the camp's stock), ▼ Arrives (receive-only: the Supply Chest), dashed ○ Reported (one source, unconfirmed), ✕ Refused. A blank cell means no source puts it there; the plates never infer one.
+  - *Use*: the column heads are the plates (portrait, name, slots) and stay pinned with the toolbar; the row heads stay pinned left. Hover or arrow keys draw a crosshair, and a readout pinned to the bottom says what the cell means, why, who says so, the row's items by name, and links the plate. Click pins it. A search finds the family an item belongs to and answers in one card (*Fruit Fly → Insects ×1: Fits Private Storage, Donate Camp stock, Arrives Supply Chest, Reported Gatherables Chest*). The command palette now knows every item, so `/`, "azurite" and picking the item opens the Sorter on that answer. On a phone the grid becomes one card per family.
+- **The Set-up Order** (`#materials-route`): six phases by when the story opens each store, from the first chest (Chapters I–II) to holds and islands (the DLC), each naming what to move in the moment it opens. It reuses the route view.
+- **No categories or lenses** *(my call)*. With 20 plates the Sorter does the cross-cutting job a category would, and the explorer stays short: The Sorter, Set-up Order, three leaves, Tier ladder.
+- **Plates.** House Storage (8): Sturdy Gatherables Chest, Kuku Cooler, Private Storage, Wardrobe, Collectibles Chest, Kuku Pot, Camp Provisions, Supply Chest. Ship Storage (7): Ship Holds, Shipbuilding Stock, Ship Fittings, Sea Blueprints, Ocean Materials, Ship Teleportation Device, Island Storage. Mount Storage (5): Horse Trade Slots, Wagon Cargo, Horse Feed, Horse Tack Materials, Kuku Mount Gear. Six take their how-to from a QOL, Riches or Mounts plate through `base`, so nothing is written twice.
+- **Two classes** *(my call)*: *Storage* (chest glyph) holds items; *Supplies* (crate glyph) are what storage and builds consume. Both use a new `sift` ambient mode: grains fall in thin streams and settle, now and then catching moss light.
+- **Metrics**, Tier I the good end, ranked across the whole tree:
+  - **Capacity**: slots at the most it can reach. I is 1,000 or more, II 240–999, III 50–239, IV 10–49, V under 10. Not rated for supplies, or where no source publishes a size (Camp Provisions, wagons, Island Storage).
+  - **Payoff**: what it does beyond holding. Read in place by a mechanic is I; plain storage is III.
+  - **Unlock**: what it takes to have it.
+- **Manifest** (`MaterialsManifest.svelte`). A store's shelves and its *Read in place by* list are read off the Sorter's own rows, not written per plate, so the plate and the grid can't disagree. A plate shows:
+  - capacity, with its basis, beside what reads the store in place (and what a source says doesn't);
+  - *What goes in*: shelves by mark, each family with its stack (×1 in ember, every one a slot) and every item by name, with a filter;
+  - *Doesn't go here — goes to*: every other family grouped by the place built for it, or where it fits when nothing is;
+  - for a supply, its families and every place that keeps them;
+  - *Each one's hold*: Mounts plates grouped by hold size, read from the Mounts data (ships 6–36, horses 1–2, five ships unpublished);
+  - bills of materials, figures with the Riches basis vocabulary, tips, the patch rail and Watch out.
+- **Calls a reader should know about**:
+  - *Castaway's Shelter* follows the in-game banner on Game8's capture; Gaming Deputy calls it Castaways' Refuge.
+  - *Wells Military* tack follows the in-game crafting screen; guides call it Wells's Warhorse Tack.
+  - *Ship part names* follow gaming.tools and Vulkk; stats and prices follow Gaming Deputy. Its *Tide-Marked* sail is read as the Tidesworn Sail (same seller, same prices) *(my reading)*.
+  - *Basic Kuku Cooler*: 40 slots (1.04 notes, KeenGamer, Vulkk's database), not the 50 in Vulkk's guide.
+  - *Camp resources* use KeenGamer's names (Armaments, Stone, Timber, Food, Silver); All Things How's are noted on the plate.
+  - *Shipbuilding reads Carl's stock*, as its own panel shows. A non-games site's claim that it reads Private Storage was not used.
+  - The Wells Military Stirrups recipe was read off Gaming ProMax's in-game screenshot (basis: screenshot).
+- **Core changes MT1 made**: the generic matrix view, `front`, a `grid` explorer row, `Mark.svelte`, palette item search, list keys by branch and entry (two branches now share plate ids, as `private-storage`), the lint's matrix checks and its rule that any credited payload line names a known publisher, and verify's matrix, front-door and phone-card checks, run in the registry's branch order.
+
 ## Known gaps
 
 Left out for lack of reliable data or real imagery:
@@ -284,6 +322,7 @@ Left out for lack of reliable data or real imagery:
   - *Stamina from one source*: the iguanas, raptor, Rosehorn Deer, Kuku Bird and camel take Stamina from GamingBolt alone, and GamingBolt's Ibex (250) disagrees with crimsondesert.gg's (200). The Leaping Kuku Bird's Health is 400 (GamingBolt) or 300 (crimsondesert.gg); its plate notes both.
 - **Common boar stats**: no source publishes them.
 - **QOL plates without a banner**: Kuku Cooler and Axiom Force (every wide shot is a menu or a split cutscene) and Movement Speed Gear (only item icons). They keep the framed portrait.
+- **Materials facts no source pins** (the plates and the Sorter say so): wagon slot counts; Island Storage's size and how it opens (Vulkk's database is the only source); the Medium and Large shipbuilding costs; the Wells Military pieces other than the Stirrups and Barding; whether alchemy, the Workstation or a quest reads a house chest; what the Gatherables Chest refuses (cloth, reagents, insects, mushrooms and sea materials show as Reported); whether the cooler still takes mushrooms after 1.16; the Private Storage tabs promised in 1.04.
 - **QOL facts no source pins**: the unit of the first camp expansion's 250 cost; the full list of islands past Auronui and what each anchorage sells; what Display All Guides changes and which patch added the accessories switches (both named only by the 2.05.01 menu); the Extraction fee (XboxPlay says Silver, Vulkk says none).
 
 ## Build and release
@@ -296,10 +335,11 @@ Left out for lack of reliable data or real imagery:
   - data lint (`tools/lint.mjs`);
   - every entry plate (title, at least one image, every image served as an image, the explorer row it selects);
   - every leaf, category, category leaf and lens (title, member count, a cover that loads, explorer row), redirects and the ladder;
-  - every branch route: the branch root opens it, every phase renders, every step links its plate, every cover loads, the explorer selects it, and the rail marks the phase it jumps to;
+  - every branch route: every phase renders, every step links its plate, every cover loads, the explorer selects it, and the rail marks the phase it jumps to; the branch root opens its front view, route or matrix;
+  - every matrix: each sheet shows its rows, columns and exactly its marks; column portraits load; hovering a cell explains it; a search names the row an item belongs to; an item picked in the palette opens the matrix on it; on a phone it becomes one card per row with no sideways scroll;
   - explorer keys, type navigation, filter, recent and outline, plus J/K stepping while keeping the list context;
   - the phone drawer;
-  - axe-core on the first branch's four views, plus each further branch's route (desktop and phone) and one of its plates. Serious and critical findings fail. Every pane is scrolled through first so all sections have revealed, since sections at opacity 0 are invisible to axe;
+  - axe-core on the first branch's four views, plus each further branch's route and matrix (desktop and phone) and one of its plates. Serious and critical findings fail. Every pane is scrolled through first so all sections have revealed, since sections at opacity 0 are invisible to axe;
   - that no request leaves the site's origin, and that `file://` with the network cut loads all four font faces.
   In CI it drives the runner's own Google Chrome (`CHROME_PATH`), because Playwright's bundled browser didn't yet support the Ubuntu 26.04 runner image when M1 shipped. It installs Playwright's Chromium only when the image has no Chrome.
   Hash routes trip axe's `skip-link` rule because they look like same-page anchors. That one is accepted (IDENTIFIED QOL-03).

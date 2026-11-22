@@ -79,7 +79,7 @@ export interface Entry {
 
 export interface Metric { id: string; label: string; blurb: string }
 /** Ambient particle modes Particles.svelte draws. tools/lint.mjs checks class data against this list. */
-export type Ambient = 'land' | 'sea' | 'sky' | 'gold' | 'abyss';
+export type Ambient = 'land' | 'sea' | 'sky' | 'gold' | 'abyss' | 'sift';
 
 export interface ClassDef {
   id: string;
@@ -230,6 +230,65 @@ export interface RouteDef {
   phases: RoutePhase[];
 }
 
+/** One mark a matrix cell can carry. An empty cell means no source puts the row there. */
+export interface MatrixMark {
+  id: string;
+  label: string;
+  text: string;
+}
+
+/** A matrix column: a place (a chest, a hold), optionally the plate that explains it. */
+export interface MatrixCol {
+  id: string;
+  label: string;
+  /** a short header label where the full one is too long */
+  short?: string;
+  /** an entry of this branch: its portrait heads the column and the header links to it */
+  entry?: string;
+  /** what it holds, as printed under the header ("1,000", "240–1,000") */
+  slots?: string;
+}
+
+/** A cell: a mark id, or a mark with the note and publisher behind it. */
+export type MatrixCell = string | { mark: string; note?: string; by?: string };
+
+export interface MatrixRow {
+  id: string;
+  label: string;
+  /** rows sharing a group sit together under its name */
+  group?: string;
+  /** items per slot */
+  stack?: number;
+  /** the item names this row covers; the matrix search matches them */
+  items?: string[];
+  note?: string;
+  /** publisher of the row's facts */
+  by: string;
+  cells: Record<string, MatrixCell>;
+}
+
+export interface MatrixSheet {
+  id: string;
+  label: string;
+  /** what a row is ("Item family", "Mechanic") */
+  rowLabel: string;
+  blurb: string;
+  /** column ids this sheet shows, in order; every column when absent */
+  cols?: string[];
+  rows: MatrixRow[];
+}
+
+/** A matrix view (#<branch>-<id>): rows against columns, one mark per cell, over one or more sheets. */
+export interface MatrixDef {
+  /** route name after the branch id */
+  id: string;
+  title: string;
+  blurb: string;
+  marks: MatrixMark[];
+  cols: MatrixCol[];
+  sheets: MatrixSheet[];
+}
+
 export interface BranchDef {
   id: string;
   title: string;
@@ -237,6 +296,9 @@ export interface BranchDef {
   accent?: string;
   labels?: BranchLabels;
   route?: RouteDef;
+  matrix?: MatrixDef;
+  /** which view the branch root opens: the matrix, the route, or (absent) the route if any, else the first leaf */
+  front?: 'matrix' | 'route';
   singular: string;
   /** plural noun for counts and empty states ("Mounts") */
   plural: string;
@@ -285,4 +347,5 @@ export type View =
   | { kind: 'cat'; branch: Branch; cat: Category; leaf?: CategoryLeaf }
   | { kind: 'ladder'; branch: Branch }
   | { kind: 'route'; branch: Branch }
+  | { kind: 'matrix'; branch: Branch }
   | { kind: 'entry'; branch: Branch; entry: Entry };

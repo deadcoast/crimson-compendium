@@ -58,7 +58,7 @@
     <Pane title="Recent" bind:open={panes.recent} badge={recent.length || ''} max="18vh">
       {#if recent.length}
         <ol class="recent">
-          {#each recent as { b, e } (e.id)}
+          {#each recent as { b, e } (b.id + "/" + e.id)}
             <li animate:flip={{ duration: app.reducedMotion ? 0 : 260 }}>
               <a class="rrow" class:on={e.id === current} href={href.entry(b, e.id)} data-cls={e.cls} data-accent={leafOf(b, e).accent} onclick={onnavigate}>
                 <span class="pt"><img src={mediaUrl(e.media.portrait.src)} alt="" /></span>
