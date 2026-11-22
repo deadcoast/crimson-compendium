@@ -11,7 +11,8 @@ export const TIER_NAMES: Record<number, string> = {
 export const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V'];
 
 /** Media paths are stored relative to /public; the build serves them beside index.html. */
-export const mediaUrl = (src: string) => `./${src}`;
+/** A built image's URL. tools/pack.mjs may inline a small image as a data: URL, which passes through. */
+export const mediaUrl = (src: string) => (src.startsWith('data:') ? src : `./${src}`);
 
 /** Image credits link to the guide that captured them; sources name their publisher. Data lives in credits.json. */
 export const CREDITS: Record<string, { name: string; url: string }> = credits.images;
