@@ -1,0 +1,3675 @@
+[
+  {
+    "id": "small-greymane-ship",
+    "name": "Small Greymane Ship",
+    "base": "mounts/small-greymane-ship",
+    "leaf": "building",
+    "cls": "vessel",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Built, not bought",
+    "summary": "The quest builds it for 10,000 Camp Funds and it moves at 3, against the 40,000 Small Hernandian's 1. Same 14-slot hold. Never buy a small hull. The build ties up 5 comrades for 12 h.",
+    "tiers": {
+      "speed": {
+        "tier": 3,
+        "basis": "Movement Speed 3, Acceleration 1, Handling 1 (Game8)."
+      },
+      "strength": {
+        "tier": 4,
+        "basis": "5,100 Health (Game8)."
+      },
+      "return": {
+        "tier": 3,
+        "basis": "14-slot hold."
+      },
+      "effort": {
+        "tier": 1,
+        "basis": "The DLC's first quest builds it: 10,000 Camp Funds and camp stock."
+      }
+    },
+    "tags": [
+      "dlc",
+      "build"
+    ],
+    "sources": [
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      },
+      {
+        "by": "keengamer",
+        "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+        "title": "DLC Shipbuilding Guide: All Ships and Upgrades — KeenGamer"
+      }
+    ],
+    "naval": {
+      "how": "build",
+      "port": "Vellua, on the quest A Call from Beyond the Horizon",
+      "verdict": {
+        "text": "The quest builds it for 10,000 Camp Funds and it moves at 3, against the 40,000 Small Hernandian's 1. Same 14-slot hold. Never buy a small hull.",
+        "by": "game8"
+      }
+    }
+  },
+  {
+    "id": "medium-greymane-ship",
+    "name": "Medium Greymane Ship",
+    "base": "mounts/medium-greymane-ship",
+    "leaf": "building",
+    "cls": "vessel",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Built, not bought",
+    "summary": "Movement 4 for 100,000 Camp Funds. Every bought medium costs 1,200,000 and moves at 1 or 2, with the same 22-slot hold. The build ties up 7 comrades for 1 d 12 h and takes Shiny Ore ×100, Malachite ×50.",
+    "tiers": {
+      "speed": {
+        "tier": 2,
+        "basis": "Movement Speed 4, Acceleration 1, Handling 1 (Game8)."
+      },
+      "strength": {
+        "tier": 3,
+        "basis": "7,600 Health (Game8)."
+      },
+      "return": {
+        "tier": 2,
+        "basis": "22-slot hold."
+      },
+      "effort": {
+        "tier": 3,
+        "basis": "100,000 Camp Funds, a dive for 50 Malachite and 100 Shiny Ore."
+      }
+    },
+    "tags": [
+      "dlc",
+      "build"
+    ],
+    "sources": [
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      },
+      {
+        "by": "keengamer",
+        "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+        "title": "DLC Shipbuilding Guide: All Ships and Upgrades — KeenGamer"
+      }
+    ],
+    "naval": {
+      "how": "build",
+      "port": "Any port's Shipbuilding mission",
+      "verdict": {
+        "text": "Movement 4 for 100,000 Camp Funds. Every bought medium costs 1,200,000 and moves at 1 or 2, with the same 22-slot hold.",
+        "by": "game8"
+      }
+    }
+  },
+  {
+    "id": "large-greymane-ship",
+    "name": "Large Greymane Ship",
+    "base": "mounts/large-greymane-ship",
+    "leaf": "building",
+    "cls": "vessel",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Built, not bought",
+    "summary": "Movement 5, the top speed in the game, for 500,000 Camp Funds: one Gold Bar. A bought large hull costs twelve times that and moves at 2 at best. Buy one only for its published 36-slot hold. The build ties up 20 comrades for 2 d 10 h and takes Shiny Ore ×100, Malachite ×50, Hydrothermal Mineral Deposit ×45, Manganese ×20.",
+    "tiers": {
+      "speed": {
+        "tier": 1,
+        "basis": "Movement Speed 5, Acceleration 1, Handling 2 (Game8)."
+      },
+      "strength": {
+        "tier": 2,
+        "basis": "10,100 Health (Game8)."
+      },
+      "return": {
+        "tier": null,
+        "basis": "No source publishes its hold."
+      },
+      "effort": {
+        "tier": 3,
+        "basis": "500,000 Camp Funds (one Gold Bar) and four ocean materials."
+      }
+    },
+    "tags": [
+      "dlc",
+      "build"
+    ],
+    "sources": [
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      },
+      {
+        "by": "keengamer",
+        "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+        "title": "DLC Shipbuilding Guide: All Ships and Upgrades — KeenGamer"
+      }
+    ],
+    "naval": {
+      "how": "build",
+      "port": "Any port's Large Shipbuilding mission",
+      "verdict": {
+        "text": "Movement 5, the top speed in the game, for 500,000 Camp Funds: one Gold Bar. A bought large hull costs twelve times that and moves at 2 at best. Buy one only for its published 36-slot hold.",
+        "by": "game8"
+      }
+    }
+  },
+  {
+    "id": "flagship-of-the-east",
+    "name": "Flagship of the East",
+    "base": "mounts/flagship-of-the-east",
+    "leaf": "eggs",
+    "cls": "vessel",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Hidden blueprint",
+    "summary": "The best all-round ship: Movement 5, Acceleration 5, 14,000 Health. Build it first of the four. The build ties up 10 comrades for 4 d 4 h and takes Malachite ×50, Natural Pearl ×5, Sea Fan Coral ×15.",
+    "tiers": {
+      "speed": {
+        "tier": 1,
+        "basis": "Movement Speed 5, Acceleration 5, Handling 4 (Game8)."
+      },
+      "strength": {
+        "tier": 1,
+        "basis": "14,000 Health (Game8)."
+      },
+      "return": {
+        "tier": null,
+        "basis": "No source publishes its hold."
+      },
+      "effort": {
+        "tier": 4,
+        "basis": "Two blueprint halves on land, 750,000 Camp Funds, pearls, coral and malachite."
+      }
+    },
+    "tags": [
+      "dlc",
+      "legendary"
+    ],
+    "sources": [
+      {
+        "by": "keengamer",
+        "url": "https://www.keengamer.com/articles/guides/crimson-desert-how-to-get-the-flagship-of-the-east/",
+        "title": "How to Get the Flagship of the East — KeenGamer"
+      },
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      }
+    ],
+    "naval": {
+      "how": "build",
+      "port": "Stoneward Harbor only (Unfinished Ship Construction)",
+      "verdict": {
+        "text": "The best all-round ship: Movement 5, Acceleration 5, 14,000 Health. Build it first of the four.",
+        "by": "game8"
+      },
+      "tips": [
+        {
+          "text": "Combine the two halves under Key Items (Restore), then read the blueprint before you look for the mission.",
+          "by": "keengamer"
+        },
+        {
+          "text": "Camp Funds are the slow part: 750,000 is one and a half Gold Bars exchanged at a bank.",
+          "by": "keengamer"
+        }
+      ],
+      "watch": [
+        "KeenGamer says the dispatch won't start until every material is in your inventory; FinalBoss says Private Storage. Carry them and keep a copy of the count in storage until a patch note settles it."
+      ]
+    },
+    "egg": "Its blueprint is torn in two and left on land: one half in a box at Fisher's Haven, the other on a workbench at Helmara.",
+    "media": {
+      "portrait": {
+        "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Crimson-Desert-Flagship-of-the-East-Cover.jpg",
+        "credit": "keengamer",
+        "clip": [
+          0,
+          0,
+          1,
+          0.8
+        ],
+        "crop": [
+          0.5,
+          0.5,
+          0.95
+        ],
+        "src": "media/naval/flagship-of-the-east/portrait.webp",
+        "w": 480,
+        "h": 480
+      },
+      "captures": [
+        {
+          "kind": "map",
+          "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Fishers-Haven.jpg",
+          "credit": "keengamer",
+          "caption": "Blueprint half 1 — Fisher's Haven, Delesyia",
+          "src": "media/naval/flagship-of-the-east/map-1.webp",
+          "w": 1241,
+          "h": 694
+        },
+        {
+          "kind": "map",
+          "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Helmara-Near-Tashkalp.png",
+          "credit": "keengamer",
+          "caption": "Blueprint half 2 — Helmara, near Tashkalp",
+          "src": "media/naval/flagship-of-the-east/map-2.webp",
+          "w": 1233,
+          "h": 692
+        },
+        {
+          "kind": "menu",
+          "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Unfinished-Ship-Construction.jpg",
+          "credit": "keengamer",
+          "caption": "Stoneward Harbor — Unfinished Ship Construction, the only port that builds it",
+          "src": "media/naval/flagship-of-the-east/menu-3.webp",
+          "w": 1239,
+          "h": 687
+        },
+        {
+          "kind": "action",
+          "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Sea-Fan-Coral.jpg",
+          "credit": "keengamer",
+          "caption": "Sea Fan Coral on the seabed off Delesyia: 15 of them go into the build",
+          "src": "media/naval/flagship-of-the-east/action-4.webp",
+          "w": 1234,
+          "h": 682
+        },
+        {
+          "kind": "menu",
+          "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Flagship-of-the-East.jpg",
+          "credit": "keengamer",
+          "caption": "Manage Ships — Flagship of the East",
+          "src": "media/naval/flagship-of-the-east/menu-5.webp",
+          "w": 1237,
+          "h": 694
+        }
+      ],
+      "gallery": [],
+      "hero": {
+        "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Crimson-Desert-Flagship-of-the-East-Cover.jpg",
+        "credit": "keengamer",
+        "clip": [
+          0,
+          0,
+          1,
+          0.8
+        ],
+        "src": "media/naval/flagship-of-the-east/hero.webp",
+        "w": 1920,
+        "h": 864
+      }
+    }
+  },
+  {
+    "id": "the-drunken-catfish",
+    "name": "The Drunken Catfish",
+    "base": "mounts/the-drunken-catfish",
+    "leaf": "eggs",
+    "cls": "vessel",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Hidden blueprint",
+    "summary": "Acceleration 5 and 14,000 Health, with four naval mines. One step slower than the Flagship at Movement 4. The build ties up 10 comrades for 4 d 4 h and takes Hydrothermal Mineral Deposit ×20, Natural Pearl ×5, Golden Coral ×25.",
+    "tiers": {
+      "speed": {
+        "tier": 2,
+        "basis": "Movement Speed 4, Acceleration 5, Handling 4 (Game8)."
+      },
+      "strength": {
+        "tier": 1,
+        "basis": "14,000 Health (Game8)."
+      },
+      "return": {
+        "tier": null,
+        "basis": "No source publishes its hold."
+      },
+      "effort": {
+        "tier": 4,
+        "basis": "Sink a pirate galleon for the blueprint; 750,000 Camp Funds and three ocean materials."
+      }
+    },
+    "tags": [
+      "dlc",
+      "legendary"
+    ],
+    "sources": [
+      {
+        "by": "finalboss",
+        "url": "https://finalboss.io/crimson-desert-how-to-get-the-drunken-catfish-legendary-galleon",
+        "title": "How to Get the Drunken Catfish Legendary Galleon — FinalBoss"
+      },
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      }
+    ],
+    "naval": {
+      "how": "build",
+      "port": "Vellua",
+      "verdict": {
+        "text": "Acceleration 5 and 14,000 Health, with four naval mines. One step slower than the Flagship at Movement 4.",
+        "by": "finalboss"
+      },
+      "tips": [
+        {
+          "text": "Start the Iliya pearl dispatch before anything else: it is the slow part of every legendary bill.",
+          "by": "finalboss"
+        }
+      ],
+      "watch": [
+        "FinalBoss: the build reads Private Storage, and materials in your bag leave it unavailable."
+      ],
+      "patches": [
+        {
+          "v": "2.04.06",
+          "note": "Fixed the Drunken Catfish blueprint not being learnable.",
+          "by": "finalboss"
+        }
+      ]
+    },
+    "egg": "A pirate galleon patrols west of Samora by the Great Trench. Sink it for the blueprint."
+  },
+  {
+    "id": "assault-ship-of-the-east",
+    "name": "Assault Ship of the East",
+    "base": "mounts/assault-ship-of-the-east",
+    "leaf": "eggs",
+    "cls": "vessel",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Hidden blueprint",
+    "summary": "Movement 5 with a dragon naval cannon and a turtle-head prow cannon. 12,000 Health, two thousand short of the Flagship. The build ties up 10 comrades for 4 d 4 h and takes Natural Pearl ×5, Giant Hydrothermal Salamander Hide ×10, Ambergris ×10.",
+    "tiers": {
+      "speed": {
+        "tier": 1,
+        "basis": "Movement Speed 5, Acceleration 4, Handling 4 (Game8)."
+      },
+      "strength": {
+        "tier": 2,
+        "basis": "12,000 Health (Game8)."
+      },
+      "return": {
+        "tier": null,
+        "basis": "No source publishes its hold."
+      },
+      "effort": {
+        "tier": 4,
+        "basis": "Four blueprint pieces across the sea and salamander hides that only the Vents give."
+      }
+    },
+    "tags": [
+      "dlc",
+      "legendary"
+    ],
+    "sources": [
+      {
+        "by": "keengamer",
+        "url": "https://www.keengamer.com/articles/guides/crimson-desert-how-to-get-the-legendary-assault-ship-of-the-east/",
+        "title": "How to Get the Legendary Assault Ship of the East — KeenGamer"
+      },
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      },
+      {
+        "by": "gamingdeputy",
+        "url": "https://www.gamingdeputy.com/france/crimson-desert-ambre-gris/",
+        "title": "Comment obtenir l'ambre gris — Gaming Deputy (FR)"
+      }
+    ],
+    "naval": {
+      "how": "build",
+      "port": "Constructing the Mysterious Ship: Delesyia (KeenGamer) or any port (FinalBoss)",
+      "verdict": {
+        "text": "Movement 5 with a dragon naval cannon and a turtle-head prow cannon. 12,000 Health, two thousand short of the Flagship.",
+        "by": "keengamer"
+      },
+      "tips": [
+        {
+          "text": "Restore the four pieces under Key Items, read the blueprint, and the construction mission appears.",
+          "by": "keengamer"
+        },
+        {
+          "text": "Don't sell the blueprint: Vulkk lists it at 1,316, and the mission needs it read.",
+          "by": "keengamer"
+        }
+      ]
+    },
+    "egg": "Two books in a Samora temple start a hunt for four blueprint pieces: two in a wreck at the Great Rocky Reef, one below deck at Bravgork Shipyard, one on a tent table on Estra Island.",
+    "media": {
+      "portrait": {
+        "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Crimson-Desert-Assault-Ship-of-the-East-Cover.jpg",
+        "credit": "keengamer",
+        "clip": [
+          0,
+          0,
+          1,
+          0.8
+        ],
+        "crop": [
+          0.47,
+          0.6,
+          0.8
+        ],
+        "src": "media/naval/assault-ship-of-the-east/portrait.webp",
+        "w": 480,
+        "h": 480
+      },
+      "captures": [
+        {
+          "kind": "overworld",
+          "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Legendary-Ship-Hunt.jpg",
+          "credit": "keengamer",
+          "caption": "The hunt starts here — the two books in the Samora temple",
+          "src": "media/naval/assault-ship-of-the-east/overworld-1.webp",
+          "w": 1238,
+          "h": 693
+        },
+        {
+          "kind": "map",
+          "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Legendary-Ship-Hunts-Location.png",
+          "credit": "keengamer",
+          "caption": "The Samora temple, south of the island",
+          "src": "media/naval/assault-ship-of-the-east/map-2.webp",
+          "w": 1237,
+          "h": 693
+        },
+        {
+          "kind": "map",
+          "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Great-Rocky-Reef-Shipwrecks-Location.png",
+          "credit": "keengamer",
+          "caption": "Pieces 1 and 2 — the wreck at the Great Rocky Reef",
+          "src": "media/naval/assault-ship-of-the-east/map-3.webp",
+          "w": 1239,
+          "h": 693
+        },
+        {
+          "kind": "map",
+          "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Bravgork-Shipyards-Location.jpg",
+          "credit": "keengamer",
+          "caption": "Piece 3 — Bravgork Shipyard: below deck, the door behind the stairs",
+          "src": "media/naval/assault-ship-of-the-east/map-4.webp",
+          "w": 1239,
+          "h": 695
+        },
+        {
+          "kind": "map",
+          "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Estra-Island-Blueprints-Location.jpg",
+          "credit": "keengamer",
+          "caption": "Piece 4 — the beach camp on Estra Island's south-east shore",
+          "src": "media/naval/assault-ship-of-the-east/map-5.webp",
+          "w": 1238,
+          "h": 697
+        },
+        {
+          "kind": "menu",
+          "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Constructing-the-Mysterious-Ship.jpg",
+          "credit": "keengamer",
+          "caption": "Constructing the Mysterious Ship: pearls, salamander hides, Ambergris",
+          "src": "media/naval/assault-ship-of-the-east/menu-6.webp",
+          "w": 1236,
+          "h": 649
+        }
+      ],
+      "gallery": [],
+      "hero": {
+        "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Crimson-Desert-Assault-Ship-of-the-East-Cover.jpg",
+        "credit": "keengamer",
+        "clip": [
+          0,
+          0,
+          1,
+          0.8
+        ],
+        "src": "media/naval/assault-ship-of-the-east/hero.webp",
+        "w": 1920,
+        "h": 864
+      }
+    }
+  },
+  {
+    "id": "phantom-ship",
+    "name": "Phantom Ship",
+    "base": "mounts/phantom-ship",
+    "leaf": "eggs",
+    "cls": "vessel",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Hidden blueprint",
+    "summary": "The slowest legendary (4/3/3) with the least Health, 9,200. Build it for its homing bolts and the hunt, not to sail faster. The build ties up 10 comrades for 4 d 4 h and takes Natural Pearl ×5, Giant Jellyfish Skin ×10, Obsidian ×30.",
+    "tiers": {
+      "speed": {
+        "tier": 2,
+        "basis": "Movement Speed 4, Acceleration 3, Handling 3 (Game8)."
+      },
+      "strength": {
+        "tier": 3,
+        "basis": "9,200 Health (Game8)."
+      },
+      "return": {
+        "tier": null,
+        "basis": "No source publishes its hold."
+      },
+      "effort": {
+        "tier": 5,
+        "basis": "An unmarked ship to find and sink, a buried map, and 30 Obsidian on top of the legendary bill."
+      }
+    },
+    "tags": [
+      "dlc",
+      "legendary"
+    ],
+    "sources": [
+      {
+        "by": "keengamer",
+        "url": "https://www.keengamer.com/articles/guides/crimson-desert-how-to-get-the-legendary-phantom-ship/",
+        "title": "How to Get the Legendary Phantom Ship — KeenGamer"
+      },
+      {
+        "by": "gamingdeputy",
+        "url": "https://www.gamingdeputy.com/france/crimson-desert-obtenir-navire-fantome-2/",
+        "title": "Obtenir le Navire fantôme — Gaming Deputy (FR)"
+      },
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      }
+    ],
+    "naval": {
+      "how": "build",
+      "port": "Construct Phantom Ship: Stoneward Harbor (KeenGamer) or Port Delesyia (Gaming Deputy)",
+      "verdict": {
+        "text": "The slowest legendary (4/3/3) with the least Health, 9,200. Build it for its homing bolts and the hunt, not to sail faster.",
+        "by": "keengamer"
+      },
+      "tips": [
+        {
+          "text": "Fill every Gunner and Carpenter slot before you sail into the Sea of Silence: it fires homing bolts.",
+          "by": "keengamer"
+        }
+      ],
+      "watch": [
+        "Where it's built: Stoneward Harbor (KeenGamer), Port Delesyia (Gaming Deputy), any port (Game8). The mission shows at the right port once the blueprint is read."
+      ]
+    },
+    "egg": "A ghost ship sails the Sea of Silence south-east of Delesyia with no map marker. Sink it and it drops a treasure map; the blueprint is buried on Iliya Island.",
+    "media": {
+      "portrait": {
+        "from": "https://images.keengamer.com/wp-content/uploads/2026/11/The-Phantom-Ship.jpg",
+        "credit": "keengamer",
+        "crop": [
+          0.45,
+          0.45,
+          0.9
+        ],
+        "src": "media/naval/phantom-ship/portrait.webp",
+        "w": 480,
+        "h": 480
+      },
+      "captures": [
+        {
+          "kind": "map",
+          "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Sea-of-Silence.png",
+          "credit": "keengamer",
+          "caption": "The Sea of Silence, south-east of Delesyia: no marker, it appears as you sail",
+          "src": "media/naval/phantom-ship/map-1.webp",
+          "w": 1242,
+          "h": 694
+        },
+        {
+          "kind": "action",
+          "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Sinking-the-Phantom-Ship.png",
+          "credit": "keengamer",
+          "caption": "Broadside it with Gunners, Carpenters and a First Mate aboard",
+          "src": "media/naval/phantom-ship/action-2.webp",
+          "w": 1240,
+          "h": 693
+        },
+        {
+          "kind": "map",
+          "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Phantom-Ship-Blueprints-Location-on-Iliya-Island.png",
+          "credit": "keengamer",
+          "caption": "The buried blueprint — Iliya Island's south-west, dig with a shovel",
+          "src": "media/naval/phantom-ship/map-3.webp",
+          "w": 1237,
+          "h": 696
+        },
+        {
+          "kind": "menu",
+          "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Construct-Phantom-Ship.jpg",
+          "credit": "keengamer",
+          "caption": "Construct Phantom Ship: 5 pearls, 10 Giant Jellyfish Skin, 30 Obsidian",
+          "src": "media/naval/phantom-ship/menu-4.webp",
+          "w": 1600,
+          "h": 900
+        }
+      ],
+      "gallery": [],
+      "hero": {
+        "from": "https://images.keengamer.com/wp-content/uploads/2026/11/The-Phantom-Ship.jpg",
+        "credit": "keengamer",
+        "src": "media/naval/phantom-ship/hero.webp",
+        "w": 1238,
+        "h": 689
+      }
+    }
+  },
+  {
+    "id": "small-hernandian-ship",
+    "name": "Small Hernandian Ship",
+    "base": "mounts/small-hernandian-ship",
+    "leaf": "building",
+    "cls": "vessel",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Bought at a Ship Manager",
+    "summary": "The quest's Small Greymane matches its 14-slot hold, moves at 3 and costs a quarter as much. Buy this only as a second hull. 40,000 Camp Funds (40 Silver donated) for Movement 1, 5,000 Health and a 14-slot hold.",
+    "tiers": {
+      "speed": {
+        "tier": 5,
+        "basis": "Movement Speed 1, Acceleration 1, Handling 1 (Game8)."
+      },
+      "strength": {
+        "tier": 4,
+        "basis": "5,000 Health (Game8)."
+      },
+      "return": {
+        "tier": 3,
+        "basis": "14-slot hold."
+      },
+      "effort": {
+        "tier": 2,
+        "basis": "40,000 Camp Funds (40 Silver donated)."
+      }
+    },
+    "tags": [
+      "dlc",
+      "buy"
+    ],
+    "sources": [
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      },
+      {
+        "by": "playnews",
+        "url": "https://www.playnews.gg/en/guides/crimson-desert-ships-how-to-unlock-and-buy-them-in-charting-the-unknown",
+        "title": "Ships: How to Unlock and Buy Them"
+      }
+    ],
+    "naval": {
+      "how": "buy",
+      "port": "Ship Manager, Vellua (south of Hernand)",
+      "verdict": {
+        "text": "The quest's Small Greymane matches its 14-slot hold, moves at 3 and costs a quarter as much. Buy this only as a second hull.",
+        "by": "game8"
+      }
+    }
+  },
+  {
+    "id": "small-delesyian-ship",
+    "name": "Small Delesyian Ship",
+    "base": "mounts/small-delesyian-ship",
+    "leaf": "building",
+    "cls": "vessel",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Bought at a Ship Manager",
+    "summary": "The quest's Small Greymane matches its 14-slot hold, moves at 3 and costs a quarter as much. Buy this only as a second hull. 40,000 Camp Funds (40 Silver donated) for Movement 1, 5,000 Health and a 14-slot hold.",
+    "tiers": {
+      "speed": {
+        "tier": 5,
+        "basis": "Movement Speed 1, Acceleration 1, Handling 1 (Game8)."
+      },
+      "strength": {
+        "tier": 4,
+        "basis": "5,000 Health (Game8)."
+      },
+      "return": {
+        "tier": 3,
+        "basis": "14-slot hold."
+      },
+      "effort": {
+        "tier": 2,
+        "basis": "40,000 Camp Funds (40 Silver donated)."
+      }
+    },
+    "tags": [
+      "dlc",
+      "buy"
+    ],
+    "sources": [
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      },
+      {
+        "by": "playnews",
+        "url": "https://www.playnews.gg/en/guides/crimson-desert-ships-how-to-unlock-and-buy-them-in-charting-the-unknown",
+        "title": "Ships: How to Unlock and Buy Them"
+      }
+    ],
+    "naval": {
+      "how": "buy",
+      "port": "Ship Manager, Stoneward Harbor (south of Dewhaven, Delesyia)",
+      "verdict": {
+        "text": "The quest's Small Greymane matches its 14-slot hold, moves at 3 and costs a quarter as much. Buy this only as a second hull.",
+        "by": "game8"
+      }
+    }
+  },
+  {
+    "id": "small-demenissian-ship",
+    "name": "Small Demenissian Ship",
+    "base": "mounts/small-demenissian-ship",
+    "leaf": "building",
+    "cls": "vessel",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Bought at a Ship Manager",
+    "summary": "The quest's Small Greymane matches its 14-slot hold, moves at 3 and costs a quarter as much. Buy this only as a second hull. 40,000 Camp Funds (40 Silver donated) for Movement 1, 5,000 Health and a 14-slot hold.",
+    "tiers": {
+      "speed": {
+        "tier": 5,
+        "basis": "Movement Speed 1, Acceleration 1, Handling 1 (Game8)."
+      },
+      "strength": {
+        "tier": 4,
+        "basis": "5,000 Health (Game8)."
+      },
+      "return": {
+        "tier": 3,
+        "basis": "14-slot hold."
+      },
+      "effort": {
+        "tier": 2,
+        "basis": "40,000 Camp Funds (40 Silver donated)."
+      }
+    },
+    "tags": [
+      "dlc",
+      "buy"
+    ],
+    "sources": [
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      },
+      {
+        "by": "playnews",
+        "url": "https://www.playnews.gg/en/guides/crimson-desert-ships-how-to-unlock-and-buy-them-in-charting-the-unknown",
+        "title": "Ships: How to Unlock and Buy Them"
+      }
+    ],
+    "naval": {
+      "how": "buy",
+      "port": "Ship Manager, the Port of Demeniss (south-east of the City of Demeniss)",
+      "verdict": {
+        "text": "The quest's Small Greymane matches its 14-slot hold, moves at 3 and costs a quarter as much. Buy this only as a second hull.",
+        "by": "game8"
+      }
+    }
+  },
+  {
+    "id": "medium-hernandian-ship",
+    "name": "Medium Hernandian Ship",
+    "base": "mounts/medium-hernandian-ship",
+    "leaf": "building",
+    "cls": "vessel",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Bought at a Ship Manager",
+    "summary": "The Medium Greymane holds the same 22 slots, moves at 4 and costs 100,000 to build. Buy a medium only if you won't dive for 50 Malachite. 1,200,000 Camp Funds (1,200 Silver donated) for Movement 2, 7,500 Health and a 22-slot hold.",
+    "tiers": {
+      "speed": {
+        "tier": 4,
+        "basis": "Movement Speed 2, Acceleration 1, Handling 1 (Game8)."
+      },
+      "strength": {
+        "tier": 3,
+        "basis": "7,500 Health (Game8)."
+      },
+      "return": {
+        "tier": 2,
+        "basis": "22-slot hold."
+      },
+      "effort": {
+        "tier": 4,
+        "basis": "1,200,000 Camp Funds (1,200 Silver donated)."
+      }
+    },
+    "tags": [
+      "dlc",
+      "buy"
+    ],
+    "sources": [
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      },
+      {
+        "by": "playnews",
+        "url": "https://www.playnews.gg/en/guides/crimson-desert-ships-how-to-unlock-and-buy-them-in-charting-the-unknown",
+        "title": "Ships: How to Unlock and Buy Them"
+      }
+    ],
+    "naval": {
+      "how": "buy",
+      "port": "Ship Manager, Vellua (south of Hernand)",
+      "verdict": {
+        "text": "The Medium Greymane holds the same 22 slots, moves at 4 and costs 100,000 to build. Buy a medium only if you won't dive for 50 Malachite.",
+        "by": "game8"
+      }
+    }
+  },
+  {
+    "id": "medium-delesyian-ship",
+    "name": "Medium Delesyian Ship",
+    "base": "mounts/medium-delesyian-ship",
+    "leaf": "building",
+    "cls": "vessel",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Bought at a Ship Manager",
+    "summary": "The Medium Greymane holds the same 22 slots, moves at 4 and costs 100,000 to build. Buy a medium only if you won't dive for 50 Malachite. 1,200,000 Camp Funds (1,200 Silver donated) for Movement 1, 7,500 Health and a 22-slot hold.",
+    "tiers": {
+      "speed": {
+        "tier": 5,
+        "basis": "Movement Speed 1, Acceleration 2, Handling 1 (Game8)."
+      },
+      "strength": {
+        "tier": 3,
+        "basis": "7,500 Health (Game8)."
+      },
+      "return": {
+        "tier": 2,
+        "basis": "22-slot hold."
+      },
+      "effort": {
+        "tier": 4,
+        "basis": "1,200,000 Camp Funds (1,200 Silver donated)."
+      }
+    },
+    "tags": [
+      "dlc",
+      "buy"
+    ],
+    "sources": [
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      },
+      {
+        "by": "playnews",
+        "url": "https://www.playnews.gg/en/guides/crimson-desert-ships-how-to-unlock-and-buy-them-in-charting-the-unknown",
+        "title": "Ships: How to Unlock and Buy Them"
+      }
+    ],
+    "naval": {
+      "how": "buy",
+      "port": "Ship Manager, the Port of Delesyia (outside the City of Delesyia)",
+      "verdict": {
+        "text": "The Medium Greymane holds the same 22 slots, moves at 4 and costs 100,000 to build. Buy a medium only if you won't dive for 50 Malachite.",
+        "by": "game8"
+      }
+    }
+  },
+  {
+    "id": "medium-demenissian-ship",
+    "name": "Medium Demenissian Ship",
+    "base": "mounts/medium-demenissian-ship",
+    "leaf": "building",
+    "cls": "vessel",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Bought at a Ship Manager",
+    "summary": "The Medium Greymane holds the same 22 slots, moves at 4 and costs 100,000 to build. Buy a medium only if you won't dive for 50 Malachite. 1,200,000 Camp Funds (1,200 Silver donated) for Movement 1, 7,500 Health and a 22-slot hold.",
+    "tiers": {
+      "speed": {
+        "tier": 5,
+        "basis": "Movement Speed 1, Acceleration 1, Handling 2 (Game8)."
+      },
+      "strength": {
+        "tier": 3,
+        "basis": "7,500 Health (Game8)."
+      },
+      "return": {
+        "tier": 2,
+        "basis": "22-slot hold."
+      },
+      "effort": {
+        "tier": 4,
+        "basis": "1,200,000 Camp Funds (1,200 Silver donated)."
+      }
+    },
+    "tags": [
+      "dlc",
+      "buy"
+    ],
+    "sources": [
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      },
+      {
+        "by": "playnews",
+        "url": "https://www.playnews.gg/en/guides/crimson-desert-ships-how-to-unlock-and-buy-them-in-charting-the-unknown",
+        "title": "Ships: How to Unlock and Buy Them"
+      }
+    ],
+    "naval": {
+      "how": "buy",
+      "port": "Ship Manager, the Port of Demeniss (south-east of the City of Demeniss)",
+      "verdict": {
+        "text": "The Medium Greymane holds the same 22 slots, moves at 4 and costs 100,000 to build. Buy a medium only if you won't dive for 50 Malachite.",
+        "by": "game8"
+      }
+    }
+  },
+  {
+    "id": "large-hernandian-ship",
+    "name": "Large Hernandian Ship",
+    "base": "mounts/large-hernandian-ship",
+    "leaf": "building",
+    "cls": "vessel",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Bought at a Ship Manager",
+    "summary": "The 36-slot hold is the biggest published, so this is a hauler, not a racer. For speed, build the Large Greymane for a twelfth of the price. 6,000,000 Camp Funds (6,000 Silver donated) for Movement 2, 10,000 Health and a 36-slot hold.",
+    "tiers": {
+      "speed": {
+        "tier": 4,
+        "basis": "Movement Speed 2, Acceleration 2, Handling 1 (Game8)."
+      },
+      "strength": {
+        "tier": 2,
+        "basis": "10,000 Health (Game8)."
+      },
+      "return": {
+        "tier": 1,
+        "basis": "36-slot hold."
+      },
+      "effort": {
+        "tier": 5,
+        "basis": "6,000,000 Camp Funds (6,000 Silver donated, about twelve Gold Bars)."
+      }
+    },
+    "tags": [
+      "dlc",
+      "buy"
+    ],
+    "sources": [
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      },
+      {
+        "by": "playnews",
+        "url": "https://www.playnews.gg/en/guides/crimson-desert-ships-how-to-unlock-and-buy-them-in-charting-the-unknown",
+        "title": "Ships: How to Unlock and Buy Them"
+      }
+    ],
+    "naval": {
+      "how": "buy",
+      "port": "Ship Manager, Vellua (south of Hernand)",
+      "verdict": {
+        "text": "The 36-slot hold is the biggest published, so this is a hauler, not a racer. For speed, build the Large Greymane for a twelfth of the price.",
+        "by": "playnews"
+      }
+    }
+  },
+  {
+    "id": "large-delesyian-ship",
+    "name": "Large Delesyian Ship",
+    "base": "mounts/large-delesyian-ship",
+    "leaf": "building",
+    "cls": "vessel",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Bought at a Ship Manager",
+    "summary": "The 36-slot hold is the biggest published, so this is a hauler, not a racer. For speed, build the Large Greymane for a twelfth of the price. 6,000,000 Camp Funds (6,000 Silver donated) for Movement 2, 10,000 Health and a 36-slot hold.",
+    "tiers": {
+      "speed": {
+        "tier": 4,
+        "basis": "Movement Speed 2, Acceleration 3, Handling 1 (Game8)."
+      },
+      "strength": {
+        "tier": 2,
+        "basis": "10,000 Health (Game8)."
+      },
+      "return": {
+        "tier": 1,
+        "basis": "36-slot hold."
+      },
+      "effort": {
+        "tier": 5,
+        "basis": "6,000,000 Camp Funds (6,000 Silver donated, about twelve Gold Bars)."
+      }
+    },
+    "tags": [
+      "dlc",
+      "buy"
+    ],
+    "sources": [
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      },
+      {
+        "by": "playnews",
+        "url": "https://www.playnews.gg/en/guides/crimson-desert-ships-how-to-unlock-and-buy-them-in-charting-the-unknown",
+        "title": "Ships: How to Unlock and Buy Them"
+      }
+    ],
+    "naval": {
+      "how": "buy",
+      "port": "Ship Manager, the Port of Delesyia (outside the City of Delesyia)",
+      "verdict": {
+        "text": "The 36-slot hold is the biggest published, so this is a hauler, not a racer. For speed, build the Large Greymane for a twelfth of the price.",
+        "by": "playnews"
+      }
+    }
+  },
+  {
+    "id": "large-demenissian-ship",
+    "name": "Large Demenissian Ship",
+    "base": "mounts/large-demenissian-ship",
+    "leaf": "building",
+    "cls": "vessel",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Bought at a Ship Manager",
+    "summary": "The 36-slot hold is the biggest published, so this is a hauler, not a racer. For speed, build the Large Greymane for a twelfth of the price. 6,000,000 Camp Funds (6,000 Silver donated) for Movement 1, 10,000 Health and a 36-slot hold.",
+    "tiers": {
+      "speed": {
+        "tier": 5,
+        "basis": "Movement Speed 1, Acceleration 2, Handling 3 (Game8)."
+      },
+      "strength": {
+        "tier": 2,
+        "basis": "10,000 Health (Game8)."
+      },
+      "return": {
+        "tier": 1,
+        "basis": "36-slot hold."
+      },
+      "effort": {
+        "tier": 5,
+        "basis": "6,000,000 Camp Funds (6,000 Silver donated, about twelve Gold Bars)."
+      }
+    },
+    "tags": [
+      "dlc",
+      "buy"
+    ],
+    "sources": [
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      },
+      {
+        "by": "playnews",
+        "url": "https://www.playnews.gg/en/guides/crimson-desert-ships-how-to-unlock-and-buy-them-in-charting-the-unknown",
+        "title": "Ships: How to Unlock and Buy Them"
+      }
+    ],
+    "naval": {
+      "how": "buy",
+      "port": "Ship Manager, the Port of Demeniss (south-east of the City of Demeniss)",
+      "verdict": {
+        "text": "The 36-slot hold is the biggest published, so this is a hauler, not a racer. For speed, build the Large Greymane for a twelfth of the price.",
+        "by": "playnews"
+      }
+    }
+  },
+  {
+    "id": "humble-rowboat",
+    "name": "Humble Rowboat",
+    "base": "mounts/humble-rowboat",
+    "leaf": "building",
+    "cls": "vessel",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Bought at a Ship Manager",
+    "summary": "A rowboat: 6 slots and 100 Health. Fine for a hop to a near island, not a fleet ship. 2,000 Camp Funds (2 Silver donated).",
+    "tiers": {
+      "speed": {
+        "tier": 5,
+        "basis": "Movement Speed 1, Acceleration 1, Handling 1 (Game8)."
+      },
+      "strength": {
+        "tier": 5,
+        "basis": "100 Health (Game8)."
+      },
+      "return": {
+        "tier": 5,
+        "basis": "6-slot hold."
+      },
+      "effort": {
+        "tier": 1,
+        "basis": "2,000 Camp Funds at a Ship Manager."
+      }
+    },
+    "tags": [
+      "dlc",
+      "buy"
+    ],
+    "sources": [
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      },
+      {
+        "by": "playnews",
+        "url": "https://www.playnews.gg/en/guides/crimson-desert-ships-how-to-unlock-and-buy-them-in-charting-the-unknown",
+        "title": "Ships: How to Unlock and Buy Them"
+      }
+    ],
+    "naval": {
+      "how": "buy",
+      "port": "Ship Manager, Vellua (south of Hernand)",
+      "verdict": {
+        "text": "A rowboat: 6 slots and 100 Health. Fine for a hop to a near island, not a fleet ship.",
+        "by": "game8"
+      }
+    }
+  },
+  {
+    "id": "balanced-rowboat",
+    "name": "Balanced Rowboat",
+    "base": "mounts/balanced-rowboat",
+    "leaf": "building",
+    "cls": "vessel",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Bought at a Ship Manager",
+    "summary": "A rowboat: 6 slots and 200 Health. Fine for a hop to a near island, not a fleet ship. 6,000 Camp Funds (6 Silver donated).",
+    "tiers": {
+      "speed": {
+        "tier": 5,
+        "basis": "Movement Speed 1, Acceleration 1, Handling 1 (Game8)."
+      },
+      "strength": {
+        "tier": 5,
+        "basis": "200 Health (Game8)."
+      },
+      "return": {
+        "tier": 5,
+        "basis": "6-slot hold."
+      },
+      "effort": {
+        "tier": 1,
+        "basis": "6,000 Camp Funds at a Ship Manager."
+      }
+    },
+    "tags": [
+      "dlc",
+      "buy"
+    ],
+    "sources": [
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      },
+      {
+        "by": "playnews",
+        "url": "https://www.playnews.gg/en/guides/crimson-desert-ships-how-to-unlock-and-buy-them-in-charting-the-unknown",
+        "title": "Ships: How to Unlock and Buy Them"
+      }
+    ],
+    "naval": {
+      "how": "buy",
+      "port": "Ship Manager, Stoneward Harbor (south of Dewhaven, Delesyia)",
+      "verdict": {
+        "text": "A rowboat: 6 slots and 200 Health. Fine for a hop to a near island, not a fleet ship.",
+        "by": "game8"
+      }
+    }
+  },
+  {
+    "id": "sturdy-tawny-rowboat",
+    "name": "Sturdy Tawny Rowboat",
+    "base": "mounts/sturdy-tawny-rowboat",
+    "leaf": "building",
+    "cls": "vessel",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Bought at a Ship Manager",
+    "summary": "A rowboat: 6 slots and 200 Health. Fine for a hop to a near island, not a fleet ship. 8,000 Camp Funds (8 Silver donated).",
+    "tiers": {
+      "speed": {
+        "tier": 5,
+        "basis": "Movement Speed 1, Acceleration 1, Handling 1 (Game8)."
+      },
+      "strength": {
+        "tier": 5,
+        "basis": "200 Health (Game8)."
+      },
+      "return": {
+        "tier": 5,
+        "basis": "6-slot hold."
+      },
+      "effort": {
+        "tier": 1,
+        "basis": "8,000 Camp Funds at a Ship Manager."
+      }
+    },
+    "tags": [
+      "dlc",
+      "buy"
+    ],
+    "sources": [
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      },
+      {
+        "by": "playnews",
+        "url": "https://www.playnews.gg/en/guides/crimson-desert-ships-how-to-unlock-and-buy-them-in-charting-the-unknown",
+        "title": "Ships: How to Unlock and Buy Them"
+      }
+    ],
+    "naval": {
+      "how": "buy",
+      "port": "Ship Manager, the Port of Delesyia (outside the City of Delesyia)",
+      "verdict": {
+        "text": "A rowboat: 6 slots and 200 Health. Fine for a hop to a near island, not a fleet ship.",
+        "by": "game8"
+      }
+    }
+  },
+  {
+    "id": "sand-colored-rowboat",
+    "name": "Sand-Colored Rowboat",
+    "base": "mounts/sand-colored-rowboat",
+    "leaf": "building",
+    "cls": "vessel",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Bought at a Ship Manager",
+    "summary": "A rowboat: 6 slots and 200 Health. Fine for a hop to a near island, not a fleet ship. 10,000 Camp Funds (10 Silver donated).",
+    "tiers": {
+      "speed": {
+        "tier": 5,
+        "basis": "Movement Speed 1, Acceleration 1, Handling 1 (Game8)."
+      },
+      "strength": {
+        "tier": 5,
+        "basis": "200 Health (Game8)."
+      },
+      "return": {
+        "tier": 5,
+        "basis": "6-slot hold."
+      },
+      "effort": {
+        "tier": 1,
+        "basis": "10,000 Camp Funds at a Ship Manager."
+      }
+    },
+    "tags": [
+      "dlc",
+      "buy"
+    ],
+    "sources": [
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      },
+      {
+        "by": "playnews",
+        "url": "https://www.playnews.gg/en/guides/crimson-desert-ships-how-to-unlock-and-buy-them-in-charting-the-unknown",
+        "title": "Ships: How to Unlock and Buy Them"
+      }
+    ],
+    "naval": {
+      "how": "buy",
+      "port": "Ship Manager, the Port of Demeniss (south-east of the City of Demeniss)",
+      "verdict": {
+        "text": "A rowboat: 6 slots and 200 Health. Fine for a hop to a near island, not a fleet ship.",
+        "by": "game8"
+      }
+    }
+  },
+  {
+    "id": "natural-pearl",
+    "name": "Natural Pearl",
+    "leaf": "building",
+    "cls": "stock",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Gates all four legendaries",
+    "summary": "Every legendary ship takes 5, so a full set is 20, and no shop sells them. Pioneer Iliya Island and keep its Ruins Excavation dispatch running from day one: it pays pearls while you farm everything else. Glowing clams and a few deep-sea drops fill the gap.",
+    "tiers": {
+      "speed": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "strength": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "return": {
+        "tier": 1,
+        "basis": "All four legendary ships wait on it."
+      },
+      "effort": {
+        "tier": 4,
+        "basis": "Rate-limited: a dispatch that doesn't pay every run, or a dive per pearl."
+      }
+    },
+    "tags": [
+      "dlc"
+    ],
+    "sources": [
+      {
+        "by": "gamingdeputy",
+        "url": "https://www.gamingdeputy.com/france/crimson-desert-perles-naturelles/",
+        "title": "Comment obtenir des perles naturelles — Gaming Deputy (FR)"
+      },
+      {
+        "by": "vulkk",
+        "url": "https://vulkk.com/database/crimson-desert/items/natural-pearl/",
+        "title": "Natural Pearl — Vulkk"
+      },
+      {
+        "by": "finalboss",
+        "url": "https://finalboss.io/crimson-desert-how-to-get-the-drunken-catfish-legendary-galleon",
+        "title": "How to Get the Drunken Catfish Legendary Galleon — FinalBoss"
+      },
+      {
+        "by": "keengamer",
+        "url": "https://www.keengamer.com/articles/guides/crimson-desert-how-to-get-the-flagship-of-the-east/",
+        "title": "How to Get the Flagship of the East — KeenGamer"
+      },
+      {
+        "by": "keengamer",
+        "url": "https://www.keengamer.com/articles/guides/crimson-desert-how-to-get-the-legendary-phantom-ship/",
+        "title": "How to Get the Legendary Phantom Ship — KeenGamer"
+      }
+    ],
+    "ledger": {
+      "methods": [
+        {
+          "title": "Iliya Ruins Excavation dispatch",
+          "how": "Pioneer Iliya Island, then send its Ruins Excavation dispatch on repeat from the island's anchorage.",
+          "rate": "best",
+          "by": "finalboss",
+          "where": "Iliya Island, South Sea",
+          "yield": "FinalBoss: about 1 run in 5. Gaming Deputy: a set number every 10 in-game hours."
+        },
+        {
+          "title": "Glowing clams",
+          "how": "Swim to a pearl clam glowing blue on the seabed and take the pearl.",
+          "rate": "good",
+          "by": "finalboss",
+          "where": "Dead Coral Sea ruins (KeenGamer); near Samora: the spires, a flat rock by the Great Trench label, a small cave south of the island",
+          "yield": "1 per clam"
+        },
+        {
+          "title": "Deep-sea drops",
+          "how": "Pearl Moss Crocodile 5%, Megalodon 3%, Giant Manta Ray 3%, Blue Whale 2%, giant jellyfish 1%; also Rare Ocean Relics and sunk pirates.",
+          "rate": "slow",
+          "by": "keengamer"
+        }
+      ],
+      "uses": [
+        {
+          "item": "Steam and Clockwork Stern (large)",
+          "n": 1,
+          "by": "finalboss"
+        },
+        {
+          "item": "Long-Horned Fish Stern (large)",
+          "n": 1,
+          "by": "finalboss"
+        },
+        {
+          "item": "Giant Golden Compass Sail",
+          "n": 1,
+          "by": "gamingdeputy"
+        }
+      ],
+      "watch": [
+        "The dispatch rate is unmeasured: FinalBoss says about 1 in 5 runs, Gaming Deputy a set number every 10 in-game hours."
+      ]
+    },
+    "kind": "DLC material",
+    "region": "The Great Ocean",
+    "area": "Iliya Island, seabed clams, deep-sea drops",
+    "location": "Iliya Island's dispatch; clams in the Dead Coral Sea ruins and around Samora.",
+    "requires": [
+      "Charting the Unknown: a ship, and a diving suit for the seabed"
+    ],
+    "routes": [
+      {
+        "steps": [
+          "Pioneer Iliya Island, then send its Ruins Excavation dispatch on repeat from the island's anchorage.",
+          "Swim to a pearl clam glowing blue on the seabed and take the pearl.",
+          "Pearl Moss Crocodile 5%, Megalodon 3%, Giant Manta Ray 3%, Blue Whale 2%, giant jellyfish 1%; also Rare Ocean Relics and sunk pirates."
+        ]
+      }
+    ],
+    "notes": [],
+    "variants": [],
+    "since": "Charting the Unknown",
+    "media": {
+      "portrait": {
+        "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Natural-Pearl.jpg",
+        "credit": "keengamer",
+        "crop": [
+          0.43,
+          0.62,
+          0.62
+        ],
+        "src": "media/naval/natural-pearl/portrait.webp",
+        "w": 480,
+        "h": 480
+      },
+      "captures": [
+        {
+          "kind": "action",
+          "from": "https://img.game8.co/tfhg4iuqsmkheijpancpv9offnvn",
+          "credit": "game8",
+          "caption": "A pearl clam on the seabed: swim up and take it",
+          "src": "media/naval/natural-pearl/action-1.webp",
+          "w": 728,
+          "h": 410
+        },
+        {
+          "kind": "menu",
+          "from": "https://img.game8.co/66gvizzzm7hmru6std8z5q48jwpl",
+          "credit": "game8",
+          "caption": "Iliya Island — the Ruins Excavation dispatch that pays pearls",
+          "src": "media/naval/natural-pearl/menu-2.webp",
+          "w": 728,
+          "h": 410
+        }
+      ],
+      "gallery": [],
+      "hero": {
+        "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Natural-Pearl.jpg",
+        "credit": "keengamer",
+        "src": "media/naval/natural-pearl/hero.webp",
+        "w": 1239,
+        "h": 689
+      }
+    }
+  },
+  {
+    "id": "malachite",
+    "name": "Malachite",
+    "leaf": "building",
+    "cls": "stock",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Medium, Large and the Flagship",
+    "summary": "Three builds take 50 each: the Medium and Large Greymanes and the Flagship of the East, 150 in all. The Great Ocean Scar cave at the bottom of the Trench east of Delesyia holds several veins; mine them with a pickaxe or mining knuckles. Floating chests drop it at random.",
+    "tiers": {
+      "speed": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "strength": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "return": {
+        "tier": 1,
+        "basis": "The Medium and Large Greymanes and the Flagship wait on it."
+      },
+      "effort": {
+        "tier": 3,
+        "basis": "A 320 m dive to one cave; the rest is luck."
+      }
+    },
+    "tags": [
+      "dlc"
+    ],
+    "sources": [
+      {
+        "by": "gamingdeputy",
+        "url": "https://www.gamingdeputy.com/france/crimson-desert-malachite-ou-trouver/",
+        "title": "Comment obtenir la malachite — Gaming Deputy (FR)"
+      },
+      {
+        "by": "keengamer",
+        "url": "https://www.keengamer.com/articles/guides/crimson-desert-how-to-get-the-flagship-of-the-east/",
+        "title": "How to Get the Flagship of the East — KeenGamer"
+      },
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      }
+    ],
+    "ledger": {
+      "methods": [
+        {
+          "title": "Great Ocean Scar cave",
+          "how": "Dive the Trench east of Delesyia to about 320 m, find the cave entrance on its south side and mine the green veins inside.",
+          "rate": "best",
+          "by": "gamingdeputy",
+          "where": "Great Ocean of Pywel, right of the E in 'Trench' on the world map",
+          "yield": "Several veins per visit"
+        },
+        {
+          "title": "Dead Coral Sea crystals",
+          "how": "Mine the green crystals in the Dead Coral Sea.",
+          "rate": "good",
+          "by": "keengamer"
+        },
+        {
+          "title": "Chests and floating chests",
+          "how": "Open floating chests at sea and chests in sunken enemy ships; malachite turns up at random.",
+          "rate": "slow",
+          "by": "gamingdeputy"
+        }
+      ],
+      "uses": [
+        {
+          "item": "Breathing propulsion device upgrade",
+          "n": null,
+          "by": "gamingdeputy"
+        }
+      ],
+      "tips": [
+        {
+          "text": "Fit the best mining tool you have before the dive: an upgraded pickaxe takes more from each vein.",
+          "by": "vulkk"
+        }
+      ]
+    },
+    "kind": "DLC material",
+    "region": "The Great Ocean",
+    "area": "The Trench, east of Delesyia",
+    "location": "The Great Ocean Scar cave, about 320 m down the Trench east of Delesyia.",
+    "requires": [
+      "Charting the Unknown: a ship, and a diving suit for the seabed"
+    ],
+    "routes": [
+      {
+        "steps": [
+          "Dive the Trench east of Delesyia to about 320 m, find the cave entrance on its south side and mine the green veins inside.",
+          "Mine the green crystals in the Dead Coral Sea.",
+          "Open floating chests at sea and chests in sunken enemy ships; malachite turns up at random."
+        ]
+      }
+    ],
+    "notes": [],
+    "variants": [],
+    "since": "Charting the Unknown",
+    "media": {
+      "portrait": {
+        "from": "https://img.game8.co/hi1m8ukgv5oqalasvn83fx0ej8ie",
+        "credit": "game8",
+        "crop": [
+          0.55,
+          0.42,
+          0.85
+        ],
+        "src": "media/naval/malachite/portrait.webp",
+        "w": 480,
+        "h": 480
+      },
+      "captures": [
+        {
+          "kind": "map",
+          "from": "https://img.game8.co/jaivczfh5fu8unw0k0faum7uznud",
+          "credit": "game8",
+          "caption": "Map — the Great Ocean Scar cave, at the bottom of the Trench east of Delesyia",
+          "src": "media/naval/malachite/map-1.webp",
+          "w": 728,
+          "h": 410
+        },
+        {
+          "kind": "overworld",
+          "from": "https://img.game8.co/x16q34a1wvae9e72x77qwzulbl5c",
+          "credit": "game8",
+          "caption": "The descent down the Trench wall",
+          "src": "media/naval/malachite/overworld-2.webp",
+          "w": 728,
+          "h": 410
+        },
+        {
+          "kind": "overworld",
+          "from": "https://img.game8.co/8z872ueklmusmay8ddf8rmeidxxr",
+          "credit": "game8",
+          "caption": "The cave entrance, on the south side",
+          "src": "media/naval/malachite/overworld-3.webp",
+          "w": 728,
+          "h": 410
+        }
+      ],
+      "gallery": []
+    }
+  },
+  {
+    "id": "shiny-ore",
+    "name": "Shiny Ore",
+    "leaf": "building",
+    "cls": "stock",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Medium and Large Greymanes",
+    "summary": "The Medium and Large Greymanes take 100 each. The fastest source is the square ornate boxes drifting on the surface, 5 to 13 a box, and sinking ships makes more appear. For a batch, mine the pale blue deposits around Auronui, the first island you pioneer.",
+    "tiers": {
+      "speed": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "strength": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "return": {
+        "tier": 2,
+        "basis": "The Medium and Large Greymanes, the Ship Teleportation Device and the Compass Sail."
+      },
+      "effort": {
+        "tier": 2,
+        "basis": "Floating boxes on any voyage; shallow deposits by the Auronui anchorage."
+      }
+    },
+    "tags": [
+      "dlc"
+    ],
+    "sources": [
+      {
+        "by": "gamingdeputy",
+        "url": "https://www.gamingdeputy.com/france/crimson-desert-minerai-brillant-ou-trouver/",
+        "title": "Où trouver du minerai brillant — Gaming Deputy (FR)"
+      },
+      {
+        "by": "vulkk",
+        "url": "https://vulkk.com/database/crimson-desert/items/shiny-ore/",
+        "title": "Shiny Ore"
+      },
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      }
+    ],
+    "ledger": {
+      "methods": [
+        {
+          "title": "Drifting boxes",
+          "how": "Sail with an eye on the surface and pick up every square ornate box. Barrels hold trade goods instead.",
+          "rate": "best",
+          "by": "gamingdeputy",
+          "yield": "5–13 a box"
+        },
+        {
+          "title": "Auronui deposits",
+          "how": "Dive the pale blue nodes: a rich field north-west of Auronui by the Abyss Nexus, a shallow one just west of the anchorage, another north-east of the main island.",
+          "rate": "good",
+          "by": "gamingdeputy",
+          "where": "Auronui, South Sea"
+        },
+        {
+          "title": "Reef and vent deposits",
+          "how": "A rich cave deep in the Great Coral Reef; more at the Great Hydrothermal Vents.",
+          "rate": "good",
+          "by": "vulkk"
+        }
+      ],
+      "uses": [
+        {
+          "item": "Ship Teleportation Device",
+          "n": 15,
+          "by": "keengamer"
+        },
+        {
+          "item": "Giant Golden Compass Sail",
+          "n": 30,
+          "by": "gamingdeputy"
+        }
+      ]
+    },
+    "kind": "DLC material",
+    "region": "The Great Ocean",
+    "area": "Floating boxes; Auronui; the Great Coral Reef",
+    "location": "Floating boxes anywhere at sea; deposits around Auronui, the Great Coral Reef and the Great Hydrothermal Vents.",
+    "requires": [
+      "Charting the Unknown: a ship, and a diving suit for the seabed"
+    ],
+    "routes": [
+      {
+        "steps": [
+          "Sail with an eye on the surface and pick up every square ornate box. Barrels hold trade goods instead.",
+          "Dive the pale blue nodes: a rich field north-west of Auronui by the Abyss Nexus, a shallow one just west of the anchorage, another north-east of the main island.",
+          "A rich cave deep in the Great Coral Reef; more at the Great Hydrothermal Vents."
+        ]
+      }
+    ],
+    "notes": [],
+    "variants": [],
+    "since": "Charting the Unknown",
+    "media": {
+      "portrait": {
+        "from": "https://oyster.ignimgs.com/mediawiki/apis.ign.com/crimson-desert/e/e3/Crimson_Desert_-_Mining_Shiny_Ore.jpg",
+        "credit": "ign",
+        "crop": [
+          0.56,
+          0.5,
+          0.75
+        ],
+        "src": "media/naval/shiny-ore/portrait.webp",
+        "w": 480,
+        "h": 480
+      },
+      "captures": [
+        {
+          "kind": "action",
+          "from": "https://oyster.ignimgs.com/mediawiki/apis.ign.com/crimson-desert/5/50/Crimson_Desert_-_Shiny_Ore_Drifting_Box.jpg",
+          "credit": "ign",
+          "caption": "A drifting box: 5 to 13 Shiny Ore, no dive needed",
+          "src": "media/naval/shiny-ore/action-1.webp",
+          "w": 1600,
+          "h": 900
+        },
+        {
+          "kind": "map",
+          "from": "https://oyster.ignimgs.com/mediawiki/apis.ign.com/crimson-desert/1/16/Crimson_Desert_-_Mining_Shiny_Ore_2.jpg",
+          "credit": "ign",
+          "caption": "Map — the rich field north-west of Auronui",
+          "src": "media/naval/shiny-ore/map-2.webp",
+          "w": 1600,
+          "h": 900
+        }
+      ],
+      "gallery": [],
+      "hero": {
+        "from": "https://oyster.ignimgs.com/mediawiki/apis.ign.com/crimson-desert/e/e3/Crimson_Desert_-_Mining_Shiny_Ore.jpg",
+        "credit": "ign",
+        "src": "media/naval/shiny-ore/hero.webp",
+        "w": 1920,
+        "h": 1080
+      }
+    }
+  },
+  {
+    "id": "hydrothermal-mineral-deposit",
+    "name": "Hydrothermal Mineral Deposit",
+    "leaf": "building",
+    "cls": "stock",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Large Greymane and the Catfish",
+    "summary": "The Large Greymane takes 45 and the Drunken Catfish 20. They grow on the bubbling vent spires at the Great Hydrothermal Vents: look for the bright, glowing formations and break them with the Knuckle Drill. FinalBoss mines them wearing Abyss Gears. Salvage crates drop a few.",
+    "tiers": {
+      "speed": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "strength": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "return": {
+        "tier": 2,
+        "basis": "The Large Greymane, the Drunken Catfish and both large sterns."
+      },
+      "effort": {
+        "tier": 3,
+        "basis": "One site, a deep dive, and the Knuckle Drill."
+      }
+    },
+    "tags": [
+      "dlc"
+    ],
+    "sources": [
+      {
+        "by": "finalboss",
+        "url": "https://finalboss.io/crimson-desert-how-to-get-the-drunken-catfish-legendary-galleon",
+        "title": "How to Get the Drunken Catfish Legendary Galleon — FinalBoss"
+      },
+      {
+        "by": "vulkk",
+        "url": "https://vulkk.com/database/crimson-desert/items/hydrothermal-mineral-deposit/",
+        "title": "Hydrothermal Mineral Deposit (Great Hydrothermal Vents) — Vulkk"
+      },
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      }
+    ],
+    "ledger": {
+      "methods": [
+        {
+          "title": "Great Hydrothermal Vents",
+          "how": "Dive to the vent spires that release bubbles and break the glowing formations on them with the Knuckle Drill.",
+          "rate": "best",
+          "by": "finalboss",
+          "where": "Great Hydrothermal Vents, South Sea"
+        },
+        {
+          "title": "Salvage crates",
+          "how": "Break the small square salvage crates at sea; a few hold deposits.",
+          "rate": "slow",
+          "by": "finalboss"
+        }
+      ],
+      "uses": [
+        {
+          "item": "Steam and Clockwork Stern (large)",
+          "n": 6,
+          "by": "finalboss"
+        },
+        {
+          "item": "Long-Horned Fish Stern (large)",
+          "n": 4,
+          "by": "finalboss"
+        }
+      ]
+    },
+    "kind": "DLC material",
+    "region": "The Great Ocean",
+    "area": "Great Hydrothermal Vents",
+    "location": "The Great Hydrothermal Vents, South Sea: the glowing formations on the vent spires.",
+    "requires": [
+      "Charting the Unknown: a ship, and a diving suit for the seabed"
+    ],
+    "routes": [
+      {
+        "steps": [
+          "Dive to the vent spires that release bubbles and break the glowing formations on them with the Knuckle Drill.",
+          "Break the small square salvage crates at sea; a few hold deposits."
+        ]
+      }
+    ],
+    "notes": [],
+    "variants": [],
+    "since": "Charting the Unknown",
+    "media": {
+      "portrait": {
+        "from": "https://img.game8.co/4122d30iey1lt3d3j9pmrl53g2mz",
+        "credit": "game8",
+        "crop": [
+          0.5,
+          0.5,
+          0.9
+        ],
+        "src": "media/naval/hydrothermal-mineral-deposit/portrait.webp",
+        "w": 480,
+        "h": 480
+      },
+      "captures": [
+        {
+          "kind": "map",
+          "from": "https://img.game8.co/4122d30iey1lt3d3j9pmrl53g2mz",
+          "credit": "game8",
+          "caption": "Map — the Great Hydrothermal Vents",
+          "src": "media/naval/hydrothermal-mineral-deposit/map-1.webp",
+          "w": 728,
+          "h": 410
+        },
+        {
+          "kind": "map",
+          "from": "https://staticg.sportskeeda.com/editor/2026/11/092ac-17935378418509-1920.jpg",
+          "credit": "sportskeeda",
+          "caption": "Map — the Vents, where the deposits line the vent walls",
+          "clip": [
+            0.5,
+            0,
+            1,
+            0.5
+          ],
+          "src": "media/naval/hydrothermal-mineral-deposit/map-2.webp",
+          "w": 960,
+          "h": 540
+        }
+      ],
+      "gallery": []
+    }
+  },
+  {
+    "id": "manganese",
+    "name": "Manganese",
+    "leaf": "building",
+    "cls": "stock",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Large Greymane",
+    "summary": "Only the Large Greymane needs it: 20. Mine the nodes on the floor of the Great Hydrothermal Vents near the Blooms Beneath the Waves cresset, the same dive as its Hydrothermal Deposits. Large chests in small sunken ships hold more: sail with underwater detection on and look for the bright blue spot when the circles turn orange.",
+    "tiers": {
+      "speed": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "strength": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "return": {
+        "tier": 3,
+        "basis": "One ship takes it."
+      },
+      "effort": {
+        "tier": 2,
+        "basis": "Nodes beside the Vents dive you already make; wreck chests on the way."
+      }
+    },
+    "tags": [
+      "dlc"
+    ],
+    "sources": [
+      {
+        "by": "vulkk",
+        "url": "https://vulkk.com/database/crimson-desert/items/manganese/",
+        "title": "Manganese"
+      },
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      }
+    ],
+    "ledger": {
+      "methods": [
+        {
+          "title": "Vent nodes",
+          "how": "Mine Manganese nodes on the floor of the Great Hydrothermal Vents with a pickaxe, near the Blooms Beneath the Waves cresset.",
+          "rate": "best",
+          "by": "vulkk",
+          "where": "Great Hydrothermal Vents, South Sea"
+        },
+        {
+          "title": "Sunken small ships",
+          "how": "Sail with underwater detection on; when its circles turn orange, dive for the bright blue spot and open the large chest.",
+          "rate": "good",
+          "by": "vulkk"
+        },
+        {
+          "title": "Drifting boxes",
+          "how": "Square ornate boxes on the surface sometimes hold it.",
+          "rate": "slow",
+          "by": "vulkk"
+        }
+      ],
+      "tips": [
+        {
+          "text": "A Blessing of the Earth III slotted on an upgraded pickaxe takes more from each node.",
+          "by": "vulkk"
+        }
+      ]
+    },
+    "kind": "DLC material",
+    "region": "The Great Ocean",
+    "area": "Great Hydrothermal Vents; sunken ships",
+    "location": "Nodes at the Great Hydrothermal Vents; chests in small sunken ships.",
+    "requires": [
+      "Charting the Unknown: a ship, and a diving suit for the seabed"
+    ],
+    "routes": [
+      {
+        "steps": [
+          "Mine Manganese nodes on the floor of the Great Hydrothermal Vents with a pickaxe, near the Blooms Beneath the Waves cresset.",
+          "Sail with underwater detection on; when its circles turn orange, dive for the bright blue spot and open the large chest.",
+          "Square ornate boxes on the surface sometimes hold it."
+        ]
+      }
+    ],
+    "notes": [],
+    "variants": [],
+    "since": "Charting the Unknown",
+    "media": {
+      "portrait": {
+        "from": "https://oyster.ignimgs.com/mediawiki/apis.ign.com/crimson-desert/5/50/Crimson_Desert_-_Shiny_Ore_Drifting_Box.jpg",
+        "credit": "ign",
+        "crop": [
+          0.5,
+          0.62,
+          0.62
+        ],
+        "src": "media/naval/manganese/portrait.webp",
+        "w": 480,
+        "h": 480
+      },
+      "captures": [
+        {
+          "kind": "action",
+          "from": "https://oyster.ignimgs.com/mediawiki/apis.ign.com/crimson-desert/5/50/Crimson_Desert_-_Shiny_Ore_Drifting_Box.jpg",
+          "credit": "ign",
+          "caption": "A drifting box: Vulkk lists Manganese among what they hold",
+          "src": "media/naval/manganese/action-1.webp",
+          "w": 1600,
+          "h": 900
+        },
+        {
+          "kind": "map",
+          "from": "https://img.game8.co/4122d30iey1lt3d3j9pmrl53g2mz",
+          "credit": "game8",
+          "caption": "Map — the Great Hydrothermal Vents, where the nodes are",
+          "src": "media/naval/manganese/map-2.webp",
+          "w": 728,
+          "h": 410
+        }
+      ],
+      "gallery": []
+    }
+  },
+  {
+    "id": "sea-fan-coral",
+    "name": "Sea Fan Coral",
+    "leaf": "building",
+    "cls": "stock",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Flagship of the East",
+    "summary": "The Flagship of the East takes 15. It grows on the floor around reefs: the Coral Reef north-east of the City of Delesyia is the closest to Stoneward Harbor, where the Flagship is built; the Great Coral Reef in the South Sea's south-west corner has more.",
+    "tiers": {
+      "speed": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "strength": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "return": {
+        "tier": 3,
+        "basis": "One ship takes it."
+      },
+      "effort": {
+        "tier": 2,
+        "basis": "Gathered by hand on two reefs."
+      }
+    },
+    "tags": [
+      "dlc"
+    ],
+    "sources": [
+      {
+        "by": "vulkk",
+        "url": "https://vulkk.com/database/crimson-desert/items/sea-fan-coral/",
+        "title": "Sea Fan Coral — Vulkk"
+      },
+      {
+        "by": "keengamer",
+        "url": "https://www.keengamer.com/articles/guides/crimson-desert-how-to-get-the-flagship-of-the-east/",
+        "title": "How to Get the Flagship of the East — KeenGamer"
+      }
+    ],
+    "ledger": {
+      "methods": [
+        {
+          "title": "Delesyia's coral reef",
+          "how": "Dive the reef north-east of the City of Delesyia and gather the fan-shaped coral on the floor.",
+          "rate": "best",
+          "by": "vulkk",
+          "where": "East Sea off Delesyia"
+        },
+        {
+          "title": "Great Coral Reef",
+          "how": "The South Sea's south-west corner: the same coral, a longer sail.",
+          "rate": "good",
+          "by": "vulkk"
+        }
+      ],
+      "watch": [
+        "What to look for: Vulkk describes a white-ish plant, KeenGamer low dark fan clumps. The fronds spread like a pine tree in the item text."
+      ]
+    },
+    "kind": "DLC material",
+    "region": "The Great Ocean",
+    "area": "Coral reefs off Delesyia and in the South Sea",
+    "location": "The Coral Reef north-east of Delesyia; the Great Coral Reef, South Sea.",
+    "requires": [
+      "Charting the Unknown: a ship, and a diving suit for the seabed"
+    ],
+    "routes": [
+      {
+        "steps": [
+          "Dive the reef north-east of the City of Delesyia and gather the fan-shaped coral on the floor.",
+          "The South Sea's south-west corner: the same coral, a longer sail."
+        ]
+      }
+    ],
+    "notes": [],
+    "variants": [],
+    "since": "Charting the Unknown",
+    "media": {
+      "portrait": {
+        "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Sea-Fan-Coral.jpg",
+        "credit": "keengamer",
+        "crop": [
+          0.5,
+          0.55,
+          0.8
+        ],
+        "src": "media/naval/sea-fan-coral/portrait.webp",
+        "w": 480,
+        "h": 480
+      },
+      "captures": [
+        {
+          "kind": "action",
+          "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Sea-Fan-Coral.jpg",
+          "credit": "keengamer",
+          "caption": "Sea Fan Coral on the seabed off Delesyia",
+          "src": "media/naval/sea-fan-coral/action-1.webp",
+          "w": 1234,
+          "h": 682
+        }
+      ],
+      "gallery": [],
+      "hero": {
+        "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Sea-Fan-Coral.jpg",
+        "credit": "keengamer",
+        "src": "media/naval/sea-fan-coral/hero.webp",
+        "w": 1234,
+        "h": 682
+      }
+    }
+  },
+  {
+    "id": "golden-coral",
+    "name": "Golden Coral",
+    "leaf": "building",
+    "cls": "stock",
+    "domains": [
+      "sea"
+    ],
+    "trait": "The Drunken Catfish",
+    "summary": "The Drunken Catfish takes 25. Dive north-east of Delesyia just past the coral reef and find the large mineral deposit beside a wall: the shining yellow, grass-like patches around it give 1 to 10 each. Underwater golems guard the spot. Wreck chests rarely hold any.",
+    "tiers": {
+      "speed": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "strength": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "return": {
+        "tier": 3,
+        "basis": "One ship takes it."
+      },
+      "effort": {
+        "tier": 3,
+        "basis": "One spot, guarded."
+      }
+    },
+    "tags": [
+      "dlc"
+    ],
+    "sources": [
+      {
+        "by": "finalboss",
+        "url": "https://finalboss.io/crimson-desert-how-to-get-the-drunken-catfish-legendary-galleon",
+        "title": "How to Get the Drunken Catfish Legendary Galleon — FinalBoss"
+      }
+    ],
+    "ledger": {
+      "methods": [
+        {
+          "title": "North-east of Delesyia",
+          "how": "Dive past the coral reef to the large mineral deposit beside a wall; collect the shining yellow patches around it. Not all the yellow growth can be taken.",
+          "rate": "best",
+          "by": "finalboss",
+          "yield": "1–10 a pickup"
+        },
+        {
+          "title": "Wreck chests",
+          "how": "Chests in sunken ships, a small chance.",
+          "rate": "slow",
+          "by": "vulkk"
+        }
+      ],
+      "tips": [
+        {
+          "text": "Count as you go: the pickups vary from 1 to 10, so the patch may need a second visit.",
+          "by": "finalboss"
+        }
+      ]
+    },
+    "kind": "DLC material",
+    "region": "The Great Ocean",
+    "area": "North-east of Delesyia",
+    "location": "North-east of the City of Delesyia, just past the coral reef: the yellow patches round a large deposit by a wall.",
+    "requires": [
+      "Charting the Unknown: a ship, and a diving suit for the seabed"
+    ],
+    "routes": [
+      {
+        "steps": [
+          "Dive past the coral reef to the large mineral deposit beside a wall; collect the shining yellow patches around it. Not all the yellow growth can be taken.",
+          "Chests in sunken ships, a small chance."
+        ]
+      }
+    ],
+    "notes": [],
+    "variants": [],
+    "since": "Charting the Unknown",
+    "media": {
+      "portrait": {
+        "from": "https://img.game8.co/ff4hjiauqz0lgjh7yszzp0h5j99x",
+        "credit": "game8",
+        "crop": [
+          0.73,
+          0.5,
+          0.85
+        ],
+        "src": "media/naval/golden-coral/portrait.webp",
+        "w": 480,
+        "h": 480
+      },
+      "captures": [
+        {
+          "kind": "menu",
+          "from": "https://img.game8.co/ff4hjiauqz0lgjh7yszzp0h5j99x",
+          "credit": "game8",
+          "caption": "No guide has published a picture of Golden Coral: this is the ship it builds, the Drunken Catfish",
+          "src": "media/naval/golden-coral/menu-1.webp",
+          "w": 728,
+          "h": 410
+        }
+      ],
+      "gallery": []
+    }
+  },
+  {
+    "id": "giant-jellyfish-skin",
+    "name": "Giant Jellyfish Skin",
+    "leaf": "building",
+    "cls": "stock",
+    "domains": [
+      "sea"
+    ],
+    "trait": "The Phantom Ship",
+    "summary": "The Phantom Ship takes 10. Giant jellyfish roam the Trench east of Delesyia Port, each ringed by a swarm of small ones, and every kill skins for 1 or 2. The Great Coral Reef in the South Sea has more.",
+    "tiers": {
+      "speed": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "strength": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "return": {
+        "tier": 3,
+        "basis": "One ship takes it."
+      },
+      "effort": {
+        "tier": 3,
+        "basis": "A hunt in one of two places; every kill pays."
+      }
+    },
+    "tags": [
+      "dlc"
+    ],
+    "sources": [
+      {
+        "by": "vulkk",
+        "url": "https://vulkk.com/database/crimson-desert/items/giant-jellyfish-skin/",
+        "title": "Giant Jellyfish Skin — Vulkk"
+      },
+      {
+        "by": "keengamer",
+        "url": "https://www.keengamer.com/articles/guides/crimson-desert-how-to-get-the-legendary-phantom-ship/",
+        "title": "How to Get the Legendary Phantom Ship — KeenGamer"
+      },
+      {
+        "by": "gamingdeputy",
+        "url": "https://www.gamingdeputy.com/france/crimson-desert-obtenir-navire-fantome-2/",
+        "title": "Obtenir le Navire fantôme — Gaming Deputy (FR)"
+      }
+    ],
+    "ledger": {
+      "methods": [
+        {
+          "title": "The Trench, East Sea",
+          "how": "Hunt the giant jellyfish east of Delesyia Port: look for the swarm of small jellyfish around each one, then skin it.",
+          "rate": "best",
+          "by": "vulkk",
+          "yield": "1–2 a kill, every kill (KeenGamer)"
+        },
+        {
+          "title": "Great Coral Reef",
+          "how": "Dive deep at the Great Coral Reef in the south of the map.",
+          "rate": "good",
+          "by": "gamingdeputy"
+        }
+      ],
+      "tips": [
+        {
+          "text": "Giant Venomous Jellyfish skin for the same material (KeenGamer). Keep your distance from the stingers.",
+          "by": "keengamer"
+        }
+      ]
+    },
+    "kind": "DLC material",
+    "region": "The Great Ocean",
+    "area": "The Trench; the Great Coral Reef",
+    "location": "The Trench east of Delesyia Port; the Great Coral Reef, South Sea.",
+    "requires": [
+      "Charting the Unknown: a ship, and a diving suit for the seabed"
+    ],
+    "routes": [
+      {
+        "steps": [
+          "Hunt the giant jellyfish east of Delesyia Port: look for the swarm of small jellyfish around each one, then skin it.",
+          "Dive deep at the Great Coral Reef in the south of the map."
+        ]
+      }
+    ],
+    "notes": [],
+    "variants": [],
+    "since": "Charting the Unknown",
+    "media": {
+      "portrait": {
+        "from": "https://images.keengamer.com/wp-content/uploads/2026/11/The-Phantom-Ship.jpg",
+        "credit": "keengamer",
+        "crop": [
+          0.45,
+          0.45,
+          0.9
+        ],
+        "src": "media/naval/giant-jellyfish-skin/portrait.webp",
+        "w": 480,
+        "h": 480
+      },
+      "captures": [
+        {
+          "kind": "menu",
+          "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Construct-Phantom-Ship.jpg",
+          "credit": "keengamer",
+          "caption": "No guide has published a picture of the skin: the Phantom Ship's build menu lists it",
+          "src": "media/naval/giant-jellyfish-skin/menu-1.webp",
+          "w": 1600,
+          "h": 900
+        }
+      ],
+      "gallery": []
+    }
+  },
+  {
+    "id": "obsidian",
+    "name": "Obsidian",
+    "leaf": "building",
+    "cls": "stock",
+    "domains": [
+      "sea"
+    ],
+    "trait": "The Phantom Ship",
+    "summary": "The Phantom Ship takes 30: six island deposits at 5 apiece. Bergel Island and Estra Island both have them; Rare Ocean Relics sometimes hold more.",
+    "tiers": {
+      "speed": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "strength": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "return": {
+        "tier": 3,
+        "basis": "One ship takes it."
+      },
+      "effort": {
+        "tier": 2,
+        "basis": "Island deposits you can walk to."
+      }
+    },
+    "tags": [
+      "dlc"
+    ],
+    "sources": [
+      {
+        "by": "keengamer",
+        "url": "https://www.keengamer.com/articles/guides/crimson-desert-how-to-get-the-legendary-phantom-ship/",
+        "title": "How to Get the Legendary Phantom Ship — KeenGamer"
+      },
+      {
+        "by": "gamingdeputy",
+        "url": "https://www.gamingdeputy.com/france/crimson-desert-obtenir-navire-fantome-2/",
+        "title": "Obtenir le Navire fantôme — Gaming Deputy (FR)"
+      }
+    ],
+    "ledger": {
+      "methods": [
+        {
+          "title": "Island deposits",
+          "how": "Mine the black deposits on the islands: Bergel Island (KeenGamer), Estra Island (Gaming Deputy).",
+          "rate": "best",
+          "by": "keengamer",
+          "yield": "5 a deposit"
+        },
+        {
+          "title": "Rare Ocean Relics",
+          "how": "Open Rare Ocean Relics from the sea.",
+          "rate": "slow",
+          "by": "keengamer"
+        }
+      ]
+    },
+    "kind": "DLC material",
+    "region": "The Great Ocean",
+    "area": "Bergel Island; Estra Island",
+    "location": "Island deposits: Bergel Island, Estra Island.",
+    "requires": [
+      "Charting the Unknown: a ship, and a diving suit for the seabed"
+    ],
+    "routes": [
+      {
+        "steps": [
+          "Mine the black deposits on the islands: Bergel Island (KeenGamer), Estra Island (Gaming Deputy).",
+          "Open Rare Ocean Relics from the sea."
+        ]
+      }
+    ],
+    "notes": [],
+    "variants": [],
+    "since": "Charting the Unknown",
+    "media": {
+      "portrait": {
+        "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Obsidian-Mining.jpg",
+        "credit": "keengamer",
+        "crop": [
+          0.5,
+          0.5,
+          0.85
+        ],
+        "src": "media/naval/obsidian/portrait.webp",
+        "w": 480,
+        "h": 480
+      },
+      "captures": [
+        {
+          "kind": "action",
+          "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Obsidian-Mining.jpg",
+          "credit": "keengamer",
+          "caption": "Mining an obsidian deposit on an island",
+          "src": "media/naval/obsidian/action-1.webp",
+          "w": 1243,
+          "h": 688
+        }
+      ],
+      "gallery": [],
+      "hero": {
+        "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Obsidian-Mining.jpg",
+        "credit": "keengamer",
+        "src": "media/naval/obsidian/hero.webp",
+        "w": 1243,
+        "h": 688
+      }
+    }
+  },
+  {
+    "id": "giant-hydrothermal-salamander-hide",
+    "name": "Giant Hydrothermal Salamander Hide",
+    "leaf": "building",
+    "cls": "stock",
+    "domains": [
+      "sea"
+    ],
+    "trait": "The Assault Ship",
+    "summary": "The Assault Ship of the East takes 10, and one comes only from killing and skinning a giant hydrothermal salamander. They live only at the Great Hydrothermal Vents, one or two at a time, so the hide is the slowest part of that build. Each also drops 1 to 3 Relics.",
+    "tiers": {
+      "speed": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "strength": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "return": {
+        "tier": 3,
+        "basis": "The Assault Ship and the Giant Golden Compass Sail."
+      },
+      "effort": {
+        "tier": 4,
+        "basis": "One creature, one site, one or two at a time."
+      }
+    },
+    "tags": [
+      "dlc"
+    ],
+    "sources": [
+      {
+        "by": "gamingdeputy",
+        "url": "https://www.gamingdeputy.com/france/crimson-desert-peau-salamandre-hydrothermale-geante/",
+        "title": "Peau de salamandre hydrothermale géante — Gaming Deputy (FR)"
+      },
+      {
+        "by": "vulkk",
+        "url": "https://vulkk.com/database/crimson-desert/items/giant-hydrothermal-salamander-hide/",
+        "title": "Giant Hydrothermal Salamander Hide — Vulkk"
+      },
+      {
+        "by": "keengamer",
+        "url": "https://www.keengamer.com/articles/guides/crimson-desert-how-to-get-the-legendary-assault-ship-of-the-east/",
+        "title": "How to Get the Legendary Assault Ship of the East — KeenGamer"
+      }
+    ],
+    "ledger": {
+      "methods": [
+        {
+          "title": "Great Hydrothermal Vents",
+          "how": "Kill and skin the giant hydrothermal salamanders on the vent floor; wait for the next to appear.",
+          "rate": "best",
+          "by": "gamingdeputy",
+          "where": "Great Hydrothermal Vents, South Sea",
+          "yield": "Never more than one or two about"
+        }
+      ],
+      "uses": [
+        {
+          "item": "Giant Golden Compass Sail",
+          "n": 1,
+          "by": "gamingdeputy"
+        }
+      ],
+      "tips": [
+        {
+          "text": "Upgrade to the Enhanced Propulsion Breathing Device first: longer dives, more kills per trip.",
+          "by": "vulkk"
+        },
+        {
+          "text": "They drop 1 to 3 Relics each, worth keeping for Rafi's Relic Exchange.",
+          "by": "finalboss"
+        }
+      ]
+    },
+    "kind": "DLC material",
+    "region": "The Great Ocean",
+    "area": "Great Hydrothermal Vents",
+    "location": "The Great Hydrothermal Vents, South Sea.",
+    "requires": [
+      "Charting the Unknown: a ship, and a diving suit for the seabed"
+    ],
+    "routes": [
+      {
+        "steps": [
+          "Kill and skin the giant hydrothermal salamanders on the vent floor; wait for the next to appear."
+        ]
+      }
+    ],
+    "notes": [],
+    "variants": [],
+    "since": "Charting the Unknown",
+    "media": {
+      "portrait": {
+        "from": "https://img.game8.co/o77aejhiortt3hadlykqmxsaw143",
+        "credit": "game8",
+        "crop": [
+          0.5,
+          0.5,
+          0.95
+        ],
+        "src": "media/naval/giant-hydrothermal-salamander-hide/portrait.webp",
+        "w": 480,
+        "h": 480
+      },
+      "captures": [
+        {
+          "kind": "action",
+          "from": "https://img.game8.co/o77aejhiortt3hadlykqmxsaw143",
+          "credit": "game8",
+          "caption": "A giant hydrothermal salamander on the vent floor",
+          "src": "media/naval/giant-hydrothermal-salamander-hide/action-1.webp",
+          "w": 728,
+          "h": 410
+        },
+        {
+          "kind": "map",
+          "from": "https://img.game8.co/4122d30iey1lt3d3j9pmrl53g2mz",
+          "credit": "game8",
+          "caption": "Map — the Great Hydrothermal Vents",
+          "src": "media/naval/giant-hydrothermal-salamander-hide/map-2.webp",
+          "w": 728,
+          "h": 410
+        }
+      ],
+      "gallery": []
+    }
+  },
+  {
+    "id": "ambergris",
+    "name": "Ambergris",
+    "leaf": "building",
+    "cls": "stock",
+    "domains": [
+      "sea"
+    ],
+    "trait": "The Assault Ship",
+    "summary": "The Assault Ship of the East takes 10. Mine the glowing orange-yellow nodes on the Seabed Plain south of Delesyia, among the giant fish skeletons: 4 to 5 a node with the Knuckle Drill, so two or three nodes cover the build. Patch 2.05 added more nodes there. Pioneer Bergen Island and its dispatch pays some too.",
+    "tiers": {
+      "speed": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "strength": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "return": {
+        "tier": 3,
+        "basis": "The Assault Ship and the large sterns."
+      },
+      "effort": {
+        "tier": 3,
+        "basis": "Two or three nodes on one dive."
+      }
+    },
+    "tags": [
+      "dlc"
+    ],
+    "sources": [
+      {
+        "by": "gamingdeputy",
+        "url": "https://www.gamingdeputy.com/france/crimson-desert-ambre-gris/",
+        "title": "Comment obtenir l'ambre gris — Gaming Deputy (FR)"
+      },
+      {
+        "by": "vulkk",
+        "url": "https://vulkk.com/database/crimson-desert/items/ambergris/",
+        "title": "Ambergris — Vulkk"
+      },
+      {
+        "by": "keengamer",
+        "url": "https://www.keengamer.com/articles/guides/crimson-desert-how-to-get-the-legendary-assault-ship-of-the-east/",
+        "title": "How to Get the Legendary Assault Ship of the East — KeenGamer"
+      }
+    ],
+    "ledger": {
+      "methods": [
+        {
+          "title": "Seabed Plain nodes",
+          "how": "Hug the seabed south of Delesyia by the monster bones and fish skeletons; the nodes glow orange and a minimap alert shows when you're close.",
+          "rate": "best",
+          "by": "gamingdeputy",
+          "where": "Around The Sleeping Colossus Beneath the Waves cresset (Vulkk)",
+          "yield": "4–5 a node"
+        },
+        {
+          "title": "Bergen Island dispatch",
+          "how": "Pioneer Bergen Island and run its mission dispatch: a chance at Ambergris each run.",
+          "rate": "good",
+          "by": "vulkk"
+        },
+        {
+          "title": "Pirate crates and wrecks",
+          "how": "Sink medium and large pirate ships and open the small square crates they drop (not the barrels); chests in sunken ships.",
+          "rate": "slow",
+          "by": "gamingdeputy"
+        }
+      ],
+      "uses": [
+        {
+          "item": "Steam and Clockwork Stern (large)",
+          "n": 3,
+          "by": "finalboss"
+        },
+        {
+          "item": "Long-Horned Fish Stern (large)",
+          "n": 2,
+          "by": "finalboss"
+        }
+      ],
+      "patches": [
+        {
+          "v": "2.05.00",
+          "note": "Fewer hostile creatures on the ocean floor and more Ambergris nodes on the Seafloor Plain.",
+          "by": "vulkk"
+        }
+      ]
+    },
+    "kind": "DLC material",
+    "region": "The Great Ocean",
+    "area": "Seabed Plain, south of Delesyia",
+    "location": "The Seabed Plain south of Delesyia; Bergen Island's dispatch.",
+    "requires": [
+      "Charting the Unknown: a ship, and a diving suit for the seabed"
+    ],
+    "routes": [
+      {
+        "steps": [
+          "Hug the seabed south of Delesyia by the monster bones and fish skeletons; the nodes glow orange and a minimap alert shows when you're close.",
+          "Pioneer Bergen Island and run its mission dispatch: a chance at Ambergris each run.",
+          "Sink medium and large pirate ships and open the small square crates they drop (not the barrels); chests in sunken ships."
+        ]
+      }
+    ],
+    "notes": [],
+    "variants": [],
+    "since": "Charting the Unknown",
+    "media": {
+      "portrait": {
+        "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Crimson-Desert-Assault-Ship-of-the-East-Cover.jpg",
+        "credit": "keengamer",
+        "clip": [
+          0,
+          0,
+          1,
+          0.8
+        ],
+        "crop": [
+          0.47,
+          0.6,
+          0.8
+        ],
+        "src": "media/naval/ambergris/portrait.webp",
+        "w": 480,
+        "h": 480
+      },
+      "captures": [
+        {
+          "kind": "menu",
+          "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Constructing-the-Mysterious-Ship.jpg",
+          "credit": "keengamer",
+          "caption": "No guide has published a picture of a node: the Assault Ship's build menu lists Ambergris",
+          "src": "media/naval/ambergris/menu-1.webp",
+          "w": 1236,
+          "h": 649
+        }
+      ],
+      "gallery": []
+    }
+  },
+  {
+    "id": "camp-funds",
+    "name": "Camp Funds",
+    "leaf": "building",
+    "cls": "stock",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Every ship's price",
+    "summary": "Every ship is paid in Camp Funds, and since patch 2.01 one donated Silver buys 1,000. That puts the Large Greymane's 500,000 at one Gold Bar exchanged at a bank, and a legendary's 750,000 at one and a half. Convert Silver as you need it rather than grinding missions.",
+    "tiers": {
+      "speed": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "strength": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "return": {
+        "tier": 1,
+        "basis": "Every ship waits on it."
+      },
+      "effort": {
+        "tier": 2,
+        "basis": "Donated Silver; a Gold Bar is 500,000."
+      }
+    },
+    "tags": [
+      "dlc",
+      "camp"
+    ],
+    "sources": [
+      {
+        "by": "keengamer",
+        "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+        "title": "DLC Shipbuilding Guide: All Ships and Upgrades — KeenGamer"
+      }
+    ],
+    "ledger": {
+      "methods": [
+        {
+          "title": "Donate Silver to Carl",
+          "how": "Donate Silver at the camp: 1 Silver is 1,000 Camp Funds since 2.01.",
+          "rate": "best",
+          "by": "gamingbolt",
+          "yield": "1,000 a Silver"
+        },
+        {
+          "title": "Gold Bars at a bank",
+          "how": "Exchange a Gold Bar at a bank and donate the Silver: 500,000 Camp Funds.",
+          "rate": "best",
+          "by": "gamingbolt",
+          "yield": "500,000 a bar"
+        },
+        {
+          "title": "Money dispatches",
+          "how": "Excavation and exploration missions pay Camp Funds while you sail.",
+          "rate": "good",
+          "by": "thegameswiki"
+        }
+      ]
+    },
+    "base": "riches/camp-donations"
+  },
+  {
+    "id": "camp-stock",
+    "name": "Camp Stock",
+    "leaf": "building",
+    "cls": "stock",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Stone, Timber and Provisions",
+    "summary": "Builds draw Stone, Timber and Provisions from the camp's stockpile, not your bag: 600 of each for the first ship, 45,000 Stone and Timber and 90,000 Provisions for a legendary. Supply dispatches refill all three while you're at sea; donations top them up.",
+    "tiers": {
+      "speed": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "strength": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "return": {
+        "tier": 1,
+        "basis": "Every built ship waits on it."
+      },
+      "effort": {
+        "tier": 2,
+        "basis": "Supply dispatches and donations."
+      }
+    },
+    "tags": [
+      "dlc",
+      "camp"
+    ],
+    "sources": [
+      {
+        "by": "keengamer",
+        "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+        "title": "DLC Shipbuilding Guide: All Ships and Upgrades — KeenGamer"
+      }
+    ],
+    "ledger": {
+      "methods": [
+        {
+          "title": "Supply dispatches",
+          "how": "Keep quarries, logging camps, farms and fishing docks on repeat.",
+          "rate": "best",
+          "by": "thegameswiki"
+        },
+        {
+          "title": "Donate to Carl",
+          "how": "Donate ore, timber and food; each becomes camp stock.",
+          "rate": "good",
+          "by": "keengamer"
+        }
+      ]
+    },
+    "base": "materials/camp-provisions"
+  },
+  {
+    "id": "comrades",
+    "name": "Comrades",
+    "leaf": "building",
+    "cls": "stock",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Who builds the ship",
+    "summary": "A build is a dispatch: it ties up comrades until it finishes. The first ship takes 5 with one Engineering skill among them, the Large Greymane 20, a legendary 10. Grey-0 workers fill the ordinary places so your named Greymanes stay free for other missions.",
+    "tiers": {
+      "speed": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "strength": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "return": {
+        "tier": 1,
+        "basis": "Every built ship waits on them."
+      },
+      "effort": {
+        "tier": 2,
+        "basis": "Recruit and keep enough idle comrades."
+      }
+    },
+    "tags": [
+      "dlc",
+      "camp"
+    ],
+    "sources": [
+      {
+        "by": "whisperofthehouse",
+        "url": "https://www.whisperofthehouse.com/crimson-desert/ships",
+        "title": "How Do You Get, Build, and Upgrade Ships — Whisper of the House"
+      }
+    ],
+    "ledger": {
+      "methods": [
+        {
+          "title": "Free up comrades",
+          "how": "Pull comrades off low-value dispatches before you start a build.",
+          "rate": "best",
+          "by": "whisperofthehouse"
+        },
+        {
+          "title": "Grey-0 workers",
+          "how": "Build Grey-0 mecha workers to take the ordinary places.",
+          "rate": "good",
+          "by": "thegameswiki"
+        }
+      ]
+    },
+    "base": "riches/grey-0-workers"
+  },
+  {
+    "id": "outfitter-parts",
+    "name": "Outfitter Parts",
+    "leaf": "building",
+    "cls": "fitting",
+    "domains": [
+      "sea"
+    ],
+    "trait": "+2 Speed for under 300 Silver",
+    "summary": "The quickest speed gain in the game is a sail. The Delesyian, Tidesworn and Demenissian Sails each add 2 Speed and 100 Health for 110 to 275 Silver by hull size; fit one at a Ship Manager the day you get a new hull.",
+    "tiers": {
+      "speed": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "strength": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "return": {
+        "tier": 2,
+        "basis": "Speed for every hull you own."
+      },
+      "effort": {
+        "tier": 1,
+        "basis": "A shop stop."
+      }
+    },
+    "tags": [
+      "dlc",
+      "speed"
+    ],
+    "sources": [
+      {
+        "by": "keengamer",
+        "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+        "title": "DLC Shipbuilding Guide: All Ships and Upgrades — KeenGamer"
+      }
+    ],
+    "ledger": {
+      "methods": [
+        {
+          "title": "Joaquin, Port Delesyia",
+          "how": "Delesyian or Tidesworn Sail: +2 Speed, +100 Health. Small 110, medium 220, large 275 Silver.",
+          "rate": "best",
+          "by": "gamingdeputy"
+        },
+        {
+          "title": "Juan, Port Demeniss",
+          "how": "Demenissian Sail: the same +2 Speed. The Tideblessed Sail gives only +1.",
+          "rate": "good",
+          "by": "gamingdeputy"
+        }
+      ]
+    },
+    "base": "materials/ship-fittings"
+  },
+  {
+    "id": "hidden-blueprints",
+    "name": "Hidden Ship Blueprints",
+    "leaf": "eggs",
+    "cls": "fitting",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Sails and sterns no shop sells",
+    "summary": "The best parts are found, not bought. The Giant Golden Compass Sail's manual sits behind a waterfall at Castaway's Shelter on Ocula Island; the Steam and Clockwork Stern and Figurehead share a chest in sunken ruins west of Iliya Island. Craft them at a Workstation, then fit them at a Ship Manager.",
+    "tiers": {
+      "speed": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "strength": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "return": {
+        "tier": 2,
+        "basis": "The fastest fittings for medium, large and giant hulls."
+      },
+      "effort": {
+        "tier": 3,
+        "basis": "Two hidden chests, then a Workstation bill."
+      }
+    },
+    "tags": [
+      "dlc",
+      "speed"
+    ],
+    "sources": [
+      {
+        "by": "keengamer",
+        "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+        "title": "DLC Shipbuilding Guide: All Ships and Upgrades — KeenGamer"
+      }
+    ],
+    "ledger": {
+      "methods": [
+        {
+          "title": "Castaway's Shelter, Ocula Island",
+          "how": "The Giant Golden Compass Sail manual: a chest behind the waterfall.",
+          "rate": "best",
+          "by": "finalboss"
+        },
+        {
+          "title": "Sunken ruins west of Iliya",
+          "how": "The Steam and Clockwork Stern and Figurehead blueprints share one chest.",
+          "rate": "best",
+          "by": "finalboss"
+        }
+      ]
+    },
+    "base": "materials/sea-blueprints",
+    "egg": "A sail manual behind a waterfall, and stern plans in a drowned ruin."
+  },
+  {
+    "id": "build-dont-buy",
+    "name": "Build, Don't Buy",
+    "leaf": "economy",
+    "cls": "venture",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Saves 5.5 million and two speed steps",
+    "summary": "Every Greymane build is faster and cheaper than the hull a Ship Manager sells at its size. The Medium Greymane costs 100,000 against 1,200,000 and the Large 500,000 against 6,000,000, and both are two Movement steps quicker. Buy a large hull only for its 36-slot hold.",
+    "tiers": {
+      "speed": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "strength": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "return": {
+        "tier": 1,
+        "basis": "Saves 5,630,000 Camp Funds across the three sizes."
+      },
+      "effort": {
+        "tier": 2,
+        "basis": "The Greymane builds' ocean materials."
+      }
+    },
+    "tags": [
+      "dlc",
+      "build"
+    ],
+    "sources": [
+      {
+        "by": "game8",
+        "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+        "title": "How to Get Ships — Game8"
+      },
+      {
+        "by": "playnews",
+        "url": "https://www.playnews.gg/en/guides/crimson-desert-ships-how-to-unlock-and-buy-them-in-charting-the-unknown",
+        "title": "Ships: How to Unlock and Buy Them"
+      },
+      {
+        "by": "whisperofthehouse",
+        "url": "https://www.whisperofthehouse.com/crimson-desert/ships",
+        "title": "How Do You Get, Build, and Upgrade Ships — Whisper of the House"
+      },
+      {
+        "by": "keengamer",
+        "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+        "title": "DLC Shipbuilding Guide: All Ships and Upgrades — KeenGamer"
+      }
+    ],
+    "ledger": {
+      "methods": [
+        {
+          "title": "Small: build it on the quest",
+          "how": "The quest ship moves at 3; every bought small moves at 1.",
+          "rate": "best",
+          "by": "game8"
+        },
+        {
+          "title": "Medium: dive for Malachite",
+          "how": "50 Malachite and 100 Shiny Ore turn 1,200,000 into 100,000.",
+          "rate": "best",
+          "by": "game8"
+        },
+        {
+          "title": "Large: one Gold Bar",
+          "how": "500,000 Camp Funds and four ocean materials for Movement 5.",
+          "rate": "best",
+          "by": "game8"
+        }
+      ],
+      "figures": [
+        {
+          "label": "Small",
+          "value": "30,000 saved",
+          "basis": "sum",
+          "by": "playnews"
+        },
+        {
+          "label": "Medium",
+          "value": "1,100,000 saved",
+          "basis": "sum",
+          "by": "game8"
+        },
+        {
+          "label": "Large",
+          "value": "5,500,000 saved",
+          "basis": "sum",
+          "by": "game8"
+        },
+        {
+          "label": "Speed",
+          "value": "Move 3 · 4 · 5 vs 1–2",
+          "basis": "guide",
+          "by": "game8"
+        }
+      ],
+      "watch": [
+        "Game8 publishes no hold for the Large Greymane; the bought large hulls carry 36 slots."
+      ]
+    },
+    "kind": "Fleet venture",
+    "region": "The Great Ocean",
+    "area": "Every port's Missions tab",
+    "location": "A port's Missions tab: Shipbuilding and Large Shipbuilding.",
+    "requires": [
+      "Charting the Unknown: a ship"
+    ],
+    "routes": [
+      {
+        "steps": [
+          "The quest ship moves at 3; every bought small moves at 1.",
+          "50 Malachite and 100 Shiny Ore turn 1,200,000 into 100,000.",
+          "500,000 Camp Funds and four ocean materials for Movement 5."
+        ]
+      }
+    ],
+    "notes": [],
+    "variants": [],
+    "since": "Charting the Unknown",
+    "media": {
+      "portrait": {
+        "from": "https://img.game8.co/2cth3jce0h5413636xe24eh8wrof",
+        "credit": "game8",
+        "crop": [
+          0.8,
+          0.45,
+          0.8
+        ],
+        "src": "media/naval/build-dont-buy/portrait.webp",
+        "w": 480,
+        "h": 480
+      },
+      "captures": [
+        {
+          "kind": "menu",
+          "from": "https://www.whisperofthehouse.com/images/crimson-desert/crimson-desert-shipbuilding-port-missions.webp",
+          "credit": "whisperofthehouse",
+          "caption": "Shipbuilding: select a port, open Details, then its Missions",
+          "src": "media/naval/build-dont-buy/menu-1.webp",
+          "w": 1100,
+          "h": 790
+        },
+        {
+          "kind": "menu",
+          "from": "https://www.whisperofthehouse.com/images/crimson-desert/crimson-desert-shipbuilding-engineering-requirement.webp",
+          "credit": "whisperofthehouse",
+          "caption": "The first build needs a comrade with Engineering",
+          "src": "media/naval/build-dont-buy/menu-2.webp",
+          "w": 1600,
+          "h": 605
+        },
+        {
+          "kind": "menu",
+          "from": "https://img.game8.co/2cth3jce0h5413636xe24eh8wrof",
+          "credit": "game8",
+          "caption": "Vellua — the Shipbuilding mission",
+          "src": "media/naval/build-dont-buy/menu-3.webp",
+          "w": 728,
+          "h": 410
+        }
+      ],
+      "gallery": []
+    }
+  },
+  {
+    "id": "island-pioneering",
+    "name": "Island Pioneering",
+    "leaf": "economy",
+    "cls": "venture",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Opens the dispatches that farm for you",
+    "summary": "Pioneering an island is a dispatch from its anchorage, and it opens the island's own missions. Three matter to a fleet: Auronui for the Ship Teleportation Device blueprint, Iliya for Natural Pearls, Bergen for Ambergris. Do them in that order, as soon as you can sail.",
+    "tiers": {
+      "speed": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "strength": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "return": {
+        "tier": 1,
+        "basis": "Turns three islands into passive material income."
+      },
+      "effort": {
+        "tier": 2,
+        "basis": "Comrades and in-game hours."
+      }
+    },
+    "tags": [
+      "dlc"
+    ],
+    "sources": [
+      {
+        "by": "finalboss",
+        "url": "https://finalboss.io/crimson-desert-how-to-get-the-drunken-catfish-legendary-galleon",
+        "title": "How to Get the Drunken Catfish Legendary Galleon — FinalBoss"
+      },
+      {
+        "by": "vulkk",
+        "url": "https://vulkk.com/database/crimson-desert/items/ambergris/",
+        "title": "Ambergris — Vulkk"
+      },
+      {
+        "by": "vulkk",
+        "url": "https://vulkk.com/database/crimson-desert/items/natural-pearl/",
+        "title": "Natural Pearl — Vulkk"
+      }
+    ],
+    "ledger": {
+      "methods": [
+        {
+          "title": "Auronui first",
+          "how": "Three comrades, 12 hours; its buried treasure is the Ship Teleportation Device blueprint.",
+          "rate": "best",
+          "by": "whisperofthehouse"
+        },
+        {
+          "title": "Iliya next",
+          "how": "FinalBoss: four comrades, 18 hours. It opens the Ruins Excavation dispatch, the pearl farm.",
+          "rate": "best",
+          "by": "finalboss"
+        },
+        {
+          "title": "Bergen",
+          "how": "Opens a dispatch with a chance at Ambergris.",
+          "rate": "good",
+          "by": "vulkk"
+        }
+      ],
+      "tips": [
+        {
+          "text": "Pass time at a campfire to finish a pioneering dispatch sooner.",
+          "by": "thegameswiki"
+        }
+      ]
+    },
+    "base": "riches/island-pioneering"
+  },
+  {
+    "id": "island-dispatches",
+    "name": "Island Dispatches",
+    "leaf": "economy",
+    "cls": "venture",
+    "domains": [
+      "sea"
+    ],
+    "trait": "Pearls and Ambergris while you sail",
+    "summary": "A pioneered island gives its own dispatches, and two of them farm what legendary ships need. Iliya's Ruins Excavation pays Natural Pearls and Bergen's mission pays Ambergris, neither on every run. Deckhands work the island development missions. Keep both running from the day you pioneer them.",
+    "tiers": {
+      "speed": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "strength": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "return": {
+        "tier": 2,
+        "basis": "Pearls and Ambergris without a dive."
+      },
+      "effort": {
+        "tier": 2,
+        "basis": "Free comrades and repeat sends."
+      }
+    },
+    "tags": [
+      "dlc",
+      "passive"
+    ],
+    "sources": [
+      {
+        "by": "finalboss",
+        "url": "https://finalboss.io/crimson-desert-how-to-get-the-drunken-catfish-legendary-galleon",
+        "title": "How to Get the Drunken Catfish Legendary Galleon — FinalBoss"
+      },
+      {
+        "by": "gamingdeputy",
+        "url": "https://www.gamingdeputy.com/france/crimson-desert-perles-naturelles/",
+        "title": "Comment obtenir des perles naturelles — Gaming Deputy (FR)"
+      },
+      {
+        "by": "vulkk",
+        "url": "https://vulkk.com/database/crimson-desert/items/natural-pearl/",
+        "title": "Natural Pearl — Vulkk"
+      },
+      {
+        "by": "vulkk",
+        "url": "https://vulkk.com/database/crimson-desert/items/ambergris/",
+        "title": "Ambergris — Vulkk"
+      },
+      {
+        "by": "playnews",
+        "url": "https://www.playnews.gg/en/guides/crimson-desert-ships-how-to-unlock-and-buy-them-in-charting-the-unknown",
+        "title": "Ships: How to Unlock and Buy Them"
+      },
+      {
+        "by": "xboxplay",
+        "url": "https://xboxplay.games/crimson-desert/-how-to-get-a-ship-in-crimson-desert--77075",
+        "title": "How To Get A Ship in Crimson Desert — xboxplay"
+      }
+    ],
+    "ledger": {
+      "methods": [
+        {
+          "title": "Iliya: Ruins Excavation",
+          "how": "Natural Pearls: about 1 run in 5 (FinalBoss), or a set number every 10 in-game hours (Gaming Deputy).",
+          "rate": "best",
+          "by": "finalboss"
+        },
+        {
+          "title": "Bergen Island",
+          "how": "A chance at Ambergris each run.",
+          "rate": "good",
+          "by": "vulkk"
+        },
+        {
+          "title": "Deckhands",
+          "how": "Deckhands run island development and sea expedition missions.",
+          "rate": "good",
+          "by": "playnews"
+        }
+      ],
+      "watch": [
+        "No source measures the pearl rate; plan on a handful a week of in-game time, not a stack."
+      ]
+    },
+    "kind": "Fleet venture",
+    "region": "The Great Ocean",
+    "area": "Iliya and Bergen islands",
+    "location": "Iliya Island and Bergen Island anchorages, South Sea.",
+    "requires": [
+      "Charting the Unknown: a ship"
+    ],
+    "routes": [
+      {
+        "steps": [
+          "Natural Pearls: about 1 run in 5 (FinalBoss), or a set number every 10 in-game hours (Gaming Deputy).",
+          "A chance at Ambergris each run.",
+          "Deckhands run island development and sea expedition missions."
+        ]
+      }
+    ],
+    "notes": [],
+    "variants": [],
+    "since": "Charting the Unknown",
+    "media": {
+      "portrait": {
+        "from": "https://img.game8.co/66gvizzzm7hmru6std8z5q48jwpl",
+        "credit": "game8",
+        "crop": [
+          0.3,
+          0.5,
+          0.95
+        ],
+        "src": "media/naval/island-dispatches/portrait.webp",
+        "w": 480,
+        "h": 480
+      },
+      "captures": [
+        {
+          "kind": "menu",
+          "from": "https://img.game8.co/66gvizzzm7hmru6std8z5q48jwpl",
+          "credit": "game8",
+          "caption": "Iliya Island — the Ruins Excavation dispatch",
+          "src": "media/naval/island-dispatches/menu-1.webp",
+          "w": 728,
+          "h": 410
+        }
+      ],
+      "gallery": []
+    }
+  },
+  {
+    "id": "crew-roles",
+    "name": "Crew Roles",
+    "leaf": "economy",
+    "cls": "venture",
+    "domains": [
+      "sea"
+    ],
+    "trait": "The jobs that sail without you",
+    "summary": "A crew works the ship while you don't: First Mate, Rigger and Lookout are needed to leave port, Gunners fire, Carpenters repair, Deckhands fish at anchor and run island missions. Roles change only in port, so set them before every voyage.",
+    "tiers": {
+      "speed": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "strength": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "return": {
+        "tier": 2,
+        "basis": "Repairs, fire and fishing without you at the wheel."
+      },
+      "effort": {
+        "tier": 1,
+        "basis": "Assign at a Ship Manager."
+      }
+    },
+    "tags": [
+      "dlc"
+    ],
+    "sources": [
+      {
+        "by": "keengamer",
+        "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+        "title": "DLC Shipbuilding Guide: All Ships and Upgrades — KeenGamer"
+      },
+      {
+        "by": "playnews",
+        "url": "https://www.playnews.gg/en/guides/crimson-desert-ships-how-to-unlock-and-buy-them-in-charting-the-unknown",
+        "title": "Ships: How to Unlock and Buy Them"
+      },
+      {
+        "by": "gamingdeputy",
+        "url": "https://www.gamingdeputy.com/france/crimson-desert-navires-equipage/",
+        "title": "Guide des navires et de l'équipage — Gaming Deputy (FR)"
+      },
+      {
+        "by": "gamesgg",
+        "url": "https://games.gg/crimson-desert/guides/crimson-desert-ships-guide/",
+        "title": "Ships Guide"
+      }
+    ],
+    "ledger": {
+      "methods": [
+        {
+          "title": "Before a fight",
+          "how": "Fill every Gunner and Carpenter slot; the First Mate takes the helm if you leave it.",
+          "rate": "best",
+          "by": "keengamer"
+        },
+        {
+          "title": "Before a haul or a long sail",
+          "how": "A Lookout marks reefs and fish shoals; a Rigger works the sails.",
+          "rate": "good",
+          "by": "playnews"
+        },
+        {
+          "title": "At anchor",
+          "how": "Deckhands fish for food and run island development missions.",
+          "rate": "good",
+          "by": "playnews"
+        }
+      ],
+      "roles": [
+        {
+          "role": "First Mate",
+          "does": "Takes the helm when you leave it in combat.",
+          "by": "keengamer"
+        },
+        {
+          "role": "Rigger",
+          "does": "Works the sails when you change speed.",
+          "by": "keengamer"
+        },
+        {
+          "role": "Lookout",
+          "does": "Marks nearby reefs and fish shoals on the map.",
+          "by": "playnews"
+        },
+        {
+          "role": "Carpenter",
+          "does": "Repairs the ship; more carpenters, faster repairs.",
+          "by": "playnews"
+        },
+        {
+          "role": "Gunner",
+          "does": "Fires the cannons; each gunner fires more of them.",
+          "by": "playnews"
+        },
+        {
+          "role": "Deckhand",
+          "does": "Fishes at anchor; runs island and expedition missions.",
+          "by": "playnews"
+        }
+      ],
+      "watch": [
+        "The crew changes only in port (Games.gg)."
+      ]
+    },
+    "base": "riches/ship-crew"
+  },
+  {
+    "id": "sea-hauling",
+    "name": "Sea Hauling",
+    "leaf": "economy",
+    "cls": "venture",
+    "domains": [
+      "sea"
+    ],
+    "trait": "36 slots of trade goods a voyage",
+    "summary": "A ship's hold carries trade goods and nothing else: 6 slots on a rowboat up to 36 on a bought large hull. The DLC added sea trade goods for maritime routes, but no guide has published a route's profit yet. Haul only with a large hull, and treat the voyage as a bonus on a trip you were making anyway.",
+    "tiers": {
+      "speed": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "strength": {
+        "tier": null,
+        "basis": "Not a ship."
+      },
+      "return": {
+        "tier": null,
+        "basis": "No source publishes a sea route's profit."
+      },
+      "effort": {
+        "tier": 3,
+        "basis": "A 6,000,000 hull for the big hold."
+      }
+    },
+    "tags": [
+      "dlc",
+      "haul"
+    ],
+    "sources": [
+      {
+        "by": "thegameswiki",
+        "url": "https://thegameswiki.com/crimson-desert/wiki/ships",
+        "title": "Ships"
+      },
+      {
+        "by": "playnews",
+        "url": "https://www.playnews.gg/en/guides/crimson-desert-ships-how-to-unlock-and-buy-them-in-charting-the-unknown",
+        "title": "Ships: How to Unlock and Buy Them"
+      }
+    ],
+    "ledger": {
+      "methods": [
+        {
+          "title": "Use a large hull",
+          "how": "The Large Hernandian, Delesyian and Demenissian ships carry 36 slots; the Medium Greymane 22.",
+          "rate": "best",
+          "by": "playnews"
+        },
+        {
+          "title": "Pack goods at the camp",
+          "how": "Carl packs trade goods; a slot stacks 10 or 100 packed goods by price.",
+          "rate": "good",
+          "by": "keengamer"
+        }
+      ],
+      "watch": [
+        "The Games Wiki: the expansion added trade goods for sea routes. Prices and routes are unpublished."
+      ]
+    },
+    "base": "materials/ship-holds"
+  }
+]

@@ -194,6 +194,8 @@ export function lint() {
       for (const k of mx.marks) { text(`matrix mark ${k.id}`, k.label, 'label'); text(`matrix mark ${k.id}`, k.text, 'text'); }
       const colIds = new Set(mx.cols.map((c) => c.id));
       for (const c of mx.cols) if (c.entry && !entries.some((o) => o.id === c.entry)) bad(`matrix/${c.id}`, `column names unknown entry "${c.entry}"`);
+      if (mx.find) { text('matrix find', mx.find.placeholder, 'placeholder'); text('matrix find', mx.find.miss, 'miss'); }
+      if (mx.blank !== undefined) text('matrix', mx.blank, 'blank');
       const rowIds = new Set();
       for (const sh of mx.sheets) {
         text(`matrix/${sh.id}`, sh.blurb, 'sheet blurb');
@@ -214,10 +216,13 @@ export function lint() {
             if (seen.has(it)) bad(where, `item "${it}" listed twice`);
             seen.add(it);
           }
+          if (r.entry !== undefined && !entries.some((o) => o.id === r.entry)) bad(where, `row names unknown entry "${r.entry}"`);
           for (const [c, cell] of Object.entries(r.cells)) {
             if (typeof cell === 'string') continue;
             if (cell.by !== undefined && !credits.publishers[cell.by]) bad(`${where}/${c}`, `publisher "${cell.by}" is not in src/core/credits.json`);
             if (cell.note !== undefined) text(`${where}/${c}`, cell.note, 'cell note');
+            if (cell.v !== undefined) text(`${where}/${c}`, cell.v, 'cell value');
+            if (cell.n !== undefined && !Number.isFinite(cell.n)) bad(`${where}/${c}`, `cell number ${cell.n} is not a number`);
           }
         }
       }

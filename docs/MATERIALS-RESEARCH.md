@@ -83,8 +83,8 @@ Names and stack sizes from the Gamer Guides database (ingredients, ores, alchemy
 | Bluewake Sail blueprint: treasure chest in a cave deep in the Great Coral Reef, beside rich Shiny Ore deposits | guide · Vulkk |
 | Steam and Clockwork Stern and Figurehead blueprints: one chest in the Forgotten Ocean Ruins, about 400 m west of Iliya Island's westernmost landmass; reach the upper chamber through the temple ceiling | guide · FinalBoss |
 | Large Long-Horned Fish Stern: 50 Relics from Rafi, the Relic Exchange vendor at Delesyia's port, at Trust 100; large hulls only | guide · FinalBoss |
-| Large stern recipes (Steam and Clockwork / Fish): Natural Pearl 1/1, Amberress 3/2, Hydrothermal Mineral Deposit 6/4, Flawless Timber 150/100, Abyss Cells 5/5; crafted at a Workstation, fitted by a Ship Manager | guide · FinalBoss |
-| Material sources: Natural Pearl from the Iliya Ruins Excavation dispatch (about 20%); Amberress and money bags from square floating salvage crates; Hydrothermal Mineral Deposits from vent walls; Abyss Cells from crab-like Abyss creatures around Drakeful Castle; Relics from giant hydrothermal salamanders (1–3 each) | guide · FinalBoss |
+| Large stern recipes (Steam and Clockwork / Fish): Natural Pearl 1/1, Ambergris 3/2, Hydrothermal Mineral Deposit 6/4, Flawless Timber 150/100, Abyss Cells 5/5; crafted at a Workstation, fitted by a Ship Manager | guide · FinalBoss |
+| Material sources: Natural Pearl from the Iliya Ruins Excavation dispatch (about 20%); Ambergris and money bags from square floating salvage crates; Hydrothermal Mineral Deposits from vent walls; Abyss Cells from crab-like Abyss creatures around Drakeful Castle; Relics from giant hydrothermal salamanders (1–3 each) | guide · FinalBoss |
 | Shiny Ore: pale blue nodes all over the ocean floor and in drifting boxes; 20–100 per item | guide · Vulkk |
 | Manganese: chests in small sunken ships, found with the ship's Underwater Detection | guide · Vulkk |
 | Ship Teleportation Device: blueprint buried on Auronui; 15 Shiny Ore, 5 Azurite, 10 Iron Ore at the camp furniture workbench | guide · KeenGamer (QOL plate) |

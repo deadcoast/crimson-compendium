@@ -1333,7 +1333,7 @@
   ],
   "base": "riches/small-greymane-ship",
   "trait": "Fill Carl's stock before the ship dispatch",
-  "summary": "Small Shipbuilding is a dispatch, and its materials come out of Camp Provisions, not your bag: 600 Stone, 600 Wood and 1,200 Food, plus 10,000 Camp Funds. It also wants five free comrades, one of them an engineer, and 12 in-game hours. Donate ore, timber and food to Carl before you start.",
+  "summary": "Small Shipbuilding is a dispatch, and its materials come out of Camp Provisions, not your bag: 600 Stone, 600 Wood and 1,200 Food, plus 10,000 Camp Funds. It also wants five free comrades, one of them an engineer, and 12 in-game hours. The Medium and Large builds take far more stock and add ocean materials. Donate ore, timber and food to Carl before you start.",
   "tiers": {
    "capacity": {
     "tier": null,
@@ -1352,7 +1352,9 @@
    "dlc"
   ],
   "also": [
-   "mounts/small-greymane-ship"
+   "mounts/small-greymane-ship",
+   "naval/medium-greymane-ship",
+   "naval/large-greymane-ship"
   ],
   "manifest": {
    "bill": [
@@ -1410,8 +1412,95 @@
        "from": "In-game hours; sleeping skips them",
        "by": "whisperofthehouse"
       }
+     ]
+    },
+    {
+     "title": "Medium and Large Shipbuilding, any port",
+     "cols": [
+      "Medium",
+      "Large"
      ],
-     "note": "Medium and Large builds at Delesyia need more, and no source lists how much."
+     "by": "game8",
+     "rows": [
+      {
+       "item": "Stone",
+       "cells": [
+        "2,400",
+        "12,000"
+       ],
+       "entry": "camp-provisions"
+      },
+      {
+       "item": "Wood",
+       "cells": [
+        "2,400",
+        "12,000"
+       ],
+       "entry": "camp-provisions"
+      },
+      {
+       "item": "Food",
+       "cells": [
+        "5,000",
+        "25,000"
+       ],
+       "entry": "camp-provisions"
+      },
+      {
+       "item": "Camp Funds",
+       "cells": [
+        "100,000",
+        "500,000"
+       ]
+      },
+      {
+       "item": "Comrades",
+       "cells": [
+        "7",
+        "20"
+       ]
+      },
+      {
+       "item": "Shiny Ore",
+       "cells": [
+        "100",
+        "100"
+       ],
+       "entry": "ocean-materials"
+      },
+      {
+       "item": "Malachite",
+       "cells": [
+        "50",
+        "50"
+       ],
+       "entry": "ocean-materials"
+      },
+      {
+       "item": "Hydrothermal Mineral Deposit",
+       "cells": [
+        "—",
+        "45"
+       ],
+       "entry": "ocean-materials"
+      },
+      {
+       "item": "Manganese",
+       "cells": [
+        "—",
+        "20"
+       ],
+       "entry": "ocean-materials"
+      },
+      {
+       "item": "Time",
+       "cells": [
+        "1 d 12 h",
+        "2 d 10 h"
+       ]
+      }
+     ],
+     "note": "The Naval Ships tree ticks these off per ship and ranks where to farm each material."
     }
    ],
    "figures": [
@@ -1784,7 +1873,7 @@
        "entry": "ocean-materials"
       },
       {
-       "item": "Amberress",
+       "item": "Ambergris",
        "cells": [
         "3",
         "2"
@@ -1962,7 +2051,7 @@
   "region": "The Great Ocean",
   "area": "Vents, reefs, wrecks and salvage",
   "trait": "Where the sea's materials come from",
-  "summary": "Charting the Unknown's parts run on materials found only at sea. Shiny Ore glows pale blue on the ocean floor and fills drifting boxes. Hydrothermal Mineral Deposits line the vent walls, and square salvage crates drop Amberress and money bags. Natural Pearls come from the Iliya Ruins Excavation dispatch, Manganese from chests in sunken ships.",
+  "summary": "Charting the Unknown's parts run on materials found only at sea. Shiny Ore glows pale blue on the ocean floor and fills drifting boxes. Hydrothermal Mineral Deposits line the vent walls, and square salvage crates drop Ambergris and money bags. Natural Pearls come from the Iliya Ruins Excavation dispatch, Manganese from chests in sunken ships.",
   "tiers": {
    "capacity": {
     "tier": null,
@@ -2027,7 +2116,7 @@
        "by": "finalboss"
       },
       {
-       "item": "Amberress",
+       "item": "Ambergris",
        "cells": [
         "Small square salvage crates (not the round barrels); sunk pirate ships; the seabed by the whale bones at Rocky Reef",
         "Sterns"
@@ -2075,12 +2164,20 @@
        "by": "finalboss"
       },
       {
-       "item": "Sea Fan Coral · Malachite",
+       "item": "Sea Fan Coral",
        "cells": [
-        "Named in KeenGamer's Flagship of the East guide; no location given",
+        "The floor of the coral reef north-east of Delesyia; the Great Coral Reef",
         "The Flagship of the East"
        ],
-       "by": "keengamer"
+       "by": "vulkk"
+      },
+      {
+       "item": "Malachite",
+       "cells": [
+        "The Great Ocean Scar cave, about 320 m down the Trench east of Delesyia; floating chests",
+        "The Medium and Large Greymanes; the Flagship of the East"
+       ],
+       "by": "gamingdeputy"
       }
      ]
     }
@@ -2149,6 +2246,16 @@
    "gallery": []
   },
   "sources": [
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/items/sea-fan-coral/",
+    "title": "Sea Fan Coral — Vulkk"
+   },
+   {
+    "by": "gamingdeputy",
+    "url": "https://www.gamingdeputy.com/france/crimson-desert-malachite-ou-trouver/",
+    "title": "Comment obtenir la malachite — Gaming Deputy (FR)"
+   },
    {
     "by": "finalboss",
     "url": "https://finalboss.io/crimson-desert-how-to-get-ship-rocket-boosters-stern-upgrades",

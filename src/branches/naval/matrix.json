@@ -1,0 +1,1634 @@
+{
+  "id": "slipway",
+  "title": "The Slipway",
+  "blurb": "Every ship against everything it takes, and every ship against every stat. Sort a column to find the fastest, the toughest or the cheapest; search a material to see which ships wait on it and how many you need in all.",
+  "find": {
+    "placeholder": "Find a ship or a material — “pearl”, “greymane”, “malachite”",
+    "miss": "Nothing named “{q}”. Try a material, “pearl”, or a ship, “large”.",
+    "cols": true
+  },
+  "blank": "Not needed.",
+  "marks": [
+    {
+      "id": "need",
+      "label": "Build needs",
+      "text": "The build takes this many. Tick them off on the ship's plate."
+    },
+    {
+      "id": "buy",
+      "label": "Price",
+      "text": "Paid in Camp Funds at a Ship Manager; ready at once."
+    },
+    {
+      "id": "stat",
+      "label": "Stat",
+      "text": "Game8's published figure."
+    },
+    {
+      "id": "unk",
+      "label": "Unpublished",
+      "text": "No source publishes it."
+    }
+  ],
+  "cols": [
+    {
+      "id": "cf",
+      "label": "Camp Funds",
+      "short": "Funds",
+      "entry": "camp-funds",
+      "sum": true
+    },
+    {
+      "id": "stone",
+      "label": "Stone",
+      "entry": "camp-stock",
+      "sum": true
+    },
+    {
+      "id": "timber",
+      "label": "Timber",
+      "entry": "camp-stock",
+      "sum": true
+    },
+    {
+      "id": "food",
+      "label": "Provisions",
+      "entry": "camp-stock",
+      "sum": true
+    },
+    {
+      "id": "crew",
+      "label": "Comrades",
+      "entry": "comrades",
+      "sum": true
+    },
+    {
+      "id": "shiny",
+      "label": "Shiny Ore",
+      "entry": "shiny-ore",
+      "sum": true
+    },
+    {
+      "id": "malachite",
+      "label": "Malachite",
+      "entry": "malachite",
+      "sum": true
+    },
+    {
+      "id": "hydro",
+      "label": "Hydrothermal Mineral Deposit",
+      "short": "Hydro­thermal",
+      "entry": "hydrothermal-mineral-deposit",
+      "sum": true
+    },
+    {
+      "id": "manganese",
+      "label": "Manganese",
+      "short": "Manga­nese",
+      "entry": "manganese",
+      "sum": true
+    },
+    {
+      "id": "pearl",
+      "label": "Natural Pearl",
+      "short": "Pearl",
+      "entry": "natural-pearl",
+      "sum": true
+    },
+    {
+      "id": "seafan",
+      "label": "Sea Fan Coral",
+      "short": "Sea Fan",
+      "entry": "sea-fan-coral",
+      "sum": true
+    },
+    {
+      "id": "golden",
+      "label": "Golden Coral",
+      "short": "Golden Coral",
+      "entry": "golden-coral",
+      "sum": true
+    },
+    {
+      "id": "jelly",
+      "label": "Giant Jellyfish Skin",
+      "short": "Jellyfish",
+      "entry": "giant-jellyfish-skin",
+      "sum": true
+    },
+    {
+      "id": "obsidian",
+      "label": "Obsidian",
+      "short": "Obsi­dian",
+      "entry": "obsidian",
+      "sum": true
+    },
+    {
+      "id": "salamander",
+      "label": "Giant Hydrothermal Salamander Hide",
+      "short": "Salamander",
+      "entry": "giant-hydrothermal-salamander-hide",
+      "sum": true
+    },
+    {
+      "id": "ambergris",
+      "label": "Ambergris",
+      "short": "Amber­gris",
+      "entry": "ambergris",
+      "sum": true
+    },
+    {
+      "id": "speed",
+      "label": "Movement Speed",
+      "short": "Move"
+    },
+    {
+      "id": "accel",
+      "label": "Acceleration",
+      "short": "Accel"
+    },
+    {
+      "id": "handling",
+      "label": "Handling",
+      "short": "Handle"
+    },
+    {
+      "id": "health",
+      "label": "Health"
+    },
+    {
+      "id": "hold",
+      "label": "Hold"
+    },
+    {
+      "id": "price",
+      "label": "Camp Funds to get it",
+      "short": "Cost",
+      "low": true
+    },
+    {
+      "id": "time",
+      "label": "Build time",
+      "short": "Time",
+      "low": true
+    }
+  ],
+  "sheets": [
+    {
+      "id": "bill",
+      "label": "The bill",
+      "rowLabel": "Ship",
+      "colLabel": "material",
+      "blurb": "What each ship costs to get. Built ships draw Camp Funds and stock from the camp and materials you farm; bought ones cost Camp Funds alone. Shading compares each column: the darker the cell, the more of it a build takes.",
+      "cols": [
+        "cf",
+        "stone",
+        "timber",
+        "food",
+        "crew",
+        "shiny",
+        "malachite",
+        "hydro",
+        "manganese",
+        "pearl",
+        "seafan",
+        "golden",
+        "jelly",
+        "obsidian",
+        "salamander",
+        "ambergris"
+      ],
+      "sort": true,
+      "heat": true,
+      "rows": [
+        {
+          "id": "small-greymane-ship",
+          "label": "Small Greymane Ship",
+          "entry": "small-greymane-ship",
+          "group": "Greymane builds",
+          "by": "keengamer",
+          "cells": {
+            "cf": {
+              "mark": "need",
+              "v": "10,000",
+              "n": 10000
+            },
+            "stone": {
+              "mark": "need",
+              "v": "600",
+              "n": 600
+            },
+            "timber": {
+              "mark": "need",
+              "v": "600",
+              "n": 600
+            },
+            "food": {
+              "mark": "need",
+              "v": "1,200",
+              "n": 1200
+            },
+            "crew": {
+              "mark": "need",
+              "v": "5",
+              "n": 5
+            }
+          },
+          "note": "Vellua, on the quest A Call from Beyond the Horizon."
+        },
+        {
+          "id": "medium-greymane-ship",
+          "label": "Medium Greymane Ship",
+          "entry": "medium-greymane-ship",
+          "group": "Greymane builds",
+          "by": "game8",
+          "cells": {
+            "cf": {
+              "mark": "need",
+              "v": "100,000",
+              "n": 100000
+            },
+            "stone": {
+              "mark": "need",
+              "v": "2,400",
+              "n": 2400
+            },
+            "timber": {
+              "mark": "need",
+              "v": "2,400",
+              "n": 2400
+            },
+            "food": {
+              "mark": "need",
+              "v": "5,000",
+              "n": 5000
+            },
+            "crew": {
+              "mark": "need",
+              "v": "7",
+              "n": 7
+            },
+            "shiny": {
+              "mark": "need",
+              "v": "100",
+              "n": 100
+            },
+            "malachite": {
+              "mark": "need",
+              "v": "50",
+              "n": 50
+            }
+          },
+          "note": "Any port's Shipbuilding mission."
+        },
+        {
+          "id": "large-greymane-ship",
+          "label": "Large Greymane Ship",
+          "entry": "large-greymane-ship",
+          "group": "Greymane builds",
+          "by": "game8",
+          "cells": {
+            "cf": {
+              "mark": "need",
+              "v": "500,000",
+              "n": 500000
+            },
+            "stone": {
+              "mark": "need",
+              "v": "12,000",
+              "n": 12000
+            },
+            "timber": {
+              "mark": "need",
+              "v": "12,000",
+              "n": 12000
+            },
+            "food": {
+              "mark": "need",
+              "v": "25,000",
+              "n": 25000
+            },
+            "crew": {
+              "mark": "need",
+              "v": "20",
+              "n": 20
+            },
+            "shiny": {
+              "mark": "need",
+              "v": "100",
+              "n": 100
+            },
+            "malachite": {
+              "mark": "need",
+              "v": "50",
+              "n": 50
+            },
+            "hydro": {
+              "mark": "need",
+              "v": "45",
+              "n": 45
+            },
+            "manganese": {
+              "mark": "need",
+              "v": "20",
+              "n": 20
+            }
+          },
+          "note": "Any port's Large Shipbuilding mission."
+        },
+        {
+          "id": "flagship-of-the-east",
+          "label": "Flagship of the East",
+          "entry": "flagship-of-the-east",
+          "group": "Legendary builds",
+          "by": "keengamer",
+          "cells": {
+            "cf": {
+              "mark": "need",
+              "v": "750,000",
+              "n": 750000
+            },
+            "stone": {
+              "mark": "need",
+              "v": "45,000",
+              "n": 45000
+            },
+            "timber": {
+              "mark": "need",
+              "v": "45,000",
+              "n": 45000
+            },
+            "food": {
+              "mark": "need",
+              "v": "90,000",
+              "n": 90000
+            },
+            "crew": {
+              "mark": "need",
+              "v": "10",
+              "n": 10
+            },
+            "pearl": {
+              "mark": "need",
+              "v": "5",
+              "n": 5
+            },
+            "seafan": {
+              "mark": "need",
+              "v": "15",
+              "n": 15
+            },
+            "malachite": {
+              "mark": "need",
+              "v": "50",
+              "n": 50
+            }
+          },
+          "note": "Stoneward Harbor only (Unfinished Ship Construction)."
+        },
+        {
+          "id": "the-drunken-catfish",
+          "label": "The Drunken Catfish",
+          "entry": "the-drunken-catfish",
+          "group": "Legendary builds",
+          "by": "finalboss",
+          "cells": {
+            "cf": {
+              "mark": "need",
+              "v": "750,000",
+              "n": 750000
+            },
+            "stone": {
+              "mark": "need",
+              "v": "45,000",
+              "n": 45000
+            },
+            "timber": {
+              "mark": "need",
+              "v": "45,000",
+              "n": 45000
+            },
+            "food": {
+              "mark": "need",
+              "v": "90,000",
+              "n": 90000
+            },
+            "crew": {
+              "mark": "need",
+              "v": "10",
+              "n": 10
+            },
+            "pearl": {
+              "mark": "need",
+              "v": "5",
+              "n": 5
+            },
+            "golden": {
+              "mark": "need",
+              "v": "25",
+              "n": 25
+            },
+            "hydro": {
+              "mark": "need",
+              "v": "20",
+              "n": 20
+            }
+          },
+          "note": "Vellua."
+        },
+        {
+          "id": "assault-ship-of-the-east",
+          "label": "Assault Ship of the East",
+          "entry": "assault-ship-of-the-east",
+          "group": "Legendary builds",
+          "by": "keengamer",
+          "cells": {
+            "cf": {
+              "mark": "need",
+              "v": "750,000",
+              "n": 750000
+            },
+            "stone": {
+              "mark": "need",
+              "v": "45,000",
+              "n": 45000
+            },
+            "timber": {
+              "mark": "need",
+              "v": "45,000",
+              "n": 45000
+            },
+            "food": {
+              "mark": "need",
+              "v": "90,000",
+              "n": 90000
+            },
+            "crew": {
+              "mark": "need",
+              "v": "10",
+              "n": 10
+            },
+            "pearl": {
+              "mark": "need",
+              "v": "5",
+              "n": 5
+            },
+            "salamander": {
+              "mark": "need",
+              "v": "10",
+              "n": 10
+            },
+            "ambergris": {
+              "mark": "need",
+              "v": "10",
+              "n": 10
+            }
+          },
+          "note": "Constructing the Mysterious Ship: Delesyia (KeenGamer) or any port (FinalBoss)."
+        },
+        {
+          "id": "phantom-ship",
+          "label": "Phantom Ship",
+          "entry": "phantom-ship",
+          "group": "Legendary builds",
+          "by": "keengamer",
+          "cells": {
+            "cf": {
+              "mark": "need",
+              "v": "750,000",
+              "n": 750000
+            },
+            "stone": {
+              "mark": "need",
+              "v": "45,000",
+              "n": 45000
+            },
+            "timber": {
+              "mark": "need",
+              "v": "45,000",
+              "n": 45000
+            },
+            "food": {
+              "mark": "need",
+              "v": "90,000",
+              "n": 90000
+            },
+            "crew": {
+              "mark": "need",
+              "v": "10",
+              "n": 10
+            },
+            "pearl": {
+              "mark": "need",
+              "v": "5",
+              "n": 5
+            },
+            "jelly": {
+              "mark": "need",
+              "v": "10",
+              "n": 10
+            },
+            "obsidian": {
+              "mark": "need",
+              "v": "30",
+              "n": 30
+            }
+          },
+          "note": "Construct Phantom Ship: Stoneward Harbor (KeenGamer) or Port Delesyia (Gaming Deputy)."
+        },
+        {
+          "id": "small-hernandian-ship",
+          "label": "Small Hernandian Ship",
+          "entry": "small-hernandian-ship",
+          "group": "Bought hulls",
+          "by": "playnews",
+          "cells": {
+            "cf": {
+              "mark": "buy",
+              "v": "40,000",
+              "n": 40000,
+              "note": "Bought at Ship Manager, Vellua (south of Hernand)."
+            }
+          }
+        },
+        {
+          "id": "small-delesyian-ship",
+          "label": "Small Delesyian Ship",
+          "entry": "small-delesyian-ship",
+          "group": "Bought hulls",
+          "by": "playnews",
+          "cells": {
+            "cf": {
+              "mark": "buy",
+              "v": "40,000",
+              "n": 40000,
+              "note": "Bought at Ship Manager, Stoneward Harbor (south of Dewhaven, Delesyia)."
+            }
+          }
+        },
+        {
+          "id": "small-demenissian-ship",
+          "label": "Small Demenissian Ship",
+          "entry": "small-demenissian-ship",
+          "group": "Bought hulls",
+          "by": "playnews",
+          "cells": {
+            "cf": {
+              "mark": "buy",
+              "v": "40,000",
+              "n": 40000,
+              "note": "Bought at Ship Manager, the Port of Demeniss (south-east of the City of Demeniss)."
+            }
+          }
+        },
+        {
+          "id": "medium-hernandian-ship",
+          "label": "Medium Hernandian Ship",
+          "entry": "medium-hernandian-ship",
+          "group": "Bought hulls",
+          "by": "playnews",
+          "cells": {
+            "cf": {
+              "mark": "buy",
+              "v": "1,200,000",
+              "n": 1200000,
+              "note": "Bought at Ship Manager, Vellua (south of Hernand)."
+            }
+          }
+        },
+        {
+          "id": "medium-delesyian-ship",
+          "label": "Medium Delesyian Ship",
+          "entry": "medium-delesyian-ship",
+          "group": "Bought hulls",
+          "by": "playnews",
+          "cells": {
+            "cf": {
+              "mark": "buy",
+              "v": "1,200,000",
+              "n": 1200000,
+              "note": "Bought at Ship Manager, the Port of Delesyia (outside the City of Delesyia)."
+            }
+          }
+        },
+        {
+          "id": "medium-demenissian-ship",
+          "label": "Medium Demenissian Ship",
+          "entry": "medium-demenissian-ship",
+          "group": "Bought hulls",
+          "by": "playnews",
+          "cells": {
+            "cf": {
+              "mark": "buy",
+              "v": "1,200,000",
+              "n": 1200000,
+              "note": "Bought at Ship Manager, the Port of Demeniss (south-east of the City of Demeniss)."
+            }
+          }
+        },
+        {
+          "id": "large-hernandian-ship",
+          "label": "Large Hernandian Ship",
+          "entry": "large-hernandian-ship",
+          "group": "Bought hulls",
+          "by": "playnews",
+          "cells": {
+            "cf": {
+              "mark": "buy",
+              "v": "6,000,000",
+              "n": 6000000,
+              "note": "Bought at Ship Manager, Vellua (south of Hernand)."
+            }
+          }
+        },
+        {
+          "id": "large-delesyian-ship",
+          "label": "Large Delesyian Ship",
+          "entry": "large-delesyian-ship",
+          "group": "Bought hulls",
+          "by": "playnews",
+          "cells": {
+            "cf": {
+              "mark": "buy",
+              "v": "6,000,000",
+              "n": 6000000,
+              "note": "Bought at Ship Manager, the Port of Delesyia (outside the City of Delesyia)."
+            }
+          }
+        },
+        {
+          "id": "large-demenissian-ship",
+          "label": "Large Demenissian Ship",
+          "entry": "large-demenissian-ship",
+          "group": "Bought hulls",
+          "by": "playnews",
+          "cells": {
+            "cf": {
+              "mark": "buy",
+              "v": "6,000,000",
+              "n": 6000000,
+              "note": "Bought at Ship Manager, the Port of Demeniss (south-east of the City of Demeniss)."
+            }
+          }
+        },
+        {
+          "id": "humble-rowboat",
+          "label": "Humble Rowboat",
+          "entry": "humble-rowboat",
+          "group": "Rowboats",
+          "by": "playnews",
+          "cells": {
+            "cf": {
+              "mark": "buy",
+              "v": "2,000",
+              "n": 2000,
+              "note": "Bought at Ship Manager, Vellua (south of Hernand)."
+            }
+          }
+        },
+        {
+          "id": "balanced-rowboat",
+          "label": "Balanced Rowboat",
+          "entry": "balanced-rowboat",
+          "group": "Rowboats",
+          "by": "playnews",
+          "cells": {
+            "cf": {
+              "mark": "buy",
+              "v": "6,000",
+              "n": 6000,
+              "note": "Bought at Ship Manager, Stoneward Harbor (south of Dewhaven, Delesyia)."
+            }
+          }
+        },
+        {
+          "id": "sturdy-tawny-rowboat",
+          "label": "Sturdy Tawny Rowboat",
+          "entry": "sturdy-tawny-rowboat",
+          "group": "Rowboats",
+          "by": "playnews",
+          "cells": {
+            "cf": {
+              "mark": "buy",
+              "v": "8,000",
+              "n": 8000,
+              "note": "Bought at Ship Manager, the Port of Delesyia (outside the City of Delesyia)."
+            }
+          }
+        },
+        {
+          "id": "sand-colored-rowboat",
+          "label": "Sand-Colored Rowboat",
+          "entry": "sand-colored-rowboat",
+          "group": "Rowboats",
+          "by": "playnews",
+          "cells": {
+            "cf": {
+              "mark": "buy",
+              "v": "10,000",
+              "n": 10000,
+              "note": "Bought at Ship Manager, the Port of Demeniss (south-east of the City of Demeniss)."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "stats",
+      "label": "The stats",
+      "rowLabel": "Ship",
+      "colLabel": "stat",
+      "blurb": "Game8's published figures. Sort Movement Speed for the fastest hull, Health for the toughest, Cost for the cheapest. Shading compares each column: darker is more.",
+      "cols": [
+        "speed",
+        "accel",
+        "handling",
+        "health",
+        "hold",
+        "price",
+        "time"
+      ],
+      "sort": true,
+      "heat": true,
+      "rows": [
+        {
+          "id": "small-greymane-ship",
+          "label": "Small Greymane Ship",
+          "entry": "small-greymane-ship",
+          "group": "Greymane builds",
+          "by": "game8",
+          "cells": {
+            "speed": {
+              "mark": "stat",
+              "v": "3",
+              "n": 3
+            },
+            "accel": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "handling": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "health": {
+              "mark": "stat",
+              "v": "5,100",
+              "n": 5100
+            },
+            "hold": {
+              "mark": "stat",
+              "v": "14",
+              "n": 14
+            },
+            "price": {
+              "mark": "need",
+              "v": "10,000",
+              "n": 10000
+            },
+            "time": {
+              "mark": "stat",
+              "v": "12 h",
+              "n": 12,
+              "by": "keengamer"
+            }
+          }
+        },
+        {
+          "id": "medium-greymane-ship",
+          "label": "Medium Greymane Ship",
+          "entry": "medium-greymane-ship",
+          "group": "Greymane builds",
+          "by": "game8",
+          "cells": {
+            "speed": {
+              "mark": "stat",
+              "v": "4",
+              "n": 4
+            },
+            "accel": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "handling": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "health": {
+              "mark": "stat",
+              "v": "7,600",
+              "n": 7600
+            },
+            "hold": {
+              "mark": "stat",
+              "v": "22",
+              "n": 22
+            },
+            "price": {
+              "mark": "need",
+              "v": "100,000",
+              "n": 100000
+            },
+            "time": {
+              "mark": "stat",
+              "v": "1 d 12 h",
+              "n": 36,
+              "by": "game8"
+            }
+          }
+        },
+        {
+          "id": "large-greymane-ship",
+          "label": "Large Greymane Ship",
+          "entry": "large-greymane-ship",
+          "group": "Greymane builds",
+          "by": "game8",
+          "cells": {
+            "speed": {
+              "mark": "stat",
+              "v": "5",
+              "n": 5
+            },
+            "accel": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "handling": {
+              "mark": "stat",
+              "v": "2",
+              "n": 2
+            },
+            "health": {
+              "mark": "stat",
+              "v": "10,100",
+              "n": 10100
+            },
+            "hold": {
+              "mark": "unk"
+            },
+            "price": {
+              "mark": "need",
+              "v": "500,000",
+              "n": 500000
+            },
+            "time": {
+              "mark": "stat",
+              "v": "2 d 10 h",
+              "n": 58,
+              "by": "game8"
+            }
+          }
+        },
+        {
+          "id": "flagship-of-the-east",
+          "label": "Flagship of the East",
+          "entry": "flagship-of-the-east",
+          "group": "Legendary builds",
+          "by": "game8",
+          "cells": {
+            "speed": {
+              "mark": "stat",
+              "v": "5",
+              "n": 5
+            },
+            "accel": {
+              "mark": "stat",
+              "v": "5",
+              "n": 5
+            },
+            "handling": {
+              "mark": "stat",
+              "v": "4",
+              "n": 4
+            },
+            "health": {
+              "mark": "stat",
+              "v": "14,000",
+              "n": 14000
+            },
+            "hold": {
+              "mark": "unk"
+            },
+            "price": {
+              "mark": "need",
+              "v": "750,000",
+              "n": 750000
+            },
+            "time": {
+              "mark": "stat",
+              "v": "4 d 4 h",
+              "n": 100,
+              "by": "keengamer"
+            }
+          }
+        },
+        {
+          "id": "the-drunken-catfish",
+          "label": "The Drunken Catfish",
+          "entry": "the-drunken-catfish",
+          "group": "Legendary builds",
+          "by": "game8",
+          "cells": {
+            "speed": {
+              "mark": "stat",
+              "v": "4",
+              "n": 4
+            },
+            "accel": {
+              "mark": "stat",
+              "v": "5",
+              "n": 5
+            },
+            "handling": {
+              "mark": "stat",
+              "v": "4",
+              "n": 4
+            },
+            "health": {
+              "mark": "stat",
+              "v": "14,000",
+              "n": 14000
+            },
+            "hold": {
+              "mark": "unk"
+            },
+            "price": {
+              "mark": "need",
+              "v": "750,000",
+              "n": 750000
+            },
+            "time": {
+              "mark": "stat",
+              "v": "4 d 4 h",
+              "n": 100,
+              "by": "finalboss"
+            }
+          }
+        },
+        {
+          "id": "assault-ship-of-the-east",
+          "label": "Assault Ship of the East",
+          "entry": "assault-ship-of-the-east",
+          "group": "Legendary builds",
+          "by": "game8",
+          "cells": {
+            "speed": {
+              "mark": "stat",
+              "v": "5",
+              "n": 5
+            },
+            "accel": {
+              "mark": "stat",
+              "v": "4",
+              "n": 4
+            },
+            "handling": {
+              "mark": "stat",
+              "v": "4",
+              "n": 4
+            },
+            "health": {
+              "mark": "stat",
+              "v": "12,000",
+              "n": 12000
+            },
+            "hold": {
+              "mark": "unk"
+            },
+            "price": {
+              "mark": "need",
+              "v": "750,000",
+              "n": 750000
+            },
+            "time": {
+              "mark": "stat",
+              "v": "4 d 4 h",
+              "n": 100,
+              "by": "keengamer"
+            }
+          }
+        },
+        {
+          "id": "phantom-ship",
+          "label": "Phantom Ship",
+          "entry": "phantom-ship",
+          "group": "Legendary builds",
+          "by": "game8",
+          "cells": {
+            "speed": {
+              "mark": "stat",
+              "v": "4",
+              "n": 4
+            },
+            "accel": {
+              "mark": "stat",
+              "v": "3",
+              "n": 3
+            },
+            "handling": {
+              "mark": "stat",
+              "v": "3",
+              "n": 3
+            },
+            "health": {
+              "mark": "stat",
+              "v": "9,200",
+              "n": 9200
+            },
+            "hold": {
+              "mark": "unk"
+            },
+            "price": {
+              "mark": "need",
+              "v": "750,000",
+              "n": 750000
+            },
+            "time": {
+              "mark": "stat",
+              "v": "4 d 4 h",
+              "n": 100,
+              "by": "keengamer"
+            }
+          }
+        },
+        {
+          "id": "small-hernandian-ship",
+          "label": "Small Hernandian Ship",
+          "entry": "small-hernandian-ship",
+          "group": "Bought hulls",
+          "by": "game8",
+          "cells": {
+            "speed": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "accel": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "handling": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "health": {
+              "mark": "stat",
+              "v": "5,000",
+              "n": 5000
+            },
+            "hold": {
+              "mark": "stat",
+              "v": "14",
+              "n": 14
+            },
+            "price": {
+              "mark": "buy",
+              "v": "40,000",
+              "n": 40000
+            },
+            "time": {
+              "mark": "buy",
+              "v": "Now",
+              "n": 0
+            }
+          }
+        },
+        {
+          "id": "small-delesyian-ship",
+          "label": "Small Delesyian Ship",
+          "entry": "small-delesyian-ship",
+          "group": "Bought hulls",
+          "by": "game8",
+          "cells": {
+            "speed": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "accel": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "handling": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "health": {
+              "mark": "stat",
+              "v": "5,000",
+              "n": 5000
+            },
+            "hold": {
+              "mark": "stat",
+              "v": "14",
+              "n": 14
+            },
+            "price": {
+              "mark": "buy",
+              "v": "40,000",
+              "n": 40000
+            },
+            "time": {
+              "mark": "buy",
+              "v": "Now",
+              "n": 0
+            }
+          }
+        },
+        {
+          "id": "small-demenissian-ship",
+          "label": "Small Demenissian Ship",
+          "entry": "small-demenissian-ship",
+          "group": "Bought hulls",
+          "by": "game8",
+          "cells": {
+            "speed": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "accel": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "handling": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "health": {
+              "mark": "stat",
+              "v": "5,000",
+              "n": 5000
+            },
+            "hold": {
+              "mark": "stat",
+              "v": "14",
+              "n": 14
+            },
+            "price": {
+              "mark": "buy",
+              "v": "40,000",
+              "n": 40000
+            },
+            "time": {
+              "mark": "buy",
+              "v": "Now",
+              "n": 0
+            }
+          }
+        },
+        {
+          "id": "medium-hernandian-ship",
+          "label": "Medium Hernandian Ship",
+          "entry": "medium-hernandian-ship",
+          "group": "Bought hulls",
+          "by": "game8",
+          "cells": {
+            "speed": {
+              "mark": "stat",
+              "v": "2",
+              "n": 2
+            },
+            "accel": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "handling": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "health": {
+              "mark": "stat",
+              "v": "7,500",
+              "n": 7500
+            },
+            "hold": {
+              "mark": "stat",
+              "v": "22",
+              "n": 22
+            },
+            "price": {
+              "mark": "buy",
+              "v": "1,200,000",
+              "n": 1200000
+            },
+            "time": {
+              "mark": "buy",
+              "v": "Now",
+              "n": 0
+            }
+          }
+        },
+        {
+          "id": "medium-delesyian-ship",
+          "label": "Medium Delesyian Ship",
+          "entry": "medium-delesyian-ship",
+          "group": "Bought hulls",
+          "by": "game8",
+          "cells": {
+            "speed": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "accel": {
+              "mark": "stat",
+              "v": "2",
+              "n": 2
+            },
+            "handling": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "health": {
+              "mark": "stat",
+              "v": "7,500",
+              "n": 7500
+            },
+            "hold": {
+              "mark": "stat",
+              "v": "22",
+              "n": 22
+            },
+            "price": {
+              "mark": "buy",
+              "v": "1,200,000",
+              "n": 1200000
+            },
+            "time": {
+              "mark": "buy",
+              "v": "Now",
+              "n": 0
+            }
+          }
+        },
+        {
+          "id": "medium-demenissian-ship",
+          "label": "Medium Demenissian Ship",
+          "entry": "medium-demenissian-ship",
+          "group": "Bought hulls",
+          "by": "game8",
+          "cells": {
+            "speed": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "accel": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "handling": {
+              "mark": "stat",
+              "v": "2",
+              "n": 2
+            },
+            "health": {
+              "mark": "stat",
+              "v": "7,500",
+              "n": 7500
+            },
+            "hold": {
+              "mark": "stat",
+              "v": "22",
+              "n": 22
+            },
+            "price": {
+              "mark": "buy",
+              "v": "1,200,000",
+              "n": 1200000
+            },
+            "time": {
+              "mark": "buy",
+              "v": "Now",
+              "n": 0
+            }
+          }
+        },
+        {
+          "id": "large-hernandian-ship",
+          "label": "Large Hernandian Ship",
+          "entry": "large-hernandian-ship",
+          "group": "Bought hulls",
+          "by": "game8",
+          "cells": {
+            "speed": {
+              "mark": "stat",
+              "v": "2",
+              "n": 2
+            },
+            "accel": {
+              "mark": "stat",
+              "v": "2",
+              "n": 2
+            },
+            "handling": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "health": {
+              "mark": "stat",
+              "v": "10,000",
+              "n": 10000
+            },
+            "hold": {
+              "mark": "stat",
+              "v": "36",
+              "n": 36
+            },
+            "price": {
+              "mark": "buy",
+              "v": "6,000,000",
+              "n": 6000000
+            },
+            "time": {
+              "mark": "buy",
+              "v": "Now",
+              "n": 0
+            }
+          }
+        },
+        {
+          "id": "large-delesyian-ship",
+          "label": "Large Delesyian Ship",
+          "entry": "large-delesyian-ship",
+          "group": "Bought hulls",
+          "by": "game8",
+          "cells": {
+            "speed": {
+              "mark": "stat",
+              "v": "2",
+              "n": 2
+            },
+            "accel": {
+              "mark": "stat",
+              "v": "3",
+              "n": 3
+            },
+            "handling": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "health": {
+              "mark": "stat",
+              "v": "10,000",
+              "n": 10000
+            },
+            "hold": {
+              "mark": "stat",
+              "v": "36",
+              "n": 36
+            },
+            "price": {
+              "mark": "buy",
+              "v": "6,000,000",
+              "n": 6000000
+            },
+            "time": {
+              "mark": "buy",
+              "v": "Now",
+              "n": 0
+            }
+          }
+        },
+        {
+          "id": "large-demenissian-ship",
+          "label": "Large Demenissian Ship",
+          "entry": "large-demenissian-ship",
+          "group": "Bought hulls",
+          "by": "game8",
+          "cells": {
+            "speed": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "accel": {
+              "mark": "stat",
+              "v": "2",
+              "n": 2
+            },
+            "handling": {
+              "mark": "stat",
+              "v": "3",
+              "n": 3
+            },
+            "health": {
+              "mark": "stat",
+              "v": "10,000",
+              "n": 10000
+            },
+            "hold": {
+              "mark": "stat",
+              "v": "36",
+              "n": 36
+            },
+            "price": {
+              "mark": "buy",
+              "v": "6,000,000",
+              "n": 6000000
+            },
+            "time": {
+              "mark": "buy",
+              "v": "Now",
+              "n": 0
+            }
+          }
+        },
+        {
+          "id": "humble-rowboat",
+          "label": "Humble Rowboat",
+          "entry": "humble-rowboat",
+          "group": "Rowboats",
+          "by": "game8",
+          "cells": {
+            "speed": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "accel": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "handling": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "health": {
+              "mark": "stat",
+              "v": "100",
+              "n": 100
+            },
+            "hold": {
+              "mark": "stat",
+              "v": "6",
+              "n": 6
+            },
+            "price": {
+              "mark": "buy",
+              "v": "2,000",
+              "n": 2000
+            },
+            "time": {
+              "mark": "buy",
+              "v": "Now",
+              "n": 0
+            }
+          }
+        },
+        {
+          "id": "balanced-rowboat",
+          "label": "Balanced Rowboat",
+          "entry": "balanced-rowboat",
+          "group": "Rowboats",
+          "by": "game8",
+          "cells": {
+            "speed": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "accel": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "handling": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "health": {
+              "mark": "stat",
+              "v": "200",
+              "n": 200
+            },
+            "hold": {
+              "mark": "stat",
+              "v": "6",
+              "n": 6
+            },
+            "price": {
+              "mark": "buy",
+              "v": "6,000",
+              "n": 6000
+            },
+            "time": {
+              "mark": "buy",
+              "v": "Now",
+              "n": 0
+            }
+          }
+        },
+        {
+          "id": "sturdy-tawny-rowboat",
+          "label": "Sturdy Tawny Rowboat",
+          "entry": "sturdy-tawny-rowboat",
+          "group": "Rowboats",
+          "by": "game8",
+          "cells": {
+            "speed": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "accel": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "handling": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "health": {
+              "mark": "stat",
+              "v": "200",
+              "n": 200
+            },
+            "hold": {
+              "mark": "stat",
+              "v": "6",
+              "n": 6
+            },
+            "price": {
+              "mark": "buy",
+              "v": "8,000",
+              "n": 8000
+            },
+            "time": {
+              "mark": "buy",
+              "v": "Now",
+              "n": 0
+            }
+          }
+        },
+        {
+          "id": "sand-colored-rowboat",
+          "label": "Sand-Colored Rowboat",
+          "entry": "sand-colored-rowboat",
+          "group": "Rowboats",
+          "by": "game8",
+          "cells": {
+            "speed": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "accel": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "handling": {
+              "mark": "stat",
+              "v": "1",
+              "n": 1
+            },
+            "health": {
+              "mark": "stat",
+              "v": "200",
+              "n": 200
+            },
+            "hold": {
+              "mark": "stat",
+              "v": "6",
+              "n": 6
+            },
+            "price": {
+              "mark": "buy",
+              "v": "10,000",
+              "n": 10000
+            },
+            "time": {
+              "mark": "buy",
+              "v": "Now",
+              "n": 0
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
