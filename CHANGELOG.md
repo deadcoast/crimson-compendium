@@ -4,6 +4,10 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
 
 ## [Unreleased]
 
+## [0.4.0] — 2026-11-21
+
+A fourth tree, **Materials**: where every item goes and what reads it, across house, ship and mount storage.
+
 ### Added
 
 - **Materials**, a fourth branch: where every item goes and what reads it, across 20 plates in House Storage, Ship Storage and Mount Storage.
@@ -137,7 +141,8 @@ Two new trees, Riches and Quality of Life, the full roster of 80 mounts with wha
 - Plates with map loupe and lightbox, a Tier Ladder, Ride-for lenses, `/` search and keyboard stepping.
 - An image pipeline (`tools/media.py`) and a registry that validates every branch at load.
 
-[Unreleased]: https://github.com/deadcoast/crimson-compendium/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/deadcoast/crimson-compendium/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/deadcoast/crimson-compendium/releases/tag/v0.4.0
 [0.3.0]: https://github.com/deadcoast/crimson-compendium/releases/tag/v0.3.0
 [0.2.0]: https://github.com/deadcoast/crimson-compendium/releases/tag/v0.2.0
 [0.1.0]: https://github.com/deadcoast/crimson-compendium/commit/db6bd26
