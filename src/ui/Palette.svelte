@@ -25,10 +25,18 @@
     const t = q.trim().toLowerCase();
     return t ? jumps.filter((j) => j.label.toLowerCase().split(/[\s:]+/).some((w) => w.startsWith(t)) || j.label.toLowerCase().startsWith(t)) : [];
   });
-  // item names a branch's matrix knows (the Sorter's item families): opening one shows where it goes
+  // what a branch's matrix knows by name (the Sorter's items, and the families they belong to): opening one
+  // shows where it goes. A family is offered by its own name ("fish", "horse feed") as well as its items'
   const items = $derived(
     tree.branches.flatMap((b) =>
-      (b.matrix?.sheets ?? []).flatMap((sh) => sh.rows.flatMap((r) => (r.items ?? []).map((item) => ({ item, row: r.label, branch: b })))),
+      (b.matrix?.sheets ?? []).flatMap((sh) =>
+        sh.rows
+          .filter((r) => r.items?.length)
+          .flatMap((r) => [
+            ...r.items!.map((item) => ({ item, row: r.label, branch: b })),
+            { item: r.label, row: sh.rowLabel.toLowerCase(), branch: b },
+          ]),
+      ),
     ),
   );
   const itemHits = $derived.by(() => {

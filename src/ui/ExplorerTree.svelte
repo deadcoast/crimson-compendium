@@ -30,7 +30,7 @@
   let q = $state('');
   const rows = $derived(flatten(roots, expanded, filtering ? q.trim() : ''));
   const at = $derived(new Map(rows.map((r, i) => [r.node.key, i])));
-  const matchCount = $derived(filtering && q.trim() ? new Set(rows.filter((r) => r.hits && r.node.entry).map((r) => r.node.entry!.id)).size : 0);
+  const matchCount = $derived(filtering && q.trim() ? new Set(rows.filter((r) => r.hits && r.node.entry).map((r) => r.node.entry!)).size : 0);
 
   const selectedKey = $derived(activeKey(view, ctx, nodes));
   let focusKey = $state('');

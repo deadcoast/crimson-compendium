@@ -152,6 +152,9 @@
      "label": "Ores and minerals",
      "group": "Gathered",
      "stack": 50,
+     "stackOf": {
+      "Azurite": 49
+     },
      "items": [
       "Iron Ore",
       "Copper Ore",
@@ -166,7 +169,7 @@
       "Diamond"
      ],
      "by": "keengamer",
-     "note": "Refine plate armour, weapons, metal shields and jewellery (PowerPyx).",
+     "note": "Refine plate armour, weapons, metal shields and jewellery (PowerPyx). Azurite stacks to 49 (Gamer Guides).",
      "cells": {
       "private": {
        "mark": "ok"
@@ -534,7 +537,10 @@
      "id": "abyss",
      "label": "Abyss Artifacts, Scales and Cells",
      "group": "Gathered",
-     "stack": 10,
+     "stackOf": {
+      "Abyss Artifact": 10,
+      "Faded Abyss Artifact": 10
+     },
      "items": [
       "Abyss Artifact",
       "Faded Abyss Artifact",
@@ -737,7 +743,7 @@
     },
     {
      "id": "forage",
-     "label": "Wild greens and seaweed",
+     "label": "Wild greens, seaweed and clams",
      "group": "Food",
      "stack": 50,
      "items": [
@@ -752,7 +758,7 @@
       "Razor Clam"
      ],
      "by": "gamerguides",
-     "note": "Red Seaweed is the one ingredient with an Attack buff (The Games Wiki).",
+     "note": "Red Seaweed is the one ingredient with an Attack buff (The Games Wiki). Razor Clams stack to 50, unlike the other shellfish.",
      "cells": {
       "private": {
        "mark": "ok"
@@ -976,12 +982,32 @@
      "items": [
       "Hay",
       "Sugar Beet",
-      "Sugar Cubes",
+      "Sugar Cubes"
+     ],
+     "by": "gamerguides",
+     "note": "Fed from the bag. Oats and apples are dropped for the horse; they sit with grains and fruit.",
+     "cells": {
+      "private": {
+       "mark": "ok"
+      },
+      "cooler": {
+       "mark": "ok",
+       "note": "KeenGamer lists horse feed among what it takes.",
+       "by": "keengamer"
+      }
+     }
+    },
+    {
+     "id": "tonics",
+     "label": "Horse tonics",
+     "group": "Food",
+     "stack": 10,
+     "items": [
       "Horse Tonic",
       "Horse Stimulant"
      ],
      "by": "gamerguides",
-     "note": "Hay, beets and cubes stack to 20; tonics and stimulants to 10. Fed from the bag.",
+     "note": "Horse Tonic restores Health and survives one fatal blow; the Stimulant restores Stamina.",
      "cells": {
       "private": {
        "mark": "ok"

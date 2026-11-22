@@ -12,7 +12,7 @@ The players' complaint, as reported, and what the mechanics show:
 | Even after the 1.04 chests, PC Gamer called the inventory chaotic and wished for a single chest | news · PC Gamer |
 | A recipe needs three things: the learned recipe, the right material class and the station the recipe names. "Most cannot-craft problems are the wrong station or a material stored in the wrong container" | guide · Console Pulse |
 | Items are sorted into 35 in-game categories (Abyss Artifacts to Two-Handed Weapons); Crafting and Refinement Materials, Alchemy Materials, Fish, both weapon classes and Tools clutter fastest | guide · Vulkk |
-| Stacks run 1 to 100. Materials and ingredients stack to 50; Abyss Artifacts to 10; horse feed to 20 (tonics 10); every one of the 82 insects and small creatures and the 45 fish and 10 shellfish stack to 1 | guide · Vulkk, Gamer Guides database |
+| Stacks run 1 to 100. Materials and ingredients stack to 50; Abyss Artifacts to 10; horse feed to 20 (tonics 10); every one of the 82 insects and small creatures, the 45 fish and the 8 shellfish and sea creatures stacks to 1 (the Razor Clam, filed with ingredients, stacks to 50) | guide · Vulkk, Gamer Guides database |
 | Items move between classes: 1.16 made mushrooms alchemy materials instead of cooking ingredients; 1.11 made Kuku Bird and Wyvern eggs stop stacking | patch · All Things How, GamingBolt |
 | Key Items cannot be sold, discarded or grouped, and hold their slot | guide · The Games Wiki |
 | The 1.04 tabs: All, Documents, Equipment, Food, Materials and Others (the note says "5 categories" and lists six). Private Storage was promised the same tabs "in the near future" | patch · VGC (1.04 notes verbatim) |
@@ -63,10 +63,10 @@ Names and stack sizes from the Gamer Guides database (ingredients, ores, alchemy
 - **Hides and bones**: Thin, Thick, Short Hair, Long Hair and Sturdy Hide; Small and Large Bone; Fang. Leather armour and jewellery.
 - **Cloth, fur and feathers**: Cloth Piece, Fleece, Feather, Ivory, Spider Web. Soft armour and cloaks.
 - **Reagents**: Brimstone, Mercury, Rubber, Gunpowder, Electrical Components, Acidic Spider Venom.
-- **Herbs and flowers** (stack 50, 26 names) and **mushrooms** (5, alchemy since 1.16).
+- **Herbs and flowers** (stack 50, 25 names) and **mushrooms** (5 names, stack 50, alchemy since 1.16).
 - **Insects and small creatures** (stack 1, 82 names).
 - **Ingredients** (stack 50): 7 meats, 9 grains and pulses, 19 fruits, 18 vegetables, wild greens and seaweed, honey and beehives, dairy and eggs, staples (Salt, Sugar, Water, Cooking Oil), Fish Fillet.
-- **Fish and shellfish** (stack 1): 45 fish, 10 shellfish and sea creatures.
+- **Fish and shellfish** (stack 1): 45 fish, 8 shellfish and sea creatures.
 - **Horse feed**: Hay, Sugar Beet, Sugar Cubes (20); Horse Tonic, Horse Stimulant (10).
 - **Abyss**: Abyss Artifacts (stack 10), Aeserion's Scale, Abyss Cell.
 

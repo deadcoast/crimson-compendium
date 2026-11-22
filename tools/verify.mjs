@@ -271,14 +271,26 @@ try {
         const on = await pg.waitForFunction((k) => document.querySelector(`.matrix [role=tab]:nth-child(${k})`)?.getAttribute('aria-selected') === 'true', i + 1, { timeout: 3000 }).then(() => true, () => false);
         if (!on) { problems.push(`sheet "${sh.label}" tab does not select`); continue; }
         await pg.waitForTimeout(150);
+        // every row in order, and every cell's mark, against the data: counts alone would pass a swapped row
         const got = await pg.evaluate(() => ({
-          rows: document.querySelectorAll('.matrix tbody tr[data-row]').length,
-          marks: document.querySelectorAll('.matrix tbody td:not([data-mark=blank])').length,
-          cols: document.querySelectorAll('.matrix thead th').length - 1,
+          heads: [...document.querySelectorAll('.matrix thead th:not(.corner) .cl')].map((n) => n.textContent.trim()),
+          rows: [...document.querySelectorAll('.matrix tbody tr[data-row]')].map((tr) => ({
+            label: tr.querySelector('.rl')?.textContent.trim(),
+            marks: [...tr.querySelectorAll('td')].map((td) => td.dataset.mark),
+          })),
         }));
-        const want = { rows: sh.rows.length, marks: sh.rows.reduce((n, r) => n + Object.keys(r.cells).length, 0), cols: (sh.cols ?? mx.cols).length };
-        for (const k of ['rows', 'marks', 'cols']) if (got[k] !== want[k]) problems.push(`sheet "${sh.label}": ${got[k]} ${k}, want ${want[k]}`);
-        rows += got.rows; marks += got.marks;
+        const cols = (sh.cols ?? mx.cols.map((c) => c.id)).map((id) => mx.cols.find((c) => c.id === id));
+        const wantHeads = cols.map((c) => c.short ?? c.label);
+        if (JSON.stringify(got.heads) !== JSON.stringify(wantHeads)) problems.push(`sheet "${sh.label}" columns read ${JSON.stringify(got.heads)}, want ${JSON.stringify(wantHeads)}`);
+        if (got.rows.length !== sh.rows.length) problems.push(`sheet "${sh.label}": ${got.rows.length} rows, want ${sh.rows.length}`);
+        sh.rows.forEach((r, i) => {
+          const g = got.rows[i];
+          if (!g) return;
+          if (g.label !== r.label) return problems.push(`sheet "${sh.label}" row ${i + 1} reads "${g.label}", want "${r.label}"`);
+          const want = cols.map((c) => { const cell = r.cells[c.id]; return !cell ? 'blank' : typeof cell === 'string' ? cell : cell.mark; });
+          cols.forEach((c, k) => { if (g.marks[k] !== want[k]) problems.push(`sheet "${sh.label}" ${r.label} in ${c.label}: ${g.marks[k]}, want ${want[k]}`); });
+        });
+        rows += got.rows.length; marks += got.rows.reduce((n, r) => n + r.marks.filter((x) => x !== 'blank').length, 0);
       }
       await pg.click('.matrix [role=tab]:nth-child(1)');
       const heads = await pg
@@ -292,6 +304,17 @@ try {
         const says = await pg.waitForFunction(() => document.querySelector('.readout.on .ro-says em')?.textContent.trim().length > 1, null, { timeout: 3000 }).then(() => true, () => false);
         if (!says) problems.push('hovering a marked cell does not explain it in the readout');
       }
+      // a click pins the cell: the readout stays when the pointer leaves, and a second click lets it go
+      if (cell) {
+        await cell.click();
+        await pg.mouse.move(2, 2);
+        await pg.waitForTimeout(250);
+        if (!(await pg.evaluate(() => !!document.querySelector('.readout.on') && !!document.querySelector('.matrix td.pin')))) problems.push('a click does not pin the cell');
+        await cell.click();
+        await pg.mouse.move(2, 2);
+        await pg.waitForTimeout(250);
+        if (await pg.evaluate(() => !!document.querySelector('.matrix td.pin'))) problems.push('a second click does not unpin the cell');
+      }
       // search: the last item of the first row that names items finds that row
       const sh0 = mx.sheets[0];
       const probe = sh0.rows.find((r) => r.items?.length);
@@ -301,24 +324,32 @@ try {
         const found = await pg.waitForFunction((l) => [...document.querySelectorAll('.matrix .answers .fam')].some((n) => n.textContent.trim() === l), probe.label, { timeout: 3000 }).then(() => true, () => false);
         if (!found) problems.push(`searching "${item}" does not answer "${probe.label}"`);
         await pg.fill('.matrix .find input', '');
-        // the palette hands an item to the matrix: open it from a plate, pick the item, land on the search
-        await go(pg, `${b.id}-${b.entries[0].id}`);
-        await pg.waitForTimeout(300);
-        await pg.keyboard.press('Control+k');
-        await pg.waitForSelector('.palette input', { timeout: 3000 }).catch(() => {});
-        await pg.keyboard.type(item);
-        const pick = await pg.waitForSelector('.palette .jump.item', { timeout: 3000 }).catch(() => null);
-        if (!pick) problems.push(`the palette offers no item for "${item}"`);
-        else {
+        // the palette hands an item to the matrix, from a plate and from the matrix itself while it shows a
+        // sheet with no items: either way the matrix lands on the sheet that names the item, searching it
+        const handOff = async (from) => {
+          await pg.keyboard.press('Control+k');
+          await pg.waitForSelector('.palette input', { timeout: 3000 }).catch(() => {});
+          await pg.keyboard.type(item);
+          const pick = await pg.waitForSelector('.palette .jump.item', { timeout: 3000 }).catch(() => null);
+          if (!pick) return problems.push(`the palette offers no item for "${item}" (from ${from})`);
           await pick.click();
           const handed = await pg.waitForFunction((w) => document.querySelector('.matrix .find input')?.value === w, item, { timeout: 4000 }).then(() => true, () => false);
-          if (!handed) problems.push(`picking "${item}" in the palette does not open the matrix searching it (input "${await pg.evaluate(() => document.querySelector('.matrix .find input')?.value)}")`);
+          if (!handed) problems.push(`picking "${item}" in the palette from ${from} does not open the matrix searching it (input "${await pg.evaluate(() => document.querySelector('.matrix .find input')?.value)}")`);
           await pg.fill('.matrix .find input', '').catch(() => {});
+        };
+        await go(pg, `${b.id}-${b.entries[0].id}`);
+        await pg.waitForTimeout(300);
+        await handOff('a plate');
+        const bare = mx.sheets.findIndex((sh) => !sh.rows.some((r) => r.items?.length));
+        if (bare >= 0) {
+          await pg.click(`.matrix [role=tab]:nth-child(${bare + 1})`);
+          await pg.waitForTimeout(200);
+          await handOff(`the "${mx.sheets[bare].label}" sheet`);
         }
       }
       const sel = await text(pg, '[role=tree] [aria-selected=true]');
       if (!sel?.startsWith(mx.title)) problems.push(`explorer selects "${sel}"`);
-      row('matrix', `${b.id} · ${mx.sheets.length} sheets · ${rows} rows · ${marks} marks · search · readout · palette`, problems);
+      row('matrix', `${b.id} · ${mx.sheets.length} sheets · ${rows} rows · ${marks} marks · pin · search · readout · palette`, problems);
     }
   }
 
@@ -447,10 +478,12 @@ try {
       await ph.waitForTimeout(300);
       const got = await ph.evaluate(() => ({
         cards: document.querySelectorAll('.matrix .cards > li').length,
+        titles: [...document.querySelectorAll('.matrix .cards > li .ct b')].map((n) => n.textContent.trim()),
         grid: getComputedStyle(document.querySelector('.matrix .grid') ?? document.body).display,
         wide: document.querySelector('.matrix')?.scrollWidth > innerWidth + 1,
       }));
-      if (got.cards !== mb.matrix.sheets[0].rows.length) problems.push(`matrix shows ${got.cards} cards, want ${mb.matrix.sheets[0].rows.length}`);
+      const wantTitles = mb.matrix.sheets[0].rows.map((r) => r.label);
+      if (JSON.stringify(got.titles) !== JSON.stringify(wantTitles)) problems.push(`matrix cards read ${got.cards} families${got.cards === wantTitles.length ? ' in the wrong order or with the wrong names' : `, want ${wantTitles.length}`}`);
       if (got.grid !== 'none') problems.push(`matrix grid still shows on a phone (display ${got.grid})`);
       if (got.wide) problems.push('matrix scrolls sideways on a phone');
     }

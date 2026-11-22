@@ -204,6 +204,10 @@ export function lint() {
           if (!credits.publishers[r.by]) bad(where, `publisher "${r.by}" is not in src/core/credits.json`);
           if (r.note !== undefined) text(where, r.note, 'row note');
           if (r.stack !== undefined && !(Number.isInteger(r.stack) && r.stack > 0)) bad(where, `stack ${r.stack} is not a whole number of items`);
+          for (const [it, n] of Object.entries(r.stackOf ?? {})) {
+            if (!(Number.isInteger(n) && n > 0)) bad(where, `stackOf "${it}" ${n} is not a whole number of items`);
+            if (n === r.stack) bad(where, `stackOf "${it}" repeats the family's stack`);
+          }
           const seen = new Set();
           for (const it of r.items ?? []) {
             text(where, it, 'item');

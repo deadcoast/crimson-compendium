@@ -257,8 +257,10 @@ export interface MatrixRow {
   label: string;
   /** rows sharing a group sit together under its name */
   group?: string;
-  /** items per slot */
+  /** items per slot, for the family */
   stack?: number;
+  /** items whose stack differs from the family's (Azurite 49 among ores at 50), or the only ones known */
+  stackOf?: Record<string, number>;
   /** the item names this row covers; the matrix search matches them */
   items?: string[];
   note?: string;
@@ -297,7 +299,8 @@ export interface BranchDef {
   labels?: BranchLabels;
   route?: RouteDef;
   matrix?: MatrixDef;
-  /** which view the branch root opens: the matrix, the route, or (absent) the route if any, else the first leaf */
+  /** which view the branch root opens: the matrix or the route. Absent: the route if there is one, else the
+   *  matrix if there is one, else the first leaf (tree.ts frontOf) */
   front?: 'matrix' | 'route';
   singular: string;
   /** plural noun for counts and empty states ("Mounts") */

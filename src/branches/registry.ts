@@ -103,6 +103,7 @@ function matrix(m: MatrixDef, byId: Map<string, Entry>, fail: (where: string, ms
     for (const r of sh.rows) {
       if (rows.has(r.id)) fail(`matrix/${sh.id}/${r.id}`, 'duplicate row id');
       rows.add(r.id);
+      for (const it of Object.keys(r.stackOf ?? {})) if (!r.items?.includes(it)) fail(`matrix/${sh.id}/${r.id}`, `stackOf names "${it}", which is not one of the row's items`);
       for (const [c, cell] of Object.entries(r.cells)) {
         if (!shown.has(c)) fail(`matrix/${sh.id}/${r.id}`, `cell in column "${c}", which the sheet does not show`);
         const mk = typeof cell === 'string' ? cell : cell.mark;

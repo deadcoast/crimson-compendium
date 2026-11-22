@@ -7,7 +7,7 @@
   import { app } from '../core/state.svelte';
   import { href, mediaUrl } from '../core/tree';
   import { PUBLISHERS } from '../core/format';
-  import type { Branch, MatrixCell, MatrixCol, MatrixRow } from '../core/types';
+  import type { Branch, MatrixCell, MatrixCol, MatrixRow, MatrixSheet } from '../core/types';
   import Glyph from './Glyph.svelte';
   import Mark from './Mark.svelte';
 
@@ -20,9 +20,19 @@
   const searchable = $derived(sheet.rows.some((r) => r.items?.length));
   const itemCount = $derived(sheet.rows.reduce((n, r) => n + (r.items?.length ?? 0), 0));
 
-  // the palette can hand over an item to look up; take it once
+  // the palette can hand over an item to look up; take it once, on the sheet that names it (the reader may
+  // be on a sheet with no items, and this view stays mounted while the branch does)
   let q = $state(app.matrixQuery);
-  $effect(() => { if (app.matrixQuery) { q = app.matrixQuery; app.matrixQuery = ''; } });
+  $effect(() => {
+    const want = app.matrixQuery;
+    if (!want) return;
+    const named = (sh: MatrixSheet) => sh.rows.some((r) => r.items?.some((i) => norm(i) === norm(want)));
+    const withItems = (sh: MatrixSheet) => sh.rows.some((r) => r.items?.length);
+    const target = m.sheets.find(named) ?? m.sheets.find(withItems);
+    if (target && target.id !== sheet.id) sheetId = target.id;
+    q = want;
+    app.matrixQuery = '';
+  });
 
   const markOf = (c?: MatrixCell) => (!c ? '' : typeof c === 'string' ? c : c.mark);
   const noteOf = (c?: MatrixCell) => (c && typeof c === 'object' ? c.note : undefined);
@@ -102,6 +112,8 @@
   });
 
   const stackLabel = (r: MatrixRow) => (r.stack ? `×${r.stack}` : '');
+  /** an item's stack: its own where it differs from the family's */
+  const stackOf = (r: MatrixRow, item: string) => r.stackOf?.[item] ?? r.stack;
   /** "item family" → "item families", "mechanic" → "mechanics" */
   const plural = (w: string, n: number) => (n === 1 ? w : /[^aeiou]y$/.test(w) ? `${w.slice(0, -1)}ies` : /(s|x|ch|sh)$/.test(w) ? `${w}es` : `${w}s`);
 </script>
@@ -145,10 +157,11 @@
     <div class="answers" aria-live="polite">
       {#each answers as r (r.id)}
         {@const got = matches.get(r.id) ?? []}
+        {@const st = got.length === 1 ? stackOf(r, got[0]) : r.stack}
         <div class="answer">
           <p class="what">
             {#if got.length}<b>{got.slice(0, 3).join(', ')}{got.length > 3 ? ` +${got.length - 3}` : ''}</b><span class="arrow">→</span>{/if}
-            <span class="fam">{r.label}</span>{#if r.stack}<span class="stk mono" class:hog={r.stack === 1}>{stackLabel(r)}</span>{/if}
+            <span class="fam">{r.label}</span>{#if st}<span class="stk mono" class:hog={st === 1} title={st === 1 ? 'Does not stack: each one takes a slot' : `${st} to a slot`}>×{st}</span>{/if}
           </p>
           <ul class="where">
             {#each placements(r) as p (p.mark.id)}
@@ -213,7 +226,11 @@
                   aria-label="{r.label} in {c.label}: {mk ? markDef(mk)?.label : 'no source puts it here'}{noteOf(r.cells[c.id]) ? `. ${noteOf(r.cells[c.id])}` : ''}"
                   aria-pressed={pinned?.r === l.i && pinned?.c === ci}
                   onmouseenter={() => (hover = { r: l.i, c: ci })}
-                  onfocus={() => { focus = { r: l.i, c: ci }; hover = null; pinned = { r: l.i, c: ci }; }}
+                  onfocus={(ev) => {
+                    focus = { r: l.i, c: ci };
+                    // keyboard focus pins the cell; a mouse press focuses too, and its click does the pinning
+                    if (ev.currentTarget.matches(':focus-visible')) { hover = null; pinned = { r: l.i, c: ci }; }
+                  }}
                   onclick={() => pick(l.i, ci)}
                 >
                   {#if mk}<Mark id={mk} />{/if}
@@ -259,7 +276,7 @@
         {#if mk}<span class="by">· {PUBLISHERS[byOf(atRow, atCell)] ?? byOf(atRow, atCell)}</span>{/if}
       </p>
       {#if atRow.items?.length}
-        <p class="ro-items">{atRow.items.slice(0, 14).join(' · ')}{atRow.items.length > 14 ? ` · +${atRow.items.length - 14} more` : ''}</p>
+        <p class="ro-items">{atRow.items.slice(0, 14).map((i) => (atRow.stackOf?.[i] ? `${i} ×${atRow.stackOf[i]}` : i)).join(' · ')}{atRow.items.length > 14 ? ` · +${atRow.items.length - 14} more` : ''}</p>
       {:else if atRow.note}
         <p class="ro-items">{atRow.note}</p>
       {/if}
@@ -327,7 +344,7 @@
   .sheet-blurb { max-width: 92ch; margin: 12px 0 8px; font-size: 13.5px; line-height: 1.55; color: var(--bone-2); }
 
   /* ── search answers ── */
-  .answers { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 10px; margin: 6px 0 16px; }
+  .answers { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 10px; margin: 6px 0 16px; }
   .answer { padding: 12px 14px; border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); background: linear-gradient(110deg, var(--accent-dim), var(--ink-1) 75%); box-shadow: inset 2px 0 0 var(--accent); animation: rise 420ms var(--ease-out) both; }
   .what { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 8px; font-size: 14px; color: var(--bone); }
   .what b { font-weight: 600; }

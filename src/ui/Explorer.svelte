@@ -33,7 +33,8 @@
       .filter((x): x is { b: Branch; e: Entry } => !!x)
       .slice(0, 5),
   );
-  const current = $derived(view.kind === 'entry' ? view.entry.id : '');
+  // the open plate, by branch and id: two branches can share an id (QOL's and Materials' Private Storage)
+  const current = $derived(view.kind === 'entry' ? view.entry : undefined);
 </script>
 
 <nav class="spine" class:open aria-label="Compendium explorer">
@@ -60,7 +61,7 @@
         <ol class="recent">
           {#each recent as { b, e } (b.id + "/" + e.id)}
             <li animate:flip={{ duration: app.reducedMotion ? 0 : 260 }}>
-              <a class="rrow" class:on={e.id === current} href={href.entry(b, e.id)} data-cls={e.cls} data-accent={leafOf(b, e).accent} onclick={onnavigate}>
+              <a class="rrow" class:on={e === current} href={href.entry(b, e.id)} data-cls={e.cls} data-accent={leafOf(b, e).accent} onclick={onnavigate}>
                 <span class="pt"><img src={mediaUrl(e.media.portrait.src)} alt="" /></span>
                 <span class="nm">{e.name}</span>
                 <span class="lf">{leafOf(b, e).label}</span>

@@ -2750,6 +2750,8 @@
   "manifest": {
    "rows": [
     "feed",
+    "tonics",
+    "grains",
     "produce"
    ],
    "bill": [

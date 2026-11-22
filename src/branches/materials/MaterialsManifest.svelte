@@ -50,13 +50,16 @@
   const readHere = $derived(readBy.filter((x) => x.mark === 'draw'));
   const readOther = $derived(readBy.filter((x) => x.mark !== 'draw'));
 
-  // the shelves: every family the Sorter puts here, grouped by mark in the legend's order
+  // the shelves: every family the Sorter puts here, grouped by mark in the legend's order. A family a source
+  // says is refused is not on a shelf: it is listed apart, with why
   const shelves = $derived.by(() => {
     if (!col || !where || !m) return [];
     return m.marks
+      .filter((mk) => mk.id !== 'no')
       .map((mk) => ({ mark: mk, rows: where.rows.filter((r) => markOf(r.cells[col.id]) === mk.id) }))
       .filter((s) => s.rows.length);
   });
+  const refused = $derived(col && where ? where.rows.filter((r) => markOf(r.cells[col.id]) === 'no') : []);
   // a supply's own families, each with every place that keeps them
   const supplies = $derived.by(() => {
     if (col || !where || !m || !man?.rows?.length) return [];
@@ -194,7 +197,7 @@
                       {#if noteOf(cell) ?? r.note}<p class="fn">{noteOf(cell) ?? r.note}</p>{/if}
                       {#if items.length}
                         <ul class="items">
-                          {#each all ? items : items.slice(0, CAP) as it (it)}<li class:lit={!!t && norm(it).includes(t)}>{it}</li>{/each}
+                          {#each all ? items : items.slice(0, CAP) as it (it)}<li class:lit={!!t && norm(it).includes(t)}>{it}{#if r.stackOf?.[it]}<span class="ist mono" class:hog={r.stackOf[it] === 1}>×{r.stackOf[it]}</span>{/if}</li>{/each}
                           {#if !all && items.length > CAP}
                             <li class="more"><button type="button" onclick={() => (open[r.id] = true)}>+{items.length - CAP} more</button></li>
                           {/if}
@@ -209,6 +212,18 @@
           {#if t && !matched && !shelves.some((s) => s.rows.some(hit))}
             <p class="miss">Nothing by that name goes in {entry.name}. <a href={href.matrix(branch)}>Ask the Sorter</a> where it does.</p>
           {/if}
+        </div>
+      {/if}
+
+      {#if refused.length}
+        <div class="block">
+          <p class="eyebrow">Won't go in</p>
+          <ul class="refused">
+            {#each refused as r (r.id)}
+              {@const cell = r.cells[col.id]}
+              <li><Mark id="no" size={14} /><span class="fl">{r.label}</span>{#if noteOf(cell)}<span class="rn">{noteOf(cell)}</span>{/if}<span class="by">{pub(byOf(r, cell))}</span></li>
+            {/each}
+          </ul>
         </div>
       {/if}
 
@@ -246,7 +261,7 @@
                 <span class="fl">{s.row.label}</span>
                 {#if s.row.stack}<span class="st mono" class:hog={s.row.stack === 1}>{stackTxt(s.row)}</span>{/if}
               </div>
-              {#if s.row.items?.length}<ul class="items">{#each s.row.items as it (it)}<li>{it}</li>{/each}</ul>{/if}
+              {#if s.row.items?.length}<ul class="items">{#each s.row.items as it (it)}<li>{it}{#if s.row.stackOf?.[it]}<span class="ist mono">×{s.row.stackOf[it]}</span>{/if}</li>{/each}</ul>{/if}
               {#if s.at.length}
                 <ul class="kept">
                   {#each s.at as a (a.col.id)}
@@ -401,13 +416,11 @@
   .shelf-head :global(.mk) { align-self: center; }
   .shelf-head b { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bone); font-weight: 600; }
   .shelf[data-mark='home'] .shelf-head b { color: var(--accent); }
-  .shelf[data-mark='no'] .shelf-head b { color: var(--ember); }
   .shelf-head span { font-size: 12.5px; color: var(--ash); }
-  .fams { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; margin-bottom: 8px; }
+  .fams { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 10px; margin-bottom: 8px; }
   .fams > li { padding: 10px 12px 12px; background: var(--ink-1); border: 1px solid var(--line); animation: up 520ms var(--ease-out) both; animation-delay: calc(var(--i) * 40ms); min-width: 0; }
   .shelf[data-mark='home'] .fams > li { border-color: color-mix(in srgb, var(--accent) 35%, var(--line)); box-shadow: inset 2px 0 0 var(--accent); }
   .shelf[data-mark='unk'] .fams > li { border-style: dashed; }
-  .shelf[data-mark='no'] .fams > li { border-color: color-mix(in srgb, var(--ember) 40%, var(--line)); }
   .fam { display: flex; align-items: baseline; gap: 8px; }
   .fl { font-size: 14px; color: var(--bone); flex: 1; min-width: 0; }
   .st { font-size: 11px; color: var(--bone-2); padding: 1px 5px; border: 1px solid var(--line-2); }
@@ -417,6 +430,15 @@
   .items { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
   .items li { font-size: 11.5px; line-height: 1; padding: 4px 7px; border: 1px solid var(--line); color: var(--bone-2); white-space: nowrap; }
   .items li.lit { color: var(--ink-0); background: var(--accent); border-color: var(--accent); }
+  .ist { margin-left: 5px; font-size: 10px; color: var(--ash); }
+  .ist.hog { color: var(--ember); }
+  .items li.lit .ist { color: inherit; }
+  .refused { display: flex; flex-direction: column; gap: 8px; }
+  .refused li { display: grid; grid-template-columns: 16px minmax(0, 1fr) auto; grid-template-areas: 'm l b' '. n n'; gap: 2px 10px; align-items: center; padding: 10px 12px; border: 1px solid color-mix(in srgb, var(--ember) 40%, var(--line)); background: var(--ink-1); }
+  .refused li :global(.mk) { grid-area: m; }
+  .refused .fl { grid-area: l; }
+  .refused .rn { grid-area: n; }
+  .refused .by { grid-area: b; }
   .items .more { padding: 0; border: 0; }
   .items .more button { font: inherit; font-size: 11.5px; padding: 4px 7px; border: 1px dashed var(--line-2); background: none; color: var(--accent); cursor: pointer; }
   .items .more button:hover { border-color: var(--accent); }
