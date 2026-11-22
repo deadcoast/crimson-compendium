@@ -1,4 +1,5 @@
 node_modules/
 dist/
 dist-pack/
+dist-pack.tmp-*/
 tools/.cache/

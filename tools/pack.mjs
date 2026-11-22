@@ -1,5 +1,5 @@
 // Pack the built site for a host that caps how many files one version may hold (the claude.ai artifact takes
-// 512). Run after `npm run build`: `npm run pack [-- --max 500]` writes dist-pack/.
+// 512). Run after `npm run build`: `npm run pack [-- --max 500]` writes dist-pack/ (Node 18+).
 //
 //   1. Identical images keep one file: every other path that held the same bytes is rewritten in the bundle
 //      to the one kept (several plates share a source and crop, e.g. a vents map).
@@ -9,14 +9,20 @@
 // Nothing is dropped or re-encoded: every image the bundle names is checked to exist (or to be inlined)
 // before the script reports success, and the page is otherwise byte-identical to dist/.
 import { createHash } from 'node:crypto';
-import { cpSync, existsSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, readdirSync, readFileSync, renameSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const ROOT = join(import.meta.dirname, '..');
+const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const SRC = join(ROOT, 'dist');
-const OUT = join(ROOT, 'dist-pack');
+const DEST = join(ROOT, 'dist-pack');
+// the pack is built in its own folder and moved into place only once it checks out, so an interrupted or
+// failed run leaves the previous dist-pack/ as it was
+const OUT = join(ROOT, `dist-pack.tmp-${process.pid}`);
+const fail = (msg) => { rmSync(OUT, { recursive: true, force: true }); console.error(`pack: ${msg}`); process.exit(1); };
 const arg = process.argv.indexOf('--max');
 const MAX = arg > 0 ? Number(process.argv[arg + 1]) : 500;
+if (!Number.isInteger(MAX) || MAX < 1) { console.error(`pack: --max needs a whole number of files, got "${process.argv[arg + 1] ?? ''}"`); process.exit(1); }
 
 if (!existsSync(join(SRC, 'index.html'))) { console.error('pack: no dist/ — run npm run build first'); process.exit(1); }
 rmSync(OUT, { recursive: true, force: true });
@@ -45,7 +51,7 @@ for (const p of images().sort()) {
 let merged = 0;
 for (const [keep, ...dupes] of byHash.values()) {
   for (const d of dupes) {
-    if (!swap(rel(d), rel(keep))) { console.error(`pack: ${rel(d)} is not named in the bundle`); process.exit(1); }
+    if (!swap(rel(d), rel(keep))) fail(`${rel(d)} is not named in the bundle`);
     rmSync(d);
     merged++;
   }
@@ -57,7 +63,7 @@ let inlined = 0;
 for (const p of images().sort((a, b) => statSync(a).size - statSync(b).size)) {
   if (count <= MAX) break;
   const uri = `data:image/webp;base64,${readFileSync(p).toString('base64')}`;
-  if (!swap(rel(p), uri)) { console.error(`pack: ${rel(p)} is not named in the bundle`); process.exit(1); }
+  if (!swap(rel(p), uri)) fail(`${rel(p)} is not named in the bundle`);
   rmSync(p);
   count--;
   inlined++;
@@ -67,6 +73,8 @@ for (const p of texts) writeFileSync(p, code[p]);
 // every image path the bundle still names must exist
 const named = new Set(Object.values(code).flatMap((t) => t.match(/media\/[a-z0-9_/.-]+\.webp/g) ?? []));
 const missing = [...named].filter((m) => !existsSync(join(OUT, m)));
-if (missing.length) { console.error(`pack: ${missing.length} images named but missing, e.g. ${missing[0]}`); process.exit(1); }
-if (count > MAX) { console.error(`pack: ${count} files, over the ${MAX} limit`); process.exit(1); }
+if (missing.length) fail(`${missing.length} images named but missing, e.g. ${missing[0]}`);
+if (count > MAX) fail(`${count} files, over the ${MAX} limit`);
+rmSync(DEST, { recursive: true, force: true });
+renameSync(OUT, DEST);
 console.log(`pack: dist-pack/ · ${count} files (≤ ${MAX}) · ${merged} duplicate images merged · ${inlined} small images inlined`);
