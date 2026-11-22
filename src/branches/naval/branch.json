@@ -1,0 +1,331 @@
+{
+  "id": "naval",
+  "title": "Naval Ships",
+  "singular": "Log",
+  "plural": "Logs",
+  "accent": "coral",
+  "front": "route",
+  "tagline": "A strong fleet fast, a fast ship fast, and the dispatches that earn while you sail: every ship, every material its bill takes, and where to farm each.",
+  "asOf": "Current to Charting the Unknown · patches through 2.05.01 · November 2026",
+  "labels": {
+    "lenses": "Sail for",
+    "how": "Get it",
+    "howOutline": "How to get it",
+    "where": "Where it is",
+    "roam": "At sea — no fixed place",
+    "classAxis": "Kind"
+  },
+  "metrics": [
+    {
+      "id": "speed",
+      "label": "Speed",
+      "blurb": "A ship's Movement Speed. Tier I is Movement 5, Tier V is 1. Not rated for materials or ventures."
+    },
+    {
+      "id": "strength",
+      "label": "Strength",
+      "blurb": "A ship's Health. Tier I is 14,000 or more; II 10,000 to 13,999; III 7,500 to 9,999; IV 5,000 to 7,499; V under 5,000."
+    },
+    {
+      "id": "return",
+      "label": "Return",
+      "blurb": "What it pays back. A ship: its hold (I 36 slots, II 22, III 14, V 6). A material: how much of the fleet waits on it. A venture: what it earns or saves."
+    },
+    {
+      "id": "effort",
+      "label": "Effort",
+      "blurb": "What it takes, in Camp Funds, time and farming. Tier I is a stop on the way; Tier V is a fortune or a long hunt."
+    }
+  ],
+  "rules": [
+    {
+      "lead": "Speed and Strength rate ships only.",
+      "text": "Materials and ventures don't move or take damage, so they carry no rating there."
+    },
+    {
+      "lead": "Return reads by kind.",
+      "text": "A hold for a ship, the ships that wait on it for a material, the Camp Funds or materials a venture earns or saves."
+    },
+    {
+      "lead": "Effort counts the whole bill.",
+      "text": "A legendary rates on its hunt and materials, not just its 750,000 Camp Funds."
+    },
+    {
+      "lead": "Ranked across the tree.",
+      "text": "Every log is ranked against every other: ships, materials and ventures alike."
+    }
+  ],
+  "ladderNote": "Tiers rank each log against every other, on how fast it sails, how much it takes, and what it pays back.",
+  "classes": [
+    {
+      "id": "vessel",
+      "label": "Ships",
+      "glyph": "surface",
+      "ambient": "sea"
+    },
+    {
+      "id": "stock",
+      "label": "Materials",
+      "glyph": "crate",
+      "ambient": "sea"
+    },
+    {
+      "id": "fitting",
+      "label": "Fittings",
+      "glyph": "gear",
+      "ambient": "sky"
+    },
+    {
+      "id": "venture",
+      "label": "Ventures",
+      "glyph": "coin",
+      "ambient": "gold"
+    }
+  ],
+  "leaves": [
+    {
+      "id": "building",
+      "label": "Building",
+      "accent": "deck",
+      "short": "Every ship one plate each, and every material its bill takes.",
+      "blurb": "Each ship on its own plate with its bill to tick off, and each material with the best places to farm it, ranked. Built hulls beat bought ones on speed and price; bought ones win only on hold.",
+      "cover": {
+        "from": "https://oyster.ignimgs.com/mediawiki/apis.ign.com/crimson-desert/5/50/Crimson_Desert_-_Shiny_Ore_Drifting_Box.jpg",
+        "credit": "ign",
+        "focus": "50% 55%",
+        "src": "media/naval/_leaves/building.webp",
+        "w": 1600,
+        "h": 900
+      }
+    },
+    {
+      "id": "eggs",
+      "label": "Easter Eggs",
+      "accent": "ember",
+      "short": "Ships and parts earned by exploring, hunting and sinking.",
+      "blurb": "The four legendary ships and the hidden part blueprints: torn plans on land, a pirate galleon, a ghost ship with no marker, a sail manual behind a waterfall.",
+      "cover": {
+        "entry": "phantom-ship",
+        "role": "hero"
+      }
+    },
+    {
+      "id": "economy",
+      "label": "Fleet Economy",
+      "accent": "gold",
+      "short": "What saves Camp Funds and what earns while you sail.",
+      "blurb": "Gains you don't steer by hand: building instead of buying, island pioneering, the dispatches that farm pearls and Ambergris, crew roles, and hauling.",
+      "cover": {
+        "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Lookout-Crew.jpg",
+        "credit": "keengamer",
+        "focus": "50% 40%",
+        "src": "media/naval/_leaves/economy.webp",
+        "w": 1240,
+        "h": 700
+      }
+    }
+  ],
+  "lenses": [
+    {
+      "id": "speed",
+      "label": "A fast ship",
+      "blurb": "Every ship, fastest first.",
+      "where": {
+        "cls": [
+          "vessel"
+        ]
+      },
+      "sortBy": "speed"
+    },
+    {
+      "id": "strength",
+      "label": "A strong fleet",
+      "blurb": "Every ship, toughest first.",
+      "where": {
+        "cls": [
+          "vessel"
+        ]
+      },
+      "sortBy": "strength"
+    },
+    {
+      "id": "hauling",
+      "label": "Hauling",
+      "blurb": "Every ship, biggest hold first.",
+      "where": {
+        "cls": [
+          "vessel"
+        ]
+      },
+      "sortBy": "return"
+    }
+  ],
+  "categories": [],
+  "route": {
+    "title": "Fastest Fleet",
+    "blurb": "The shortest path from the quest ship to Movement 5 and four legendaries, with the slow timers started first.",
+    "premise": "Charting the Unknown unlocked and the camp expanded. Each phase starts the timers the next one waits on.",
+    "phases": [
+      {
+        "id": "first-hull",
+        "label": "The first hull",
+        "stage": "A Wider World",
+        "cover": {
+          "entry": "build-dont-buy",
+          "capture": 0
+        },
+        "why": "The quest builds a ship that moves at 3 for 10,000 Camp Funds. Never buy a small hull: they all move at 1.",
+        "steps": [
+          {
+            "text": "Run A Call from Beyond the Horizon at Vellua: 600 Stone, 600 Timber, 1,200 Provisions and 5 comrades, one with Engineering.",
+            "entry": "small-greymane-ship"
+          },
+          {
+            "text": "Fit a +2 Speed sail from Joaquin at Port Delesyia as soon as you can sail there.",
+            "entry": "outfitter-parts"
+          },
+          {
+            "text": "Crew it: First Mate, Rigger and Lookout to leave port; Gunners and Carpenters for fights.",
+            "entry": "crew-roles"
+          }
+        ]
+      },
+      {
+        "id": "islands",
+        "label": "Start the slow timers",
+        "stage": "First voyages",
+        "cover": {
+          "entry": "natural-pearl",
+          "role": "hero"
+        },
+        "why": "Pearls gate every legendary and nothing farms them fast, so pioneer Iliya early and let its dispatch run from then on.",
+        "steps": [
+          {
+            "text": "Pioneer Auronui first: its treasure is the Ship Teleportation Device blueprint.",
+            "entry": "island-pioneering"
+          },
+          {
+            "text": "Pioneer Iliya and put the Ruins Excavation dispatch on repeat.",
+            "entry": "island-dispatches"
+          },
+          {
+            "text": "Pioneer Bergen for its Ambergris dispatch.",
+            "entry": "ambergris"
+          }
+        ],
+        "meanwhile": [
+          {
+            "text": "Pick up every drifting box you sail past: Shiny Ore, Manganese, Malachite.",
+            "entry": "shiny-ore"
+          },
+          {
+            "text": "Keep supply dispatches on repeat for Stone, Timber and Provisions.",
+            "entry": "camp-stock"
+          }
+        ]
+      },
+      {
+        "id": "medium",
+        "label": "Movement 4 for 100,000",
+        "stage": "Mid DLC",
+        "cover": {
+          "entry": "malachite",
+          "capture": 0
+        },
+        "why": "The Medium Greymane moves at 4 for a twelfth of a bought medium's 1,200,000, with the same 22-slot hold.",
+        "steps": [
+          {
+            "text": "Dive the Great Ocean Scar cave for 50 Malachite; take 50 more for the Large build while you're down there.",
+            "entry": "malachite"
+          },
+          {
+            "text": "Collect 100 Shiny Ore from drifting boxes and the Auronui deposits.",
+            "entry": "shiny-ore"
+          },
+          {
+            "text": "Start Shipbuilding at a port: 100,000 Camp Funds, 7 comrades, 1 d 12 h.",
+            "entry": "medium-greymane-ship"
+          }
+        ]
+      },
+      {
+        "id": "large",
+        "label": "Movement 5 for one Gold Bar",
+        "stage": "Mid DLC",
+        "cover": {
+          "entry": "hydrothermal-mineral-deposit",
+          "capture": 0
+        },
+        "why": "The Large Greymane reaches the top speed in the game. 500,000 Camp Funds is a single Gold Bar exchanged at a bank.",
+        "steps": [
+          {
+            "text": "One Vents dive: 45 Hydrothermal Deposits with the Knuckle Drill and 20 Manganese from the floor nodes.",
+            "entry": "hydrothermal-mineral-deposit"
+          },
+          {
+            "text": "Exchange a Gold Bar and donate it: 500,000 Camp Funds.",
+            "entry": "camp-funds"
+          },
+          {
+            "text": "Start Large Shipbuilding: 20 comrades, 2 d 10 h.",
+            "entry": "large-greymane-ship"
+          }
+        ]
+      },
+      {
+        "id": "legendaries",
+        "label": "The four legendaries",
+        "stage": "Late DLC",
+        "cover": {
+          "entry": "flagship-of-the-east",
+          "role": "hero"
+        },
+        "why": "Each takes 750,000 Camp Funds, 45,000 Stone and Timber, 90,000 Provisions and 5 pearls. Build the Flagship first: Movement 5, Acceleration 5, 14,000 Health.",
+        "steps": [
+          {
+            "text": "Flagship: two blueprint halves on land, 15 Sea Fan Coral, 50 Malachite; built only at Stoneward Harbor.",
+            "entry": "flagship-of-the-east"
+          },
+          {
+            "text": "Drunken Catfish: sink the galleon west of Samora; 25 Golden Coral, 20 Hydrothermal Deposits.",
+            "entry": "the-drunken-catfish"
+          },
+          {
+            "text": "Assault Ship: four blueprint pieces; 10 salamander hides and 10 Ambergris.",
+            "entry": "assault-ship-of-the-east"
+          },
+          {
+            "text": "Phantom Ship: sink it in the Sea of Silence, dig the blueprint on Iliya; 10 jellyfish skins, 30 Obsidian.",
+            "entry": "phantom-ship"
+          }
+        ],
+        "meanwhile": [
+          {
+            "text": "Find the Giant Golden Compass Sail manual on Ocula Island and the Steam and Clockwork chest west of Iliya.",
+            "entry": "hidden-blueprints"
+          }
+        ]
+      },
+      {
+        "id": "haul",
+        "label": "A hold for hauling",
+        "stage": "When the fleet is fast",
+        "cover": {
+          "entry": "sea-hauling",
+          "role": "portrait"
+        },
+        "why": "Speed is built; space is bought. A large hull's 36 slots are the biggest published hold, at 6,000,000 Camp Funds.",
+        "steps": [
+          {
+            "text": "Buy a large hull at Vellua, Port Delesyia or Port Demeniss; they differ only in Acceleration and Handling.",
+            "entry": "large-hernandian-ship"
+          },
+          {
+            "text": "Carry trade goods on voyages you were making anyway.",
+            "entry": "sea-hauling"
+          }
+        ]
+      }
+    ]
+  }
+}

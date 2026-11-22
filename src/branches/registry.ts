@@ -1,6 +1,6 @@
 // Branch registry — the only file that changes when a branch is added to the tree.
 // A branch = branch.json (leaves, categories, metrics, lenses) + entries.json (data) + optional plate sections
-// + an optional matrix.json (a rows-by-places grid the branch opens on, Materials' Sorter).
+// + an optional matrix.json (a rows-by-columns grid: Materials' Sorter, Naval's Slipway).
 import type { Branch, BranchDef, Category, CategoryLeaf, Entry, MatrixDef, PlateSection, RatingRule } from '../core/types';
 import { matches } from '../core/select';
 import mountsDef from './mounts/branch.json';
@@ -17,6 +17,11 @@ import materialsDef from './materials/branch.json';
 import materialsEntries from './materials/entries.json';
 import materialsMatrix from './materials/matrix.json';
 import MaterialsManifest from './materials/MaterialsManifest.svelte';
+import navalDef from './naval/branch.json';
+import navalEntries from './naval/entries.json';
+import navalMatrix from './naval/matrix.json';
+import NavalBuild from './naval/NavalBuild.svelte';
+import NavalLedger from './naval/NavalLedger.svelte';
 
 /** Fields a plate with a `base` takes from the plate it is about when it leaves them out. Its own
  *  summary, trait, ratings, tags and payload are always its own: they say why it sits in this branch. */
@@ -28,6 +33,7 @@ const RAW: Record<string, Entry[]> = {
   riches: richesEntries as unknown as Entry[],
   qol: qolEntries as unknown as Entry[],
   materials: materialsEntries as unknown as Entry[],
+  naval: navalEntries as unknown as Entry[],
 };
 
 /** A cross-branch reference is exactly "branch/entry", both parts ids; anything else names no plate. */
@@ -104,10 +110,13 @@ function matrix(m: MatrixDef, byId: Map<string, Entry>, fail: (where: string, ms
       if (rows.has(r.id)) fail(`matrix/${sh.id}/${r.id}`, 'duplicate row id');
       rows.add(r.id);
       for (const it of Object.keys(r.stackOf ?? {})) if (!r.items?.includes(it)) fail(`matrix/${sh.id}/${r.id}`, `stackOf names "${it}", which is not one of the row's items`);
+      if (r.entry && !byId.has(r.entry)) fail(`matrix/${sh.id}/${r.id}`, `row names unknown entry "${r.entry}"`);
       for (const [c, cell] of Object.entries(r.cells)) {
         if (!shown.has(c)) fail(`matrix/${sh.id}/${r.id}`, `cell in column "${c}", which the sheet does not show`);
         const mk = typeof cell === 'string' ? cell : cell.mark;
         if (!marks.has(mk)) fail(`matrix/${sh.id}/${r.id}`, `cell mark "${mk}" is not in the legend`);
+        // a value cell prints its value and sorts on its number: one without the other would mislead
+        if (typeof cell !== 'string' && (cell.v === undefined) !== (cell.n === undefined)) fail(`matrix/${sh.id}/${r.id}/${c}`, 'a value cell needs both v and n');
       }
     }
   }
@@ -198,6 +207,7 @@ export const branches: Branch[] = [
   define(richesDef as unknown as BranchDef, inherit('riches', RAW.riches), [RichesLedger]),
   define(qolDef as unknown as BranchDef, inherit('qol', RAW.qol), [QolRemedy]),
   define({ ...materialsDef, matrix: materialsMatrix } as unknown as BranchDef, inherit('materials', RAW.materials), [MaterialsManifest]),
+  define({ ...navalDef, matrix: navalMatrix } as unknown as BranchDef, inherit('naval', RAW.naval), [NavalBuild, NavalLedger]),
 ];
 
 // every cross-branch pointer names a real plate in another branch

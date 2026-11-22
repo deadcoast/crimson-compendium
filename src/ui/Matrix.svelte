@@ -4,6 +4,8 @@
   // and mechanics against the same places ("what reads it"). A search finds the row an item belongs to and
   // answers in one line; a readout pinned to the bottom explains whatever cell the pointer or the keyboard is
   // on. Column heads are the plates that explain each place. On a phone the grid becomes one card per row.
+  // Naval uses it as the Slipway: value cells (a number printed, shaded against its column), heads that sort,
+  // rows that link to their plates, and a search that also finds a column and totals it.
   import { app } from '../core/state.svelte';
   import { href, mediaUrl } from '../core/tree';
   import { PUBLISHERS } from '../core/format';
@@ -17,7 +19,9 @@
   let sheetId = $state(''); // '' is the first sheet
   const sheet = $derived(m.sheets.find((s) => s.id === sheetId) ?? m.sheets[0]);
   const cols = $derived((sheet.cols ?? m.cols.map((c) => c.id)).map((id) => m.cols.find((c) => c.id === id)!).filter(Boolean));
-  const searchable = $derived(sheet.rows.some((r) => r.items?.length));
+  const findCols = $derived(!!m.find?.cols);
+  const searchable = $derived(sheet.rows.some((r) => r.items?.length) || findCols);
+  const blank = $derived(m.blank ?? 'No source puts it here.');
   const itemCount = $derived(sheet.rows.reduce((n, r) => n + (r.items?.length ?? 0), 0));
 
   // the palette can hand over an item to look up; take it once, on the sheet that names it (the reader may
@@ -37,10 +41,13 @@
   const markOf = (c?: MatrixCell) => (!c ? '' : typeof c === 'string' ? c : c.mark);
   const noteOf = (c?: MatrixCell) => (c && typeof c === 'object' ? c.note : undefined);
   const byOf = (r: MatrixRow, c?: MatrixCell) => (c && typeof c === 'object' && c.by) || r.by;
+  const valOf = (c?: MatrixCell) => (c && typeof c === 'object' ? c.v : undefined);
+  const numOf = (c?: MatrixCell) => (c && typeof c === 'object' ? c.n : undefined);
   const markDef = (id: string) => m.marks.find((x) => x.id === id);
   const entryOf = (c: MatrixCol) => (c.entry ? branch.byId.get(c.entry) : undefined);
+  const rowEntry = (r: MatrixRow) => (r.entry ? branch.byId.get(r.entry) : undefined);
 
-  const norm = (s: string) => s.toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/[’‘]/g, "'").trim();
+  const norm = (s: string) => s.toLowerCase().normalize('NFKD').replace(/[̀-ͯ­]/g, '').replace(/[’‘]/g, "'").trim();
   /** rows the query matches, each with the item names it matched (or none when the family name matched) */
   const matches = $derived.by(() => {
     const t = norm(q);
@@ -53,17 +60,67 @@
     return out;
   });
   const answers = $derived(sheet.rows.filter((r) => matches.has(r.id)).slice(0, 4));
+  /** columns the query names (a material), each with the rows that have a cell there and their total */
+  const colHits = $derived.by(() => {
+    const t = norm(q);
+    if (!t || !findCols) return [];
+    return cols
+      .filter((c) => norm(c.label).includes(t) || (c.short && norm(c.short).includes(t)))
+      .map((c) => {
+        const rows = sheet.rows.filter((r) => r.cells[c.id]);
+        return { col: c, rows, total: c.sum ? rows.reduce((n, r) => n + (numOf(r.cells[c.id]) ?? 0), 0) : undefined };
+      })
+      .filter((h) => h.rows.length)
+      .slice(0, 2);
+  });
+  const lit = (r: MatrixRow) => matches.has(r.id) || colHits.some((h) => r.cells[h.col.id]);
+  const found = (c: MatrixCol) => colHits.some((h) => h.col.id === c.id);
+  const miss = $derived(m.find ? m.find.miss.replace('{q}', q) : `Nothing named “${q}”. Try a family: “ore”, “fish”, “meal”.`);
 
-  // rows in order, with a group heading wherever the group changes
+  // sorting: a head cycles from its better end (largest, or smallest for a cost) to the other, then off
+  let sortBy = $state<{ col: string; dir: 1 | -1 } | null>(null);
+  function sortOn(c: MatrixCol) {
+    const first: 1 | -1 = c.low ? 1 : -1;
+    if (!sortBy || sortBy.col !== c.id) sortBy = { col: c.id, dir: first };
+    else if (sortBy.dir === first) sortBy = { col: c.id, dir: first === 1 ? -1 : 1 };
+    else sortBy = null;
+  }
+  /** row indices in display order: the sheet's, or by the sorted column's numbers with blanks last */
+  const order = $derived.by(() => {
+    const idx = sheet.rows.map((_, i) => i);
+    if (!sortBy) return idx;
+    const { col, dir } = sortBy;
+    return idx.sort((a, b) => {
+      const x = numOf(sheet.rows[a].cells[col]);
+      const y = numOf(sheet.rows[b].cells[col]);
+      if (x === undefined || y === undefined) return x === y ? a - b : x === undefined ? 1 : -1;
+      return (x - y) * dir || a - b;
+    });
+  });
+  const sortLabel = (c: MatrixCol) => (sortBy?.col !== c.id ? '↕' : sortBy.dir === 1 ? '↑' : '↓');
+
+  // shading: each value against the largest in its column
+  const colMax = $derived.by(() => {
+    const out: Record<string, number> = {};
+    if (sheet.heat) for (const c of cols) out[c.id] = Math.max(0, ...sheet.rows.map((r) => numOf(r.cells[c.id]) ?? 0));
+    return out;
+  });
+  const heatOf = (r: MatrixRow, c: MatrixCol) => {
+    const n = numOf(r.cells[c.id]);
+    return n !== undefined && colMax[c.id] ? n / colMax[c.id] : undefined;
+  };
+
+  // rows in display order, with a group heading wherever the group changes (none while sorted)
   type Line = { kind: 'group'; label: string } | { kind: 'row'; row: MatrixRow; i: number };
   const lines = $derived.by(() => {
     const out: Line[] = [];
     let last: string | undefined;
-    sheet.rows.forEach((row, i) => {
-      if (row.group && row.group !== last) out.push({ kind: 'group', label: row.group });
+    for (const i of order) {
+      const row = sheet.rows[i];
+      if (!sortBy && row.group && row.group !== last) out.push({ kind: 'group', label: row.group });
       last = row.group;
       out.push({ kind: 'row', row, i });
-    });
+    }
     return out;
   });
 
@@ -82,7 +139,7 @@
   const atRow = $derived(at ? sheet.rows[at.r] : undefined);
   const atCol = $derived(at ? cols[at.c] : undefined);
   const atCell = $derived(atRow && atCol ? atRow.cells[atCol.id] : undefined);
-  $effect(() => { void sheetId; hover = null; pinned = null; focus = { r: 0, c: 0 }; });
+  $effect(() => { void sheetId; hover = null; pinned = null; focus = { r: 0, c: 0 }; sortBy = null; });
 
   let table: HTMLTableElement | undefined = $state();
   // the toolbar's real height (it wraps on narrow screens), so the column heads pin right under it
@@ -90,7 +147,9 @@
   function move(ev: KeyboardEvent) {
     const d: Record<string, [number, number]> = { ArrowUp: [-1, 0], ArrowDown: [1, 0], ArrowLeft: [0, -1], ArrowRight: [0, 1] };
     let next: { r: number; c: number } | undefined;
-    if (d[ev.key]) next = { r: Math.max(0, Math.min(sheet.rows.length - 1, focus.r + d[ev.key][0])), c: Math.max(0, Math.min(cols.length - 1, focus.c + d[ev.key][1])) };
+    // up and down follow the rows as shown, which a sort reorders
+    const pos = order.indexOf(focus.r);
+    if (d[ev.key]) next = { r: order[Math.max(0, Math.min(order.length - 1, pos + d[ev.key][0]))], c: Math.max(0, Math.min(cols.length - 1, focus.c + d[ev.key][1])) };
     else if (ev.key === 'Home') next = { r: focus.r, c: 0 };
     else if (ev.key === 'End') next = { r: focus.r, c: cols.length - 1 };
     if (!next) return;
@@ -128,7 +187,7 @@
       {#each m.marks as mk, i (mk.id)}
         <li style:--i={i}><Mark id={mk.id} /><b>{mk.label}</b><span>{mk.text}</span></li>
       {/each}
-      <li style:--i={m.marks.length}><span class="blank" aria-hidden="true"></span><b>Blank</b><span>No source puts it here.</span></li>
+      <li style:--i={m.marks.length}><span class="blank" aria-hidden="true"></span><b>Blank</b><span>{blank}</span></li>
     </ol>
   </header>
 
@@ -143,18 +202,32 @@
     {#if searchable}
       <label class="find">
         <Glyph name="search" size={15} />
-        <span class="sr-only">Find an item</span>
-        <input bind:value={q} placeholder="Find an item — “fruit fly”, “azurite”, “hay”" autocomplete="off" spellcheck="false" />
+        <span class="sr-only">{m.find ? 'Find' : 'Find an item'}</span>
+        <input bind:value={q} placeholder={m.find?.placeholder ?? 'Find an item — “fruit fly”, “azurite”, “hay”'} autocomplete="off" spellcheck="false" />
         {#if q}<button class="clear" onclick={() => (q = '')} aria-label="Clear search"><Glyph name="close" size={13} /></button>{/if}
       </label>
     {/if}
-    <p class="count mono">{sheet.rows.length} {plural(sheet.rowLabel.toLowerCase(), sheet.rows.length)} · {cols.length} places{itemCount ? ` · ${itemCount} items named` : ''}</p>
+    <p class="count mono">{sheet.rows.length} {plural(sheet.rowLabel.toLowerCase(), sheet.rows.length)} · {cols.length} {plural(sheet.colLabel ?? 'place', cols.length)}{itemCount ? ` · ${itemCount} items named` : ''}</p>
   </div>
 
   <p class="sheet-blurb">{sheet.blurb}</p>
 
   {#if q && searchable}
     <div class="answers" aria-live="polite">
+      {#each colHits as h (h.col.id)}
+        <div class="answer">
+          <p class="what">
+            {#if h.col.entry}<a class="cname" href={href.entry(branch, h.col.entry)}>{h.col.label}</a>{:else}<b>{h.col.label}</b>{/if}<span class="arrow">→</span>
+            <span class="fam">{h.rows.length} {plural(sheet.rowLabel.toLowerCase(), h.rows.length)}{#if h.total !== undefined} · <b class="tot mono">{h.total.toLocaleString('en-US')}</b> in all{/if}</span>
+          </p>
+          <ul class="vals">
+            {#each h.rows as r (r.id)}
+              {@const re = rowEntry(r)}
+              <li>{#if re}<a href={href.entry(branch, re.id)}>{r.label}</a>{:else}<span>{r.label}</span>{/if}<span class="mono">{valOf(r.cells[h.col.id]) ?? markDef(markOf(r.cells[h.col.id]))?.label}</span></li>
+            {/each}
+          </ul>
+        </div>
+      {/each}
       {#each answers as r (r.id)}
         {@const got = matches.get(r.id) ?? []}
         {@const st = got.length === 1 ? stackOf(r, got[0]) : r.stack}
@@ -167,14 +240,13 @@
             {#each placements(r) as p (p.mark.id)}
               <li data-mark={p.mark.id}>
                 <Mark id={p.mark.id} size={13} /><span class="ml">{p.mark.label}</span>
-                {#each p.cols as c, ci (c.id)}{#if ci}<span class="sep">·</span>{/if}{#if c.entry}<a href={href.entry(branch, c.entry)}>{c.label}</a>{:else}<span>{c.label}</span>{/if}{/each}
+                {#each p.cols as c, ci (c.id)}{#if ci}<span class="sep">·</span>{/if}{#if c.entry}<a href={href.entry(branch, c.entry)}>{c.label}</a>{:else}<span>{c.label}</span>{/if}{#if valOf(r.cells[c.id])}<span class="val mono">{valOf(r.cells[c.id])}</span>{/if}{/each}
               </li>
             {/each}
           </ul>
         </div>
-      {:else}
-        <p class="none">Nothing named “{q}”. Try a family: “ore”, “fish”, “meal”.</p>
       {/each}
+      {#if !answers.length && !colHits.length}<p class="none">{miss}</p>{/if}
     </div>
   {/if}
 
@@ -186,7 +258,7 @@
         <th scope="col" class="corner"><span class="eyebrow">{sheet.rowLabel}</span></th>
         {#each cols as c, ci (c.id)}
           {@const e = entryOf(c)}
-          <th scope="col" class:hot={at?.c === ci} style:--i={ci}>
+          <th scope="col" class:hot={at?.c === ci} class:found={found(c)} style:--i={ci} aria-sort={sortBy?.col === c.id ? (sortBy.dir === 1 ? 'ascending' : 'descending') : undefined}>
             {#if e}
               <a href={href.entry(branch, e.id)} title={c.label}>
                 <span class="pt"><img src={mediaUrl(e.media.portrait.src)} alt="" loading="lazy" /></span>
@@ -197,6 +269,9 @@
               <span class="cl">{c.short ?? c.label}</span>
             {/if}
             {#if c.slots}<span class="slots mono">{c.slots}</span>{/if}
+            {#if sheet.sort}
+              <button class="sort mono" class:on={sortBy?.col === c.id} onclick={() => sortOn(c)} aria-label="Sort by {c.label}">{sortLabel(c)}</button>
+            {/if}
           </th>
         {/each}
       </tr>
@@ -207,10 +282,15 @@
           <tr class="group"><th colspan={cols.length + 1} scope="colgroup"><span>{l.label}</span></th></tr>
         {:else}
           {@const r = l.row}
-          {@const hit = matches.has(r.id)}
+          {@const hit = lit(r)}
+          {@const re = rowEntry(r)}
           <tr data-row={l.i} class:hot={at?.r === l.i} class:hit class:dim={!!q && searchable && !hit} style:--i={l.i}>
             <th scope="row">
-              <span class="rl">{r.label}</span>
+              {#if re}
+                <a class="rlink" href={href.entry(branch, re.id)}><span class="rp"><img src={mediaUrl(re.media.portrait.src)} alt="" loading="lazy" /></span><span class="rl">{r.label}</span></a>
+              {:else}
+                <span class="rl">{r.label}</span>
+              {/if}
               <span class="meta">
                 {#if r.stack}<span class="stk mono" class:hog={r.stack === 1} title={r.stack === 1 ? 'Does not stack: each one takes a slot' : `${r.stack} to a slot`}>{stackLabel(r)}</span>{/if}
                 {#if r.items?.length}<span class="n mono">{r.items.length}</span>{/if}
@@ -218,12 +298,14 @@
             </th>
             {#each cols as c, ci (c.id)}
               {@const mk = markOf(r.cells[c.id])}
-              <td class:hot={at?.c === ci} class:pin={pinned?.r === l.i && pinned?.c === ci} data-mark={mk || 'blank'}>
+              {@const v = valOf(r.cells[c.id])}
+              {@const heat = heatOf(r, c)}
+              <td class:hot={at?.c === ci} class:found={found(c)} class:heat={heat !== undefined} class:pin={pinned?.r === l.i && pinned?.c === ci} data-mark={mk || 'blank'} style:--heat={heat}>
                 <button
                   data-r={l.i}
                   data-c={ci}
                   tabindex={focus.r === l.i && focus.c === ci ? 0 : -1}
-                  aria-label="{r.label} in {c.label}: {mk ? markDef(mk)?.label : 'no source puts it here'}{noteOf(r.cells[c.id]) ? `. ${noteOf(r.cells[c.id])}` : ''}"
+                  aria-label="{r.label} in {c.label}: {v ? `${v}, ` : ''}{mk ? markDef(mk)?.label : blank.toLowerCase()}{noteOf(r.cells[c.id]) ? `. ${noteOf(r.cells[c.id])}` : ''}"
                   aria-pressed={pinned?.r === l.i && pinned?.c === ci}
                   onmouseenter={() => (hover = { r: l.i, c: ci })}
                   onfocus={(ev) => {
@@ -233,7 +315,7 @@
                   }}
                   onclick={() => pick(l.i, ci)}
                 >
-                  {#if mk}<Mark id={mk} />{/if}
+                  {#if v}<span class="v">{v}</span>{:else if mk}<Mark id={mk} />{/if}
                   {#if noteOf(r.cells[c.id])}<i class="noted" aria-hidden="true"></i>{/if}
                 </button>
               </td>
@@ -247,14 +329,15 @@
   <!-- phone: one card per row -->
   <ol class="cards">
     {#each sheet.rows as r (r.id)}
-      {@const hit = matches.has(r.id)}
+      {@const hit = lit(r)}
+      {@const re = rowEntry(r)}
       <li class:dim={!!q && searchable && !hit}>
-        <p class="ct"><b>{r.label}</b>{#if r.stack}<span class="stk mono" class:hog={r.stack === 1}>{stackLabel(r)}</span>{/if}</p>
+        <p class="ct">{#if re}<a href={href.entry(branch, re.id)}><b>{r.label}</b></a>{:else}<b>{r.label}</b>{/if}{#if r.stack}<span class="stk mono" class:hog={r.stack === 1}>{stackLabel(r)}</span>{/if}</p>
         <ul class="where">
           {#each placements(r) as p (p.mark.id)}
             <li data-mark={p.mark.id}>
               <Mark id={p.mark.id} size={13} /><span class="ml">{p.mark.label}</span>
-              {#each p.cols as c, ci (c.id)}{#if ci}<span class="sep">·</span>{/if}{#if c.entry}<a href={href.entry(branch, c.entry)}>{c.short ?? c.label}</a>{:else}<span>{c.short ?? c.label}</span>{/if}{/each}
+              {#each p.cols as c, ci (c.id)}{#if ci}<span class="sep">·</span>{/if}{#if c.entry}<a href={href.entry(branch, c.entry)}>{c.short ?? c.label}</a>{:else}<span>{c.short ?? c.label}</span>{/if}{#if valOf(r.cells[c.id])}<span class="val mono">{valOf(r.cells[c.id])}</span>{/if}{/each}
             </li>
           {/each}
         </ul>
@@ -268,10 +351,10 @@
       {@const mk = markOf(atCell)}
       <div class="ro-where">
         {#if mk}<Mark id={mk} size={18} />{:else}<span class="blank" aria-hidden="true"></span>{/if}
-        <p><b>{atRow.label}</b><span class="in">in</span><b>{atCol.label}</b>{#if atCol.slots}<span class="mono">{atCol.slots}</span>{/if}</p>
+        <p><b>{atRow.label}</b><span class="in">in</span><b>{atCol.label}</b>{#if valOf(atCell)}<span class="val mono">{valOf(atCell)}</span>{/if}{#if atCol.slots}<span class="mono">{atCol.slots}</span>{/if}</p>
       </div>
       <p class="ro-says">
-        {#if mk}<em>{markDef(mk)?.label}.</em> {markDef(mk)?.text}{:else}No source puts it here.{/if}
+        {#if mk}<em>{markDef(mk)?.label}.</em> {markDef(mk)?.text}{:else}{blank}{/if}
         {#if noteOf(atCell)} {noteOf(atCell)}{/if}
         {#if mk}<span class="by">· {PUBLISHERS[byOf(atRow, atCell)] ?? byOf(atRow, atCell)}</span>{/if}
       </p>
@@ -280,7 +363,12 @@
       {:else if atRow.note}
         <p class="ro-items">{atRow.note}</p>
       {/if}
-      {#if atCol.entry}<a class="ro-go" href={href.entry(branch, atCol.entry)}>Open {atCol.label}<Glyph name="right" size={12} /></a>{/if}
+      {#if atRow.entry || atCol.entry}
+        <div class="ro-links">
+          {#if atRow.entry}<a class="ro-go" href={href.entry(branch, atRow.entry)}>Open {atRow.label}<Glyph name="right" size={12} /></a>{/if}
+          {#if atCol.entry}<a class="ro-go" href={href.entry(branch, atCol.entry)}>Open {atCol.label}<Glyph name="right" size={12} /></a>{/if}
+        </div>
+      {/if}
     {:else}
       <p class="ro-hint">Point at a cell, or Tab into the grid and use the arrow keys. Click a cell to keep it here.</p>
     {/if}
@@ -358,6 +446,15 @@
   .where [data-mark='home'] a { color: var(--accent); }
   .where .sep { color: var(--ash-2); }
   .none { font-size: 13.5px; color: var(--ash); }
+  .cname { font-weight: 600; color: var(--bone); border-bottom: 1px solid var(--line-2); }
+  .cname:hover { border-bottom-color: var(--accent); }
+  .tot { color: var(--accent); font-weight: 600; }
+  .vals { display: flex; flex-wrap: wrap; gap: 5px 14px; margin-top: 8px; }
+  .vals li { display: inline-flex; align-items: baseline; gap: 6px; font-size: 12.5px; color: var(--bone-2); }
+  .vals a { color: var(--bone); border-bottom: 1px solid var(--line-2); }
+  .vals a:hover { border-bottom-color: var(--accent); }
+  .vals .mono, .val { font-size: 11px; color: var(--accent); }
+  .val { margin-left: 2px; }
   .stk { font-size: 10.5px; padding: 0 5px; border: 1px solid var(--line-2); border-radius: 2px; color: var(--bone-2); }
   .stk.hog { color: var(--ember); border-color: color-mix(in srgb, var(--ember) 50%, transparent); }
 
@@ -383,6 +480,13 @@
   .cl { display: block; font-size: 11px; line-height: 1.2; color: var(--bone-2); text-wrap: balance; }
   .slots { display: block; margin-top: 4px; font-size: 9.5px; color: var(--ash); letter-spacing: 0.02em; }
   thead th.corner { left: 0; z-index: 5; width: var(--row-w); text-align: left; padding-left: 0; }
+  .sort { display: block; margin: 6px auto 0; padding: 1px 8px; font-size: 10.5px; line-height: 1.4; border: 1px solid var(--line); border-radius: 999px; color: var(--ash); transition: color var(--t-micro), border-color var(--t-micro); }
+  .sort:hover { color: var(--bone); border-color: var(--line-3); }
+  .sort.on { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 55%, transparent); background: var(--accent-dim); }
+  .sort:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 1px; }
+  thead th.found .cl { color: var(--accent); }
+  thead th.found .pt { box-shadow: 0 0 0 1.5px var(--accent); }
+  td.found { background: color-mix(in srgb, var(--accent) 7%, transparent); }
   .corner .eyebrow { font-size: 10px; }
 
   tbody th[scope='row'] {
@@ -393,6 +497,10 @@
   }
   /* label and stack on one line, so a row is no taller than its cells */
   .rl { font-size: 13.5px; line-height: 1.3; color: var(--bone); }
+  .rlink { display: inline-flex; align-items: center; gap: 9px; max-width: 100%; }
+  .rlink:hover .rl { color: var(--accent); }
+  .rp { flex: none; width: 26px; height: 26px; border-radius: 50%; overflow: hidden; box-shadow: 0 0 0 1px var(--line-2); }
+  .rp img { width: 100%; height: 100%; object-fit: cover; }
   .meta { display: inline-flex; gap: 6px; align-items: center; margin-left: 8px; vertical-align: 1px; }
   .meta .n { font-size: 10px; color: var(--ash); }
   tr.group th { padding: 18px 0 6px; text-align: left; border-bottom: 1px solid var(--line-2); background: var(--ink-0); position: sticky; left: 0; }
@@ -406,6 +514,10 @@
   td[data-mark='home'] { background: color-mix(in srgb, var(--accent) 9%, transparent); }
   td[data-mark='blank'] button::after { content: ''; width: 8px; height: 1px; background: var(--line-2); }
   .noted { position: absolute; top: 6px; right: 7px; width: 4px; height: 4px; border-radius: 50%; background: var(--ash); }
+  /* a value cell prints its number; shading compares it with the largest in its column */
+  td .v { position: relative; font-family: var(--f-mono); font-size: 11px; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; color: var(--bone); white-space: nowrap; }
+  td[data-mark='buy'] .v { color: var(--brass); }
+  td.heat button::before { content: ''; position: absolute; inset: 0; background: var(--accent); opacity: calc(var(--heat) * 0.3); pointer-events: none; }
   /* crosshair: the row and column under the pointer light up together */
   tr.hot th[scope='row'] { background: linear-gradient(90deg, var(--ink-0) 60%, var(--accent-dim)); }
   tr.hot th[scope='row'] .rl { color: var(--accent); }
@@ -433,11 +545,13 @@
   .ro-where p { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; font-size: 14.5px; color: var(--bone); }
   .ro-where .in { color: var(--ash); font-size: 12px; }
   .ro-where .mono { font-size: 10.5px; color: var(--ash); }
+  .ro-where .val { font-size: 13px; color: var(--accent); }
   .ro-says { grid-area: says; font-size: 13px; line-height: 1.5; color: var(--bone-2); }
   .ro-says em { font-style: normal; color: var(--bone); font-weight: 600; }
   .ro-says .by { color: var(--ash); font-size: 11.5px; }
   .ro-items { grid-area: items; font-size: 11.5px; line-height: 1.5; color: var(--ash); }
-  .ro-go { grid-area: go; align-self: center; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 12.5px; color: var(--bone); white-space: nowrap; }
+  .ro-links { grid-area: go; align-self: center; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; }
+  .ro-go { align-self: center; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid var(--line-2); border-radius: 999px; font-size: 12.5px; color: var(--bone); white-space: nowrap; }
   .ro-go:hover { border-color: var(--accent); background: var(--accent-dim); }
   .ro-hint { grid-column: 1 / -1; align-self: center; font-size: 12.5px; color: var(--ash); }
 

@@ -4,6 +4,28 @@ All notable changes to the Crimson Compendium. Versions follow [Semantic Version
 
 ## [Unreleased]
 
+A fifth tree, **Naval Ships**: a strong fleet fast, a fast ship fast, and the gains that come while you sail.
+
+### Added
+
+- **Naval Ships**, a fifth branch: 41 plates in three leaves.
+  - **Building**: every ship on its own plate (3 Greymane builds, 9 bought hulls, 4 rowboats) and every material a bill takes, from Natural Pearls to Ambergris, each with its farm methods ranked Best, Good, Slow.
+  - **Easter Eggs**: the four legendary ships and the hidden part blueprints, each with what its hunt winks at and a full-width banner.
+  - **Fleet Economy**: Build, Don't Buy; Island Pioneering; Island Dispatches; Crew Roles; Sea Hauling.
+  - **Fastest Fleet** (`#naval`, the front door): six phases from the quest ship to Movement 5 and the legendaries, slow timers first.
+  - **The Slipway** (`#naval-slipway`): 20 ships against every bill line, and against every stat. Values in the cells, shaded by column; sortable heads; ship rows link their plates; search a material for every ship that needs it and the total.
+  - **Build sheet** on every ship: stats as gauges, the verdict against its twin, and for a built ship a checklist bill: tick what you hold (kept in this browser), a ring counts it, and each line opens to where to farm it.
+  - **Ledger** on every other plate: the ships waiting on a material and the total, ranked methods, uses, figures, crew roles, tips and patches.
+  - Lenses *Sail for*: A fast ship, A strong fleet, Hauling. Ratings: Speed, Strength, Return and Effort, I–V. A coral root accent.
+  - Research notes with every source and conflict: `docs/NAVAL-RESEARCH.md`.
+- **The matrix view takes values**: printed numbers, column shading, sortable heads, rows that link their plates, and a search that totals a column. The Sorter is unchanged.
+
+### Fixed
+
+- Materials: *Amberress* is **Ambergris**, as the game spells it.
+- Materials: Shipbuilding Stock lists the Medium and Large builds' bills, and Ocean Materials says where Sea Fan Coral and Malachite are.
+- The selected class chip's count is readable over a bright leaf cover.
+
 ## [0.4.0] — 2026-11-21
 
 A fourth tree, **Materials**: where every item goes and what reads it, across house, ship and mount storage.

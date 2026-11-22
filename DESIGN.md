@@ -296,6 +296,36 @@ You asked for Materials on 2026-11-21: a tree that speeds up the game's cluttere
   - The Wells Military Stirrups recipe was read off Gaming ProMax's in-game screenshot (basis: screenshot).
 - **Core changes MT1 made**: the generic matrix view, `front`, a `grid` explorer row, `Mark.svelte`, palette item search, list keys by branch and entry (two branches now share plate ids, as `private-storage`), the lint's matrix checks and its rule that any credited payload line names a known publisher, and verify's matrix, front-door and phone-card checks, run in the registry's branch order.
 
+## Naval Ships tree — decisions
+
+You asked for Naval Ships on 2026-11-21, with three purposes (a strong fleet fast, a fast ship fast, and economy gains from building, dispatches, pioneering, hauling and other tasks you don't steer) and two branches fixed by you: **Building** and **Easter Eggs**. You allowed more branches only where essential. NT1 shipped it with 41 plates, the Fastest Fleet route and the Slipway. The research, with sources and conflicts, is in `docs/NAVAL-RESEARCH.md`.
+
+- **Where it sits.** A fifth root (`#naval…`), `src/branches/naval/`. The noun is *Log* *(my call)*. Its accent is a new `--coral` (#ef8fb3, 8.8:1 on ink-0, 6.7:1 on ink-4), a pink clear of crimson, ember and violet. Leaves reuse accents that already mean the same thing: Building deck (ships), Easter Eggs ember (Mounts' legendary leaf), Fleet Economy gold (money).
+- **One added leaf, Fleet Economy** *(my call)*. Your third purpose is not a ship or a material: it is building instead of buying, pioneering, island dispatches, crew roles and hauling. Without a leaf those five plates would crowd Building. No other leaf was added.
+- **Building holds every ship one plate each** (3 Greymane builds, 9 bought hulls, 4 rowboats) and every material a bill names: the 11 ocean materials, plus Camp Funds, Camp Stock and Comrades as bill lines, and Outfitter Parts for the +2 Speed sail. **Easter Eggs** holds the four legendary ships (each with what its hunt winks at) and the Hidden Ship Blueprints.
+- **Nothing is written twice.** Every ship takes its stats, routes and media from its Mounts plate through `base`; the legendaries take their own full-width KeenGamer heroes. Camp Funds, Camp Stock, Comrades, Outfitter Parts, Hidden Blueprints, Island Pioneering, Crew Roles and Sea Hauling take their how-to from a Riches or Materials plate.
+- **The front door is the route** *(my call)*: **Fastest Fleet** (`#naval`), six phases from the quest ship to the legendaries, with the slow timers (Iliya's pearl dispatch) started second. Every step links its plate.
+- **The Slipway** (`#naval-slipway`), the generic matrix grown to hold values:
+  - *The bill*: 20 ships against 16 bill lines (Camp Funds, Stone, Timber, Provisions, Comrades and the 11 ocean materials). Each cell prints the number.
+  - *The stats*: 20 ships against Movement, Acceleration, Handling, Health, Hold, Cost and Build time.
+  - *Marks*: □ Build needs, ⦶ Price (bought), ▮ Stat, dashed ○ Unpublished. A blank cell means not needed.
+  - *Use*: every head sorts (largest first; smallest first for Cost and Time; a third press restores the groups). Cells are shaded against the largest in their column. Row heads link the ship's plate with its portrait. A search finds a ship by name or a material by name; a material answers with every ship that needs it and the total (*Natural Pearl → 4 ships · 20 in all*). The readout links both the ship and the material.
+- **The build sheet** (`NavalBuild.svelte`), on every ship: Movement, Acceleration and Handling as five pips, Health, Hold and build time; the verdict on it against its cheaper or faster twin; where it's built or sold. A built ship's bill is a checklist: tick what you hold (kept per ship in this browser, `cc:naval:<ship>`), a ring counts them, and each line opens to the material's two best farm methods, which other ships take it, and a link to its plate. The bill is read off the Slipway, so the grid and the plate can't disagree.
+- **The ledger** (`NavalLedger.svelte`), on every other plate: for a billed material, every ship that waits on it and the total; then the ways to get it ranked Best, Good, Slow, each with where, the yield and the publisher; uses outside ships, figures, crew roles, tips, patches and Watch out.
+- **Lenses** *(my call)*: *Sail for* A fast ship (Speed), A strong fleet (Strength), Hauling (Return), over the 20 ships.
+- **Four classes** *(my call)*: Ships (surface glyph, sea ambient, deck), Materials (crate, sea, sea teal), Fittings (gear, sky, brass), Ventures (coin, gold, gold).
+- **Metrics**, Tier I the good end, ranked across the tree:
+  - **Speed**: Movement Speed, I is 5 and V is 1. Ships only.
+  - **Strength**: Health. I is 14,000 or more, II 10,000–13,999, III 7,500–9,999, IV 5,000–7,499, V under 5,000. Ships only.
+  - **Return**: a ship's hold (I 36, II 22, III 14, V 6); for a material, how much of the fleet waits on it; for a venture, what it earns or saves.
+  - **Effort**: Camp Funds, time and farming together, so a legendary rates on its hunt, not just its 750,000.
+- **Calls a reader should know about**:
+  - *Build, don't buy* is the tree's main verdict: every Greymane build is faster than the bought hull its size and costs a twelfth as much at medium and large. A bought large hull wins only on its 36-slot hold.
+  - *Golden Coral, Giant Jellyfish Skin and Ambergris* have no published picture. Their plates show the ship each builds, and a capture of the build menu that lists it, captioned as such *(my call)*.
+  - *Ambergris*: the in-game build menu spells it so; the Materials tree's *Amberress* is corrected.
+  - The conflicts in `docs/NAVAL-RESEARCH.md` (where a legendary's materials must sit, where the Phantom and Assault ships are built, the pearl rate) are shown on the plates, not settled.
+- **Core changes NT1 made**: value cells (`v`, `n`), `sum` and `low` columns, `entry` rows, sortable and shaded sheets, `colLabel`, the matrix's `find` wording and column search, and `blank`, in the generic matrix view; three new marks in `Mark.svelte`; registry, lint and verify checks for each (values, row links, sort order and aria-sort, column totals, the build sheet's ticks surviving a reload); and the IGN image credit. Materials gained the Medium and Large shipbuilding bills, which were listed as unpublished.
+
 ## Known gaps
 
 Left out for lack of reliable data or real imagery:
@@ -323,7 +353,8 @@ Left out for lack of reliable data or real imagery:
   - *Stamina from one source*: the iguanas, raptor, Rosehorn Deer, Kuku Bird and camel take Stamina from GamingBolt alone, and GamingBolt's Ibex (250) disagrees with crimsondesert.gg's (200). The Leaping Kuku Bird's Health is 400 (GamingBolt) or 300 (crimsondesert.gg); its plate notes both.
 - **Common boar stats**: no source publishes them.
 - **QOL plates without a banner**: Kuku Cooler and Axiom Force (every wide shot is a menu or a split cutscene) and Movement Speed Gear (only item icons). They keep the framed portrait.
-- **Materials facts no source pins** (the plates and the Sorter say so): wagon slot counts; Island Storage's size and how it opens (Vulkk's database is the only source); the Medium and Large shipbuilding costs; the Wells Military pieces other than the Stirrups and Barding; whether alchemy, the Workstation or a quest reads a house chest; what the Gatherables Chest refuses (cloth, reagents, insects, mushrooms and sea materials show as Reported); whether the cooler still takes mushrooms after 1.16; the Private Storage tabs promised in 1.04.
+- **Materials facts no source pins** (the plates and the Sorter say so): wagon slot counts; Island Storage's size and how it opens (Vulkk's database is the only source); the Wells Military pieces other than the Stirrups and Barding; whether alchemy, the Workstation or a quest reads a house chest; what the Gatherables Chest refuses (cloth, reagents, insects, mushrooms and sea materials show as Reported); whether the cooler still takes mushrooms after 1.16; the Private Storage tabs promised in 1.04.
+- **Naval facts no source pins** (the plates say so): a picture of Golden Coral, Giant Jellyfish Skin or an Ambergris node; the pearl dispatch's real rate; where the Phantom and Assault ships must be built; whether a legendary's materials must be in the bag or Private Storage; any sea trade route's profit; what Bergen's dispatch pays besides Ambergris.
 - **QOL facts no source pins**: the unit of the first camp expansion's 250 cost; the full list of islands past Auronui and what each anchorage sells; what Display All Guides changes and which patch added the accessories switches (both named only by the 2.05.01 menu); the Extraction fee (XboxPlay says Silver, Vulkk says none).
 
 ## Build and release

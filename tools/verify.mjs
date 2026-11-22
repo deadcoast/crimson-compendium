@@ -276,7 +276,9 @@ try {
           heads: [...document.querySelectorAll('.matrix thead th:not(.corner) .cl')].map((n) => n.textContent.trim()),
           rows: [...document.querySelectorAll('.matrix tbody tr[data-row]')].map((tr) => ({
             label: tr.querySelector('.rl')?.textContent.trim(),
+            link: tr.querySelector('th a.rlink')?.getAttribute('href') ?? null,
             marks: [...tr.querySelectorAll('td')].map((td) => td.dataset.mark),
+            vals: [...tr.querySelectorAll('td')].map((td) => td.querySelector('.v')?.textContent.trim() ?? null),
           })),
         }));
         const cols = (sh.cols ?? mx.cols.map((c) => c.id)).map((id) => mx.cols.find((c) => c.id === id));
@@ -289,8 +291,29 @@ try {
           if (g.label !== r.label) return problems.push(`sheet "${sh.label}" row ${i + 1} reads "${g.label}", want "${r.label}"`);
           const want = cols.map((c) => { const cell = r.cells[c.id]; return !cell ? 'blank' : typeof cell === 'string' ? cell : cell.mark; });
           cols.forEach((c, k) => { if (g.marks[k] !== want[k]) problems.push(`sheet "${sh.label}" ${r.label} in ${c.label}: ${g.marks[k]}, want ${want[k]}`); });
+          // a value cell prints its value; a row about a plate links to it
+          cols.forEach((c, k) => { const cell = r.cells[c.id]; const v = cell && typeof cell === 'object' ? cell.v ?? null : null; if (g.vals[k] !== v) problems.push(`sheet "${sh.label}" ${r.label} in ${c.label} prints ${JSON.stringify(g.vals[k])}, want ${JSON.stringify(v)}`); });
+          if ((g.link ?? null) !== (r.entry ? `#${b.id}-${r.entry}` : null)) problems.push(`sheet "${sh.label}" ${r.label} links ${g.link}, want ${r.entry ? `#${b.id}-${r.entry}` : 'nothing'}`);
         });
         rows += got.rows.length; marks += got.rows.reduce((n, r) => n + r.marks.filter((x) => x !== 'blank').length, 0);
+        // a sortable sheet: the first head sorts from its better end, the next press reverses, the third
+        // restores the sheet's own order; rows without a number go last either way
+        if (sh.sort && got.rows.length) {
+          const c0 = cols[0];
+          const n = (r) => { const cell = r.cells[c0.id]; return cell && typeof cell === 'object' ? cell.n : undefined; };
+          const expect = (dir) => sh.rows.map((r, i) => ({ r, i })).sort((a, b) => { const x = n(a.r), y = n(b.r); if (x === undefined || y === undefined) return x === y ? a.i - b.i : x === undefined ? 1 : -1; return (x - y) * dir || a.i - b.i; }).map((x) => x.r.label);
+          const order = () => pg.evaluate(() => [...document.querySelectorAll('.matrix tbody tr[data-row] .rl')].map((x) => x.textContent.trim()));
+          const first = c0.low ? 1 : -1;
+          for (const [press, want, aria] of [[1, expect(first), first === 1 ? 'ascending' : 'descending'], [2, expect(-first), first === 1 ? 'descending' : 'ascending'], [3, sh.rows.map((r) => r.label), null]]) {
+            await pg.click('.matrix thead th:nth-child(2) .sort');
+            await pg.waitForTimeout(150);
+            if (JSON.stringify(await order()) !== JSON.stringify(want)) problems.push(`sheet "${sh.label}": sort press ${press} on ${c0.label} gives the wrong order`);
+            const got2 = await pg.evaluate(() => document.querySelector('.matrix thead th:nth-child(2)')?.getAttribute('aria-sort'));
+            if ((got2 ?? null) !== aria) problems.push(`sheet "${sh.label}": sort press ${press} sets aria-sort ${got2}, want ${aria}`);
+          }
+          const groups = await pg.evaluate(() => document.querySelectorAll('.matrix tbody tr.group').length);
+          if (groups !== new Set(sh.rows.map((r) => r.group).filter(Boolean)).size) problems.push(`sheet "${sh.label}": ${groups} group headings after the sort is cleared`);
+        }
       }
       await pg.click('.matrix [role=tab]:nth-child(1)');
       const heads = await pg
@@ -347,9 +370,70 @@ try {
           await handOff(`the "${mx.sheets[bare].label}" sheet`);
         }
       }
+      // a column search: a matrix whose search finds columns answers a column's name with every row that
+      // has a cell there and, for a column that adds up, the total
+      if (mx.find?.cols) {
+        await go(pg, b.front === 'matrix' ? b.id : `${b.id}-${mx.id}`);
+        await pg.click('.matrix [role=tab]:nth-child(1)');
+        const shown = sh0.cols ?? mx.cols.map((c) => c.id);
+        const col = mx.cols.find((c) => c.sum && shown.includes(c.id) && sh0.rows.filter((r) => r.cells[c.id]).length > 1 && sh0.rows.filter((r) => r.cells[c.id]).length < sh0.rows.length);
+        if (col) {
+          const hits = sh0.rows.filter((r) => r.cells[col.id]);
+          const total = hits.reduce((t, r) => t + (r.cells[col.id].n ?? 0), 0).toLocaleString('en-US');
+          await pg.fill('.matrix .find input', col.label);
+          const ok = await pg.waitForFunction((t) => [...document.querySelectorAll('.matrix .answers .tot')].some((x) => x.textContent.trim() === t), total, { timeout: 3000 }).then(() => true, () => false);
+          if (!ok) problems.push(`searching "${col.label}" does not answer with its total ${total}`);
+          const listed = await pg.evaluate(() => document.querySelectorAll('.matrix .answers .vals li').length);
+          if (listed !== hits.length) problems.push(`searching "${col.label}" lists ${listed} rows, want ${hits.length}`);
+          const lit = await pg.evaluate(() => document.querySelectorAll('.matrix tbody tr.hit').length);
+          if (lit !== hits.length) problems.push(`searching "${col.label}" lights ${lit} rows, want ${hits.length}`);
+          await pg.fill('.matrix .find input', '');
+        } else problems.push('no column to probe the column search with');
+      }
       const sel = await text(pg, '[role=tree] [aria-selected=true]');
       if (!sel?.startsWith(mx.title)) problems.push(`explorer selects "${sel}"`);
-      row('matrix', `${b.id} · ${mx.sheets.length} sheets · ${rows} rows · ${marks} marks · pin · search · readout · palette`, problems);
+      row('matrix', `${b.id} · ${mx.sheets.length} sheets · ${rows} rows · ${marks} marks · pin · ${mx.sheets.some((x) => x.sort) ? 'sort · ' : ''}search${mx.find?.cols ? ' · column search' : ''} · readout${probe ? ' · palette' : ''}`, problems);
+    }
+
+    // a ship's build sheet (Naval): one line per bill cell, in the Slipway's order; a tick survives a reload
+    // and Clear ticks empties it; a material plate totals what every build takes
+    const shipwright = b.entries.find((e) => e.naval?.how === 'build');
+    if (shipwright && b.matrix) {
+      const problems = [];
+      const billSh = b.matrix.sheets.find((x) => x.id === 'bill');
+      const brow = billSh?.rows.find((r) => r.entry === shipwright.id);
+      const want = (billSh?.cols ?? []).filter((c) => brow?.cells[c]).map((c) => b.matrix.cols.find((x) => x.id === c).label);
+      await go(pg, `${b.id}-${shipwright.id}`);
+      await pg.evaluate(() => { try { localStorage.clear(); } catch {} });
+      await pg.reload({ waitUntil: 'networkidle' });
+      await pg.waitForSelector('.build .lines li', { timeout: 6000 }).catch(() => {});
+      const lines = await pg.evaluate(() => [...document.querySelectorAll('.build .lines .ml')].map((x) => x.textContent.trim()));
+      if (JSON.stringify(lines) !== JSON.stringify(want)) problems.push(`${shipwright.name} bill reads ${JSON.stringify(lines)}, want ${JSON.stringify(want)}`);
+      await pg.click('.build .lines li:first-child .tick');
+      await pg.reload({ waitUntil: 'networkidle' });
+      await pg.waitForSelector('.build .lines li', { timeout: 6000 }).catch(() => {});
+      const kept = await pg.evaluate(() => document.querySelector('.build .lines li:first-child .tick')?.getAttribute('aria-checked'));
+      if (kept !== 'true') problems.push('a tick does not survive a reload');
+      const ring = await text(pg, '.build .ring b');
+      if (ring !== '1') problems.push(`the ring reads ${ring} held, want 1`);
+      await pg.click('.build .reset').catch(() => problems.push('no Clear ticks button'));
+      if ((await pg.evaluate(() => document.querySelectorAll('.build .tick[aria-checked=true]').length)) !== 0) problems.push('Clear ticks leaves ticks');
+      // the drawer: a material line opens to its best farm method and a link to the material's plate
+      const matLine = want.findIndex((l) => b.matrix.cols.find((c) => c.label === l)?.entry && b.entries.find((e) => e.id === b.matrix.cols.find((c) => c.label === l).entry)?.ledger);
+      if (matLine >= 0) {
+        await pg.click(`.build .lines li:nth-child(${matLine + 1}) .more`);
+        const drawn = await pg.waitForSelector(`.build .lines li:nth-child(${matLine + 1}) .drawer .mt`, { timeout: 3000 }).then(() => true, () => false);
+        if (!drawn) problems.push(`opening ${want[matLine]} shows no farm method`);
+      }
+      // the material: its total across every build matches the Slipway
+      const col = b.matrix.cols.find((c) => c.sum && c.entry && billSh.rows.filter((r) => r.cells[c.id]?.mark === 'need').length > 1);
+      if (col) {
+        const total = billSh.rows.filter((r) => r.cells[col.id]?.mark === 'need').reduce((t, r) => t + r.cells[col.id].n, 0).toLocaleString('en-US');
+        await go(pg, `${b.id}-${col.entry}`);
+        const shown = await pg.waitForFunction((t) => [...document.querySelectorAll('.ledger .need .num')].some((x) => x.textContent.trim() === t), total, { timeout: 4000 }).then(() => true, () => false);
+        if (!shown) problems.push(`${col.label}'s plate does not total ${total}`);
+      }
+      row('build sheet', `${b.id} · ${shipwright.name} · ${want.length} lines · tick kept · clear · drawer · totals`, problems);
     }
   }
 

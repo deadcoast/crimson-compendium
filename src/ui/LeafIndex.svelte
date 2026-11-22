@@ -194,6 +194,7 @@
   .filter button .mono { font-size: 10.5px; color: var(--ash); }
   .filter button:hover { color: var(--bone); border-color: var(--line-3); }
   .filter button.on { color: var(--bone); border-color: var(--accent); background: var(--accent-dim); }
+  .filter button.on .mono { color: var(--bone-2); } /* ash fails contrast on a tinted chip over a bright cover */
   .filter button[data-cls].on { border-color: var(--cls); background: color-mix(in srgb, var(--cls) 14%, transparent); }
   .filter button[data-cls] :global(svg) { color: var(--cls); }
 

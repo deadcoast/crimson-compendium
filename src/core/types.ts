@@ -247,14 +247,21 @@ export interface MatrixCol {
   entry?: string;
   /** what it holds, as printed under the header ("1,000", "240–1,000") */
   slots?: string;
+  /** its values add up: a search for the column answers with the total (a bill's materials) */
+  sum?: boolean;
+  /** smaller is better (a price, a build time): sorting starts from the smallest */
+  low?: boolean;
 }
 
-/** A cell: a mark id, or a mark with the note and publisher behind it. */
-export type MatrixCell = string | { mark: string; note?: string; by?: string };
+/** A cell: a mark id, or a mark with the note and publisher behind it. A value cell also prints `v` and
+ *  carries `n`, the number sorting and shading read ("2 d 10 h" sorts as 58). */
+export type MatrixCell = string | { mark: string; note?: string; by?: string; v?: string; n?: number };
 
 export interface MatrixRow {
   id: string;
   label: string;
+  /** an entry of this branch the row is about: its label links there, with the portrait beside it */
+  entry?: string;
   /** rows sharing a group sit together under its name */
   group?: string;
   /** items per slot, for the family */
@@ -274,6 +281,12 @@ export interface MatrixSheet {
   label: string;
   /** what a row is ("Item family", "Mechanic") */
   rowLabel: string;
+  /** what a column is, for the count ("material"); "place" when absent */
+  colLabel?: string;
+  /** column heads sort the rows by their cells' numbers */
+  sort?: boolean;
+  /** shade each value cell by its number against the column's largest */
+  heat?: boolean;
   blurb: string;
   /** column ids this sheet shows, in order; every column when absent */
   cols?: string[];
@@ -289,6 +302,10 @@ export interface MatrixDef {
   marks: MatrixMark[];
   cols: MatrixCol[];
   sheets: MatrixSheet[];
+  /** the search box's wording ("{q}" in miss is the query), and whether a column's name finds the column */
+  find?: { placeholder: string; miss: string; cols?: boolean };
+  /** what an empty cell means; "No source puts it here." when absent */
+  blank?: string;
 }
 
 export interface BranchDef {

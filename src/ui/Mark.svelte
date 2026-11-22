@@ -1,7 +1,8 @@
 <script lang="ts">
   // One matrix mark (types.ts MatrixMark), drawn the same wherever it appears: the Sorter's grid, its
   // legend and readout, and the Materials manifest's shelves. Shape carries the meaning, so the marks
-  // still read apart without colour: ◆ home, ↘ read here, ○ fits, ▲ donate, ▼ arrives, dashed ○ reported, ✕ refused.
+  // still read apart without colour: ◆ home, ↘ read here, ○ fits, ▲ donate, ▼ arrives, dashed ○ reported, ✕ refused;
+  // for value grids (Naval's Slipway) □ a build needs it, ⦶ a price, ▮ a published stat.
   let { id, size = 15 }: { id: string; size?: number } = $props();
 </script>
 
@@ -13,6 +14,9 @@
   {:else if id === 'recv'}<path d="M2 3.2h12L8 13.6Z" />
   {:else if id === 'unk'}<circle cx="8" cy="8" r="5" stroke-dasharray="2.2 2.2" />
   {:else if id === 'no'}<path d="M4.6 4.6 11.4 11.4M11.4 4.6 4.6 11.4" />
+  {:else if id === 'need'}<rect x="3.2" y="3.2" width="9.6" height="9.6" />
+  {:else if id === 'buy'}<circle cx="8" cy="8" r="5.4" /><path d="M8 5.2v5.6" />
+  {:else if id === 'stat'}<path d="M3.5 13V9.5M8 13V4M12.5 13V7" />
   {:else}<circle cx="8" cy="8" r="2" />{/if}
 </svg>
 
@@ -25,4 +29,7 @@
   .mk[data-mark='recv'] { color: var(--sky); }
   .mk[data-mark='unk'] { color: var(--ash); }
   .mk[data-mark='no'] { color: var(--ember); }
+  .mk[data-mark='need'] { color: var(--accent); fill: color-mix(in srgb, var(--accent) 30%, transparent); }
+  .mk[data-mark='buy'] { color: var(--brass); }
+  .mk[data-mark='stat'] { color: var(--bone-2); stroke-width: 2; }
 </style>

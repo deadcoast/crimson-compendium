@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/current%20to-Charting%20the%20Unknown-4aa6bb" alt="Current to Charting the Unknown">
 </p>
 
-<p align="center">A field reference for <em>Crimson Desert</em>. Pywel's mounts: where each one lives, how to make it yours, and what it is worth riding for. An endgame money guide that gets you into <em>Charting the Unknown</em> rich. Every quality-of-life upgrade, in the order to get them. And where every item goes.</p>
+<p align="center">A field reference for <em>Crimson Desert</em>. Pywel's mounts: where each one lives, how to make it yours, and what it is worth riding for. An endgame money guide that gets you into <em>Charting the Unknown</em> rich. Every quality-of-life upgrade, in the order to get them. Where every item goes. And the fastest way to a fleet worth sailing.</p>
 
 ---
 
@@ -72,6 +72,19 @@ A mount can sit in several lists. The A.T.A.G. is Land, Underwater, Mechanical a
 | **Leaves** | House Storage · Ship Storage · Mount Storage |
 | **Views** | The Sorter (Where it goes · What reads it) · Set-up Order · Tier ladder |
 
+**Naval Ships**, the fifth branch: a strong fleet fast, a fast ship fast, and the gains that come while you sail, on 41 plates.
+
+- **Fastest Fleet**: six phases from the quest ship to Movement 5 and the four legendaries, the slow timers first.
+- **The Slipway**: every ship against everything its build takes and against every stat. Sort a column for the fastest, toughest or cheapest; search a material for every ship that needs it and the total.
+- **Build sheet**: each ship's stats, the verdict against its twin, and its bill as a checklist you tick off, each line opening to where to farm it.
+- **Ledger**: for each material, the ships that wait on it and the ways to get it, best first.
+- **Tiers**: Speed, Strength, Return and Effort rated **I–V**.
+
+| | |
+|---|---|
+| **Leaves** | Building · Easter Eggs · Fleet Economy |
+| **Views** | Fastest Fleet · The Slipway (The bill · The stats) · Sail for (A fast ship · A strong fleet · Hauling) · Tier ladder |
+
 ## Screenshots
 
 <table>
@@ -98,6 +111,10 @@ A mount can sit in several lists. The A.T.A.G. is Land, Underwater, Mechanical a
   <tr>
     <td width="50%"><img src="docs/screenshots/materials-sorter.webp" alt="Materials: the Sorter, explaining Fish in the Kuku Cooler"><br><sub>Materials: the Sorter — every family against every place, the cell explained</sub></td>
     <td width="50%"><img src="docs/screenshots/materials-manifest.webp" alt="Materials: the Manifest on the Sturdy Gatherables Chest plate"><br><sub>Materials: a Manifest — capacity, what reads it, what goes in by name</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/naval-slipway.webp" alt="Naval Ships: the Slipway's stats, sorted by Movement Speed"><br><sub>Naval Ships: the Slipway — every ship's stats, sorted fastest first</sub></td>
+    <td width="50%"><img src="docs/screenshots/naval-build.webp" alt="Naval Ships: the build sheet on the Flagship of the East plate"><br><sub>Naval Ships: a build sheet — tick the bill, open a line for where to farm it</sub></td>
   </tr>
 </table>
 
@@ -179,6 +196,12 @@ src/
       matrix.json    the Sorter: item families and mechanics against every place
       entries.json   the 20 plates, each with its manifest
       MaterialsManifest.svelte
+    naval/
+      branch.json    leaves, metrics, lenses, the Fastest Fleet route
+      matrix.json    the Slipway: every ship's bill and stats, values in the cells
+      entries.json   the 41 plates: ships (built on their Mounts plates), materials, ventures
+      NavalBuild.svelte    a ship's stats and its tickable bill
+      NavalLedger.svelte   a material's or venture's ranked methods and totals
   styles/            tokens.css (every colour, font, easing) + base.css
 public/media/        generated WebP files
 tools/media.py       image pipeline (tools/sources holds in-game screenshots with no URL)
@@ -186,6 +209,7 @@ docs/
   PLAN.md            the global plan (IDENTIFIED → PLAN → SHELVED → TODO)
   RICHES-RESEARCH.md Riches research, every figure with its source
   MATERIALS-RESEARCH.md  Materials research: stores, readers, item families
+  NAVAL-RESEARCH.md  Naval research: bills, material sources, conflicts
   spec/              treefold specs (tier-colors.txt)
   .archived/         original treefold prompts
   releases/          release notes, one per tag
@@ -211,7 +235,7 @@ The built site is not committed: `npm run build` writes it to `dist/`, and each 
 
 `where` takes `domains`, `tags` or `cls`. `"leaves": "rarity"` makes one leaf per rarity that has members; otherwise list your own leaves, each with its own `where`. Optional fields: `subtitle`, and `line: "egg"` to show each entry's `egg` note as its list line.
 
-**Add a branch.** Create `src/branches/<id>/branch.json` and `entries.json` with the same schema, plus optional plate sections and an optional `matrix.json` (rows against places, one mark per cell; set `"front": "matrix"` to open the branch on it), then add one line to `registry.ts`. Nothing in `core/` or `ui/` changes.
+**Add a branch.** Create `src/branches/<id>/branch.json` and `entries.json` with the same schema, plus optional plate sections and an optional `matrix.json` (rows against columns, one mark per cell, or a value with `v` and `n` for sortable, shaded sheets; set `"front": "matrix"` to open the branch on it), then add one line to `registry.ts`. Nothing in `core/` or `ui/` changes.
 
 ## Sources and credits
 
