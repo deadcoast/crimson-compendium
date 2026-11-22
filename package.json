@@ -22,7 +22,8 @@
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "lint": "node tools/lint.mjs",
     "verify": "vite build && node tools/verify.mjs",
-    "media": "python3 tools/media.py"
+    "media": "python3 tools/media.py",
+    "pack": "node tools/pack.mjs"
   },
   "devDependencies": {
     "@fontsource-variable/archivo": "^5.3.0",

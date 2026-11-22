@@ -133,6 +133,7 @@ npm run lint     # data lint: evidence, credits, captions, sources, image files
 npm run verify   # build, then check every route, the explorer, phone, accessibility and offline fonts headless
                  # first time: npx playwright install chromium (or set CHROME_PATH to a Chrome binary)
 npm run media    # fetch + convert images for entries with a new "from" URL (Python 3 + Pillow)
+npm run pack     # dist-pack/: the build in at most 500 files, for hosts that cap a version's file count
 ```
 
 ## Keyboard

@@ -18,6 +18,7 @@ A fifth tree, **Naval Ships**: a strong fleet fast, a fast ship fast, and the ga
   - **Ledger** on every other plate: the ships waiting on a material and the total, ranked methods, uses, figures, crew roles, tips and patches.
   - Lenses *Sail for*: A fast ship, A strong fleet, Hauling. Ratings: Speed, Strength, Return and Effort, I–V. A coral root accent.
   - Research notes with every source and conflict: `docs/NAVAL-RESEARCH.md`.
+- **`npm run pack`** writes the build in at most 500 files for hosts that cap a version's file count: identical images keep one file and the smallest are inlined. `dist/` and the release zip are unchanged.
 - **The matrix view takes values**: printed numbers, column shading, sortable heads, rows that link their plates, and a search that totals a column. The Sorter is unchanged.
 
 ### Fixed
