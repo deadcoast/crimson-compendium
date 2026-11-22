@@ -65,7 +65,7 @@
     const t = norm(q);
     if (!t || !findCols) return [];
     return cols
-      .filter((c) => norm(c.label).includes(t) || (c.short && norm(c.short).includes(t)))
+      .filter((c) => named(c, t))
       .map((c) => {
         const rows = sheet.rows.filter((r) => r.cells[c.id]);
         return { col: c, rows, total: c.sum ? rows.reduce((n, r) => n + (numOf(r.cells[c.id]) ?? 0), 0) : undefined };
@@ -74,6 +74,13 @@
       .slice(0, 2);
   });
   const lit = (r: MatrixRow) => matches.has(r.id) || colHits.some((h) => r.cells[h.col.id]);
+  const named = (c: MatrixCol, t: string) => norm(c.label).includes(t) || (!!c.short && norm(c.short).includes(t));
+  /** other sheets with a column the query names, when this sheet has none (a material asked on the stats) */
+  const elsewhere = $derived.by(() => {
+    const t = norm(q);
+    if (!t || !findCols || colHits.length) return [];
+    return m.sheets.filter((sh) => sh.id !== sheet.id && (sh.cols ?? m.cols.map((c) => c.id)).some((id) => { const c = m.cols.find((x) => x.id === id); return !!c && named(c, t); }));
+  });
   const found = (c: MatrixCol) => colHits.some((h) => h.col.id === c.id);
   const miss = $derived(m.find ? m.find.miss.replace('{q}', q) : `Nothing named “${q}”. Try a family: “ore”, “fish”, “meal”.`);
 
@@ -98,6 +105,13 @@
     });
   });
   const sortLabel = (c: MatrixCol) => (sortBy?.col !== c.id ? '↕' : sortBy.dir === 1 ? '↑' : '↓');
+  // the phone cards have no heads, so a select picks the column, from its better end
+  const sortKey = $derived(sortBy ? `${sortBy.col}:${sortBy.dir}` : '');
+  function sortPick(v: string) {
+    if (!v) { sortBy = null; return; }
+    const [col, d] = v.split(':');
+    sortBy = { col, dir: d === '1' ? 1 : -1 };
+  }
 
   // shading: each value against the largest in its column
   const colMax = $derived.by(() => {
@@ -139,7 +153,7 @@
   const atRow = $derived(at ? sheet.rows[at.r] : undefined);
   const atCol = $derived(at ? cols[at.c] : undefined);
   const atCell = $derived(atRow && atCol ? atRow.cells[atCol.id] : undefined);
-  $effect(() => { void sheetId; hover = null; pinned = null; focus = { r: 0, c: 0 }; sortBy = null; });
+  $effect(() => { void sheetId; void m; hover = null; pinned = null; focus = { r: 0, c: 0 }; sortBy = null; });
 
   let table: HTMLTableElement | undefined = $state();
   // the toolbar's real height (it wraps on narrow screens), so the column heads pin right under it
@@ -207,6 +221,15 @@
         {#if q}<button class="clear" onclick={() => (q = '')} aria-label="Clear search"><Glyph name="close" size={13} /></button>{/if}
       </label>
     {/if}
+    {#if sheet.sort}
+      <label class="sortby">
+        <span class="eyebrow">Sort</span>
+        <select value={sortKey} onchange={(ev) => sortPick(ev.currentTarget.value)}>
+          <option value="">As listed</option>
+          {#each cols as c (c.id)}<option value="{c.id}:{c.low ? 1 : -1}">{c.label}, {c.low ? 'least' : 'most'} first</option>{/each}
+        </select>
+      </label>
+    {/if}
     <p class="count mono">{sheet.rows.length} {plural(sheet.rowLabel.toLowerCase(), sheet.rows.length)} · {cols.length} {plural(sheet.colLabel ?? 'place', cols.length)}{itemCount ? ` · ${itemCount} items named` : ''}</p>
   </div>
 
@@ -246,7 +269,10 @@
           </ul>
         </div>
       {/each}
-      {#if !answers.length && !colHits.length}<p class="none">{miss}</p>{/if}
+      {#each elsewhere as sh (sh.id)}
+        <p class="none">“{q}” is a column on {sh.label}. <button type="button" class="jump" onclick={() => (sheetId = sh.id)}>Show it there</button></p>
+      {/each}
+      {#if !answers.length && !colHits.length && !elsewhere.length}<p class="none">{miss}</p>{/if}
     </div>
   {/if}
 
@@ -328,7 +354,7 @@
 
   <!-- phone: one card per row -->
   <ol class="cards">
-    {#each sheet.rows as r (r.id)}
+    {#each order.map((i) => sheet.rows[i]) as r (r.id)}
       {@const hit = lit(r)}
       {@const re = rowEntry(r)}
       <li class:dim={!!q && searchable && !hit}>
@@ -446,6 +472,10 @@
   .where [data-mark='home'] a { color: var(--accent); }
   .where .sep { color: var(--ash-2); }
   .none { font-size: 13.5px; color: var(--ash); }
+  .jump { margin-left: 6px; padding: 3px 10px; border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 999px; font-size: 12.5px; color: var(--accent); }
+  .jump:hover { background: var(--accent-dim); }
+  .sortby { display: none; align-items: center; gap: 8px; }
+  .sortby select { height: 32px; padding: 0 8px; border: 1px solid var(--line-2); border-radius: 6px; background: var(--ink-1); color: var(--bone); font: inherit; font-size: 13px; }
   .cname { font-weight: 600; color: var(--bone); border-bottom: 1px solid var(--line-2); }
   .cname:hover { border-bottom-color: var(--accent); }
   .tot { color: var(--accent); font-weight: 600; }
@@ -573,5 +603,6 @@
     .ct { display: flex; align-items: baseline; gap: 8px; font-size: 14.5px; color: var(--bone); }
     .cn { margin-top: 8px; font-size: 12px; line-height: 1.5; color: var(--ash); }
     .count { width: 100%; margin-left: 0; }
+    .sortby { display: flex; }
   }
 </style>

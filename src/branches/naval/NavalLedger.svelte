@@ -36,8 +36,10 @@
       .filter((c) => c.entry === entry.id && (bill.cols ?? []).includes(c.id))
       .map((c: MatrixCol) => {
         const rows = bill.rows.filter((r) => r.cells[c.id]);
-        const built = rows.filter((r) => typeof r.cells[c.id] === 'object' && (r.cells[c.id] as { mark: string }).mark === 'need');
-        return { col: c, rows, built, total: built.reduce((n, r) => n + (num(r.cells[c.id]) ?? 0), 0) };
+        const markIs = (r: MatrixRow, mk: string) => typeof r.cells[c.id] === 'object' && (r.cells[c.id] as { mark: string }).mark === mk;
+        const built = rows.filter((r) => markIs(r, 'need'));
+        const bought = rows.filter((r) => markIs(r, 'buy'));
+        return { col: c, rows, built, bought, total: built.reduce((n, r) => n + (num(r.cells[c.id]) ?? 0), 0) };
       })
       .filter((x) => x.rows.length);
   });
@@ -58,25 +60,32 @@
         <div class="tot">
           <p class="eyebrow">{nd.col.label}{nd.built.length ? ' for every build' : ''}</p>
           {#if nd.built.length}
-            <p class="num display">{nd.total.toLocaleString('en-US')}</p>
-            <p class="unit">across {nd.built.length} {nd.built.length === 1 ? 'ship' : 'ships'}</p>
+            <p class="num display" class:long={nd.total >= 1000000}>{nd.total.toLocaleString('en-US')}</p>
+            <p class="unit">across {nd.built.length} built {nd.built.length === 1 ? 'ship' : 'ships'}{nd.bought.length ? `; ${nd.bought.length} more are bought with it` : ''}</p>
           {:else}
             <p class="num display">{nd.rows.length}</p>
             <p class="unit">ships priced in it</p>
           {/if}
         </div>
-        <ul class="ships">
-          {#each (nd.built.length ? nd.built : nd.rows).slice(0, 12) as r, i (r.id)}
-            {@const s = shipOf(r)}
-            <li style:--i={i}>
-              {#if s}
-                <a href={href.entry(branch, s.id)}><span class="pt"><img src={mediaUrl(s.media.portrait.src)} alt="" loading="lazy" /></span><span class="sn">{r.label}</span><span class="sv mono">{val(r.cells[nd.col.id])}</span></a>
-              {:else}
-                <span class="sn">{r.label}</span><span class="sv mono">{val(r.cells[nd.col.id])}</span>
-              {/if}
-            </li>
+        <div class="ships">
+          {#each [{ label: '', rows: nd.built.length ? nd.built : nd.rows }, { label: 'Bought with it', rows: nd.built.length ? nd.bought : [] }] as grp (grp.label)}
+            {#if grp.rows.length}
+              {#if grp.label}<p class="eyebrow sub">{grp.label}</p>{/if}
+              <ul class:bought={!!grp.label}>
+                {#each grp.rows as r, i (r.id)}
+                  {@const s = shipOf(r)}
+                  <li style:--i={i}>
+                    {#if s}
+                      <a href={href.entry(branch, s.id)}><span class="pt"><img src={mediaUrl(s.media.portrait.src)} alt="" loading="lazy" /></span><span class="sn">{r.label}</span><span class="sv mono">{val(r.cells[nd.col.id])}</span></a>
+                    {:else}
+                      <span class="sn">{r.label}</span><span class="sv mono">{val(r.cells[nd.col.id])}</span>
+                    {/if}
+                  </li>
+                {/each}
+              </ul>
+            {/if}
           {/each}
-        </ul>
+        </div>
       </div>
     {/each}
 
@@ -154,9 +163,13 @@
   .need { display: grid; grid-template-columns: minmax(170px, 0.5fr) minmax(0, 1.6fr); border: 1px solid var(--line); margin-bottom: 12px; }
   .tot { padding: 14px 16px 16px; background: linear-gradient(160deg, var(--accent-dim), var(--ink-1) 70%); box-shadow: inset 2px 0 0 var(--accent); display: flex; flex-direction: column; gap: 4px; }
   .num { font-size: clamp(32px, 4vw, 52px); line-height: 1; font-weight: 600; font-variant-numeric: lining-nums tabular-nums; color: var(--bone); margin-top: 4px; }
+  .num.long { font-size: clamp(26px, 2.5vw, 36px); }
   .unit { font-size: 12.5px; color: var(--bone-2); }
-  .ships { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 2px 14px; padding: 10px 14px; border-left: 1px solid var(--line); align-content: start; }
+  .ships { padding: 10px 14px; border-left: 1px solid var(--line); }
+  .ships ul { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 2px 14px; }
+  .ships .sub { margin: 10px 0 4px; padding-top: 8px; border-top: 1px dashed var(--line-2); }
   .ships li { animation: up 520ms var(--ease-out) both; animation-delay: calc(var(--i) * 40ms); }
+  .ships ul.bought .sv { color: var(--brass); }
   .ships a, .ships li > .sn { display: grid; grid-template-columns: 26px minmax(0, 1fr) auto; align-items: center; gap: 9px; padding: 5px 0; color: var(--bone); }
   .ships a:hover .sn { color: var(--accent); }
   .pt { width: 26px; height: 26px; border-radius: 50%; overflow: hidden; box-shadow: 0 0 0 1px var(--line-2); }

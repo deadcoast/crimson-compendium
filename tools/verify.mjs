@@ -383,11 +383,26 @@ try {
           await pg.fill('.matrix .find input', col.label);
           const ok = await pg.waitForFunction((t) => [...document.querySelectorAll('.matrix .answers .tot')].some((x) => x.textContent.trim() === t), total, { timeout: 3000 }).then(() => true, () => false);
           if (!ok) problems.push(`searching "${col.label}" does not answer with its total ${total}`);
-          const listed = await pg.evaluate(() => document.querySelectorAll('.matrix .answers .vals li').length);
-          if (listed !== hits.length) problems.push(`searching "${col.label}" lists ${listed} rows, want ${hits.length}`);
+          const listed = await pg.evaluate(() => [...document.querySelectorAll('.matrix .answers .vals li')].map((li) => [...li.children].map((x) => x.textContent.trim()).join(' ')));
+          const wantList = hits.map((r) => `${r.label} ${r.cells[col.id].v}`);
+          if (JSON.stringify(listed) !== JSON.stringify(wantList)) problems.push(`searching "${col.label}" lists ${JSON.stringify(listed)}, want ${JSON.stringify(wantList)}`);
           const lit = await pg.evaluate(() => document.querySelectorAll('.matrix tbody tr.hit').length);
           if (lit !== hits.length) problems.push(`searching "${col.label}" lights ${lit} rows, want ${hits.length}`);
           await pg.fill('.matrix .find input', '');
+          const other = mx.sheets.findIndex((x) => !(x.cols ?? mx.cols.map((c) => c.id)).includes(col.id));
+          if (other >= 0) {
+            await pg.click(`.matrix [role=tab]:nth-child(${other + 1})`);
+            await pg.waitForTimeout(150);
+            await pg.fill('.matrix .find input', col.label);
+            const jump = await pg.waitForSelector('.matrix .answers .jump', { timeout: 3000 }).catch(() => null);
+            if (!jump) problems.push(`searching "${col.label}" on "${mx.sheets[other].label}" does not offer the sheet that shows it`);
+            else {
+              await jump.click();
+              const back = await pg.waitForFunction((t) => [...document.querySelectorAll('.matrix .answers .tot')].some((x) => x.textContent.trim() === t), total, { timeout: 3000 }).then(() => true, () => false);
+              if (!back) problems.push(`"Show it there" does not answer "${col.label}" on its sheet`);
+            }
+            await pg.fill('.matrix .find input', '');
+          }
         } else problems.push('no column to probe the column search with');
       }
       const sel = await text(pg, '[role=tree] [aria-selected=true]');
@@ -418,12 +433,18 @@ try {
       if (ring !== '1') problems.push(`the ring reads ${ring} held, want 1`);
       await pg.click('.build .reset').catch(() => problems.push('no Clear ticks button'));
       if ((await pg.evaluate(() => document.querySelectorAll('.build .tick[aria-checked=true]').length)) !== 0) problems.push('Clear ticks leaves ticks');
+      await pg.reload({ waitUntil: 'networkidle' });
+      await pg.waitForSelector('.build .lines li', { timeout: 6000 }).catch(() => {});
+      if ((await pg.evaluate(() => document.querySelectorAll('.build .tick[aria-checked=true]').length)) !== 0) problems.push('ticks come back after Clear ticks and a reload');
       // the drawer: a material line opens to its best farm method and a link to the material's plate
       const matLine = want.findIndex((l) => b.matrix.cols.find((c) => c.label === l)?.entry && b.entries.find((e) => e.id === b.matrix.cols.find((c) => c.label === l).entry)?.ledger);
       if (matLine >= 0) {
+        const plate = b.entries.find((e) => e.id === b.matrix.cols.find((c) => c.label === want[matLine]).entry);
         await pg.click(`.build .lines li:nth-child(${matLine + 1}) .more`);
-        const drawn = await pg.waitForSelector(`.build .lines li:nth-child(${matLine + 1}) .drawer .mt`, { timeout: 3000 }).then(() => true, () => false);
-        if (!drawn) problems.push(`opening ${want[matLine]} shows no farm method`);
+        await pg.waitForSelector(`.build .lines li:nth-child(${matLine + 1}) .drawer .mt`, { timeout: 3000 }).catch(() => {});
+        const drawer = await pg.evaluate((k) => { const d = document.querySelector(`.build .lines li:nth-child(${k}) .drawer`); return { first: d?.querySelector('.mt b')?.textContent.trim() ?? null, link: d?.querySelector('a.go')?.getAttribute('href') ?? null }; }, matLine + 1);
+        if (drawer.first !== plate.ledger.methods[0].title) problems.push(`opening ${want[matLine]} shows "${drawer.first}", want its best method "${plate.ledger.methods[0].title}"`);
+        if (drawer.link !== `#${b.id}-${plate.id}`) problems.push(`${want[matLine]}'s drawer links ${drawer.link}, want #${b.id}-${plate.id}`);
       }
       // the material: its total across every build matches the Slipway
       const col = b.matrix.cols.find((c) => c.sum && c.entry && billSh.rows.filter((r) => r.cells[c.id]?.mark === 'need').length > 1);
@@ -555,8 +576,7 @@ try {
     await ph.waitForTimeout(500);
     if (!(await shown())) problems.push('Alt+\\ does not open the drawer');
     // a matrix becomes one card per row on a phone, with no grid to scroll sideways
-    const mb = branches.find((x) => x.matrix);
-    if (mb) {
+    for (const mb of branches.filter((x) => x.matrix)) {
       await ph.evaluate((h) => { location.hash = h; }, `${mb.id}-${mb.matrix.id}`);
       await ph.waitForSelector('.matrix .cards', { timeout: 6000 }).catch(() => {});
       await ph.waitForTimeout(300);
@@ -569,9 +589,21 @@ try {
       const wantTitles = mb.matrix.sheets[0].rows.map((r) => r.label);
       if (JSON.stringify(got.titles) !== JSON.stringify(wantTitles)) problems.push(`matrix cards read ${got.cards} families${got.cards === wantTitles.length ? ' in the wrong order or with the wrong names' : `, want ${wantTitles.length}`}`);
       if (got.grid !== 'none') problems.push(`matrix grid still shows on a phone (display ${got.grid})`);
-      if (got.wide) problems.push('matrix scrolls sideways on a phone');
+      if (got.wide) problems.push(`${mb.id} matrix scrolls sideways on a phone`);
+      const sh = mb.matrix.sheets[0];
+      if (sh.sort) {
+        const c0 = mb.matrix.cols.find((c) => c.id === (sh.cols ?? mb.matrix.cols.map((x) => x.id))[0]);
+        const dir = c0.low ? 1 : -1;
+        await ph.selectOption('.matrix .sortby select', `${c0.id}:${dir}`);
+        await ph.waitForTimeout(200);
+        const n = (r) => r.cells[c0.id]?.n;
+        const want = sh.rows.map((r, i) => ({ r, i })).sort((a, b) => { const x = n(a.r), y = n(b.r); if (x === undefined || y === undefined) return x === y ? a.i - b.i : x === undefined ? 1 : -1; return (x - y) * dir || a.i - b.i; }).map((x) => x.r.label);
+        const cardsNow = await ph.evaluate(() => [...document.querySelectorAll('.matrix .cards > li .ct b')].map((x) => x.textContent.trim()));
+        if (JSON.stringify(cardsNow) !== JSON.stringify(want)) problems.push(`${mb.id}: sorting by ${c0.label} on a phone does not reorder the cards`);
+      }
     }
-    row('phone', `390 × 844 · drawer opens, closes, summons${mb ? ' · matrix cards' : ''}`, problems);
+    const mbs = branches.filter((x) => x.matrix).map((x) => x.id);
+    row('phone', `390 × 844 · drawer opens, closes, summons${mbs.length ? ` · matrix cards (${mbs.join(', ')}) · phone sort` : ''}`, problems);
     await ph.context().close();
   }
 

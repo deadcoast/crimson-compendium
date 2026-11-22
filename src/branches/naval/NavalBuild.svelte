@@ -1,3 +1,8 @@
+<script lang="ts" module>
+  /** ticks a refused storage write could not keep, by storage key, for the rest of the visit */
+  const memo = new Map<string, Record<string, boolean>>();
+</script>
+
 <script lang="ts">
   // NAVAL plate section for a ship: its stats, the verdict on it, and its bill as a checklist. Nothing here is
   // written per plate: the stats and the bill are read off the Slipway (matrix.json), the farm methods off each
@@ -39,24 +44,41 @@
   const methodsOf = (e?: Entry) => ((e?.ledger as { methods?: Method[] } | undefined)?.methods ?? []).slice(0, 2);
   const funds = (n: number) => (n >= 1000 ? `${(n / 1000).toLocaleString('en-US')} Silver donated` : '');
 
-  // ticks: which lines you already hold, kept per ship in this browser
+  // ticks: which lines you already hold, kept per ship in this browser. Every change re-reads the stored list
+  // and changes one line of it, so two tabs on the same ship don't overwrite each other, and a tab follows the
+  // other's changes. Where storage refuses a write, the ticks are kept in memory for the rest of the visit.
   const key = $derived(`cc:naval:${entry.id}`);
   let ticked = $state<Record<string, boolean>>({});
   let open = $state<Record<string, boolean>>({});
+  function load(k: string): Record<string, boolean> {
+    if (memo.has(k)) return { ...memo.get(k)! };
+    try { return JSON.parse(localStorage.getItem(k) ?? '{}') ?? {}; } catch { return {}; }
+  }
+  function save(k: string, v: Record<string, boolean>) {
+    try {
+      if (Object.values(v).some(Boolean)) localStorage.setItem(k, JSON.stringify(v));
+      else localStorage.removeItem(k);
+      memo.delete(k);
+    } catch { memo.set(k, { ...v }); }
+  }
   $effect(() => {
     const k = key;
-    let saved: Record<string, boolean> = {};
-    try { saved = JSON.parse(localStorage.getItem(k) ?? '{}') ?? {}; } catch { saved = {}; }
-    ticked = saved;
+    ticked = load(k);
     open = {};
+    const follow = (ev: StorageEvent) => { if (ev.key === k && !memo.has(k)) ticked = load(k); };
+    window.addEventListener('storage', follow);
+    return () => window.removeEventListener('storage', follow);
   });
   function toggle(id: string) {
-    ticked = { ...ticked, [id]: !ticked[id] };
-    try { localStorage.setItem(key, JSON.stringify(ticked)); } catch { /* storage refused: ticks last this visit */ }
+    const cur = load(key);
+    cur[id] = !ticked[id];
+    if (!cur[id]) delete cur[id];
+    ticked = cur;
+    save(key, cur);
   }
   function reset() {
     ticked = {};
-    try { localStorage.removeItem(key); } catch { /* nothing kept */ }
+    save(key, {});
   }
   const done = $derived(lines.filter((l) => ticked[l.col.id]).length);
   const R = 30;
