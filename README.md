@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/current%20to-Charting%20the%20Unknown-4aa6bb" alt="Current to Charting the Unknown">
 </p>
 
-<p align="center">A field reference for <em>Crimson Desert</em>. Pywel's mounts: where each one lives, how to make it yours, and what it is worth riding for. An endgame money guide that gets you into <em>Charting the Unknown</em> rich. And every quality-of-life upgrade, in the order to get them.</p>
+<p align="center">A field reference for <em>Crimson Desert</em>. Pywel's mounts: where each one lives, how to make it yours, and what it is worth riding for. An endgame money guide that gets you into <em>Charting the Unknown</em> rich. Every quality-of-life upgrade, in the order to get them. And where every item goes.</p>
 
 ---
 
@@ -60,6 +60,18 @@ A mount can sit in several lists. The A.T.A.G. is Land, Underwater, Mechanical a
 | **Category branches** | Priority (Essential · Worthwhile · Situational) · Built-in · Unlocks · When · Patched In |
 | **Shortlists** | Right Now · Everywhere · Early Game |
 
+**Materials**, the fourth branch: where every item goes and what reads it, for the house, the ship and the mount, on 20 plates.
+
+- **The Sorter**: item families against every place that holds items, and mechanics against the places they read, one mark per cell. Point at a cell and a readout says what it means and who says so. Search an item, here or from `/`, and get where it goes in one card.
+- **The Set-up Order**: when the story opens each store, and what to move in.
+- **Manifest**: what a store holds, by name, what reads it in place, where everything else goes instead, and the bills of materials for ship parts and tack.
+- **Tiers**: Capacity, Payoff and Unlock rated **I–V**.
+
+| | |
+|---|---|
+| **Leaves** | House Storage · Ship Storage · Mount Storage |
+| **Views** | The Sorter (Where it goes · What reads it) · Set-up Order · Tier ladder |
+
 ## Screenshots
 
 <table>
@@ -82,6 +94,10 @@ A mount can sit in several lists. The A.T.A.G. is Land, Underwater, Mechanical a
   <tr>
     <td width="50%"><img src="docs/screenshots/mount-inventory.webp" alt="Mounts: the Inventory section on the Elantrima plate"><br><sub>Mounts: Inventory — trade-goods slots and the five tack slots</sub></td>
     <td width="50%"><img src="docs/screenshots/qol-settings.webp" alt="Quality of Life: Re-blockades with the in-game Gameplay menu"><br><sub>Quality of Life: a settings plate on the 2.05.01 menu</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/materials-sorter.webp" alt="Materials: the Sorter, explaining Fish in the Kuku Cooler"><br><sub>Materials: the Sorter — every family against every place, the cell explained</sub></td>
+    <td width="50%"><img src="docs/screenshots/materials-manifest.webp" alt="Materials: the Manifest on the Sturdy Gatherables Chest plate"><br><sub>Materials: a Manifest — capacity, what reads it, what goes in by name</sub></td>
   </tr>
 </table>
 
@@ -106,7 +122,7 @@ npm run media    # fetch + convert images for entries with a new "from" URL (Pyt
 
 | Anywhere | |
 | --- | --- |
-| `/` or `Ctrl/⌘ K` | search mounts, money methods, places, traits and branches |
+| `/` or `Ctrl/⌘ K` | search mounts, money methods, upgrades, items, places, traits and branches |
 | `J` / `K` or `→` / `←` | next / previous entry in the current list |
 | `L` | Tier Ladder and back |
 | `Alt \` or `Ctrl ⇧ E` | focus the explorer |
@@ -157,12 +173,19 @@ src/
       branch.json    the same, plus labels, tier rules and the Route
       entries.json   the 24 money methods, each with its ledger
       RichesLedger.svelte
+    qol/             the 46 upgrades, each with its remedy
+    materials/
+      branch.json    leaves, metrics, the Set-up Order; front: matrix
+      matrix.json    the Sorter: item families and mechanics against every place
+      entries.json   the 20 plates, each with its manifest
+      MaterialsManifest.svelte
   styles/            tokens.css (every colour, font, easing) + base.css
 public/media/        generated WebP files
 tools/media.py       image pipeline (tools/sources holds in-game screenshots with no URL)
 docs/
   PLAN.md            the global plan (IDENTIFIED → PLAN → SHELVED → TODO)
   RICHES-RESEARCH.md Riches research, every figure with its source
+  MATERIALS-RESEARCH.md  Materials research: stores, readers, item families
   spec/              treefold specs (tier-colors.txt)
   .archived/         original treefold prompts
   releases/          release notes, one per tag
@@ -188,7 +211,7 @@ The built site is not committed: `npm run build` writes it to `dist/`, and each 
 
 `where` takes `domains`, `tags` or `cls`. `"leaves": "rarity"` makes one leaf per rarity that has members; otherwise list your own leaves, each with its own `where`. Optional fields: `subtitle`, and `line: "egg"` to show each entry's `egg` note as its list line.
 
-**Add a branch.** Create `src/branches/<id>/branch.json` and `entries.json` with the same schema, plus optional plate sections, then add one line to `registry.ts`. Nothing in `core/` or `ui/` changes.
+**Add a branch.** Create `src/branches/<id>/branch.json` and `entries.json` with the same schema, plus optional plate sections and an optional `matrix.json` (rows against places, one mark per cell; set `"front": "matrix"` to open the branch on it), then add one line to `registry.ts`. Nothing in `core/` or `ui/` changes.
 
 ## Sources and credits
 

@@ -1,0 +1,3214 @@
+[
+ {
+  "id": "gatherables-chest",
+  "name": "Sturdy Gatherables Chest",
+  "leaf": "house",
+  "cls": "store",
+  "domains": [],
+  "base": "qol/sturdy-gatherables-chest",
+  "trait": "The one chest crafting and refinement read from",
+  "summary": "At the Smithy, every Sturdy Gatherables Chest in your house counts as part of your bag: crafting and refinement read its materials without you carrying them. 1,000 slots a chest, 50 Silver at any furniture shop, and you can place several. Ore, timber, hides and herbs live here; food, outfits and quest items have chests of their own.",
+  "tiers": {
+   "capacity": {
+    "tier": 1,
+    "basis": "1,000 slots a chest, and more than one can be placed (1.04 notes; KeenGamer)."
+   },
+   "payoff": {
+    "tier": 1,
+    "basis": "Crafting and refinement read it in place (1.04 notes): the only chest the Smithy reads."
+   },
+   "unlock": {
+    "tier": 1,
+    "basis": "50 Silver at any furniture shop once the Chapter III house is open."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "manifest": {
+   "col": "gather",
+   "slots": {
+    "value": "1,000",
+    "unit": "slots a chest",
+    "basis": "patch",
+    "by": "vgc"
+   },
+   "figures": [
+    {
+     "label": "Ore it can hold",
+     "value": "1,000 × 50 = 50,000",
+     "basis": "sum",
+     "by": "gamerguides"
+    },
+    {
+     "label": "Insects it can hold",
+     "value": "1,000 × 1 = 1,000",
+     "basis": "sum",
+     "by": "gamerguides"
+    },
+    {
+     "label": "Price",
+     "value": "50 Silver",
+     "basis": "guide",
+     "by": "keengamer"
+    }
+   ],
+   "tips": [
+    {
+     "text": "Insects and fish don't stack: every one takes a slot. Keep the ones your recipes use and sell or donate the rest.",
+     "by": "gamerguides"
+    },
+    {
+     "text": "Retrieve All (1.04) packs every placed chest at once; The Games Wiki reports contents surviving a move, but marks it unconfirmed.",
+     "by": "thegameswiki"
+    }
+   ],
+   "watch": [
+    "No source lists what the chest refuses. The Games Wiki marks the 'whole Materials tab' rule unconfirmed, so cloth, reagents, insects and mushrooms show as Reported.",
+    "The 1.04 note doesn't say whether every Smithy reads the chest or only one near the house; one guide calls the link global, The Games Wiki marks it unconfirmed.",
+    "Whether the Cauldron (alchemy) or the Workstation reads it isn't documented: carry those materials."
+   ],
+   "patches": [
+    {
+     "v": "1.04.00",
+     "note": "Added with 1,000 slots; crafting and refinement read it",
+     "by": "vgc"
+    },
+    {
+     "v": "1.16.00",
+     "note": "Mushrooms reclassified as alchemy materials",
+     "by": "allthingshow"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "by": "vgc",
+    "url": "https://www.videogameschronicle.com/news/crimson-desert-update-adds-difficulty-levels-graphical-improvements-and-new-storage-items/",
+    "title": "Version 1.04 patch notes"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://keengamer.com/articles/guides/how-to-unlock-all-storage-spaces-in-crimson-desert",
+    "title": "How to Unlock All Storage Spaces"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/sturdy-gatherables-chest",
+    "title": "Sturdy Gatherables Chest"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-crafting-stations-recipes-manuals-guide",
+    "title": "Crafting Stations, Recipes and Manuals"
+   },
+   {
+    "by": "gamerguides",
+    "url": "https://www.gamerguides.com/crimson-desert/database/items/alchemy-material",
+    "title": "Database: Alchemy materials"
+   }
+  ]
+ },
+ {
+  "id": "kuku-cooler",
+  "name": "Kuku Cooler",
+  "leaf": "house",
+  "cls": "store",
+  "domains": [],
+  "base": "qol/kuku-cooler",
+  "trait": "The pantry cooking reads from",
+  "summary": "Food storage that cooking reads in place: raw ingredients stay in the cooler while you cook. The quest cooler holds 40, the Enhanced cooler 330, and coolers stacked in the house reach 1,000. It also keeps meals, elixirs and horse feed, though a meal has to be in the bag to be eaten.",
+  "tiers": {
+   "capacity": {
+    "tier": 1,
+    "basis": "330 per Enhanced cooler and 1,000 once coolers are stacked (Vulkk); the quest cooler holds 40."
+   },
+   "payoff": {
+    "tier": 1,
+    "basis": "Cooking reads it in place (1.04 notes)."
+   },
+   "unlock": {
+    "tier": 3,
+    "basis": "A Chapter IV quest for the first; the Enhanced cooler needs Mercury from Delesyia research after Chapter XI."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "manifest": {
+   "col": "cooler",
+   "slots": {
+    "value": "40 · 330",
+    "unit": "slots a cooler",
+    "basis": "patch",
+    "by": "vgc"
+   },
+   "figures": [
+    {
+     "label": "Stacked coolers",
+     "value": "up to 1,000",
+     "basis": "guide",
+     "by": "vulkk"
+    },
+    {
+     "label": "Meat in an Enhanced cooler",
+     "value": "330 × 50 = 16,500",
+     "basis": "sum",
+     "by": "gamerguides"
+    },
+    {
+     "label": "Fish in an Enhanced cooler",
+     "value": "330 × 1 = 330",
+     "basis": "sum",
+     "by": "gamerguides"
+    }
+   ],
+   "tips": [
+    {
+     "text": "A fish fills a slot on its own; a Fish Fillet stacks to 50. Game8 says cleaning a fish gives fillets.",
+     "by": "game8"
+    },
+    {
+     "text": "Cooking in the field? Keep one stack each of meat, vegetables, fruit, grain, cooking oil, water, salt and eggs in the bag.",
+     "by": "vulkk"
+    }
+   ],
+   "watch": [
+    "Meals must be in the bag to be eaten; the cooler only keeps them.",
+    "Mushrooms were cooking ingredients until 1.16 made them alchemy materials; no source says whether the cooler still takes them.",
+    "Vulkk's guide gives the quest cooler 50 slots; the 1.04 notes, KeenGamer and Vulkk's own database say 40."
+   ],
+   "patches": [
+    {
+     "v": "1.04.00",
+     "note": "Kuku Cooler (40) and Enhanced Kuku Cooler (330) added; cooking reads both",
+     "by": "vgc"
+    },
+    {
+     "v": "1.12.00",
+     "note": "Both coolers can be sold",
+     "by": "thegameswiki"
+    },
+    {
+     "v": "1.16.00",
+     "note": "Mushrooms reclassified as alchemy materials",
+     "by": "allthingshow"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "by": "vgc",
+    "url": "https://www.videogameschronicle.com/news/crimson-desert-update-adds-difficulty-levels-graphical-improvements-and-new-storage-items/",
+    "title": "Version 1.04 patch notes"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://keengamer.com/articles/guides/how-to-unlock-all-storage-spaces-in-crimson-desert",
+    "title": "How to Unlock All Storage Spaces"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/kuku-cooler",
+    "title": "Kuku Cooler"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/food-storage",
+    "title": "Food Storage"
+   },
+   {
+    "by": "gamerguides",
+    "url": "https://www.gamerguides.com/crimson-desert/database/items/ingredient",
+    "title": "Database: Ingredients"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/587187",
+    "title": "Meats and Grains"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/2026/03/31/how-to-manage-your-inventory-in-crimson-desert/",
+    "title": "How to Manage your Inventory"
+   },
+   {
+    "by": "allthingshow",
+    "url": "https://allthings.how/?p=94046",
+    "title": "1.16.0 patch notes"
+   }
+  ]
+ },
+ {
+  "id": "private-storage",
+  "name": "Private Storage",
+  "leaf": "house",
+  "cls": "store",
+  "domains": [],
+  "base": "qol/private-storage",
+  "trait": "The catch-all: nearly anything, up to 1,000 slots",
+  "summary": "The one chest that takes nearly everything: gear, consumables, materials and trade goods, though not Key Items or quest items. It starts at 240 slots and grows with each camp expansion to 1,000. Nothing reads it in place, so a recipe won't see what's in here: move materials to the house chests that crafting and cooking read.",
+  "tiers": {
+   "capacity": {
+    "tier": 1,
+    "basis": "1,000 at the full camp (1.02 notes)."
+   },
+   "payoff": {
+    "tier": 3,
+    "basis": "Storage only: no mechanic reads it in place. Bag sorting carries over while it's open (Vulkk)."
+   },
+   "unlock": {
+    "tier": 1,
+    "basis": "There from Chapter I: a tent at the Freesword Encampment, then the Hernand lodgings, then Kliff's tent at camp."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "manifest": {
+   "col": "private",
+   "slots": {
+    "value": "240 → 1,000",
+    "unit": "slots",
+    "basis": "patch",
+    "by": "dsogaming"
+   },
+   "figures": [
+    {
+     "label": "At the start",
+     "value": "240",
+     "basis": "patch",
+     "by": "dsogaming"
+    },
+    {
+     "label": "Camp expansions 1 to 4",
+     "value": "+100 each",
+     "basis": "patch",
+     "by": "dsogaming"
+    },
+    {
+     "label": "Fifth expansion",
+     "value": "+360",
+     "basis": "patch",
+     "by": "dsogaming"
+    },
+    {
+     "label": "Full camp",
+     "value": "240 + 400 + 360 = 1,000",
+     "basis": "sum",
+     "by": "dsogaming"
+    }
+   ],
+   "tips": [
+    {
+     "text": "Chapters I and II: the chest is in the north-east tent of the Freesword Encampment outside Hernand Castle, and at the Hernand lodgings.",
+     "by": "nerdschalk"
+    },
+    {
+     "text": "After the camp moves to Pailune you receive Private Storage as an item you can place in the house.",
+     "by": "gamingbolt"
+    },
+    {
+     "text": "Keep unique boss and exploration gear here rather than selling it: it can't be had again.",
+     "by": "powerpyx"
+    }
+   ],
+   "watch": [
+    "Key Items and quest items can't go in: the Collectibles Chest takes quest items.",
+    "The 1.04 notes promised Private Storage its own category tabs 'in the near future'; no later note confirms them."
+   ],
+   "patches": [
+    {
+     "v": "1.00.03",
+     "note": "Added at the Hernand lodgings and the Howling Hill camp",
+     "by": "vgc"
+    },
+    {
+     "v": "1.01.00",
+     "note": "Moved into Kliff's tent at camp",
+     "by": "powerpyx"
+    },
+    {
+     "v": "1.02.00",
+     "note": "Grows with camp expansion, 240 to 1,000",
+     "by": "dsogaming"
+    },
+    {
+     "v": "1.04.00",
+     "note": "A placeable Private Storage after the camp moves to Pailune",
+     "by": "gamingbolt"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "by": "dsogaming",
+    "url": "https://www.dsogaming.com/?p=193841",
+    "title": "Patch 1.02.00 release notes"
+   },
+   {
+    "by": "vgc",
+    "url": "https://www.videogameschronicle.com/news/crimson-desert-gets-a-new-patch-which-improves-controls-and-adds-new-item-storage/",
+    "title": "Version 1.00.03 patch notes"
+   },
+   {
+    "by": "powerpyx",
+    "url": "https://www.powerpyx.com/crimson-desert-storage-chest-location-how-to-store-items/",
+    "title": "Storage Chest Location"
+   },
+   {
+    "by": "nerdschalk",
+    "url": "https://nerdschalk.com/where-to-find-private-storage-in-crimson-desert-after-update-1-00-03-all-locations-explained/",
+    "title": "Where to Find Private Storage"
+   },
+   {
+    "by": "gamingbolt",
+    "url": "https://gamingbolt.com/?p=642205",
+    "title": "1.04: storage chests, house types, pet birds"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/how-to-store-items",
+    "title": "How to Store Items"
+   }
+  ]
+ },
+ {
+  "id": "wardrobe",
+  "name": "Wardrobe",
+  "leaf": "house",
+  "cls": "store",
+  "domains": [],
+  "kind": "House chest · outfits",
+  "region": "Delesyia · Hernand",
+  "area": "Timberton furniture shop",
+  "trait": "Outfits for all three, worn from the housing screen",
+  "summary": "Each Wardrobe holds 100 outfits and armour pieces in one pool that Kliff, Damiane and Oongka share, and you can dress straight from the housing screen. Place up to ten for 1,000 slots. They cost 15 Silver at the Timberton furniture shop in Delesyia.",
+  "tiers": {
+   "capacity": {
+    "tier": 1,
+    "basis": "100 a wardrobe, 1,000 with ten placed (1.04 notes)."
+   },
+   "payoff": {
+    "tier": 2,
+    "basis": "Outfits are worn from the housing screen without taking them out, and all three characters share them (KeenGamer)."
+   },
+   "unlock": {
+    "tier": 2,
+    "basis": "Delesyia's Timberton furniture shop, or the camp shop after 100 Trust and a contract."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "requires": [
+   "A house to place it in (the Hernand Residence opens in Chapter III)"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Buy a Large Dark or Large Bright Timberton Wardrobe for 15 Silver from the furniture shop in Timberton, Delesyia.",
+     "Or raise the Delesyia furniture vendor to 100 Trust with Copper Pouches and buy the Contract: Wardrobes then sell at the Greymane Camp furniture shop.",
+     "Place up to ten in Build Mode; dress from the housing screen."
+    ]
+   }
+  ],
+  "location": "Timberton furniture shop, Delesyia; the Greymane Camp furniture shop after the contract.",
+  "notes": [],
+  "variants": [
+   "Large Dark Timberton Wardrobe",
+   "Large Bright Timberton Wardrobe"
+  ],
+  "since": "Patch 1.04",
+  "also": [
+   "qol/house-storage"
+  ],
+  "manifest": {
+   "col": "wardrobe",
+   "slots": {
+    "value": "100",
+    "unit": "slots a wardrobe",
+    "basis": "patch",
+    "by": "vgc"
+   },
+   "figures": [
+    {
+     "label": "Ten wardrobes",
+     "value": "10 × 100 = 1,000",
+     "basis": "sum",
+     "by": "vgc"
+    },
+    {
+     "label": "Price",
+     "value": "15 Silver",
+     "basis": "guide",
+     "by": "keengamer"
+    }
+   ],
+   "patches": [
+    {
+     "v": "1.04.00",
+     "note": "Outfit storage added to the Wardrobe",
+     "by": "vgc"
+    }
+   ]
+  },
+  "media": {
+   "portrait": {
+    "from": "https://keengamer.com/wp-content/uploads/2026/04/How-to-Unlock-All-Storage-Spaces-in-Crimson-Desert-Wardrobe.png",
+    "credit": "keengamer",
+    "crop": [
+     0.36,
+     0.56,
+     0.86
+    ],
+    "src": "media/materials/wardrobe/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://keengamer.com/wp-content/uploads/2026/04/How-to-Unlock-All-Storage-Spaces-in-Crimson-Desert-Wardrobe.png",
+     "credit": "keengamer",
+     "caption": "Wardrobe — the outfit pool beside the bag",
+     "src": "media/materials/wardrobe/menu-1.webp",
+     "w": 1255,
+     "h": 706
+    },
+    {
+     "kind": "menu",
+     "from": "https://keengamer.com/wp-content/uploads/2026/04/How-to-Unlock-All-Storage-Spaces-in-Crimson-Desert-Wardrobe-in-Furniture-Shop.png",
+     "credit": "keengamer",
+     "caption": "Furniture shop — the Large Dark Timberton Wardrobe",
+     "src": "media/materials/wardrobe/menu-2.webp",
+     "w": 1253,
+     "h": 708
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "vgc",
+    "url": "https://www.videogameschronicle.com/news/crimson-desert-update-adds-difficulty-levels-graphical-improvements-and-new-storage-items/",
+    "title": "Version 1.04 patch notes"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://keengamer.com/articles/guides/how-to-unlock-all-storage-spaces-in-crimson-desert",
+    "title": "How to Unlock All Storage Spaces"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/wardrobe",
+    "title": "Wardrobe"
+   },
+   {
+    "by": "pcgamer",
+    "url": "https://www.pcgamer.com/games/action/the-latest-crimson-desert-patch-is-finally-the-reason-i-needed-to-turn-my-once-useless-house-into-a-cosy-haven/",
+    "title": "The 1.04 house patch"
+   }
+  ]
+ },
+ {
+  "id": "collectibles-chest",
+  "name": "Collectibles Chest",
+  "leaf": "house",
+  "cls": "store",
+  "domains": [],
+  "kind": "House chest · quest items and recipes",
+  "region": "Hernand",
+  "area": "Timberham Sawmill (Early Encounter)",
+  "trait": "Where quest items, keys and recipes go",
+  "summary": "1,000 slots for the paper that clogs the bag: quest items, keys, notes, bounty posters, blueprints, recipes and books. Private Storage refuses quest items, so this is the one chest that takes them. It's a free reward from Early Encounter.",
+  "tiers": {
+   "capacity": {
+    "tier": 1,
+    "basis": "1,000 slots (1.04 notes)."
+   },
+   "payoff": {
+    "tier": 2,
+    "basis": "Takes the quest items Private Storage refuses (The Games Wiki; KeenGamer)."
+   },
+   "unlock": {
+    "tier": 2,
+    "basis": "Early Encounter in Hernand Requests; House Roberts' quests may need to come first."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "requires": [
+   "Early Encounter (Hernand Requests)",
+   "A house to place it in"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Take Early Encounter from Hernand Requests (A Friendly Encounter); if no marker shows, progress House Roberts' faction quests.",
+     "Speak with the servant at the Timberturner Wainwright, north of the Nas River.",
+     "At the Timberham Sawmill the Noble gives you the chest; it appears under the Furniture tab.",
+     "Place it in Build Mode."
+    ]
+   }
+  ],
+  "location": "Timberham Sawmill, Hernand (quest reward).",
+  "notes": [],
+  "variants": [],
+  "since": "Patch 1.04",
+  "also": [
+   "qol/house-storage"
+  ],
+  "manifest": {
+   "col": "collect",
+   "slots": {
+    "value": "1,000",
+    "unit": "slots",
+    "basis": "patch",
+    "by": "vgc"
+   },
+   "tips": [
+    {
+     "text": "Sell a recipe once you've read it: it's learned, and it sells for about half what it cost.",
+     "by": "vulkk"
+    },
+    {
+     "text": "Discard old quest papers once they stop being Key Items; they sell for little.",
+     "by": "vulkk"
+    }
+   ],
+   "watch": [
+    "No source says whether a quest reads items from the chest: carry what a quest asks for."
+   ],
+   "patches": [
+    {
+     "v": "1.04.00",
+     "note": "Added: 1,000 slots for quest items and recipes",
+     "by": "vgc"
+    }
+   ]
+  },
+  "media": {
+   "portrait": {
+    "from": "https://keengamer.com/wp-content/uploads/2026/04/How-to-Unlock-All-Storage-Spaces-in-Crimson-Desert-Collectibles-Chest.png",
+    "credit": "keengamer",
+    "crop": [
+     0.56,
+     0.56,
+     0.86
+    ],
+    "src": "media/materials/collectibles-chest/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://keengamer.com/wp-content/uploads/2026/04/How-to-Unlock-All-Storage-Spaces-in-Crimson-Desert-Collectibles-Chest.png",
+     "credit": "keengamer",
+     "caption": "Collectibles Chest — quest items and recipes beside the bag",
+     "src": "media/materials/collectibles-chest/menu-1.webp",
+     "w": 1255,
+     "h": 702
+    },
+    {
+     "kind": "menu",
+     "from": "https://keengamer.com/wp-content/uploads/2026/04/How-to-Unlock-All-Storage-Spaces-in-Crimson-Desert-Early-Encounters-Quest.png",
+     "credit": "keengamer",
+     "caption": "Journal — Early Encounter, the quest that gives the chest",
+     "src": "media/materials/collectibles-chest/menu-2.webp",
+     "w": 1254,
+     "h": 714
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "vgc",
+    "url": "https://www.videogameschronicle.com/news/crimson-desert-update-adds-difficulty-levels-graphical-improvements-and-new-storage-items/",
+    "title": "Version 1.04 patch notes"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://keengamer.com/articles/guides/how-to-unlock-all-storage-spaces-in-crimson-desert",
+    "title": "How to Unlock All Storage Spaces"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/how-to-store-items",
+    "title": "How to Store Items"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/2026/03/31/how-to-manage-your-inventory-in-crimson-desert/",
+    "title": "How to Manage your Inventory"
+   }
+  ]
+ },
+ {
+  "id": "kuku-pot",
+  "name": "Kuku Pot",
+  "leaf": "house",
+  "cls": "store",
+  "domains": [],
+  "kind": "Carried store · Abyss objects",
+  "region": "Hernand",
+  "area": "Kilnden Workshop (Chapter IV)",
+  "trait": "Seals world objects for Kuku crafting",
+  "summary": "Not the cooler: the Kuku Pot is a carried store of 230 slots for what you lift with Axiom Force. That means Abyss objects, machine parts and contraptions, plus Aeserion's Scales and Abyss Cells. Grimnir's Kuku recipes use what's sealed inside. Every pot shares one pool, so a second pot adds no room.",
+  "tiers": {
+   "capacity": {
+    "tier": 3,
+    "basis": "230 slots, one pool for every pot (method.gg; The Games Wiki)."
+   },
+   "payoff": {
+    "tier": 2,
+    "basis": "Kuku crafting reads it, and it is the only way to carry a world object somewhere else."
+   },
+   "unlock": {
+    "tier": 2,
+    "basis": "The Chapter IV main quest, Mysterious Pot."
+   }
+  },
+  "tags": [
+   "base"
+  ],
+  "requires": [
+   "Chapter IV: Mysterious Pot"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Finish Mysterious Pot in Chapter IV: Grimnir at the Kilnden Workshop makes you the Kuku Pot.",
+     "To seal: hold Axiom Force on an object marked by a small white swirl rune on the minimap and choose Seal.",
+     "Discard puts an object back into the world; Take Out moves Scales and Cells into the bag.",
+     "Lost it? Carl's Recover Items tab returns it (1.11), or Grimnir crafts another from 5 Iron Ore and 5 Timber."
+    ]
+   }
+  ],
+  "location": "Carried; crafted and upgraded at the Kilnden Workshop, Hernand.",
+  "notes": [],
+  "variants": [
+   "Enhanced Kuku Pot"
+  ],
+  "since": "Base game",
+  "manifest": {
+   "col": "pot",
+   "slots": {
+    "value": "230",
+    "unit": "slots, one pool",
+    "basis": "guide",
+    "by": "method"
+   },
+   "figures": [
+    {
+     "label": "A new pot",
+     "value": "5 Iron Ore · 5 Timber",
+     "basis": "guide",
+     "by": "vulkk"
+    }
+   ],
+   "tips": [
+    {
+     "text": "Making a Small Kuku A.T.A.G. (the part for Blackstar's armour) uses the whole pot: empty it first.",
+     "by": "method"
+    }
+   ],
+   "watch": [
+    "Kuku-upgraded gear no longer counts toward its base item's challenges: finish those first or keep a spare.",
+    "Some objects hurt when they drop out of the pot: Discard in open ground."
+   ],
+   "patches": [
+    {
+     "v": "1.11.00",
+     "note": "Carl's Recover Items tab returns a lost Kuku Pot",
+     "by": "nerdschalk"
+    }
+   ]
+  },
+  "media": {
+   "portrait": {
+    "from": "https://www.method.gg/images/uploads/guides/1304390-kuku-pot-inventory.jpg",
+    "credit": "method",
+    "crop": [
+     0.587,
+     0.335,
+     0.26
+    ],
+    "src": "media/materials/kuku-pot/portrait.webp",
+    "w": 136,
+    "h": 136
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://www.method.gg/images/uploads/guides/1304396-kuku-pot-guide-inventory.jpg",
+     "credit": "method",
+     "caption": "Kuku Pot — sealed items, kept apart from the bag",
+     "src": "media/materials/kuku-pot/menu-1.webp",
+     "w": 900,
+     "h": 525
+    },
+    {
+     "kind": "action",
+     "from": "https://www.method.gg/images/uploads/guides/1304340-kuku-pots-seal-1.jpg",
+     "credit": "method",
+     "caption": "In action — sealing an object with Axiom Force",
+     "src": "media/materials/kuku-pot/action-2.webp",
+     "w": 900,
+     "h": 525
+    },
+    {
+     "kind": "menu",
+     "from": "https://www.method.gg/images/uploads/guides/1304399-kuku-pot-guide-ui.jpg",
+     "credit": "method",
+     "caption": "Grimnir's Kuku tree — what the pot's contents build",
+     "src": "media/materials/kuku-pot/menu-3.webp",
+     "w": 900,
+     "h": 525
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "method",
+    "url": "https://method.gg/crimson-desert/crimson-desert-kuku-pot-guide-how-to-get-it-how-it-works-and-all-upgrades",
+    "title": "Kuku Pot Guide"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/how-to-store-items",
+    "title": "How to Store Items"
+   },
+   {
+    "by": "gamesgg",
+    "url": "https://games.gg/crimson-desert/guides/how-to-use-kuku-pot-crimson-desert/",
+    "title": "Kuku Pot: How to Use It"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-crafting-stations-recipes-manuals-guide",
+    "title": "Crafting Stations, Recipes and Manuals"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/items/kuku-pot/",
+    "title": "Kuku Pot"
+   },
+   {
+    "by": "nerdschalk",
+    "url": "https://nerdschalk.com/how-to-recover-lost-rare-items-in-crimson-desert-after-update-1-11-00/",
+    "title": "Recover lost items after 1.11.00"
+   }
+  ]
+ },
+ {
+  "id": "camp-provisions",
+  "name": "Camp Provisions",
+  "leaf": "house",
+  "cls": "store",
+  "domains": [],
+  "kind": "Camp stock · donations",
+  "region": "Hernand · Pailune",
+  "area": "Carl, the Provisions Keeper",
+  "trait": "The stock every mission and ship build draws on",
+  "summary": "Carl's Camp Provisions is a stockpile, not a chest. What you donate becomes five camp resources: Armaments, Stone, Timber, Food and Silver. Missions, camp expansions and shipbuilding spend them, and none of them read your bag or your chests. Donations are one-way. Small Shipbuilding alone takes 600 Stone, 600 Wood and 1,200 Food from here.",
+  "tiers": {
+   "capacity": {
+    "tier": null,
+    "basis": "A stockpile with no published limit."
+   },
+   "payoff": {
+    "tier": 1,
+    "basis": "Every dispatch, expansion and ship build draws on it (KeenGamer; Whisper of the House's shipbuilding panel)."
+   },
+   "unlock": {
+    "tier": 2,
+    "basis": "Carl opens donations after the Reed Devil fight in Chapter III (All Things How)."
+   }
+  },
+  "tags": [
+   "base"
+  ],
+  "requires": [
+   "Chapter III: the Greymane Camp, after the Reed Devil"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Talk to Carl at the Greymane Camp and choose Camp Provisions.",
+     "Pick items with the donation mark, or Donate Funds for Copper and Silver.",
+     "Feed the resource your queued missions use: Logging, Mining and Harvest burn Silver and Food fastest; later expansions run short of Armaments."
+    ]
+   }
+  ],
+  "location": "Carl, the Provisions Keeper, at the Greymane Camp.",
+  "notes": [],
+  "variants": [],
+  "since": "Base game",
+  "also": [
+   "riches/camp-donations",
+   "riches/supply-dispatches"
+  ],
+  "manifest": {
+   "col": "camp",
+   "slots": {
+    "value": "5",
+    "unit": "resources: Armaments · Stone · Timber · Food · Silver",
+    "basis": "guide",
+    "by": "keengamer"
+   },
+   "figures": [
+    {
+     "label": "Fourth camp expansion",
+     "value": "1,500 Armaments · 2,500 Stone · 2,500 Timber · 4,000 Food · 100,000 Silver",
+     "basis": "guide",
+     "by": "keengamer"
+    },
+    {
+     "label": "Small Shipbuilding",
+     "value": "600 Stone · 600 Wood · 1,200 Food · 10,000 Camp Funds",
+     "basis": "guide",
+     "by": "keengamer"
+    },
+    {
+     "label": "One packed trade good",
+     "value": "1,000 resources + 100 Camp Funds",
+     "basis": "guide",
+     "by": "keengamer"
+    }
+   ],
+   "tips": [
+    {
+     "text": "As the camp ranks up, donated supplies turn up around the camp as food, weapons and supplies you can pick up again.",
+     "by": "allthingshow"
+    }
+   ],
+   "watch": [
+    "Donations are permanent.",
+    "Guides name the five differently: KeenGamer's Armaments, Stone, Timber, Food and Silver; All Things How's Equipment, Ore, Lumber, Food and Coin."
+   ]
+  },
+  "media": {
+   "portrait": {
+    "from": "https://www.keengamer.com/wp-content/uploads/2026/04/How-to-Increase-Inventory-Space-in-Crimson-Desert-Deposit-Items.png",
+    "credit": "keengamer",
+    "crop": [
+     0.62,
+     0.5,
+     0.86
+    ],
+    "src": "media/materials/camp-provisions/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://www.keengamer.com/wp-content/uploads/2026/04/How-to-Increase-Inventory-Space-in-Crimson-Desert-Deposit-Items.png",
+     "credit": "keengamer",
+     "caption": "Support Camp Resources — donating to Carl",
+     "src": "media/materials/camp-provisions/menu-1.webp",
+     "w": 1280,
+     "h": 720
+    },
+    {
+     "kind": "menu",
+     "from": "https://keengamer.com/wp-content/uploads/2026/03/Crimson-Desert-Greymane-Camp-Guide-All-Buildings-Upgrades-and-Camp-Management-Trade-Goods.png",
+     "credit": "keengamer",
+     "caption": "Camp Provisions — the trade goods Carl packs",
+     "src": "media/materials/camp-provisions/menu-2.webp",
+     "w": 1250,
+     "h": 711
+    },
+    {
+     "kind": "menu",
+     "from": "https://cdn.mos.cms.futurecdn.net/uJ63V7qKEpDK7NdXzg5tHW.jpg",
+     "credit": "pcgamer",
+     "caption": "Packing trade goods at Carl",
+     "src": "media/materials/camp-provisions/menu-3.webp",
+     "w": 1600,
+     "h": 900
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-greymane-camp-guide-all-buildings-upgrades-and-camp-management",
+    "title": "Greymane Camp Guide"
+   },
+   {
+    "by": "allthingshow",
+    "url": "https://allthings.how/crimson-desert-camp-provisions-every-category-and-how-to-stock-up-fast/",
+    "title": "Camp Provisions — Every Category"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+    "title": "DLC Shipbuilding Guide"
+   },
+   {
+    "by": "whisperofthehouse",
+    "url": "https://www.whisperofthehouse.com/crimson-desert/ships",
+    "title": "How Do You Get, Build, and Upgrade Ships"
+   },
+   {
+    "by": "pcgamer",
+    "url": "https://www.pcgamer.com/games/action/crimson-desert-trade-goods-wagon",
+    "title": "How to trade and get a wagon"
+   }
+  ]
+ },
+ {
+  "id": "supply-chest",
+  "name": "Supply Chest",
+  "leaf": "house",
+  "cls": "store",
+  "domains": [],
+  "kind": "Camp chest · receive-only",
+  "region": "Hernand",
+  "area": "Behind Carl, Greymane Camp",
+  "trait": "Missed loot lands here, until it's full",
+  "summary": "You can't put anything in Carl's Supply Chest. Missed loot, stronghold and clearing rewards, mission loot and camp produce land in it by themselves. It holds 230 slots and stops collecting when it's full, so empty it whenever you pass.",
+  "tiers": {
+   "capacity": {
+    "tier": 3,
+    "basis": "230 slots (The Games Wiki)."
+   },
+   "payoff": {
+    "tier": 3,
+    "basis": "Catches loot you would otherwise lose; you still carry it out yourself."
+   },
+   "unlock": {
+    "tier": 1,
+    "basis": "The Chapter III camp; before that, a chest inside the Royal Trading Post in Hernand City."
+   }
+  },
+  "tags": [
+   "base"
+  ],
+  "requires": [],
+  "routes": [
+   {
+    "steps": [
+     "Speak with Carl at the Greymane Camp and open the Supply Chest.",
+     "Take everything out: sort it into the house chests, or donate it to Camp Provisions.",
+     "Before Chapter III the early chest stands inside the Royal Trading Post in Hernand City."
+    ]
+   }
+  ],
+  "location": "Behind Carl at the Greymane Camp; earlier, inside the Royal Trading Post in Hernand City.",
+  "notes": [],
+  "variants": [],
+  "since": "Base game",
+  "manifest": {
+   "col": "supply",
+   "slots": {
+    "value": "230",
+    "unit": "slots",
+    "basis": "guide",
+    "by": "thegameswiki"
+   },
+   "tips": [
+    {
+     "text": "Mission loot and what the camp produces land here; much of it feeds crafting and cooking.",
+     "by": "keengamer"
+    }
+   ],
+   "watch": [
+    "When it's full it stops collecting: anything that would have landed there is lost."
+   ]
+  },
+  "media": {
+   "portrait": {
+    "from": "https://keengamer.com/wp-content/uploads/2026/03/Crimson-Desert-Greymane-Camp-Guide-All-Buildings-Upgrades-and-Camp-Management-Carl.png",
+    "credit": "keengamer",
+    "crop": [
+     0.5,
+     0.78,
+     0.62
+    ],
+    "src": "media/materials/supply-chest/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "overworld",
+     "from": "https://keengamer.com/wp-content/uploads/2026/03/Crimson-Desert-Greymane-Camp-Guide-All-Buildings-Upgrades-and-Camp-Management-Carl.png",
+     "credit": "keengamer",
+     "caption": "On site — Carl, with the Supply Chest at his feet",
+     "src": "media/materials/supply-chest/overworld-1.webp",
+     "w": 1255,
+     "h": 709
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/how-to-store-items",
+    "title": "How to Store Items"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-greymane-camp-guide-all-buildings-upgrades-and-camp-management",
+    "title": "Greymane Camp Guide"
+   },
+   {
+    "by": "epicgames",
+    "url": "https://store.epicgames.com/news/crimson-desert-guide-greymane-camp-management-recruits",
+    "title": "Greymane camp management"
+   }
+  ]
+ },
+ {
+  "id": "ship-holds",
+  "name": "Ship Holds",
+  "leaf": "ship",
+  "cls": "store",
+  "domains": [
+   "surface"
+  ],
+  "kind": "Ship cargo",
+  "region": "The Great Ocean",
+  "area": "Fleetmasters at Vellua, Demeniss and Delesyia",
+  "trait": "6 to 36 slots of sea trade goods",
+  "summary": "A ship's hold carries trade goods and nothing else: 6 slots on a rowboat, 14 on a small hull, 22 on a medium and 36 on a large one. A slot stacks 10 or 100 packed goods by price. No source publishes the legendary ships' holds.",
+  "tiers": {
+   "capacity": {
+    "tier": 4,
+    "basis": "36 slots at most on a bought hull (the Buy Ship screen, Whisper of the House)."
+   },
+   "payoff": {
+    "tier": 1,
+    "basis": "Maritime trading runs through it (KeenGamer)."
+   },
+   "unlock": {
+    "tier": 4,
+    "basis": "The DLC and a hull of your own: 2,000 to 6,000,000 Camp Funds."
+   }
+  },
+  "tags": [
+   "dlc"
+  ],
+  "requires": [
+   "Charting the Unknown: A Wider World"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "At a Fleetmaster (Hopkins at Vellua; Demeniss; Delesyia) the Buy Ship screen shows each hull's Inventory.",
+     "Load trade goods at a port; the hold takes nothing else.",
+     "Crew Carpenters so the hull repairs at sea; a lost ship is recovered at a Ship Manager for a fee."
+    ]
+   }
+  ],
+  "location": "Fleetmasters at Vellua, Demeniss and Delesyia.",
+  "notes": [],
+  "variants": [],
+  "since": "Charting the Unknown",
+  "also": [
+   "riches/fleetmaster-ships",
+   "qol/large-ship"
+  ],
+  "manifest": {
+   "col": "hold",
+   "slots": {
+    "value": "6–36",
+    "unit": "slots by hull",
+    "basis": "screenshot",
+    "by": "whisperofthehouse"
+   },
+   "vessels": [
+    {
+     "ref": "mounts/large-delesyian-ship",
+     "slots": 36,
+     "by": "game8"
+    },
+    {
+     "ref": "mounts/large-demenissian-ship",
+     "slots": 36,
+     "by": "game8"
+    },
+    {
+     "ref": "mounts/large-hernandian-ship",
+     "slots": 36,
+     "by": "game8"
+    },
+    {
+     "ref": "mounts/medium-delesyian-ship",
+     "slots": 22,
+     "by": "game8"
+    },
+    {
+     "ref": "mounts/medium-demenissian-ship",
+     "slots": 22,
+     "by": "game8"
+    },
+    {
+     "ref": "mounts/medium-greymane-ship",
+     "slots": 22,
+     "by": "game8"
+    },
+    {
+     "ref": "mounts/medium-hernandian-ship",
+     "slots": 22,
+     "by": "game8"
+    },
+    {
+     "ref": "mounts/small-delesyian-ship",
+     "slots": 14,
+     "by": "game8"
+    },
+    {
+     "ref": "mounts/small-demenissian-ship",
+     "slots": 14,
+     "by": "game8"
+    },
+    {
+     "ref": "mounts/small-greymane-ship",
+     "slots": 14,
+     "by": "game8"
+    },
+    {
+     "ref": "mounts/small-hernandian-ship",
+     "slots": 14,
+     "by": "game8"
+    },
+    {
+     "ref": "mounts/balanced-rowboat",
+     "slots": 6,
+     "by": "game8"
+    },
+    {
+     "ref": "mounts/humble-rowboat",
+     "slots": 6,
+     "by": "game8"
+    },
+    {
+     "ref": "mounts/sand-colored-rowboat",
+     "slots": 6,
+     "by": "game8"
+    },
+    {
+     "ref": "mounts/sturdy-tawny-rowboat",
+     "slots": 6,
+     "by": "game8"
+    },
+    {
+     "ref": "mounts/assault-ship-of-the-east",
+     "slots": null,
+     "by": "keengamer"
+    },
+    {
+     "ref": "mounts/flagship-of-the-east",
+     "slots": null,
+     "by": "keengamer"
+    },
+    {
+     "ref": "mounts/large-greymane-ship",
+     "slots": null,
+     "by": "keengamer"
+    },
+    {
+     "ref": "mounts/phantom-ship",
+     "slots": null,
+     "by": "keengamer"
+    },
+    {
+     "ref": "mounts/the-drunken-catfish",
+     "slots": null,
+     "by": "keengamer"
+    }
+   ],
+   "figures": [
+    {
+     "label": "Repair and retrieval, one case at Vellua",
+     "value": "19,880",
+     "basis": "screenshot",
+     "by": "whisperofthehouse"
+    }
+   ],
+   "watch": [
+    "The four legendary ships and the Large Greymane Ship have no published hold size."
+   ],
+   "patches": [
+    {
+     "v": "2.04.08",
+     "note": "Fixed a Golden Striped Marlin that could not be taken out of the ship's trade-goods slots",
+     "by": "patchbot"
+    }
+   ]
+  },
+  "media": {
+   "portrait": {
+    "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Ship-Gameplay-Crimson-Desert.jpg",
+    "credit": "keengamer",
+    "crop": [
+     0.38,
+     0.47,
+     0.72
+    ],
+    "src": "media/materials/ship-holds/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://images.keengamer.com/wp-content/uploads/2026/11/All-Ship-Types.jpg",
+    "credit": "keengamer",
+    "clip": [
+     0.34,
+     0,
+     1,
+     1
+    ],
+    "src": "media/materials/ship-holds/hero.webp",
+    "w": 1689,
+    "h": 1301
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://www.whisperofthehouse.com/images/crimson-desert/crimson-desert-fleetmaster-ship-purchase.webp",
+     "credit": "whisperofthehouse",
+     "caption": "Buy Ship — the Large Hernandian Ship's Inventory of 36",
+     "src": "media/materials/ship-holds/menu-1.webp",
+     "w": 822,
+     "h": 760
+    },
+    {
+     "kind": "overworld",
+     "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Ship-Repair-Service.jpg",
+     "credit": "keengamer",
+     "caption": "On site — Hopkins, Ship Manager at Vellua, who repairs and retrieves",
+     "src": "media/materials/ship-holds/overworld-2.webp",
+     "w": 1600,
+     "h": 814
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+    "title": "DLC Shipbuilding Guide"
+   },
+   {
+    "by": "whisperofthehouse",
+    "url": "https://www.whisperofthehouse.com/crimson-desert/ships",
+    "title": "How Do You Get, Build, and Upgrade Ships"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+    "title": "How to Get Ships"
+   },
+   {
+    "by": "patchbot",
+    "url": "https://patchbot.io/games/crimson-desert/articles/2127-patch-notes-version-20408",
+    "title": "Patch notes 2.04.08"
+   }
+  ]
+ },
+ {
+  "id": "shipbuilding-stock",
+  "name": "Shipbuilding Stock",
+  "leaf": "ship",
+  "cls": "supply",
+  "domains": [
+   "surface"
+  ],
+  "base": "riches/small-greymane-ship",
+  "trait": "Fill Carl's stock before the ship dispatch",
+  "summary": "Small Shipbuilding is a dispatch, and its materials come out of Camp Provisions, not your bag: 600 Stone, 600 Wood and 1,200 Food, plus 10,000 Camp Funds. It also wants five free comrades, one of them an engineer, and 12 in-game hours. Donate ore, timber and food to Carl before you start.",
+  "tiers": {
+   "capacity": {
+    "tier": null,
+    "basis": "Not a store."
+   },
+   "payoff": {
+    "tier": 1,
+    "basis": "Your first ship, for less in Camp Funds than any you can buy."
+   },
+   "unlock": {
+    "tier": 3,
+    "basis": "The DLC's A Wider World, after the camp expansion quests."
+   }
+  },
+  "tags": [
+   "dlc"
+  ],
+  "also": [
+   "mounts/small-greymane-ship"
+  ],
+  "manifest": {
+   "bill": [
+    {
+     "title": "Small Shipbuilding, Vellua",
+     "cols": [
+      "Needed"
+     ],
+     "by": "keengamer",
+     "rows": [
+      {
+       "item": "Stone",
+       "cells": [
+        "600"
+       ],
+       "from": "Camp Provisions: donate ore and stone",
+       "entry": "camp-provisions"
+      },
+      {
+       "item": "Wood",
+       "cells": [
+        "600"
+       ],
+       "from": "Camp Provisions: donate timber",
+       "entry": "camp-provisions"
+      },
+      {
+       "item": "Food",
+       "cells": [
+        "1,200"
+       ],
+       "from": "Camp Provisions: donate meals and ingredients",
+       "entry": "camp-provisions"
+      },
+      {
+       "item": "Camp Funds",
+       "cells": [
+        "10,000"
+       ],
+       "from": "Donated coin; one Silver gives 1,000 since 2.01"
+      },
+      {
+       "item": "Comrades",
+       "cells": [
+        "5"
+       ],
+       "from": "Free, not on another dispatch; one with Engineering",
+       "by": "whisperofthehouse"
+      },
+      {
+       "item": "Time",
+       "cells": [
+        "12 h"
+       ],
+       "from": "In-game hours; sleeping skips them",
+       "by": "whisperofthehouse"
+      }
+     ],
+     "note": "Medium and Large builds at Delesyia need more, and no source lists how much."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Engineering ranks",
+     "value": "Engineering I · Skilled Engineer II · Expert Engineer III",
+     "basis": "screenshot",
+     "by": "whisperofthehouse"
+    }
+   ],
+   "tips": [
+    {
+     "text": "Contribution Workers fill empty seats but can't be the engineer.",
+     "by": "whisperofthehouse"
+    }
+   ]
+  },
+  "sources": [
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+    "title": "DLC Shipbuilding Guide"
+   },
+   {
+    "by": "whisperofthehouse",
+    "url": "https://www.whisperofthehouse.com/crimson-desert/ships",
+    "title": "How Do You Get, Build, and Upgrade Ships"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+    "title": "How to Get Ships"
+   }
+  ]
+ },
+ {
+  "id": "ship-fittings",
+  "name": "Ship Fittings",
+  "leaf": "ship",
+  "cls": "supply",
+  "domains": [
+   "surface"
+  ],
+  "kind": "Ship parts",
+  "region": "Delesyia · Demeniss",
+  "area": "Joaquin, Port Delesyia · Juan, Port Demeniss",
+  "trait": "Two outfitters; every part sized to its hull",
+  "summary": "Sails, side cannons, bow cannons, figureheads and sterns come from two Ship Outfitters. Joaquin at Port Delesyia sells the cheaper iron line and Juan at Port Demeniss the gilded one. A part fits only its own hull size, and you fit it at a Ship Manager under Manage Ship.",
+  "tiers": {
+   "capacity": {
+    "tier": null,
+    "basis": "Not a store."
+   },
+   "payoff": {
+    "tier": 2,
+    "basis": "Sails add +100 Health and +1 or +2 Speed; a figurehead +400 Health (Gaming Deputy)."
+   },
+   "unlock": {
+    "tier": 3,
+    "basis": "The DLC's ports; 30 to 275 Silver a part."
+   }
+  },
+  "tags": [
+   "dlc"
+  ],
+  "requires": [
+   "A ship (Charting the Unknown)"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Buy from Joaquin at Port Delesyia or Juan at Port Demeniss.",
+     "At a Ship Manager open Manage Ship, choose the ship and Change Equipment.",
+     "Match the size: a small sail fits only a small ship."
+    ]
+   }
+  ],
+  "location": "Ship Outfitters at Port Delesyia and Port Demeniss.",
+  "notes": [],
+  "variants": [],
+  "since": "Charting the Unknown",
+  "also": [
+   "mounts/large-hernandian-ship"
+  ],
+  "manifest": {
+   "bill": [
+    {
+     "title": "Outfitter stock (Silver)",
+     "cols": [
+      "Effect",
+      "Small",
+      "Medium",
+      "Large",
+      "Seller"
+     ],
+     "by": "gamingdeputy",
+     "rows": [
+      {
+       "item": "Delesyian Sail",
+       "cells": [
+        "+100 Health, +2 Speed",
+        "110",
+        "220",
+        "275",
+        "Joaquin"
+       ]
+      },
+      {
+       "item": "Tidesworn Sail",
+       "cells": [
+        "+100 Health, +2 Speed",
+        "110",
+        "220",
+        "275",
+        "Joaquin"
+       ]
+      },
+      {
+       "item": "Demenissian Sail",
+       "cells": [
+        "+100 Health, +2 Speed",
+        "110",
+        "220",
+        "275",
+        "Juan"
+       ]
+      },
+      {
+       "item": "Tideblessed Sail",
+       "cells": [
+        "+100 Health, +1 Speed",
+        "70",
+        "140",
+        "175",
+        "Juan"
+       ]
+      },
+      {
+       "item": "Gentle Wave Figurehead",
+       "cells": [
+        "+400 Health",
+        "—",
+        "125",
+        "156",
+        "Joaquin (M) · Juan (L)"
+       ]
+      },
+      {
+       "item": "Gentle Wave Stern",
+       "cells": [
+        "+100 Health, +1 Handling",
+        "—",
+        "140",
+        "175",
+        "Joaquin (M) · Juan (L)"
+       ]
+      },
+      {
+       "item": "Iron Naval Cannon",
+       "cells": [
+        "Side cannon",
+        "—",
+        "—",
+        "30",
+        "Joaquin"
+       ]
+      },
+      {
+       "item": "Gilded Naval Cannon",
+       "cells": [
+        "Side cannon",
+        "—",
+        "—",
+        "240",
+        "Juan"
+       ]
+      },
+      {
+       "item": "Bright Iron Prow Cannon",
+       "cells": [
+        "Bow cannon",
+        "—",
+        "—",
+        "30",
+        "Joaquin"
+       ]
+      },
+      {
+       "item": "Captain's Bow Cannon",
+       "cells": [
+        "Bow cannon",
+        "—",
+        "—",
+        "240",
+        "Juan"
+       ]
+      }
+     ],
+     "note": "Stats, sizes and prices from Gaming Deputy's list of 21 parts; English names from gaming.tools and Vulkk (Gaming Deputy's 'Tide-Marked' is read as Tidesworn: same seller, same prices)."
+    }
+   ],
+   "watch": [
+    "Steam and Clockwork parts fit medium and large hulls, not the Drunken Catfish's giant hull (FinalBoss).",
+    "gaming.tools also lists Fair Wind figureheads and sterns for large hulls at Port Delesyia; Gaming Deputy's list doesn't."
+   ]
+  },
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4r7h56r26g5axwpdhbo6n2ptork1",
+    "credit": "game8",
+    "crop": [
+     0.7,
+     0.45,
+     0.82
+    ],
+    "src": "media/materials/ship-fittings/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Ship-Upgrades.jpg",
+    "credit": "keengamer",
+    "clip": [
+     0.4,
+     0,
+     1,
+     1
+    ],
+    "src": "media/materials/ship-fittings/hero.webp",
+    "w": 1534,
+    "h": 1299
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://img.game8.co/4r7h56r26g5axwpdhbo6n2ptork1",
+     "credit": "game8",
+     "caption": "Ship Outfitter — large sails at Port Demeniss",
+     "src": "media/materials/ship-fittings/menu-1.webp",
+     "w": 728,
+     "h": 410
+    },
+    {
+     "kind": "menu",
+     "from": "https://img.game8.co/r5s31cgdox462sj33k4jjzmsol6a",
+     "credit": "game8",
+     "caption": "Manage Ships — changing a Small Greymane Ship's sail",
+     "src": "media/materials/ship-fittings/menu-2.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "gamingdeputy",
+    "url": "https://www.gamingdeputy.com/france/crimson-desert-pieces-navire/",
+    "title": "Toutes les pièces de navire"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/items/iron-naval-cannon/",
+    "title": "Iron Naval Cannon"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+    "title": "DLC Shipbuilding Guide"
+   },
+   {
+    "by": "finalboss",
+    "url": "https://finalboss.io/crimson-desert-how-to-get-ship-rocket-boosters-stern-upgrades",
+    "title": "Ship Rocket Boosters — Stern Upgrades"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/635788",
+    "title": "How to Get Ships"
+   }
+  ]
+ },
+ {
+  "id": "sea-blueprints",
+  "name": "Sea Blueprints",
+  "leaf": "ship",
+  "cls": "supply",
+  "domains": [
+   "surface",
+   "sea"
+  ],
+  "kind": "Hidden ship blueprints",
+  "region": "The Great Ocean",
+  "area": "Ocula · Iliya · the Great Coral Reef · Port Delesyia",
+  "trait": "Four ship parts no outfitter sells",
+  "summary": "The best ship parts aren't for sale. The Giant Golden Compass Sail's manual is in a chest behind a waterfall at Castaway's Shelter on Ocula Island. The Steam and Clockwork Stern and Figurehead share a chest in sunken ruins west of Iliya Island. The Bluewake Sail lies in a cave deep in the Great Coral Reef, and the Long-Horned Fish Stern costs 50 Relics from Rafi at Port Delesyia.",
+  "tiers": {
+   "capacity": {
+    "tier": null,
+    "basis": "Not a store."
+   },
+   "payoff": {
+    "tier": 2,
+    "basis": "+200 Health and +2 Speed on the Compass Sail; the sterns push a ship against the wind (Gaming Deputy; FinalBoss)."
+   },
+   "unlock": {
+    "tier": 4,
+    "basis": "DLC exploration, deep dives and a 50-Relic purchase at Trust 100."
+   }
+  },
+  "tags": [
+   "dlc"
+  ],
+  "requires": [
+   "A ship and a diving suit (Charting the Unknown)"
+  ],
+  "routes": [
+   {
+    "label": "Giant Golden Compass Sail",
+    "steps": [
+     "Sail to Ocula Island and find Castaway's Shelter, as the in-game banner names it.",
+     "Go behind the waterfall: the chest at the back holds the manual.",
+     "Read it, then craft it at a Workstation: 1 Natural Pearl, 30 Shiny Ore, 1 Giant Hydrothermal Salamander, 200 Flawless Timber, 90 Fleece."
+    ]
+   },
+   {
+    "label": "Steam and Clockwork Stern and Figurehead",
+    "steps": [
+     "From Iliya Island, south of Hernand, head about 400 m west of its westernmost rocky landmass to the Forgotten Ocean Ruins.",
+     "Dive to the sunken temple, deal with the Abyss turret sentries and go in.",
+     "Look up and swim through the holes in the ceiling to the upper chamber: one chest holds both blueprints."
+    ]
+   },
+   {
+    "label": "Long-Horned Fish Stern",
+    "steps": [
+     "Raise Trust with Rafi, the Relic Exchange vendor at Delesyia's port, to 100 by gifting money bags from floating salvage crates.",
+     "Buy the blueprint for 50 Relics; giant hydrothermal salamanders drop 1 to 3 each.",
+     "It fits large hulls only."
+    ]
+   },
+   {
+    "label": "Bluewake Sail",
+    "steps": [
+     "Dive to the cave deep in the Great Coral Reef where Shiny Ore grows thick.",
+     "The treasure chest there holds the blueprint."
+    ]
+   }
+  ],
+  "location": "Castaway's Shelter, Ocula Island; the Forgotten Ocean Ruins west of Iliya Island; the Great Coral Reef; Port Delesyia.",
+  "notes": [],
+  "variants": [],
+  "since": "Charting the Unknown",
+  "manifest": {
+   "bill": [
+    {
+     "title": "Large stern recipes (Workstation)",
+     "cols": [
+      "Steam and Clockwork",
+      "Long-Horned Fish"
+     ],
+     "by": "finalboss",
+     "rows": [
+      {
+       "item": "Natural Pearl",
+       "cells": [
+        "1",
+        "1"
+       ],
+       "entry": "ocean-materials"
+      },
+      {
+       "item": "Amberress",
+       "cells": [
+        "3",
+        "2"
+       ],
+       "entry": "ocean-materials"
+      },
+      {
+       "item": "Hydrothermal Mineral Deposit",
+       "cells": [
+        "6",
+        "4"
+       ],
+       "entry": "ocean-materials"
+      },
+      {
+       "item": "Flawless Timber",
+       "cells": [
+        "150",
+        "100"
+       ],
+       "entry": "ocean-materials"
+      },
+      {
+       "item": "Abyss Cell",
+       "cells": [
+        "5",
+        "5"
+       ],
+       "entry": "ocean-materials"
+      }
+     ],
+     "note": "FinalBoss lists the large versions only; the medium Steam and Clockwork Stern's costs show at the Workstation."
+    },
+    {
+     "title": "Giant Golden Compass Sail (Workstation)",
+     "cols": [
+      "Qty"
+     ],
+     "by": "gamingdeputy",
+     "rows": [
+      {
+       "item": "Natural Pearl",
+       "cells": [
+        "1"
+       ],
+       "entry": "ocean-materials"
+      },
+      {
+       "item": "Shiny Ore",
+       "cells": [
+        "30"
+       ],
+       "entry": "ocean-materials"
+      },
+      {
+       "item": "Giant Hydrothermal Salamander",
+       "cells": [
+        "1"
+       ]
+      },
+      {
+       "item": "Flawless Timber",
+       "cells": [
+        "200"
+       ],
+       "entry": "ocean-materials"
+      },
+      {
+       "item": "Fleece",
+       "cells": [
+        "90"
+       ]
+      }
+     ]
+    }
+   ],
+   "tips": [
+    {
+     "text": "Craft at a Workstation (the Timberham Sawmill has one, through facility management), then fit the part at a Ship Manager.",
+     "by": "finalboss"
+    }
+   ],
+   "watch": [
+    "Steam and Clockwork parts fit medium and large hulls. The Drunken Catfish's giant hull takes the Golden Compass Sail instead."
+   ]
+  },
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/3ucnm1shjbr2oshfvvv23mb13dyu",
+    "credit": "game8",
+    "crop": [
+     0.62,
+     0.5,
+     0.8
+    ],
+    "src": "media/materials/sea-blueprints/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://img.game8.co/zftfio0vk3vvd4g0kvk0a3d2df8d",
+     "credit": "game8",
+     "caption": "World map — the Golden Compass Sail chest, Ocula Island",
+     "clip": [
+      0,
+      0,
+      0.497,
+      1
+     ],
+     "src": "media/materials/sea-blueprints/map-1.webp",
+     "w": 362,
+     "h": 410
+    },
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/zftfio0vk3vvd4g0kvk0a3d2df8d",
+     "credit": "game8",
+     "caption": "On site — the waterfall at Castaway's Shelter",
+     "clip": [
+      0.503,
+      0,
+      1,
+      0.492
+     ],
+     "src": "media/materials/sea-blueprints/overworld-2.webp",
+     "w": 362,
+     "h": 202
+    },
+    {
+     "kind": "overworld",
+     "from": "https://img.game8.co/3ucnm1shjbr2oshfvvv23mb13dyu",
+     "credit": "game8",
+     "caption": "On site — the chest behind the waterfall",
+     "src": "media/materials/sea-blueprints/overworld-3.webp",
+     "w": 728,
+     "h": 410
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "finalboss",
+    "url": "https://finalboss.io/crimson-desert-how-to-get-ship-rocket-boosters-stern-upgrades",
+    "title": "Ship Rocket Boosters — Stern Upgrades"
+   },
+   {
+    "by": "gamingdeputy",
+    "url": "https://www.gamingdeputy.com/france/crimson-desert-pieces-navire/",
+    "title": "Toutes les pièces de navire"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/items/shiny-ore/",
+    "title": "Shiny Ore"
+   },
+   {
+    "by": "finalboss",
+    "url": "https://finalboss.io/crimson-desert-how-to-craft-drunken-catfish-blueprint-guide",
+    "title": "Drunken Catfish Blueprint and Crafting Route"
+   }
+  ]
+ },
+ {
+  "id": "ocean-materials",
+  "name": "Ocean Materials",
+  "leaf": "ship",
+  "cls": "supply",
+  "domains": [
+   "sea"
+  ],
+  "kind": "DLC crafting materials",
+  "region": "The Great Ocean",
+  "area": "Vents, reefs, wrecks and salvage",
+  "trait": "Where the sea's materials come from",
+  "summary": "Charting the Unknown's parts run on materials found only at sea. Shiny Ore glows pale blue on the ocean floor and fills drifting boxes. Hydrothermal Mineral Deposits line the vent walls, and square salvage crates drop Amberress and money bags. Natural Pearls come from the Iliya Ruins Excavation dispatch, Manganese from chests in sunken ships.",
+  "tiers": {
+   "capacity": {
+    "tier": null,
+    "basis": "Not a store."
+   },
+   "payoff": {
+    "tier": 2,
+    "basis": "Ship parts, sails and the DLC's gear need them."
+   },
+   "unlock": {
+    "tier": 3,
+    "basis": "The DLC: a ship and a diving suit to reach them."
+   }
+  },
+  "tags": [
+   "dlc"
+  ],
+  "requires": [
+   "A ship and a diving suit (Charting the Unknown)"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Sail with the ship's underwater detection on, and break every square salvage crate you pass.",
+     "Dive to the pale blue Shiny Ore nodes; an upgraded mining tool gets more from each.",
+     "Break Hydrothermal Mineral Deposits on the vent walls with Force Palm or a mining drill.",
+     "Pioneer Iliya Island and run its Ruins Excavation dispatch for Natural Pearls."
+    ]
+   }
+  ],
+  "location": "The ocean floor, the Great Hydrothermal Vents, the Great Coral Reef, sunken ships and floating salvage.",
+  "notes": [],
+  "variants": [],
+  "since": "Charting the Unknown",
+  "manifest": {
+   "rows": [
+    "sea"
+   ],
+   "bill": [
+    {
+     "title": "Where each comes from",
+     "cols": [
+      "Where",
+      "Used in"
+     ],
+     "by": "finalboss",
+     "rows": [
+      {
+       "item": "Shiny Ore",
+       "cells": [
+        "Pale blue nodes on the ocean floor; drifting boxes; a rich cave deep in the Great Coral Reef",
+        "20–100 per item; the Ship Teleportation Device; the Compass Sail"
+       ],
+       "by": "vulkk"
+      },
+      {
+       "item": "Hydrothermal Mineral Deposit",
+       "cells": [
+        "Glowing deposits on vent walls near the floor; salvage crates",
+        "5–45 per item; sterns"
+       ],
+       "by": "finalboss"
+      },
+      {
+       "item": "Amberress",
+       "cells": [
+        "Small square salvage crates (not the round barrels); sunk pirate ships; the seabed by the whale bones at Rocky Reef",
+        "Sterns"
+       ],
+       "by": "finalboss"
+      },
+      {
+       "item": "Natural Pearl",
+       "cells": [
+        "Iliya Ruins Excavation dispatch, about 1 in 5; a cave south of Samora Island",
+        "Sterns; the Compass Sail; the Drunken Catfish's sail"
+       ],
+       "by": "finalboss"
+      },
+      {
+       "item": "Manganese",
+       "cells": [
+        "Chests in small sunken ships: underwater detection turns orange near them",
+        "—"
+       ],
+       "by": "vulkk"
+      },
+      {
+       "item": "Relic",
+       "cells": [
+        "Giant hydrothermal salamanders, 1–3 each",
+        "Rafi's Relic Exchange"
+       ],
+       "by": "finalboss"
+      },
+      {
+       "item": "Flawless Timber",
+       "cells": [
+        "Developed camp and dispatch rewards; trees felled with refined tools",
+        "Sterns; the Compass Sail"
+       ],
+       "by": "finalboss"
+      },
+      {
+       "item": "Abyss Cell",
+       "cells": [
+        "Crab-like Abyss creatures around Drakeful Castle; Wandershrubs",
+        "Sterns; Kuku crafting"
+       ],
+       "by": "finalboss"
+      },
+      {
+       "item": "Sea Fan Coral · Malachite",
+       "cells": [
+        "Named in KeenGamer's Flagship of the East guide; no location given",
+        "The Flagship of the East"
+       ],
+       "by": "keengamer"
+      }
+     ]
+    }
+   ],
+   "tips": [
+    {
+     "text": "Slot something like Blessing of the Earth III on an upgraded mining tool to get more from each node.",
+     "by": "vulkk"
+    }
+   ]
+  },
+  "media": {
+   "portrait": {
+    "from": "https://staticg.sportskeeda.com/editor/2026/11/092ac-17935378418509-1920.jpg",
+    "credit": "sportskeeda",
+    "crop": [
+     0.23,
+     0.55,
+     0.62
+    ],
+    "src": "media/materials/ocean-materials/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "map",
+     "from": "https://staticg.sportskeeda.com/editor/2026/11/092ac-17935378418509-1920.jpg",
+     "credit": "sportskeeda",
+     "caption": "Map — the Great Hydrothermal Vents, where the deposits line the vent walls",
+     "clip": [
+      0.5,
+      0,
+      1,
+      0.5
+     ],
+     "src": "media/materials/ocean-materials/map-1.webp",
+     "w": 960,
+     "h": 540
+    },
+    {
+     "kind": "action",
+     "from": "https://staticg.sportskeeda.com/editor/2026/11/092ac-17935378418509-1920.jpg",
+     "credit": "sportskeeda",
+     "caption": "In action — a giant hydrothermal salamander, which drops Relics",
+     "clip": [
+      0,
+      0,
+      0.5,
+      1
+     ],
+     "src": "media/materials/ocean-materials/action-2.webp",
+     "w": 960,
+     "h": 1080
+    },
+    {
+     "kind": "overworld",
+     "from": "https://images.keengamer.com/wp-content/uploads/2026/11/Forsaken-Oath-Plate-Helm.jpg",
+     "credit": "keengamer",
+     "caption": "On site — the seabed at the Great Hydrothermal Vents",
+     "src": "media/materials/ocean-materials/overworld-3.webp",
+     "w": 1600,
+     "h": 815
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "finalboss",
+    "url": "https://finalboss.io/crimson-desert-how-to-get-ship-rocket-boosters-stern-upgrades",
+    "title": "Ship Rocket Boosters — Stern Upgrades"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/items/shiny-ore/",
+    "title": "Shiny Ore"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/items/hydrothermal-mineral-deposit/",
+    "title": "Hydrothermal Mineral Deposit"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/items/manganese/",
+    "title": "Manganese"
+   },
+   {
+    "by": "finalboss",
+    "url": "https://finalboss.io/crimson-desert-how-to-get-the-drunken-catfish-legendary-galleon",
+    "title": "How to Get the Drunken Catfish"
+   },
+   {
+    "by": "game8",
+    "url": "https://game8.co/games/Crimson-Desert/archives/587191",
+    "title": "List of All Crafting Materials"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-how-to-get-the-flagship-of-the-east/",
+    "title": "How to Get the Flagship of the East"
+   }
+  ]
+ },
+ {
+  "id": "ship-teleporter",
+  "name": "Ship Teleportation Device",
+  "leaf": "ship",
+  "cls": "supply",
+  "domains": [
+   "surface"
+  ],
+  "base": "qol/ship-teleport",
+  "trait": "Turns your ship into a fast-travel point",
+  "summary": "Fitted, it makes the ship a fast-travel destination, so its hold and crew wait where you left them. The blueprint is buried on Auronui's west coast. It costs 15 Shiny Ore, 5 Azurite and 10 Iron Ore at the camp's furniture workbench.",
+  "tiers": {
+   "capacity": {
+    "tier": null,
+    "basis": "Not a store."
+   },
+   "payoff": {
+    "tier": 1,
+    "basis": "The ship becomes a fast-travel point (KeenGamer)."
+   },
+   "unlock": {
+    "tier": 3,
+    "basis": "Auronui's pioneering mission and a buried chest; the materials are common."
+   }
+  },
+  "tags": [
+   "dlc"
+  ],
+  "manifest": {
+   "bill": [
+    {
+     "title": "Recipe (Greymane Camp furniture workbench)",
+     "cols": [
+      "Qty"
+     ],
+     "by": "keengamer",
+     "rows": [
+      {
+       "item": "Shiny Ore",
+       "cells": [
+        "15"
+       ],
+       "entry": "ocean-materials"
+      },
+      {
+       "item": "Azurite",
+       "cells": [
+        "5"
+       ]
+      },
+      {
+       "item": "Iron Ore",
+       "cells": [
+        "10"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "sources": [
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+    "title": "DLC Shipbuilding Guide"
+   }
+  ]
+ },
+ {
+  "id": "island-storage",
+  "name": "Island Storage",
+  "leaf": "ship",
+  "cls": "store",
+  "domains": [
+   "surface"
+  ],
+  "kind": "Island building · storage",
+  "region": "Pioneered islands",
+  "area": "Built on an island you pioneer",
+  "trait": "Island produce and rough-quest loot, kept on the island",
+  "summary": "An island building that stores loot from rough quests and missions and the supplies your islands produce, as its in-game text puts it (Vulkk records it). The listing names Logging 2, Weaving 4 and Crafting 4. No source publishes its size or how you open it.",
+  "tiers": {
+   "capacity": {
+    "tier": null,
+    "basis": "Not published."
+   },
+   "payoff": {
+    "tier": 3,
+    "basis": "Item text only: storage for island produce and quest loot."
+   },
+   "unlock": {
+    "tier": 4,
+    "basis": "The DLC: pioneer an island first (three comrades, a 12-hour dispatch on Auronui)."
+   }
+  },
+  "tags": [
+   "dlc"
+  ],
+  "requires": [
+   "A pioneered island (Charting the Unknown)"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Pioneer an island: anchor inside its marked area, open Map → Facilities and start Pioneer with three comrades.",
+     "Come back to the same Anchorage after the 12-hour dispatch and choose Complete Mission.",
+     "Build Island Storage there; Vulkk lists it with Logging 2, Weaving 4 and Crafting 4."
+    ]
+   }
+  ],
+  "location": "On a pioneered island.",
+  "notes": [],
+  "variants": [],
+  "since": "Charting the Unknown",
+  "also": [
+   "qol/island-pioneering",
+   "riches/island-pioneering"
+  ],
+  "manifest": {
+   "col": "island",
+   "figures": [
+    {
+     "label": "Listed with",
+     "value": "Logging 2 · Weaving 4 · Crafting 4",
+     "basis": "guide",
+     "by": "vulkk"
+    }
+   ],
+   "watch": [
+    "Vulkk's database is the only source, and it doesn't say whether Logging, Weaving and Crafting are costs or skills."
+   ]
+  },
+  "media": {
+   "portrait": {
+    "from": "https://www.whisperofthehouse.com/images/crimson-desert/crimson-desert-auronui-pioneer-dispatch-requirements.webp",
+    "credit": "whisperofthehouse",
+    "crop": [
+     0.88,
+     0.5,
+     0.95
+    ],
+    "src": "media/materials/island-storage/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://www.whisperofthehouse.com/images/crimson-desert/crimson-desert-auronui-pioneer-dispatch-requirements.webp",
+     "credit": "whisperofthehouse",
+     "caption": "Auronui Pioneer dispatch — three comrades and their skills",
+     "src": "media/materials/island-storage/menu-1.webp",
+     "w": 1600,
+     "h": 998
+    },
+    {
+     "kind": "menu",
+     "from": "https://www.whisperofthehouse.com/images/crimson-desert/crimson-desert-auronui-pioneering-progress.webp",
+     "credit": "whisperofthehouse",
+     "caption": "Pioneer in progress — the island's first mission",
+     "src": "media/materials/island-storage/menu-2.webp",
+     "w": 1600,
+     "h": 666
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/items/island-storage/",
+    "title": "Island Storage"
+   },
+   {
+    "by": "whisperofthehouse",
+    "url": "https://www.whisperofthehouse.com/crimson-desert/auronui-island",
+    "title": "How Do You Pioneer Auronui Island"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://www.keengamer.com/articles/guides/crimson-desert-dlc-shipbuilding-guide-all-ships-and-upgrades/",
+    "title": "DLC Shipbuilding Guide"
+   }
+  ]
+ },
+ {
+  "id": "horse-trade-slots",
+  "name": "Horse Trade Slots",
+  "leaf": "mount",
+  "cls": "store",
+  "domains": [
+   "land"
+  ],
+  "kind": "Mount cargo",
+  "region": "All of Pywel",
+  "area": "Stables and wagon workshops",
+  "trait": "One slot of trade goods; two on Elantrima and Rokade",
+  "summary": "A horse carries trade goods and nothing else: one slot on most horses, two on Elantrima and Rokade. Since 1.16 a slot stacks 10 or 100 packed goods by price, or 5 or 50 unpacked, and you can move goods between horse and wagon. Calling a loaded horse to you costs part of the load.",
+  "tiers": {
+   "capacity": {
+    "tier": 5,
+    "basis": "1 or 2 slots (Mounts › Inventory)."
+   },
+   "payoff": {
+    "tier": 2,
+    "basis": "Small trade runs without a wagon, topped up from the wagon since 1.16."
+   },
+   "unlock": {
+    "tier": 1,
+    "basis": "Any registered horse."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "requires": [
+   "A registered horse"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Ask a stablemaster to load cargo onto the horse, or move goods across from your wagon (1.16).",
+     "Ride it to the post yourself: don't call a loaded horse to you.",
+     "Sell at a trading post; since 1.16 even a single good sells."
+    ]
+   }
+  ],
+  "location": "Stables and the seven wagon workshops.",
+  "notes": [],
+  "variants": [],
+  "since": "Base game · stacks and transfers 1.16",
+  "manifest": {
+   "col": "horse",
+   "slots": {
+    "value": "1–2",
+    "unit": "trade-goods slots",
+    "basis": "guide",
+    "by": "pcgamer"
+   },
+   "vessels": [
+    {
+     "ref": "mounts/elantrima",
+     "slots": 2,
+     "by": "vulkk"
+    },
+    {
+     "ref": "mounts/rokade",
+     "slots": 2,
+     "by": "vulkk"
+    },
+    {
+     "ref": "mounts/brianto",
+     "slots": 1,
+     "by": "pcgamer"
+    },
+    {
+     "ref": "mounts/calphadean-scouts-horse",
+     "slots": 1,
+     "by": "pcgamer"
+    },
+    {
+     "ref": "mounts/camora",
+     "slots": 1,
+     "by": "pcgamer"
+    },
+    {
+     "ref": "mounts/hernandian-soldiers-horse",
+     "slots": 1,
+     "by": "pcgamer"
+    },
+    {
+     "ref": "mounts/herspia",
+     "slots": 1,
+     "by": "pcgamer"
+    },
+    {
+     "ref": "mounts/numont",
+     "slots": 1,
+     "by": "pcgamer"
+    },
+    {
+     "ref": "mounts/priden",
+     "slots": 1,
+     "by": "pcgamer"
+    },
+    {
+     "ref": "mounts/royler",
+     "slots": 1,
+     "by": "pcgamer"
+    }
+   ],
+   "figures": [
+    {
+     "label": "Packed goods a slot",
+     "value": "10 or 100, by price",
+     "basis": "patch",
+     "by": "primagames"
+    },
+    {
+     "label": "Unpacked goods a slot",
+     "value": "5 or 50",
+     "basis": "patch",
+     "by": "primagames"
+    },
+    {
+     "label": "One player's called horse",
+     "value": "150 salt → 55",
+     "basis": "player",
+     "by": "notecom"
+    }
+   ],
+   "watch": [
+    "1.16 raised the cargo lost when you retrieve a horse or wagon.",
+    "Healing at a stable can cost carried trade goods."
+   ],
+   "patches": [
+    {
+     "v": "1.00.03",
+     "note": "Trading posts show Kliff's, Damiane's and Oongka's horse inventories",
+     "by": "vice"
+    },
+    {
+     "v": "1.16.00",
+     "note": "Goods move between wagon and horse; bigger stacks; heavier losses on retrieval",
+     "by": "dsogaming"
+    }
+   ]
+  },
+  "media": {
+   "portrait": {
+    "from": "https://keengamer.com/wp-content/uploads/2026/03/Crimson-Desert-Greymane-Camp-Guide-All-Buildings-Upgrades-and-Camp-Management-Trading-Center.png",
+    "credit": "keengamer",
+    "crop": [
+     0.4,
+     0.55,
+     0.9
+    ],
+    "src": "media/materials/horse-trade-slots/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://keengamer.com/wp-content/uploads/2026/03/Crimson-Desert-Greymane-Camp-Guide-All-Buildings-Upgrades-and-Camp-Management-Trading-Center.png",
+     "credit": "keengamer",
+     "caption": "Trading Center — selling packed goods from your cargo",
+     "src": "media/materials/horse-trade-slots/menu-1.webp",
+     "w": 1227,
+     "h": 687
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "pcgamer",
+    "url": "https://www.pcgamer.com/games/action/crimson-desert-store-items/",
+    "title": "Can you store items in Crimson Desert?"
+   },
+   {
+    "by": "dsogaming",
+    "url": "https://www.dsogaming.com/patches/crimson-desert-patch-1-16-00-released-detailed/",
+    "title": "Patch 1.16.00 release notes"
+   },
+   {
+    "by": "primagames",
+    "url": "https://primagames.com/?p=365672",
+    "title": "Trading patch: stacks, transfers and posts"
+   },
+   {
+    "by": "vice",
+    "url": "https://www.vice.com/en/article/crimson-desert-update-makes-a-few-changes-that-players-have-been-begging-for/",
+    "title": "The first major update's notes"
+   },
+   {
+    "by": "notecom",
+    "url": "https://note.com/limber_lynx1258/n/n25a7939c5afc?hl=en",
+    "title": "A player's trade-run notes"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/horse-guide",
+    "title": "Horse Guide"
+   }
+  ]
+ },
+ {
+  "id": "wagon-cargo",
+  "name": "Wagon Cargo",
+  "leaf": "mount",
+  "cls": "store",
+  "domains": [
+   "land"
+  ],
+  "base": "mounts/trading-wagon",
+  "trait": "Bulk trade, loaded by Brice or at seven workshops",
+  "summary": "A wagon is the bulk carrier. Brice loads it at camp from your bag or the camp's stock, and since 1.16 seven wagon workshops package and load goods on the road: Hernand, Demeniss, Delesyia, Pailune, Tommaso, Urdavah and Varnia. No source publishes a wagon's slot count. Losing or retrieving a wagon costs part of the load.",
+  "tiers": {
+   "capacity": {
+    "tier": null,
+    "basis": "No source publishes a slot count."
+   },
+   "payoff": {
+    "tier": 1,
+    "basis": "The bulk trade carrier; Royal Trading Posts pay four times as much since 1.16."
+   },
+   "unlock": {
+    "tier": 2,
+    "basis": "Brice's Request after A Rumor in Glenbright Farm; built at the Timberturner Wainwright."
+   }
+  },
+  "tags": [
+   "base",
+   "patch"
+  ],
+  "manifest": {
+   "col": "wagon",
+   "figures": [
+    {
+     "label": "Wagon workshops",
+     "value": "7, since 1.16",
+     "basis": "patch",
+     "by": "consolepulse"
+    }
+   ],
+   "tips": [
+    {
+     "text": "Open the map's Trade tab before you load: it shows posts, royal posts, workshops, routes and what each post pays.",
+     "by": "consolepulse"
+    },
+    {
+     "text": "Selling a lot of one good at one post lowers its price: split a load between posts.",
+     "by": "consolepulse"
+    }
+   ],
+   "watch": [
+    "A stolen wagon sells only at a Wagon Fence and can't trade.",
+    "1.16 raised the cargo lost when a wagon is destroyed or retrieved."
+   ],
+   "patches": [
+    {
+     "v": "1.16.00",
+     "note": "Seven wagon workshops package and load; goods move between wagon and horse",
+     "by": "dsogaming"
+    }
+   ]
+  },
+  "media": {
+   "portrait": {
+    "from": "https://1cb6tlwvfkhv5nag.public.blob.vercel-storage.com/wiki-images/mounts/mount-trading-wagon.webp",
+    "credit": "thegameswiki",
+    "matte": true,
+    "src": "media/materials/wagon-cargo/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://cdn.mos.cms.futurecdn.net/eE3Tx8D8ocKv6fjKESsvXW.jpg",
+    "credit": "pcgamer",
+    "src": "media/materials/wagon-cargo/hero.webp",
+    "w": 1920,
+    "h": 1080
+   },
+   "captures": [
+    {
+     "kind": "menu",
+     "from": "https://keengamer.com/wp-content/uploads/2026/03/Crimson-Desert-Trading-Guide-Wagons-Routes-and-Camp-Resources-Brice.jpg",
+     "credit": "keengamer",
+     "caption": "Brice — Manage Cargo Wagon at the Greymane Camp",
+     "src": "media/materials/wagon-cargo/menu-1.webp",
+     "w": 1600,
+     "h": 900
+    },
+    {
+     "kind": "overworld",
+     "from": "https://www.method.gg/images/uploads/guides/2503401-wagon-and-trade-goods-wagon-workshop.jpg",
+     "credit": "method",
+     "caption": "On site — the wagon workshop",
+     "src": "media/materials/wagon-cargo/overworld-2.webp",
+     "w": 900,
+     "h": 525
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "method",
+    "url": "https://www.method.gg/crimson-desert/crimson-desert-trading-guide-how-to-trade-goods-and-make-money-with-wagons",
+    "title": "Trading Guide"
+   },
+   {
+    "by": "dsogaming",
+    "url": "https://www.dsogaming.com/patches/crimson-desert-patch-1-16-00-released-detailed/",
+    "title": "Patch 1.16.00 release notes"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-trading-guide",
+    "title": "Trading Guide"
+   },
+   {
+    "by": "pcgamer",
+    "url": "https://www.pcgamer.com/games/action/crimson-desert-trade-goods-wagon",
+    "title": "How to trade and get a wagon"
+   },
+   {
+    "by": "gamingpromax",
+    "url": "https://gamingpromax.com/how-to-get-a-wagon-in-crimson-desert/",
+    "title": "How to Get a Wagon"
+   }
+  ]
+ },
+ {
+  "id": "horse-feed",
+  "name": "Horse Feed",
+  "leaf": "mount",
+  "cls": "supply",
+  "domains": [
+   "land"
+  ],
+  "kind": "Mount consumables",
+  "region": "All of Pywel",
+  "area": "General vendors, stables and fields",
+  "trait": "Hay, beets, cubes and tonics, fed from the bag",
+  "summary": "Feed is how a horse heals and earns trust on the road. Hay, Sugar Beet and Sugar Cubes stack to 20; Horse Tonic and Horse Stimulant to 10. Feed from the bag while mounted (hold Use, then Feed to Horse) or drop it in front of the horse. Spare feed keeps in the Kuku Cooler.",
+  "tiers": {
+   "capacity": {
+    "tier": null,
+    "basis": "Not a store."
+   },
+   "payoff": {
+    "tier": 2,
+    "basis": "Health and stamina on the road, and trust about three times a day (The Games Wiki)."
+   },
+   "unlock": {
+    "tier": 1,
+    "basis": "General vendors, stables and fields."
+   }
+  },
+  "tags": [
+   "base"
+  ],
+  "requires": [
+   "A horse"
+  ],
+  "routes": [
+   {
+    "steps": [
+     "Buy Hay, Sugar Beet and Sugar Cubes from general vendors and Horse Tonic at stables; Sugar Beet also grows in fields.",
+     "Mounted: open the bag, hold Use on the feed and choose Feed to Horse.",
+     "Or drop oats or apples in front of the horse."
+    ]
+   }
+  ],
+  "location": "General vendors, stables and fields across Pywel.",
+  "notes": [],
+  "variants": [],
+  "since": "Base game",
+  "manifest": {
+   "rows": [
+    "feed",
+    "tonics",
+    "grains",
+    "produce"
+   ],
+   "bill": [
+    {
+     "title": "Feed",
+     "cols": [
+      "Stack",
+      "Does"
+     ],
+     "by": "thegameswiki",
+     "rows": [
+      {
+       "item": "Hay",
+       "cells": [
+        "20",
+        "Moderate Health; can be fed while mounted"
+       ],
+       "by": "gamerguides"
+      },
+      {
+       "item": "Sugar Beet",
+       "cells": [
+        "20",
+        "Small Health; also grows in fields"
+       ],
+       "by": "gamerguides"
+      },
+      {
+       "item": "Sugar Cubes",
+       "cells": [
+        "20",
+        "Health for a weary horse"
+       ],
+       "by": "gamerguides"
+      },
+      {
+       "item": "Horse Tonic",
+       "cells": [
+        "10",
+        "Full Health and survives one fatal blow; sold at stables"
+       ],
+       "by": "gamerguides"
+      },
+      {
+       "item": "Horse Stimulant",
+       "cells": [
+        "10",
+        "Stamina to full"
+       ],
+       "by": "gamerguides"
+      },
+      {
+       "item": "Oats · Apples",
+       "cells": [
+        "50",
+        "Dropped for the horse: a little Health and Trust"
+       ],
+       "by": "thegameswiki"
+      }
+     ],
+     "note": "Stacks from Gamer Guides' database; effects from The Games Wiki and Mounts › Inventory."
+    }
+   ],
+   "tips": [
+    {
+     "text": "Among ordinary food, only fruit and vegetables offer Feed Horse, and only while you ride.",
+     "by": "vulkk"
+    }
+   ],
+   "watch": [
+    "Feeding is from the bag: no source says a horse eats from the cooler."
+   ]
+  },
+  "media": {
+   "portrait": {
+    "from": "https://www.videogameschronicle.com/files/2026/03/image1-11-1920x804.jpg",
+    "credit": "vgc",
+    "crop": [
+     0.39,
+     0.62,
+     0.62
+    ],
+    "src": "media/materials/horse-feed/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://www.videogameschronicle.com/files/2026/03/image1-11-1920x804.jpg",
+    "credit": "vgc",
+    "src": "media/materials/horse-feed/hero.webp",
+    "w": 1920,
+    "h": 804
+   },
+   "captures": [],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/horse-items",
+    "title": "Horse Items"
+   },
+   {
+    "by": "gamerguides",
+    "url": "https://www.gamerguides.com/crimson-desert/database/mounts-and-pets/horse-feed",
+    "title": "Database: Horse feed"
+   },
+   {
+    "by": "pcgamer",
+    "url": "https://www.pcgamer.com/games/action/crimson-desert-tame-horse-skills-level",
+    "title": "How to tame a horse and level it up"
+   },
+   {
+    "by": "vgc",
+    "url": "https://www.videogameschronicle.com/guide/crimson-desert-horse-fatigued-wont-run/",
+    "title": "How to replenish your horse's stamina"
+   },
+   {
+    "by": "nerdschalk",
+    "url": "https://nerdschalk.com/crimson-desert-how-to-feed-horse-correctly-food-items-and-horse-not-eating-bug-fix-explained/",
+    "title": "How to Feed a Horse Correctly"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/2026/03/31/how-to-manage-your-inventory-in-crimson-desert/",
+    "title": "How to Manage your Inventory"
+   },
+   {
+    "by": "keengamer",
+    "url": "https://keengamer.com/articles/guides/how-to-unlock-all-storage-spaces-in-crimson-desert",
+    "title": "How to Unlock All Storage Spaces"
+   }
+  ]
+ },
+ {
+  "id": "horse-tack",
+  "name": "Horse Tack Materials",
+  "leaf": "mount",
+  "cls": "supply",
+  "domains": [
+   "land"
+  ],
+  "kind": "Craftable horse gear",
+  "region": "Hernand",
+  "area": "Thornbriar Fortress; any Smithy",
+  "trait": "The Wells Military set: find the book, craft at any Smithy",
+  "summary": "The one craftable horse set is the Wells Military tack (guides call it Wells's Warhorse Tack). Its blueprint lies on a wooden table at the foot of the spiral stairs in the big stone tower of Thornbriar Fortress, south-east Hernand. Read it, then craft each piece at any Smithy's Horse Tack tab from ore and hides: the Stirrups take 3 Iron Ore, 2 Copper Ore, 5 Thin Hide and 2 Thick Hide.",
+  "tiers": {
+   "capacity": {
+    "tier": null,
+    "basis": "Not a store."
+   },
+   "payoff": {
+    "tier": 2,
+    "basis": "Fills the horse's slots mid-game without a late-region shopping trip (Console Pulse)."
+   },
+   "unlock": {
+    "tier": 2,
+    "basis": "A fortress visit in Hernand and common materials."
+   }
+  },
+  "tags": [
+   "base"
+  ],
+  "requires": [
+   "The Wells Military Tack blueprint"
+  ],
+  "routes": [
+   {
+    "label": "Wells Military tack",
+    "steps": [
+     "Go east of the Steel Mountains to Thornbriar Fortress in south-east Hernand.",
+     "Enter the large stone tower and take the spiral stairs down: the blueprint is on the wooden table to the left.",
+     "Read it in the bag, then craft at any Smithy under Horse Tack."
+    ]
+   },
+   {
+    "label": "Saddlery lines",
+    "steps": [
+     "Delesyian and Hagmund tack need 100 Trust with that saddler and a Delesyian or Hagmund Crown from the regional Contribution Shop.",
+     "Bardings also sell at Contribution Shops for Contribution points."
+    ]
+   }
+  ],
+  "location": "Thornbriar Fortress, south-east Hernand; any Smithy.",
+  "notes": [],
+  "variants": [
+   "Wells Military Barding",
+   "Wells Military Champron",
+   "Wells Military Saddle",
+   "Wells Military Stirrups"
+  ],
+  "since": "Base game",
+  "manifest": {
+   "rows": [
+    "ores",
+    "hides"
+   ],
+   "bill": [
+    {
+     "title": "Wells Military tack (Smithy · Horse Tack)",
+     "cols": [
+      "Iron Ore",
+      "Copper Ore",
+      "Thin Hide",
+      "Thick Hide"
+     ],
+     "by": "gamingpromax",
+     "rows": [
+      {
+       "item": "Stirrups",
+       "cells": [
+        "3",
+        "2",
+        "5",
+        "2"
+       ],
+       "from": "Read off the crafting screen",
+       "by": "gamingpromax"
+      },
+      {
+       "item": "Barding",
+       "cells": [
+        "20",
+        "—",
+        "—",
+        "—"
+       ],
+       "from": "Vulkk lists only the ore",
+       "by": "vulkk"
+      }
+     ],
+     "note": "The other pieces show their costs at the Smithy; no source lists them."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Wells Military Stirrups",
+     "value": "Health +0.6 every second",
+     "basis": "screenshot",
+     "by": "gamingpromax"
+    }
+   ],
+   "watch": [
+    "Refine tack at a Smithy like any gear; Extraction (1.06) rolls it back, returning rare materials in full and common ones at about 70%."
+   ]
+  },
+  "media": {
+   "portrait": {
+    "from": "https://gamingpromax.com/wp-content/uploads/2026/04/where-to-find-the-horse-plate-armor-blueprint-in-crimson-desert-Well-s-Warhorse-Tack-Blueprint-2048x1314.webp",
+    "credit": "gamingpromax",
+    "crop": [
+     0.56,
+     0.48,
+     0.7
+    ],
+    "src": "media/materials/horse-tack/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "hero": {
+    "from": "https://gamingpromax.com/wp-content/uploads/2026/04/where-to-find-the-horse-plate-armor-blueprint-in-crimson-desert-Thornbriar-Fortress-2048x1056.webp",
+    "credit": "gamingpromax",
+    "src": "media/materials/horse-tack/hero.webp",
+    "w": 1920,
+    "h": 990
+   },
+   "captures": [
+    {
+     "kind": "overworld",
+     "from": "https://gamingpromax.com/wp-content/uploads/2026/04/where-to-find-the-horse-plate-armor-blueprint-in-crimson-desert-Well-s-Warhorse-Tack-Blueprint-2048x1314.webp",
+     "credit": "gamingpromax",
+     "caption": "On site — the blueprint on the table at the foot of the stairs",
+     "src": "media/materials/horse-tack/overworld-1.webp",
+     "w": 1600,
+     "h": 1027
+    },
+    {
+     "kind": "menu",
+     "from": "https://gamingpromax.com/wp-content/uploads/2026/04/how-to-craft-and-use-the-horse-plate-armor-in-crimson-desert-1-2048x1070.webp",
+     "credit": "gamingpromax",
+     "caption": "Smithy — Horse Tack: the Wells Military Stirrups' materials",
+     "src": "media/materials/horse-tack/menu-2.webp",
+     "w": 1600,
+     "h": 836
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "gamingpromax",
+    "url": "https://gamingpromax.com/crimson-desert-how-to-get-horse-plate-armor/",
+    "title": "How to Get Horse Plate Armor"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-mount-pet-equipment-guide",
+    "title": "Mount and Pet Equipment Guide"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/wellss-warhorse-tack-blueprint",
+    "title": "Wells's Warhorse Tack Blueprint"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/items/wells-military-tack-blueprint/",
+    "title": "Wells Military Tack Blueprint"
+   }
+  ]
+ },
+ {
+  "id": "kuku-mount-gear",
+  "name": "Kuku Mount Gear",
+  "leaf": "mount",
+  "cls": "supply",
+  "domains": [
+   "sky",
+   "land"
+  ],
+  "kind": "Kuku-built mount gear",
+  "region": "Hernand",
+  "area": "Grimnir's Kuku Shop, Kilnden Workshop",
+  "trait": "Blackstar's armour starts as a Kuku Pot",
+  "summary": "Two mounts take gear from the machine line. Blackstar's Abyssal Dragon Armor, the only dragon armour, is crafted at Grimnir's after Chapter XI and Flight: Wings of Iron. It needs a Small Kuku A.T.A.G., which you make from a whole Kuku Pot, so empty the pot first. The A.T.A.G.'s plating, boots, thrusterpack, weapons and modules come from the Fornelva Workshop.",
+  "tiers": {
+   "capacity": {
+    "tier": null,
+    "basis": "Not a store."
+   },
+   "payoff": {
+    "tier": 2,
+    "basis": "Blackstar's only armour (50 Defense) and the A.T.A.G.'s whole kit."
+   },
+   "unlock": {
+    "tier": 4,
+    "basis": "Chapter XI, Flight: Wings of Iron and New Designs."
+   }
+  },
+  "tags": [
+   "base"
+  ],
+  "requires": [
+   "Chapter XI and Flight: Wings of Iron (dragon armour)"
+  ],
+  "routes": [
+   {
+    "label": "Abyssal Dragon Armor",
+    "steps": [
+     "Finish Chapter XI and Flight: Wings of Iron.",
+     "Take New Designs: talk to Marek where Demeniss, Gorthak and Delesyia meet for the Small Kuku A.T.A.G. Design.",
+     "Craft the Small Kuku A.T.A.G. from an empty Kuku Pot, then the armour at Grimnir's Kuku Shop; it goes on at the Nest of Valor."
+    ]
+   },
+   {
+    "label": "A.T.A.G. parts",
+    "steps": [
+     "Buy plating, boots, thrusterpacks, weapons and modules at the Fornelva Workshop.",
+     "Marine Exploration Plating, Feet and Pack come from Marni's Masterium after the Ancient Marine Exploration blueprint."
+    ]
+   }
+  ],
+  "location": "Kilnden Workshop, Hernand; the Fornelva Workshop.",
+  "notes": [],
+  "variants": [],
+  "since": "Base game · marine set in Charting the Unknown",
+  "also": [
+   "mounts/blackstar",
+   "mounts/atag"
+  ],
+  "manifest": {
+   "figures": [
+    {
+     "label": "Abyssal Dragon Armor",
+     "value": "50 Defense",
+     "basis": "guide",
+     "by": "thegameswiki"
+    },
+    {
+     "label": "Marine Exploration Plating",
+     "value": "80 Defense · +240 breath",
+     "basis": "guide",
+     "by": "vulkk"
+    }
+   ],
+   "watch": [
+    "Making the Small Kuku A.T.A.G. uses up the pot and anything still sealed in it."
+   ]
+  },
+  "media": {
+   "portrait": {
+    "from": "https://img.game8.co/4444893/18014e7ef2ecaa86c692eddc49ccc34f.png/show",
+    "credit": "game8",
+    "crop": [
+     0.5,
+     0.5,
+     0.9
+    ],
+    "src": "media/materials/kuku-mount-gear/portrait.webp",
+    "w": 480,
+    "h": 480
+   },
+   "captures": [
+    {
+     "kind": "action",
+     "from": "https://www.powerpyx.com/wp-content/uploads/crimson-desert-141-6.jpg",
+     "credit": "powerpyx",
+     "caption": "In action — the A.T.A.G., whose kit comes from the Fornelva Workshop",
+     "clip": [
+      0,
+      0,
+      1,
+      0.84
+     ],
+     "src": "media/materials/kuku-mount-gear/action-1.webp",
+     "w": 1280,
+     "h": 605
+    },
+    {
+     "kind": "menu",
+     "from": "https://www.method.gg/images/uploads/guides/1304399-kuku-pot-guide-ui.jpg",
+     "credit": "method",
+     "caption": "Grimnir's Kuku tree",
+     "src": "media/materials/kuku-mount-gear/menu-2.webp",
+     "w": 900,
+     "h": 525
+    }
+   ],
+   "gallery": []
+  },
+  "sources": [
+   {
+    "by": "method",
+    "url": "https://method.gg/crimson-desert/crimson-desert-kuku-pot-guide-how-to-get-it-how-it-works-and-all-upgrades",
+    "title": "Kuku Pot Guide"
+   },
+   {
+    "by": "allthingshow",
+    "url": "https://allthings.how/?p=181502",
+    "title": "New Designs Walkthrough (Talk to Marek)"
+   },
+   {
+    "by": "thegameswiki",
+    "url": "https://thegameswiki.com/crimson-desert/wiki/abyssal-dragon-armor",
+    "title": "Abyssal Dragon Armor"
+   },
+   {
+    "by": "consolepulse",
+    "url": "https://consolepulse.com/multiplatform/crimson-desert/guides/crimson-desert-mount-pet-equipment-guide",
+    "title": "Mount and Pet Equipment Guide"
+   },
+   {
+    "by": "vulkk",
+    "url": "https://vulkk.com/database/crimson-desert/items/a-t-a-g-marine-exploration-plating/",
+    "title": "A.T.A.G. Marine Exploration Plating"
+   }
+  ]
+ }
+]

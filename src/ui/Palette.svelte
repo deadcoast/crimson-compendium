@@ -15,6 +15,7 @@
       ...b.leaves.map((l) => ({ label: l.label, hint: `${b.title} · leaf`, to: href.leaf(b, l.id) })),
       ...b.categories.map((c) => ({ label: c.subtitle ? `${c.label}: ${c.subtitle}` : c.label, hint: `${b.title} · branch`, to: href.cat(b, c.id) })),
       ...b.lenses.map((l) => ({ label: `${b.labels?.lenses ?? 'Ride for'}: ${l.label}`, hint: `${b.title} · lens`, to: href.lens(b, l.id) })),
+      ...(b.matrix ? [{ label: b.matrix.title, hint: `${b.title} · where things go`, to: href.matrix(b) }] : []),
       ...(b.route ? [{ label: b.route.title, hint: `${b.title} · plan`, to: href.route(b) }] : []),
       { label: 'Tier ladder', hint: `${b.title} · ranking`, to: href.ladder(b) },
     ]),
@@ -24,7 +25,34 @@
     const t = q.trim().toLowerCase();
     return t ? jumps.filter((j) => j.label.toLowerCase().split(/[\s:]+/).some((w) => w.startsWith(t)) || j.label.toLowerCase().startsWith(t)) : [];
   });
-  const count = $derived(q ? jumpHits.length + hits.length : jumps.length);
+  // what a branch's matrix knows by name (the Sorter's items, and the families they belong to): opening one
+  // shows where it goes. A family is offered by its own name ("fish", "horse feed") as well as its items'
+  const items = $derived(
+    tree.branches.flatMap((b) =>
+      (b.matrix?.sheets ?? []).flatMap((sh) =>
+        sh.rows
+          .filter((r) => r.items?.length)
+          .flatMap((r) => [
+            ...r.items!.map((item) => ({ item, row: r.label, branch: b })),
+            { item: r.label, row: sh.rowLabel.toLowerCase(), branch: b },
+          ]),
+      ),
+    ),
+  );
+  const itemHits = $derived.by(() => {
+    const t = q.trim().toLowerCase();
+    if (t.length < 2) return [];
+    const seen = new Set<string>();
+    return items
+      .filter((x) => { const n = x.item.toLowerCase(); return n.startsWith(t) || n.split(/[\s'-]+/).some((w) => w.startsWith(t)) || (t.length > 3 && n.includes(t)); })
+      .filter((x) => !seen.has(x.item) && !!seen.add(x.item))
+      .slice(0, 6);
+  });
+  const count = $derived(q ? jumpHits.length + hits.length + itemHits.length : jumps.length);
+  function openItem(x: { item: string; branch: (typeof tree.branches)[number] }) {
+    app.matrixQuery = x.item;
+    go(href.matrix(x.branch));
+  }
 
   $effect(() => {
     if (app.palette) { q = ''; sel = 0; queueMicrotask(() => input?.focus()); }
@@ -36,6 +64,8 @@
     if (ev.key === 'ArrowDown') { sel = (sel + 1) % Math.max(count, 1); ev.preventDefault(); }
     else if (ev.key === 'ArrowUp') { sel = (sel - 1 + count) % Math.max(count, 1); ev.preventDefault(); }
     else if (ev.key === 'Enter') {
+      const it = itemHits[sel - jumpHits.length - hits.length];
+      if (q && it) { openItem(it); return; }
       const h = hits[sel - jumpHits.length];
       const to = q ? (sel < jumpHits.length ? jumpHits[sel].to : h ? href.entry(h.branch, h.entry.id) : '') : jumps[sel]?.to;
       if (to) go(to);
@@ -49,7 +79,7 @@
     <label class="field">
       <span class="sr-only">Search</span>
       <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10.5 17a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13Z M15.5 15.5 21 21" /></svg>
-      <input bind:this={input} bind:value={q} onkeydown={key} placeholder="A mount, a money method, a place — “glide”, “sawmill”, “Pailune”…" autocomplete="off" spellcheck="false" />
+      <input bind:this={input} bind:value={q} onkeydown={key} placeholder="A mount, a method, a place, an item — “glide”, “sawmill”, “azurite”…" autocomplete="off" spellcheck="false" />
       <kbd>Esc</kbd>
     </label>
 
@@ -62,7 +92,7 @@
             </a>
           </li>
         {/each}
-        {#each hits as h, n (h.entry.id)}
+        {#each hits as h, n (h.branch.id + "/" + h.entry.id)}
           {@const i = n + jumpHits.length}
           <li>
             <a href={href.entry(h.branch, h.entry.id)} class:on={i === sel} onmouseenter={() => (sel = i)} onclick={() => (app.palette = false)}>
@@ -72,6 +102,14 @@
                 <span class="mt">{h.branch.leaves.find((l) => l.id === h.entry.leaf)?.label} · {h.entry.kind} · {h.entry.region}</span>
               </span>
               <span class="tr">{h.entry.trait}</span>
+            </a>
+          </li>
+        {/each}
+        {#each itemHits as x, n (x.item)}
+          {@const i = n + jumpHits.length + hits.length}
+          <li>
+            <a href={href.matrix(x.branch)} class:on={i === sel} class="jump item" onmouseenter={() => (sel = i)} onclick={(ev) => { ev.preventDefault(); openItem(x); }}>
+              <span class="nm">{x.item}</span><span class="mt">{x.row} · where it goes</span>
             </a>
           </li>
         {/each}

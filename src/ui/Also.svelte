@@ -22,7 +22,7 @@
   <section class="also" data-outline="Elsewhere" use:reveal>
     <p class="eyebrow">Elsewhere in the compendium</p>
     <ul>
-      {#each links as l, i (l.branch.id + l.entry.id)}
+      {#each links as l, i (l.branch.id + "/" + l.entry.id)}
         {@const img = l.entry.media.hero ?? l.entry.media.portrait}
         {@const tier = tierOf(l)}
         <li style:--i={i}>

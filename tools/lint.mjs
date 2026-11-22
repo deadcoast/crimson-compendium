@@ -3,7 +3,7 @@
 // this checks what the registry cannot see: evidence on every rating, a credit on every image and a
 // caption on every capture, a valid https URL on every source, covers that resolve to an image,
 // image files present, route phases whose covers resolve, figures with a known basis and publisher,
-// and no orphaned media anywhere under public/media.
+// credited payload lines and matrix rows with known publishers, and no orphaned media anywhere under public/media.
 //
 //   node tools/lint.mjs        run alone (npm run verify runs it first)
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
@@ -16,7 +16,7 @@ const KINDS = new Set(['map', 'overworld', 'action', 'variant', 'menu']);
 // what a quoted figure stands on: patch notes, guide text, a guide's in-game screenshot, one player's report, or a sum shown
 const BASES = new Set(['patch', 'guide', 'screenshot', 'player', 'sum']);
 // Particles.svelte's modes (types.ts Ambient); a class without `ambient` falls back to its own id
-const AMBIENTS = new Set(['land', 'sea', 'sky', 'gold', 'abyss']);
+const AMBIENTS = new Set(['land', 'sea', 'sky', 'gold', 'abyss', 'sift']);
 
 const shares = (want, have) => !want || want.some((v) => have.includes(v));
 function tierOf(e, metric) {
@@ -129,6 +129,12 @@ export function lint() {
           if (!credits.publishers[v.by]) bad(e.id, `${where} publisher "${v.by}" is not in src/core/credits.json`);
           text(e.id, v.note, `${where} note`);
         }
+        // any credited object names a known publisher; a credited line of text has text
+        if (typeof v.by === 'string' && !credits.publishers[v.by]) bad(e.id, `${where} publisher "${v.by}" is not in src/core/credits.json`);
+        if ('text' in v && 'by' in v) text(e.id, v.text, `${where} text`);
+        // a payload `ref` is a plate in another branch (Materials' vessels); a payload `entry` is a plate here
+        if (typeof v.ref === 'string' && (!REF.test(v.ref) || v.ref.split('/')[0] === id || !find(v.ref))) bad(e.id, `${where}.ref "${v.ref}" names no plate in another branch`);
+        if (typeof v.entry === 'string' && !entries.some((o) => o.id === v.entry)) bad(e.id, `${where}.entry names unknown entry "${v.entry}"`);
         if ('label' in v && 'value' in v && 'basis' in v) {
           if (!BASES.has(v.basis)) bad(e.id, `${where} basis "${v.basis}" is not one of ${[...BASES].join(', ')}`);
           if (!credits.publishers[v.by]) bad(e.id, `${where} publisher "${v.by}" is not in src/core/credits.json`);
@@ -175,6 +181,53 @@ export function lint() {
         if (typeof e.kit === 'object' && e.kit.note !== undefined) text(e.id, e.kit.note, 'kit note');
       }
       for (const pid of Object.keys(profiles)) if (!usedKits.has(pid)) bad(`kit ${pid}`, 'no plate uses this profile');
+    }
+
+    // a branch with matrix.json (Materials' Sorter): the registry checks its structure; this checks its
+    // evidence. Every mark is explained, every row credits a publisher and names its items once, every cell
+    // credit is known and every note has text; a plate's manifest names a real column and real rows
+    const mpath = join(ROOT, 'src/branches', id, 'matrix.json');
+    if (existsSync(mpath)) {
+      const mx = read(`src/branches/${id}/matrix.json`);
+      text('matrix', mx.title, 'title');
+      text('matrix', mx.blurb, 'blurb');
+      for (const k of mx.marks) { text(`matrix mark ${k.id}`, k.label, 'label'); text(`matrix mark ${k.id}`, k.text, 'text'); }
+      const colIds = new Set(mx.cols.map((c) => c.id));
+      for (const c of mx.cols) if (c.entry && !entries.some((o) => o.id === c.entry)) bad(`matrix/${c.id}`, `column names unknown entry "${c.entry}"`);
+      const rowIds = new Set();
+      for (const sh of mx.sheets) {
+        text(`matrix/${sh.id}`, sh.blurb, 'sheet blurb');
+        for (const r of sh.rows) {
+          const where = `matrix/${sh.id}/${r.id}`;
+          rowIds.add(r.id);
+          text(where, r.label, 'row label');
+          if (!credits.publishers[r.by]) bad(where, `publisher "${r.by}" is not in src/core/credits.json`);
+          if (r.note !== undefined) text(where, r.note, 'row note');
+          if (r.stack !== undefined && !(Number.isInteger(r.stack) && r.stack > 0)) bad(where, `stack ${r.stack} is not a whole number of items`);
+          for (const [it, n] of Object.entries(r.stackOf ?? {})) {
+            if (!(Number.isInteger(n) && n > 0)) bad(where, `stackOf "${it}" ${n} is not a whole number of items`);
+            if (n === r.stack) bad(where, `stackOf "${it}" repeats the family's stack`);
+          }
+          const seen = new Set();
+          for (const it of r.items ?? []) {
+            text(where, it, 'item');
+            if (seen.has(it)) bad(where, `item "${it}" listed twice`);
+            seen.add(it);
+          }
+          for (const [c, cell] of Object.entries(r.cells)) {
+            if (typeof cell === 'string') continue;
+            if (cell.by !== undefined && !credits.publishers[cell.by]) bad(`${where}/${c}`, `publisher "${cell.by}" is not in src/core/credits.json`);
+            if (cell.note !== undefined) text(`${where}/${c}`, cell.note, 'cell note');
+          }
+        }
+      }
+      for (const e of raw[id]) {
+        const man = e.manifest;
+        if (!man) continue;
+        if (man.col !== undefined && !colIds.has(man.col)) bad(e.id, `manifest.col "${man.col}" is not a matrix column`);
+        for (const r of man.rows ?? []) if (!rowIds.has(r)) bad(e.id, `manifest.rows names unknown matrix row "${r}"`);
+        if (man.col && !mx.cols.some((c) => c.id === man.col && c.entry === e.id)) bad(e.id, `manifest.col "${man.col}" is a column that names another plate`);
+      }
     }
 
     // a cover resolves the way core/tree.ts coverFrom does: its own file, or an entry's capture,

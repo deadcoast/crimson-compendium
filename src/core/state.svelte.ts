@@ -35,6 +35,8 @@ class AppState {
   palette = $state(false);
   sheet = $state<'' | 'sources' | 'tiers'>('');
   lightbox = $state<{ items: Capture[]; index: number } | null>(null);
+  /** an item the palette sent to a matrix view: it opens searched for this */
+  matrixQuery = $state('');
   reducedMotion = $state(matchMedia('(prefers-reduced-motion: reduce)').matches);
   /** most recently opened entries as "branch/entry", newest first (kept between visits when storage allows) */
   recent = $state<string[]>(load('cc.recent', []));

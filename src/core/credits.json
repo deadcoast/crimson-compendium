@@ -117,6 +117,10 @@
       "name": "PCGamesN",
       "url": "https://www.pcgamesn.com/crimson-desert/update-patch-notes-difficulty-options"
     },
+    "vgc": {
+      "name": "VGC",
+      "url": "https://www.videogameschronicle.com/guide/crimson-desert-horse-fatigued-wont-run/"
+    },
     "ingame": {
       "name": "In-game screenshot · v2.05.01",
       "url": "https://crimsondesert.pearlabyss.com/"
@@ -185,6 +189,8 @@
     "windowscentral": "Windows Central",
     "ingame": "In-game menu · v2.05.01",
     "twistedvoxel": "Twisted Voxel",
-    "gamingideology": "Gaming Ideology"
+    "gamingideology": "Gaming Ideology",
+    "primagames": "Prima Games",
+    "vice": "VICE"
   }
 }

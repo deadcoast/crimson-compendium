@@ -3,12 +3,12 @@
 // fixed-height rows, focus separate from selection, ←/→ collapse-or-parent / expand-or-first-child,
 // type navigation with an 800 ms buffer, filter that keeps ancestors, sticky ancestor rows.
 import type { Branch, Entry, ListContext, View } from './types';
-import { href, lensEntries, tierOf, ROMAN } from './tree';
+import { frontOf, href, lensEntries, tierOf, ROMAN } from './tree';
 
 /** VS Code's list row height; touch layouts pass a taller row. */
 export const ROW = 22;
 
-export type NodeKind = 'branch' | 'leaf' | 'cat' | 'catleaf' | 'folder' | 'lens' | 'ladder' | 'route' | 'entry';
+export type NodeKind = 'branch' | 'leaf' | 'cat' | 'catleaf' | 'folder' | 'lens' | 'ladder' | 'route' | 'matrix' | 'entry';
 
 export interface TNode {
   key: string;
@@ -67,8 +67,13 @@ export function buildTree(branches: Branch[]): TNode[] {
   return branches.map((b) => {
     const accent = b.accent ?? 'crimson';
     const root = make(undefined, b.id, { kind: 'branch', label: b.title, href: href.branch(b), count: b.entries.length, glyph: 'diamond', accent });
-    // the plan leads the branch: it is where a reader starts, the leaves are what it points into
-    if (b.route) make(root, 'route', { kind: 'route', label: b.route.title, href: href.route(b), glyph: 'route', accent, count: b.route.phases.length });
+    // the branch's views lead it, its front door first: they are where a reader starts, the leaves are what they point into
+    const views = [
+      ...(b.matrix ? [() => make(root, 'matrix', { kind: 'matrix', label: b.matrix!.title, href: href.matrix(b), glyph: 'grid', accent, count: b.matrix!.sheets[0].rows.length })] : []),
+      ...(b.route ? [() => make(root, 'route', { kind: 'route', label: b.route!.title, href: href.route(b), glyph: 'route', accent, count: b.route!.phases.length })] : []),
+    ];
+    if (frontOf(b) === 'route') views.reverse();
+    views.forEach((v) => v());
     for (const l of b.leaves) {
       const members = b.entries.filter((e) => e.leaf === l.id);
       const n = make(root, `leaf:${l.id}`, { kind: 'leaf', label: l.label, href: href.leaf(b, l.id), accent: l.accent, count: members.length });
@@ -81,7 +86,8 @@ export function buildTree(branches: Branch[]): TNode[] {
         entries(b, ln, cl.entries, { kind: 'cat', id: c.id, leaf: cl.id });
       }
     }
-    const ride = make(root, 'ride', { kind: 'folder', label: b.labels?.lenses ?? 'Ride for', glyph: 'lens', accent });
+    // a branch with no lenses gets no empty folder
+    const ride = b.lenses.length ? make(root, 'ride', { kind: 'folder', label: b.labels?.lenses ?? 'Ride for', glyph: 'lens', accent }) : root;
     for (const lens of b.lenses) {
       const list = lensEntries(b, lens);
       const n = make(ride, lens.id, { kind: 'lens', label: lens.label, href: href.lens(b, lens.id), accent, count: list.length });
@@ -111,6 +117,7 @@ export function activeKey(view: View, ctx: ListContext, nodes: Map<string, TNode
   const b = view.branch;
   if (view.kind === 'ladder') return `${b.id}/ladder`;
   if (view.kind === 'route') return `${b.id}/route`;
+  if (view.kind === 'matrix') return `${b.id}/matrix`;
   if (view.kind !== 'entry') return ctxKey(b, ctx);
   const direct = `${ctxKey(b, ctx)}/${view.entry.id}`;
   if (nodes.has(direct)) return direct;

@@ -38,6 +38,12 @@
     stack: 'M4 8l8-4 8 4-8 4Z M4 12l8 4 8-4 M4 16l8 4 8-4',
     builtin: 'M4 6h8 M16 6h4 M14 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z M4 12h2 M10 12h10 M8 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z M4 18h10 M18 18h2 M16 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z',
     unlock: 'M8 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z M11.5 12H21 M18 12v3 M15 12v2',
+    // a matrix: rows against columns, the Sorter's icon
+    grid: 'M3 4h18v16H3Z M3 9h18 M3 14.5h18 M8.5 4v16 M14.5 4v16',
+    // a chest with its lid band and lock: a place that stores (the Storage class)
+    chest: 'M3 10h18v10H3Z M3 10a9 5 0 0 1 18 0 M3 13h18 M12 11.5v4 M10.5 15.5h3',
+    // a crate with cross-bracing: what you gather and bring (the Supplies class)
+    crate: 'M4 6h16v14H4Z M4 6l16 14 M20 6 4 20 M4 10h16 M4 16h16',
     star: 'M12 3.5l2.5 5.2 5.7.8-4.1 4 1 5.6L12 16.4l-5.1 2.7 1-5.6-4.1-4 5.7-.8Z',
   };
 </script>

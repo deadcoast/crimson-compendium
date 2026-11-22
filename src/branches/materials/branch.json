@@ -1,0 +1,274 @@
+{
+ "id": "materials",
+ "title": "Materials",
+ "singular": "Manifest",
+ "plural": "Manifests",
+ "accent": "moss",
+ "front": "matrix",
+ "tagline": "Where every item goes and what reads it: house chests, camp stock, ship holds and saddle slots, and the materials each one needs.",
+ "asOf": "Current to Charting the Unknown · patches through 2.05.01 · November 2026",
+ "labels": {
+  "how": "Get it",
+  "howOutline": "How to get it",
+  "where": "Where it is",
+  "roam": "Carried — no fixed place",
+  "classAxis": "Kind"
+ },
+ "metrics": [
+  {
+   "id": "capacity",
+   "label": "Capacity",
+   "blurb": "How much it holds, in slots, at the most it can reach. Tier I is 1,000 or more; II 240 to 999; III 50 to 239; IV 10 to 49; V under 10."
+  },
+  {
+   "id": "payoff",
+   "label": "Payoff",
+   "blurb": "What it does beyond holding. Tier I feeds a mechanic straight from storage or removes a chore across the game; III is storage only; V is cosmetic or one-off."
+  },
+  {
+   "id": "unlock",
+   "label": "Unlock",
+   "blurb": "What it takes to have it. Tier I is there now or one stop away; Tier V is late DLC work or a fortune."
+  }
+ ],
+ "rules": [
+  {
+   "lead": "Capacity counts slots.",
+   "text": "A slot holds one stack: 50 ore, 20 hay, but a single fish or insect. Rated on the most it can reach, so the Kuku Cooler rates on 1,000 stacked, not the quest cooler's 40."
+  },
+  {
+   "lead": "Payoff is what it does beyond holding.",
+   "text": "Read in place by crafting, cooking, trade or the camp ranks highest; plain storage rates III."
+  },
+  {
+   "lead": "Not rated",
+   "text": "Capacity isn't rated for supplies, or for stores whose size no source publishes: Camp Provisions, wagons and Island Storage."
+  },
+  {
+   "lead": "Ranked across the tree.",
+   "text": "Every manifest is ranked against every other, house, ship and mount alike."
+  }
+ ],
+ "ladderNote": "Tiers rank each manifest against every other, on what it holds, what it does and what it takes.",
+ "classes": [
+  {
+   "id": "store",
+   "label": "Storage",
+   "glyph": "chest",
+   "ambient": "sift"
+  },
+  {
+   "id": "supply",
+   "label": "Supplies",
+   "glyph": "crate",
+   "ambient": "sift"
+  }
+ ],
+ "leaves": [
+  {
+   "id": "house",
+   "label": "House Storage",
+   "accent": "brass",
+   "short": "The house chests, the camp's stock and chest, and the Kuku Pot.",
+   "blurb": "The places at home that hold items: the 1.04 house chests that crafting and cooking read, Private Storage, Carl's stock and Supply Chest, and the Kuku Pot. Each manifest lists what belongs in it, by name.",
+   "cover": {
+    "from": "https://cdn.mos.cms.futurecdn.net/TPYnprKNE7in8HfRWQyJ46.jpg",
+    "credit": "pcgamer",
+    "focus": "50% 40%",
+    "src": "media/materials/_leaves/house.webp",
+    "w": 1600,
+    "h": 900
+   }
+  },
+  {
+   "id": "ship",
+   "label": "Ship Storage",
+   "accent": "deck",
+   "short": "Holds, shipbuilding stock, fittings, hidden blueprints and sea materials.",
+   "blurb": "Everything a ship stores and needs: its hold, the camp stock a build draws on, the outfitters' parts, the blueprints hidden at sea, the materials only the ocean gives, and island storage.",
+   "cover": {
+    "entry": "ship-holds",
+    "role": "hero"
+   }
+  },
+  {
+   "id": "mount",
+   "label": "Mount Storage",
+   "accent": "land",
+   "short": "Trade slots, wagon cargo, feed and the materials mount gear takes.",
+   "blurb": "What mounts carry and what they consume: a horse's trade slots, a wagon's cargo, feed, the craftable horse tack, and the Kuku line's mount gear.",
+   "cover": {
+    "entry": "wagon-cargo",
+    "role": "hero"
+   }
+  }
+ ],
+ "lenses": [],
+ "categories": [],
+ "route": {
+  "title": "Set-up Order",
+  "blurb": "When each store opens through the story, and what to put in it the moment it does.",
+  "premise": "A new character with a 50-slot bag. Each phase opens with the chapter that unlocks it; the Sorter says where every item goes once it does.",
+  "phases": [
+   {
+    "id": "first-chest",
+    "label": "The first chest",
+    "stage": "Chapters I–II",
+    "why": "Patch 1.00.03 put Private Storage in reach before the camp: dump spare gear and materials there instead of selling them, and buy the 50-copper Small Bags as you pass vendors.",
+    "cover": {
+     "entry": "private-storage",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "text": "Use the chest in the north-east tent of the Freesword Encampment, then the one at the Hernand lodgings.",
+      "entry": "private-storage"
+     },
+     {
+      "text": "Buy a Small Bag (+1 slot, 50 copper) at every vendor; take quests that pay Medium Bags."
+     }
+    ]
+   },
+   {
+    "id": "house-and-camp",
+    "label": "The house and the camp",
+    "stage": "Chapter III",
+    "why": "The camp and the Hernand Residence open together. Buy a Sturdy Gatherables Chest first: from then on the Smithy reads your materials at home.",
+    "cover": {
+     "entry": "supply-chest",
+     "capture": 0
+    },
+    "steps": [
+     {
+      "text": "Buy one for 50 Silver at the Timberham Sawmill furniture shop and place it in Build Mode; move ore, timber, hides and herbs in.",
+      "entry": "gatherables-chest"
+     },
+     {
+      "text": "Private Storage now lives in Kliff's tent at camp.",
+      "entry": "private-storage"
+     },
+     {
+      "text": "After the Reed Devil, donate spare gear, ore, timber and food to Carl: missions spend it.",
+      "entry": "camp-provisions"
+     },
+     {
+      "text": "Empty Carl's Supply Chest each visit; it stops collecting at 230.",
+      "entry": "supply-chest"
+     }
+    ]
+   },
+   {
+    "id": "pot-and-cooler",
+    "label": "The pot and the cooler",
+    "stage": "Chapter IV",
+    "why": "Mysterious Pot hands you the Kuku Pot, and A Special Blueprint turns one into a cooler that cooking reads.",
+    "cover": {
+     "entry": "kuku-pot",
+     "capture": 1
+    },
+    "steps": [
+     {
+      "text": "Seal Abyss objects and machine parts as you find them; Grimnir's recipes use them.",
+      "entry": "kuku-pot"
+     },
+     {
+      "text": "Craft the Kuku Cooler at Grimnir's: a Kuku Pot, 5 Iron Ore, 3 Copper Ore and 1 Azurite. Move ingredients, fish and feed in.",
+      "entry": "kuku-cooler"
+     }
+    ]
+   },
+   {
+    "id": "paper-and-cloth",
+    "label": "Paper, outfits and tack",
+    "stage": "Through the story",
+    "why": "Quest paper and outfits are the next slot hogs, and both have chests. Pick up the horse tack blueprint and a wagon on the way.",
+    "cover": {
+     "entry": "horse-tack",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "text": "Early Encounter gives the Collectibles Chest: quest items, keys, notes and recipes.",
+      "entry": "collectibles-chest"
+     },
+     {
+      "text": "Buy Wardrobes in Timberton, Delesyia (15 Silver): outfits for all three, worn from the housing screen.",
+      "entry": "wardrobe"
+     },
+     {
+      "text": "Thornbriar Fortress holds the Wells Military tack blueprint.",
+      "entry": "horse-tack"
+     },
+     {
+      "text": "Brice's Request builds your trading wagon.",
+      "entry": "wagon-cargo"
+     }
+    ]
+   },
+   {
+    "id": "thousand",
+    "label": "Grow it all to 1,000",
+    "stage": "Late story",
+    "why": "Camp expansions take Private Storage to 1,000, and late research opens the Enhanced cooler and Blackstar's armour.",
+    "cover": {
+     "entry": "camp-provisions",
+     "capture": 2
+    },
+    "steps": [
+     {
+      "text": "Each of the first four expansions adds 100 slots; the fifth adds 360.",
+      "entry": "private-storage"
+     },
+     {
+      "text": "The Enhanced Kuku Cooler (330) needs Mercury from Delesyia research after Chapter XI, plus Brimstone, Rubber and Electrical Components.",
+      "entry": "kuku-cooler"
+     },
+     {
+      "text": "After the move to Pailune, Private Storage becomes an item you can place in the house.",
+      "entry": "private-storage"
+     },
+     {
+      "text": "After Chapter XI, an empty Kuku Pot becomes the part for Blackstar's armour.",
+      "entry": "kuku-mount-gear"
+     }
+    ]
+   },
+   {
+    "id": "holds-and-islands",
+    "label": "Holds and islands",
+    "stage": "In the DLC",
+    "why": "Ships bring new stores and a new class of materials. Stock Carl before the first build; the best parts are hidden, not sold.",
+    "cover": {
+     "entry": "ship-holds",
+     "role": "hero"
+    },
+    "steps": [
+     {
+      "text": "Donate 600 Stone, 600 Wood and 1,200 Food to Carl, then start Small Shipbuilding.",
+      "entry": "shipbuilding-stock"
+     },
+     {
+      "text": "Trade goods ride in the hold: 6 to 36 slots by hull.",
+      "entry": "ship-holds"
+     },
+     {
+      "text": "Fit the Ship Teleportation Device so the ship becomes a fast-travel point.",
+      "entry": "ship-teleporter"
+     },
+     {
+      "text": "Hunt the four hidden ship blueprints.",
+      "entry": "sea-blueprints"
+     },
+     {
+      "text": "Collect Shiny Ore, deposits, Amberress and pearls as you sail.",
+      "entry": "ocean-materials"
+     },
+     {
+      "text": "Build Island Storage on a pioneered island.",
+      "entry": "island-storage"
+     }
+    ]
+   }
+  ]
+ }
+}
